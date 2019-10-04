@@ -1,0 +1,5 @@
+{
+    "subscription_id": "enter azure subscription key",
+    "resource_group": "enter resource group name",
+    "workspace_name": "enter Azure Machine Learning workspace name"
+}
