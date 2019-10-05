@@ -1,21 +1,29 @@
 # Live Demo Steps
 Make sure you have completed the [demo setup steps here](demosetup.md)
 
-## Demo One - Data Prep Demo with App
+# Demo 1: Data Prep Demo with App
 In the first demo we are highlighting the data preparation that was discussed in the slides for Time Series models. Now walk them through how we are doing this in the C# demo app. Make sure to highlight that this can be done in any language.
 
 1. Open the `IgniteAimlDataApp` App. I personally like to have this open before I start the talk so I can just flip to it.
 2. Open the `Program.cs` file
-3. [Here](assets/DataPrepDemo.mp4) is video of the demo without sound. This is also included in the slides if there are any issues with doing it live.
+3. [Here](assets/DataPrepDemo.mp4) is video of the demo without sound.
 4. [Here](https://youtu.be/u1ppYaZuNmo?t=751) is this segment from the Train the Trainer video with sound for the demo.
 
-## Demo Two - Build Model
-1. Upload data
-2. create new experiment
-3. Build model
-4. Train model
-5. Create predictive experiment
-6. Deploy to a web service
-7. Update console app api key and url
+### Data Prep Backup Demo Options
+1. Use the embedded mp4 video in the hidden slide. Talk along side this video without sound.
+2. Start at slide 21 and show the data prep in static slide steps.
 
-# Testing API with C# console app (dotnet core)
+# Demo 2: Build Model with Azure Machine Learning Visual Designer
+
+### Full Model Building Live Demo in one clip
+1. [here]() is video without sound.
+2. [here]() is video with sound.
+
+### Demo Broken Down into Steps
+
+1. Create Azure Machine Learning Workspace Resource and Navigate to the new Workspace
+
+    * [Here](assets/CreateAMLNavToWorkspace.mp4) is video of this step without sound.
+    * [Here](https://youtu.be/u1ppYaZuNmo?t=1278) is video of how to create the resource with audio.
+
+# Demo 3: Testing API with C# console app (dotnet core)
