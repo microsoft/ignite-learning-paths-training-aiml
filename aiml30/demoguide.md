@@ -1,12 +1,12 @@
 # Live Demo Steps
-Make sure you have completed the [pre-demo setup steps](demosetup.md)
+Make sure you have completed the [demo setup steps here](demosetup.md)
 
-## Demo One
+## Demo One - Data Prep Demo with App
 1. Have VS Code open with the IgniteAimlDataApp loaded prior to starting the talk.
 2. Open the Program.cs file
 
-## Demo Two
-2. Upload data
+## Demo Two - Build Model
+1. Upload data
 2. create new experiment
 3. Build model
 4. Train model
