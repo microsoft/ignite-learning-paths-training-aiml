@@ -28,8 +28,7 @@ code.
 - This guide
 - PowerPoint presentation including notes for each slide [Here](https://#)
 - Full-length recording of presentation [here](https://www.youtube.com/watch?v=u1ppYaZuNmo&amp=&feature=youtu.be)
-- Director Cut Full-length recording of presentation [here](https://#)
-- Individual recordings of stage-ready hands-on demos [here](https://#)
+- Individual recordings of stage-ready hands-on demos [here](assets)
 - Demo Resource Guides
     1. [Demo Setup](demosetup.md)
     2. [Demo Guide](demoguide.md)
