@@ -30,7 +30,7 @@ Once you have created the base Azure Machine Learning Service Workspace we need 
     * Give the notebook a unique name
     * Select the VM size
     * Click "Create"
-    ![Create VM](assets/CreateNotebookVm.gif)
+    ![Create VM](assets/CreateNotebookVM.gif)
 
 
 ### Upload Dataset to Workspace Blob Storage
