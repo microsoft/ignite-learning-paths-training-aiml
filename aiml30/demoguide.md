@@ -1,5 +1,5 @@
 # Live Demo Steps
-You will want to run through the full demo prior to the session so that you have a prebuilt model to show the end result.
+Make sure you have completed the [pre-demo setup steps](demosetup.md)
 
 ## Demo One
 1. Have VS Code open with the IgniteAimlDataApp loaded prior to starting the talk.
