@@ -54,10 +54,10 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <table>
 <tr>
     <td align="center"><a href="http://cloud5mins.com/">
-        <img src="https://avatars2.githubusercontent.com/u/2404846?s=460&v=4" width="100px;" alt="Frank Boucher"/><br />
+        <img src="https://media.licdn.com/dms/image/C4E03AQFV-bjxXWxeIw/profile-displayphoto-shrink_200_200/0?e=1575504000&v=beta&t=i0CssIxPnjai9cTjruIvKVrACO0J2qCCJRm-PLEI1q0" width="100px;" alt="Cassie Breviu"/><br />
         <sub><b>Cassie Breviu</b></sub></a><br />
-            <a href="https://github.com/neilpeterson/ignite-tour-fy20/commits?author=fboucher" title="talk">📢</a>
-            <a href="https://github.com/neilpeterson/ignite-tour-fy20/commits?author=fboucher" title="Documentation">📖</a>
+            <a href="https://github.com/cassieview/ title="talk">📢</a>
+            <a href="https://github.com/cassieview/" title="Documentation">📖</a>
     </td>
 </tr></table>
 
