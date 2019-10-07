@@ -120,3 +120,12 @@ This is normally where you would create the `Predictive Experiment` to deploy it
 
 
 # Demo 3: Testing API with C# console app (dotnet core)
+
+* Copy the API key from the `Consume` tab
+* Open the `App.config` and paste it in the value attribute
+* Copy the `Request-Response Url` from the `Consume` tab
+* Open the `Program.cs` and paste the value in `client.BaseAddress = new Uri("");`
+* Right click `Program.cs` and select `Open in Terminal`
+* Type the command `dotnet run` to run the console app
+* To use the default values of StoreID (ID1) of 2 and ItemID (ID2) of 1 and the number of weeks to predict. Just type `y`
+* This will run and should return the predicted values for the next 4 weeks.
