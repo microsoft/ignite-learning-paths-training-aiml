@@ -37,8 +37,8 @@ Once you have created the base Azure Machine Learning Service Workspace we need 
 ## Upload Dataset to Workspace Blob Storage
 The datasets needed are created weekly with updated dates to allow your demo to be predicting future weeks. Below are the steps to get the new dataset and add it to the Azure Machine Learning Storage account.
 
-1. Download dataset to local from [here]()
-2. Open Azure Storage Explorer - [download](https://azure.microsoft.com/en-us/features/storage-explorer/).
+1. Download dataset to local from [here](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml30/datasets/ForecastingData.csv)
+2. Open Azure Storage Explorer - [Download Here](https://azure.microsoft.com/en-us/features/storage-explorer/).
 3. Navigate to `azureml-blobstore-<guid>`
 4. Create a new folder called `datasets`
 5. Upload datasets
