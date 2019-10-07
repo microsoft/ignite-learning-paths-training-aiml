@@ -120,6 +120,7 @@ This is normally where you would create the `Predictive Experiment` to deploy it
 
 
 # Demo 3: Testing API with C# console app (dotnet core)
+### API Demo Test Video [here](https://youtu.be/u1ppYaZuNmo?t=2136)
 
 * Copy the API key from the `Consume` tab
 * Open the `App.config` and paste it in the value attribute
