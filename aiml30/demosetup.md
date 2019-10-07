@@ -60,12 +60,8 @@ The first demo is with VS Code and the C# IgniteAimlDataApp. This is to demonstr
     * This will attempt to hit the API but it will fail since it hasnt been created yet.
 
 ## Run through the Live Demo
-Do a complete run through of the live demo to have a completed backup model to open and show the end result. 
+Do a complete run through of the live demo to have a completed backup model to open and show the end result.
+
+#### !Important - There will not be enough time to run the model during the live demo. Make sure to build the model _without_ running it in the live session. Once you have added all the modules to the experiment workspace then navigate to the model created and trained prior to the session.
 
 [Next - Live Demo Steps](demoguide.md)
-
-
-Cassie: TODOS for this Guide:
-- fix azure function 
-- add link to new location of data
-- add path for C# demo app steps

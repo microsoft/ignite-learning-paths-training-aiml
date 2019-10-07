@@ -28,19 +28,53 @@ To navigate through code with `F12` and `CTRL-` shortcuts download the Visual St
 
 * Data Demo Backup Options
     * Use the embedded mp4 video in the hidden slide. Talk along side this video without sound.
-    * Start at slide 21 and show the data prep in static slide steps.
+    * Start at slide 21 and show the data prep code in static slide steps.
 
 # Demo 2: Build Model with Azure Machine Learning Visual Designer
 
 ### Full Model Building Live Demo Video [here](https://youtu.be/u1ppYaZuNmo?t=1278)
 
-### Demo Broken Down into Steps
+### 1. Create Resource and Upload Dataset
+* Create Azure Machine Learning Workspace Resource and Navigate to the new Workspace.
+    * Review high level where the different tools are that was discussed in the slides.
+    * Video Resources for this step:
+        * [Here](assets/CreateAMLNavToWorkspace.mp4) is video of this step without sound.
+        * [Here](https://youtu.be/u1ppYaZuNmo?t=1278) is video of how to create the resource with audio.
+* Upload the dataset to the Datasets in AML
+    * Click `Datasets`
+    * Click `Create from datastore`
+        * NOTE: you should have already uploaded the dataset to the datastore in the demo setup steps.
+    * Fill in required fields and select the `workspaceblobstorage` option
+    * Click `Create`
+    * Optional: Step through the data prep feature in the datasets upload for AML
 
-1. Create Azure Machine Learning Workspace Resource and Navigate to the new Workspace
+### 2. Launch Visual Designer and Explain Tool Features
+* Summarize the different modules in the left nav including the test datasets.
 
-Video Resources for this step:
+### 3. Start Building the  Model
+* Drag and drop the dataset onto the experiment workspace
+    * Note the file upload module as an option for getting data into workspace
+* Drag the `Select Columns in Dataset` onto the workspace
+    * Click `Edit columns` from the properties menu on the right side.
+    * Click `All Columns`
+    * Click `Exclude`
+    * Click `column names`
+    * Exclude the `Time` column
+    * Exclude the `DatesInWeek`
+    * NOTE: Optionally exclude these columns in the data edit feature when uploading the dataset to the workspace in the data prep steps during upload.
+* Drag the `Split Data` onto the workspace
+    * Edit the properties to split the data 70/30. 
+    * Discuss that this is not a rule and can change base on different model needs.
+* Drag the `Train Model` onto the workspace
+    * Select the label column name `Values` from the properties on the right
+* Drag the `Boosted Decision Tree Regression` onto the workspace
+* Drag the `Score Model` onto the workspace
+* Drag the `Evaluate` onto the workspace
+* Connect the `Split Data` module to `Train Model` for the training data and `Score Model` for scoring the predicted results with unseen data.
+* Connect `Train Model` to the training algorithm `Boosted Decision Tree Regression` module.
+* Connect `Score Model` with the `Evaluate` module.
+* This is normally where you would run the model _however_ it takes too long to run in the demo. Discuss how you would click the `Run` button in the bottom nav and select compute. This will segway nicely into talking about how to create compute resources in AML.
+### 4. Discuss Compute Target Creation
 
-* [Here](assets/CreateAMLNavToWorkspace.mp4) is video of this step without sound.
-* [Here](https://youtu.be/u1ppYaZuNmo?t=1278) is video of how to create the resource with audio.
 
 # Demo 3: Testing API with C# console app (dotnet core)
