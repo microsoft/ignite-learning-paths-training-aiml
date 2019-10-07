@@ -17,21 +17,21 @@ Once you have created the base Azure Machine Learning Service Workspace we need 
     * Select the machine size
     * Enter the min and max nodes (recommend min of 0 and max of 5)
     * Click "Create"
-    ![Create Compute](assets/CreateMlCompute.gif)
+    ![Create Compute](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml30/CreateMlCompute.gif)
 2. Create Kubernetes Compute
     * Click on the nav "Compute"
     * Click "New"
     * Enter a name for the resource
     * Select "Kubernetes Service" from the dropdown
     * Click "Create"
-    ![Create Kubernetes](assets/CreateKubService.gif)
+    ![Create Kubernetes](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml30/CreateKubService.gif)
 3. Create Notebook Virtual Machine
     * Click on the "Notebook VM" nav
     * Click "New"
     * Give the notebook a unique name
     * Select the VM size
     * Click "Create"
-    ![Create VM](assets/CreateNotebookVM.gif)
+    ![Create VM](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml30/CreateNotebookVM.gif)
 
 
 ## Upload Dataset to Workspace Blob Storage

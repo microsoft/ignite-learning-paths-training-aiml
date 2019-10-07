@@ -38,7 +38,7 @@ To navigate through code with `F12` and `CTRL-` shortcuts download the Visual St
 * Create Azure Machine Learning Workspace Resource and Navigate to the new Workspace.
     * Review high level where the different tools are that was discussed in the slides.
     * Video Resources for this step:
-        * [Here](assets/CreateAMLNavToWorkspace.mp4) is video of this step without sound.
+        * [Here](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml30/CreateAMLNavToWorkspace.mp4) is video of this step without sound.
         * [Here](https://youtu.be/u1ppYaZuNmo?t=1278) is video of how to create the resource with audio.
 * Upload the dataset to the Datasets in AML
     * Click `Datasets`
