@@ -49,16 +49,16 @@ The first demo is with VS Code and the C# IgniteAimlDataApp. This is to demonstr
 
 1. If you dont have VS Code - [Download VS Code here](https://code.visualstudio.com/download)
 2. Clone the app with the following command
-    * `git clone TODO ADD PATH`
+    * `git clone https://github.com/microsoft/ignite-learning-paths-training-aiml.git`
 3. Navigate to project path
-    * `cd TODO ADD PATH`
+    * `cd aiml30/C#/IgniteAimlDataApp/IgniteAimlDataApp`
 4. Open the project in VS Code
     * `code .`
 5. To run the app
     * Right click on `Program.cs` and select `Open in Terminal`
     * Then select run the command `dotnet run`
     * It will prompt with a question `Would you like to run the default params` type `y`
-    * This will attempt to hit the API but it will fail since it hasnt been created yet.
+    * This will attempt to hit the API but it will fail since it hasn't been created yet.
 
 ## Run through the Live Demo
 Do a complete run through of the live demo to have a completed backup model to open and show the end result.
