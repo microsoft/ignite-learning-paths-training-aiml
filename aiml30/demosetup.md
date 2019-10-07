@@ -41,7 +41,8 @@ The datasets needed are created weekly with updated dates to allow your demo to 
 2. Open Azure Storage Explorer - [Download Here](https://azure.microsoft.com/en-us/features/storage-explorer/).
 3. Navigate to `azureml-blobstore-<guid>`
 4. Create a new folder called `datasets`
-5. Upload datasets
+5. Upload the dataset
+6. Replace the local dataset with the downloaded file in the `IgniteAimlDataApp/Datasets` Folder.
 
 ## Get the C# Demo App
 The first demo is with VS Code and the C# IgniteAimlDataApp. This is to demonstrate how to do the data processing and highlight that the it can be done in any language.
