@@ -34,15 +34,14 @@ Once you have created the base Azure Machine Learning Service Workspace we need 
     ![Create VM](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml30/CreateNotebookVM.gif)
 
 
-## Upload Dataset to Workspace Blob Storage
-The datasets needed are created weekly with updated dates to allow your demo to be predicting future weeks. Below are the steps to get the new dataset and add it to the Azure Machine Learning Storage account.
+## Upload Dataset to Workspace Blob Storage and Save to Local
+The dataset needed is created weekly with updated dates to allow your demo to be predicting future weeks. Below are the steps to get the new dataset and add it to the Azure Machine Learning Storage account and the demo data app.
 
 1. Download dataset to local from [here](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml30/datasets/ForecastingData.csv)
 2. Open Azure Storage Explorer - [Download Here](https://azure.microsoft.com/en-us/features/storage-explorer/).
 3. Navigate to `azureml-blobstore-<guid>`
 4. Create a new folder called `datasets`
 5. Upload the dataset
-6. Replace the local dataset with the downloaded file in the `IgniteAimlDataApp/Datasets` Folder.
 
 ## Get the C# Demo App
 The first demo is with VS Code and the C# IgniteAimlDataApp. This is to demonstrate how to do the data processing and highlight that the it can be done in any language.
@@ -54,7 +53,8 @@ The first demo is with VS Code and the C# IgniteAimlDataApp. This is to demonstr
     * `cd aiml30/C#/IgniteAimlDataApp/IgniteAimlDataApp`
 4. Open the project in VS Code
     * `code .`
-5. To run the app
+5. Replace the local dataset with the downloaded dataset from teh step above in the `IgniteAimlDataApp/Datasets` Folder.
+6. To run the app
     * Right click on `Program.cs` and select `Open in Terminal`
     * Then select run the command `dotnet run`
     * It will prompt with a question `Would you like to run the default params` type `y`
@@ -63,6 +63,6 @@ The first demo is with VS Code and the C# IgniteAimlDataApp. This is to demonstr
 ## Run through the Live Demo
 Do a complete run through of the live demo to have a completed backup model to open and show the end result.
 
-#### !Important - There will not be enough time to run the model during the live demo. Make sure to build the model _without_ running it in the live session. Once you have added all the modules to the experiment workspace then navigate to the model created and trained prior to the session.
+#### There will not be enough time to run the model during the live demo. Make sure to build the model _without_ running it in the live session. Once you have added all the modules to the experiment workspace then navigate to the model you created and trained prior to the session.
 
 [Next - Live Demo Steps](demoguide.md)

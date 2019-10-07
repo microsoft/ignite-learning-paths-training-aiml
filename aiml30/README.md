@@ -26,9 +26,9 @@ code.
 ## Assets in Train-The-Trainer kit
 
 - This guide
-- PowerPoint presentation including notes for each slide [Here](https://#)
+- PowerPoint presentation including notes for each slide [here](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml30/AIML30_How%20to%20Build%20Machine%20Learning%20Models.pptx)
 - Full-length recording of presentation [here](https://www.youtube.com/watch?v=u1ppYaZuNmo&amp=&feature=youtu.be)
-- Individual recordings of stage-ready hands-on demos [here](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml30/)
+- Individual recording of stage-ready hands-on demo [here](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml30/FullIgniteModelBuildDemo.mp4). This is also included in a hidden slide in the slide deck.
 - Demo Resource Guides
     1. [Demo Setup](demosetup.md)
     2. [Demo Guide](demoguide.md)
@@ -56,8 +56,8 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="http://cloud5mins.com/">
         <img src="https://media.licdn.com/dms/image/C4E03AQFV-bjxXWxeIw/profile-displayphoto-shrink_200_200/0?e=1575504000&v=beta&t=i0CssIxPnjai9cTjruIvKVrACO0J2qCCJRm-PLEI1q0" width="100px;" alt="Cassie Breviu"/><br />
         <sub><b>Cassie Breviu</b></sub></a><br />
-            <a href="https://github.com/cassieview/ title="talk">📢</a>
-            <a href="https://github.com/cassieview/" title="Documentation">📖</a>
+            <a href="https://github.com/microsoft/ignite-learning-paths-training-aiml/aiml30/" title="talk">📢</a>
+            <a href="https://github.com/microsoft/ignite-learning-paths-training-aiml/aiml30/" title="Documentation">📖</a>
     </td>
 </tr></table>
 
