@@ -8,23 +8,23 @@ To navigate through code with `F12` and `CTRL-` shortcuts download the Visual St
 
 ### Data Prep Demo Video [here](https://youtu.be/u1ppYaZuNmo?t=751)
 
-1. Open the `IgniteAimlDataApp` App. I personally like to have this open before I start the talk so I can just flip to it.
-2. Open the `Program.cs` file
-3. Go to `GetProcessedDataForScore` method by right clicking and select `Go To Definition` or hitting `F12`
+### 1. Open the `IgniteAimlDataApp` App. I personally like to have this open before I start the talk so I can just flip to it.
+* Open the `Program.cs` file
+* Go to `GetProcessedDataForScore` method by right clicking and select `Go To Definition` or hitting `F12`
     * Load data from data source. In this example we are loading for a local excel file in the solution.
-4. `F12` to `AddWeeksToPredict` method and discuss logic.
+* `F12` to `AddWeeksToPredict` method and discuss logic.
     * Get latest date and add 4 future weeks from that date
     * Since the data is weekly and we want to know if a holiday occured during the week we calculate all dates that occured in the week and populate a collection called `DatesInWeek`
     * Next create time futures for the 4 future weeks added to the collection.
-5. `F12` to `CreateTimeFeatures` method from within `AddWeeksToPredict` logic and discuss logic.
+* `F12` to `CreateTimeFeatures` method from within `AddWeeksToPredict` logic and discuss logic.
     * Use the current time property to calculate the time and holiday features needed.
-6. `CTRL-` to navigate back to `AddWeeksToPredict`
-7. `F12` to `CreateFourierFeatures`
+* `CTRL-` to navigate back to `AddWeeksToPredict`
+* `F12` to `CreateFourierFeatures`
     * Calcuate Fourier Term features from the seasonality of 52 for our weekly data features. 
-8. `CTRL-` to navigate back to `GetProcessedDataForScore`
-9. `F12` to `CreateLagFeatures` method and discuss logic.
+* `CTRL-` to navigate back to `GetProcessedDataForScore`
+* `F12` to `CreateLagFeatures` method and discuss logic.
     * Add the 26 prior week sales values to the current row.
-10. `CTRL-` to navigate back to `GetProcessedDataForScore`
+* `CTRL-` to navigate back to `GetProcessedDataForScore`
 
 * Data Demo Backup Options
     * Use the embedded mp4 video in the hidden slide. Talk along side this video without sound.
@@ -74,7 +74,49 @@ To navigate through code with `F12` and `CTRL-` shortcuts download the Visual St
 * Connect `Train Model` to the training algorithm `Boosted Decision Tree Regression` module.
 * Connect `Score Model` with the `Evaluate` module.
 * This is normally where you would run the model _however_ it takes too long to run in the demo. Discuss how you would click the `Run` button in the bottom nav and select compute. This will segway nicely into talking about how to create compute resources in AML.
+
+* These next steps will be part of the completed model but no need to actually create them in the live demo version that will not be trained.
+    * Drag the `Execute Python Script` module onto the workspace and connect the `Score Model` module to it. 
+    * Copy and paste this code in:
+        * `import pandas as pd` </br>
+           `import numpy as np` </br>
+
+            `def azureml_main(dataframe1 = None, dataframe2 = None):` </br>
+                `print(f'Input pandas.DataFrame #1: {dataframe1}')`</br>
+                `df = dataframe1`</br>
+                `df['Value'] = np.exp(df['Value'])`</br>
+                `df['Forecast'] = np.exp(df['Scored Labels'])`</br>
+                `return df`
+    * Drag the `Select Columns in Dataset`
+        * Select columns `ID1`, `ID2`, `Value` and `Forecast`
+        * These are the columns the data demo app will be expecting when we post to get a result from the completed and deployed model.
 ### 4. Discuss Compute Target Creation
+* Navigate back to AML
+* Click the `Compute` navigation item
+* Click `Add`
+* Discuss the different compute types and what they are used for. The computes used for this demo are a `Machine Learning Compute` for training and the `Kubernetes Service` for deploying the API.
+
+### 5. Explain Trained Model
+* Navigate back to Visual Designer
+* Right Click on the second module in the model to Visualize the data (most likely the `Select Columns in Dataset`)
+* Quickly scroll through the data to show how the data looks.
+* Click on a column and show how the the tool creates visualizations in the right panel.
+* Visualize the `Score Model` module to show how the model predicted on the unseen data
+* Visualize the `Evaluate Model` module and discuss the metrics used to score.
+    * Click `More Help` in the right panel of the properties.
+    * Highlight that every module has a link to the docs in the properties that will explain what the module is doing.
+    * Scroll down and show the metrics explanations in the docs for the model.
+### 6. Create Predictive Experiment and Deploy the Model
+This is normally where you would create the `Predictive Experiment` to deploy it to a web service _however_ we have done these steps in advance. 
+* Discuss these steps _do not do them live_:
+    * Click `Create` predictive experiment. Think of the `Predictive Experiment` model as the production model that gets deployed to the web service. The     `Training Experiment` as the dev model.
+    * Add the `Execute Python Script` and `Select Columns in Dataset` modules to    the created predictive experiement.
+    * Run the experiment
+    * Click `Deploy Web Service`
+* After discussing the steps to create the `Predictive Experiment` navigate to the deployed web service from the left nav.
+* Click on the name of the web service created in advance.
+* Click `Test` and show how it performs on a scored data item.
+* Click `Consume` and show the sample code provided for integrating the web service.
 
 
 # Demo 3: Testing API with C# console app (dotnet core)
