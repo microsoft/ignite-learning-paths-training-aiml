@@ -21,7 +21,7 @@ There is something for every stage of the AI learning curve; whether you want to
 #### Abstract:
 Tailwind Traders has a lot of legacy data that they’d like their developers to leverage in their apps – from various sources, both structured and unstructured, and including images, forms, pdf files, and several others. In this session, you'll learn how the team used Cognitive Search to make sense of this data in a short amount of time and with amazing success. We'll discuss tons of AI concepts, like the ingest-enrich-explore pattern, skillsets, cognitive skills, natural language processing, computer vision, and beyond.
 
-### [AIML20: Using Pre-Built AI to Solve Business Challenges](aiml2/README.md)
+### [AIML20: Using Pre-Built AI to Solve Business Challenges](aiml20/README.md)
 #### Abstract:
 As a data-driven company, Tailwind Traders understands the importance of using Artificial Intelligence to improve business processes and delight customers. Before investing in an AI team, their existing developers were able to demonstrate some quick wins using pre-built AI technologies. In this session, we will show how you can use Azure Cognitive Services to extract insights from retail data and go into the neural networks behind computer vision. You’ll learn how it works and how to augment the pre-built AI with your own images for custom image recognition applications.
 
