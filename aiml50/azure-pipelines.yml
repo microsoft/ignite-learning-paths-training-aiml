@@ -1,0 +1,68 @@
+# CI to recreate and submit an AML pipeline when the code changes
+variables:
+  subscription: ca-stmuraws-demo-test
+  session: aiml50
+  event: demo
+
+trigger:
+- master
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+name: 1.$(BuildID)$(Rev:.r)
+
+steps:
+- task: AzureFileCopy@3
+  displayName: Stage Training Images
+  inputs:
+    sourcePath: ignite-learning-paths-training-aiml/aiml50/source/product-images/*
+    azureSubscription: $(subscription)
+    destination: azureBlob
+    storage: $(session)$(event)storage
+    containerName: product-images
+
+- task: UsePythonVersion@0
+  displayName: 'Use Python 3.6'
+  inputs:
+    versionSpec: '3.6'
+
+- task: AzureCLI@1
+  displayName: 'Install Azure ML CLI Extension'
+  inputs:
+    azureSubscription: $(subscription)
+    scriptLocation: inlineScript
+    inlineScript: 'az extension add -n azure-cli-ml'
+
+- script: 'pip install --upgrade azureml-sdk'
+  displayName: 'Install AzureML'
+
+- task: AzureCLI@1
+  displayName: 'Recreate and submit pipeline'
+  inputs:
+    azureSubscription: $(subscription)
+    scriptLocation: inlineScript
+    inlineScript: |
+      echo 'running python script:'
+      python $(Build.Repository.LocalPath)/aiml50/source/setup_pipeline.py -d $(datastorename) -p $(datastorepath) -c $(computetarget) -v $(Build.BuildNumber) -s (az account show --query id -o tsv) -r $(resource_group)
+
+- task: CopyFiles@2
+  displayName: 'Copy inference and deployment files'
+  inputs:
+    SourceFolder: '$(Build.Repository.LocalPath)/aiml50/source/'
+    Contents: |
+      deploymentconfig.json
+      inferenceconfig.json
+      score.py
+      seer_scoring.yml
+    TargetFolder: '$(Build.ArtifactStagingDirectory)'
+    
+- task: UniversalPackages@0
+  inputs:
+    command: 'publish'
+    publishDirectory: '$(Build.ArtifactStagingDirectory)'
+    feedsToUsePublish: 'internal'
+    vstsFeedPackagePublish: 'seer_deployment'
+    vstsFeedPublish: '1261cb14-65de-4b24-8b30-2fffb1332785'
+    versionOption: 'custom'
+    versionPublish: '$(Build.BuildNumber)'
