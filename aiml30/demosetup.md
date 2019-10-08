@@ -50,7 +50,7 @@ The first demo is with VS Code and the C# IgniteAimlDataApp. This is to demonstr
 2. Clone the app with the following command
     * `git clone https://github.com/microsoft/ignite-learning-paths-training-aiml.git`
 3. Navigate to project path
-    * `cd aiml30/C#/IgniteAimlDataApp/IgniteAimlDataApp`
+    * `cd ignite-learning-paths-training-aiml/aiml30/C#/IgniteAimlDataApp/IgniteAimlDataApp`
 4. Open the project in VS Code
     * `code .`
 5. Replace the local dataset with the downloaded dataset from the step above in the `IgniteAimlDataApp/Datasets` Folder.
