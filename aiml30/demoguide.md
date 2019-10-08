@@ -35,6 +35,7 @@ To navigate through code with `F12` and `CTRL-` shortcuts download the Visual St
 ### Full Model Building Live Demo Video [here](https://youtu.be/u1ppYaZuNmo?t=1278)
 
 ### 1. Create Resource and Upload Dataset
+
 * Create Azure Machine Learning Workspace Resource and Navigate to the new Workspace.
     * Review high level where the different tools are that was discussed in the slides.
     * Video Resources for this step:
@@ -49,9 +50,11 @@ To navigate through code with `F12` and `CTRL-` shortcuts download the Visual St
     * Optional: Step through the data prep feature in the datasets upload for AML
 
 ### 2. Launch Visual Designer and Explain Tool Features
+
 * Summarize the different modules in the left nav including the test datasets.
 
 ### 3. Start Building the  Model
+
 * Drag and drop the dataset onto the experiment workspace
     * Note the file upload module as an option for getting data into workspace
 * Drag the `Select Columns in Dataset` onto the workspace

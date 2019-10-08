@@ -1,5 +1,5 @@
 # Demo Setup
-Follow the below steps to get your enviornemnt ready for the live demo. Once you complete this setup then follow the [demo guide](demoguide.md).
+Follow the below steps to get your environment ready for the live demo. Once you complete this setup then follow the [demo guide](demoguide.md).
 
 ## Create Azure Machine Learninge Resources with the Deploy to Azure Button below
 <a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fcassieview%2Fignite-learning-paths-training-aiml%2Fmaster%2Faiml30%2Fdeploy.json" rel="nofollow">
@@ -46,17 +46,17 @@ The dataset needed is created weekly with updated dates to allow your demo to be
 ## Get the C# Demo App
 The first demo is with VS Code and the C# IgniteAimlDataApp. This is to demonstrate how to do the data processing and highlight that the it can be done in any language.
 
-1. If you dont have VS Code - [Download VS Code here](https://code.visualstudio.com/download)
+1. [Download VS Code here](https://code.visualstudio.com/download)
 2. Clone the app with the following command
     * `git clone https://github.com/microsoft/ignite-learning-paths-training-aiml.git`
 3. Navigate to project path
     * `cd aiml30/C#/IgniteAimlDataApp/IgniteAimlDataApp`
 4. Open the project in VS Code
     * `code .`
-5. Replace the local dataset with the downloaded dataset from teh step above in the `IgniteAimlDataApp/Datasets` Folder.
+5. Replace the local dataset with the downloaded dataset from the step above in the `IgniteAimlDataApp/Datasets` Folder.
 6. To run the app
     * Right click on `Program.cs` and select `Open in Terminal`
-    * Then select run the command `dotnet run`
+    * Run the command `dotnet run`
     * It will prompt with a question `Would you like to run the default params` type `y`
     * This will attempt to hit the API but it will fail since it hasn't been created yet.
 
