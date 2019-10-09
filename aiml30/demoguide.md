@@ -113,7 +113,7 @@ To navigate through code with `F12` and `CTRL-` shortcuts download the Visual St
 This is normally where you would create the `Predictive Experiment` to deploy it to a web service _however_ we have done these steps in advance. 
 * Discuss these steps _do not do them live_:
     * Click `Create` predictive experiment. Think of the `Predictive Experiment` model as the production model that gets deployed to the web service. The     `Training Experiment` as the dev model.
-    * Add the `Execute Python Script` and `Select Columns in Dataset` modules to    the created predictive experiement.
+    * Add the `Execute Python Script` and `Select Columns in Dataset` modules to    the created predictive experiment.
     * Run the experiment
     * Click `Deploy Web Service`
 * After discussing the steps to create the `Predictive Experiment` navigate to the deployed web service from the left nav.
