@@ -4,7 +4,7 @@ Make sure you have completed the [demo setup steps here](demosetup.md)
 # Demo 1: Data Prep Demo with App
 In the first demo highlight the data preparation that was discussed in the slides for Time Series models. Walk through step by step how to do this in the C# demo app. Make sure to highlight that this can be done in any language.
 
-To navigate through code with `F12` and `CTRL-` shortcuts download the Visual Studio Shortcut Extension for VS Code [here]("https://marketplace.visualstudio.com/items?itemName=ms-vscode.vs-keybindings"). This is super useful and keeps from having to scroll around trying to find things.
+To navigate through code with `F12` and `CTRL-` shortcuts download the Visual Studio Shortcut Extension for VS Code [here](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vs-keybindings). This is super useful and keeps from having to scroll around trying to find things.
 
 ### Data Prep Demo Video [here](https://youtu.be/u1ppYaZuNmo?t=751)
 
@@ -113,7 +113,7 @@ To navigate through code with `F12` and `CTRL-` shortcuts download the Visual St
 This is normally where you would create the `Predictive Experiment` to deploy it to a web service _however_ we have done these steps in advance. 
 * Discuss these steps _do not do them live_:
     * Click `Create` predictive experiment. Think of the `Predictive Experiment` model as the production model that gets deployed to the web service. The     `Training Experiment` as the dev model.
-    * Add the `Execute Python Script` and `Select Columns in Dataset` modules to    the created predictive experiement.
+    * Add the `Execute Python Script` and `Select Columns in Dataset` modules to    the created predictive experiment.
     * Run the experiment
     * Click `Deploy Web Service`
 * After discussing the steps to create the `Predictive Experiment` navigate to the deployed web service from the left nav.
