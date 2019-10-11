@@ -21,7 +21,7 @@ Along with the video of the presentation, this document will link to all the ass
 # Assets in Train-the-Trainer Kit
 
 * This guide
-* [PowerPoint presentation]()
+* [PowerPoint presentation](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/AIML10_MakingSenseofYourUnstructuredDatawAI.pptx)
 * [Full-length recording of presentation]()
 * [Link to Data needed]()
 * [Code files]()
