@@ -13,15 +13,6 @@ pool:
 name: 1.$(BuildID)$(Rev:.r)
 
 steps:
-- task: AzureFileCopy@3
-  displayName: Stage Training Images
-  inputs:
-    sourcePath: ignite-learning-paths-training-aiml/aiml50/source/product-images/*
-    azureSubscription: $(subscription)
-    destination: azureBlob
-    storage: $(session)$(event)storage
-    containerName: product-images
-
 - task: UsePythonVersion@0
   displayName: 'Use Python 3.6'
   inputs:
