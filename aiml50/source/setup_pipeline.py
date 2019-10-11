@@ -4,6 +4,7 @@ from azureml.core.runconfig import RunConfiguration
 from azureml.data.datapath import DataPath, DataPathComputeBinding
 from azureml.data.data_reference import DataReference
 from azureml.core.compute import ComputeTarget, AmlCompute
+from azureml.core.compute_target import ComputeTargetException
 from azureml.pipeline.core import Pipeline, PipelineData, PipelineParameter
 from azureml.pipeline.steps import PythonScriptStep, EstimatorStep
 from azureml.train.estimator import Estimator
@@ -16,15 +17,25 @@ def printhelp():
         print ('  -p    Data Store Path')
         print ('  -c    Compute Target name')
         print ('  -v    Universal Package version (for deployment and inferencing code)')
+        print ('  -s    Azure Subscription id')
+        print ('  -a    Storage Account name')
+        print ('  -k    Storage Account key')
+        print ('  -r    Resource Group name')
+        print ('  -w    Machine Learning workspace name')
 
 datastorename=''
 datastorepath=''
 computetarget=''
 packageversion=''
+workspace_name=''
+subscription_id=''
+resource_group=''
+storage_account=''
+storage_account_key=''
 
 try:
     print('Arguments: ', sys.argv[1:])
-    opts, args = getopt.getopt(sys.argv[1:],"d:p:c:v:")
+    opts, args = getopt.getopt(sys.argv[1:],"d:p:c:v:s:a:k:r:w:")
 except getopt.GetoptError:
     printhelp
 for opt, arg in opts:
@@ -38,6 +49,16 @@ for opt, arg in opts:
         computetarget = arg
     elif opt == '-v':
         packageversion = arg
+    elif opt == '-s':
+        subscription_id = arg
+    elif opt == '-a':
+        storage_account = arg
+    elif opt == '-k':
+        storage_account_key = arg
+    elif opt == '-r':
+        resource_group = arg
+    elif opt == '-w':
+        workspace_name = arg
 
 print("Azure ML SDK Version: ", VERSION)
 
@@ -45,14 +66,31 @@ print("Azure ML SDK Version: ", VERSION)
 ##################################
 
 # workspace
-ws = Workspace.from_config(
-    path='./azureml-config.json')
-print(ws.datastores)
+ws = Workspace.get( name=workspace_name, 
+                    subscription_id=subscription_id, 
+                    resource_group=resource_group)
 
 # data
+ds = Datastore.register_azure_blob_container(workspace=ws, 
+                                            datastore_name=datastorename, 
+                                            container_name='seer-container',
+                                            account_name=storage_account, 
+                                            account_key=storage_account_key,
+                                            create_if_not_exists=True)
 datastore = ws.datastores[datastorename]
 
 # compute target
+try:
+    cpu_cluster = ComputeTarget(workspace=ws, name=computetarget)
+    print('Found existing cluster, use it.')
+except ComputeTargetException:
+    compute_config = AmlCompute.provisioning_configuration(vm_size='STANDARD_NC12',
+                                                           min_nodes=1, 
+                                                           max_nodes=4)
+    cpu_cluster = ComputeTarget.create(ws, computetarget, compute_config)
+
+cpu_cluster.wait_for_completion(show_output=True)
+
 compute = ws.compute_targets[computetarget]
 
 
