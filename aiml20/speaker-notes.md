@@ -26,11 +26,38 @@ this slide at the end, too.
 
 This slide introduces this section, which is an overview of pre-built AI and cognitive services.
 
+* What does that mean?
+
+* Give your app the capability to see, like the power of vision
+
+* How to speak and understand human language
+
+* General perspective: Understand things in general like documents, data,
+  identify what, what the data is about, like a human would  
+
+
 ### SLIDE: Enhance apps with humanlike capabilities
 
 The purpose of this slide it to explain AI services by way of example. These are
 services or features that previously required a human input, and can now be
 automated.
+
+There are lots of things you might want to do when it comes to enhancing apps
+
+- like adding a conversational interface, example a chat bot, we could do that
+  with text or audio and talk with our bot
+
+- working with images and image data, example taking a picture and generating a
+  caption, or search through photos based on content over their filename, e.g
+  all the pictures of dogs
+
+- using human intuition and rearrange interface based on what the user "seems"
+  to want to do, guide them based on business needs
+
+- translating content but also understanding the user 
+
+- working with raw data, this is about learning to identify spikes and realize
+  that a computer can do that for us and perhaps even do it better?
 
 ### SLIDE: Overview of Azure Cognitive Services
 
@@ -48,14 +75,14 @@ That's Azure Cognitive Services.
 Azure Cognitive Services includes more than two dozen APIs, but at the broadest
 level they offer capabilities within these cateegories of human capability:
 
-* Vision: Understanding the content of photograws, drawings, text and
+* Vision: Understanding the content of photographs, drawings, text and
   handwriting, and video
 
 * Speech: Understand and recognize speech, and generate natural, humanlike
   spoken voice.
 
 * Language: Understand the content of written documents and text, and translate
-  between human langauges.
+  between human languages.
 
 * Decision: make humanlike choices about data, content, and application user
   interfaces.
@@ -238,7 +265,7 @@ for the object types it things it represents: basically, the labels associated
 with the top confidence scores at the right of the convolutional neural network
 from before.
 
-There's a simple web-based UI you can use to tru it out at
+There's a simple web-based UI you can use to try it out at
 aka.ms/try-computervision, so let's try it out now. In a moment, I'll also show
 you how to access the API programatically.
 
@@ -342,9 +369,9 @@ DEMO: Custom Vision
 
 We exported our custom model in the ONNX format.
 
-ONNX is community project launched by Microsoft and Facebook to promote the free
-exchange and deployment of AI models, and supported by a wide range of
-applications and technology vendors.
+ONNX, or Open Neural Network Exchange, is a community project launched by
+Microsoft and Facebook to promote the free exchange and deployment of AI models,
+and supported by a wide range of applications and technology vendors.
 
 Now that we've trained our custom vision model, let's integrate it into the
 Tailwind Traders app.
@@ -367,7 +394,7 @@ var prediction = output
 
 ### SLIDE: DEMO: ONNX
 
-DEMO: ONNX in TWT
+DEMO: ONNX Deployment
 
 ### SLIDE: Optimizing App UI with Cognitive Services Personalizer
 
@@ -436,6 +463,8 @@ section was clicked. Over time, Personalizer will determine the best category to
 feature based on time of day, day of week, and OS. It will also "explore" 20% of
 the time, to surface categories that would otherwise not be presented.
 
+### SLIDE: DEMO: Personalizer
+
 DEMO: Personalizer
 
 ### SLIDE: Pre-built AI in Production
@@ -451,6 +480,24 @@ This slide is intended to give a general overview of the "model" for pricing in
 cognitive services. In general, if you just want to try out the service, small
 volumes are free. Attendees should check the given link for exact pricing for
 the service they want to use.
+
+There are some things to think about:
+
+* Cost is probably the first thing on your mind
+
+* If you are new to Azure and want to play around with these services, you can
+  sign up using the link right here and get $200
+
+* So what can we use those credits on?
+
+* If you are just trying things out like a "Developer would" that is small
+  amounts of data, a few attempts here and there, that's generally FREE
+
+* For production mode, that means we might have many users or our services are
+  used frequently then you are being charged by volume and rate
+
+* There are more details on pricing on this link, it might vary a little per
+  service and region
 
 ### SLIDE: Data Considerations
 

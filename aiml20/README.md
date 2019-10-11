@@ -27,18 +27,23 @@ code.
 - [Full-length recording of presentation](https://youtu.be/LobVQJb951k) (Presenter 2)
 - [Full-length recording of presentation - Director Cut](https://youtu.be/34HtSxcK1Yg)
 
-### Dry Run 4 recording marks:
+### Director's cut recording marks:
 
-- 01:02 intro
-- 04:10 deleted content
-- 07:20 overview of Azure Cognitive Services
-- 09:30 Shop by Photo and Computer Vision
-- 20:50 Demo: Cognitive Services and Computer Vision
-- 28:50 Transfer Learning and Custom Vision (deleted content 37:50 – 40:05)
-- 44:05 Personalizer
-- 49:30 AI in Production and Cognitive Services Containers
-- 55:45 end
+(This is an older version of the presentation and demos.)
 
+- 06:30 overview of Azure Cognitive Services
+
+- 08:42 Shop by Photo and Computer Vision
+
+- 19:53 Demo: Cognitive Services and Computer Vision
+
+- 27:56 Transfer Learning and Custom Vision (deleted content 37:50 – 40:05)
+
+- 39:55 Personalizer
+
+- 44:1 AI in Production and Cognitive Services Containers
+
+- 49:59 end
 
 ## Become a Presenter
 
