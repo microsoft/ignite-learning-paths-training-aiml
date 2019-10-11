@@ -1,8 +1,6 @@
 # CI to recreate and submit an AML pipeline when the code changes
 variables:
-  subscription: ca-stmuraws-demo-test
-  session: aiml50
-  event: demo
+  - group: aiml50-demo
 
 trigger:
 - master
@@ -34,8 +32,13 @@ steps:
     azureSubscription: $(subscription)
     scriptLocation: inlineScript
     inlineScript: |
+      cd aiml50/source
+      subscription_id=$(az account show --query id -o tsv)
+      azure_storage_account="$(session)$(event)storage"
+      workspace="$(session)$(event)"
+      azure_storage_key=$(az storage account keys list --account-name $azure_storage_account --resource-group $(resource_group) --query '[].value | [0]' -o tsv )
       echo 'running python script:'
-      python $(Build.Repository.LocalPath)/aiml50/source/setup_pipeline.py -d $(datastorename) -p $(datastorepath) -c $(computetarget) -v $(Build.BuildNumber) -s (az account show --query id -o tsv) -r $(resource_group)
+      python setup_pipeline.py -d $(datastorename) -p $(datastorepath) -c $(computetarget) -v $(Build.BuildNumber) -s $subscription_id -r $(resource_group) -a $azure_storage_account -k $azure_storage_key -w $workspace
 
 - task: CopyFiles@2
   displayName: 'Copy inference and deployment files'
@@ -47,13 +50,21 @@ steps:
       score.py
       seer_scoring.yml
     TargetFolder: '$(Build.ArtifactStagingDirectory)'
-    
-- task: UniversalPackages@0
+
+- task: AzureCLI@1
+  displayName: 'Publish package'
+  env:
+    AZURE_DEVOPS_EXT_PAT: $(access_token)
   inputs:
-    command: 'publish'
-    publishDirectory: '$(Build.ArtifactStagingDirectory)'
-    feedsToUsePublish: 'internal'
-    vstsFeedPackagePublish: 'seer_deployment'
-    vstsFeedPublish: '1261cb14-65de-4b24-8b30-2fffb1332785'
-    versionOption: 'custom'
-    versionPublish: '$(Build.BuildNumber)'
+    azureSubscription: $(subscription)
+    scriptLocation: inlineScript
+    inlineScript: |
+      az extension add -n azure-devops
+      cd aiml50/source
+      az artifacts universal publish \
+        --organization "https://dev.azure.com/$(org_name)/" \
+        --feed "SeerPackages" \
+        --name "seer_deployment" \
+        --version "$(Build.BuildNumber)" \
+        --description "Seer files" \
+        --path .
