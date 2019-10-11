@@ -61,14 +61,14 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <table>
 <tr>
     <td align="center"><a href="">
-        <img src="" width="100px;" alt="David Smith"/><br />
-        <sub><b>Presenter 1</b></sub></a><br />
+        <img src="https://avatars0.githubusercontent.com/u/152948?s=460&v=4" width="100px;" alt="David Smith"/><br />
+        <sub><b>David Smith</b></sub></a><br />
             <a href="https://github.com/neilpeterson/ignite-tour-fy20/commits?author=fboucher" title="talk">📢</a>
             <a href="https://github.com/neilpeterson/ignite-tour-fy20/commits?author=fboucher" title="Documentation">📖</a> 
     </td>
     <td align="center"><a href="">
-        <img src="" width="100px;" alt="Presenter 2"/><br />
-        <sub><b>Presenter 2</b></sub></a><br />
+        <img src="https://avatars2.githubusercontent.com/u/4598064?s=460&v=4" width="100px;" alt="Chris Noring"/><br />
+        <sub><b>Chris Noring</b></sub></a><br />
             <a href="https://github.com/neilpeterson/ignite-tour-fy20/commits?author=neilpeterson" title="talk">🎨</a>
             <a href="https://github.com/neilpeterson/ignite-tour-fy20/commits?author=neilpeterson" title="design">📖</a> 
     </td>
