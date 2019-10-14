@@ -21,8 +21,8 @@ Along with the video of the presentation, this document will link to all the ass
 ## Assets in Train-The-Trainer kit
 
 - This guide
-- PowerPoint presentation including notes for each slide [Here](https://#)
-- Full-length recording of presentation [here](https://#)
+- PowerPoint presentation including notes for each slide [here](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml50/AIML50_MachineLearningOperations–ApplyingDevOpstoDataScience.pptx)
+- Full-length recording of presentation [here](https://youtu.be/UgM8_4fAni8)
 - Director Cut Full-length recording of presentation [here](https://#)
 - Individual recordings of stage-ready hands-on demos [here](https://#)
 - Demo Guide [here](./DEMO.md)
@@ -46,17 +46,15 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 
 <table>
 <tr>
-    <td align="center"><a href="http://cloud5mins.com/">
-        <img src="https://avatars2.githubusercontent.com/u/2404846?s=460&v=4" width="100px;" alt="Frank Boucher"/><br />
-        <sub><b>Frank Boucher</b></sub></a><br />
-            <a href="https://github.com/neilpeterson/ignite-tour-fy20/commits?author=fboucher" title="talk">📢</a>
-            <a href="https://github.com/neilpeterson/ignite-tour-fy20/commits?author=fboucher" title="Documentation">📖</a>
+    <td align="center"><a href="https://github.com/Damovisa">
+        <img src="https://avatars2.githubusercontent.com/u/1887732?s=460&v=4" width="100px;" alt="Damian Brady"/><br />
+        <sub><b>Damian Brady</b></sub></a><br />
+        <a href="" title="talk">📢</a>
     </td>
-    <td align="center"><a href="https://blogs.technet.microsoft.com/neilp/">
-        <img src="https://avatars3.githubusercontent.com/u/7844635?s=460&v=4" width="100px;" alt="Neil Peterson"/><br />
-        <sub><b>Neil Peterson</b></sub></a><br />
-            <a href="https://github.com/neilpeterson/ignite-tour-fy20/commits?author=neilpeterson" title="talk">🎨</a>
-            <a href="https://github.com/neilpeterson/ignite-tour-fy20/commits?author=neilpeterson" title="design">📖</a>
+    <td align="center"><a href="https://github.com/smurawski">
+        <img src="https://avatars1.githubusercontent.com/u/4006985?s=460&v=4" width="100px;" alt="Steven Murawski"/><br />
+        <sub><b>Steven Murawski</b></sub></a><br />
+            <a href="https://github.com/microsoft/ignite-learning-paths-training-aiml/pull/9" title="Documentation">📖</a>
     </td>
 </tr></table>
 
