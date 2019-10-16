@@ -316,6 +316,10 @@
                         {
                             "name": "Personalizer__Endpoint",
                             "value": ""
+                        },
+                        {
+                            "name": "StorageConnectionString",
+                            "value": "[concat('DefaultEndpointsProtocol=https;AccountName=', variables('storageAccountName'), ';AccountKey=', listKeys(resourceId('Microsoft.Storage/storageAccounts', variables('storageAccountName')), '2018-07-01').keys[0].value, ';EndpointSuffix=core.windows.net')]"
                         }
                     ],
                     "metadata": [

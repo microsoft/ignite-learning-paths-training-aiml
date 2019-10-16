@@ -31,7 +31,7 @@ You will also be asked for an event identifier (or reason for spinning up the en
 
 You will need to provide a database username and password for the Azure SQL instance.
 
-<a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3a%2f%2fraw.githubusercontent.com%2fsmurawski%2fignite-learning-paths-training-aiml%2fmaster%2faiml50%2ftemplate%2fazuredeploy.json" target="_blank">
+<a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3a%2f%2fraw.githubusercontent.com%2fmicrosoft%2fignite-learning-paths-training-aiml%2fmaster%2faiml50%2ftemplate%2fazuredeploy.json" target="_blank">
     <img src="http://azuredeploy.net/deploybutton.png"/>
 </a>
 
@@ -98,7 +98,7 @@ There is a variable group that was provisioned that has some shared values to be
 Now, we need to create a build definition by pointing Azure DevOps to our build definition on GitHub.
 
 * Navigate to `Pipelines` (under Pipelines).
-* Select `Create Pipeline`
+* Select `New Pipeline`
 * Connect to your fork of the GitHub project [Ignite Learning Paths Training AI/ML](https://github.com/microsoft/ignite-learning-paths-training-aiml)
 * Choose to use the build definition from the repository (`aiml50/azure-pipelines.yml`)
 
@@ -128,6 +128,7 @@ After the Machine Learning pipeline finishes, we can update the release pipeline
     * Set the service endpoint to `aiml50-workspace`
     * Set the Model Names to `seer`.  You will not be able to do this until the first ML Pipeline finishes.
     * Click `Add`
+    * Click the lightning icon on the new artifact and enable the `Continuous deployment trigger`
 * Next, open the `Deploy to ACI` environment.
 * Click on `Agent Job`
     * Set `Agent Pool` to `Azure Pipelines`
