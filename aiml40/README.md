@@ -25,15 +25,17 @@ code.
 
 - This guide
 - Public materials for AIML40 Session [here](http://github.com/microsoft/ignite-learning-paths/aiml/aiml40/) - this document contains a lot of relevant materials
-- PowerPoint presentation including notes for each slide [Here](https://#)
-- Full-length recording of presentation [here](https://#)
-- Director Cut Full-length recording of presentation [here](https://#)
-- Individual recordings of stage-ready hands-on demos [here](https://#)
+- PowerPoint presentation including notes for each slide [Here](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml40/AIML40_Taking_Models_to_the_Next_Level_with_Azure_Machine_Learning_Best_Practices.pptx)
+- Full-length recording of presentation [here](https://youtu.be/If9IQm3gWVQ)
+- Individual recordings of stage-ready hands-on demos:
+    * Demo 1 - [Cognitive Services Text Analytics](https://youtu.be/QJxjm5BirOA)
+    * Demo 2 - [Automated Machine Learning](https://youtu.be/qrstXN6TLZk)
+    * Demo 3 - [Azure Machine Learning SDK and Hyperdrive](https://youtu.be/sccNTPO3PwU)
 - Demo Guide [here](Demo.md)
 
 ## Become a Presenter
 
-To become a *Trained Presenters*, contact [scalablecontent@microsoft.com](mailto:scalablecontent@microsoft.com). In your email please include:
+To become a *Trained Presenter*, contact [scalablecontent@microsoft.com](mailto:scalablecontent@microsoft.com). In your email please include:
 
 - Complete name:
 - The code of this presentation: \<Session Code (ex:aiml40)\>
