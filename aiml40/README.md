@@ -1,5 +1,3 @@
-
-
 # AIML40 - Taking Models to the Next Level with Azure Machine Learning Best Practices
 
 ## Session Abstract
@@ -12,7 +10,7 @@ In this session, we will explore the complete path of integrating text analysis 
 
 Welcome, Presenter! 
 
-We're glad you are here and look forward to your delivery of this amazing content. As an experienced presenter, we know you know HOW to present so this guide will focus on WHAT you need to present. It will provide you a full run-through of the presentation created by the presentation design team. 
+We're glad you are here and look forward to your delivery of this amazing content. As an experienced presenter, we know you know *HOW* to present so this guide will focus on *WHAT* you need to present. It will provide you a full run-through of the presentation created by the presentation design team. 
 
 Along with the video of the presentation, this document will link to all the assets you need to successfully present including PowerPoint slides and demo instructions &
 code.
@@ -25,7 +23,7 @@ code.
 
 - This guide
 - Public materials for AIML40 Session [here](http://github.com/microsoft/ignite-learning-paths/aiml/aiml40/) - this document contains a lot of relevant materials
-- PowerPoint presentation including notes for each slide [Here](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml40/AIML40_Taking_Models_to_the_Next_Level_with_Azure_Machine_Learning_Best_Practices.pptx)
+- PowerPoint presentation including notes for each slide [here](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml40/AIML40_Taking_Models_to_the_Next_Level_with_Azure_Machine_Learning_Best_Practices.pptx)
 - Full-length recording of presentation [here](https://youtu.be/If9IQm3gWVQ)
 - Individual recordings of stage-ready hands-on demos:
     * Demo 1 - [Cognitive Services Text Analytics](https://youtu.be/QJxjm5BirOA)
@@ -41,7 +39,7 @@ To become a *Trained Presenter*, contact [scalablecontent@microsoft.com](mailto:
 - The code of this presentation: \<Session Code (ex:aiml40)\>
 - Link (ex: unlisted YouTube video) to a video of you presenting (~10 minutes). 
 
-> It doesn't need to be this content, the important is to show your presenter skills
+> It doesn't need to be this content, the importance is to show your presenter skills
 
 
 ## Trained Presenters
