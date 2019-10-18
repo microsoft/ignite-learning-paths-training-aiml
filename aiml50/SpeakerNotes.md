@@ -97,7 +97,7 @@
   * We will deploy that model, but let’s come back to that.
 
 * Slide: # 24
-  * [See Demo #2]()
+  * [See Demo #2](./demos/2-Build_a_Pipeline_With_Notebooks.md)
 
 * Slide: # 25
   * So here’s what we built – the AML pipeline
@@ -139,13 +139,7 @@
   * The important point is – this is all code and software. The quality of your code matters even if it’s not what you’re used to writing!
 
 * Slide: # 35
-  * So with those points in mind, let’s look at the build definition:
-  * Rather than doing it in Jupyter Notebooks (like last demo), let’s make it just the code
-  * Switch to VSCode and show the same code in a pure python file
-  * In a browser, show the last changed triggered a new “build”, and ran some tasks – focus on the Refresh AML pipeline task
-  * Show the YAML build definition in VSCode if you like
-  * Switch to the ML UI and show the AML Pipeline that ran, drill in and see the tasks that ran and show stats
-  * Show the new model that got produced
+  * [See Demo #3](./demos/3-Show_The_Build_And_Release.md)
 
 * Slide: # 36
   * But we still haven’t deployed anything – we have a newly trained model, so how do we deploy?
