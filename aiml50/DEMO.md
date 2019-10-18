@@ -169,7 +169,7 @@ Example:
   * Click on (which will open in a new tabs) 
       * `setup_pipeline.ipynb`
       * `deploy_seer.ipynb`
-
+```
 
 #### seer_pipeline.ipynb
 
