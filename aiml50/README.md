@@ -23,7 +23,6 @@ Along with the video of the presentation, this document will link to all the ass
 - This guide
 - PowerPoint presentation including notes for each slide [here](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml50/AIML50_MachineLearningOperations–ApplyingDevOpstoDataScience.pptx)
 - Full-length recording of presentation [here](https://youtu.be/UgM8_4fAni8)
-- Director Cut Full-length recording of presentation [here](https://#)
 - Individual recordings of stage-ready hands-on demos [here](https://#)
 - Demo Guide [here](./DEMO.md)
 
