@@ -148,7 +148,46 @@ After the Machine Learning pipeline finishes, we can update the release pipeline
 ![22-azure_devops_release_task_edit](./images/22-azure_devops_release_task_edit.png)
 ![23-azure_devops_release_task_verify](./images/23-azure_devops_release_task_verify.png)
 
+### Set up Azure Notebooks
+
+* Navigate to [Azure Notebooks](https://notebooks.azure.com/) and sign in with the Microsoft account that you are demoing with.
+* Add a new project.  You can either import directly from GitHub (the main repository or your fork) or upload the `aiml50/source` directory directly.
+* In the `aiml50/source` directory in the Azure Notebook, create a json file named `azureml-config` with:
+  * Your subscription ID 
+  * The resource group name that contains the ML workspace
+  * The workspace name
+
+Example:
+
+```
+{ 
+    "subscription_id": "cd400f31-6f94-40ab-863a-673192a3c0d0",
+    "resource_group": "aiml50",
+    "workspace_name": "aiml50demo"
+}
+```
+  * Click on (which will open in a new tabs) 
+      * `setup_pipeline.ipynb`
+      * `deploy_seer.ipynb`
+```
+
+#### seer_pipeline.ipynb
+
+    * Ensure the kernel is set to Python 3.6
+    * Set your storage account key
+    * edit Step 4 and set your storage account name
+    * Start to run the individual steps.  You will need to authenticate to azure (follow the prompts in the notebook). Remember to let individual steps finish before starting the next one.
+
+#### deploy_seer.ipynb
+
+    * Ensure the kernel is set to Python 3.6
+    * Run the individual steps. Remember to let individual steps finish before starting the next one.
+
 ## Troubleshooting and Reference
+
+### Checking the container deployment log
+
+In the provisioned resource group, navigate to the `bootstrap-container` container instance. From there, you can check the logs for the container, which will show the steps taken and any errors encountered.
 
 ### Provider registration
 

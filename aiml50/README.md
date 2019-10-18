@@ -24,7 +24,11 @@ Along with the video of the presentation, this document will link to all the ass
 - PowerPoint presentation including notes for each slide [here](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml50/AIML50_MachineLearningOperations–ApplyingDevOpstoDataScience.pptx)
 - Full-length recording of presentation [here](https://youtu.be/UgM8_4fAni8)
 - Individual recordings of stage-ready hands-on demos [here](https://#)
-- Demo Guide [here](./DEMO.md)
+- Demo Guides
+    - [Setup](./DEMO.md)
+    - [Demo #1](./demos/1-Show_Faulty_Prediction.md)
+    - [Demo #2](./demos/2-Build_a_Pipeline_With_Notebooks.md)
+    - [Demo #3](./demos/3-Show_The_Build_And_Release.md)
 
 ## Become a Presenter
 
