@@ -98,7 +98,7 @@ There is a variable group that was provisioned that has some shared values to be
 Now, we need to create a build definition by pointing Azure DevOps to our build definition on GitHub.
 
 * Navigate to `Pipelines` (under Pipelines).
-* Select `Create Pipeline`
+* Select `New Pipeline`
 * Connect to your fork of the GitHub project [Ignite Learning Paths Training AI/ML](https://github.com/microsoft/ignite-learning-paths-training-aiml)
 * Choose to use the build definition from the repository (`aiml50/azure-pipelines.yml`)
 
