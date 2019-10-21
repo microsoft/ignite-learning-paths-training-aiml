@@ -45,7 +45,7 @@ code.
 
 - 49:59 end
 
-## Become a Presenter
+## Become a Certified Presenter
 
 To become a certified presenter, contact [scalablecontent@microsoft.com](mailto:scalablecontent@microsoft.com). In your email please include:
 

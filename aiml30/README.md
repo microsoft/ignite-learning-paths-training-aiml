@@ -33,7 +33,7 @@ code.
     1. [Demo Setup](demosetup.md)
     2. [Demo Guide](demoguide.md)
 
-## Become a Presenter
+## Become a Certified Presenter
 
 To become a *Trained Presenters*, contact [scalablecontent@microsoft.com](mailto:scalablecontent@microsoft.com). In your email please include:
 
