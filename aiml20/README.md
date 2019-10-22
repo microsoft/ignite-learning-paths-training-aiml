@@ -45,9 +45,9 @@ code.
 
 - 49:59 end
 
-## Become a Certified Presenter
+## Become a Trained Presenter
 
-To become a certified presenter, contact [scalablecontent@microsoft.com](mailto:scalablecontent@microsoft.com). In your email please include:
+To become a trained presenter, contact [scalablecontent@microsoft.com](mailto:scalablecontent@microsoft.com). In your email please include:
 
 - Complete name:
 - The code of this presentation: AIML20
@@ -56,7 +56,7 @@ To become a certified presenter, contact [scalablecontent@microsoft.com](mailto:
 
 A mentor will get back to you with the information on the process.
 
-## Certified Presenters
+## Trained Presenters
 
 Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
 

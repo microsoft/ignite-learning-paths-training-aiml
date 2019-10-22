@@ -31,7 +31,7 @@ code.
     * Demo 3 - [Azure Machine Learning SDK and Hyperdrive](https://youtu.be/sccNTPO3PwU)
 - Demo Guide [here](Demo.md)
 
-## Become a Certified Presenter
+## Become a Trained Presenter
 
 To become a *Trained Presenter*, contact [scalablecontent@microsoft.com](mailto:scalablecontent@microsoft.com). In your email please include:
 

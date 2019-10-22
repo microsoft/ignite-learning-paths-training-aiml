@@ -30,9 +30,9 @@ Along with the video of the presentation, this document will link to all the ass
     - [Demo #2](./demos/2-Build_a_Pipeline_With_Notebooks.md)
     - [Demo #3](./demos/3-Show_The_Build_And_Release.md)
 
-## Become a Certified Presenter
+## Become a Trained Presenter
 
-To become a *Trained Presenters*, contact [scalablecontent@microsoft.com](mailto:scalablecontent@microsoft.com). In your email please include:
+To become a *Trained Presenter*, contact [scalablecontent@microsoft.com](mailto:scalablecontent@microsoft.com). In your email please include:
 
 - Complete name:
 - The code of this presentation: AIML50
