@@ -1,3 +1,4 @@
+import azureml
 from azureml.core import VERSION
 from azureml.core import Workspace, Experiment, Datastore, Environment
 from azureml.core.runconfig import RunConfiguration
@@ -160,7 +161,7 @@ trainStep = EstimatorStep(
     estimator_entry_script_arguments=["--source_path", seer_tfrecords, 
                                     "--target_path", seer_training,
                                     "--epochs", 5,
-                                    "--batch", 2,
+                                    "--batch", 10,
                                     "--lr", 0.001],
     inputs=[seer_tfrecords],
     outputs=[seer_training],

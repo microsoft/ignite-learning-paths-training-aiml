@@ -1,4 +1,4 @@
-# Show the Build and Release in Progress
+# Show the Build in Progress
 
 ## Automating the Manual Process
 
@@ -9,8 +9,19 @@ Talking Points:
 
 Demo :
 
+* Start in Azure DevOps in the browser and show build
+  * Start with the Pipeline
+  * Show last build with our change from the start
+  * Highlight the job summary
+  * look at the log for "Recreate and submit the pipeline"
 * Switch to VSCode and show the same code in a pure python file
-* In a browser, show the last changed triggered a new “build”, and ran some tasks – focus on the Refresh AML pipeline task
+  * show the imports
+  * show the added arguments
+  * walk through the remainder and draw parallels to the notebook flow
 * Show the YAML build definition in VSCode if you like
 * Switch to the ML UI and show the AML Pipeline that ran, drill in and see the tasks that ran and show stats
 * Show the new model that got produced
+
+## Example Demo
+
+* [Dry run starting at 24:44](https://youtu.be/UgM8_4fAni8?t=1484)
