@@ -48,7 +48,6 @@
         "uniqueName": "[concat(variables('sessionCode'), variables('event'))]",
         "friendlyName": "ML Workspace Containers AIML50",
         "location": "[resourceGroup().location]",
-        "azureDevOpsLocation": "centralus",
         "storageAccountName": "[concat(variables('uniqueName'), 'storage')]",
         "storageAccountType": "Standard_LRS",
         "keyVaultName": "[concat(variables('uniqueName'), 'vault')]",
@@ -551,7 +550,9 @@
             "location": "[resourceGroup().location]",
             "dependsOn": [
                 "[resourceId('Microsoft.Authorization/roleAssignments', variables('bootstrapRoleAssignmentId'))]",
-                "[resourceId('Microsoft.Storage/storageAccounts', variables('storageAccountName'))]"
+                "[resourceId('Microsoft.Storage/storageAccounts', variables('storageAccountName'))]",
+                "[concat('Microsoft.Sql/servers/', variables('sqlServerName'), '/databases/', variables('sqlDatabaseName'))]",
+                "[resourceId('Microsoft.Web/Sites', variables('uniqueName'))]"
             ],
             "identity": {
                 "type": "UserAssigned",
@@ -597,6 +598,14 @@
                                 {
                                     "name": "MANAGED_IDENTITY",
                                     "secureValue": "[concat(resourceId('Microsoft.ManagedIdentity/userAssignedIdentities', variables('identityName')))]"
+                                },
+                                {
+                                    "name": "SQL_LOGIN",
+                                    "secureValue": "[parameters('sqlLogin')]"
+                                },
+                                {
+                                    "name": "SQL_PASSWORD",
+                                    "secureValue": "[parameters('sqlPassword')]"
                                 }
                             ]
                         }

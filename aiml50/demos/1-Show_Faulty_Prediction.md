@@ -16,3 +16,7 @@
   * Lines 163 - Change `batch` to 10
 * Commit the change and push to master.  This will trigger a build and deployment of the model.  This process will take about 25 or 30 minutes, which should finish up towards the end of the talk.
 * We'll come back and check the results of this towards the end of talk
+
+## Example Demo
+
+* [Dry run starting at 2:36](https://youtu.be/UgM8_4fAni8?t=158)

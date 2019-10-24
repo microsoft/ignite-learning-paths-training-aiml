@@ -22,13 +22,19 @@ Along with the video of the presentation, this document will link to all the ass
 
 - This guide
 - PowerPoint presentation including notes for each slide [here](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml50/AIML50_MachineLearningOperations–ApplyingDevOpstoDataScience.pptx)
+  - [Exported Speaker Notes](./SpeakerNotes.md)
 - Full-length recording of presentation [here](https://youtu.be/UgM8_4fAni8)
-- Individual recordings of stage-ready hands-on demos [here](https://#)
+- Individual recordings of stage-ready hands-on demos
+  - [Demo #1](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml50/AIML50_demo_1.mp4)
+  - [Demo #2](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml50/AIML50_demo_2.mp4)
+  - [Demo #3](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml50/AIML50_demo_3.mp4)
+  - [Demo #4](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml50/AIML50_demo_4.mp4)
 - Demo Guides
-    - [Setup](./DEMO.md)
-    - [Demo #1](./demos/1-Show_Faulty_Prediction.md)
-    - [Demo #2](./demos/2-Build_a_Pipeline_With_Notebooks.md)
-    - [Demo #3](./demos/3-Show_The_Build_And_Release.md)
+  - [Setup](./DEMO.md) and [Video Walkthrough](https://youtu.be/C9WtOZaUoyA)
+  - [Demo #1](./demos/1-Show_Faulty_Prediction.md)
+  - [Demo #2](./demos/2-Build_a_Pipeline_With_Notebooks.md)
+  - [Demo #3](./demos/3-Show_The_Build.md)
+  - [Demo #4](./demos/4-Show_The_Release.md)
 
 ## Become a Trained Presenter
 

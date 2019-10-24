@@ -1,20 +1,19 @@
 # AIML50 - Demonstration Setup Instructions
 
-## Setup Overview
-
-1. Create Demonstration Environment
-    1. Application environment in Azure App Service
-    1. Azure Machine Learning Workspace
-    1. Azure DevOps Project
-1. Something next
-
 ## Create Demonstration Environment
+
+[Video Walkthrough](https://youtu.be/C9WtOZaUoyA)
 
 ### Prerequisites
 
-An Azure DevOps organization that you have rights to add extensions to.
+* An Azure subscription
+* An Azure DevOps organization that you have rights to add extensions to.
+  * A Personal Access Token(PAT) for that organization.
+* A GitHub account (to which you can fork this repository)
 
-A Personal Access Token(PAT) for that organization.
+### Fork the repository
+
+In GitHub, [create a fork](https://help.github.com/en/github/getting-started-with-github/fork-a-repo) of this repository under a user or organization of which you have control.  You will need permissions to connect the GitHub repo to Azure DevOps.
 
 ### Deploy the Template
 
@@ -39,47 +38,81 @@ The deployment takes roughly 30 to 40 minutes.
 
 Once the deployment is underway (at least with the Azure Machine Learning service created and the bootstrap-container Azure Container instance has run to completion), you can finish setting up the Azure DevOps environment.  Most of the environment will be configured, but there are a few manual steps.
 
-To start, navigate to the AIML50 project that was created in the Azure DevOps Organization you specified to to the deployment template.
+### Set up Azure Notebooks
+
+* Navigate to [Azure Notebooks](https://notebooks.azure.com/) and sign in with the Microsoft account that you are demoing with.
+* Add a new project.  You can either import directly from GitHub (the main repository or your fork) or upload the `aiml50/source` directory directly.
+* In the `aiml50/source` directory in the Azure Notebook, create a json file named `azureml-config` with:
+  * Your subscription ID
+  * The resource group name that contains the ML workspace
+  * The workspace name
+
+Example:
+
+```
+{
+    "subscription_id": "cd400f31-6f94-40ab-863a-673192a3c0d0",
+    "resource_group": "aiml50",
+    "workspace_name": "aiml50demo"
+}
+```
+
+* Click on (which will open in a new tab)
+  * `setup_pipeline.ipynb`
+
+#### seer_pipeline.ipynb
+
+* Ensure the kernel is set to Python 3.6
+* Set your storage account key
+* edit Step 4 and set your storage account name
+* Start to run the individual steps.  You will need to authenticate to azure (follow the prompts in the notebook). Remember to let individual steps finish before starting the next one.
+
+### Setup the Azure DevOps Project
+
+Next, navigate to the AIML50 project that was created in the Azure DevOps Organization you specified to to the deployment template.
 
 #### Create the Service Connections
 
 From the project page, navigate to the project settings.
 
+![0-azure_devops_org](./images/0-azure_devops_org.png)
+![1-azure_devops_project](./images/1-azure_devops_project.png)
+
 Select `Service Connections` under `Pipelines`.
+
+![2-azure_devops_project_settings](./images/2-azure_devops_project_settings.png)
 
 Add two service connections:
 
 * First connection `aiml50`
-    * Type: Azure Resource Manager
-    * Connection name: `aiml50`
-        * Name of the service connection. This needs to match, as it is already set in the build.
-    * Scope level: `Subscription`
-        * Scope of authorization for the service principal. For this one, set it to `subscription`.
-    * Subscription: `Ignite The Tour`
-        * The subscription you deployed the demo environment to. This may be different than the example above. You can pick subscriptions from the dropdown based on the user with which you logged in to Azure DevOps.
-    * Resource Group: `aiml50` or blank
-        * You can constrain the credentials to the resource group that you have deployed into or allow it rights across the subscription.
-* Second connection: `aiml50-workspace`
-    * Type: Azure Resource Manager
-    * Connection name: `aiml50`
-        * Name of the service connection. This needs to match, as it is already set in the build.
-    * Scope level: `AzureMLWorkspace`
-        * Scope of authorization for the service principal. This will be required for the release.
-    * Subscription: `Ignite The Tour`
-        * The subscription you deployed the demo environment to. This may be different than the example above. You can pick subscriptions from the dropdown based on the user with which you logged in to Azure DevOps.
-    * Resource Group: `aiml50`
-        * This should be the resource group with your Azure Machine Learning Workspace.
-    * Machine Learning Workspace: `aiml50demo`
-        * Your name will vary based on which event or qualifier you use to provision the environment.
+  * Type: Azure Resource Manager
+  * Connection name: `aiml50`
+    * Name of the service connection. This needs to match, as it is already set in the build.
+  * Scope level: `Subscription`
+    * Scope of authorization for the service principal. For this one, set it to `subscription`.
+  * Subscription: `Ignite The Tour`
+    * The subscription you deployed the demo environment to. This may be different than the example above. You can pick subscriptions from the dropdown based on the user with which you logged in to Azure DevOps.
+  * Resource Group: `aiml50` or blank
+    * You can constrain the credentials to the resource group that you have deployed into or allow it rights across the subscription.
 
-![0-azure_devops_org](./images/0-azure_devops_org.png)
-![1-azure_devops_project](./images/1-azure_devops_project.png)
-![2-azure_devops_project_settings](./images/2-azure_devops_project_settings.png)
-![3-azure_devops_service_connection](./images/3-azure_devops_service_connection.png)
 ![4-azure_devops_service_connection](./images/4-azure_devops_service_connection.png)
+![3-azure_devops_service_connection](./images/3-azure_devops_service_connection.png)
+
+* Second connection: `aiml50-workspace`
+  * Type: Azure Resource Manager
+  * Connection name: `aiml50`
+    * Name of the service connection. This needs to match, as it is already set in the build.
+  * Scope level: `AzureMLWorkspace`
+    * Scope of authorization for the service principal. This will be required for the release.
+  * Subscription: `Ignite The Tour`
+    * The subscription you deployed the demo environment to. This may be different than the example above. You can pick subscriptions from the dropdown based on the user with which you logged in to Azure DevOps.
+  * Resource Group: `aiml50`
+    * This should be the resource group with your Azure Machine Learning Workspace.
+  * Machine Learning Workspace: `aiml50demo`
+    * Your name will vary based on which event or qualifier you use to provision the environment.
+
 ![5-azure_devops_service_connection_add](./images/5-azure_devops_service_connection_add.png)
 ![6-azure_devops_service_connection_detail](./images/6-azure_devops_service_connection_detail.png)
-
 
 #### Enable the Variable Group
 
@@ -121,22 +154,22 @@ After the build is connected to the source repository, we need to run a build to
 
 After the Machine Learning pipeline finishes, we can update the release pipeline.
 
-*  Navigate to `Releases` (under Pipelines).
+* Navigate to `Releases` (under Pipelines).
 * Select `Release Seer` and choose `Edit`
-    * Select `Add an artifact`
-    * Set a `Source type` of `AzureML`
-    * Set the service endpoint to `aiml50-workspace`
-    * Set the Model Names to `seer`.  You will not be able to do this until the first ML Pipeline finishes.
-    * Click `Add`
-    * Click the lightning icon on the new artifact and enable the `Continuous deployment trigger`
+  * Select `Add an artifact`
+  * Set a `Source type` of `AzureML`
+  * Set the service endpoint to `aiml50-workspace`
+  * Set the Model Names to `seer`.  You will not be able to do this until the first ML Pipeline finishes.
+  * Click `Add`
+  * Click the lightning icon on the new artifact and enable the `Continuous deployment trigger`
 * Next, open the `Deploy to ACI` environment.
 * Click on `Agent Job`
-    * Set `Agent Pool` to `Azure Pipelines`
-    * Set `Agent Specification` to `ubuntu-18.04`
+  * Set `Agent Pool` to `Azure Pipelines`
+  * Set `Agent Specification` to `ubuntu-18.04`
 * Click on `Download deployment and inferencing code`
-    * Set `Package name` to `seer_deployment`
+  * Set `Package name` to `seer_deployment`
 * Click on `Azure ML Model Deploy`
-    * Verify that Azure ML Workspace is set to either `$(subscription_workspace)` or `aiml-workspace`.
+  * Verify that Azure ML Workspace is set to either `$(subscription_workspace)` or `aiml-workspace`.
 * Save the pipeline and create a new release.
 
 ![16-azure_devops_release_new](./images/16-azure_devops_release_new.png)
@@ -147,41 +180,6 @@ After the Machine Learning pipeline finishes, we can update the release pipeline
 ![21-azure_devops_release_task_agent](./images/21-azure_devops_release_task_agent.png)
 ![22-azure_devops_release_task_edit](./images/22-azure_devops_release_task_edit.png)
 ![23-azure_devops_release_task_verify](./images/23-azure_devops_release_task_verify.png)
-
-### Set up Azure Notebooks
-
-* Navigate to [Azure Notebooks](https://notebooks.azure.com/) and sign in with the Microsoft account that you are demoing with.
-* Add a new project.  You can either import directly from GitHub (the main repository or your fork) or upload the `aiml50/source` directory directly.
-* In the `aiml50/source` directory in the Azure Notebook, create a json file named `azureml-config` with:
-  * Your subscription ID 
-  * The resource group name that contains the ML workspace
-  * The workspace name
-
-Example:
-
-```
-{ 
-    "subscription_id": "cd400f31-6f94-40ab-863a-673192a3c0d0",
-    "resource_group": "aiml50",
-    "workspace_name": "aiml50demo"
-}
-```
-  * Click on (which will open in a new tabs) 
-      * `setup_pipeline.ipynb`
-      * `deploy_seer.ipynb`
-```
-
-#### seer_pipeline.ipynb
-
-    * Ensure the kernel is set to Python 3.6
-    * Set your storage account key
-    * edit Step 4 and set your storage account name
-    * Start to run the individual steps.  You will need to authenticate to azure (follow the prompts in the notebook). Remember to let individual steps finish before starting the next one.
-
-#### deploy_seer.ipynb
-
-    * Ensure the kernel is set to Python 3.6
-    * Run the individual steps. Remember to let individual steps finish before starting the next one.
 
 ## Troubleshooting and Reference
 
