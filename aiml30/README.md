@@ -33,9 +33,9 @@ code.
     1. [Demo Setup](demosetup.md)
     2. [Demo Guide](demoguide.md)
 
-## Become a Presenter
+## Become a Trained Presenter
 
-To become a *Trained Presenters*, contact [scalablecontent@microsoft.com](mailto:scalablecontent@microsoft.com). In your email please include:
+To become a *Trained Presenter*, contact [scalablecontent@microsoft.com](mailto:scalablecontent@microsoft.com). In your email please include:
 
 - Complete name:
 - The code of this presentation: AIML30
@@ -53,9 +53,15 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 
 <table>
 <tr>
-    <td align="center"><a href="http://cloud5mins.com/">
+    <td align="center">
         <img src="https://media.licdn.com/dms/image/C4E03AQFV-bjxXWxeIw/profile-displayphoto-shrink_200_200/0?e=1575504000&v=beta&t=i0CssIxPnjai9cTjruIvKVrACO0J2qCCJRm-PLEI1q0" width="100px;" alt="Cassie Breviu"/><br />
-        <sub><b>Cassie Breviu</b></sub></a><br />
+        <sub><b>Cassie Breviu</b></sub><br />
+            <a href="https://github.com/microsoft/ignite-learning-paths-training-aiml/aiml30/" title="talk">📢</a>
+            <a href="https://github.com/microsoft/ignite-learning-paths-training-aiml/aiml30/" title="Documentation">📖</a>
+    </td>
+        <td align="center">
+        <img src="https://developer.microsoft.com/en-us/advocates/media/profiles/francesca-lazzeri.png" width="100px;" alt="Francesca Lazzeri"/><br />
+        <sub><b>Francesca Lazzeri</b></sub><br />
             <a href="https://github.com/microsoft/ignite-learning-paths-training-aiml/aiml30/" title="talk">📢</a>
             <a href="https://github.com/microsoft/ignite-learning-paths-training-aiml/aiml30/" title="Documentation">📖</a>
     </td>

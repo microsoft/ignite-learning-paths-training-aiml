@@ -1,0 +1,3 @@
+pathlib
+matplotlib
+tensorflow-gpu==2.0.0-beta1

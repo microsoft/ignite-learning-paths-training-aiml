@@ -1,0 +1,609 @@
+{
+    "$schema": "http://schema.management.azure.com/schemas/2018-05-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "event": {
+            "defaultValue": "demo",
+            "type": "String",
+            "metadata": {
+                "description": "The event or other identifier to create a unique environment."
+            }
+        },
+        "sqlLogin": {
+            "defaultValue": "twtdbuser",
+            "type": "String",
+            "metadata": {
+                "description": "Database user account for the Azure SQL instance."
+            }
+        },
+        "sqlPassword": {
+            "type": "SecureString",
+            "metadata": {
+                "description": "Database user password for the Azure SQL instance."
+            }
+        },
+        "azureDevOpsOrgName": {
+            "type": "String",
+            "metadata": {
+                "description": "Azure DevOps organiztion name. You can use an existing organization or a new one will be created."
+            }
+        },
+        "azureDevOpsProject": {
+            "defaultValue": "AIML50",
+            "type": "String",
+            "metadata": {
+                "description": "Name of the Azure DevOps Project for this project's demos."
+            }
+        },
+        "azureDevOpsAccessToken": {
+            "type": "SecureString",
+            "metadata": {
+                "description": "The Personal Access Token (PAT) for the Azure DevOps organization."
+            }
+        }
+    },
+    "variables": {
+        "sessionCode": "aiml50",
+        "event": "[toLower(parameters('event'))]",
+        "uniqueName": "[concat(variables('sessionCode'), variables('event'))]",
+        "friendlyName": "ML Workspace Containers AIML50",
+        "location": "[resourceGroup().location]",
+        "azureDevOpsLocation": "centralus",
+        "storageAccountName": "[concat(variables('uniqueName'), 'storage')]",
+        "storageAccountType": "Standard_LRS",
+        "keyVaultName": "[concat(variables('uniqueName'), 'vault')]",
+        "containerRegistryName": "[concat(variables('uniqueName'), 'registry')]",
+        "appInsightsNameML": "[concat(variables('uniqueName'), 'mlinsights')]",
+        "machineLearningName": "[variables('uniqueName')]",
+        "subscriptionId": "[subscription().id]",
+        "hostingEnvironment": "",
+        "hostingPlanName": "[concat(variables('uniqueName'), '-plan')]",
+        "serverFarmResourceGroup": "[resourceGroup().name]",
+        "alwaysOn": true,
+        "sku": "PremiumV2",
+        "skuCode": "P1v2",
+        "workerSize": "3",
+        "workerSizeId": "3",
+        "numberOfWorkers": "1",
+        "currentStack": "dotnetcore",
+        "appInsightsNameWeb": "[concat(variables('uniqueName'),'webinsights')]",
+        "sqlServerName": "[concat(variables('uniqueName'), '-sqlsvr')]",
+        "sqlDatabaseName": "[concat(variables('uniqueName'), '-sqldb')]",
+        "collation": "SQL_Latin1_General_CP1_CI_AS",
+        "maxSizeBytes": 2147483648,
+        "sampleName": "",
+        "licenseType": "",
+        "readScaleOut": "Disabled",
+        "zoneRedundant": false,
+        "numberOfReplicas": 0,
+        "minCapacity": "",
+        "autoPauseDelay": "",
+        "sqlSkuName": "Basic",
+        "sqlTier": "Basic",
+        "locationCode": "[toLower(replace(variables('location'), ' ', ''))]",
+        "apiUrl": "/api/v1",
+        "apiUrlShoppingCart": "/api/v1",
+        "cosmosAccountName": "[concat(variables('uniqueName'), '-mongo')]",
+        "cosmosDatabaseName": "tailwind",
+        "twtApplicationRepoUrl": "https://github.com/microsoft/TailwindTraders-Website",
+        "twtApplicationRepoBranch": "master",
+        "aciName": "bootstrap-container",
+        "bootstrapRoleAssignmentId": "[guid(concat(resourceGroup().id, 'contributor'))]",
+        "bootstrapStorageRoleAssignmentId": "[concat(variables('storageAccountName'), '/Microsoft.Authorization/', guid(uniqueString(variables('storageAccountName'))))]",
+        "identityName": "bootstrap-creds",
+        "contributorRoleDefinitionId": "[concat('/subscriptions/', subscription().subscriptionId, '/providers/Microsoft.Authorization/roleDefinitions/', 'b24988ac-6180-42a0-ab88-20f7382dd24c')]",
+        "storageContributorRoleDefinitionId": "[concat('/subscriptions/', subscription().subscriptionId, '/providers/Microsoft.Authorization/roleDefinitions/', 'ba92f5b4-2d11-453d-a403-e96b0029c9fe')]",
+        "containerName": "logs",
+        "deploymentImage": "smurawski/deploy-aiml50:latest"
+    },
+    "resources": [
+        {
+            "type": "Microsoft.Storage/storageAccounts",
+            "apiVersion": "2018-07-01",
+            "name": "[variables('storageAccountName')]",
+            "location": "[variables('location')]",
+            "sku": {
+                "name": "[variables('storageAccountType')]"
+            },
+            "kind": "StorageV2",
+            "properties": {
+                "encryption": {
+                    "services": {
+                        "blob": {
+                            "enabled": true
+                        },
+                        "file": {
+                            "enabled": true
+                        }
+                    },
+                    "keySource": "Microsoft.Storage"
+                },
+                "supportsHttpsTrafficOnly": true
+            }
+        },
+        {
+            "type": "Microsoft.Storage/storageAccounts/blobServices",
+            "apiVersion": "2019-04-01",
+            "name": "[concat(variables('storageAccountName'), '/default')]",
+            "dependsOn": [
+                "[resourceId('Microsoft.Storage/storageAccounts', variables('storageAccountName'))]"
+            ],
+            "properties": {
+                "cors": {
+                    "corsRules": [
+                        {
+                            "allowedOrigins": [
+                                "https://mlworkspace.azure.ai",
+                                "https://ml.azure.com",
+                                "https://mlworkspacecanary.azure.ai",
+                                "https://mlworkspace.azureml-test.net"
+                            ],
+                            "allowedMethods": [
+                                "GET",
+                                "HEAD"
+                            ],
+                            "maxAgeInSeconds": 1800,
+                            "exposedHeaders": [
+                                "*"
+                            ],
+                            "allowedHeaders": [
+                                "*"
+                            ]
+                        }
+                    ]
+                },
+                "deleteRetentionPolicy": {
+                    "enabled": false
+                }
+            }
+        },
+        {
+            "type": "Microsoft.Storage/storageAccounts/blobServices/containers",
+            "apiVersion": "2019-04-01",
+            "name": "[concat(variables('storageAccountName'), '/default/seer-container')]",
+            "dependsOn": [
+                "[resourceId('Microsoft.Storage/storageAccounts/blobServices', variables('storageAccountName'), 'default')]",
+                "[resourceId('Microsoft.Storage/storageAccounts', variables('storageAccountName'))]"
+            ],
+            "properties": {
+                "publicAccess": "None"
+            }
+        },
+        {
+            "type": "Microsoft.Storage/storageAccounts/blobServices/containers",
+            "apiVersion": "2019-04-01",
+            "name": "[concat(variables('storageAccountName'), '/default/website-uploads')]",
+            "dependsOn": [
+                "[resourceId('Microsoft.Storage/storageAccounts/blobServices', variables('storageAccountName'), 'default')]",
+                "[resourceId('Microsoft.Storage/storageAccounts', variables('storageAccountName'))]"
+            ],
+            "properties": {
+                "publicAccess": "Blob"
+            }
+        },
+        {
+            "type": "Microsoft.Storage/storageAccounts/blobServices/containers",
+            "apiVersion": "2019-04-01",
+            "name": "[concat(variables('storageAccountName'), '/default/product-images')]",
+            "dependsOn": [
+                "[resourceId('Microsoft.Storage/storageAccounts/blobServices', variables('storageAccountName'), 'default')]",
+                "[resourceId('Microsoft.Storage/storageAccounts', variables('storageAccountName'))]"
+            ],
+            "properties": {
+                "publicAccess": "Blob"
+            }
+        },
+        {
+            "type": "Microsoft.KeyVault/vaults",
+            "apiVersion": "2016-10-01",
+            "name": "[variables('keyVaultName')]",
+            "location": "[variables('location')]",
+            "properties": {
+                "accessPolicies": [],
+                "sku": {
+                    "name": "standard",
+                    "family": "A"
+                },
+                "tenantId": "[subscription().tenantId]"
+            }
+        },
+        {
+            "type": "Microsoft.ContainerRegistry/registries",
+            "apiVersion": "2017-10-01",
+            "name": "[variables('containerRegistryName')]",
+            "location": "[variables('location')]",
+            "sku": {
+                "name": "Standard"
+            },
+            "properties": {
+                "adminUserEnabled": true
+            }
+        },
+        {
+            "type": "Microsoft.Insights/components",
+            "apiVersion": "2015-05-01",
+            "name": "[variables('appInsightsNameML')]",
+            "location": "[variables('location')]",
+            "kind": "web",
+            "properties": {
+                "Application_Type": "web"
+            }
+        },
+        {
+            "type": "Microsoft.MachineLearningServices/workspaces",
+            "apiVersion": "2018-11-19",
+            "name": "[variables('machineLearningName')]",
+            "location": "[variables('location')]",
+            "dependsOn": [
+                "[resourceId('Microsoft.Storage/storageAccounts', variables('storageAccountName'))]",
+                "[resourceId('Microsoft.KeyVault/vaults', variables('keyVaultName'))]",
+                "[resourceId('Microsoft.Insights/components', variables('appInsightsNameML'))]",
+                "[resourceId('Microsoft.ContainerRegistry/registries', variables('containerRegistryName'))]"
+            ],
+            "identity": {
+                "type": "systemAssigned"
+            },
+            "properties": {
+                "friendlyName": "[variables('friendlyName')]",
+                "keyVault": "[resourceId('Microsoft.KeyVault/vaults', variables('keyVaultName'))]",
+                "applicationInsights": "[resourceId('Microsoft.Insights/components', variables('appInsightsNameML'))]",
+                "containerRegistry": "[resourceId('Microsoft.ContainerRegistry/registries', variables('containerRegistryName'))]",
+                "storageAccount": "[resourceId('Microsoft.Storage/storageAccounts', variables('storageAccountName'))]",
+                "description": "Machine Learning Pipelines for AIML50"
+            }
+        },
+        {
+            "type": "Microsoft.Web/sites",
+            "apiVersion": "2018-02-01",
+            "name": "[variables('uniqueName')]",
+            "location": "[variables('location')]",
+            "dependsOn": [
+                "[concat('microsoft.insights/components/', variables('appInsightsNameWeb'))]",
+                "[concat('Microsoft.Web/serverfarms/', variables('hostingPlanName'))]",
+                "[concat('Microsoft.Sql/servers/', variables('sqlServerName'), '/databases/', variables('sqlDatabaseName'))]",
+                "[concat('Microsoft.DocumentDB/databaseAccounts/', variables('cosmosAccountName'))]",
+                "[concat('Microsoft.CognitiveServices/accounts/', variables('uniqueName'))]"
+            ],
+            "tags": {},
+            "properties": {
+                "name": "[variables('uniqueName')]",
+                "siteConfig": {
+                    "appSettings": [
+                        {
+                            "name": "APPINSIGHTS_INSTRUMENTATIONKEY",
+                            "value": "[reference(concat('microsoft.insights/components/', variables('appInsightsNameWeb')), '2015-05-01').InstrumentationKey]"
+                        },
+                        {
+                            "name": "ApplicationInsightsAgent_EXTENSION_VERSION",
+                            "value": "~2"
+                        },
+                        {
+                            "name": "XDT_MicrosoftApplicationInsights_Mode",
+                            "value": "recommended"
+                        },
+                        {
+                            "name": "DiagnosticServices_EXTENSION_VERSION",
+                            "value": "~3"
+                        },
+                        {
+                            "name": "APPINSIGHTS_PROFILERFEATURE_VERSION",
+                            "value": "1.0.0"
+                        },
+                        {
+                            "name": "APPINSIGHTS_SNAPSHOTFEATURE_VERSION",
+                            "value": "1.0.0"
+                        },
+                        {
+                            "name": "InstrumentationEngine_EXTENSION_VERSION",
+                            "value": "~1"
+                        },
+                        {
+                            "name": "SnapshotDebugger_EXTENSION_VERSION",
+                            "value": "~1"
+                        },
+                        {
+                            "name": "XDT_MicrosoftApplicationInsights_BaseExtensions",
+                            "value": "~1"
+                        },
+                        {
+                            "name": "WEBSITE_NODE_DEFAULT_VERSION",
+                            "value": "10.15.2"
+                        },
+                        {
+                            "name": "ApiUrl",
+                            "value": "[variables('apiUrl')]"
+                        },
+                        {
+                            "name": "ApiUrlShoppingCart",
+                            "value": "[variables('apiUrlShoppingCart')]"
+                        },
+                        {
+                            "name": "MongoConnectionString",
+                            "value": "[listConnectionStrings(resourceId('Microsoft.DocumentDB/databaseAccounts', variables('cosmosAccountName')), '2015-04-08').connectionStrings[0].connectionString]"
+                        },
+                        {
+                            "name": "SqlConnectionString",
+                            "value": "[concat('Server=tcp:', reference(concat('Microsoft.Sql/servers/', variables('sqlserverName'))).fullyQualifiedDomainName, ',1433;Initial Catalog=', variables('sqlDatabaseName'), ';Persist Security Info=False;User ID=', parameters('sqlLogin'), ';Password=', parameters('sqlPassword'), ';MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;')]"
+                        },
+                        {
+                            "name": "productImagesUrl",
+                            "value": "[concat('https://', variables('storageAccountName'),'.blob.core.windows.net/product-images')]"
+                        },
+                        {
+                            "name": "ImagePredictorEndpoint",
+                            "value": ""
+                        },
+                        {
+                            "name": "Personalizer__ApiKey",
+                            "value": ""
+                        },
+                        {
+                            "name": "Personalizer__Endpoint",
+                            "value": ""
+                        },
+                        {
+                            "name": "StorageConnectionString",
+                            "value": "[concat('DefaultEndpointsProtocol=https;AccountName=', variables('storageAccountName'), ';AccountKey=', listKeys(resourceId('Microsoft.Storage/storageAccounts', variables('storageAccountName')), '2018-07-01').keys[0].value, ';EndpointSuffix=core.windows.net')]"
+                        }
+                    ],
+                    "metadata": [
+                        {
+                            "name": "CURRENT_STACK",
+                            "value": "[variables('currentStack')]"
+                        }
+                    ],
+                    "alwaysOn": "[variables('alwaysOn')]"
+                },
+                "serverFarmId": "[concat('/subscriptions/', variables('subscriptionId'),'/resourcegroups/', variables('serverFarmResourceGroup'), '/providers/Microsoft.Web/serverfarms/', variables('hostingPlanName'))]",
+                "hostingEnvironment": "[variables('hostingEnvironment')]",
+                "clientAffinityEnabled": true
+            },
+            "resources": [
+                {
+                    "type": "sourcecontrols",
+                    "apiVersion": "2018-02-01",
+                    "name": "web",
+                    "dependsOn": [
+                        "[resourceId('Microsoft.Web/Sites', variables('uniqueName'))]"
+                    ],
+                    "properties": {
+                        "RepoUrl": "[variables('twtApplicationRepoUrl')]",
+                        "branch": "[variables('twtApplicationRepoBranch')]",
+                        "IsManualIntegration": true
+                    }
+                }
+            ]
+        },
+        {
+            "type": "Microsoft.Web/serverfarms",
+            "apiVersion": "2018-11-01",
+            "name": "[variables('hostingPlanName')]",
+            "location": "[variables('location')]",
+            "dependsOn": [],
+            "tags": {},
+            "sku": {
+                "Tier": "[variables('sku')]",
+                "Name": "[variables('skuCode')]"
+            },
+            "kind": "",
+            "properties": {
+                "name": "[variables('hostingPlanName')]",
+                "workerSize": "[variables('workerSize')]",
+                "workerSizeId": "[variables('workerSizeId')]",
+                "numberOfWorkers": "[variables('numberOfWorkers')]",
+                "hostingEnvironment": "[variables('hostingEnvironment')]"
+            }
+        },
+        {
+            "type": "microsoft.insights/components",
+            "apiVersion": "2015-05-01",
+            "name": "[variables('appInsightsNameWeb')]",
+            "location": "[variables('locationCode')]",
+            "properties": {
+                "ApplicationId": "[variables('uniqueName')]",
+                "Request_Source": "IbizaWebAppExtensionCreate"
+            }
+        },
+        {
+            "type": "Microsoft.Sql/servers",
+            "apiVersion": "2018-06-01-preview",
+            "name": "[variables('sqlServerName')]",
+            "location": "[variables('locationCode')]",
+            "tags": {},
+            "properties": {
+                "administratorLogin": "[parameters('sqlLogin')]",
+                "administratorLoginPassword": "[parameters('sqlPassword')]",
+                "version": "12.0"
+            },
+            "resources": [
+                {
+                    "type": "databases",
+                    "apiVersion": "2017-10-01-preview",
+                    "name": "[variables('sqlDatabaseName')]",
+                    "location": "[variables('locationCode')]",
+                    "dependsOn": [
+                        "[concat('Microsoft.Sql/servers/', variables('sqlServerName'))]"
+                    ],
+                    "tags": {},
+                    "sku": {
+                        "name": "[variables('sqlSkuName')]",
+                        "tier": "[variables('sqlTier')]"
+                    },
+                    "properties": {
+                        "collation": "[variables('collation')]",
+                        "maxSizeBytes": "[variables('maxSizeBytes')]",
+                        "sampleName": "[variables('sampleName')]",
+                        "zoneRedundant": "[variables('zoneRedundant')]",
+                        "licenseType": "[variables('licenseType')]",
+                        "readScale": "[variables('readScaleOut')]",
+                        "readReplicaCount": "[variables('numberOfReplicas')]",
+                        "minCapacity": "[variables('minCapacity')]",
+                        "autoPauseDelay": "[variables('autoPauseDelay')]"
+                    }
+                },
+                {
+                    "type": "firewallrules",
+                    "apiVersion": "2014-04-01-preview",
+                    "name": "AllowAllWindowsAzureIps",
+                    "location": "[variables('locationCode')]",
+                    "dependsOn": [
+                        "[concat('Microsoft.Sql/servers/', variables('sqlServerName'))]"
+                    ],
+                    "properties": {
+                        "endIpAddress": "0.0.0.0",
+                        "startIpAddress": "0.0.0.0"
+                    }
+                }
+            ]
+        },
+        {
+            "type": "Microsoft.DocumentDB/databaseAccounts",
+            "apiVersion": "2015-04-08",
+            "name": "[variables('cosmosAccountName')]",
+            "location": "[variables('location')]",
+            "kind": "MongoDB",
+            "properties": {
+                "databaseAccountOfferType": "Standard"
+            }
+        },
+        {
+            "type": "Microsoft.DocumentDB/databaseAccounts/apis/databases",
+            "apiVersion": "2015-04-08",
+            "name": "[concat(variables('cosmosAccountName'), '/mongodb/', variables('cosmosDatabaseName'))]",
+            "location": "[variables('location')]",
+            "dependsOn": [
+                "[resourceId('Microsoft.DocumentDB/databaseAccounts/', variables('cosmosAccountName'))]"
+            ],
+            "properties": {
+                "resource": {
+                    "id": "[variables('cosmosDatabaseName')]"
+                }
+            }
+        },
+        {
+            "type": "Microsoft.DocumentDb/databaseAccounts/apis/databases/collections",
+            "apiVersion": "2015-04-08",
+            "name": "[concat(variables('cosmosAccountName'), '/mongodb/', variables('cosmosDatabaseName'), '/cart')]",
+            "dependsOn": [
+                "[resourceId('Microsoft.DocumentDB/databaseAccounts/apis/databases', variables('cosmosAccountName'), 'mongodb', variables('cosmosDatabaseName'))]"
+            ],
+            "properties": {
+                "resource": {
+                    "id": "cart",
+                    "shardKey": {
+                        "email": "Hash"
+                    }
+                },
+                "options": {
+                    "throughput": "400"
+                }
+            }
+        },
+        {
+            "type": "Microsoft.CognitiveServices/accounts",
+            "apiVersion": "2016-02-01-preview",
+            "name": "[variables('uniqueName')]",
+            "location": "westus2",
+            "sku": {
+                "name": "S0"
+            },
+            "kind": "Personalizer",
+            "properties": {}
+        },
+        {
+            "type": "Microsoft.ManagedIdentity/userAssignedIdentities",
+            "apiVersion": "2018-11-30",
+            "name": "bootstrap-creds",
+            "location": "[resourceGroup().location]"
+        },
+        {
+            "type": "Microsoft.Authorization/roleAssignments",
+            "apiVersion": "2018-09-01-preview",
+            "name": "[variables('bootstrapRoleAssignmentId')]",
+            "dependsOn": [
+                "[resourceId('Microsoft.ManagedIdentity/userAssignedIdentities', variables('identityName'))]"
+            ],
+            "properties": {
+                "roleDefinitionId": "[variables('contributorRoleDefinitionId')]",
+                "principalId": "[reference(resourceId('Microsoft.ManagedIdentity/userAssignedIdentities', variables('identityName')), '2015-08-31-preview').principalId]",
+                "scope": "[resourceGroup().id]",
+                "principalType": "ServicePrincipal"
+            }
+        },
+        {
+            "type": "Microsoft.Storage/storageAccounts/providers/roleAssignments",
+            "apiVersion": "2018-09-01-preview",
+            "name": "[variables('bootstrapStorageRoleAssignmentId')]",
+            "dependsOn": [
+                "[resourceId('Microsoft.ManagedIdentity/userAssignedIdentities', variables('identityName'))]",
+                "[resourceId('Microsoft.Storage/storageAccounts', variables('storageAccountName'))]"
+            ],
+            "properties": {
+                "roleDefinitionId": "[variables('storageContributorRoleDefinitionId')]",
+                "principalId": "[reference(resourceId('Microsoft.ManagedIdentity/userAssignedIdentities', variables('identityName')), '2015-08-31-preview').principalId]",
+                "principalType": "ServicePrincipal"
+            }
+        },
+        {
+            "type": "Microsoft.ContainerInstance/containerGroups",
+            "apiVersion": "2018-10-01",
+            "name": "[variables('aciName')]",
+            "location": "[resourceGroup().location]",
+            "dependsOn": [
+                "[resourceId('Microsoft.Authorization/roleAssignments', variables('bootstrapRoleAssignmentId'))]",
+                "[resourceId('Microsoft.Storage/storageAccounts', variables('storageAccountName'))]"
+            ],
+            "identity": {
+                "type": "UserAssigned",
+                "userAssignedIdentities": {
+                    "[resourceId('Microsoft.ManagedIdentity/userAssignedIdentities', variables('identityName'))]": {}
+                }
+            },
+            "properties": {
+                "osType": "Linux",
+                "restartPolicy": "Never",
+                "containers": [
+                    {
+                        "name": "[variables('containerName')]",
+                        "properties": {
+                            "image": "[variables('deploymentImage')]",
+                            "resources": {
+                                "requests": {
+                                    "cpu": 2,
+                                    "memoryInGB": 4
+                                }
+                            },
+                            "environmentVariables": [
+                                {
+                                    "name": "AZURE_DEVOPS_ORG_NAME",
+                                    "secureValue": "[parameters('azureDevOpsOrgName')]"
+                                },
+                                {
+                                    "name": "AZURE_DEVOPS_EXT_PAT",
+                                    "secureValue": "[parameters('azureDevOpsAccessToken')]"
+                                },
+                                {
+                                    "name": "RESOURCE_GROUP",
+                                    "secureValue": "[resourceGroup().name]"
+                                },
+                                {
+                                    "name": "SESSION_CODE",
+                                    "secureValue": "[variables('sessionCode')]"
+                                },
+                                {
+                                    "name": "EVENT",
+                                    "secureValue": "[variables('event')]"
+                                },
+                                {
+                                    "name": "MANAGED_IDENTITY",
+                                    "secureValue": "[concat(resourceId('Microsoft.ManagedIdentity/userAssignedIdentities', variables('identityName')))]"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        }
+    ],
+    "outputs": {}
+}

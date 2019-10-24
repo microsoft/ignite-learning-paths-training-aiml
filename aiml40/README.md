@@ -1,5 +1,3 @@
-
-
 # AIML40 - Taking Models to the Next Level with Azure Machine Learning Best Practices
 
 ## Session Abstract
@@ -12,7 +10,7 @@ In this session, we will explore the complete path of integrating text analysis 
 
 Welcome, Presenter! 
 
-We're glad you are here and look forward to your delivery of this amazing content. As an experienced presenter, we know you know HOW to present so this guide will focus on WHAT you need to present. It will provide you a full run-through of the presentation created by the presentation design team. 
+We're glad you are here and look forward to your delivery of this amazing content. As an experienced presenter, we know you know *HOW* to present so this guide will focus on *WHAT* you need to present. It will provide you a full run-through of the presentation created by the presentation design team. 
 
 Along with the video of the presentation, this document will link to all the assets you need to successfully present including PowerPoint slides and demo instructions &
 code.
@@ -25,21 +23,23 @@ code.
 
 - This guide
 - Public materials for AIML40 Session [here](http://github.com/microsoft/ignite-learning-paths/aiml/aiml40/) - this document contains a lot of relevant materials
-- PowerPoint presentation including notes for each slide [Here](https://#)
-- Full-length recording of presentation [here](https://#)
-- Director Cut Full-length recording of presentation [here](https://#)
-- Individual recordings of stage-ready hands-on demos [here](https://#)
+- PowerPoint presentation including notes for each slide [here](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml40/AIML40_Taking_Models_to_the_Next_Level_with_Azure_Machine_Learning_Best_Practices.pptx)
+- Full-length recording of presentation [here](https://youtu.be/If9IQm3gWVQ)
+- Individual recordings of stage-ready hands-on demos:
+    * Demo 1 - [Cognitive Services Text Analytics](https://youtu.be/QJxjm5BirOA)
+    * Demo 2 - [Automated Machine Learning](https://youtu.be/qrstXN6TLZk)
+    * Demo 3 - [Azure Machine Learning SDK and Hyperdrive](https://youtu.be/sccNTPO3PwU)
 - Demo Guide [here](Demo.md)
 
-## Become a Presenter
+## Become a Trained Presenter
 
-To become a *Trained Presenters*, contact [scalablecontent@microsoft.com](mailto:scalablecontent@microsoft.com). In your email please include:
+To become a *Trained Presenter*, contact [scalablecontent@microsoft.com](mailto:scalablecontent@microsoft.com). In your email please include:
 
 - Complete name:
-- The code of this presentation: \<Session Code (ex:app10)\>
+- The code of this presentation: \<Session Code (ex:aiml40)\>
 - Link (ex: unlisted YouTube video) to a video of you presenting (~10 minutes). 
 
-> It doesn't need to be this content, the important is to show your presenter skills
+> It doesn't need to be this content, the importance is to show your presenter skills
 
 
 ## Trained Presenters
@@ -51,17 +51,15 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 
 <table>
 <tr>
-    <td align="center"><a href="http://cloud5mins.com/">
-        <img src="https://avatars2.githubusercontent.com/u/2404846?s=460&v=4" width="100px;" alt="Frank Boucher"/><br />
-        <sub><b>Frank Boucher</b></sub></a><br />
-            <a href="https://github.com/neilpeterson/ignite-tour-fy20/commits?author=fboucher" title="talk">📢</a>
-            <a href="https://github.com/neilpeterson/ignite-tour-fy20/commits?author=fboucher" title="Documentation">📖</a> 
+    <td align="center"><a href="https://github.com/aribornstein">
+        <img src="https://avatars3.githubusercontent.com/u/3045407?s=460&v=4" width="100px;" alt="Ari Bornstein"/><br />
+        <sub><b>Ari Bornstein</b></sub></a><br />
+            <a href="" title="talk">📢</a>
     </td>
-    <td align="center"><a href="https://blogs.technet.microsoft.com/neilp/">
-        <img src="https://avatars3.githubusercontent.com/u/7844635?s=460&v=4" width="100px;" alt="Neil Peterson"/><br />
-        <sub><b>Neil Peterson</b></sub></a><br />
-            <a href="https://github.com/neilpeterson/ignite-tour-fy20/commits?author=neilpeterson" title="talk">🎨</a>
-            <a href="https://github.com/neilpeterson/ignite-tour-fy20/commits?author=neilpeterson" title="design">📖</a> 
+    <td align="center"><a href="https://github.com/shwars">
+        <img src="https://avatars0.githubusercontent.com/u/2892110?s=460&v=4" width="100px;" alt="Dmitri Soshnikov"/><br />
+        <sub><b>Dmitri Soshnikov</b></sub></a><br />
+            <a href="https://github.com/microsoft/ignite-learning-paths-training-aiml/pull/4" title="documentation">📖</a> 
     </td>
 </tr></table>
 
