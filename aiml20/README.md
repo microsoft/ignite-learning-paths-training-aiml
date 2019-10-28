@@ -22,7 +22,8 @@ code.
 ## Assets in Train-The-Trainer kit
 
 - This guide
-- [PowerPoint presentation](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml20/AIML20_UsingPre-BuiltAItoSolveBusinessChallenges.pptx) and [Speaker notes](speaker-notes.md)
+- [PowerPoint presentation](presentations.md)
+  and [Speaker notes](speaker-notes.md)
 - [Demo Instructions](demo-instructions.md)
 - [Full-length recording of presentation](https://youtu.be/LobVQJb951k) (Presenter 2)
 - [Full-length recording of presentation - Director Cut](https://youtu.be/34HtSxcK1Yg)
