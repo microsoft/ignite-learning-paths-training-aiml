@@ -44,8 +44,8 @@ applications, but what does that mean? Well, here are some examples.
  
 [CLICK] You could give your app the ability to see, and understand the content of images.
 
-[CLICK] You could gibe your app the intuition to understand what your users are most
-likely to want to do, and optimize your user interface accordingly.
+[CLICK] You could give your app the intuition to understand what your users are most
+likely to want to do, and optimize your user interface automatically.
 
 [CLICK] You could give your app the power of comprehension, and communicate with your
 users whatever their spoken language.

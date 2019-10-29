@@ -23,15 +23,17 @@ code.
 
 - This guide
 - [Attendee Resources in Github](https://github.com/microsoft/ignite-learning-paths/tree/master/aiml/aiml20)
-- [PowerPoint presentation](presentations.md)
-  and [Speaker notes](speaker-notes.md)
+- [PowerPoint presentation](presentations.md). Includes embedded demo videos and complete talk track in notes.
+- [Speaker notes](speaker-notes.md) as a single file (also in PPT notes)
 - [Demo Instructions](demo-instructions.md)
+- [Full-length recording of presentation](https://youtu.be/jRO-5g-HYuU). 
+
+### Older recordings
+
 - [Full-length recording of presentation](https://youtu.be/LobVQJb951k) (Presenter 2)
 - [Full-length recording of presentation - Director Cut](https://youtu.be/34HtSxcK1Yg)
 
-### Director's cut recording marks:
-
-(This is an older version of the presentation and demos.)
+Director's cut recording marks:
 
 - 06:30 overview of Azure Cognitive Services
 
@@ -70,8 +72,8 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="">
         <img src="https://avatars0.githubusercontent.com/u/152948?s=460&v=4" width="100px;" alt="David Smith"/><br />
         <sub><b>David Smith</b></sub></a><br />
-            <a href="https://github.com/neilpeterson/ignite-tour-fy20/commits?author=fboucher" title="talk">📢</a>
-            <a href="https://github.com/neilpeterson/ignite-tour-fy20/commits?author=fboucher" title="Documentation">📖</a> 
+            <a href="https://github.com/microsoft/ignite-learning-paths/commits?author=revodavid" title="talk">📢</a>
+            <a href="https://github.com/microsoft/ignite-learning-paths-training-aiml/commits?author=revodavid" title="Documentation">📖</a> 
     </td>
     <td align="center"><a href="">
         <img src="https://avatars2.githubusercontent.com/u/4598064?s=460&v=4" width="100px;" alt="Chris Noring"/><br />
