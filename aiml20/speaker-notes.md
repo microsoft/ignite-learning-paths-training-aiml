@@ -30,51 +30,29 @@ don’t worry if you don’t catch them during the presentation, because all of 
 details are included on the Session Resources Hub shown here. There will also be
 several demos, and you’ll be able to try them all out yourself because complete
 source code, including a one-click button to deploy everything to Azure, is
-available that this Github repository. I’ll show this slide at again at the end
+available in this Github repository. I’ll show this slide at again at the end
 of the presentation, too, so you might want to have your camera ready then.
 
 ### SLIDE: Adding humanlike capabilities to apps
 
 We'll be using pre-built AI services to add humanlike capabilities to
-applications, but what does that mean? It means things like: giving your apps
-the power of vision, and the ability to see and understand images. It means
-giving your apps the ability to speak, and to understand spoken voice. And it
-means the ability to understand information in general: to process a large
-collection of files, or documents, or data, and use humanlike intelligence to
-extract knowledge like the topics being referenced, or to detect unusual
-patterns in the data.
+applications, but what does that mean? Well, here are some examples.
 
 ### SLIDE: Enhance apps with humanlike capabilities
 
-There are lots of things you might want to do when it comes to enhancing
-applications with humanlike capabilities. Let me give you a few examples:
+[CLICK] You could give your app the power of speech, say by adding a chat interface.
+ 
+[CLICK] You could give your app the ability to see, and understand the content of images.
 
-- you might want to add a conversational interface to your application like a
-  chat bot: you type or speak a question, and the application provides the
-  information you asked for directly back to you
+[CLICK] You could gibe your app the intuition to understand what your users are most
+likely to want to do, and optimize your user interface accordingly.
 
-- another example is to give your app the ability to understand images.
-  Pre-built AI services can take a picture provided by your user or the camera,
-  and return information about the contents of the picture or even generate a
-  natural-language description. Conversely, you can use pre-built AI to extract
-  information from a large collection of pictures, for example: add a feature to
-  a photo album app to automatically create a slideshow containing only pictures
-  of dogs.
+[CLICK] You could give your app the power of comprehension, and communicate with your
+users whatever their spoken language.
 
-- Humanlike intuition can even optimize the user interface of your
-  website or application. Pre-built AI tools can learn from the experiences of
-  your users and select, say, the featured product that optimizes revenue, while
-  automatically running experiments to make sure that high-potential products
-  are not neglected.
+[CLICK] Or, you could automate the human process of scanning streams of data for anomalies, and react accordingly.
 
-- Translation and understanding foreign languages: that's another example of
-  humanlike capabilities. With pre-built AI you could internationalize your app
-  by automatically translating content into the user's native language, or to
-  understand all of your users, regardless of which language they speak.
-
-- And finally, in much the same way that a human can look at a sequence of data
-  points and identify unusual trends, spikes, or outliers, pre-built AI can
-  detect anomalies in data sequences automatically, even for massive volumes of data.
+These are just a few examples.
 
 ### SLIDE: Overview of Azure Cognitive Services
 
@@ -112,7 +90,7 @@ level they offer capabilities within these cateegories of human capability:
 
 The "Search" category was covered in the previous talk in this learning path,
 AIML10. In this talk, we're going to touch on just a few of the other available
-services, and use them to enhance the website of a retailer:
+services, and use them to enhance the website of a retailer: [CLICK]
 
 Computer Vision: which we'll use to analyze the content of product photographs.
 
@@ -145,13 +123,15 @@ find it at the link at the bottom of this slide.
 
 DEMO: "Defining the problem: Shop by Photo is broken"
 
+Let's go to the live Tailwind Traders website. [CLICK]
+
 One of the AI-enabled features is called "Shop by Photo". This feature that
 allows the customer to upload a photo of a product they might want to purchase,
-and the idea is that the app will tell them if the product is in stock, and
-where to find it. Let's go ahead and try it now. We'll upload this picture of a
-drill that we're interested in, and the Tailwind Traders app analyzes the
-picture, recognizes that it's a drill, and shows me the drill that Tailwind
-Traders has for sale, and where to find it in the store.
+and the idea is that the app will tell them if the product is available. Let's
+go ahead and try it now. We'll upload this picture of a drill that we're
+interested in, and the Tailwind Traders app analyzes the picture, recognizes
+that it's a drill, and shows me the drill that Tailwind Traders has for sale,
+and where to find it in the store.
 
 But let's try that with a different picture. Let me return to the homepage, use
 the "Shop by Photo" feature once again, and this time choose this picture of a
@@ -171,7 +151,7 @@ us understand what can go wrong, and how to fix it.
 (Pause 10 seconds)
 
 Not long ago, being able to give a computer a photograph and it being able to
-give us useful information about what’s in the picture was the stuff of science
+give us useful information about what’s in the picture was literally the stuff of science
 fiction. This XKCD was published in September, 2014. Now, five years later, a
 computer can easily tell whether a photo is of a bird, thanks to the advent of
 big data, GPU computing, and convolutional neural networks. Let's see how.
@@ -402,7 +382,7 @@ how it might work.
 ### SLIDE: Transfer Learning
 
 Here we have the trained convolutional neural network from before, but
-something's different: the final layer with the object classifications have been
+something's different: the final layer with the object classifications has been
 stripped off. What we're left with is the images from the second-last layer. We
 can ignore the fact that they are images -- say, 3x3 images -- and just think of
 them as data. Now, when we feed an image to the left hand side, instead of
@@ -474,7 +454,7 @@ Demo instructions: https://github.com/microsoft/ignite-learning-paths/blob/maste
 
 ### VIDEO: customvision.ai
 
-So here I am in the Custom Vision web-based interface. It provides us with a
+[CLICK] So here I am in the Custom Vision web-based interface. It provides us with a
 nice UI where we can provide new images for the transfer learning analysis. And
 you can see in this project I've already uploaded a number of pictures. I've
 uploaded pictures of drills, hammers, pliers and screwdrivers, which I'm going
@@ -562,7 +542,7 @@ DEMO: ONNX Deployment
 
 ### VIDEO: Kudu
 
-The model that we just exported from Custom Vision is actually a ZIP file,
+[CLICK] The model that we just exported from Custom Vision is actually a ZIP file,
 containing the actual ONNX file, model.onnx, which is the text representation of
 the neural network we just created, and also a manifest file. 
 
@@ -586,7 +566,7 @@ which will make it use the new ONNX model in the Shop by Photo Feature.
 
 ### VIDEO: Netron
 
-While we're waiting for the website to restart, lets take a look inside the ONNX
+[CLICK] While we're waiting for the website to restart, lets take a look inside the ONNX
 model we just installed. There's a nice little web app by Lutz Roeder called
 Netron, which allows us to inspect the neural networks in ONNX files. So let's
 go ahead and open that products.onnx file. Here you can see the actual layers of
@@ -650,20 +630,21 @@ Now you can use Personalizer in your own apps, as well.
 Personalizer implements an AI technique called Reinforcement Learning. Here's
 how it works.
 
-Suppose we want to display a "hero" action to the user. The user might not be
-sure what to do next, but we could display one of several suggestion. For a
-gaming app, that might be: "play a game", "watch a movie", or "join a clan".
-Based on that user's history and other contextual information -- say, their
-location, the time of day, and the day of the week -- the Personalizer service
-will rank the possible actions and suggest the best one to promote. 
+[CLICK] Suppose we want to display a "hero" action to the user. [CLICK] The user
+might not be sure what to do next, [CLICK] but we could display one of several
+suggestions. For a gaming app, [CLICK] that might be: "play a game", "watch a
+movie", or "join a clan". [CLICK] Based on that user's history and other
+contextual information -- say, their location, the time of day, and the day of
+the week -- the Personalizer service will [CLICK] rank the possible actions and
+[CLICK] suggest the best one to promote [CLICK]. 
 
-Hopefully, the user will be happy, but how can we be sure? That depends on what
-the user does next, and whether that was something we wanted them to do.
-According to our business logic, we'll assign a "reward score" between 0 and 1
-to what happens next. For example, spending more time playing a game or reading
-an article, or spending more money in the store, might lead to higher reward
-scores. Personalizer feeds that info back into the ranking system for the next
-time we need to feature an activity.
+Hopefully, the user will be happy [CLICK], but how can we be sure? That depends
+on what the user does next, and whether that was something we wanted them to do.
+According to our business logic [CLICK], we'll assign a "reward score" between 0
+and 1 to what happens next. For example, spending more time playing a game or
+reading an article, or spending more money in the store, might lead to higher
+reward scores. [CLICK] Personalizer feeds that info back into the ranking system
+for the next time we need to feature an activity.
 
 ### SLIDE: Discovering Patterns and Causality
 
@@ -713,30 +694,28 @@ real-time capabilities for millions of users.
 
 ### SLIDE: Cost Considerations
 
-This slide is intended to give a general overview of the "model" for pricing in
-cognitive services. In general, if you just want to try out the service, small
-volumes are free. Attendees should check the given link for exact pricing for
-the service they want to use.
+Probably the first thing you want to think about is: how much is all this going to cost?
 
-There are some things to think about:
+[CLICK] If you are just trying things out like a "Developer would", that is small
+amounts of data, a few attempts here and there, that's generally FREE. 
 
-* Cost is probably the first thing on your mind
+[CLICK] For production volumes, you will be charged by volume and rate,
+according to the service you are using.
 
-* If you are new to Azure and want to play around with these services, you can
-  sign up using the link right here and get $200
+[CLICK] There are more details on pricing on this link. Check there for exact pricing
+for your service and region
 
-* So what can we use those credits on?
+If you are new to Azure and want to play around with these services, you can
+sign up using the link right here and get $200.
 
-* If you are just trying things out like a "Developer would" that is small
-  amounts of data, a few attempts here and there, that's generally FREE
-
-* For production mode, that means we might have many users or our services are
-  used frequently then you are being charged by volume and rate
-
-* There are more details on pricing on this link, it might vary a little per
-  service and region
+(This slide is intended to give a general overview of the "model" for pricing in
+cognitive services. Attendees should check the given link for exact pricing for
+the service they want to use.)
 
 ### SLIDE: Data Considerations
+
+You also may want to think about where your data is going and how it will be
+used.
 
 Your data, like images or text, will be uploaded to Azure for inference, but
 it's never stored by Cognitive Services. This link gives all the details about
@@ -782,19 +761,20 @@ this link.
 
 ### SLIDE: Wrapping up
 
-Key points:
+It's easy to add humanlike capabilities with pre-built AI. Pre-built models
+can't do everything, but they can get you a long way, quickly. We'll learn about
+custom models for the remaining 20% later in thus learning path.
 
-* It's easy to add humanlike capabilities with pre-built AI. Pre-built models
-  can't do everything, but they can get you a long way, quickly. We'll learn
-  about custom models for the remaining 20% later in thus learning path.
+AI is powerful, but it isn't magic. It's driven by data and, at its core, fairly
+simple math. Always keep the data in mind, and use it to help you understand
+what's going on. In particular, remember that even the best AI can make
+mistakes, especially about groups that aren’t well represented in the training
+data.
 
-* You don't need a lot of expertise to get started, but everyone needs to thing
-  about the ethical implications of AI and how it affects people. Make sure you've developed an ethical framework for using AI, and stick to it.
-
-* Finally, AI is powerful, but it isn't magic. It's driven by data and, at its
-  core, fairly simple math. Always keep the data in mind, and use it to help you
-  understand what's going on.
-
+Finally, try it out! You don't need a lot of expertise to get started, but
+everyone needs to thing about the ethical implications of AI and how it affects
+people, so make sure you've developed an ethical framework for using AI, and
+stick to it.
 
 ### SLIDE: Docs Alert
 

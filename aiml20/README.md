@@ -22,6 +22,7 @@ code.
 ## Assets in Train-The-Trainer kit
 
 - This guide
+- [Attendee Resources in Github](https://github.com/microsoft/ignite-learning-paths/tree/master/aiml/aiml20)
 - [PowerPoint presentation](presentations.md)
   and [Speaker notes](speaker-notes.md)
 - [Demo Instructions](demo-instructions.md)
