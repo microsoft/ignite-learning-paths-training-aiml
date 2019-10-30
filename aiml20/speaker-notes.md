@@ -457,7 +457,7 @@ Demo instructions: https://github.com/microsoft/ignite-learning-paths/blob/maste
 [CLICK] So here I am in the Custom Vision web-based interface. It provides us with a
 nice UI where we can provide new images for the transfer learning analysis. And
 you can see in this project I've already uploaded a number of pictures. I've
-uploaded pictures of drills, hammers, pliers and screwdrivers, which I'm going
+uploaded pictures of screwdrivers, pliers, drills, and hammers, which I'm going
 to use to train my custom model. We'd also like to detect one other product that
 Tailwind Traders sells: hard hats. So let's click "add images", browse to a
 folder on my hard drive where I've collected a few photos of hard hats, select
@@ -476,7 +476,7 @@ vision model, and using transfer learning to create a predictive model for our
 five categories. It only takes a few seconds, and our model does fairly well!
 The probability threshold sets a limit below which we will predict no
 classification at all. If we only accept classifications with 50% confidence or
-more, 90.9% of those predictions are correct: that's "Precision". And the
+more, 90.9% of those predictions are correct: that's "Precision". And the model
 correctly classifies 88.2% of our images overall: that's "Recall". In your apps,
 you will choose a threshold according to your tolerance for making the wrong
 call, versus making no call at all. For Tailwind Traders we can set the
@@ -484,11 +484,11 @@ threshold on the low side, because it's not so big a deal to suggest the wrong
 product to a customer. If this were a cancer detection app, you'd likely make a
 different call.
 
-Now let's try out our model on some new images it hasn't seen before. We will
-upload a new file from our "test images" folder. Let's try our man in the hard
-hat. And you can see that our prediction is indeed of a "hard hat" with
-probability 99.9%, so we'd make that call with pretty much any threshold we
-choose.
+Now let's try out our model on some new images it hasn't seen before. We do that
+by clicking on the “Quick Test” button. We will upload a new file from our "test
+images" folder. Let's try our man in the hard hat. And you can see that our
+prediction is indeed of a "hard hat" with probability 99.9%, so we'd make that
+call with pretty much any threshold we choose.
 
 Let's try a different image: the drill. Our model identifies the image as a
 drill with probability 94.5%. And lastly, let's try the picture of the pliers,
