@@ -63,7 +63,7 @@ namespace IgniteAimlDataApp
                     //input object is a json with a string of input and a list of dict
                     Inputs = new Dictionary<string, List<ForecastingData>>() {
                         {
-                            "input1",
+                            "input0",
                              predictionList
                         },
                     },
@@ -102,7 +102,7 @@ namespace IgniteAimlDataApp
                     {
                         Console.WriteLine("Date: {0} Result: {1}",
                                           predictionList[i].Time,
-                                          Convert.ToInt32(forecastingResult.Results.output1[i].Forecast));
+                                          Convert.ToInt32(forecastingResult.Results.output0[i].Forecast));
                     }
 
                 }
