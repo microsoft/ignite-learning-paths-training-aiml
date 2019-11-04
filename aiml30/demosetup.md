@@ -42,6 +42,7 @@ The dataset needed is created weekly with updated dates to allow your demo to be
 3. Navigate to `azureml-blobstore-<guid>`
 4. Create a new folder called `datasets`
 5. Upload the dataset
+6. Replace local ForecastingData.csv file in the C# Demo app in order to be predicting for future dates. There is a default csv however it will not be the updated data.
 
 ## Get the C# Demo App
 The first demo is with VS Code and the C# IgniteAimlDataApp. This is to demonstrate how to do the data processing and highlight that the it can be done in any language.
