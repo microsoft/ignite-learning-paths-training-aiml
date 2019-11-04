@@ -1,70 +1,40 @@
 # AIML10: Making Sense of your Unstructured Data with AI
 
-## Train-the-Trainer Guide
-
 ### Session Abstract
 
 Tailwind Traders has a lot of legacy data that they’d like their developers to leverage in their apps – from various sources, both structured and unstructured, and including images, forms, pdf files, and several others. In this session, you'll learn how the team used Cognitive Search to make sense of this data in a short amount of time and with amazing success. We'll discuss tons of AI concepts, like the ingest-enrich-explore pattern, skillsets, cognitive skills, natural language processing, computer vision, and beyond.
 
-# How to Use
+# Overview
+In this solution we develop a process whereby we take a set of unstructured pdf invoices and generate structured tabular output using Azure Cognitive Search with a customized Form Recognizer Skill. 
 
-### Welcome, Presenter!
+When creating this solution there are a few Azure resources ([free trial here](https://azure.microsoft.com/en-gb/free/?WT.mc_id=msignitethetour2019-github-aiml10) if you need it) that are created. The following tables list each resource, its purpose, and any special instructions needed to implement the solution fully (I use the names as presented during the talk but they will need to be renamed for your particular solution):
 
-We're glad you are here and look forward to your delivery of this amazing content. As an experienced presenter, we know you know **HOW** to present so this guide will focus on **WHAT** you need to present. It will provide you a full run-through of the presentation created by the presentation design team.
+![Azure Resources](images/resources.png "Azure Resources")
 
-Along with the video of the presentation, this document will link to all the assets you need to successfully present including PowerPoint slides and demo instructions & code.
+## Azure Resources
 
-* Read the document in its entirety.
-* Watch the video presentation
-* Ask questions of the Lead Presenter
-
-# Assets in Train-the-Trainer Kit
-
-* This guide
-* [PowerPoint presentation](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/AIML10_MakingSenseofYourUnstructuredDatawAI.pptx)
-* [Full-length recording of presentation]()
-* [Link to Data needed]()
-* [Code files]()
-* Separate Demo Videos: 
-    * Demo 1
-    * Demo 2
-    * Demo 3
-* Demo Instructions
-
-# Demo Instructions:
-
-Please download all the code and data files in this repository to get started. There is a code and data folder which will contain all information you need to run all demos
-
-**You will need:**
-* Azure Subscription - get a [free trial here](https://azure.microsoft.com/en-gb/free/?WT.mc_id=msignitethetour2019-github-aiml10) if you need it
-* other pre-requisities
-
-**Setup Instructions:**
-* Use the **Deploy to Azure button** below to create ...
-
-[![Deploy to Azure](https://azuredeploy.net/deploybutton.png)](https://azuredeploy.net/)
+| Name                       | Type                            | Purpose                    |
+| -------------------------- | ------------------------------- | ------------------------- |
+| **ttcognitivesearch**     | Resource Group                  | Groups services together   |
+| **ttinvoicestorage**      | Storage Account                 | Used to store invoices     |
+| **ttinvoicesearch**       | Search Service                  | Featured service           |
+| **ttinvoiceintelligence** | Cognitive Services (All-In-One) | Used in the search service |
+| **ttinvoicereader**       | Form Recognizer Service         | This service will eventually end up in the All-In-One sevice. For right now it is in limited-access preview. To get access to the preview, fill out and submit the [Form Recognizer access request](https://aka.ms/FormRecognizerRequestAccess) form.  |
+| **readerskillstorage**   | Storage Account              | Storage used for Azure Function |
+| **readerskill**          | Function App                 | Cognitive Skill App |
+| **readerskill**          | App Insights                   | Adds insights to Function App |
+| **EastUS2LinuxDynamicPlan** | App Service Plan                   | Consumption based plan for running Function App |
 
 
-## Demo 1
+# Demonstrations
+This talk consisted of the 5 demonstrations listed below. 
 
-### Video Demo with Voice Over: [AIML10 - Demo 1](youtube link here)
+- **Demo 1**: [Azure Cognitive Search](demo1.md)
+- **Demo 2**: [Form Recognizer Service](demo2.md) - this demo requires access to the Form Recognizer Preview. To get access to the preview, fill out and submit the [Form Recognizer access request](https://aka.ms/FormRecognizerRequestAccess) form.
+- **Demo 3**: [Creating a Custom Invoice Reader Skill](demo3.md)
+- **Demo 4**: [Tying it all together](demo4.md)
+- **Demo 5**: [Knowledge Store](demo5.md)
 
-* Sign into your [Azure Portal](https://azure.microsoft.com/en-gb/?WT.mc_id=msignitethetour2019-github-aiml10) 
-* Instructions ...
-
-## Demo 2
-
-### Video Demo with Voice Over: [AIML10 - Demo 2](youtube link here)
-
-* Sign into your [Azure Portal](https://azure.microsoft.com/en-gb/?WT.mc_id=msignitethetour2019-github-aiml10) 
-* Instructions ...
-
-## Demo 3
-
-### Video Demo with Voice Over: [AIML10 - Demo 3](youtube link here)
-
-* Sign into your [Azure Portal](https://azure.microsoft.com/en-gb/?WT.mc_id=msignitethetour2019-github-aiml10) 
-* Instructions ...
 
 # Teardown Instructions
 
@@ -86,36 +56,4 @@ Please download all the code and data files in this repository to get started. T
 
 # Feedback Loop
 
-All speakers will have the opportunity to attend **Train-the-Trainer Q&A sessions** every month (two sessions covering all timezones) and also after delivering the content on stage we would be keen for you to join us in the **Feedback sessions** organized to share your experience of the content and anything you would like to provide feedback or ideas on. 
-
 Do you have a comment, feedback, suggestion? Currently, the best feedback loop for content changes/suggestions/feedback is to create a new issue on this GitHub repository. To get all the details about how to create an issue please refer to the [Contributing docs](https://github.com/microsoft/ignite-learning-paths/blob/master/contributing.md)
-
-## Become a Trained Presenter
-
-To become a trained presenter, contact [scalablecontent@microsoft.com](mailto:scalablecontent@microsoft.com). In your email please include:
-
-- Complete name
-- The code of this presentation: aiml10
-- Link to a video of you presenting (~10 minutes in length)(ex: unlisted YouTube video). 
-  > It doesn't need to be this content, the importance is to show your presenter skills
-
-A mentor will get back to you with information on the process.
-
-## Trained Presenters
-
-Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
-
-<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- prettier-ignore -->
-
-<table>
-<tr>
-    <td align="center"><a href="https://github.com/sethjuarez">
-        <img src="https://avatars2.githubusercontent.com/u/115409?s=460&v=4" width="100px;" alt="Seth Juarez"/><br />
-        <sub><b>Seth Juarez</b></sub></a><br />
-            <a href="Add link to powerpoint here" title="Talk">📢</a>
-            <a href="Add link to pull request here" title="Documentation">📖</a> 
-    </td>
-</tr></table>
-
-<!-- ALL-CONTRIBUTORS-LIST:END -->

@@ -1,0 +1,300 @@
+{
+	"info": {
+		"_postman_id": "c725206c-097b-48bc-96bd-47296d81c7d7",
+		"name": "Form Recognizer",
+		"description": "Forms Recognizer API Calls",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "TrainModel",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "10a89635-432b-4459-b85d-189cc73397e0",
+						"exec": [
+							"pm.environment.set('storageAccount', 'storage')",
+							"pm.environment.set('container', 'container')",
+							"pm.environment.set('SASValue', 'key')"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"source\": \"https://{{storageAccount}}.blob.core.windows.net/{{container}}{{SASValue}}\",\r\n\t\"sourceFilter\": {\r\n\t\t\"includeSubFolders\": false\r\n\t}\r\n}"
+				},
+				"url": {
+					"raw": "https://{{endpoint}}/formrecognizer/v1.0-preview/custom/train",
+					"protocol": "https",
+					"host": [
+						"{{endpoint}}"
+					],
+					"path": [
+						"formrecognizer",
+						"v1.0-preview",
+						"custom",
+						"train"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetKeys",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "9ff17eb9-bc0b-4178-8e57-635a755ce3b4",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://{{endpoint}}/formrecognizer/v1.0-preview/custom/models/{{modelId}}/keys",
+					"protocol": "https",
+					"host": [
+						"{{endpoint}}"
+					],
+					"path": [
+						"formrecognizer",
+						"v1.0-preview",
+						"custom",
+						"models",
+						"{{modelId}}",
+						"keys"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AnalyzeForm",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "2c3277c8-4189-4736-babe-818f78f0b998",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/pdf",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "",
+							"type": "file",
+							"src": []
+						}
+					]
+				},
+				"url": {
+					"raw": "https://{{endpoint}}/formrecognizer/v1.0-preview/custom/models/{{modelId}}/analyze",
+					"protocol": "https",
+					"host": [
+						"{{endpoint}}"
+					],
+					"path": [
+						"formrecognizer",
+						"v1.0-preview",
+						"custom",
+						"models",
+						"{{modelId}}",
+						"analyze"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteModel",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "5801b22f-6c44-4654-8b2a-5d8014a4a09d",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://{{endpoint}}/formrecognizer/v1.0-preview/custom/models/{{modelId}}",
+					"protocol": "https",
+					"host": [
+						"{{endpoint}}"
+					],
+					"path": [
+						"formrecognizer",
+						"v1.0-preview",
+						"custom",
+						"models",
+						"{{modelId}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetModel",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "5ae0366e-c5dd-4bc1-9cbf-94a2f89434f3",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://{{endpoint}}/formrecognizer/v1.0-preview/custom/models/{{modelId}}",
+					"protocol": "https",
+					"host": [
+						"{{endpoint}}"
+					],
+					"path": [
+						"formrecognizer",
+						"v1.0-preview",
+						"custom",
+						"models",
+						"{{modelId}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetModels",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://{{endpoint}}/formrecognizer/v1.0-preview/custom/models",
+					"protocol": "https",
+					"host": [
+						"{{endpoint}}"
+					],
+					"path": [
+						"formrecognizer",
+						"v1.0-preview",
+						"custom",
+						"models"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "apikey",
+		"apikey": [
+			{
+				"key": "value",
+				"value": "key",
+				"type": "string"
+			},
+			{
+				"key": "key",
+				"value": "Ocp-Apim-Subscription-Key",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "84f87997-ce10-4bf8-8a49-2c56fb53ef32",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "6545bd4b-a04c-4bf6-8313-86d98640fef4",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "2d5264da-08ca-406a-8634-0b4d8c1d0141",
+			"key": "endpoint",
+			"value": "endpoint",
+			"type": "string"
+		},
+		{
+			"id": "0a6f48b2-7e2c-47a0-a3a7-5333bbdd9e8a",
+			"key": "modelId",
+			"value": "modelid",
+			"type": "string"
+		}
+	],
+	"protocolProfileBehavior": {}
+}
