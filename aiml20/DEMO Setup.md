@@ -5,7 +5,7 @@ these same steps to prepare for the remaining demo scripts.
 
 ## Clone the repository to your local machine
 
-You will need the contents of https://github.com/microsoft/ignite-learning-paths/tree/master/aiml/aiml20 on your local machine. The easiest way to do this is to visit the [Ignite Learning Paths repository](https://github.com/microsoft/ignite-learning-paths) and click the "Clone or download" button. We will refer to files relative to the `aiml/aiml20` folder.
+You will need the contents of https://github.com/microsoft/ignite-learning-paths-training-aiml/tree/master/aiml20 on your local machine. The easiest way to do this is to visit the [Developer's Guide to AI Learning Paths repository](https://github.com/microsoft/ignite-learning-paths-training-aiml) and click the "Clone or download" button. We will refer to files relative to the `aiml20` folder.
 
 ## Sign up for an Azure Subscription
 

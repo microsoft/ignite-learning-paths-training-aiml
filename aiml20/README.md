@@ -5,7 +5,7 @@ the Tour 2019-2020 talk, "Using Pre-Built AI to Solve Business Challenges". Here
 you will find links to the resources mentioned in the talk, and the code and
 scripts you will need to recreate the demos given in the talk.
 
-Short-link to these resources: [aka.ms/AIML20](https://aka.ms/AIML20)
+Short-link to these resources: [aka.ms/AIML20](https://aka.ms/AIML20). [Resources for presenters of this talk](#Notes%20for%20Presenters) are also provided.
 
 ## Feedback Loop
 
@@ -77,10 +77,14 @@ subscribers](https://aka.ms/azure-free-credits).
 
 Welcome, Presenter! 
 
-We're glad you are here and look forward to your delivery of this amazing content. As an experienced presenter, we know you know HOW to present so this guide will focus on WHAT you need to present. It will provide you a full run-through of the presentation created by the presentation design team. 
+We're glad you are here and look forward to your delivery of this amazing
+content. As an experienced presenter, we know you know HOW to present so this
+guide will focus on WHAT you need to present. It will provide you a full
+run-through of the presentation created by the presentation design team. 
 
-Along with the video of the presentation, this document will link to all the assets you need to successfully present including PowerPoint slides and demo instructions &
-code.
+Along with the video of the presentation, this document will link to all the
+assets you need to successfully present including PowerPoint slides and demo
+instructions & code.
 
 1.  Read document in its entirety.
 2.  Watch the video presentation
@@ -91,29 +95,8 @@ code.
 - This guide
 - [PowerPoint presentation](presentations.md). Includes embedded demo videos and complete talk track in notes.
 - [Speaker notes](speaker-notes.md) as a single file (also in PPT notes)
-- [Demo Instructions](#Demonstrations)
-- [Full-length recording of presentation](https://youtu.be/jRO-5g-HYuU). 
-
-### Older recordings
-
-- [Full-length recording of presentation](https://youtu.be/LobVQJb951k) (Presenter 2)
-- [Full-length recording of presentation - Director Cut](https://youtu.be/34HtSxcK1Yg)
-
-Director's cut recording marks:
-
-- 06:30 overview of Azure Cognitive Services
-
-- 08:42 Shop by Photo and Computer Vision
-
-- 19:53 Demo: Cognitive Services and Computer Vision
-
-- 27:56 Transfer Learning and Custom Vision (deleted content 37:50 – 40:05)
-
-- 39:55 Personalizer
-
-- 44:1 AI in Production and Cognitive Services Containers
-
-- 49:59 end
+- [Demo Instructions](#Demonstrations) and [Demo notes for presenters](demo-instructions.md)
+- [Full-length recording of presentation](https://youtu.be/jRO-5g-HYuU) 
 
 ## Become a Trained Presenter
 
