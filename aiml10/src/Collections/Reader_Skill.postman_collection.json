@@ -1,0 +1,101 @@
+{
+	"info": {
+		"_postman_id": "2c9ed166-4848-4ea7-a5bd-ee3321bae34c",
+		"name": "Reader Skill",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Local Forms Skill",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "bf77fd38-0940-494c-bff6-3b9854690b6c",
+						"exec": [
+							"pm.environment.set('storageAccount', 'storage')",
+							"pm.environment.set('container', 'container')",
+							"pm.environment.set('SASValue', 'key')"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"values\": \r\n\t[\r\n\t\t{\r\n\t\t\t\"recordId\": \"Id27\",\r\n\t\t\t\"data\": { \r\n\t\t\t\t\"formUrl\":  \"https://{{storageAccount}}.blob.core.windows.net/{{container}}/Invoice54174.pdf\",\r\n\t\t\t\t\"formSasToken\":  \"{{SASValue}}\"\r\n\t\t\t}\r\n\t\t}\r\n\t]\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:7071/api/AnalyzeInvoice",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7071",
+					"path": [
+						"api",
+						"AnalyzeInvoice"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cloud Forms Skill",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "cb80ec31-53bb-46bc-9abc-c1da8f7e0c9b",
+						"exec": [
+							"pm.environment.set('storageAccount', 'storage')",
+							"pm.environment.set('container', 'container')",
+							"pm.environment.set('SASValue', 'key')"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"values\": \r\n\t[\r\n\t\t{\r\n\t\t\t\"recordId\": \"Id27\",\r\n\t\t\t\"data\": { \r\n\t\t\t\t\"formUrl\":  \"https://{{storageAccount}}.blob.core.windows.net/{{container}}/Invoice54174.pdf\",\r\n\t\t\t\t\"formSasToken\":  \"{{SASValue}}\"\r\n\t\t\t}\r\n\t\t}\r\n\t]\r\n}"
+				},
+				"url": {
+					"raw": "https://<YOUR_ENDPOINT>.azurewebsites.net/api/AnalyzeInvoice",
+					"protocol": "https",
+					"host": [
+						"<YOUR_ENDPOINT>",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"api",
+						"AnalyzeInvoice"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
