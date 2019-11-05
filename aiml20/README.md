@@ -5,7 +5,7 @@ the Tour 2019-2020 talk, "Using Pre-Built AI to Solve Business Challenges". Here
 you will find links to the resources mentioned in the talk, and the code and
 scripts you will need to recreate the demos given in the talk.
 
-Short-link to these resources: [aka.ms/AIML20](https://aka.ms/AIML20). [Resources for presenters of this talk](#Notes%20for%20Presenters) are also provided.
+Short-link to these resources: [aka.ms/AIML20repo](https://aka.ms/AIML20repo). [Resources for presenters of this talk](#Notes%20for%20Presenters) are also provided.
 
 ## Feedback Loop
 
