@@ -789,9 +789,9 @@ on Microsoft Learn that will take you through using them step-by-step.
 ### SLIDE: Resources
 
 To find links to Docs and Learn, and to all the resources I've mentioned in this
-talk, check out the Session Resources link on this slide. You can also run of
+talk, check out the Session Resources link on this slide. You can also run all of
 the demos I gave today yourself, using the code and scripts available in this
-github repository. And if you'd like to get a Microsoft Certificaion in AI or
+github repository. And if you'd like to get a Microsoft Certification in AI or
 Data Science, theres a special offer for a free certificate for attendees today:
 check out this link for details.
 
