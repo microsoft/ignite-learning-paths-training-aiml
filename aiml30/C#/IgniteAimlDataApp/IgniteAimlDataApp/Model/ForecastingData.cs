@@ -53,6 +53,8 @@ namespace IgniteAimlDataApp.Model
         public double Lag24 { get; set; }
         public double Lag25 { get; set; }
         public double Lag26 { get; set; }
+        
+        [JsonIgnore]
         public List<DateTime> DatesInWeek { get; set; }
 
         public static ForecastingData FromCsv(string csvLine)
