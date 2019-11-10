@@ -1,6 +1,6 @@
 # AIML20: Speaker Notes
 
-These are the notes for the PPT presentation at:
+If you prefer to work from bullet points instead of scripted text, here are the main points from each slide of the PPT presentation at:
 https://microsoft.sharepoint.com/:p:/t/CloudDevAdvocacy/EctuTXQCOdpGqc5lhQgUnMgBr-R6hlWR5MuLE3qCIFgoHA?e=r1szwF
 
 Associated demo scripts are found at: https://github.com/microsoft/ignite-learning-paths/tree/master/aiml/aiml20. Start with `DEMO%20Setup.md`.
@@ -15,23 +15,19 @@ Pre-presentation walk-in slide
 
 ### SLIDE: Using pre-built AI to solve business problems
 
-Welcome everyone, I’m \<name and affiliation\>. Today I’m going to talk about
-how you can add artificial intelligence capabilities to your applications,
-without the need for massive amounts of computing power or even AI expertise.
-We’ll do that by using pre-built AI services that are available in the cloud,
-and even customize them for our specific needs.
+Introduce yourself.
 
-(Replace your contact details on this slide.)
+How to add AI capabilities to applications, even if you don't have compute resources or AI expertise.
+
+Using pre-built AI services in the cloud.
 
 ### SLIDE: Resources
 
-In the talk today, I’ll include lots of links to information and resources, but
-don’t worry if you don’t catch them during the presentation, because all of the
-details are included on the Session Resources Hub shown here. There will also be
-several demos, and you’ll be able to try them all out yourself because complete
-source code, including a one-click button to deploy everything to Azure, is
-available in this Github repository. I’ll show this slide at again at the end
-of the presentation, too, so you might want to have your camera ready then.
+We will provide lots of links, resources and demos.
+
+Links to everything, including complete source code and a one-click deployment for the app, at the links here.
+
+This slide will be shown again at the end.
 
 ### SLIDE: Adding humanlike capabilities to apps
 
@@ -40,35 +36,31 @@ applications, but what does that mean? Well, here are some examples.
 
 ### SLIDE: Enhance apps with humanlike capabilities
 
-[CLICK] You could give your app the power of speech, say by adding a chat interface.
+[CLICK] Give your app the power of speech (e.g. chat).
  
-[CLICK] You could give your app the ability to see, and understand the content of images.
+[CLICK] Give your app the ability to see (understand images).
 
-[CLICK] You could give your app the intuition to understand what your users are most
-likely to want to do, and optimize your user interface automatically.
+[CLICK] Give your app intuition about human behavior (adapt interfaces).
 
-[CLICK] You could give your app the power of comprehension, and communicate with your
-users whatever their spoken language.
+[CLICK] Give your app the power of comprehension (communicate in any language)
 
-[CLICK] Or, you could automate the human process of scanning streams of data for anomalies, and react accordingly.
+[CLICK] Automate the human process of scanning streams of data for anomalies (and scale)
 
 These are just a few examples.
 
 ### SLIDE: Overview of Azure Cognitive Services
 
-We've talked a lot about how AI techniques can help. But doesn't it take a lot
-of data, and a lot of technical expertise, to implement?
+Doesn't it take a lot of data, and a lot of technical expertise, to implement humanlike AI?
 
-No. You can draw on the expertise of Microsoft Research, which has used its
-extensive data repositories and AI experts to create off-the-shelf AI services
-in Azure for you to use via simple REST API calls. 
+No. Fraw on the expertise of Microsoft Research. Add capabilities with simple REST API calls. 
 
 That's Azure Cognitive Services.
 
 ### SLIDE: Azure Cognitive Services
 
-Azure Cognitive Services includes more than two dozen APIs, but at the broadest
-level they offer capabilities within these cateegories of human capability:
+Azure Cognitive Services includes more than two dozen APIs.
+
+Capabilities within these cateegories of human capability:
 
 * Vision: Understanding the content of photographs, drawings, text and
   handwriting, and video
@@ -88,36 +80,25 @@ level they offer capabilities within these cateegories of human capability:
 
 ### SLIDE: Azure Cognitive Services (with service names)
 
-The "Search" category was covered in the previous talk in this learning path,
-AIML10. In this talk, we're going to touch on just a few of the other available
-services, and use them to enhance the website of a retailer: [CLICK]
+"Search" already covered. 
+
+We use a few of the other available services to enhance a retail website: [CLICK]
 
 Computer Vision: which we'll use to analyze the content of product photographs.
 
 Custom Vision: which we'll use to identify the specific products that our retailer sells.
 
-and Personalizer: which will automatically adapt the layout of our website by
-observing customer preferences and present the best product categories first,
-even for anonymous users.
+Personalizer: which will automatically adapt the layout of our website 
 
 But the principles of setting up and using Cognitive Services are the same for all the APIs, so what you learn here today applies to any of the AI services you want to use.
 
 ### SLIDE: Computer Vision
 
-First, let's look at pre-built AI for Computer Vision, and how we can use to
-give an application the ability to see, and then customize it to our particular
-needs.
+First, let's look at pre-built AI for Computer Vision.
 
 ### SLIDE: Shop By Photo
 
-This is the website for Tailwind Traders, a hardware retailer. The Tailwind
-Traders website has many of the usual e-commerce features: the ability to browse
-the product catalog, order products online, and find products in retail stores.
-But it has a few AI-enabled features too, as we'll see.
-
-As you might have guessed, Tailwind Traders is a fictitious company, but that
-means I can give you all of the source code to deploy this app yourself. You can
-find it at the link at the bottom of this slide.
+This is the website for Tailwind Traders, a hardware retailer (and a fictitious company). 
 
 ### SLIDE: Demo: Shop by Photo
 
@@ -141,158 +122,91 @@ figure out what went wrong, find a way to fix it using computer vision.
 
 ### SLIDE: How Computer Vision Works
 
-But before we do that, it's going to be helpful to dive into a bit of theory to
-understand how computer vision works. Don't worry though: there will be very
-little math, and understanding a bit about how computer vision works will help
-us understand what can go wrong, and how to fix it.
+We will go into a bit of theory now. Not much math.
+
+Helpful to understand what can go wrong and how to fix it.
 
 ### SLIDE: Tasks (XKCD comic)
 
 (Pause 10 seconds)
 
-Not long ago, being able to give a computer a photograph and it being able to
-give us useful information about what’s in the picture was literally the stuff of science
-fiction. This XKCD was published in September, 2014. Now, five years later, a
-computer can easily tell whether a photo is of a bird, thanks to the advent of
-big data, GPU computing, and convolutional neural networks. Let's see how.
+A computer understanding a photo used to be literal science fiction.
+
+Now 5 years later, it's not just possible, it's easy.
 
 ### SLIDE: How Neural Networks Work (Brandon Rohrer)
 
-This explanation is adapted with permission from Brandon Rohrer, who maintains
-an excellent blog and video tutorial series with in-depth explanations of many
-aspects of AI and machine learning. Check out Brandon's blog for more details;
-I'll only have time for a sketch here.
+Adapted with permission from Brandon Rohrer.
+
+Check out his blog for video tutorials series with in-depth explanations of many
+aspects of AI and machine learning. 
 
 ### SLIDE: Computer Vision / Convolutional Neural Network
 
-You've probably heard that AI is powered by something called "Deep Learning".
-The "Deep" in "Deep Learning" doesn't mean "profound", it simply means that
-the image passes through a neural network with many layers when
-it's being analyzed. That's it.
+AI is powered by "Deep Learning", but "Deep" does not mean "profound".
 
-On your screen is a very simple Neural Network. This one only has five layers;
-real-world vision systems have many dozens of layers, perhaps hundreds. This one
-is designed to take an image as input, and then classify that image as one of
-exactly four objects: dog, bicycle, apple, and tennis ball. That's it: it is not
-capable of detecting any other kind of object except those it's been trained to
-recognize.
+This is a simple NN. Real-word ones have many more layers.
+
+It's designed to detect just five objects. It can't recognize anything else.
 
 ### SLIDE: Trained Convolutional NN
 
-When a Neural Network has been trained, it passes the input image through the
-network layer by layer, at each layer transforming the image into different,
-smaller images. Each layer recombines the images genrated in the prior layer,
-and the images get smaller and smaller until at the very end they are just a
-single pixel with a value between 0 and 1. That value represents the confidence
-the Neural Network has that the image represents the given object: they higher
-the number, the more confident it is.
+Input image goes in on the left. 
 
-In this case, we've inputted an image of a bicycle and the "bicycle" node at the
-right side is the one with the highest value. So it looks like this neural
-network has been well-trained to detect bicycles (or at least this one). But how
-do you "train" a neural network, and how is the image being transformed along
-the way?
+Each node processes and recombines the original images, shrinking them down, until
+at end is a single value: the classification confidence.
 
-At each node of the network -- each circle -- a filter is applied to the image.
-It's much the same idea as a Snapshot filter or an Instagram filter, but instead
-of doing something useful like making the image sepia toned or adding bunny ears
-to all the faces, it's doing something ... different ... that was decided in the
-training process. Let's dive in to see what that is.
+Here the input is a bicycle, and the node at the right with the highest value is
+"bicycle". The image has been correclty identified.
 
 ### SLIDE: Filters (1)
 
-Let's consider a simple image. This is an image of a cross. It's 9 pixels by 9
-pixels, and white is "+1" and black is "-1". We're going to apply a filter to
-this image, like what happens at each of the nodes in the neural network.
+Skipped for time.
 
 ### SLIDE: Filters (2)
 
-To transform this image, we'll apply a 3x3 grid of weights. Small grids like
-this are commonly used in computer vision systems: sometimes 3x3, sometimes 5x5,
-and with weights determined in the training process. This grid only uses the
-weights -1 and 1, but typically they will look more like random numbers in that
-range. [CLICK]
-
-To apply the weights to the image, we overlay the grid of weights, centered on a
-particular pixel in the image. [CLICK] Then, we multiply each weight by each
-pixel value, and take the average. That average becomes the corresponding pixel
-in the output image, aligned to the center pixel of the weights grid.
-
-You've probably noticed we can't use the edges of the input image as center
-pixels, which is why the output image is smaller than the input by two rows and
-two columns. This (along with other types of transformations) is why the image
-gets smaller and smaller as we go down the layers, until it's only one pixel in
-size.
+Skipped for time.
 
 ### SLIDE: Filters (3)
 
-Let's shift the weights grid two pixels down and to the right. Now when we
-multiply the weights by the source pixels and take the average, we get a
-different output pixel (.55). The Neural Network sweeps the weights across the
-rows and columns of the source image to create the pixels in the output image.
-
-By the way, that process of sweeping the filter across the image has a complex
-name for a simple mathematical operation: convolution. That's why they call them
-Convolutional Neural Networks.
+Skipped for time.
 
 ### SLIDE: Training an image classifier
 
-So, now we know: each node (circle) in the neural network is a transformation of
-its input images, which is determined by a grid of weights. The trick to
-training a neural network is to choose those weights in such a way that the
-right numbers come out at the end.
+But how do you train a NN to do that?
 
-[CLICK] We'll do that with training data: lots of images of dogs, bicycles,
-appes and tennis balls. We know what each image represents (because a human has
-looked at them and labeled -- or "annotated" them), so all we do is pick weights
-in such a way that the correct node gets the largest value in each case, or at
-least as often as possible.
+[CLICK] By choosing the right filters. Each filter is controlled by a small grid of weights (usually 3x3 or 5x5).
 
-But in real vision networks, there may be millions of weights to choose, and
-millions of labelled images to compute against. How will we determine the
+[CLICK] We choose the weights by using lots of training images where the
+classification is known. Choose the weights so that the correct classification is chosen (or at least most of the time)
+
+In real vision networks, there may be millions of weights to choose. How will we determine the
 weights?
 
 ### SLIDE: Learning: Backpropagation
 
-This is the point where most books on machine learning dive into the math, and
-start talking about things like "backpropagation" and "learning rate" and "cost
-function". But unless you're an AI researcher, you can ignore all that, for two
-reasons.
+This is where the heavy math comes in.
 
-First, there are lots of great tools available that will do all that math for
-you, while taking advantage of powerful computing resources like big data stores
-and GPU processors. You've probably heard of tools like Tensorflow or Pytorch
-that do this, and you'll hear more about them in the later talks in this
-learning path. 
+But unless you're an AI engineer, you don't need to care. You can just use networks with weights optimized by others.
 
-Secondly, even then, to make use of those tools you'll need: lots of training
-data, those powerful computing resources, and a team of AI engineers to make use
-of it all. Instead, you can just use the resources of a project or company that
-has already used lots of data and computing and expertise to train a neural
-network, and use that through an API.
+That covers probably 80% of applications. But if you do need to design your own NN and optimize weights, there are tools for that, like Tensorflow and Pytorch. Hear about those in AIML40 and AIML50.
 
 ### SLIDE: Pre-Trained Convolutional NN
 
-So, you can just use the model with the pre-determined weights, and as long as
-you only need to detect the object classifications the model is trained for,
-you're all set to go. Just provide your image, and use the classifications that
-the pre-trained model generates. 
+But as long as you have access to an NN that can detect the images you need, you
+can just provide your image, and the network will classify it for you.
 
-Some models do more than just classify, too: they can also detect the location
-of objects within images, or analyze the image in other ways.
+
+Some models do more than just classify: detect the location
+of objects, or analyze the image in other ways.
 
 ### SLIDE: Demo: Cognitive Services Computer Vision
 
-Now let's try a pre-trained AI model: Cognitive Service Computer Vision. This
-service will analyze an image you provide, and provide tags (or classifications)
-for the objects it detects. These are just the labels associated with the top
-confidence scores at the right of the convolutional neural network from before,
-but now you're using a powerful neural network from Microsoft, capable of
-identifying many thousands of objects.
+Cognitive Services Computer Vision provides a powerful NN that can classify many thousands of objects.
 
-There's a simple web-based UI you can use to try it out at
-aka.ms/try-computervision, so let's try it out now. In a moment, I'll also show
-you how to access the API programatically as well.
+Simple web-based UI you can use to try it out at aka.ms/try-computervision
+
+Let's try it now.
 
 ### VIDEO: Computer Vision via web
 
@@ -309,20 +223,14 @@ case, “a man wearing a helmet”), and lots of other useful information.
 
 ### SLIDE: Cognitive Services Computer Vision
 
-We can see here in the Objects section of the output that two objects have been
-detected in the image: and some headwear, and a person.
+Look in Objects: two objects detected. Headwear, and Person.
 
-We're more interested in the "tags" section, which provides classifications for
-the overall image along with confidence scores. In this case, the classification
-with the highest confidence, after "man", is "headdress" which isn't exactly
-what we need for the Shop by Photo app: we were looking for "hard hat".
-Unfortunately, this API isn't trained to detect hard hats, only helmets, and
-that's only the 6th most confident classification here. We'll learn how to fix
-that in just a moment.
+Look at Tags. Highest confidence: man. Next is Headdress. Helmet is only 6th.
+Model not trained for "hard hat" specifically.
 
-But if you want to incorporate vision capabilities into an app, rather than
-using a web form, you'll want to access the Computer Vision API programatically.
-Let's see how.
+We'll learn how to fix that in just a moment.
+
+If you want to incorporate vision into an app you can access API programatically. Let's see how.
 
 ### VIDEO: Computer Vision via CLI
 
@@ -363,64 +271,43 @@ this image is "camera", which sadly wouldn't help us search for the actual tool
 
 ### SLIDE: Adapting Computer Vision models with your own data
 
-So, now you can see why the Computer Vision API might not be the best choice for
-the Shop by Photo feature at Tailwind Traders. In some cases, the vision model
-it's using isn't trained to identify the specific products that Tailwind Traders
-sells. In other cases, it's been trained to detect *too many* different kinds of
-objects, and the wrong one is being found. As you just saw, given a picture of a
-drill, it gave us back the tag of "camera", a product that Tailwind Traders
-doesn't sell.
+Computer Vision API won't work for Shop by Photo. 
+
+Trained to detect too many kinds of objects.
 
 Fortunately, we can fix that problem. Let's dive back into the theory for a moment.
 
-What if I told you there's a way to start with a vision model that's been
-pre-trained to identify many thousands of images, and adapt it to identify just
-the objects you're interested in -- even if those objects weren't part of the
-training data for the original model! That sounds strange, I know, but let's see
-how it might work.
+There's a way to adapt a model for thousands of objects, and adapt it to detect
+only object you want. EVEN if they weren't part of the original model. 
+
+Let's see how, using an AI technique called Transfer Learning. 
 
 ### SLIDE: Transfer Learning
 
-Here we have the trained convolutional neural network from before, but
-something's different: the final layer with the object classifications has been
-stripped off. What we're left with is the images from the second-last layer. We
-can ignore the fact that they are images -- say, 3x3 images -- and just think of
-them as data. Now, when we feed an image to the left hand side, instead of
-getting confidence scores, we get a collection of arrays, or "features", each
-with 9 data points. In this toy network, they are labelled F1, F2, ... up to F8.
-Each image you put in on the left side generates a different collection of
-features on the right side.
+Same CNN as before, with last layer stripped off.
 
-We don't really know what those features *are*, but what we do know is that they
-are useful, because they were useful to classify all of the image types the
-neural network was *originally* trained for. Who knows: one feature might
-represent "greenness", and was useful to classify trees and tennis balls.
-Another might count the number of circle-shaped regions in the image, and was
-useful in classifying bicycles and traffic lights. The point is: those features
-weren't defined in advance: they were _learned_ from the training data, and are
-useful for classifying images _in general_. 
+Second last layer gives "features" - think of as a vector of numbers. Each image generates a different set of features.
 
-And here's the trick: we can use those features to classify objects that the
-original network wasn't even trained on.
+Don't know what the features represent, but they are useful in general for classifying images.
+
+Trick: we can use those features to classify a new set of objects.
 
 ### SLIDE: Transfer Learning Training (1 - with the hammer)
 
-Let's suppose we want a new model to identify hammers and hard hats. We can pass
-an images of a hammer on the left, and collect the features on the right. In
-this case, we get 8 data vectors (one for each feature), and a binary indicator
-of the object type. We can repeat that for several different pictures of a
-hammer, and collect the data vectors and the binary indicator each time.
+Use transfer learning to create a model to identify hammers and hard hats.
+
+Pass a picture of a hammer, collect features. And a binary indicator for "hammer". Repeat for lots of hammers.
 
 ### SLIDE: Transfer Learning Training (2 - with the white hard hat)
 
-Now let's do the same with pictures of hard hats. Again, in each case, we
-collect 8 data vectors and a binary indicator for each image.
+Now do that same with pictures of hard hats.
 
-Put it all together, and what do you have? A collection of data vectors, each
-with an associated a binary outcome. If you've done any data science, you can
-guess what happens next: we could build a simple predictive model, like a
-logistic regression or a one-layer neural network, to predict the new object
-classifications from the features.
+In each case, collect 8 data vectors and a binary indicator for each image.
+
+Put it all together, you have a collection of data vectors, each
+with an associated a binary outcome. 
+
+With this you can make a simple predictive model.
 
 ### SLIDE: Transfer Learning Trained Model
 
@@ -444,7 +331,7 @@ the base, and provide your own images and classifications to the service called
 Custom Vision.
 
 Just like with Computer Vision, you can train transfer learning models
-programatically using the API, but Custom Vision also provides a convenient Web
+programmatically using the API, but Custom Vision also provides a convenient Web
 UI for training models. Let's use that now to train a model for the Shop by
 Photo feature of Tailwind Traders.
 
