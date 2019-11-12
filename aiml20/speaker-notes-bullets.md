@@ -196,7 +196,6 @@ That covers probably 80% of applications. But if you do need to design your own 
 But as long as you have access to an NN that can detect the images you need, you
 can just provide your image, and the network will classify it for you.
 
-
 Some models do more than just classify: detect the location
 of objects, or analyze the image in other ways.
 
@@ -230,7 +229,7 @@ Model not trained for "hard hat" specifically.
 
 We'll learn how to fix that in just a moment.
 
-If you want to incorporate vision into an app you can access API programatically. Let's see how.
+If you want to incorporate vision into an app you can access API programmatically. Let's see how.
 
 ### VIDEO: Computer Vision via CLI
 
@@ -258,7 +257,7 @@ Vision service, so let's save that URL in an environment variable as well.
 And then you can choose an image to analyze. Here we provide the URL of an
 image, the same image of a man in a hard hat that we looked at a moment ago.
 
-Now we can pass the key and the image url into the endpoint by passing in a JSON
+Now we can pass the key and the image URL into the endpoint by passing in a JSON
 input using curl. And in just a few milliseconds we get back the analysis of the
 image as JSON. You can see the same outputs we saw in the web interface a moment
 ago.
@@ -311,29 +310,19 @@ With this you can make a simple predictive model.
 
 ### SLIDE: Transfer Learning Trained Model
 
-It turns out, this often works surprisingly well. You don't even need a lot of
-data -- a few dozen images will often do the trick, as long as the categories
-you want to predict are fairly distinct. And you don't need a lot of computing
-power to predict a hundred or so binary outcomes from a relatively small amount
-of data.
+This works surprisingly well.
 
-Of course, this is a toy example: you will likely want to identify more than two
-objects, and the underlying neural network will certainly generate many more
-than 8 features at its second-to-last-layer. But the principle remains: you can
-do this with modest new data and computing power, and it often works really
-well.
+You don't need a lot of images or computing power.
+
+This is a toy example but the principle applies to large models too.
 
 ### SLIDE: Microsoft Cognitive Services Custom Vision
 
-Of course, you don't have to train a transfer learning model by yourself. You
-can use the advanced vision models from Cognitive Services Computer Vision as
-the base, and provide your own images and classifications to the service called
-Custom Vision.
+You don't have to train a transfer learning model yourself.
 
-Just like with Computer Vision, you can train transfer learning models
-programmatically using the API, but Custom Vision also provides a convenient Web
-UI for training models. Let's use that now to train a model for the Shop by
-Photo feature of Tailwind Traders.
+Use one of Microsoft's pre-trained vision models and adapt it with images of your own objects, with Custom Vision.
+
+Let's try use it now to build a vision model for Shop by Photo.
 
 ### SLIDE: Demo: Customized object recognition
 
@@ -398,30 +387,13 @@ ONNX, or Open Neural Network Exchange, is an open standard launched by Microsoft
 and Facebook to promote the free exchange and deployment of AI models, and
 supported by a wide range of applications and technology vendors.
 
-Now that we've trained our custom vision model, let's integrate it into the
-Tailwind Traders app. For that we'll use ONNX Runtime, an open-source inference
-engine that provides functions to generate predictions from models in the ONNX
-format.
+We used ONNX Runtime to integrate the exported model into the website.
 
-### SLIDE: OnnxImageSearchTermPredictor.cs
+### SLIDE: ONNXImageSearchTermPredictor.cs
 
-Now that we've created our custom model, we can call it in the app using its
-API. Here we create a new "Inference Session" from the ONNX file we generated,
-and then generate a classification label from the uploaded image as a string.
-Then we just pass that into the existing search feature of the Tailwind Traders
-website and display the results.
+InferenceSession refers to the exported .onnx file
 
-```csharp 
-var session = new InferenceSession(filePath);
-
-...
-
-var output = session.Run(new[] { input });
-var prediction = output
-    .First(i => i.Name == "classLabel")
-    .AsEnumerable<string>()
-    .First();
-```
+Model generates a classification label, which gets passed to search.
 
 ### SLIDE: DEMO: ONNX
 
@@ -483,32 +455,23 @@ the products on offer.
 
 ### SLIDE: Optimizing App UI with Cognitive Services Personalizer
 
-We've got time for just one more quick example of pre-built AI, this time from
-the "Decision Category" of Cognitive Services. The "Personalizer" service allows
-us to customize the interface of apps in real-time, balancing on what the user
-is most likely to want to do, coupled with the things that *we would like* the
-user to be doing.
+Time for one more quick example: Personalizer.
+
+Re-order featured products "Recommended" section in real time.
 
 ### SLIDE: Recommended (screenshot)
 
-We can see how this might work with the "Recommended" section of the Tailwind
-Traders website. It shows a selection of the departments available in the store:
-one is a large "hero" image, coupled with a few smaller images.
+Recommended section shows one large "hero" image, coupled with a few smaller images.
 
-The Personalizer service will choose for us how those sections appear, according
-to an AI technique called "reinforcement learning".
+Personalizer will select the order sections appear
+
+Uses an AI technique called "reinforcement learning".
 
 ### SLIDE: Personalizer in Action
 
-Personalizer has been in development at Microsoft for many years. It's used on
-Xbox devices, to determine what activities are featured on the home page, like
-playing an installed game, or purchasing a new game from the store, or watching
-others play on Mixer. Since the introduction of Personalizer, the Xbox team has
-seen a significant lift in key engagement metrics.
+Personalizer has been in development at Microsoft for many years. 
 
-Personalizer is also used to optimize the placement of ads in Bing search, and
-the articles featured in MSN News, again with great results in improving
-engagement from users.
+Used on XBox and in Bing and MSN News.
 
 Now you can use Personalizer in your own apps, as well.
 
@@ -535,29 +498,20 @@ for the next time we need to feature an activity.
 
 ### SLIDE: Discovering Patterns and Causality
 
-But this isn't just a recommender system, which has the danger of presenting the
-user with things they know they already like. What about the things they would
-like, but don't know about? Personalizer is usually in Exploit mode, where it
-recommends the best activity based on history and context, but sometimes it also
-enters Explore mode, and presents the user with new things they might not
-otherwise see. It's kind of like an automated A/B testing system, but with more
-than two branches, all tested in teal time.
+Not just a recommender system.
 
-You control what percentage of the time Explore Mode is
-activated, to help the user discover new content or features.
+Explore mode surfaces other options at a rate you specify.
+
+Like real-time A/B testing.
 
 ### SLIDE: Personalizer for Tailwind Traders
 
-In our Tailwind Traders app, for anonymous users, we will use the time of day,
-day of week, and browser OS as "context" to influence rankings. For the reward
-score, we will use whether or not the hero section was clicked. In this code, we
-provide a reward score of 1 if the featured category was clicked, and zero
+Context: time of day, day of week, and browser OS  
+
+Reward score: 1 if the featured category was clicked, and zero
 otherwise.
 
-Over time, Personalizer will determine the best category to feature for
-anonymous users based on time of day, day of week, and OS. It will also
-"explore" 20% of the time, to surface categories that would otherwise not be
-presented.
+Explore rate: 20%
 
 ### SLIDE: DEMO: Personalizer
 
@@ -574,94 +528,61 @@ measure engagement as well.
 
 ### SLIDE: Pre-built AI in Production
 
-We've seen a few ways that you can use pre-built AI to enhance your applications
-with humanlike capabilities. Let's wrap up with a few things you should keep in
-mind if you plan to deploy these applications in a production app, possibly with
-real-time capabilities for millions of users.
+Wrap up with some considerations for putting AI into production.
 
 ### SLIDE: Cost Considerations
 
-Probably the first thing you want to think about is: how much is all this going to cost?
+First consideration: cost. 
 
-[CLICK] If you are just trying things out like a "Developer would", that is small
-amounts of data, a few attempts here and there, that's generally FREE. 
+New to Azure? Use this link to sign up and get $200 in free credts.
 
-[CLICK] For production volumes, you will be charged by volume and rate,
-according to the service you are using.
+[CLICK] Development-scale workloads generally free 
 
-[CLICK] There are more details on pricing on this link. Check there for exact pricing
-for your service and region
+[CLICK] Production volumes is where charges will kick in
 
-If you are new to Azure and want to play around with these services, you can
-sign up using the link right here and get $200.
-
-(This slide is intended to give a general overview of the "model" for pricing in
-cognitive services. Attendees should check the given link for exact pricing for
-the service they want to use.)
+[CLICK] Specific details by service and region at this link
 
 ### SLIDE: Data Considerations
 
-You also may want to think about where your data is going and how it will be
-used.
+Think about where your data is going and how it will be used.
 
-Your data, like images or text, will be uploaded to Azure for inference, but
-it's never stored by Cognitive Services. This link gives all the details about
-privacy and regulatory compliance. But if you work in a regulated industry, like
-medicine, where data cannot leave your firewall, there is another option:
-containers.
+Data is uploaded for inference, but deleted immediately after use. Details at this link.
+
+If bandwidth is an issue, or data is regulated, consider containers.
 
 ### SLIDE: Deployment with containers
 
-Some of Cognitive Services is available for use as an independent container. You
-can simply download the container image, deploy it behind your firewall, and
-then use the local endpoints it provides just like you do in Azure. The
-difference is that data never leaves your own network. The only reason the
-container connects to Azure is for billing -- usage is charged in exactly the
-same way as in Azure itself.
+Some services available in downloadable containers.
+
+Install container behind your firewall, and none of your data goes to Microsoft.
+
+Internet connection only used for billing. Charged at usual rate.
 
 ### SLIDE: Ethical Considerations
 
-I've saved the most important slide today for last. You've seen how easy it is
-to integrate powerful AI capabilities into your applications. But with great
-power comes great responsibility, and it's critically important to understand
-the impact your application will have on people, and consider the ethical
-implications.
+Most important slide.
 
-If you're working with AI technologies, you should be working within an ethical
-framework that:
+Understand ethical implications of your AI apps affect people.
 
-* Focuses on *enabling* people to achieve more in what they already do, rather
-  than replacing humans with AI
+Have an ethical framework:
 
-* Is *inclusive* of all types of users, so that everyone can benefit equally
-  from your application, and
+* *enable* people to achieve more in what they already do (don't replace people)
 
-* Is fair and transparent, and in particular doesn't marginalize
-  underrepresented groups. Remember what we learned earlier: AI is only as good
-  as the data it was trained on, and you need to be sure that your application
-  works for all of your potential users, regardless of who they are or
-  what they look like.
+* Be *inclusive* of all types of user: make sure everyone can benefit equally  from your application, and
 
-If you don't have an ethical framework set up, a great place to start is
-Microsoft's own principles for artificial intelligence, and you can read more at
-this link.
+* Is fair and transparent,
+
+Remember what AI is only as good as the data it was trained on. Be sure that your application works for all of your potential users.
+
+If you don't have an ethical framework set up, a great place to start is Microsoft's own principles for artificial intelligence, and you can read more at this link.
 
 ### SLIDE: Wrapping up
 
-It's easy to add humanlike capabilities with pre-built AI. Pre-built models
-can't do everything, but they can get you a long way, quickly. We'll learn about
-custom models for the remaining 20% later in thus learning path.
+Pre-built models can't do everything, but they can get you a long way, quickly. 
 
-AI is powerful, but it isn't magic. It's driven by data and, at its core, fairly
-simple math. Always keep the data in mind, and use it to help you understand
-what's going on. In particular, remember that even the best AI can make
-mistakes, especially about groups that aren’t well represented in the training
-data.
+AI is driven by data. Always keep the data in mind and what can go wrong.
 
-Finally, try it out! You don't need a lot of expertise to get started, but
-everyone needs to thing about the ethical implications of AI and how it affects
-people, so make sure you've developed an ethical framework for using AI, and
-stick to it.
+Try it out! You don't need a lot of expertise, but think about ethical implications.
 
 ### SLIDE: Docs Alert
 
@@ -675,11 +596,10 @@ on Microsoft Learn that will take you through using them step-by-step.
 
 ### SLIDE: Resources
 
-To find links to Docs and Learn, and to all the resources I've mentioned in this
-talk, check out the Session Resources link on this slide. You can also run all of
-the demos I gave today yourself, using the code and scripts available in this
-github repository. And if you'd like to get a Microsoft Certification in AI or
-Data Science, theres a special offer for a free certificate for attendees today:
-check out this link for details.
+All links and code in the github repository.
+
+And if you'd like to get a Microsoft Certification in AI or Data Science, theres a special offer for a free certificate for attendees today: check out this link for details.
+
+I'll be here to answer questions. (And at...)
 
 Thank you.
