@@ -422,7 +422,7 @@ guess what happens next: we could build a simple predictive model, like a
 logistic regression or a one-layer neural network, to predict the new object
 classifications from the features.
 
-### SLIDE: Transfer Learnng Trained Model
+### SLIDE: Transfer Learning Trained Model
 
 It turns out, this often works surprisingly well. You don't even need a lot of
 data -- a few dozen images will often do the trick, as long as the categories
@@ -654,7 +654,7 @@ like, but don't know about? Personalizer is usually in Exploit mode, where it
 recommends the best activity based on history and context, but sometimes it also
 enters Explore mode, and presents the user with new things they might not
 otherwise see. It's kind of like an automated A/B testing system, but with more
-than two branches, all tested in teal time.
+than two branches, all tested in real time.
 
 You control what percentage of the time Explore Mode is
 activated, to help the user discover new content or features.

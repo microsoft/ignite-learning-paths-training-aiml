@@ -2,14 +2,15 @@
 
 Demo scripts are made available to everyone in this repo.
 
-You should follow the same scripts for the presentations, but with the additonal
+You should follow the same scripts for the presentations, but with the additional
 notes given below.
 
 Recordings of demos are also available as videos in the [PPT
 Slides](presentations.md) (and also some additional videos linked below). You
 can use the embedded videos instead of a live demo in the case of lack of
 internet or other technical issues. (In this case, we recommend muting the audio
-and speaking to the video yourself.)
+and speaking to the video yourself.) [Speaker notes](speaker-notes.md) are timed
+to the events in the embedded videos.
 
 ## DEMO Setup
 
