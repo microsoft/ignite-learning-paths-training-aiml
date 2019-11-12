@@ -81,7 +81,7 @@ namespace IgniteAimlDataApp.Model
             if (DateTime.TryParseExact(dateTime, "d/M/yyyy H:mm:ss tt", enGB, DateTimeStyles.None, out dateValue))
                 return dateValue;
 
-            throw new Exception("No date for you...");
+            throw new Exception("Unable to parse date...");
         }
 
 
