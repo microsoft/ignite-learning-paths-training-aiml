@@ -23,6 +23,7 @@ Along with the video of the presentation, this document will link to all the ass
 - This guide
 - PowerPoint presentation including notes for each slide [here](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml50/AIML50_MachineLearningOperations–ApplyingDevOpstoDataScience.pptx)
   - [Exported Speaker Notes](./SpeakerNotes.md)
+- Session at Microsoft Ignite 2019 Orlando [here](https://myignite.techcommunity.microsoft.com/sessions/83003)
 - Full-length recording of presentation [here](https://youtu.be/UgM8_4fAni8)
 - Individual recordings of stage-ready hands-on demos
   - [Demo #1](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml50/AIML50_demo_1.mp4)
