@@ -46,6 +46,7 @@ Please download all the code and data files in this repository to get started. T
 [![Deploy to Azure](https://azuredeploy.net/deploybutton.png)](https://azuredeploy.net/)
 
 * Log into the Azure Portal and your Azure Machine Learning Service
+* Choose to Upgrade the workspace to the **Enterprise edition (Preview)** [see more information on current pricing here](https://azure.microsoft.com/en-us/pricing/details/machine-learning/) - you will need enterprise edition to complete the experiment demo (demo 2)
 * Launch the **Preview UI**
 * Create a **Notebook VM**
     * Select 'Notebook VMs' from left pane
