@@ -84,7 +84,7 @@ Please download all the code and data files in this repository to get started. T
     * Select the 'Browse' button and find the data_train_experiment.csv file
     * Select 'Next'
     * Review the data and select 'Next' and 'Next' again
-    * Finally reveiw the dataset settings and select 'Create'
+    * Finally review the dataset settings and select 'Create'
 
 >Learn more about [creating datasets here](https://docs.microsoft.com/en-us/azure/machine-learning/service/how-to-create-register-datasets/?WT.mc_id=msignitethetour2019-github-aiml21)
 

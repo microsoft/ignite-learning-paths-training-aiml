@@ -16,10 +16,11 @@ Please download all the code and data files in this repository to get started. T
 [![Deploy to Azure](https://azuredeploy.net/deploybutton.png)](https://azuredeploy.net/)
 
 * Log into the Azure Portal and your Azure Machine Learning Service
+* Choose to Upgrade the workspace to the **Enterprise edition (Preview)** [see more information on current pricing here](https://azure.microsoft.com/en-us/pricing/details/machine-learning/) - you will need enterprise edition to complete the experiment demo (demo 2)
 * Launch the **Preview UI**
 * Create a **Notebook VM**
-    * Select 'Notebook VMs' from left pane
-    * Select 'New'
+    * Select 'Compute' from left pane
+    * Select 'New' under 'Notebook VMs'
     * Provide a 'Notebook VM Name' (all lowercase)
     * Keep the default size VM provided
     * Once created select 'Jupyter Link'
@@ -29,20 +30,20 @@ Please download all the code and data files in this repository to get started. T
         * [code/explore.ipynb](code/explore.ipynb)
         * [code/deploy.ipynb](code/deploy.ipynb)
         * [code/config.json](code/config.json)
-    * Open [config.json](code/config.json) and enter your subscription key, resource group and Azure ML Workspace name from the Azure Machine Learning service in the portal and save the file
+    * Open [config.json](code/config.json) and enter your subscription key, resource group and Azure ML Workspace name and save the file
 
 >Learn more about [Notebook VMs here](https://azure.microsoft.com/en-us/blog/three-things-to-know-about-azure-machine-learning-notebook-vm/?WT.mc_id=msignitethetour2019-github-aiml21)
 
 * Create a **Compute Instance**
     * Select 'Compute' from left pane
-    * Select 'Add'
+    * Select 'New' under the 'Training Clusters' tab
     * Provide a 'Compute Name' (all lowercase)
-    * Select 'Machine Learning Compute' as Compute type
     * Choose a VM size
         * For standard compute select something like 'Standard_DS2_v2'
         * For GPU compute select 'Standard_NC6'
     * Select 'Low Priority' for Virtual machine priority
     * Minimum number of nodes set to 0 (then it will scale down completely and reduce costs)
+    * Set maximum nodes from 3-6
     * Click 'Create'
 
 >Learn more about [Azure Machine Learning Compute here](https://docs.microsoft.com/en-us/azure/machine-learning/service/how-to-set-up-training-targets#amlcompute/?WT.mc_id=msignitethetour2019-github-aiml21)
@@ -51,8 +52,9 @@ Please download all the code and data files in this repository to get started. T
     * Select 'Datasets' from left pane
     * Select 'Create dataset' and then 'from local files'
     * Select the 'Browse' button and find the data_train_experiment.csv file
-    * Wait for the file to upload
-    * Select 'Done'
+    * Select 'Next'
+    * Review the data and select 'Next' and 'Next' again
+    * Finally review the dataset settings and select 'Create'
 
 >Learn more about [creating datasets here](https://docs.microsoft.com/en-us/azure/machine-learning/service/how-to-create-register-datasets/?WT.mc_id=msignitethetour2019-github-aiml21)
 
@@ -71,12 +73,10 @@ Please download all the code and data files in this repository to get started. T
 
 ### Video Demo with Voice Over: [AIML21 - Demo 1 - Explore](https://youtu.be/1Xtmrsfkzfs)
 
-**Instructions:**
-* Sign into your [Azure Portal](https://azure.microsoft.com/en-gb/?WT.mc_id=msignitethetour2019-github-aiml21) and open the **Azure Machine Learning Workspace** you created with the template above
+* Sign into your [Azure Portal](https://azure.microsoft.com/en-gb/?WT.mc_id=msignitethetour2019-github-aiml21) and open **Azure Machine Learning** you created with the template above
 * Launch the Preview experience by clicking **'Launch Preview Now'**
-* Open **'Notebook VMs'** from the left pane
-* Select the **'Jupyter'** Link
-* Double click the **user folder**
+* Open **'Compute'** from the left pane
+* Select the **'Jupyter'** Link on your Notebook VM
 * *Log in if needed with your Azure Credentials*
 * Open [**Explore.ipynb**](code/explore.ipynb)
 * Run through all code cells using SHIFT + ENTER
@@ -85,13 +85,21 @@ Please download all the code and data files in this repository to get started. T
 
 ### Video Demo with Voice Over: [AIML21 - Demo 2 - Experiment](https://youtu.be/sUKuRBRvo7U)
 
-* Go to [ml.azure.com](https://ml.azure.com/?WT.mc_id=msignitethetour2019-github-aiml21) Azure Machine Learning Preview interface. You can access this via the URL directly and then sign in and select the correct workspace you created in the setup instructions. Or from the Azure Machine Learning Service workspace in the portal selecting the **'Launch Preview now'** button
+* Go to [ml.azure.com](https://ml.azure.com/?WT.mc_id=msignitethetour2019-github-aiml21) Azure Machine Learning studio. You can access this via the URL directly and then sign in and select the correct workspace you created for this talk. Or from the Azure Machine Learning Service in the Azure portal selecting the **'Launch Preview now'** button
 * Select **Automated ML** on the left pane
-* Click **'Create experiment'**
+* **Review the video for all talking points for each demo**
+* Click **'New automated ML run'**
+* Select the training data dataset (data_train_experiment-XXXXXX)
 * Provide an experiment name, example/ aiml21-regression-duration
-* Select your Machine Learning compute you setup above
+* Select **Duration** for Target column
+* Select the 'Training Cluster' of compute you setup above
 * Select **Next**
-* Select the dataset you uploaded above
+* Select **Regression** for Prediction Task
+* Select **'View additional configuration settings'** and set Primary metric to **'normalized_root_mean_squared_error'**
+* Set Concurrency, Max concurrent iterations to 3
+* Set Exit criterion, Training job time (hours) to 1
+* Select **'Save'**
+* Select **'View featurization settings'**
 * Review the preview of the dataset
 * **Deselect** the columns below:
     * SupportTicketID
@@ -106,12 +114,8 @@ Please download all the code and data files in this repository to get started. T
     * DateCompletedDay
     * DateCompletedMonth
     * DateCompletedYear
-* Select **Regression** for Prediction Task
-* Select **Duration** for Target column
-* Select **Advanced Settings** drop down
-* Set Primary metric to **'normalized_root_mean_squared_error'**
-* Set Training Job time (minutes) to **10**
-* Select **Start** button
+* Click **'Save'** once complete
+* Select **Finish**
 
 > This will take a while to run - ~15 - 20 mins 
 
