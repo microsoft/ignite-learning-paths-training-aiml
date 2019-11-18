@@ -49,8 +49,8 @@ Please download all the code and data files in this repository to get started. T
 * Choose to Upgrade the workspace to the **Enterprise edition (Preview)** [see more information on current pricing here](https://azure.microsoft.com/en-us/pricing/details/machine-learning/) - you will need enterprise edition to complete the experiment demo (demo 2)
 * Launch the **Preview UI**
 * Create a **Notebook VM**
-    * Select 'Notebook VMs' from left pane
-    * Select 'New'
+    * Select 'Compute' from left pane
+    * Select 'New' under 'Notebook VMs'
     * Provide a 'Notebook VM Name' (all lowercase)
     * Keep the default size VM provided
     * Once created select 'Jupyter Link'
@@ -66,14 +66,14 @@ Please download all the code and data files in this repository to get started. T
 
 * Create a **Compute Instance**
     * Select 'Compute' from left pane
-    * Select 'Add'
+    * Select 'New' under the 'Training Clusters' tab
     * Provide a 'Compute Name' (all lowercase)
-    * Select 'Machine Learning Compute' as Compute type
     * Choose a VM size
         * For standard compute select something like 'Standard_DS2_v2'
         * For GPU compute select 'Standard_NC6'
     * Select 'Low Priority' for Virtual machine priority
     * Minimum number of nodes set to 0 (then it will scale down completely and reduce costs)
+    * Set maximum nodes from 3-6
     * Click 'Create'
 
 >Learn more about [Azure Machine Learning Compute here](https://docs.microsoft.com/en-us/azure/machine-learning/service/how-to-set-up-training-targets#amlcompute/?WT.mc_id=msignitethetour2019-github-aiml21)
@@ -82,8 +82,9 @@ Please download all the code and data files in this repository to get started. T
     * Select 'Datasets' from left pane
     * Select 'Create dataset' and then 'from local files'
     * Select the 'Browse' button and find the data_train_experiment.csv file
-    * Wait for the file to upload
-    * Select 'Done'
+    * Select 'Next'
+    * Review the data and select 'Next' and 'Next' again
+    * Finally reveiw the dataset settings and select 'Create'
 
 >Learn more about [creating datasets here](https://docs.microsoft.com/en-us/azure/machine-learning/service/how-to-create-register-datasets/?WT.mc_id=msignitethetour2019-github-aiml21)
 
