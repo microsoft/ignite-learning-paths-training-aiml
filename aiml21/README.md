@@ -111,11 +111,10 @@ Please download all the code and data files in this repository to get started. T
 
 ### Video Demo with Voice Over: [AIML21 - Demo 1 - Explore](https://youtu.be/1Xtmrsfkzfs)
 
-* Sign into your [Azure Portal](https://azure.microsoft.com/en-gb/?WT.mc_id=msignitethetour2019-github-aiml21) and open the **Azure Machine Learning Workspace** you created with the template above
+* Sign into your [Azure Portal](https://azure.microsoft.com/en-gb/?WT.mc_id=msignitethetour2019-github-aiml21) and open **Azure Machine Learning** you created with the template above
 * Launch the Preview experience by clicking **'Launch Preview Now'**
-* Open **'Notebook VMs'** from the left pane
-* Select the **'Jupyter'** Link
-* Double click the **user folder**
+* Open **'Compute'** from the left pane
+* Select the **'Jupyter'** Link on your Notebook VM
 * *Log in if needed with your Azure Credentials*
 * Open [**Explore.ipynb**](code/explore.ipynb) *(recommend having all these tabs open and ready already)*
 * Make sure all output cells in the notebook are cleared - **Select Cell -> All Output -> Clear**
@@ -127,14 +126,21 @@ Please download all the code and data files in this repository to get started. T
 
 ### Video Demo with Voice Over: [AIML21 - Demo 2 - Experiment](https://youtu.be/sUKuRBRvo7U)
 
-* Go to [ml.azure.com](https://ml.azure.com/?WT.mc_id=msignitethetour2019-github-aiml21) Azure Machine Learning Preview interface. You can access this via the URL directly and then sign in and select the correct workspace you created for this talk. Or from the Azure Machine Learning Service workspace in the portal selecting the **'Launch Preview now'** button
+* Go to [ml.azure.com](https://ml.azure.com/?WT.mc_id=msignitethetour2019-github-aiml21) Azure Machine Learning studio. You can access this via the URL directly and then sign in and select the correct workspace you created for this talk. Or from the Azure Machine Learning Service in the Azure portal selecting the **'Launch Preview now'** button
 * Select **Automated ML** on the left pane
 * **Review the video for all talking points for each demo**
-* Click **'Create experiment'**
+* Click **'New automated ML run'**
+* Select the training data dataset (data_train_experiment-XXXXXX)
 * Provide an experiment name, example/ aiml21-regression-duration
-* Select your Machine Learning compute you setup above
+* Select **Duration** for Target column
+* Select the 'Training Cluster' of compute you setup above
 * Select **Next**
-* Select the dataset you uploaded above
+* Select **Regression** for Prediction Task
+* Select **'View additional configuration settings'** and set Primary metric to **'normalized_root_mean_squared_error'**
+* Set Concurrency, Max concurrent iterations to 3
+* Set Exit criterion, Training job time (hours) to 1
+* Select **'Save'**
+* Select **'View featurization settings'**
 * Review the preview of the dataset
 * **Deselect** the columns below:
     * SupportTicketID
@@ -149,16 +155,12 @@ Please download all the code and data files in this repository to get started. T
     * DateCompletedDay
     * DateCompletedMonth
     * DateCompletedYear
-* Select **Regression** for Prediction Task
-* Select **Duration** for Target column
-* Select **Advanced Settings** drop down
-* Set Primary metric to **'normalized_root_mean_squared_error'**
-* Set Training Job time (minutes) to **10**
-* Select **Start** button
+* Click **'Save'** once complete
+* Select **Finish**
 
 > Once it is running, explain it will take some time to run the experiment and you will review a previously run example. 
 
->Please make sure you have a fully run Automated ML regression as explained about before getting on stage
+> Please make sure you have a fully run Automated ML regression as explained about before getting on stage
 
 * Select previously run experiment from the Automated ML page from the left, or press the back button from the experiment you just submitted above
 * The previously run experiment will have a long 'Run Id' select this link
