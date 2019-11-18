@@ -20,7 +20,7 @@
 
 # Read CSV file
 import pandas as pd
-data = pd.read_csv('data/data_train.csv')
+data = pd.read_csv('../data/data_train.csv')
 data.head()
 
 
