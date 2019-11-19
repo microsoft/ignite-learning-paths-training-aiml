@@ -6,6 +6,8 @@ Follow the below steps to get your environment ready for the live demo. Once you
  <img src="https://camo.githubusercontent.com/9285dd3998997a0835869065bb15e5d500475034/687474703a2f2f617a7572656465706c6f792e6e65742f6465706c6f79627574746f6e2e706e67" data-canonical-src="http://azuredeploy.net/deploybutton.png" style="max-width:100%;">
 </a>
 
+> Once created please upgrade your Azure Machine Learning resource to the enterprise edition for this session. You should see an 'Upgrade' button to complete this action. This is currently in preview, however the pricing structure is described [here](https://azure.microsoft.com/en-us/pricing/details/machine-learning/)
+
 ## Create Additional Resources Needed
 Once you have created the base Azure Machine Learning Service Workspace we need to add additional compute resources.
 ### Create Compute Targets
