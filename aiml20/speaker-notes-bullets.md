@@ -9,7 +9,7 @@ Associated demo scripts are found at: https://github.com/microsoft/ignite-learni
 
 Slides are identified by titles only.
 
-### SLIDE: Microsft Ignite the Tour
+### SLIDE: Microsoft Ignite the Tour
 
 Pre-presentation walk-in slide
 
@@ -50,11 +50,11 @@ These are just a few examples.
 
 ### SLIDE: Overview of Azure Cognitive Services
 
-    Doesn't it take a lot of data, and a lot of technical expertise, to implement humanlike AI?
+Doesn't it take a lot of data, and a lot of technical expertise, to implement humanlike AI?
 
-    No. Draw on the expertise of Microsoft Research. Add capabilities with simple REST API calls. 
+No. Draw on the expertise of Microsoft Research. Add capabilities with simple REST API calls. 
 
-    That's Azure Cognitive Services.
+That's Azure Cognitive Services.
 
 ### SLIDE: Azure Cognitive Services
 

@@ -1,6 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 
 namespace IgniteAimlDataApp.Model
 {
@@ -53,6 +54,8 @@ namespace IgniteAimlDataApp.Model
         public double Lag24 { get; set; }
         public double Lag25 { get; set; }
         public double Lag26 { get; set; }
+      
+        [JsonIgnore]
         public List<DateTime> DatesInWeek { get; set; }
 
         public static ForecastingData FromCsv(string csvLine)
@@ -61,10 +64,24 @@ namespace IgniteAimlDataApp.Model
             ForecastingData forecastingData = new ForecastingData();
             forecastingData.ID1 = Convert.ToInt32(values[0]);
             forecastingData.ID2 = Convert.ToInt32(values[1]);
-            forecastingData.Time = Convert.ToDateTime(values[2]);
+            forecastingData.Time = ParseFileDateTime(values[2]);
             forecastingData.Value = Convert.ToDouble(values[3]);
             forecastingData.RDPI = Convert.ToDecimal(values[4]);
             return forecastingData;
+        }
+
+        private static DateTime ParseFileDateTime(string dateTime)
+        {
+            CultureInfo enUS = new CultureInfo("en-US");
+            CultureInfo enGB = new CultureInfo("en-GB");
+            DateTime dateValue;
+            if (DateTime.TryParseExact(dateTime, "M/d/yyyy H:mm:ss tt", enUS, DateTimeStyles.None, out dateValue))
+                return dateValue;
+
+            if (DateTime.TryParseExact(dateTime, "d/M/yyyy H:mm:ss tt", enGB, DateTimeStyles.None, out dateValue))
+                return dateValue;
+
+            throw new Exception("Unable to parse date...");
         }
 
 

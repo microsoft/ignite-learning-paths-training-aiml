@@ -49,8 +49,9 @@ To navigate through code with `F12` and `CTRL-` shortcuts download the Visual St
     * Click `Create`
     * Optional: Step through the data prep feature in the datasets upload for AML
 
-### 2. Launch Visual Designer and Explain Tool Features
+### 2. Launch Designer and Explain Tool Features
 
+* In the studio select 'Designer' on the left navigation
 * Summarize the different modules in the left nav including the test datasets.
 
 ### 3. Start Building the  Model
@@ -69,7 +70,7 @@ To navigate through code with `F12` and `CTRL-` shortcuts download the Visual St
     * Edit the properties to split the data 70/30. 
     * Discuss that this is not a rule and can change base on different model needs.
 * Drag the `Train Model` onto the workspace
-    * Select the label column name `Values` from the properties on the right
+    * Select the label column name `Value` from the properties on the right
 * Drag the `Boosted Decision Tree Regression` onto the workspace
 * Drag the `Score Model` onto the workspace
 * Drag the `Evaluate` onto the workspace
@@ -81,15 +82,20 @@ To navigate through code with `F12` and `CTRL-` shortcuts download the Visual St
 * These next steps will be part of the completed model but no need to actually create them in the live demo version that will not be trained.
     * Drag the `Execute Python Script` module onto the workspace and connect the `Score Model` module to it. 
     * Copy and paste this code in:
-        * `import pandas as pd` </br>
-           `import numpy as np` </br>
+    
+    
+    ```python 
+    import pandas as pd
+    import numpy as np
 
-            `def azureml_main(dataframe1 = None, dataframe2 = None):` </br>
-                `print(f'Input pandas.DataFrame #1: {dataframe1}')`</br>
-                `df = dataframe1`</br>
-                `df['Value'] = np.exp(df['Value'])`</br>
-                `df['Forecast'] = np.exp(df['Scored Labels'])`</br>
-                `return df`
+    def azureml_main(dataframe1 = None, dataframe2 = None):
+      print(f'Input pandas.DataFrame #1: {dataframe1}')
+      df = dataframe1
+      df['Value'] = np.exp(df['Value'])
+      df['Forecast'] = np.exp(df['Scored Labels'])
+      return df
+    ```
+      
     * Drag the `Select Columns in Dataset`
         * Select columns `ID1`, `ID2`, `Value` and `Forecast`
         * These are the columns the data demo app will be expecting when we post to get a result from the completed and deployed model.
