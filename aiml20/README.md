@@ -5,6 +5,10 @@ the Tour 2019-2020 talk, "Using Pre-Built AI to Solve Business Challenges". Here
 you will find links to the resources mentioned in the talk, and the code and
 scripts you will need to recreate the demos given in the talk.
 
+[Download the slides for the AIML20 presentation here](presentations.md). (Use
+the first link for the latest version.) The slides are in PPT format and include
+detailed speaker notes and embedded demo videos.
+
 [Watch a recording of this
 presentation](https://myignite.techcommunity.microsoft.com/sessions/82987?source=sessions)
 from Microsoft Ignite Orlando, November 7 2019.
@@ -43,7 +47,7 @@ Abstract: As a data-driven company, Tailwind Traders understands the importance 
 
 ### Cognitive Services information
 
-* Cognitve Services pricing: https://aka.ms/cs-pricing 
+* Cognitive Services pricing: https://aka.ms/cs-pricing 
 * Cognitive Services compliance and privacy: https://aka.ms/az-compliance
 * Microsoft's approach to ethical AI: [https://microsoft.com/AI/our-approach-to-ai](https://www.microsoft.com/AI/our-approach-to-ai?rtc=1&WT.mc_id=msignitethetour2019-github-aiml20)
 * Cognitive Services training courses in Microsoft Learn: https://aka.ms/AIML20MSLearnCollection
