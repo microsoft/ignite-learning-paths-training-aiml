@@ -99,22 +99,6 @@ Please download all the code and data files in this repository to get started. T
 * Set Concurrency, Max concurrent iterations to 3
 * Set Exit criterion, Training job time (hours) to 1
 * Select **'Save'**
-* Select **'View featurization settings'**
-* Review the preview of the dataset
-* **Deselect** the columns below:
-    * SupportTicketID
-    * CustomerID
-    * DateCreated
-    * DateCompleted
-    * CustomerID2
-    * CompletedTutorial
-    * Rating
-    * GeographyID2
-    * RoleID2
-    * DateCompletedDay
-    * DateCompletedMonth
-    * DateCompletedYear
-* Click **'Save'** once complete
 * Select **Finish**
 
 > This will take a while to run - ~15 - 20 mins 
@@ -126,9 +110,12 @@ Please download all the code and data files in this repository to get started. T
 ### Video Demo with Voice Over: [AIML21 - Demo 3 - Deploy](https://youtu.be/IgSaMKsyexg)
 
 * From the end of demo 2
-* Select the **'Deploy Best Model'** button in the top right
+* Start on the screen with the run **Automated ML experiment**
+* Select the **'Deploy Best Model'** button
 * Create a deployment name, example/ aiml21-v1
 * Add a deployment description if you wish
+* Compute Type set to ACI (Azure Container Instance)
+* Keep Authentication Enabled
 * Choose **Deploy** button
 
 >This will take a while to run - ~20-30 mins

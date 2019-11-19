@@ -140,22 +140,6 @@ Please download all the code and data files in this repository to get started. T
 * Set Concurrency, Max concurrent iterations to 3
 * Set Exit criterion, Training job time (hours) to 1
 * Select **'Save'**
-* Select **'View featurization settings'**
-* Review the preview of the dataset
-* **Deselect** the columns below:
-    * SupportTicketID
-    * CustomerID
-    * DateCreated
-    * DateCompleted
-    * CustomerID2
-    * CompletedTutorial
-    * Rating
-    * GeographyID2
-    * RoleID2
-    * DateCompletedDay
-    * DateCompletedMonth
-    * DateCompletedYear
-* Click **'Save'** once complete
 * Select **Finish**
 
 > Once it is running, explain it will take some time to run the experiment and you will review a previously run example. 
@@ -173,11 +157,13 @@ Please download all the code and data files in this repository to get started. T
 > You will use the previously run experiment you reviewed above to deploy
 
 * Start on the screen with the run **Automated ML experiment**
-* Select the **'Deploy Best Model'** button in the top right
+* Select the **'Deploy Best Model'** button
 * Create a deployment name, example/ aiml21-v1
 * Add a deployment description if you wish
+* Compute Type set to ACI (Azure Container Instance)
+* Keep Authentication Enabled
 * Choose **Deploy** button
-* Comment on the time of the deployment message in the top right corner
+* Comment on the time the deployment may take and you can review it from the 'Endpoints' tab on the left
 
 >Please make sure you have a fully run Automated ML regression experiment that has already been deployed to an ACI before getting on stage
 
