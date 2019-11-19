@@ -28,6 +28,7 @@ When creating this solution there are a few Azure resources ([free trial here](h
 # Presentation
 
 * [PowerPoint Download](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/aiml10.pptx)
+* [Microsoft Ignite Orlando Session Video](https://myignite.techcommunity.microsoft.com/sessions/82986?source=sessions)
 
 
 # Demonstrations
