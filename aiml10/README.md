@@ -25,6 +25,10 @@ When creating this solution there are a few Azure resources ([free trial here](h
 | **readerskill**          | App Insights                   | Adds insights to Function App |
 | **EastUS2LinuxDynamicPlan** | App Service Plan                   | Consumption based plan for running Function App |
 
+# Presentation
+
+* [PowerPoint Download](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/aiml10.pptx)
+
 
 # Demonstrations
 This talk consisted of the 5 demonstrations listed below. 
