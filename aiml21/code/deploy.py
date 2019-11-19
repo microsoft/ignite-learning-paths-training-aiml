@@ -33,6 +33,9 @@ service = Webservice(workspace=ws, name='<insert web service name here>')
 print("Score URI: " + str(service.scoring_uri))
 print("Swagger URI: " + str(service.swagger_uri))
 
+primary, secondary = service.get_keys()
+print(primary)
+
 
 # ## Data Input to REST API Schema 
 
@@ -44,8 +47,7 @@ print("Swagger URI: " + str(service.swagger_uri))
 
 
 import pandas as pd
-input_sample = pd.DataFrame(data=[{'Escalated': 0, 'GeographyID': 3, 'OriginalScore': 10, 'Tenure': 11.0, 'Theme': 'support', 'RoleID': 3, 'Continent': 'Europe', 'CountryRegion': 'Germany', 'RoleInOrg': 'administrator', 'CompletedTutorialBinary': 0, 'RatingNumeric': 1, 'DateCreatedDay': 9, 'DateCreatedMonth': 7, 'DateCreatedYear': 2018}])
-
+input_sample = pd.DataFrame(data=[{'Escalated': 0, 'GeographyID': 2, 'OriginalScore': 9, 'Tenure': 25.0, 'Theme': 'speed', 'RoleID': 2, 'Continent': 'Europe', 'CountryRegion': 'France', 'RoleInOrg': 'consumer', 'CompletedTutorialBinary': 1, 'RatingNumeric': 1, 'DateCreatedDay': 23, 'DateCreatedMonth': 11, 'DateCreatedYear': 2018}])
 
 # In[ ]:
 
@@ -70,39 +72,38 @@ import json
 # URL for the web service
 scoring_uri = service.scoring_uri
 # If the service is authenticated, set the key or token
-#key = '<your key or token>'
+key = primary
 
 # Two sets of data to score, so we get two results back
 data = {"data":
         [
             [
-                0,
+                1,
                 'Europe',
-                'Germany',
-                9,
-                7,
+                'France',
+                23,
+                11,
                 2018,
                 0,
-                3,
-                10,
+                2,
+                9,
                 1,
-                3,
-                'administrator',
-                11,
-                'support'
+                2,
+                'consumer',
+                25,
+                'speed'
             ]
         ]
         }
 # Convert to JSON string
 input_data = json.dumps(data)
-print("input data: " + str(input_data))
 
 # Set the content type
 headers = {'Content-Type': 'application/json'}
 # If authentication is enabled, set the authorization header
-#headers['Authorization'] = f'Bearer {key}'
+headers['Authorization'] = f'Bearer {key}'
 
 # Make the request and display the response
 resp = requests.post(scoring_uri, input_data, headers=headers)
-print("Predicted Duration: " + str(resp.text))
+print(resp.text)
 
