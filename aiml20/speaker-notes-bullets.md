@@ -9,7 +9,7 @@ Associated demo scripts are found at: https://github.com/microsoft/ignite-learni
 
 Slides are identified by titles only.
 
-### SLIDE: Microsft Ignite the Tour
+### SLIDE: Microsoft Ignite the Tour
 
 Pre-presentation walk-in slide
 
@@ -52,7 +52,7 @@ These are just a few examples.
 
 Doesn't it take a lot of data, and a lot of technical expertise, to implement humanlike AI?
 
-No. Fraw on the expertise of Microsoft Research. Add capabilities with simple REST API calls. 
+No. Draw on the expertise of Microsoft Research. Add capabilities with simple REST API calls. 
 
 That's Azure Cognitive Services.
 
@@ -60,23 +60,17 @@ That's Azure Cognitive Services.
 
 Azure Cognitive Services includes more than two dozen APIs.
 
-Capabilities within these cateegories of human capability:
+Services within these categories of human capability:
 
-* Vision: Understanding the content of photographs, drawings, text and
-  handwriting, and video
+Vision: Understanding the content of photographs, drawings, text and handwriting, and video
 
-* Speech: Tools to understand and recognize speech, and generate natural, humanlike
-  spoken voice.
+Speech: Tools to understand and recognize speech, and generate natural, humanlike spoken voice.
 
-* Language: Understand the content of written documents and text, and translate
-  between human languages.
+Language: Understand the content of written documents and text, and translate between human languages.
 
-* Decision: this is an entirely new category for Azure Cognitive Services, which
-  is all about makinghumanlike choices about data, content, and application user
-  interfaces.
+Decision: entirely new category for Azure Cognitive Services, about making humanlike choices about data, content, and application user interfaces.
 
-* Search: answer natural language questions about the content of large,
-  unstructured repositories. 
+Search: answer natural language questions about the content of large, unstructured repositories. 
 
 ### SLIDE: Azure Cognitive Services (with service names)
 
@@ -103,6 +97,8 @@ This is the website for Tailwind Traders, a hardware retailer (and a fictitious 
 ### SLIDE: Demo: Shop by Photo
 
 DEMO: "Defining the problem: Shop by Photo is broken"
+
+### VIDEO: Shop by Photo
 
 Let's go to the live Tailwind Traders website. [CLICK]
 
@@ -157,7 +153,7 @@ Each node processes and recombines the original images, shrinking them down, unt
 at end is a single value: the classification confidence.
 
 Here the input is a bicycle, and the node at the right with the highest value is
-"bicycle". The image has been correclty identified.
+"bicycle". The image has been correctly identified.
 
 ### SLIDE: Filters (1)
 
@@ -189,7 +185,7 @@ This is where the heavy math comes in.
 
 But unless you're an AI engineer, you don't need to care. You can just use networks with weights optimized by others.
 
-That covers probably 80% of applications. But if you do need to design your own NN and optimize weights, there are tools for that, like Tensorflow and Pytorch. Hear about those in AIML40 and AIML50.
+That covers probably 80% of applications. But if you do need to design your own NN and optimize weights, there are tools for that, like Tensorflow and PyTorch. Hear about those in AIML40 and AIML50.
 
 ### SLIDE: Pre-Trained Convolutional NN
 
@@ -299,7 +295,7 @@ Pass a picture of a hammer, collect features. And a binary indicator for "hammer
 
 ### SLIDE: Transfer Learning Training (2 - with the white hard hat)
 
-Now do that same with pictures of hard hats.
+Now do the same with pictures of hard hats.
 
 In each case, collect 8 data vectors and a binary indicator for each image.
 
@@ -457,7 +453,7 @@ the products on offer.
 
 Time for one more quick example: Personalizer.
 
-Re-order featured products "Recommended" section in real time.
+The "Personalizer" service allows us to customize the interface of apps in real-time by learning from user behavior.
 
 ### SLIDE: Recommended (screenshot)
 
@@ -534,7 +530,7 @@ Wrap up with some considerations for putting AI into production.
 
 First consideration: cost. 
 
-New to Azure? Use this link to sign up and get $200 in free credts.
+New to Azure? Use this link to sign up and get $200 in free credits.
 
 [CLICK] Development-scale workloads generally free 
 
@@ -566,11 +562,11 @@ Understand ethical implications of your AI apps affect people.
 
 Have an ethical framework:
 
-* *enable* people to achieve more in what they already do (don't replace people)
+*enable* people to achieve more in what they already do (don't replace people)
 
-* Be *inclusive* of all types of user: make sure everyone can benefit equally  from your application, and
+Be *inclusive* of all types of user: make sure everyone can benefit equally  from your application, and
 
-* Is fair and transparent,
+Be fair and transparent.
 
 Remember what AI is only as good as the data it was trained on. Be sure that your application works for all of your potential users.
 
@@ -596,9 +592,9 @@ on Microsoft Learn that will take you through using them step-by-step.
 
 ### SLIDE: Resources
 
-All links and code in the github repository.
+All links and code in the Github repository.
 
-And if you'd like to get a Microsoft Certification in AI or Data Science, theres a special offer for a free certificate for attendees today: check out this link for details.
+And if you'd like to get a Microsoft Certification in AI or Data Science, there's a special offer for a free certificate for attendees today: check out this link for details.
 
 I'll be here to answer questions. (And at...)
 
