@@ -4,7 +4,7 @@
 
 Welcome!
 
-The content of this repository is available for you so you can reproduce any demo or learn how to present any session of the Learning Path presented at [Migrosoft Ignite](https://www.microsoft.com/en-us/ignite) and during [Microsoft Ignite The Tour](https://www.microsoft.com/en-ca/ignite-the-tour/).
+The content of this repository is available for you so you can reproduce any demo or learn how to present any session of the Learning Path presented at [Migrosoft Ignite](https://www.microsoft.com/en-us/ignite) and during [Microsoft Ignite The Tour](https://www.microsoft.com/en-ca/ignite-the-tour/), in your local field office, a community user group, or even as a lunch-and-learn event for your company.
 
 ## Do the Demos
 
@@ -68,15 +68,13 @@ To know more about about to contribute to this project please refer to the [Code
 
 ## Become a Trained Presenter
 
-You don't need anything to present this content, it's all there to be used. However, by becoming a *Trained Presenter* the scalable content team will recognize you as tell. *Trained Presenter* see their contact information (name, picture, website) in the bottom of each session.  
+You don't need anything to present this content, it's all there to be used. However, by becoming a *Trained Presenter* the scalable content team will recognize you as well. *Trained Presenter* see their contact information (name, picture, website) in the bottom of each session.  
  
 To become a *Trained Presenter*, contact [scalablecontent@microsoft.com](mailto:scalablecontent@microsoft.com). In your email please include:
 
 - Complete name:
-- The code of this presentation: \<Session Code (ex:apps10)\>
-- Link (ex: unlisted YouTube video) to a video of you presenting (~10 minutes). 
-
-> It doesn't need to be this content, the important is to show your presenter skills
+- The code of this presentation: \<Session Code (ex:APPS10)\>
+- Link to an unlisted YouTube video of you presenting around 10 minutes of the content for this specific session.
 
 
 ## Legal Notices
