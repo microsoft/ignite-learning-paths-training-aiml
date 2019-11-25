@@ -57,6 +57,7 @@ The dataset needed is created weekly with updated dates to allow your demo to be
 The first demo is with VS Code and the C# IgniteAimlDataApp. This is to demonstrate how to do the data processing and highlight that the it can be done in any language.
 
 1. [Download VS Code here](https://code.visualstudio.com/download)
+2. Ensure that you have [.NET Core SDK 2.1.0](https://dotnet.microsoft.com/download/dotnet-core/2.1) installed on your local
 2. Clone the app with the following command
     * `git clone https://github.com/microsoft/ignite-learning-paths-training-aiml.git`
 3. Navigate to project path
