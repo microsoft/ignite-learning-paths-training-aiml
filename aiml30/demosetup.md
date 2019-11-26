@@ -68,6 +68,7 @@ The first demo is with VS Code and the C# IgniteAimlDataApp. This is to demonstr
 6. To run the app
     * Right click on `Program.cs` and select `Open in Terminal`
     * Run the command `dotnet run`
+    Note for Mac users: if you get an error that the program can't find the file you imported, change line 14 in Program.cs     to include forward slashes: `string sourceFile = $"{Environment.CurrentDirectory}//Datasets//{fileName}.csv";`
     * It will prompt with a question `Would you like to run the default params` type `y`
     * This will attempt to hit the API but it will fail since it hasn't been created yet.
 
