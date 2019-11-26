@@ -1,33 +1,33 @@
-# Shared Access Signatures
+# <a name="shared-access-signatures"></a>Shared Access Signature
 
-A couple of demonstrations require the use of [Shared Access Signatures](https://docs.microsoft.com/en-us/azure/storage/common/storage-sas-overview?WT.mc_id=msignitethetour2019-github-aiml10) for accessing blobs in an Azure Storage account. These are used to grant temporary access to the blobs that Azure Search will index. Here we describe tow ways of doing that.
+いくつかのデモでは、Azure ストレージ アカウントの BLOB にアクセスするために [Shared Access Signature](https://docs.microsoft.com/en-us/azure/storage/common/storage-sas-overview?WT.mc_id=msignitethetour2019-github-aiml10) を使用する必要があります。 これらは、Azure Search でインデックス付けされる BLOB への一時的なアクセスを許可するために使用されます。 ここでは、その方法について説明します。
 
-## Using the Portal
+## <a name="using-the-portal"></a>ポータルを使用する
 
-1. Navigate to the storage blob containers and right click on the desired container and select `Get Shared Access Signature`
+1. ストレージ BLOB コンテナーに移動し、目的のコンテナーを右クリックして、[`Get Shared Access Signature`] を選択します
 
-![Get Shared Access Signature](images/sas_portal.png "Get Shared Access Signature")
+![Shared Access Signature の取得](images/sas_portal.png "Shared Access Signature の取得")
 
-2. Select the appropriate Start Time and Expiry time for the signature. For these exercises we need to select `Read` and `List` permissions (scroll down to finf the `List` checkbox)
+2. 署名の適切な開始時刻と有効期限を選択します。 これらの演習では、`Read` と `List` のアクセス許可を選択する必要があります (下にスクロールして [`List`] チェック ボックスをオンにします)
 
-![SAS Settings](images/sas_portal_step1.png "SAS Settings")
+![SAS の設定](images/sas_portal_step1.png "SAS の設定")
 
-3. Copy the Query string as shown below: 
+3. 次のようにクエリ文字列をコピーします。 
 
-![SAS Signature](images/sas_portal_step2.png "SAS Signature")
+![SAS の署名](images/sas_portal_step2.png "SAS の署名")
 
-## Using Microsoft Azure Storage Explorer
+## <a name="using-microsoft-azure-storage-explorer"></a>Microsoft Azure Storage Explorer の使用
 
-1. Download the [Microsft Azure Storage Explorer](https://azure.microsoft.com/en-us/features/storage-explorer/?WT.mc_id=msignitethetour2019-github-aiml10) and install.
+1. [Microsft Azure Storage Explorer](https://azure.microsoft.com/en-us/features/storage-explorer/?WT.mc_id=msignitethetour2019-github-aiml10) をダウンロードしてインストールします。
 
-2. Navigate to the storage blob containers and right click on the desired container and select `Get Shared Access Signature`
+2. ストレージ BLOB コンテナーに移動し、目的のコンテナーを右クリックして、[`Get Shared Access Signature`] を選択します
 
-![Get Shared Access Signature](images/sas_explorer.png "Get Shared Access Signature")
+![Shared Access Signature の取得](images/sas_explorer.png "Shared Access Signature の取得")
 
-3. Select the appropriate Start Time and Expiry time for the signature. For these exercises we need to select `Read` and `List` permissions (scroll down to finf the `List` checkbox)
+3. 署名の適切な開始時刻と有効期限を選択します。 これらの演習では、`Read` と `List` のアクセス許可を選択する必要があります (下にスクロールして [`List`] チェック ボックスをオンにします)
 
-![SAS Settings](images/sas_explorer_step1.png "SAS Settings")
+![SAS の設定](images/sas_explorer_step1.png "SAS の設定")
 
-4. Copy the Query string as shown below: 
+4. 次のようにクエリ文字列をコピーします。 
 
-![SAS Signature](images/sas_explorer_step2.png "SAS Signature")
+![SAS の署名](images/sas_explorer_step2.png "SAS の署名")

@@ -1,22 +1,22 @@
-# Show Faulty Prediction and Make a Change
+# <a name="show-faulty-prediction-and-make-a-change"></a>問題のある予測を表示して変更を加える
 
-## Show the Faulty Prediction
+## <a name="show-the-faulty-prediction"></a>問題のある予測を表示する
 
-* Navigate to the Tailwind Traders website
-    * https://aiml50{eventname}.azurewebsites.net (replace {eventname} with the event name parameter you used to create the demo environment)
+* Tailwind Traders Web サイトに移動します
+    * https://aiml50{eventname}.azurewebsites.net ({eventname} を、デモ環境の作成に使用したイベント名パラメーターに置き換えます)
 
-* Click on `start smart shopping by uploading a photo`
-* Upload an image from the [test images folder](../source/test-images)
-* The model provides an incorrect prediction.
+* [`start smart shopping by uploading a photo`] をクリックします
+* [テスト イメージ フォルダー](../source/test-images)からイメージをアップロードします
+* このモデルでは、正しくない予測が提供されます。
 
-## Start the Change
+## <a name="start-the-change"></a>変更を開始する
 
-* Adjust the model by changing `setup_pipeline.py`
-  * Lines 162 - Change `epochs` to 20
-  * Lines 163 - Change `batch` to 10
-* Commit the change and push to master.  This will trigger a build and deployment of the model.  This process will take about 25 or 30 minutes, which should finish up towards the end of the talk.
-* We'll come back and check the results of this towards the end of talk
+* `setup_pipeline.py` を変更してモデルを調整します
+  * 行 162 - `epochs` を 20 に変更します
+  * 行 163 - `batch` を 10 に変更します
+* 変更をコミットし、マスターにプッシュします。  これにより、モデルのビルドとデプロイがトリガーされます。  このプロセスは、約 25 分から 30 分かかります。これは、トークの終わり近くに終了します。
+* トークの終わり近くに、戻って結果を確認します。
 
-## Example Demo
+## <a name="example-demo"></a>サンプル デモ
 
-* [Dry run starting at 2:36](https://youtu.be/UgM8_4fAni8?t=158)
+* [ドライ ラン (2:36 に開始)](https://youtu.be/UgM8_4fAni8?t=158)

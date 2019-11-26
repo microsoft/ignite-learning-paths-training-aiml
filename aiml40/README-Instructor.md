@@ -1,50 +1,49 @@
-# AIML40 - Taking Models to the Next Level with Azure Machine Learning Best Practices
+# <a name="aiml40---taking-models-to-the-next-level-with-azure-machine-learning-best-practices"></a>AIML40 - Azure Machine Learning のベスト プラクティスでモデルを次のレベルに進める
 
-## Session Abstract
+## <a name="session-abstract"></a>セッションの要約
 
-Artificial Intelligence and Machine Learning can be used in many ways to increase productivity of business processes and gather meaningful insights, by analyzing images, texts and trends within unstructured flows of data. While many tasks can be solved using existing models, in some cases it is also required to train your own model for more specific tasks, or for increased accuracy. 
+人工知能と Machine Learning をさまざまな方法で使用して、データの非構造化フロー内のイメージ、テキスト、および傾向を分析することで、ビジネス プロセスの生産性を向上させ、有意な分析情報を収集することができます。 既存のモデルを使用して多くのタスクを解決できますが、場合によっては、特定のタスクのために、または精度を高めるために、独自のモデルをトレーニングすることも必要になります。 
 
-In this session, we will explore the complete path of integrating text analysis intelligent services into the business processes of [Tailwind Traders](http://tailwindtraders.com), starting from pre-build models available as [cognitive services](https://azure.microsoft.com/services/cognitive-services/?WT.mc_id=msignitethetour2019-github-aiml40), up to training a third-party neural custom model for [Aspect-Based Sentiment Analysis](https://www.intel.ai/introducing-aspect-based-sentiment-analysis-in-nlp-architect/) availabe as part of [Intel NLP Architect](http://nlp_architect.nervanasys.com/) using [Azure Machine Learning Service](https://azure.microsoft.com/services/machine-learning-service/?wt.mc_id=msignitethetour2019-github-aiml40). We will talk about cases when one needs a custom model, and demonstrate quick ways to create such a model from scratch using [AutoML](https://docs.microsoft.com/azure/machine-learning/service/concept-automated-ml/?wt.mc_id=msignitethetour2019-github-aiml40), and show how to fine-tune model hyperparameters using [HyperDrive](https://docs.microsoft.com/en-us/azure/machine-learning/service/how-to-tune-hyperparameters/?wt.mc_id=msignitethetour2019-github-aiml40)
+このセッションでは、テキスト分析インテリジェント サービスを [Tailwind Traders](http://tailwindtraders.com) のビジネス プロセスに統合するための完全なプロセスについて説明します。これには、[コグニティブ サービス](https://azure.microsoft.com/services/cognitive-services/?WT.mc_id=msignitethetour2019-github-aiml40)として使用できるモデルを事前構築するプロセスから、[Azure Machine Learning Service](https://azure.microsoft.com/services/machine-learning-service/?wt.mc_id=msignitethetour2019-github-aiml40) を使用して、[Intel NLP Architect](http://nlp_architect.nervanasys.com/) の一部として使用できる[アスペクトベースの感情分析サービス](https://www.intel.ai/introducing-aspect-based-sentiment-analysis-in-nlp-architect/)のサードパーティ ニューラル カスタム モデルをトレーニングするプロセスまでが含まれます。 ここでは、カスタム モデルが必要なケースについて説明します。また、[AutoML](https://docs.microsoft.com/azure/machine-learning/service/concept-automated-ml/?wt.mc_id=msignitethetour2019-github-aiml40) を使用してこのようなモデルをゼロから簡単に作成する方法と、[HyperDrive](https://docs.microsoft.com/en-us/azure/machine-learning/service/how-to-tune-hyperparameters/?wt.mc_id=msignitethetour2019-github-aiml40) を使用してモデルのハイパーパラメーターを微調整する方法を示します
 
-## How To Use
+## <a name="how-to-use"></a>使用方法
 
-Welcome, Presenter! 
+プレゼンターの皆様、ようこそ。 
 
-We're glad you are here and look forward to your delivery of this amazing content. As an experienced presenter, we know you know *HOW* to present so this guide will focus on *WHAT* you need to present. It will provide you a full run-through of the presentation created by the presentation design team. 
+こちらをご覧いただきありがとうございます。この素晴らしいコンテンツが発表されることを楽しみにしています。 経験豊富な発表者として、プレゼンテーションの "*方法*" はご存知であると考え、このガイドでは、"*何*" についてプレゼンテーションを行う必要があるかということに焦点を絞ります。 プレゼンテーション デザイン チームが作成したプレゼンテーションを、全体にわたってリハーサルします。 
 
-Along with the video of the presentation, this document will link to all the assets you need to successfully present including PowerPoint slides and demo instructions &
-code.
+プレゼンテーションのビデオに加えて、このドキュメントは、PowerPoint のスライドやデモの手順とコードなど、プレゼンテーションを成功させるために必要なすべての資産にリンクしています。
 
-1.  Read document in its entirety.
-2.  Watch the video presentation
-3.  Ask questions of the Lead Presenter
+1.  ドキュメント全体を読む。
+2.  ビデオ プレゼンテーションを見る
+3.  リード プレゼンターに質問する
 
-## Assets in Train-The-Trainer kit
+## <a name="assets-in-train-the-trainer-kit"></a>トレーナー トレーニング キットの資産
 
-- This guide
-- Public materials for AIML40 Session [here](http://github.com/microsoft/ignite-learning-paths/aiml/aiml40/) - this document contains a lot of relevant materials
-- PowerPoint presentation including notes for each slide [here](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml40/AIML40_Taking_Models_to_the_Next_Level_with_Azure_Machine_Learning_Best_Practices.pptx)
-- Full-length recording of presentation [here](https://youtu.be/If9IQm3gWVQ)
-- Individual recordings of stage-ready hands-on demos:
-    * Demo 1 - [Cognitive Services Text Analytics](https://youtu.be/QJxjm5BirOA)
-    * Demo 2 - [Automated Machine Learning](https://youtu.be/qrstXN6TLZk)
-    * Demo 3 - [Azure Machine Learning SDK and Hyperdrive](https://youtu.be/sccNTPO3PwU)
-- Demo Guide [here](Demo.md)
+- 本ガイド
+- AIML40 セッション用の公開資料は[こちら](http://github.com/microsoft/ignite-learning-paths/aiml/aiml40/) - このドキュメントには、関連する資料が多数含まれています
+- 各スライドのノートを含む、PowerPoint プレゼンテーションは[こちら](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml40/AIML40_Taking_Models_to_the_Next_Level_with_Azure_Machine_Learning_Best_Practices.pptx)
+- プレゼンテーションの全記録は[こちら](https://youtu.be/If9IQm3gWVQ)
+- ステージ対応ハンズオン デモの個々の記録:
+    * デモ 1 - [Cognitive Services Text Analytics](https://youtu.be/QJxjm5BirOA)
+    * デモ 2 - [自動機械学習](https://youtu.be/qrstXN6TLZk)
+    * デモ 3 - [Azure Machine Learning SDK と Hyperdrive](https://youtu.be/sccNTPO3PwU)
+- デモ ガイドは[こちら](Demo.md)
 
-## Become a Trained Presenter
+## <a name="become-a-trained-presenter"></a>トレーニングされたプレゼンターになる
 
-To become a *Trained Presenter*, contact [scalablecontent@microsoft.com](mailto:scalablecontent@microsoft.com). In your email please include:
+"*トレーニングされたプレゼンター*" になるには、[scalablecontent@microsoft.com](mailto:scalablecontent@microsoft.com) にお問い合わせください。 メールには、次を含めてください。
 
-- Complete name:
-- The code of this presentation: \<Session Code (ex:aiml40)\>
-- Link (ex: unlisted YouTube video) to a video of you presenting (~10 minutes). 
+- フル ネーム:
+- このプレゼンテーションのコード:\<セッション コード (例: aiml40)\>
+- ご自分のプレゼンテーションのビデオ (最長 10 分間) へのリンク (例: リストにない YouTube ビデオ)。 
 
-> It doesn't need to be this content, the importance is to show your presenter skills
+> プレゼンターとしてのスキルを示すことが重要であり、このコンテンツである必要はありません
 
 
-## Trained Presenters
+## <a name="trained-presenters"></a>トレーニングされたプレゼンター
 
-Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+次の素晴らしい方々に感謝を捧げます ([Emoji キー](https://allcontributors.org/docs/en/emoji-key))。
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore -->
@@ -54,12 +53,12 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/aribornstein">
         <img src="https://avatars3.githubusercontent.com/u/3045407?s=460&v=4" width="100px;" alt="Ari Bornstein"/><br />
         <sub><b>Ari Bornstein</b></sub></a><br />
-            <a href="" title="talk">📢</a>
+            <a href="" title="トーク">📢</a>
     </td>
     <td align="center"><a href="https://github.com/shwars">
         <img src="https://avatars0.githubusercontent.com/u/2892110?s=460&v=4" width="100px;" alt="Dmitri Soshnikov"/><br />
         <sub><b>Dmitri Soshnikov</b></sub></a><br />
-            <a href="https://github.com/microsoft/ignite-learning-paths-training-aiml/pull/4" title="documentation">📖</a> 
+            <a href="https://github.com/microsoft/ignite-learning-paths-training-aiml/pull/4" title="ドキュメント">📖</a> 
     </td>
 </tr></table>
 

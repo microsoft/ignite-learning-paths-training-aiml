@@ -1,47 +1,47 @@
-# Using Postman
-There are three concepts needed to carry out the exercises in all of the demonstrations:
+# <a name="using-postman"></a>Postman の使用
+すべてのデモの演習を実行するには、次の 3 つの概念が必要です。
 
-1. Import a collection
-2. Set collection variables
-3. Use the pre-requests scripts to set variables
+1. コレクションをインポートする
+2. コレクション変数を設定する
+3. 要求前スクリプトを使用して変数を設定する
 
-## What you need
-There are three collections used throughout the demos:
+## <a name="what-you-need"></a>必要なもの
+このデモでは、3 つのコレクションを使用します。
 1. [Form Recognizer API Calls](src/Collections/Form_Recognizer.postman_collection.json)
 2. [Reader Skill API Calls](src/Collections/Reader_Skill.postman_collection.json)
 3. [Invoice Search API Calls](src/Collections/Invoice_Search.postman_collection.json)
 
-## Importing a Collection
+## <a name="importing-a-collection"></a>コレクションのインポート
 
-1. Download the appropriate collection (see above).
-2. Open Postman
-3. Click on Import
+1. 適切なコレクションをダウンロードします (上記を参照)。
+2. Postman を開きます
+3. [インポート] をクリックします
 
-![Import Collection](images/import_collection.png "Import Collection")
+![コレクションをインポートする](images/import_collection.png "コレクションをインポートする")
 
-4. Select the appropriate collection
+4. 適切なコレクションを選択します
 
-![Import Collection](images/import_collection_file.png "Import Collection")
+![コレクションをインポートする](images/import_collection_file.png "コレクションをインポートする")
 
-## Modifying collection variables
+## <a name="modifying-collection-variables"></a>コレクション変数の変更
 
-Collection variables allow Postman to replace tokens such as `{variable}` with values set by the user. This allows requests to be more portable with changes to variables. For example, the `endpoint` variable in some of the exercises represents the endpoint to your particular Form Recognizer service. 
+コレクション変数を使用すると、Postman は、`{variable}` などのトークンをユーザーによって設定された値に置き換えることができます。 これにより、変数への変更により、要求の移植性を高めることができます。 たとえば、一部の演習の `endpoint` 変数は、特定の Form Recognizer サービスのエンドポイントを表します。 
 
-1. After a collection is loaded, click on the ellipsis to edit the collection variables
+1. コレクションが読み込まれたら、省略記号をクリックしてコレクション変数を編集します
 
-![Edit Variables](images/edit_variables.png "Edit Variables")
+![変数を編集する](images/edit_variables.png "変数を編集する")
 
-2. To edit authorization variables use the authorization tab.
+2. 認可変数を編集するには、認可タブを使用します。
 
-![Edit Authorization](images/edit_authorization.png "Edit Authorization")
+![認可を編集する](images/edit_authorization.png "認可を編集する")
 
-3. All other variables used in these exercises are found under the variables tab
+3. これらの演習で使用されるその他すべての変数は、変数タブにあります
 
-![Edit Variables](images/variables_tab.png "Edit Variables")
+![変数を編集する](images/variables_tab.png "変数を編集する")
 
-## Using pre-request scripts
+## <a name="using-pre-request-scripts"></a>要求前スクリプトの使用
 
-Some of the exercises require changes made to the pre-request scripts. These are accessible in the Pre-request Script section of individual Requests as shown below.
+一部の演習では、要求前スクリプトを変更する必要があります。 これらは、次に示すように、個々の要求の要求前スクリプト セクションでアクセスできます。
 
-![Pre-Request Scripts](images/pre_request.png "Pre-Request Scripts")
+![要求前スクリプト](images/pre_request.png "要求前スクリプト")
 

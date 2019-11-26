@@ -1,53 +1,53 @@
-# AIML50 - Demonstration Setup Instructions
+# <a name="aiml50---demonstration-setup-instructions"></a>AIML50 - デモのセットアップ手順
 
-## Create Demonstration Environment
+## <a name="create-demonstration-environment"></a>デモンストレーション環境を作成する
 
-[Video Walkthrough](https://youtu.be/C9WtOZaUoyA)
+[ビデオ チュートリアル](https://youtu.be/C9WtOZaUoyA)
 
-### Prerequisites
+### <a name="prerequisites"></a>前提条件
 
-* An Azure subscription
-* An Azure DevOps organization that you have rights to add extensions to.
-  * A Personal Access Token(PAT) for that organization.
-* A GitHub account (to which you can fork this repository)
+* Azure サブスクリプション。
+* 追加権限のある拡張機能の追加先である Azure DevOps 組織。
+  * その組織の個人用アクセス トークン (PAT)。
+* GitHub アカウント (このリポジトリのフォーク先)。
 
-### Fork the repository
+### <a name="fork-the-repository"></a>リポジトリをフォークする
 
-In GitHub, [create a fork](https://help.github.com/en/github/getting-started-with-github/fork-a-repo) of this repository under a user or organization of which you have control.  You will need permissions to connect the GitHub repo to Azure DevOps.
+GitHub で、ユーザーまたは管理対象の組織の下にある、このリポジトリの[フォークを作成](https://help.github.com/en/github/getting-started-with-github/fork-a-repo)します。  GitHub リポジトリを Azure DevOps に接続するための接続許可が必要です。
 
-### Deploy the Template
+### <a name="deploy-the-template"></a>テンプレートをデプロイする
 
-This environment can be deployed via the "Deploy to Azure" link below (or you can use Azure PowerShell or Azure CLI).  You will need an Azure subscription and the available quotas in a region to deploy:
+この環境は、下の "Azure に配置する" リンクを使用してデプロイできます (または、Azure PowerShell または Azure CLI を使用できます)。  デプロイするリージョンには、Azure サブスクリプションと使用可能なクォータが必要です。
 
-* Azure SQL Databases
-* Cosmos DB Databases
-* Azure App Services
-* Azure Machine Learning Services
+* Azure SQL データベース
+* Cosmos DB データベース
+* Azure App Service
+* Azure Machine Learning サービス
 
-You will be prompted to select an Azure subscription and resource group (you can create a resource group at that time).
+Azure サブスクリプションとリソース グループを選択するよう求められます (リソース グループは、このとき作成することができます)。
 
-You will also be asked for an event identifier (or reason for spinning up the environment) which will be used to help name the resources.  Shorter is better.
+また、リソースの名前を指定するために使用されるイベント識別子 (または、環境を起動する理由) を求められます。  短いものをお勧めします。
 
-You will need to provide a database username and password for the Azure SQL instance.
+Azure SQL インスタンスのデータベース ユーザー名とパスワードを入力する必要があります。
 
 <a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3a%2f%2fraw.githubusercontent.com%2fmicrosoft%2fignite-learning-paths-training-aiml%2fmaster%2faiml50%2ftemplate%2fazuredeploy.json" target="_blank">
     <img src="http://azuredeploy.net/deploybutton.png"/>
 </a>
 
-The deployment takes roughly 30 to 40 minutes.
+デプロイには約 30 分から 40 分かかります。
 
-Once the deployment is underway (at least with the Azure Machine Learning service created and the bootstrap-container Azure Container instance has run to completion), you can finish setting up the Azure DevOps environment.  Most of the environment will be configured, but there are a few manual steps.
+デプロイが進行し始めたら (少なくとも Azure Machine Learning サービスが作成され、ブートストラップコンテナーの Azure コンテナー インスタンスの実行が完了するまで)、Azure DevOps 環境のセットアップを完了できます。  ほとんどの環境が構成されますが、手動の手順がいくつかあります。
 
-### Set up Azure Notebooks
+### <a name="set-up-azure-notebooks"></a>Azure Notebooks を設定する
 
-* Navigate to [Azure Notebooks](https://notebooks.azure.com/) and sign in with the Microsoft account that you are demoing with.
-* Add a new project.  You can either import directly from GitHub (the main repository or your fork) or upload the `aiml50/source` directory directly.
-* In the `aiml50/source` directory in the Azure Notebook, create a json file named `azureml-config` with:
-  * Your subscription ID
-  * The resource group name that contains the ML workspace
-  * The workspace name
+* [Azure Notebooks](https://notebooks.azure.com/) に移動し、デモで使用する Microsoft アカウントでサインインします。
+* 新しいプロジェクトを追加します。  GitHub (メイン リポジトリまたはお使いのフォーク) から直接インポートするか、`aiml50/source` ディレクトリを直接アップロードすることができます。
+* Azure Notebook の `aiml50/source` ディレクトリで、次を使用して `azureml-config` という名前の json ファイルを作成します。
+  * サブスクリプション ID
+  * ML ワークスペースを含むリソース グループの名前
+  * ワークスペース名
 
-Example:
+例:
 
 ```
 {
@@ -57,83 +57,83 @@ Example:
 }
 ```
 
-* Click on (which will open in a new tab)
+* クリックします (新しいタブで開きます)
   * `setup_pipeline.ipynb`
 
-#### seer_pipeline.ipynb
+#### <a name="seer_pipelineipynb"></a>seer_pipeline.ipynb
 
-* Ensure the kernel is set to Python 3.6
-* Set your storage account key
-* edit Step 4 and set your storage account name
-* Start to run the individual steps.  You will need to authenticate to azure (follow the prompts in the notebook). Remember to let individual steps finish before starting the next one.
+* カーネルが Python 3.6 に設定されていることを確認します
+* ストレージ アカウント キーを設定します
+* 手順 4 を編集し、ストレージ アカウント名を設定します
+* 個々の手順の実行を開始します。  Azure に対して認証を行う必要があります (ノートブックの指示に従ってください)。 次の手順を開始する前に、個々の手順を完了させておきます。
 
-### Setup the Azure DevOps Project
+### <a name="setup-the-azure-devops-project"></a>Azure DevOps プロジェクトを設定する
 
-Next, navigate to the AIML50 project that was created in the Azure DevOps Organization you specified to to the deployment template.
+次に、デプロイ テンプレートに対して指定した Azure DevOps 組織で作成された AIML50 プロジェクトに移動します。
 
-#### Create the Service Connections
+#### <a name="create-the-service-connections"></a>サービス接続を作成する
 
-From the project page, navigate to the project settings.
+プロジェクト ページから、[プロジェクトの設定] に移動します。
 
 ![0-azure_devops_org](./images/0-azure_devops_org.png)
 ![1-azure_devops_project](./images/1-azure_devops_project.png)
 
-Select `Service Connections` under `Pipelines`.
+[`Pipelines`] の下の [`Service Connections`] を選択します。
 
 ![2-azure_devops_project_settings](./images/2-azure_devops_project_settings.png)
 
-Add two service connections:
+サービス接続を 2 つ追加します。
 
-* First connection `aiml50`
-  * Type: Azure Resource Manager
-  * Connection name: `aiml50`
-    * Name of the service connection. This needs to match, as it is already set in the build.
-  * Scope level: `Subscription`
-    * Scope of authorization for the service principal. For this one, set it to `subscription`.
-  * Subscription: `Ignite The Tour`
-    * The subscription you deployed the demo environment to. This may be different than the example above. You can pick subscriptions from the dropdown based on the user with which you logged in to Azure DevOps.
-  * Resource Group: `aiml50` or blank
-    * You can constrain the credentials to the resource group that you have deployed into or allow it rights across the subscription.
+* 最初の接続 `aiml50`
+  * 型: Azure Resource Manager
+  * 接続名: `aiml50`
+    * サービス接続の名前。 これは、ビルドで既に設定されているため、一致する必要があります。
+  * スコープ レベル: `Subscription`
+    * サービス プリンシパルの承認のスコープ。 この場合は、`subscription` に設定します。
+  * サブスクリプション: `Ignite The Tour`
+    * デモ環境のデプロイ先のサブスクリプション。 これは、上記の例とは異なる場合があります。 Azure DevOps へのログインに使用したユーザーに基づいて、ドロップダウンからサブスクリプションを選択できます。
+  * リソース グループ: `aiml50` または空白
+    * 資格情報は、デプロイ先のリソース グループに制限することも、サブスクリプション全体にわたって権限を許可することもできます。
 
 ![4-azure_devops_service_connection](./images/4-azure_devops_service_connection.png)
 ![3-azure_devops_service_connection](./images/3-azure_devops_service_connection.png)
 
-* Second connection: `aiml50-workspace`
-  * Type: Azure Resource Manager
-  * Connection name: `aiml50`
-    * Name of the service connection. This needs to match, as it is already set in the build.
-  * Scope level: `AzureMLWorkspace`
-    * Scope of authorization for the service principal. This will be required for the release.
-  * Subscription: `Ignite The Tour`
-    * The subscription you deployed the demo environment to. This may be different than the example above. You can pick subscriptions from the dropdown based on the user with which you logged in to Azure DevOps.
-  * Resource Group: `aiml50`
-    * This should be the resource group with your Azure Machine Learning Workspace.
-  * Machine Learning Workspace: `aiml50demo`
-    * Your name will vary based on which event or qualifier you use to provision the environment.
+* 2 番目の接続: `aiml50-workspace`
+  * 型: Azure Resource Manager
+  * 接続名: `aiml50`
+    * サービス接続の名前。 これは、ビルドで既に設定されているため、一致する必要があります。
+  * スコープ レベル: `AzureMLWorkspace`
+    * サービス プリンシパルの承認のスコープ。 これは、リリースに必要です。
+  * サブスクリプション: `Ignite The Tour`
+    * デモ環境のデプロイ先のサブスクリプション。 これは、上記の例とは異なる場合があります。 Azure DevOps へのログインに使用したユーザーに基づいて、ドロップダウンからサブスクリプションを選択できます。
+  * リソース グループ: `aiml50`
+    * これは、Azure Machine Learning ワークスペースのリソース グループである必要があります。
+  * Machine Learning ワークスペース: `aiml50demo`
+    * 名前は、環境のプロビジョニングに使用するイベントまたは修飾子によって異なります。
 
 ![5-azure_devops_service_connection_add](./images/5-azure_devops_service_connection_add.png)
 ![6-azure_devops_service_connection_detail](./images/6-azure_devops_service_connection_detail.png)
 
-#### Enable the Variable Group
+#### <a name="enable-the-variable-group"></a>変数グループを有効にする
 
-There is a variable group that was provisioned that has some shared values to be used by the build and release.  Pipeline access needs to be granted for the variable group.
+ビルドとリリースで使用される共有値を持つ、プロビジョニングされた変数グループがあります。  変数グループには、パイプライン アクセスが付与されている必要があります。
 
-* Navigate to Library (under Pipelines).
-* Select the `aiml50-demo` variable group.
-* Toggle `Allow access to all pipelines`
-* Save the variable group.
+* [パイプライン] の下にある [ライブラリ] に移動します。
+* `aiml50-demo` 変数グループを選択します。
+* `Allow access to all pipelines` を切り替えます。
+* 変数グループを保存します。
 
 ![7-azure_devops_library](./images/7-azure_devops_library.png)
 ![8-azure_devops_library_detail](./images/8-azure_devops_library_detail.png)
 
-#### Create the Build
+#### <a name="create-the-build"></a>ビルドを作成する
 
-Now, we need to create a build definition by pointing Azure DevOps to our build definition on GitHub.
+ここで、GitHub のビルド定義に Azure DevOps を指定することで、ビルド定義を作成する必要があります。
 
-* Navigate to `Pipelines` (under Pipelines).
-* Select `New Pipeline`
-* Connect to your fork of the GitHub project [Ignite Learning Paths Training AI/ML](https://github.com/microsoft/ignite-learning-paths-training-aiml)
-* Choose to use the build definition from the repository (`aiml50/azure-pipelines.yml`)
+* [パイプライン] の下にある [`Pipelines`] に移動します。
+* [`New Pipeline`] を選択します
+* GitHub プロジェクト [Ignite Learning Paths トレーニング AI/ML](https://github.com/microsoft/ignite-learning-paths-training-aiml) のフォークに接続します
+* リポジトリからビルド定義の使用を選択します (`aiml50/azure-pipelines.yml`)
 
 ![9-azure_devops_pipeline_new](./images/9-azure_devops_pipeline_new.png)
 ![10-azure_devops_pipeline_new_source](./images/10-azure_devops_pipeline_new_source.png)
@@ -141,36 +141,36 @@ Now, we need to create a build definition by pointing Azure DevOps to our build 
 ![12-azure_devops_pipeline_select_build_definition](./images/12-azure_devops_pipeline_select_build_definition.png)
 ![13-azure_devops_pipeline_select_build_definition_location](./images/13-azure_devops_pipeline_select_build_definition_location.png)
 
-#### Run the Build
+#### <a name="run-the-build"></a>ビルドを実行する
 
-After the build is connected to the source repository, we need to run a build to create the Machine Learning pipeline and create a build artifact so we can finish setting up the release pipeline.
+ビルドがソース リポジトリに接続されたら、ビルドを実行して Machine Learning パイプラインを作成し、ビルド成果物を作成して、リリース パイプラインの設定を完了できるようにする必要があります。
 
-* Review the build definition and run the build. The build will complete in a few minutes, but it triggers a Machine Learning pipeline which can take about 20-40 minutes.
+* ビルド定義を確認し、ビルドを実行します。 ビルドは数分で完了しますが、Machine Learning パイプラインがトリガーされます。これには約 20 分から 40 分かかります。
 
 ![14-azure_devops_pipeline_review_build_definition](./images/14-azure_devops_pipeline_review_build_definition.png)
 ![15-azure_devops_pipeline_build_result](./images/15-azure_devops_pipeline_build_result.png)
 
-#### Update the Release
+#### <a name="update-the-release"></a>リリースを更新する
 
-After the Machine Learning pipeline finishes, we can update the release pipeline.
+Machine Learning パイプラインが終了したら、リリース パイプラインを更新できます。
 
-* Navigate to `Releases` (under Pipelines).
-* Select `Release Seer` and choose `Edit`
-  * Select `Add an artifact`
-  * Set a `Source type` of `AzureML`
-  * Set the service endpoint to `aiml50-workspace`
-  * Set the Model Names to `seer`.  You will not be able to do this until the first ML Pipeline finishes.
-  * Click `Add`
-  * Click the lightning icon on the new artifact and enable the `Continuous deployment trigger`
-* Next, open the `Deploy to ACI` environment.
-* Click on `Agent Job`
-  * Set `Agent Pool` to `Azure Pipelines`
-  * Set `Agent Specification` to `ubuntu-18.04`
-* Click on `Download deployment and inferencing code`
-  * Set `Package name` to `seer_deployment`
-* Click on `Azure ML Model Deploy`
-  * Verify that Azure ML Workspace is set to either `$(subscription_workspace)` or `aiml-workspace`.
-* Save the pipeline and create a new release.
+* [パイプライン] の下にある [`Releases`] に移動します。
+* [`Release Seer`] を選択して、[`Edit`] を選択します
+  * [`Add an artifact`] を選択します
+  * `AzureML` の `Source type` を設定します
+  * サービス エンドポイントを `aiml50-workspace` に設定します
+  * モデル名を `seer` に設定します。  最初の ML パイプラインが終了するまで、これを行うことはできません。
+  * [`Add`] をクリックします
+  * 新しい成果物の稲妻アイコンをクリックし、[`Continuous deployment trigger`] を有効にします
+* 次に、`Deploy to ACI` 環境を開きます。
+* [`Agent Job`] をクリックします
+  * `Agent Pool` を `Azure Pipelines` に設定します
+  * `Agent Specification` を `ubuntu-18.04` に設定します
+* [`Download deployment and inferencing code`] をクリックします
+  * `Package name` を `seer_deployment` に設定します
+* [`Azure ML Model Deploy`] をクリックします
+  * Azure ML ワークスペースが `$(subscription_workspace)` または `aiml-workspace` のいずれかに設定されていることを確認します。
+* パイプラインを保存し、新しいリリースを作成します。
 
 ![16-azure_devops_release_new](./images/16-azure_devops_release_new.png)
 ![17-azure_devops_release_edit](./images/17-azure_devops_release_edit.png)
@@ -181,15 +181,15 @@ After the Machine Learning pipeline finishes, we can update the release pipeline
 ![22-azure_devops_release_task_edit](./images/22-azure_devops_release_task_edit.png)
 ![23-azure_devops_release_task_verify](./images/23-azure_devops_release_task_verify.png)
 
-## Troubleshooting and Reference
+## <a name="troubleshooting-and-reference"></a>トラブルシューティングとリファレンス
 
-### Checking the container deployment log
+### <a name="checking-the-container-deployment-log"></a>コンテナーのデプロイ ログを確認する
 
-In the provisioned resource group, navigate to the `bootstrap-container` container instance. From there, you can check the logs for the container, which will show the steps taken and any errors encountered.
+プロビジョニングされたリソース グループで、`bootstrap-container` コンテナー インスタンスに移動します。 そこから、コンテナーのログを確認することができます。これにより、実行済みの手順と発生したエラーが表示されます。
 
-### Provider registration
+### <a name="provider-registration"></a>プロバイダーの登録
 
-The Tailwind Traders application uses many Azure services. In some cases, if a service has not yet been used in your subscription, a provider registration may be needed. The following commands will ensure your subscription is capable of running the Tailwind Traders application.
+Tailwind Traders アプリケーションでは、Azure サービスを数多く使用しています。 場合によっては、サブスクリプションでサービスがまだ使用されていないと、プロバイダーの登録が必要になることがあります。 次のコマンドを実行すると、サブスクリプションで Tailwind Traders アプリケーションを実行できるようになります。
 
 ```
 az provider register --namespace Microsoft.OperationalInsights
@@ -201,7 +201,7 @@ az provider register --namespace Microsoft.Sql
 az provider register --namespace Microsoft.ContainerRegistry
 ```
 
-### Source Repositories
+### <a name="source-repositories"></a>ソース リポジトリ
 
 https://github.com/microsoft/TailwindTraders
 

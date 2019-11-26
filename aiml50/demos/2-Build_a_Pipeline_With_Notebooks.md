@@ -1,22 +1,22 @@
-# Build a Pipeline with Jupyter Notebooks
+# <a name="build-a-pipeline-with-jupyter-notebooks"></a>Jupyter Notebook でパイプラインを作成する
 
-## Talking Points
+## <a name="talking-points"></a>概要
 
-* Show the easy connection to a workspace, data source, and compute
-* Show each of the steps (you can largely ignore the python files)
-* Show the code that does the pipeline registration and submitting the experiment
+* ワークスペース、データ ソース、コンピューティングへの簡単な接続を示します
+* 各ステップを示します (ほとんどの場合、Python ファイルは無視できます)
+* パイプラインの登録と実験の送信を行うコードを示します
 
-## Demo
+## <a name="demo"></a>デモ
 
-* Show the Jupyter Notebook and that we can use this interactively to build these pipelines
-  * Walk through the steps in the already run through `seer_pipeline.ipynb` notebook
-* Show that we’re building a workflow with
-  * data prep,
-  * training,
-  * and registration steps
-* Show that we’re creating and submitting this pipeline in AML services
-  * Follow the link to the Azure Portal and details of the run.
+* Jupyter Notebook と、これを対話的に使用してパイプラインを構築できることを示します
+  * `seer_pipeline.ipynb` ノートブックで既に実行されている手順を説明します
+* 次のものでワークフローを作成していることを示します
+  * データ準備
+  * トレーニング
+  * 登録手順
+* AML サービスでこのパイプラインを作成および送信していることを示します
+  * Azure Portal および実行の詳細へのリンクに従います。
 
-## Example Demo
+## <a name="example-demo"></a>例のデモ
 
-* [Dry run starting at 17:41](https://youtu.be/UgM8_4fAni8?t=1061)
+* [ドライ ラン (17:41 に開始)](https://youtu.be/UgM8_4fAni8?t=1061)

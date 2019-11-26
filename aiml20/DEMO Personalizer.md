@@ -1,24 +1,17 @@
-# Personalizer Demo
+# <a name="personalizer-demo"></a>Personalizer のデモ
 
-In this demo, observe how the layout of a website adapts to visitor actions using reinforcement learning and [Cognitive Services Personalizer](https://docs.microsoft.com/en-us/azure/cognitive-services/personalizer/?WT.mc_id=msignitethetour2019-github-aiml20).
+このデモでは、強化学習と [Cognitive Services Personalizer](https://docs.microsoft.com/en-us/azure/cognitive-services/personalizer/?WT.mc_id=msignitethetour2019-github-aiml20) を使用して、Web サイトのレイアウトをビジターのアクションに適合させる方法を確認します。
 
-Personalizer will dynamically reconfigure the interface to optimize the
-likelihood of an anonymous visitor clicking on the featured category in the
-Recommended section.
+Personalizer を使うと、インターフェイスを動的に再構成し、匿名ビジターがお勧めセクションのおすすめのカテゴリをクリックする可能性を最大にすることができます。
 
-1. Deploy the Tailwind Traders Website app (if you didn't already do so with `DEMO Setup.md`)
+1. Tailwind Traders Web サイト アプリをデプロイします (`DEMO Setup.md` でまだ行っていない場合)
 
-2. Visit the Tailwind Traders homepage
+2. Tailwind Traders のホーム ページにアクセスします
 
-3. Observe the "Recommended" section and the order of the featured categories
+3. "お勧め" セクションとおすすめのカテゴリの順序を確認します。
 
-4. Refresh the page (you may need to do this a couple of times). Observe that
-   the layout changes.
+4. ページを最新の情報に更新します (これは何回か行うことが必要になる場合があります)。 レイアウトが変更されたことを確認します。
 
-The Personalizer service is tracking the anonymous visitors and recording the
-time of day, day of week, and browser OS used when clicking on categories. 
-The "reward" is whether or not the large, featured section was clicked. 
+Personalizer サービスを使うと、匿名ビジターを追跡し、カテゴリをクリックしたときの時刻、曜日、および使われたブラウザー OS を記録できます。 "報酬" は、大きなおすすめのセクションがクリックされたかどうかです。 
 
-Over time, Personalizer will determine the best category to feature based on
-time of day, day of week, and OS. It will also "explore" 20% of the time, to
-surface categories that would otherwise not be presented.
+時間が経過すると、Personalizer により、時刻、曜日、OS に基づいて、おすすめする最適なカテゴリが決定されます。 また、時間の 20% は、埋もれているカテゴリーを発掘するための "探索" に充てられます。

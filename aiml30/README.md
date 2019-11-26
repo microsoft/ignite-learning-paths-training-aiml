@@ -1,13 +1,15 @@
 
-# AIML30 -Start Building Machine Learning Models Faster than You Think -Train the trainer
+# <a name="aiml30--start-building-machine-learning-models-faster-than-you-think--train-the-trainer"></a>AIML30 - 予想よりも速く機械学習モデルの構築を開始する - トレーナー トレーニング
 
 
-## Session Abstract
+## <a name="session-abstract"></a>セッションの要約
 
-Tailwind Traders uses custom machine learning models to fix their inventory issues – without changing their Software Development Life Cycle! How? Azure Machine Learning Visual Interface.
+Tailwind Traders では、カスタムの機械学習モデルを使用することで、ソフトウェア開発のライフ サイクルを変えることなく、在庫問題を解決しています。 方法を知りたいですか。 Azure Machine Learning のビジュアル インターフェイスです。
  
-In this session, you’ll learn the data science process that Tailwind Traders’ uses and get an introduction to Azure Machine Learning Visual Interface. You’ll see how to find, import, and prepare data, select a machine learning algorithm, train and test the model, and deploy a complete model to an API. Get the tips, best practices, and resources you and your development team need to continue your machine learning journey, build your first model, and more.
+このセッションでは、Tailwind Traders 社で使用されているデータ サイエンス プロセスについて学習し、Azure Machine Learning のビジュアル インターフェイスの概要を説明します。 データの検索、インポート、準備、機械学習アルゴリズムの選択、モデルのトレーニングとテスト、API への完全なモデルのデプロイを行う方法について説明します。 あなたやあなたが属する開発チームが機械学習の導入を続け、最初のモデルを構築し、さらに多くを行うために必要なヒント、ベスト プラクティス、リソースを入手してください。
 
-# I want to...
-## [Learn to present this content](README-Presenter.md)
-## [Continue learning after attending this session](README-Attendee.md)
+[オーランド州で行われた Microsoft Ignite の AIML30 のプレゼンテーション ビデオ:2019 年 11 月 7 日](https://myignite.techcommunity.microsoft.com/sessions/82993?source=sessions)
+
+# <a name="i-want-to"></a>ご希望のコースをお選びください。
+## <a name="learn-to-present-this-contentreadme-presentermd"></a>[このコンテンツのプレゼンテーション方法を習う](README-Presenter.md)
+## <a name="continue-learning-after-attending-this-sessionreadme-attendeemd"></a>[このセッションに参加後、学習を続ける](README-Attendee.md)

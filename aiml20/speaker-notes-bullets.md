@@ -1,605 +1,459 @@
-# AIML20: Speaker Notes
+# <a name="aiml20-speaker-notes"></a>AIML20:講演者用メモ
 
-If you prefer to work from bullet points instead of scripted text, here are the main points from each slide of the PPT presentation at:
-https://microsoft.sharepoint.com/:p:/t/CloudDevAdvocacy/EctuTXQCOdpGqc5lhQgUnMgBr-R6hlWR5MuLE3qCIFgoHA?e=r1szwF
+スクリプト化されたテキストではなく箇条書きから作業する場合は、PPT プレゼンテーションの各スライドの主要なポイントを次に示します: https://microsoft.sharepoint.com/:p:/t/CloudDevAdvocacy/EctuTXQCOdpGqc5lhQgUnMgBr-R6hlWR5MuLE3qCIFgoHA?e=r1szwF
 
-Associated demo scripts are found at: https://github.com/microsoft/ignite-learning-paths/tree/master/aiml/aiml20. Start with `DEMO%20Setup.md`.
+関連するデモ スクリプトについては、 https://github.com/microsoft/ignite-learning-paths/tree/master/aiml/aiml20 を参照してください。 `DEMO%20Setup.md`で開始します。
 
-## Slide notes
+## <a name="slide-notes"></a>スライド メモ
 
-Slides are identified by titles only.
+スライドはタイトルでのみ識別されます。
 
-### SLIDE: Microsft Ignite the Tour
+### <a name="slide-microsoft-ignite-the-tour"></a>スライド:Microsoft Ignite the Tour
 
-Pre-presentation walk-in slide
+プレゼンテーション前の導入スライド
 
-### SLIDE: Using pre-built AI to solve business problems
+### <a name="slide-using-pre-built-ai-to-solve-business-problems"></a>スライド:事前構築済み AI を使用してビジネスの課題を解決する
 
-Introduce yourself.
+自己紹介します。
 
-How to add AI capabilities to applications, even if you don't have compute resources or AI expertise.
+コンピューティング リソースや AI の専門知識がない場合でも、AI 機能をアプリケーションに追加する方法。
 
-Using pre-built AI services in the cloud.
+クラウドで事前構築された AI サービスを使用する。
 
-### SLIDE: Resources
+### <a name="slide-resources"></a>スライド:リソース
 
-We will provide lots of links, resources and demos.
+豊富なリンク、リソース、デモを用意しています。
 
-Links to everything, including complete source code and a one-click deployment for the app, at the links here.
+完全なソース コードとアプリのワンクリック デプロイを含むすべてのリンクについては、こちらのリンクを参照してください。
 
-This slide will be shown again at the end.
+このスライドは、最後に再び表示されます。
 
-### SLIDE: Adding humanlike capabilities to apps
+### <a name="slide-adding-humanlike-capabilities-to-apps"></a>スライド:人間的機能をアプリに追加
 
-We'll be using pre-built AI services to add humanlike capabilities to
-applications, but what does that mean? Well, here are some examples.
+事前構築された AI サービスを使用してアプリケーションに人間的機能を追加します。それはどのような意味があるのでしょうか。 次に例をいくつか示します。
 
-### SLIDE: Enhance apps with humanlike capabilities
+### <a name="slide-enhance-apps-with-humanlike-capabilities"></a>スライド:人間的機能を使用してアプリを強化する
 
-[CLICK] Give your app the power of speech (e.g. chat).
+[クリック] アプリに音声の機能 (チャットなど) を追加します。
  
-[CLICK] Give your app the ability to see (understand images).
+[クリック] アプリに表示させる機能を追加します (イメージを理解する)。
 
-[CLICK] Give your app intuition about human behavior (adapt interfaces).
+[クリック] アプリに人間の行動に関する直感を与えます (インターフェイスを適応させる)。
 
-[CLICK] Give your app the power of comprehension (communicate in any language)
+[クリック] アプリに読解力を与えます (あらゆる言語でコミュニケーションする)
 
-[CLICK] Automate the human process of scanning streams of data for anomalies (and scale)
+[クリック] 異常 (およびスケーリング) のデータ ストリームをスキャンする人によるプロセスを自動化する
 
-These are just a few examples.
+いくつかの例を示します。
 
-### SLIDE: Overview of Azure Cognitive Services
+### <a name="slide-overview-of-azure-cognitive-services"></a>スライド:Azure Cognitive Services の概要
 
-Doesn't it take a lot of data, and a lot of technical expertise, to implement humanlike AI?
+人間的 AI を実装するには、大量のデータと技術的な専門知識が必要ではありませんか。
 
-No. Fraw on the expertise of Microsoft Research. Add capabilities with simple REST API calls. 
+答えは、いいえです。 Microsoft Research の専門知識を活用してください。 単純な REST API 呼び出しを使用して機能を追加します。 
 
-That's Azure Cognitive Services.
+これが、Azure Cognitive Services です。
 
-### SLIDE: Azure Cognitive Services
+### <a name="slide-azure-cognitive-services"></a>スライド:Azure Cognitive Services
 
-Azure Cognitive Services includes more than two dozen APIs.
+Azure Cognitive Services には、20 を超える数の API が用意されています。
 
-Capabilities within these cateegories of human capability:
+人間的能力のカテゴリに含まれるサービス:
 
-* Vision: Understanding the content of photographs, drawings, text and
-  handwriting, and video
+視覚:写真、描画、テキストと手書き、ビデオ内容の認識
 
-* Speech: Tools to understand and recognize speech, and generate natural, humanlike
-  spoken voice.
+音声:音声を理解して認識し、自然な人間的な音声を生成するツール。
 
-* Language: Understand the content of written documents and text, and translate
-  between human languages.
+言語:文書やテキストの内容を解釈し、人間の言語間で翻訳します。
 
-* Decision: this is an entirely new category for Azure Cognitive Services, which
-  is all about makinghumanlike choices about data, content, and application user
-  interfaces.
+デシジョン: Azure Cognitive Services の最新のカテゴリで、データ、コンテンツ、アプリケーション ユーザー インターフェイスについて人間のような選択を行うことを目的としています。
 
-* Search: answer natural language questions about the content of large,
-  unstructured repositories. 
+検索: 大規模な非構造化リポジトリのコンテンツに関する自然言語の質問に回答します。 
 
-### SLIDE: Azure Cognitive Services (with service names)
+### <a name="slide-azure-cognitive-services-with-service-names"></a>スライド:Azure Cognitive Services (サービス名を含む)
 
-"Search" already covered. 
+"Search" は既に説明されています。 
 
-We use a few of the other available services to enhance a retail website: [CLICK]
+他の利用可能なサービスを使用して、小売用 Web サイトを強化します。 [クリック]
 
-Computer Vision: which we'll use to analyze the content of product photographs.
+Computer Vision: 製品の写真のコンテンツを分析するために使用します。
 
-Custom Vision: which we'll use to identify the specific products that our retailer sells.
+Custom Vision: 小売業者が販売する製品を特定するために使用します。
 
-Personalizer: which will automatically adapt the layout of our website 
+Personalizer: Web サイトのレイアウトを自動的に適用します。 
 
-But the principles of setting up and using Cognitive Services are the same for all the APIs, so what you learn here today applies to any of the AI services you want to use.
+ただし、Cognitive Services の設定と使用の原則はすべての API で同じであり、ここで学習する内容は、これから使用したい AI サービスにも適用されます。
 
-### SLIDE: Computer Vision
+### <a name="slide-computer-vision"></a>スライド:Computer Vision
 
-First, let's look at pre-built AI for Computer Vision.
+まず、Computer Vision 用に事前構築された AI を見てみましょう。
 
-### SLIDE: Shop By Photo
+### <a name="slide-shop-by-photo"></a>スライド:Shop By Photo
 
-This is the website for Tailwind Traders, a hardware retailer (and a fictitious company). 
+これは、Tailwind Traders、ハードウェアの小売販売業者 (架空の会社) の Web サイトです。 
 
-### SLIDE: Demo: Shop by Photo
+### <a name="slide-demo-shop-by-photo"></a>スライド:デモ:Shop by Photo
 
-DEMO: "Defining the problem: Shop by Photo is broken"
+デモ:"問題の定義:Shop by Photo が壊れています"
 
-Let's go to the live Tailwind Traders website. [CLICK]
+### <a name="video-shop-by-photo"></a>ビデオ:Shop by Photo
 
-One of the AI-enabled features is called "Shop by Photo". This feature that
-allows the customer to upload a photo of a product they might want to purchase,
-and the idea is that the app will tell them if the product is available. Let's
-go ahead and try it now. We'll upload this picture of a drill that we're
-interested in, and the Tailwind Traders app analyzes the picture, recognizes
-that it's a drill, and shows me the drill that Tailwind Traders has for sale,
-and where to find it in the store.
+Tailwind Traders のライブ Web サイトにアクセスしてみましょう。 [クリック]
 
-But let's try that with a different picture. Let me return to the homepage, use
-the "Shop by Photo" feature once again, and this time choose this picture of a
-pair of pliers. Unfortunately, when the app analyzes that picture, it thinks
-it's a hammer. It's obviously not working very well, so now let's see if we can
-figure out what went wrong, find a way to fix it using computer vision. 
+AI 対応の機能の 1 つに、"Shop by Photo" (写真でショッピング) と呼ばれるものがあります。 この機能を使用すると、顧客は購入する可能性のある製品の写真をアップロードできます。また、製品が購入可能かどうかをアプリで通知を受け取ることができます。 さあ、試してみましょう。 まず、興味のあるドリルの写真をアップロードします。Tailwind Traders アプリは画像を分析し、それがドリルであることを認識して、Tailwind Traders が販売しているドリルとサイト内のどこにあるかを示します。
 
-### SLIDE: How Computer Vision Works
+では、別の画像で試してみましょう。 ホームページに戻り、"Shop by Photo" 機能をもう一度使用してみましょう。今回は、一組のプライヤーの画像を選びます。 残念ながら、アプリがその画像を分析すると、ハンマーであると認識します。 これは明らかにうまく機能していないので、今度は何が悪かったのかを見つけ、Computer Vision を使用して、修正する方法を見てみましょう。 
 
-We will go into a bit of theory now. Not much math.
+### <a name="slide-how-computer-vision-works"></a>スライド:Computer Vision のしくみ
 
-Helpful to understand what can go wrong and how to fix it.
+ここでは、少し理論的に説明します。 数学的ではありません。
 
-### SLIDE: Tasks (XKCD comic)
+問題の原因と解決方法を理解するのに役立ちます。
 
-(Pause 10 seconds)
+### <a name="slide-tasks-xkcd-comic"></a>スライド:タスク (XKCD コミック)
 
-A computer understanding a photo used to be literal science fiction.
+(10 秒間一時停止)
 
-Now 5 years later, it's not just possible, it's easy.
+写真を理解するコンピューターというのは、かつては文字通りサイエンス フィクションにすぎませんでした。
 
-### SLIDE: How Neural Networks Work (Brandon Rohrer)
+5 年後、これは不可能なことではなく、簡単にできるでしょう。
 
-Adapted with permission from Brandon Rohrer.
+### <a name="slide-how-neural-networks-work-brandon-rohrer"></a>スライド:ニューラル ネットワークの仕組み (Brandon Rohrer)
 
-Check out his blog for video tutorials series with in-depth explanations of many
-aspects of AI and machine learning. 
+Brandon Rohrer から許可を得て改変しています。
 
-### SLIDE: Computer Vision / Convolutional Neural Network
+ビデオ チュートリアル シリーズのブログをご覧ください。AI と機械学習に関する多くの特徴について詳しく説明しています。 
 
-AI is powered by "Deep Learning", but "Deep" does not mean "profound".
+### <a name="slide-computer-vision--convolutional-neural-network"></a>スライド:Computer Vision / 畳み込みニューラル ネットワーク
 
-This is a simple NN. Real-word ones have many more layers.
+AI は "ディープ ラーニング" によって機能しますが、"ディープ" は " 深い" を意味するものではありません。
 
-It's designed to detect just five objects. It can't recognize anything else.
+これは単純な NN （ニュートラル ネットワーク）です。 実際には多くのレイヤーがあります。
 
-### SLIDE: Trained Convolutional NN
+5 つのオブジェクトだけを検出するように設計されています。 それ以外のものを認識することはできません。
 
-Input image goes in on the left. 
+### <a name="slide-trained-convolutional-nn"></a>スライド:トレーニング済み畳み込み NN
 
-Each node processes and recombines the original images, shrinking them down, until
-at end is a single value: the classification confidence.
+入力画像が左側に移動します。 
 
-Here the input is a bicycle, and the node at the right with the highest value is
-"bicycle". The image has been correclty identified.
+各ノードは、元の画像を処理して再結合し、分類の信頼度が最後に単一の値になるまで圧縮します。
 
-### SLIDE: Filters (1)
+ここでは、入力が自転車で、右側のノードの値が "bicycle" になっています。 画像が正しく識別されました。
 
-Skipped for time.
+### <a name="slide-filters-1"></a>スライド:フィルター (1)
 
-### SLIDE: Filters (2)
+時間をあけます。
 
-Skipped for time.
+### <a name="slide-filters-2"></a>スライド:フィルター (2)
 
-### SLIDE: Filters (3)
+時間をあけます。
 
-Skipped for time.
+### <a name="slide-filters-3"></a>スライド:フィルター (3)
 
-### SLIDE: Training an image classifier
+時間をあけます。
 
-But how do you train a NN to do that?
+### <a name="slide-training-an-image-classifier"></a>スライド:画像分類のトレーニング
 
-[CLICK] By choosing the right filters. Each filter is controlled by a small grid of weights (usually 3x3 or 5x5).
+では、これを行うために NN をどのようにトレーニングすればよいでしょうか。
 
-[CLICK] We choose the weights by using lots of training images where the
-classification is known. Choose the weights so that the correct classification is chosen (or at least most of the time)
+[クリック] 右側のフィルターを選択します。 各フィルターは、重みの小さいグリッド (通常は 3 x 3 または 5 x 5) によって制御されます。
 
-In real vision networks, there may be millions of weights to choose. How will we determine the
-weights?
+[クリック] 分類がわかっている多くのトレーニング イメージを使用して重みを選択します。 正しい分類が選択 (または、少なくとも多くの場合) されるように、重みを選択します。
 
-### SLIDE: Learning: Backpropagation
+実際のビジョン ネットワークでは、数百万の重みを選択できます。 重みはどのように決定されますか。
 
-This is where the heavy math comes in.
+### <a name="slide-learning-backpropagation"></a>スライド:学習:誤差逆伝搬法
 
-But unless you're an AI engineer, you don't need to care. You can just use networks with weights optimized by others.
+ここでは、かなりの数値演算が登場します。
 
-That covers probably 80% of applications. But if you do need to design your own NN and optimize weights, there are tools for that, like Tensorflow and Pytorch. Hear about those in AIML40 and AIML50.
+ですが、AI エンジニアにでもならない限り、気にする必要はありません。 重みが他のユーザーによって最適化されたネットワークのみを使用できます。
 
-### SLIDE: Pre-Trained Convolutional NN
+これは、アプリケーションの約 80% をカバーしています。 ただし、独自の NN を設計して重みを最適化する必要がある場合は、Tensorflow や PyTorch のようなツールがあります。 AIML40 と AIML50 の内容について説明します。
 
-But as long as you have access to an NN that can detect the images you need, you
-can just provide your image, and the network will classify it for you.
+### <a name="slide-pre-trained-convolutional-nn"></a>スライド:事前にトレーニング済みの畳み込み NN
 
-Some models do more than just classify: detect the location
-of objects, or analyze the image in other ways.
+しかし、必要な画像を検出できる NN にアクセスできる限り、画像を提供するだけで十分です。ネットワークがユーザーのために分類します。
 
-### SLIDE: Demo: Cognitive Services Computer Vision
+モデルによっては、単に分類するだけでなく、オブジェクトの場所を検出したり、他の方法で画像を分析したりすることができます。
 
-Cognitive Services Computer Vision provides a powerful NN that can classify many thousands of objects.
+### <a name="slide-demo-cognitive-services-computer-vision"></a>スライド:デモ:Cognitive Services Computer Vision
 
-Simple web-based UI you can use to try it out at aka.ms/try-computervision
+Cognitive Services Computer Vision には、数千ものオブジェクトを分類できる強力な NN が用意されています。
 
-Let's try it now.
+aka.ms/try-computervision にあるシンプルな Web ベースの UI を試用できます
 
-### VIDEO: Computer Vision via web
+今すぐ試してみましょう。
 
-[CLICK] This is the Cognitive Services Computer Vision page. If you scroll down
-a little bit on that page, you’ll find a nice web-based form that allows us to
-upload an image for analysis, either from the web or as a local file. So let’s
-try uploading this picture of a man in a hard hat. In just a few seconds we’ll
-get back the analysis of that picture by the Computer Vision service. On the
-left, it shows us the objects detected in the image, and on the right we have
-the JSON output with the detailed analysis. That includes the names and
-locations of the objects detected in the image, a list of tags or labels
-associated with the image, a plain-language description of the image (in this
-case, “a man wearing a helmet”), and lots of other useful information.
+### <a name="video-computer-vision-via-web"></a>ビデオ:Web を使用した Computer Vision
 
-### SLIDE: Cognitive Services Computer Vision
+[クリック] これは Cognitive Services Computer Vision のページです。 このページで、少し下にスクロールすると、Web ベースのフォームがあります。Ｗeb から、またはローカル ファイルとして、分析用の画像をアップロードできるようになります。 では、ヘルメットを被っている男性の写真をアップロードしてみましょう。 ほんの数秒で、Computer Vision サービスからその画像の分析が返されます。 左側には、画像内の検出されたオブジェクト、右側には、詳細な分析を含む JSON 形式の出力が表示されます。 これには、画像内の検出されたオブジェクトの名前と場所、画像に関連付けられているタグまたはラベルの一覧、画像についての平易な説明 (この場合は "ヘルメットを被っている男性")、およびその他の有用な情報が含まれます。
 
-Look in Objects: two objects detected. Headwear, and Person.
+### <a name="slide-cognitive-services-computer-vision"></a>スライド:Cognitive Services Computer Vision
 
-Look at Tags. Highest confidence: man. Next is Headdress. Helmet is only 6th.
-Model not trained for "hard hat" specifically.
+オブジェクトの検索: 2 つのオブジェクトが検出されました。 頭に装着するもの、人。
 
-We'll learn how to fix that in just a moment.
+タグを確認します。 最高の信頼性: 人。 次は頭に装着する物です。 ヘルメットは 6 番目です。
+"ヘルメット" のモデルは特にトレーニングされていません。
 
-If you want to incorporate vision into an app you can access API programmatically. Let's see how.
+この問題を解決する方法について、すぐに説明します。
 
-### VIDEO: Computer Vision via CLI
+アプリにビジョンを組み込む場合は、プログラムを使用して API にアクセスできます。 その方法を見てみましょう。
 
-You can interface to the Cognitive Service APIs using any language that can
-connect to an HTTP endpoint, but what I have here [CLICK] is a bash script that
-uses the Azure CLI to create resources, and connects to the Computer Vision API
-using "curl". You can install the Azure CLI in your local shell, but here I am
-using the "Azure Account" extension in Visual Studio Code to launch a Cloud
-Shell, which means I don't have to install anything. Once that shell is ready, I
-can execute commands directly from this bash script. 
+### <a name="video-computer-vision-via-cli"></a>ビデオ:CLI を使用した Computer Vision
 
-This first command creates a resource group, which I'll use to hold the keys I
-need to authenticate the API.
+HTTP エンドポイントに接続できる任意の言語を使用して、Cognitive Service API にインターフェイスを設定することができますが、ここでは、[クリック] Azure CLI を使用してリソースを作成し、"curl" を使用して Computer Vision API に接続する bash スクリプトを使用します。 ローカル シェルに Azure CLI をインストールできますが、ここでは Visual Studio Code の "Azure アカウント" 拡張機能を使用して Cloud Shell を起動します。つまり、何もインストールする必要はありません。 シェルの準備ができたら、この bash スクリプトから直接コマンドを実行できます。 
 
-The next step is to create the keys. Here I'm creating an omnibus Cognitive
-Services key which I can use with many services including Computer Vision.
+最初のコマンドで、リソース グループを作成します。これは、API を認証するために必要なキーを保持するために使用します。
 
-Then, we can display the key directly in the terminal. [WAIT] You can use either
-of these keys to interface with the API, so I will save the first one here in an
-environment variable.
+次の手順で、キーを作成します。 ここでは、Computer Vision を含む多くのサービスで使用できるオムニバスの Cognitive Services キーを作成しています。
 
-With that key, we can connect to the endpoint URL provided by the Computer
-Vision service, so let's save that URL in an environment variable as well.
+これで、キーをターミナルに直接表示できます。 [待機] これらのキーのいずれかを使用して API とやり取りすることができるので、最初のキーを環境変数に保存します。
 
-And then you can choose an image to analyze. Here we provide the URL of an
-image, the same image of a man in a hard hat that we looked at a moment ago.
+このキーを使用すると、Computer Vision サービスによって提供されるエンドポイント URL に接続できるため、その URL を環境変数に保存することもできます。
 
-Now we can pass the key and the image URL into the endpoint by passing in a JSON
-input using curl. And in just a few milliseconds we get back the analysis of the
-image as JSON. You can see the same outputs we saw in the web interface a moment
-ago.
+次に、分析する画像を選択できます。 ここでは、イメージの URL を指定します。これは、少し前に見たヘルメットを被る男性と同じイメージです。
 
-We can do that with any image we like, of course. Let's try that again with a
-different image, in this case the picture of a drill. Once again, we can pass
-that to the API using curl. [WAIT] Interestingly the top tag associated with
-this image is "camera", which sadly wouldn't help us search for the actual tool
--- we would want "drill".
+ここで、curl を使用して JSON 入力を渡すことによって、キーとイメージ URL をエンドポイントに渡すことができます。 数ミリ秒で、JSON としてイメージ分析が返されます。 前に Web インターフェイスで見たものと同じ出力が表示されます。
 
-### SLIDE: Adapting Computer Vision models with your own data
+もちろん、好きなイメージを使って行うことができます。 別の画像 (この場合はドリルの画像) でもう一度試してみましょう。 ここでも、curl を使用して API に渡すことができます。 [待機] 興味深いことに、このイメージに関連付けられている最上位のタグは "カメラ" で、残念ながら実際の工具を検索するのには役立ちません。"ドリル" が必要です。
 
-Computer Vision API won't work for Shop by Photo. 
+### <a name="slide-adapting-computer-vision-models-with-your-own-data"></a>スライド:Computer Vision モデルを自身のデータに適合させる
 
-Trained to detect too many kinds of objects.
+Computer Vision API は、Shop by Photo では機能しません。 
 
-Fortunately, we can fix that problem. Let's dive back into the theory for a moment.
+あまりに多くのオブジェクトの種類を検出するようにトレーニングされています。
 
-There's a way to adapt a model for thousands of objects, and adapt it to detect
-only object you want. EVEN if they weren't part of the original model. 
+幸い、この問題を解決することができます。 では、少し理論について説明しましょう。
 
-Let's see how, using an AI technique called Transfer Learning. 
+モデルを何千ものオブジェクトに適合させ、目的のオブジェクトだけを検出するように調整する方法があります。 たとえ元のモデルに含まれていなかった場合でも。 
 
-### SLIDE: Transfer Learning
+Transfer Learning と呼ばれる AI 手法を使用して、その方法を見てみましょう。 
 
-Same CNN as before, with last layer stripped off.
+### <a name="slide-transfer-learning"></a>スライド:Transfer Learning
 
-Second last layer gives "features" - think of as a vector of numbers. Each image generates a different set of features.
+最後のレイヤーがオフになっている場合と同じ CNN。
 
-Don't know what the features represent, but they are useful in general for classifying images.
+2 番目の最後のレイヤーは "特徴" を提供します。これは数値のベクターと考えることができます。 各イメージは、異なる特徴のセットを生成します。
 
-Trick: we can use those features to classify a new set of objects.
+特徴が何を表わすのかわかりませんが、一般的にはイメージを分類するのに役立ちます。
 
-### SLIDE: Transfer Learning Training (1 - with the hammer)
+トリック: これらの特徴を使用して、オブジェクトの新しいセットを分類できます。
 
-Use transfer learning to create a model to identify hammers and hard hats.
+### <a name="slide-transfer-learning-training-1---with-the-hammer"></a>スライド:Transfer Learning のトレーニング (1 - ハンマー)
 
-Pass a picture of a hammer, collect features. And a binary indicator for "hammer". Repeat for lots of hammers.
+Transfer Learning を使用して、ハンマーとヘルメットを識別するモデルを作成します。
 
-### SLIDE: Transfer Learning Training (2 - with the white hard hat)
+ハンマーの写真を渡し、特徴を収集します。 さらに "ハンマー" のバイナリ インジケーターを収集します。 多くのハンマーに対して繰り返します。
 
-Now do that same with pictures of hard hats.
+### <a name="slide-transfer-learning-training-2---with-the-white-hard-hat"></a>スライド:Transfer Learning のトレーニング (2 - 白いヘルメット)
 
-In each case, collect 8 data vectors and a binary indicator for each image.
+ここで、ヘルメットの画像を使用して同じ操作を行います。
 
-Put it all together, you have a collection of data vectors, each
-with an associated a binary outcome. 
+いずれの場合も、8 つのデータ ベクターと各イメージのバイナリ インジケーターを収集します。
 
-With this you can make a simple predictive model.
+すべてをまとめて、それぞれにバイナリの結果が関連付けられたデータ ベクターのコレクションを作成します。 
 
-### SLIDE: Transfer Learning Trained Model
+これにより、簡単な予測モデルを作成できます。
 
-This works surprisingly well.
+### <a name="slide-transfer-learning-trained-model"></a>スライド:Transfer Learning トレーニング済みモデル
 
-You don't need a lot of images or computing power.
+これは驚くほどうまく機能します。
 
-This is a toy example but the principle applies to large models too.
+大量の画像や演算能力は必要ありません。
 
-### SLIDE: Microsoft Cognitive Services Custom Vision
+これはおもちゃの例ですが、この原則は大規模なモデルにも当てはまります。
 
-You don't have to train a transfer learning model yourself.
+### <a name="slide-microsoft-cognitive-services-custom-vision"></a>スライド:Microsoft Cognitive Services Custom Vision
 
-Use one of Microsoft's pre-trained vision models and adapt it with images of your own objects, with Custom Vision.
+Transfer Learning モデルを自分でトレーニングする必要はありません。
 
-Let's try use it now to build a vision model for Shop by Photo.
+Microsoft のトレーニング済みのビジョンモデルの 1 つを使用して、Custom Vision で独自のオブジェクトのイメージを適応させます。
 
-### SLIDE: Demo: Customized object recognition
+Shop by Photo 用のビジョン モデルを作成してみましょう。
 
-Demo instructions: https://github.com/microsoft/ignite-learning-paths/blob/master/aiml/aiml20/DEMO%20Custom%20Vision.md
+### <a name="slide-demo-customized-object-recognition"></a>スライド:デモ:カスタマイズされたオブジェクトの認識
 
-### VIDEO: customvision.ai
+デモの手順: https://github.com/microsoft/ignite-learning-paths/blob/master/aiml/aiml20/DEMO%20Custom%20Vision.md
 
-[CLICK] So here I am in the Custom Vision web-based interface. It provides us with a
-nice UI where we can provide new images for the transfer learning analysis. And
-you can see in this project I've already uploaded a number of pictures. I've
-uploaded pictures of screwdrivers, pliers, drills, and hammers, which I'm going
-to use to train my custom model. We'd also like to detect one other product that
-Tailwind Traders sells: hard hats. So let's click "add images", browse to a
-folder on my hard drive where I've collected a few photos of hard hats, select
-them all, and add them to the service while providing the label "hard hat" to
-use in training.
+### <a name="video-customvisionai"></a>ビデオ: customvision.ai
 
-It will take a few moments to upload those files, but while it's doing that,
-notice that there aren't that many images in this project: about 180, or a few
-dozen for each of the five categories. Sometimes even less. Despite that,
-because my five object types are fairly distinct, the model should work fairly
-well.
+[クリック] ここで、Custom Vision Web ベースのインターフェイスについて説明します。 転移学習分析用に新しい画像を提供するのに優れた UI が提供されています。 このプロジェクトには、既に多数の画像がアップロードされています。 ドライバー、ペンチ、ドリル、ハンマーの写真をアップロードしました。これは、カスタムモデルのトレーニング用に使用します。 また、Tailwind Traders が販売しているもう 1 つの製品 (ヘルメット) を検出することもできます。 ここで、[イメージの追加] をクリックし、ハードドライブ上のフォルダーを参照して、ヘルメットの写真をいくつか収集し、それらをすべて選択してサービスに追加し、トレーニングで使用する "hard hat" というラベルを指定します。
 
-So let's go ahead and click the Train button to start transfer learning. We'll
-choose Quick Training. Now it's running all those images through a complex
-vision model, and using transfer learning to create a predictive model for our
-five categories. It only takes a few seconds, and our model does fairly well!
-The probability threshold sets a limit below which we will predict no
-classification at all. If we only accept classifications with 50% confidence or
-more, 90.9% of those predictions are correct: that's "Precision". And the model
-correctly classifies 88.2% of our images overall: that's "Recall". In your apps,
-you will choose a threshold according to your tolerance for making the wrong
-call, versus making no call at all. For Tailwind Traders we can set the
-threshold on the low side, because it's not so big a deal to suggest the wrong
-product to a customer. If this were a cancer detection app, you'd likely make a
-different call.
+これらのファイルをアップロードするには、しばらく時間がかかります。その間は、このプロジェクトに多くの画像が含まれていないことに注意してください: 約 180 または、5 つの各カテゴリに対して数十程度になります。 場合によっては、それより少なくなります。 それにも関わらず、5 つのオブジェクトの種類がかなり異なるため、このモデルは非常にうまく機能します。
 
-Now let's try out our model on some new images it hasn't seen before. We do that
-by clicking on the “Quick Test” button. We will upload a new file from our "test
-images" folder. Let's try our man in the hard hat. And you can see that our
-prediction is indeed of a "hard hat" with probability 99.9%, so we'd make that
-call with pretty much any threshold we choose.
+では、[トレーニング] ボタンをクリックして、転移学習を開始しましょう。 Quick Training (クイック トレーニング) を選択します。 これで、複雑なビジョンモデルを通じてすべての画像を実行し、転移学習を使用して 5 つのカテゴリの予測モデルを作成しています。 これには数秒しかかかりません。非常に優れたモデルです！
+確率のしきい値には、分類がまったくないことを予測する限界を設定します。 信頼度が 50% 以上の分類のみを受け入れる場合、その予測の 90.9% は正しいものになります。これが、"正確度" です。 このモデルでは、画像全体の 88.2 % が正しく分類されます。これが、"リコール" です。 アプリでは、不適切な呼び出しを行う、または呼び出しをまったく行わない許容範囲に応じてしきい値を選択します。 Tailwind Traders の場合、顧客にとって関係性が低い製品を提案することは大きな問題ではないため、低い側にしきい値を設定します。 もしこれが癌を検出するアプリのような場合は、別の呼び出しを行う可能性があります。
 
-Let's try a different image: the drill. Our model identifies the image as a
-drill with probability 94.5%. And lastly, let's try the picture of the pliers,
-which it identifies with 99.9% confidence.
+次に、まったく見たことのない新しい画像でモデルを試してみましょう。 これを行うには、[クイックテスト] ボタンをクリックします。 "test images" フォルダーから新しいファイルをアップロードします。 "ヘルメットを被っている男性" を試してみましょう。 予測には "ヘルメット" が表示され、確率が 99.9% であることがわかります。そのため、選択したしきい値でその呼び出しを行います。
 
-So our model works well, even though it's been trained on less than 200 images.
-That's because we've constrained the potential labels to only those products we
-sell at Tailwind Traders.
+別の画像、ドリルを試してみましょう。 このモデルでは、画像が 94.5% の確率でドリルとして識別されます。 最後に、ペンチの画像を試してみましょう。これは 99.9% の信頼度で識別されます。
 
-Now that we're happy with our model, we can export it and incorporate it into
-our app. If you click on the Export button, you can export the model for iOS or
-Android, as a container, or in our case in the universal ONNX format. So now we
-have downloaded the model to the hard drive.
+したがって、モデルは 200 枚以下の画像でトレーニングされているにも関わらず、適切に動作します。
+これは、潜在的なラベルを Tailwind Traders で販売されている製品のみに制限しているためです。
 
-### SLIDE: Portable Deep Learning Models
+これで、満足したモデルができましたので、エクスポートしてアプリに組み込むことができます。 [エクスポート] ボタンをクリックすると、iOS または Android のモデルをコンテナーとしてエクスポートしたり、または、この場合はユニバーサルな ONNX 形式でエクスポートしたりできます。 これで、モデルをハード ドライブにダウンロードしました。
 
-We exported our custom model in the ONNX format.
+### <a name="slide-portable-deep-learning-models"></a>スライド:他のシステムで使えるディープ ラーニング モデル
 
-ONNX, or Open Neural Network Exchange, is an open standard launched by Microsoft
-and Facebook to promote the free exchange and deployment of AI models, and
-supported by a wide range of applications and technology vendors.
+カスタム モデルを ONNX 形式でエクスポートします。
 
-We used ONNX Runtime to integrate the exported model into the website.
+ONNX、またはオープン ニューラル ネットワーク エクスチェンジは、Microsoft と Facebook が立ち上げたオープン標準フォーマットであり、AI モデルの無料の交換やデプロイを促進し、幅広いアプリケーションやテクノロジ ベンダーにサポートされています。
 
-### SLIDE: ONNXImageSearchTermPredictor.cs
+ONNX Runtime を使用して、エクスポートされたモデルを Web サイトに統合しています。
 
-InferenceSession refers to the exported .onnx file
+### <a name="slide-onnximagesearchtermpredictorcs"></a>スライド:ONNXImageSearchTermPredictor.cs
 
-Model generates a classification label, which gets passed to search.
+InferenceSession は、エクスポートされた .onnx ファイルを参照します。
 
-### SLIDE: DEMO: ONNX
+モデルは、分類ラベルを生成し、検索に渡されます。
 
-DEMO: ONNX Deployment
+### <a name="slide-demo-onnx"></a>スライド:デモ:ONNX
 
-### VIDEO: Kudu
+デモ:ONNX のデプロイ
 
-[CLICK] The model that we just exported from Custom Vision is actually a ZIP file,
-containing the actual ONNX file, model.onnx, which is the text representation of
-the neural network we just created, and also a manifest file. 
+### <a name="video-kudu"></a>ビデオ:Kudu
 
-The existing Tailwind Traders website already uses a computer vision model
-represented as an ONNX file called products.onnx. The problem is, that model
-doesn't properly recognize many of the products we sell at Tailwind Traders. So
-we'll take the model.onnx file we just exported from Custom Vision, rename it as
-products.onnx, and replace it in our web app, so that Shop by Photo can
-recognize all five products we trained it on.
+[クリック] Custom Vision からエクスポートしたモデルは実際には ZIP ファイルであり、実際の ONNX ファイル、先ほど作成したニューラル ネットワークのテキスト表現である model.onnx、マニフェスト ファイルが含まれています。 
 
-Here in the Azure Portal you can see the App Service resource which runs the
-Tailwind Traders website. What I can do now within this App Service is go to the
-Development Tools section and choose the Advanced Tools feature. This launches
-the Kudu interface. Now that's launched, I can browse through the website
-filesystem using the debug console. Let's browse to site, w-root, Standalone,
-OnnxModels, where the products.onnx file is located. Now we can replace it with
-the new version of the products.onnx file we created with Custom Vision.
+既存の Tailwind Traders Web サイトでは、products.onnx と呼ばれる ONNX ファイルのコンピューター ビジョン モデルが既に使用されています。 問題は、Tailwind Traders で販売されている製品の多くがモデルによって正しく認識されないことです。 したがって、Custom Vision からエクスポートしたばかりの、model.onnx ファイルを products.onnx という名前に変更して、Web アプリ内でそのファイルを置き換えます。これにより、トレーニングした 5 つの製品すべてが Shop by Photo によって認識されるようになります。
 
-Now, returning to the App Service, we can go ahead and restart the web server,
-which will make it use the new ONNX model in the Shop by Photo Feature.
+ここでは、Tailwind Traders Web サイトを実行する App Service リソースを Azure Portal で確認できます。 この App Service でできることは、[開発ツール] セクションにアクセスし、[高度なツール] 機能を選択します。 これにより、Kudu インターフェイスが起動します。 これで、デバッグ コンソールを使用して Web サイトのファイルシステムを参照できます。 products.onnx ファイルが配置されている、OnnxModels、W-ルート、スタンドアロン、サイトを参照してみましょう。 これは、Custom Vision で作成した新しいバージョンの products.onnx ファイルに置き換えることができます。
 
-### VIDEO: Netron
+App Service に戻って、Web サーバーを再起動します。これにより、Shop by Photo 機能で新しい ONNX モデルが使用されるようになります。
 
-[CLICK] While we're waiting for the website to restart, lets take a look inside the ONNX
-model we just installed. There's a nice little web app by Lutz Roeder called
-Netron, which allows us to inspect the neural networks in ONNX files. So let's
-go ahead and open that products.onnx file. Here you can see the actual layers of
-the neural network represented by the model. Let's zoom in a little bit and take
-a look at the input at the top. The input is an image. It's a 3-layer RGB image,
-of size 224x224 pixels. I actually had to crop and scale down the image provided
-by the user before providing it to ONNX runtime. It's a bit of a dirty secret
-that computer vision systems have rather poor vision -- they work with quite low
-image resolutions -- but nonetheless still work quite well.
+### <a name="video-netron"></a>ビデオ:Netron
 
-Now let's zoom out and scroll through the network. You can see all of the layers
-in the neural network created by the custom vision, each layer transforming the
-input image, applying filters and recombining the output images, just as you
-learned earlier in this talk. But when you get down to the output layer at the
-very end, you can see that the output is a list of five values -- the five
-products we trained it on: hammer, hard hat, and so on -- along with this value
-labelled "loss" which is the confidence the model predicts for each category. In
-your app, you'll choose your own threshold for how high the confidence needs to
-be.
+[クリック] Web サイトが再起動されるのを待っている間に、インストールしたばかりの ONNX モデルを見てみましょう。 Lutz Roeder によって開発された Netron と呼ばれる、ONNX ファイル内のニューラル ネットワークを調べることができるすばらしい Web アプリがあります。 では、products.onnx ファイルを開いてみましょう。 ここでは、モデルによって表されるニューラル ネットワークの実際のレイヤーを確認できます。 少し拡大して、上部にある入力を見てみましょう。 入力は画像です。 これは、サイズが 224x224 ピクセルの 3 枚のレイヤーからなる RGB 画像です。 実際には、ONNX ランタイムに提供する前に、ユーザーから提供された画像をトリミングしてスケールダウンする必要がありました。 これは、コンピューター ビジョン システムの視力はあまりよくなく、つまり非常に低い解像度の画像で動作しているということなのですが、非常にうまく機能しています。
 
-Anyway, now that the Tailwind Traders website has restarted, let's go back to
-the homepage and see how our new vision model works. Let's go ahead and upload a
-photo, and try once again one of our test images, specifically our image of
-pliers that didn't work well before. We can see that indeed, rather than
-thinking it was a hammer, the website has searched for "pliers" and shown me all
-the products on offer.
+次に、ネットワークで縮小してスクロールします。 Custom Vision で作成されたニューラル ネットワーク内のすべてのレイヤーを見ることができます。このコースの前半で説明したように、各レイヤーは入力画像を変換し、フィルターを適用し、出力画像を再結合します。 しかし、最終的に出力レイヤーに到達すると、出力が 5 つの値のリストであることがわかります -- これは、トレーニングした 5 つの製品 (ハンマー、ヘルメットなど) -- "loss" というラベルの付いたこの値は、モデルが各カテゴリに対して予測する信頼度です。 アプリでは、信頼度の高い要件に合わせて独自のしきい値を選択します。
 
-### SLIDE: Optimizing App UI with Cognitive Services Personalizer
+Tailwind Traders の Web サイトが再起動されたので、ホームページに戻り、新しいビジョン モデルがどのように機能するかを確認しましょう。 それでは、写真をアップロードしてテスト画像の 1 つをもう一度試してみましょう。具体的には、ここまでうまく機能しなかったペンチの画像です。 確かに、これはハンマーであると考えるのではなく、Web サイトは "ペンチ" を検索し、売り出されているすべての製品を表示しています。
 
-Time for one more quick example: Personalizer.
+### <a name="slide-optimizing-app-ui-with-cognitive-services-personalizer"></a>スライド:Cognitive Services Personalizer によるアプリ UI の最適化
 
-Re-order featured products "Recommended" section in real time.
+もう 1 つの簡単な例を次に示します。Personalizer。
 
-### SLIDE: Recommended (screenshot)
+"Personalizer" サービスを使用すると、ユーザーの動作から学習して、リアルタイムでアプリのインターフェイスをカスタマイズできるようになります。
 
-Recommended section shows one large "hero" image, coupled with a few smaller images.
+### <a name="slide-recommended-screenshot"></a>スライド:候補 (スクリーンショット)
 
-Personalizer will select the order sections appear
+[候補] セクションでは、1 つの大きな "ヒーロー" 画像をいくつかの小さな画像と組み合わせて示します。
 
-Uses an AI technique called "reinforcement learning".
+Personalizer は表示された [順序] セクションを選択します。
 
-### SLIDE: Personalizer in Action
+"強化学習" と呼ばれる AI 手法を使用します。
 
-Personalizer has been in development at Microsoft for many years. 
+### <a name="slide-personalizer-in-action"></a>スライド:Personalizer が作動中
 
-Used on XBox and in Bing and MSN News.
+Personalizer は、Microsoft で長年にわたって開発されてきました。 
 
-Now you can use Personalizer in your own apps, as well.
+XBox、Bing および MSN ニュースで使用されています。
 
-### SLIDE: Reinforcement Learning
+これで、独自のアプリでも Personalizer を使用できるようになりました。
 
-Personalizer implements an AI technique called Reinforcement Learning. Here's
-how it works.
+### <a name="slide-reinforcement-learning"></a>スライド:強化学習
 
-[CLICK] Suppose we want to display a "hero" action to the user. [CLICK] The user
-might not be sure what to do next, [CLICK] but we could display one of several
-suggestions. For a gaming app, [CLICK] that might be: "play a game", "watch a
-movie", or "join a clan". [CLICK] Based on that user's history and other
-contextual information -- say, their location, the time of day, and the day of
-the week -- the Personalizer service will [CLICK] rank the possible actions and
-[CLICK] suggest the best one to promote [CLICK]. 
+Personalizer は強化学習と呼ばれる AI 手法を実装しています。 しくみは次のとおりです。
 
-Hopefully, the user will be happy [CLICK], but how can we be sure? That depends
-on what the user does next, and whether that was something we wanted them to do.
-According to our business logic [CLICK], we'll assign a "reward score" between 0
-and 1 to what happens next. For example, spending more time playing a game or
-reading an article, or spending more money in the store, might lead to higher
-reward scores. [CLICK] Personalizer feeds that info back into the ranking system
-for the next time we need to feature an activity.
+[クリック] ユーザーに "ヒーロー" アクションを表示するとします。 [クリック] ユーザーは次の操作を行うことができない場合がありますが、[クリック] いくつかの提案を表示できます。 ゲームアプリの場合は、[クリック] "ゲームの再生"、"映画を見る"、または "クランに参加" などでしょう。 [クリック] そのユーザーの履歴やその他のコンテキスト情報 (たとえば、場所、時刻、曜日など) に基づいて、Personalizer サービスは、[クリック] 考えられるアクションをランク付けし、[クリック] 促進すべきものを提案します[クリック]。 
 
-### SLIDE: Discovering Patterns and Causality
+恐らく、ユーザーは満足するでしょう。[クリック] しかし、どうすればよいでしょうか。 これは、ユーザーが次に行うこと、および、それがやりたかったことなのかどうかによって異なります。
+ビジネス ロジックに従って、[クリック] 次のように、0 ～ 1 の "報酬スコア" を割り当てます。 たとえば、ゲームをもっとプレイしたり、記事を読んだり、ストアでより多くの金額を課金したりすると、より高い報酬スコアにつながる可能性があります。 [クリック] Personalizer は、次にアクティビティを特徴付ける必要がある時のために、このような情報をランク付けシステムに提供します。
 
-Not just a recommender system.
+### <a name="slide-discovering-patterns-and-causality"></a>スライド:パターンと因果関係の探索
 
-Explore mode surfaces other options at a rate you specify.
+単なるレコメンダー システムではありません。
 
-Like real-time A/B testing.
+探索モードは、指定したレートで他のオプションを表示します。
 
-### SLIDE: Personalizer for Tailwind Traders
+リアルタイムの A/B テストと同様です。
 
-Context: time of day, day of week, and browser OS  
+### <a name="slide-personalizer-for-tailwind-traders"></a>スライド:Tailwind Traders 用の Personalizer
 
-Reward score: 1 if the featured category was clicked, and zero
-otherwise.
+コンテキスト: 時刻、曜日、ブラウザー OS  
 
-Explore rate: 20%
+報酬スコア:おすすめカテゴリがクリックされた場合は 1。それ以外の場合は 0。
 
-### SLIDE: DEMO: Personalizer
+探索率:20%
 
-[ClICK] Now, let's see Personalizer in action. Let's go back to the Tailwind
-Traders homepage. What I didn't mention before is that in this Recommended
-section, the ordering of the product departments is determined by Personalizer.
-In this case, it's presenting the Electrical department as the hero image. We
-can also see the "Explore" behavior if we refresh the website a few times.
-Apparently Personalizer currently thinks that the Garden Center gets the best
-engagement from anonymous users at this time of day using the browser and
-operating system that I am using here, but eventually it will try out different
-categories -- here, plumbing has popped up, and Personalizer will use that to
-measure engagement as well.
+### <a name="slide-demo-personalizer"></a>スライド:デモ:Personalizer
 
-### SLIDE: Pre-built AI in Production
+[クリック] 次に、動作中の Personalizer を見てみましょう。 Tailwind Traders ホーム ページに戻ってみましょう。 これまで説明していなかったことは、この候補セクションでは、製品部門の順序が Personalizer により決まるということです。
+この例では、電気部門がヒーローの画像として表示されています。 Web サイトを何度も更新すると、この "探索" 動作を確認することができます。
+明らかに、Personalizer は使用しているブラウザーとオペレーティング システムを使用して、この時点では、Garden Center は匿名のユーザーから最適なエンゲージメントを得ていると考えていますが、最終的にはさまざまなカテゴリを試しています。ポップアップが表示され、それを使用してエンゲージメントも測定します。
 
-Wrap up with some considerations for putting AI into production.
+### <a name="slide-pre-built-ai-in-production"></a>スライド:運用環境で事前構築された AI
 
-### SLIDE: Cost Considerations
+AI を運用環境に配置するための考慮事項をいくつか紹介します。
 
-First consideration: cost. 
+### <a name="slide-cost-considerations"></a>スライド:コストに関する考慮事項
 
-New to Azure? Use this link to sign up and get $200 in free credts.
+最初の考慮事項: コスト。 
 
-[CLICK] Development-scale workloads generally free 
+まだ Azure を使ったことがない場合は、 このリンクを使用してサインアップし、無料で $200 クレジットを取得してください。
 
-[CLICK] Production volumes is where charges will kick in
+[クリック] 開発規模のワークロードは通常無料 
 
-[CLICK] Specific details by service and region at this link
+[クリック] 運用量は課金
 
-### SLIDE: Data Considerations
+[クリック] サービスと地域別の詳細はこのリンクを参照
 
-Think about where your data is going and how it will be used.
+### <a name="slide-data-considerations"></a>スライド:データに関する考慮事項
 
-Data is uploaded for inference, but deleted immediately after use. Details at this link.
+データの送信先と使用方法について考えてみましょう。
 
-If bandwidth is an issue, or data is regulated, consider containers.
+データは推論用にアップロードされますが、使用後すぐに削除されます。 詳細については、こちらのリンクをご覧ください。
 
-### SLIDE: Deployment with containers
+帯域幅が問題になっている場合、またはデータが規制されている場合は、コンテナーを検討してください。
 
-Some services available in downloadable containers.
+### <a name="slide-deployment-with-containers"></a>スライド:コンテナーを使用したデプロイ
 
-Install container behind your firewall, and none of your data goes to Microsoft.
+ダウンロード可能なコンテナーで利用できるサービスがあります。
 
-Internet connection only used for billing. Charged at usual rate.
+ファイアウォールの内側にコンテナーをインストールします。データが Microsoft に送信されることはありません。
 
-### SLIDE: Ethical Considerations
+インターネット接続は請求に使用されます。 通常料金で課金されます。
 
-Most important slide.
+### <a name="slide-ethical-considerations"></a>スライド:倫理的な考慮事項
 
-Understand ethical implications of your AI apps affect people.
+最も重要なスライドです。
 
-Have an ethical framework:
+AI アプリの倫理が人々に影響を与えることを理解します。
 
-* *enable* people to achieve more in what they already do (don't replace people)
+倫理的なフレームワークがある:
 
-* Be *inclusive* of all types of user: make sure everyone can benefit equally  from your application, and
+ユーザーが既に行っているものをより多く達成*できる*ようにする (ユーザーを置き換えない)
 
-* Is fair and transparent,
+あらゆるタイプのユーザーを*含める*: すべてのユーザーがアプリケーションから等しくベネフィットを得られること、および
 
-Remember what AI is only as good as the data it was trained on. Be sure that your application works for all of your potential users.
+公平さと透明性があること。
 
-If you don't have an ethical framework set up, a great place to start is Microsoft's own principles for artificial intelligence, and you can read more at this link.
+AI は、トレーニングされたデータと同じように機能することを忘れないでください。 アプリケーションがすべての潜在的なユーザーに対して動作することを確認してください。
 
-### SLIDE: Wrapping up
+倫理的なフレームワークが設定されていない場合は、始めるのに最適な場所は、人工知能に関する Microsoft の独自のプリンシパルであり、こちらのリンクを参照してください。
 
-Pre-built models can't do everything, but they can get you a long way, quickly. 
+### <a name="slide-wrapping-up"></a>スライド:まとめ
 
-AI is driven by data. Always keep the data in mind and what can go wrong.
+事前構築されたモデルでは、すべてを行うことはできませんが、すぐに使用できるようになります。 
 
-Try it out! You don't need a lot of expertise, but think about ethical implications.
+AI はデータで駆動されます。 常にデータを念頭に置き、うまくいかないことは何かを考えます。
 
-### SLIDE: Docs Alert
+実際に使ってみてください。 専門知識は必要ありませんが、倫理的影響について考えてください。
 
-For all the details on Azure Cognitive Services, including getting started
-guides and references, check out Microsoft Docs.
+### <a name="slide-docs-alert"></a>スライド:Docs のお知らせ
 
-### SLIDE: MS Learn Alert
+ファースト ステップ ガイドとリファレンスなど、Azure Cognitive Services の詳細については、Microsoft Docs を参照してください。
 
-And if you'd like to learn how to use Cognitive Services, there are free courses
-on Microsoft Learn that will take you through using them step-by-step.
+### <a name="slide-ms-learn-alert"></a>スライド:MS Learn のお知らせ
 
-### SLIDE: Resources
+Cognitive Services の使用方法について学習したい場合は、無料のコースが Microsoft Learn にあり、ステップバイステップで学ぶことができます。
 
-All links and code in the github repository.
+### <a name="slide-resources"></a>スライド:リソース
 
-And if you'd like to get a Microsoft Certification in AI or Data Science, theres a special offer for a free certificate for attendees today: check out this link for details.
+Github リポジトリ内のすべてのリンクとコード。
 
-I'll be here to answer questions. (And at...)
+AI またはデータ サイエンスにおける Microsoft 認定資格を取得したい場合は、今日の参加者のための無料の証明書を提供する特別プランをご利用ください。詳細については、こちらのリンクをご覧ください。
 
-Thank you.
+ご質問があれば回答させていただきます。 (そして...)
+
+ありがとうございました。

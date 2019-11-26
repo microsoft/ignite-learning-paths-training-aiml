@@ -1,69 +1,74 @@
-# Demo Setup
-Follow the below steps to get your environment ready for the live demo. Once you complete this setup then follow the [demo guide](demoguide.md).
+# <a name="demo-setup"></a>デモ セットアップ
+以下の手順でライブ デモのために環境を準備します。 このセットアップが完了したら、[デモ ガイド](demoguide.md)に従ってください。
 
-## Create Azure Machine Learninge Resources with the Deploy to Azure Button below
-<a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fcassieview%2Fignite-learning-paths-training-aiml%2Fmaster%2Faiml30%2Fdeploy.json" rel="nofollow">
- <img src="https://camo.githubusercontent.com/9285dd3998997a0835869065bb15e5d500475034/687474703a2f2f617a7572656465706c6f792e6e65742f6465706c6f79627574746f6e2e706e67" data-canonical-src="http://azuredeploy.net/deploybutton.png" style="max-width:100%;">
+## <a name="create-azure-machine-learninge-resources-with-the-deploy-to-azure-button-below"></a>下の [Azure にデプロイ] ボタンで Azure Machine Learninge リソースを作成する
+<a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fcassieview%2Fignite-learning-paths-training-aiml%2Fmaster%2Faiml30%2Fdeploy.json" rel="nofollow"> <img src="https://camo.githubusercontent.com/9285dd3998997a0835869065bb15e5d500475034/687474703a2f2f617a7572656465706c6f792e6e65742f6465706c6f79627574746f6e2e706e67" data-canonical-src="http://azuredeploy.net/deploybutton.png" style="max-width:100%;">
 </a>
 
-## Create Additional Resources Needed
-Once you have created the base Azure Machine Learning Service Workspace we need to add additional compute resources.
-### Create Compute Targets
-1. Create Machine Learning Compute
-    * Click on the nav "Compute"
-    * Click "New"
-    * Enter a name for the resource
-    * Select "Machine Learning Compute" from the dropdown
-    * Select the machine size
-    * Enter the min and max nodes (recommend min of 0 and max of 5)
-    * Click "Create"
-    ![Create Compute](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml30/CreateMlCompute.gif)
-2. Create Kubernetes Compute
-    * Click on the nav "Compute"
-    * Click "New"
-    * Enter a name for the resource
-    * Select "Kubernetes Service" from the dropdown
-    * Click "Create"
-    ![Create Kubernetes](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml30/CreateKubService.gif)
-3. Create Notebook Virtual Machine
-    * Click on the "Notebook VM" nav
-    * Click "New"
-    * Give the notebook a unique name
-    * Select the VM size
-    * Click "Create"
-    ![Create VM](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml30/CreateNotebookVM.gif)
+> 作成したら、Azure Machine Learning リソースをこのセッション用に Enterprise Edition にアップグレードしてください。 この操作を完了するための [アップグレード] ボタンが表示されます。 これは現在プレビューの段階ですが、価格体系については[こちら](https://azure.microsoft.com/en-us/pricing/details/machine-learning/)を参照してください
+
+## <a name="create-additional-resources-needed"></a>必要な追加リソースを作成する
+
+* **[新しい Azure Machine Learning studio を起動する]** を選択します
+
+基本の Azure Machine Learning サービスを作成したら、追加のコンピューティング リソースを追加する必要があります。
+### <a name="create-compute-targets"></a>コンピューティング ターゲットを作成します
+1. Machine Learning コンピューティングを作成します。
+    * [コンピューティング] をクリックします
+    * [クラスターのトレーニング] を選択します
+    * [新規] をクリックします
+    * リソースの名前を入力します
+    * マシンのサイズを選択します (例:Standard_DS2_v2)
+    * 最小ノードと最大ノードを選択します (推奨最小値は 0、推奨最大値は 5)
+    * [作成] をクリックします。 ![コンピューティングの作成](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml30/CreateMlCompute.gif)
+2. Kubernetes コンピューティングを作成します。
+    * [コンピューティング] をクリックします
+    * [推論クラスター] を選択します
+    * [新規] をクリックします
+    * リソースの名前を入力します
+    * リージョンを選択します
+    * [仮想マシンのサイズ] を既定値のままにします
+    * クラスターの目的を "Dev-test" に設定します
+    * [作成] をクリックします。![Kubernetes の作成](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml30/CreateKubService.gif)
+3. ノートブック仮想マシンを作成します
+    * NAV の [コンピューティング] をクリックします
+    * [ノートブック VM] を選択します
+    * [新規] をクリックします
+    * ノートブックに一意の名前を付けます。
+    * VM のサイズを選択します。
+    * [作成] をクリックします。 ![VM の作成](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml30/CreateNotebookVM.gif)
 
 
-## Upload Dataset to Workspace Blob Storage and Save to Local
-The dataset needed is created weekly with updated dates to allow your demo to be predicting future weeks. Below are the steps to get the new dataset and add it to the Azure Machine Learning Storage account and the demo data app.
+## <a name="upload-dataset-to-workspace-blob-storage-and-save-to-local"></a>データセットをワークスペース Blob Storage にアップロードし、ローカルに保存します。
+更新後の日付で必要なデータセットが毎週作成され、デモで将来の週を予測できるようになります。 新しいデータセットを取得し、それを Azure Machine Learning ストレージ アカウントとデモ データ アプリに追加する手順を次に示します。
 
-1. Download dataset to local from [here](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml30/datasets/ForecastingData.csv)
-2. Open Azure Storage Explorer - [Download Here](https://azure.microsoft.com/en-us/features/storage-explorer/).
-3. Navigate to `azureml-blobstore-<guid>`
-4. Create a new folder called `datasets`
-5. Upload the dataset
-6. Replace local ForecastingData.csv file in the C# Demo app in order to be predicting for future dates. There is a default csv however it will not be the updated data.
+1. [こちら](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml30/datasets/ForecastingData.csv)からデータセットをローカルにダウンロードします
+2. Azure Storage Explorer を開きます - [こちらからダウンロードしてください](https://azure.microsoft.com/en-us/features/storage-explorer/)。
+3. `azureml-blobstore-<guid>` に移動します。
+4. `datasets` という名前で新しいフォルダーを作成します。
+5. データセットをアップロードします。
+6. 将来の日付を予測する目的で、C# デモ アプリのローカル ForecastingData.csv ファイルを置換します。 既定の csv がありますが、更新後のデータにはなりません。
 
-## Get the C# Demo App
-The first demo is with VS Code and the C# IgniteAimlDataApp. This is to demonstrate how to do the data processing and highlight that the it can be done in any language.
+## <a name="get-the-c-demo-app"></a>C# デモ アプリを入手する
+最初のデモには VS Code と C# IgniteAimlDataApp が使用されます。 これは、データの処理方法を実演し、それがあらゆる言語でできることを強調することを目的としています。
 
-1. [Download VS Code here](https://code.visualstudio.com/download)
-2. Clone the app with the following command
+1. [こちらから VS Code をダウンロードしてください](https://code.visualstudio.com/download)
+2. 次のコマンドでアプリを複製します。
     * `git clone https://github.com/microsoft/ignite-learning-paths-training-aiml.git`
-3. Navigate to project path
+3. プロジェクト パスに移動します。
     * `cd ignite-learning-paths-training-aiml/aiml30/C#/IgniteAimlDataApp/IgniteAimlDataApp`
-4. Open the project in VS Code
+4. VS Code でプロジェクトを開く
     * `code .`
-5. Replace the local dataset with the downloaded dataset from the step above in the `IgniteAimlDataApp/Datasets` Folder.
-6. To run the app
-    * Right click on `Program.cs` and select `Open in Terminal`
-    * Run the command `dotnet run`
-    * It will prompt with a question `Would you like to run the default params` type `y`
-    * This will attempt to hit the API but it will fail since it hasn't been created yet.
+5. `IgniteAimlDataApp/Datasets` フォルダーで、上の手順でダウンロードしたデータセットでローカル データセットを置換します。
+6. アプリを実行するには
+    * `Program.cs` を右クリックして [`Open in Terminal`] を選択します。
+    * `dotnet run` コマンドを実行します。
+    * 質問 `Would you like to run the default params` が表示されるので「`y`」と入力します。
+    * これで API が呼び出されますが、まだ作成されていないため、失敗します。
 
-## Run through the Live Demo
-Do a complete run through of the live demo to have a completed backup model to open and show the end result.
+## <a name="run-through-the-live-demo"></a>ライブ デモをとおして実行する
+最終的な結果を提示する目的で、ライブ デモを最後までとおして実行し、完全なバックアップ モデルを生成しておきます。
 
-#### There will not be enough time to run the model during the live demo. Make sure to build the model _without_ running it in the live session. Once you have added all the modules to the experiment workspace then navigate to the model you created and trained prior to the session.
+#### <a name="there-will-not-be-enough-time-to-run-the-model-during-the-live-demo-make-sure-to-build-the-model-_without_-running-it-in-the-live-session-once-you-have-added-all-the-modules-to-the-experiment-workspace-then-navigate-to-the-model-you-created-and-trained-prior-to-the-session"></a>ライブ デモ中は、モデルを実行する時間はないでしょう。 ライブ セッションでは、実行_せずに_モデルを構築してください。 すべてのモジュールが実験ワークスペースに追加されたら、セッションに先立って作成し、トレーニングしたモデルに移動します。
 
-[Next - Live Demo Steps](demoguide.md)
+[次 - ライブ デモの手順](demoguide.md)

@@ -1,109 +1,109 @@
-# AIML10: Making Sense of your Unstructured Data with AI
+# <a name="aiml10-making-sense-of-your-unstructured-data-with-ai"></a>AIML10:AI を使用して非構造化データを理解する
 
-## Train-the-Trainer Guide
+## <a name="train-the-trainer-guide"></a>トレーナー トレーニング ガイド
 
-### Session Abstract
+### <a name="session-abstract"></a>セッションの要約
 
-Tailwind Traders has a lot of legacy data that they’d like their developers to leverage in their apps – from various sources, both structured and unstructured, and including images, forms, pdf files, and several others. In this session, you'll learn how the team used Cognitive Search to make sense of this data in a short amount of time and with amazing success. We'll discuss tons of AI concepts, like the ingest-enrich-explore pattern, skillsets, cognitive skills, natural language processing, computer vision, and beyond.
+Tailwind Traders 社では、構造化と非構造化の両方からなるさまざまなソースに、画像、フォーム、PDF ファイル、その他の大量のレガシ データが存在しており、開発者にはそれらをアプリで利用することが求められています。 このセッションでは、チームが Cognitive Search を使用して短時間でこのデータを理解し、すばらしい成功を収めた方法について説明します。 ここでは、取り込み - 強化 - 探索パターン、スキルセット、コグニティブ スキル、自然言語処理、コンピューター ビジョンなど、多くの AI の概念について説明します。
 
-# How to Use
+# <a name="how-to-use"></a>使用方法
 
-### Welcome, Presenter!
+### <a name="welcome-presenter"></a>プレゼンターの皆様、ようこそ。
 
-We're glad you are here and look forward to your delivery of this amazing content. As an experienced presenter, we know you know **HOW** to present so this guide will focus on **WHAT** you need to present. It will provide you a full run-through of the presentation created by the presentation design team.
+こちらをご覧いただきありがとうございます。この素晴らしいコンテンツが発表されることを楽しみにしています。 経験豊富な発表者として、プレゼンテーションの "**方法**" はご存知であると考え、このガイドでは、"**何**" についてプレゼンテーションを行う必要があるかということに焦点を絞ります。 プレゼンテーション デザイン チームが作成したプレゼンテーションを、全体にわたってリハーサルします。
 
-Along with the video of the presentation, this document will link to all the assets you need to successfully present including PowerPoint slides and demo instructions & code.
+プレゼンテーションのビデオに加えて、このドキュメントは、PowerPoint のスライドやデモの手順とコードなど、プレゼンテーションを成功させるために必要なすべての資産にリンクしています。
 
-* Read the document in its entirety.
-* Watch the video presentation
-* Ask questions of the Lead Presenter
+* ドキュメント全体を読む。
+* ビデオ プレゼンテーションを見る
+* リード プレゼンターに質問する
 
-# Assets in Train-the-Trainer Kit
+# <a name="assets-in-train-the-trainer-kit"></a>トレーナー トレーニング キットの資産
 
-* This guide
-* [PowerPoint presentation](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/AIML10_MakingSenseofYourUnstructuredDatawAI.pptx)
-* [Full-length recording of presentation]()
-* [Link to Data needed]()
-* [Code files]()
-* Separate Demo Videos: 
-    * Demo 1
-    * Demo 2
-    * Demo 3
-* Demo Instructions
+* 本ガイド
+* [PowerPoint プレゼンテーション](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/AIML10_MakingSenseofYourUnstructuredDatawAI.pptx)
+* [プレゼンテーションの全記録]()
+* [必要なデータへのリンク]()
+* [コード ファイル]()
+* 個別デモ ビデオ: 
+    * デモ 1
+    * デモ 2
+    * デモ 3
+* デモ手順
 
-# Demo Instructions:
+# <a name="demo-instructions"></a>デモ手順:
 
-Please download all the code and data files in this repository to get started. There is a code and data folder which will contain all information you need to run all demos
+まず、このリポジトリ内のコードとデータ ファイルをすべてダウンロードしてください。 すべてのデモを実行するために必要なあらゆる情報が含まれるコードとデータ フォルダーです
 
-**You will need:**
-* Azure Subscription - get a [free trial here](https://azure.microsoft.com/en-gb/free/?WT.mc_id=msignitethetour2019-github-aiml10) if you need it
-* other pre-requisities
+**以下のものが必要になります。**
+* Azure サブスクリプション - 必要であれば、[こちらから無料の試用版](https://azure.microsoft.com/en-gb/free/?WT.mc_id=msignitethetour2019-github-aiml10)を取得してください
+* その他の前提条件
 
-**Setup Instructions:**
-* Use the **Deploy to Azure button** below to create ...
+**セットアップの手順:**
+* 下の **[Azure へのデプロイ] ボタン**を使用して、次を作成 ...
 
-[![Deploy to Azure](https://azuredeploy.net/deploybutton.png)](https://azuredeploy.net/)
-
-
-## Demo 1
-
-### Video Demo with Voice Over: [AIML10 - Demo 1](youtube link here)
-
-* Sign into your [Azure Portal](https://azure.microsoft.com/en-gb/?WT.mc_id=msignitethetour2019-github-aiml10) 
-* Instructions ...
-
-## Demo 2
-
-### Video Demo with Voice Over: [AIML10 - Demo 2](youtube link here)
-
-* Sign into your [Azure Portal](https://azure.microsoft.com/en-gb/?WT.mc_id=msignitethetour2019-github-aiml10) 
-* Instructions ...
-
-## Demo 3
-
-### Video Demo with Voice Over: [AIML10 - Demo 3](youtube link here)
-
-* Sign into your [Azure Portal](https://azure.microsoft.com/en-gb/?WT.mc_id=msignitethetour2019-github-aiml10) 
-* Instructions ...
-
-# Teardown Instructions
-
-### Full Teardown
-
-* Enter the Azure Portal and delete the **Azure Resource Group** you created to remove all resources for this project
+[![Azure へのデプロイ](https://azuredeploy.net/deploybutton.png)](https://azuredeploy.net/)
 
 
-# Resources and Continued Learning
+## <a name="demo-1"></a>デモ 1
+
+### <a name="video-demo-with-voice-over-aiml10---demo-1youtube-link-here"></a>ナレーション付きビデオ デモ:[AIML10 - デモ 1](youtube link here)
+
+* ご自分の [Azure portal](https://azure.microsoft.com/en-gb/?WT.mc_id=msignitethetour2019-github-aiml10) にサインインします 
+* 手順 ...
+
+## <a name="demo-2"></a>デモ 2
+
+### <a name="video-demo-with-voice-over-aiml10---demo-2youtube-link-here"></a>ナレーション付きビデオ デモ:[AIML10 - デモ 2](youtube link here)
+
+* ご自分の [Azure portal](https://azure.microsoft.com/en-gb/?WT.mc_id=msignitethetour2019-github-aiml10) にサインインします 
+* 手順 ...
+
+## <a name="demo-3"></a>デモ 3
+
+### <a name="video-demo-with-voice-over-aiml10---demo-3youtube-link-here"></a>ナレーション付きビデオ デモ:[AIML10 - デモ 3](youtube link here)
+
+* ご自分の [Azure portal](https://azure.microsoft.com/en-gb/?WT.mc_id=msignitethetour2019-github-aiml10) にサインインします 
+* 手順 ...
+
+# <a name="teardown-instructions"></a>破棄の手順
+
+### <a name="full-teardown"></a>完全破棄
+
+* Azure portal に入り、作成した **Azure リソース グループ**を削除して、このプロジェクトのすべてのリソースを削除します
+
+
+# <a name="resources-and-continued-learning"></a>リソースと継続学習
 
 **Microsoft Learn:**
-* [Introduction to Azure Search](https://docs.microsoft.com/en-us/learn/modules/intro-to-azure-search/?WT.mc_id=msignitethetour2019-github-aiml10)
-* [Microsoft Azure Artificial Intelligence (AI) strategy and solutions](https://docs.microsoft.com/en-us/learn/modules/azure-artificial-intelligence/?WT.mc_id=msignitethetour2019-github-aiml10)
+* [Azure Search の概要](https://docs.microsoft.com/en-us/learn/modules/intro-to-azure-search/?WT.mc_id=msignitethetour2019-github-aiml10)
+* [Microsoft Azure 人工知能 (AI) の戦略とソリューション](https://docs.microsoft.com/en-us/learn/modules/azure-artificial-intelligence/?WT.mc_id=msignitethetour2019-github-aiml10)
 
-**Azure Documentation**
-* [What is "cognitive search" in Azure Search?](https://docs.microsoft.com/en-us/azure/search/cognitive-search-concept-intro/?WT.mc_id=msignitethetour2019-github-aiml10)
-* [What is knowledge store in Azure Search?](https://docs.microsoft.com/en-us/azure/search/knowledge-store-concept-intro)
+**Azure のドキュメント**
+* [Azure Search での "コグニティブ検索" とは?](https://docs.microsoft.com/en-us/azure/search/cognitive-search-concept-intro/?WT.mc_id=msignitethetour2019-github-aiml10)
+* [Azure Search 内のナレッジ ストアとは](https://docs.microsoft.com/en-us/azure/search/knowledge-store-concept-intro)
 
 
-# Feedback Loop
+# <a name="feedback-loop"></a>フィードバック ループ
 
-All speakers will have the opportunity to attend **Train-the-Trainer Q&A sessions** every month (two sessions covering all timezones) and also after delivering the content on stage we would be keen for you to join us in the **Feedback sessions** organized to share your experience of the content and anything you would like to provide feedback or ideas on. 
+すべての話者には毎月、**トレーナー トレーニング Q&A セッション**に出席する機会が与えられます (2 回のセッションであらゆる時間帯を網羅します)。また、壇上で発表後、**フィールド セッション**にご参加いただくことをお願いしております。このセッションは、自分のプレゼンテーション体験を語ったり、フィードバックやアイデアを披露したりする場として用意されます。 
 
-Do you have a comment, feedback, suggestion? Currently, the best feedback loop for content changes/suggestions/feedback is to create a new issue on this GitHub repository. To get all the details about how to create an issue please refer to the [Contributing docs](https://github.com/microsoft/ignite-learning-paths/blob/master/contributing.md)
+コメント、フィードバック、ご提案はございますか。 現在のところ、コンテンツ変更/提案/フィードバックの最良のフィードバック ループは、この GitHub リポジトリで新しいイシューを作成することです。 イシューの作成方法については、[投稿に関するドキュメント](https://github.com/microsoft/ignite-learning-paths/blob/master/contributing.md)を参照してください。
 
-## Become a Trained Presenter
+## <a name="become-a-trained-presenter"></a>トレーニングされたプレゼンターになる
 
-To become a trained presenter, contact [scalablecontent@microsoft.com](mailto:scalablecontent@microsoft.com). In your email please include:
+トレーニングされたプレゼンターになるには、[scalablecontent@microsoft.com](mailto:scalablecontent@microsoft.com) にお問い合わせください。 メールには、次を含めてください。
 
-- Complete name
-- The code of this presentation: aiml10
-- Link to a video of you presenting (~10 minutes in length)(ex: unlisted YouTube video). 
-  > It doesn't need to be this content, the importance is to show your presenter skills
+- フル ネーム
+- このプレゼンテーションのコード: aiml10
+- ご自分のプレゼンテーション ビデオ (最長 10 分間) のリンク (例: リストにない YouTube ビデオ)。 
+  > プレゼンターとしてのスキルを示すことが重要であり、このコンテンツである必要はありません
 
-A mentor will get back to you with information on the process.
+指導者からプロセスに関する情報提供があります。
 
-## Trained Presenters
+## <a name="trained-presenters"></a>トレーニングされたプレゼンター
 
-Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+次の素晴らしい方々に感謝を捧げます ([Emoji キー](https://allcontributors.org/docs/en/emoji-key))。
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore -->
@@ -113,8 +113,8 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/sethjuarez">
         <img src="https://avatars2.githubusercontent.com/u/115409?s=460&v=4" width="100px;" alt="Seth Juarez"/><br />
         <sub><b>Seth Juarez</b></sub></a><br />
-            <a href="Add link to powerpoint here" title="Talk">📢</a>
-            <a href="Add link to pull request here" title="Documentation">📖</a> 
+            <a href="Add link to powerpoint here" title="トーク">📢</a>
+            <a href="Add link to pull request here" title="ドキュメント">📖</a> 
     </td>
 </tr></table>
 

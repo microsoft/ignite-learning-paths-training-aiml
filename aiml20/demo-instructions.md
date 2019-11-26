@@ -1,66 +1,57 @@
-# Demo Instructions for Presenters
+# <a name="demo-instructions-for-presenters"></a>プレゼンター用デモ手順
 
-Demo scripts are made available to everyone in this repo.
+デモ スクリプトは、このリポジトリ内のすべてのユーザーが利用できるようになっています。
 
-You should follow the same scripts for the presentations, but with the additional
-notes given below.
+プレゼンテーション用の同じスクリプトに従う必要がありますが、以下に示す追加の注意事項があります。
 
-Recordings of demos are also available as videos in the [PPT
-Slides](presentations.md) (and also some additional videos linked below). You
-can use the embedded videos instead of a live demo in the case of lack of
-internet or other technical issues. (In this case, we recommend muting the audio
-and speaking to the video yourself.) [Speaker notes](speaker-notes.md) are timed
-to the events in the embedded videos.
+デモの録画も [PPT スライド](presentations.md)でビデオとして利用できます (その他の一部のリンクされたビデオも以下に示します)。 インターネットなどの技術的な問題がない場合は、ライブ デモではなく、埋め込みビデオを使用できます。 (この場合、オーディオとビデオへの音声を自身でミュートすることをお勧めします。)[講演者用メモ](speaker-notes.md)は、埋め込みビデオのイベントとタイミングが合わせられています。
 
-## DEMO Setup
+## <a name="demo-setup"></a>デモ セットアップ
 
-Before your presentation, run all of the instructions in the script below.
+プレゼンテーションの前に、以下のスクリプトに記載されているすべての手順を実行してください。
 
-[Demo script](DEMO%20Setup.md)
+[デモ スクリプト](DEMO%20Setup.md)
 
-## DEMO Computer Vision
+## <a name="demo-computer-vision"></a>デモ Computer Vision
 
-[Demo script](DEMO%20Computer%20Vision.md)
+[デモ スクリプト](DEMO%20Computer%20Vision.md)
 
-### SLIDE: DEMO / shop by photo
+### <a name="slide-demo--shop-by-photo"></a>スライド:デモ / 写真でのショッピング
 
-Note the actual instructions for this demo are [here](DEMO%20ONNX%20deployment.md#defining-the-problem-shop-by-photo-doesnt-work-right).
+このデモの実際の手順は、[ここ](DEMO%20ONNX%20deployment.md#defining-the-problem-shop-by-photo-doesnt-work-right)に記載されています。
 
-Additional demo video: https://www.dropbox.com/s/ylxjuifg9x0h4n3/ITT-aiml20-demo1.mp4?dl=0 
+その他のデモ ビデオ: https://www.dropbox.com/s/ylxjuifg9x0h4n3/ITT-aiml20-demo1.mp4?dl=0 
 
-### SLIDE: DEMO / cognitive services computer vision
+### <a name="slide-demo--cognitive-services-computer-vision"></a>スライド:デモ / Cognitive Services Computer Vision
 
-[Demo script](DEMO%20Computer%20Vision.md#using-computer-vision-via-the-web-interface)
+[デモ スクリプト](DEMO%20Computer%20Vision.md#using-computer-vision-via-the-web-interface)
 
-## DEMO Custom Vision
+## <a name="demo-custom-vision"></a>デモ Custom Vision
 
-[Demo script](DEMO%20Custom%20Vision.md)
+[デモ スクリプト](DEMO%20Custom%20Vision.md)
 
-Do the first part of the demo ahead of time.
+デモの最初の部分を事前に実行します。
 
-### SLIDE: DEMO / Customized object recognition
+### <a name="slide-demo--customized-object-recognition"></a>スライド:デモ / カスタマイズされたオブジェクト認識
 
-Start the live demo at "[Add images and train a model](DEMO%20Custom%20Vision.md#add-images-and-train-a-model)".
+「[画像の追加とモデルのトレーニング](DEMO%20Custom%20Vision.md#add-images-and-train-a-model)」でライブ デモを開始します。
 
-## DEMO ONNX Deployment
+## <a name="demo-onnx-deployment"></a>デモ ONNX のデプロイ
 
-[Demo Script](DEMO%20ONNX%20deployment.md)
+[デモ スクリプト](DEMO%20ONNX%20deployment.md)
 
-Run the section "[Load the simple ONNX model](DEMO%20ONNX%20deployment.md#load-the-simple-onnx-model)" ahead of time.
+セクション「[単純な ONNX モデルを読み込む](DEMO%20ONNX%20deployment.md#load-the-simple-onnx-model)」を事前に実行します。
 
-You did the section "[Defining the problem](DEMO%20ONNX%20deployment.md#defining-the-problem-shop-by-photo-doesnt-work-right)" at the beginning of the presentation, so skip that.
+「[問題の定義](DEMO%20ONNX%20deployment.md#defining-the-problem-shop-by-photo-doesnt-work-right)」というセクションはプレゼンテーションの冒頭で実行したため、これはスキップします。
 
-### SLIDE: DEMO / ONNX
+### <a name="slide-demo--onnx"></a>スライド:デモ / ONNX
 
-Start the live demo at "Update the ONNX model in the Tailwind Traders website".
+「Tailwind Traders Web サイト内で ONNX モデルを更新するの ONNX モデルを更新する」でライブ デモを開始します。
 
-For viewing in Netron, you can view the file you exported from Custom Vision
-directly, or you can use the pre-prepared one from the repo at `ONNX/custom model/products.onnx`
+Netron で表示するために、Custom Vision から直接エクスポートしたファイルを表示するか、事前準備されたファイルをリポジトリ (`ONNX/custom model/products.onnx`) から使用することができます。
 
-Note that when you deploy the file it **must** be called `products.onnx`, so
-it's easiest to take the pre-prepared file by that name from your desktop,
-rather than re-naming the exported file.
+ファイルをデプロイするとき、`products.onnx` という名前を付ける**必要があります**。これにより、エクスポートされたファイルの名前を変更するのではなく、デスクトップから事前準備されたファイルをその名前で最も簡単に取得できます。
 
-### SLIDE: DEMO / Personalizer
+### <a name="slide-demo--personalizer"></a>スライド:デモ / Personalizer
 
-[Demo script](DEMO%20Personalizer.md)
+[デモ スクリプト](DEMO%20Personalizer.md)

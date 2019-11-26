@@ -1,80 +1,67 @@
-# DEMO: Custom Vision
+# <a name="demo-custom-vision"></a>デモ: Custom Vision
 
-In this demo, we create a custom vision model using the service at
-customvision.ai.
+このデモでは、customvision.ai でサービスを使用してカスタム ビジョン モデルを作成します。
 
-## Create a custom model project with Custom Vision
+## <a name="create-a-custom-model-project-with-custom-vision"></a>Custom Vision でカスタム モデル プロジェクトを作成する
 
-TIP: You can do this section ahead of time, to save time in a live demo.
+ヒント: このセクションを事前に実行して、ライブ デモの時間を節約できます。
 
-1. Sign into [Custom Vision](https://customvision.ai) and create a new project.
-   [Follow the instructions
-   here](https://docs.microsoft.com/azure/cognitive-services/custom-vision-service/getting-started-build-a-classifier?WT.mc_id=msignitethetour2019-github-aiml20).
+1. [Custom Vision](https://customvision.ai) にサインインし、新しいプロジェクトを作成します。
+   [こちらで説明されている手順に従います](https://docs.microsoft.com/azure/cognitive-services/custom-vision-service/getting-started-build-a-classifier?WT.mc_id=msignitethetour2019-github-aiml20)。
 
-1. Your new project should have the following settings:
+1. 新しいプロジェクトには、次の設定が必要です。
 
-    - Name: Tools
-    - Description: Products sold by Tailwind   Traders
-    - Resource: aiml20-cs-resource
-    - Project Type: classification
-    - Classification Types: Multiclass
-    - Domains: Retail (compact)
-    - Export capabilities: Basic Platforms
+    - 名前: Tools
+    - 説明: Tailwind Traders によって販売される製品
+    - リソース: aiml20-cs-resource
+    - プロジェクトの種類: 分類
+    - 分類の種類: Multiclass
+    - ドメイン: Retail (compact)
+    - エクスポート機能: 基本プラットフォーム
 
-1. In the "Tags" tool in the left side, use the "+" button to add the following tags:
+1. 左側の [タグ] ツールで、[+] ボタンを使用して次のタグを追加します。
 
     - drill
     - hammer
     - pliers
     - screwdriver
 
-1. We will now add images for each tag from the corresponding folder in "CV Training Images". Here's how to do it for "drill"
+1. 次に、"CV Training Images" の対応するフォルダーから各タグに対する画像を追加します。 ここでは、"drill" に対してそれを行う方法を示します
 
-    - Click "Add Images" in the top row
-    - Browse to CV Training Images / drills
-    - Select all files: click one file, then press Control-A
-    - Click Open
-    - In the "Image Upload" dialog that appears next, select "drill" in "My Tags" and then click "Upload 16 Files"
-    - repeat this process for the tags: hammer, pliers, screwdriver (we will do "hard hat" later)
+    - 先頭行の [イメージの追加] をクリックします
+    - CV Training Images / drills を参照します
+    - すべてのファイルを選択します: 1 つのファイルをクリックし、Ctrl + A キーを押します
+    - [開く]をクリックします
+    - 次に表示される [イメージのアップロード] ダイアログで、[My Tags]\(マイ タグ\) の "drill" を選択し、[Upload 16 Files]\(16 ファイルのアップロード\) をクリックします。
+    - このプロセスを、hammer、pliers、screwdriver の各タグについて繰り返します ("hard hat" は後で行います)
 
-## Add images and train a model
+## <a name="add-images-and-train-a-model"></a>画像を追加してモデルをトレーニングする
 
-At Ignite Tour, the prior steps were all done ahead of time in preparation. Only
-the remaining steps were done live, to save time.
+Ignite Tour では、以上の手順はすべて準備として事前に行われていました。 時間を節約するため、残りの手順のみがライブで行われました。
 
-1. If you haven't already, sign into customvision.ai and open your "tools" project.
+1. まだサインインしていない場合は、customvision.ai にサインインして、"tools" プロジェクトを開きます。
 
-1. This project has already been provided with images of drills, hammers, pliers, and screwdrivers. Let's add some images of hard hats as well.
+1. このプロジェクトには、既にドリル、ハンマー、プライヤー、ドライバーの画像が提供されています。 安全帽の画像もいくつか追加してみましょう。
 
-- Click "Add Images" in the top row
-- Browse to CV Training Images / drills
-- Select all files: click one file, then press Control-A
-- Click Open
-- In the "Image Upload" dialog that appears next, select "hard hat" in "My Tags" and then click "Upload 16 Files"
+- 先頭行の [イメージの追加] をクリックします
+- CV Training Images / drills を参照します
+- すべてのファイルを選択します: 1 つのファイルをクリックし、Ctrl + A キーを押します
+- [開く]をクリックします
+- 次に表示される [イメージのアップロード] ダイアログで、[My Tags]\(マイ タグ\) の "hard hat" を選択し、[Upload 16 Files]\(16 ファイルのアップロード\) をクリックします。
 
-1. Click "Performance" in the top menu bar, and then click the green "Train" button. Choose "Quick Training" and then click "Train"
+1. 上部のメニュー バーで [パフォーマンス] をクリックし、緑色の [トレーニング] ボタンをクリックします。 [Quick Training]\(クイック トレーニング\) を選択し、[トレーニング] をクリックします。
 
-1. Click on the most recent iteration in the left pane to see the results. You
-   should have 90.9% Precision (how many of our training images does the model
-   predict correctly?), 88.2% Recall (when we generate a prediction, is it
-   correct?), and 98.7% AP (overall measure). Note that these depend on the
-   probability threshold -- make this low if you want to avoid false positives.
-   For our retail app, it's safe to make it high.
+1. 左側のペインで最新の反復をクリックすると、結果が表示されます。 90.9% の精度 (モデルで正しく予測されたトレーニング画像の数)、88.2% のリコール (予測を生成した場合の正しさ)、98.7% の AP (全体的なメジャー) になるはずです。 これらは、確率のしきい値によって異なります。偽陽性を回避する場合は、この値を低くします。
+   このリテール アプリの場合は、高くしても安全です。
 
-1. Test out the model with a new picture. Click "Quick Test" and "Browse Local
-   Files", and then choose "test images / man in hardhat.jpg". See that it
-   identifies as a hard hat with 99.9% probability. Try the same with "test images / drill.jpg", which is also identified correctly.
+1. 新しい画像でモデルをテストします。 [クイック テスト]、[ローカル ファイルを参照します] の順にクリックして、"test images / man in hardhat.jpg" を選択します。 99.9% の確率で安全帽と識別されていることを確認してください。 "test images / drill.jpg" で同じことを試してください。これも正しく識別されます。
 
-Now we will save the model in the ONNX format for integration into the Tailwind
-Traders app.
+次に、Tailwind Traders アプリに統合するために、モデルを ONNX 形式で保存します。
 
-1. Click Export, and choose "ONNX". Note the other platform-specific formats
-   available as well.
+1. [エクスポート] をクリックし、[ONNX] を選択します。 他のプラットフォーム固有の形式も使用できることに注意してください。
 
-1. Select the version ONNX 1.2, and then click Export. The TWT app expects a
-   file called products.onnx, so we'll use the one that's already saved in the
-   repo.
+1. バージョン ONNX 1.2 を選択し、[エクスポート] をクリックします。 TWT アプリには products.onnx という名前のファイルが必要なので、リポジトリに既に保存されているものを使用します。
 
-## Next Step
+## <a name="next-step"></a>次のステップ
 
-[ONNX Deployment](DEMO%20ONNX%20deployment.md)
+[ONNX のデプロイ](DEMO%20ONNX%20deployment.md)

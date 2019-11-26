@@ -1,36 +1,36 @@
-# InvoiceReaderSkill
-How to publish:
+# <a name="invoicereaderskill"></a>InvoiceReaderSkill
+発行方法:
 ```
 func azure functionapp publish <FUNCAPP> --build remote
 ```
 
-# Some fun search filters
-Orders with ItemId 49
+# <a name="some-fun-search-filters"></a>楽しい検索フィルター
+ItemId 49 の注文
 ```
 *&$filter=invoice/lineItems/any(lineItems: lineItems/itemId eq 49)
 ```
 
-invoiceId is 12179
+invoiceId が 12179
 ```
 *&$filter=invoice/invoiceId eq 12179
 ```
 
-companies in Australia
+オーストラリアの企業
 ```
 *&$filter=invoice/company/country eq 'Australia'
 ```
 
-companies in the UK (with a count)
+英国の企業 (カウントあり)
 ```
 *&$count=true&$filter=invoice/company/country eq 'United Kingdom'
 ```
 
-only retrieve invoices
+請求書のみを取得する
 ```
 *&$select=invoice&$count=true
 ```
 
-people in Germany
+ドイツの人
 ```
 *&$count=true&$select=invoice/person&$filter=invoice/person/country eq 'Germany'
 ```

@@ -1,31 +1,31 @@
-# AIML40 - Taking Models to the Next Level with Azure Machine Learning Best Practices
+# <a name="aiml40---taking-models-to-the-next-level-with-azure-machine-learning-best-practices"></a>AIML40 - Azure Machine Learning のベスト プラクティスでモデルを次のレベルに進める
 
-## Session information
+## <a name="session-information"></a>セッション情報
 
-Artificial Intelligence and Machine Learning can be used in many ways to increase productivity of business processes and gather meaningful insights, by analyzing images, texts and trends within unstructured flows of data. While many tasks can be solved using existing models, in some cases it is also required to train your own model for more specific tasks, or for increased accuracy. 
+人工知能と Machine Learning をさまざまな方法で使用して、データの非構造化フロー内のイメージ、テキスト、および傾向を分析することで、ビジネス プロセスの生産性を向上させ、有意な分析情報を収集することができます。 既存のモデルを使用して多くのタスクを解決できますが、場合によっては、特定のタスクのために、または精度を高めるために、独自のモデルをトレーニングすることも必要になります。 
 
-In this session, we will explore the complete path of integrating text analysis intelligent services into the business processes of [Tailwind Traders](http://tailwindtraders.com), starting from pre-build models available as [cognitive services](https://azure.microsoft.com/services/cognitive-services/?WT.mc_id=msignitethetour2019-github-aiml40), up to training a third-party neural custom model for [Aspect-Based Sentiment Analysis](https://www.intel.ai/introducing-aspect-based-sentiment-analysis-in-nlp-architect/) availabe as part of [Intel NLP Architect](http://nlp_architect.nervanasys.com/) using [Azure Machine Learning Service](https://azure.microsoft.com/services/machine-learning-service/?wt.mc_id=msignitethetour2019-github-aiml40). We will talk about cases when one needs a custom model, and demonstrate quick ways to create such a model from scratch using [AutoML](https://docs.microsoft.com/azure/machine-learning/service/concept-automated-ml/?wt.mc_id=msignitethetour2019-github-aiml40), and show how to fine-tune model hyperparameters using [HyperDrive](https://docs.microsoft.com/azure/machine-learning/service/how-to-tune-hyperparameters/?wt.mc_id=msignitethetour2019-github-aiml40)
+このセッションでは、テキスト分析インテリジェント サービスを [Tailwind Traders](http://tailwindtraders.com) のビジネス プロセスに統合するための完全なプロセスについて説明します。これには、[コグニティブ サービス](https://azure.microsoft.com/services/cognitive-services/?WT.mc_id=msignitethetour2019-github-aiml40)として使用できるモデルを事前構築するプロセスから、[Azure Machine Learning Service](https://azure.microsoft.com/services/machine-learning-service/?wt.mc_id=msignitethetour2019-github-aiml40) を使用して、[Intel NLP Architect](http://nlp_architect.nervanasys.com/) の一部として使用できる[アスペクトベースの感情分析サービス](https://www.intel.ai/introducing-aspect-based-sentiment-analysis-in-nlp-architect/)のサードパーティ ニューラル カスタム モデルをトレーニングするプロセスまでが含まれます。 ここでは、カスタム モデルが必要なケースについて説明します。また、[AutoML](https://docs.microsoft.com/azure/machine-learning/service/concept-automated-ml/?wt.mc_id=msignitethetour2019-github-aiml40) を使用してこのようなモデルをゼロから簡単に作成する方法と、[HyperDrive](https://docs.microsoft.com/azure/machine-learning/service/how-to-tune-hyperparameters/?wt.mc_id=msignitethetour2019-github-aiml40) を使用してモデルのハイパー パラメーターを微調整する方法を示します。
 
-## Delivery Assets
+## <a name="delivery-assets"></a>配信アセット
 
-* [PowerPoint deck](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml40/AIML40_Taking_Models_to_the_Next_Level_with_Azure_Machine_Learning_Best_Practices.pptx)
-* Demonstration videos:
-    * Demo 1 - [Cognitive Services Text Analytics](https://youtu.be/QJxjm5BirOA)
-    * Demo 2 - [Automated Machine Learning](https://youtu.be/qrstXN6TLZk)
-    * Demo 3 - [Azure Machine Learning SDK and Hyperdrive](https://youtu.be/sccNTPO3PwU)
-* [Additional Presenter Resources](README-Instructor.md)
+* [PowerPoint デッキ](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml40/AIML40_Taking_Models_to_the_Next_Level_with_Azure_Machine_Learning_Best_Practices.pptx)
+* デモンストレーション動画:
+    * デモ 1 - [Cognitive Services Text Analytics](https://youtu.be/QJxjm5BirOA)
+    * デモ 2 - [自動機械学習](https://youtu.be/qrstXN6TLZk)
+    * デモ 3 - [Azure Machine Learning SDK と Hyperdrive](https://youtu.be/sccNTPO3PwU)
+* [その他のプレゼンター リソース](README-Instructor.md)
 
-## Overview of Demonstrations
+## <a name="overview-of-demonstrations"></a>デモの概要
 
-In this presentation, the following demonstrations are made:
+このプレゼンテーションでは、次のデモを行います。
 
-1. Using [Cognitive Services Text Analytics](https://azure.microsoft.com/services/cognitive-services/text-analytics/?wt.mc_id=msignitethetour2019-github-aiml40) to find out the sentiment of a clothing review
-2. Using [Azure Automated ML](https://docs.microsoft.com/azure/machine-learning/service/concept-automated-ml/?wt.mc_id=msignitethetour2019-github-aiml40) to build a text classifier almost with no code
-3. Using [Azure Machine Learning Service](https://azure.microsoft.com/services/machine-learning-service/?wt.mc_id=msignitethetour2019-github-aiml40) to train an Aspect-Based Sentiment Analysis model.
+1. [Cognitive Services Text Analytics](https://azure.microsoft.com/services/cognitive-services/text-analytics/?wt.mc_id=msignitethetour2019-github-aiml40) を使用して衣料レビューの感情を確認する。
+2. [Azure 自動 ML](https://docs.microsoft.com/azure/machine-learning/service/concept-automated-ml/?wt.mc_id=msignitethetour2019-github-aiml40) 使用して、ほぼコードなしでテキスト分類子を作成する。
+3. [Azure Machine Learning Service](https://azure.microsoft.com/services/machine-learning-service/?wt.mc_id=msignitethetour2019-github-aiml40) を使用してアスペクトベースの感情分析モデルをトレーニングする。
 
-## Starting Fast
+## <a name="starting-fast"></a>すばやく開始
 
-If you want to start right away, you can deploy all required resources via Azure Template, and open the code in Azure Notebooks. 
+すぐに開始する場合は、Azure テンプレートを使用して必要なすべてのリソースをデプロイし、Azure Notebooks でコードを開くことができます。 
 
 <a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fmicrosoft%2Fignite-learning-paths-training-aiml%2Fmaster%2Faiml40%2Ftemplate%2Fazuredeploy.json" target="_blank">
  <img src="http://azuredeploy.net/deploybutton.png"/>
@@ -33,24 +33,24 @@ If you want to start right away, you can deploy all required resources via Azure
 <!-- TODO: provide correct Azure Notebook path -->
 <a href="https://notebooks.azure.com/sosh/projects/ignite-absa"><img src="https://notebooks.azure.com/launch.png" /></a>
 
-Below we provide more detailed instructions for the demo so you can perform the steps manually to fully understand the concepts being shown.
+次に、デモの詳細な手順を示します。これにより、手順を手動で実行して、示されている概念を完全に理解できます。
 
-## Initial Environment Setup
+## <a name="initial-environment-setup"></a>環境の初期セットアップ
 
-In order to perform steps 2 and 3 of the demo, we would need to:
+デモの手順 2 と 3 を実行するには、次の操作を実行する必要があります。
 
-1. Create an Azure Machine Learning Workspace
-2. Upload the data used for AutoML training - [clothing_automl.xlsx](dataset\clothing_automl.xlsx)
+1. Azure Machine Learning ワークスペースを作成する
+2. AutoML トレーニングに使用するデータ - [clothing_automl.xlsx](dataset\clothing_automl.xlsx) をアップロードする
 
 
-#### Creating Azure Machine Learning Workspace
+#### <a name="creating-azure-machine-learning-workspace"></a>Azure Machine Learning ワークスペースを作成する
 
-The Azure ML Workspace can either be created:
-* Manually from [Azure Portal](http://portal.azure.com/?wt.mc_id=msignitethetour2019-github-aiml40) ([here is the complete walk-through](https://docs.microsoft.com/azure/machine-learning/service/how-to-manage-workspace/?wt.mc_id=msignitethetour2019-github-aiml40))
-* Deployed from the Azure Template provided
-* Created through [Azure CLI](https://docs.microsoft.com/ru-ru/cli/azure/?view=azure-cli-latest&wt.mc_id=msignitethetour2019-github-aiml40)
+Azure ML ワークスペースは、次のいずれかの方法で作成できます。
+* [Azure portal](http://portal.azure.com/?wt.mc_id=msignitethetour2019-github-aiml40) から手動で作成する ([完全なチュートリアルについてはこちらをご覧ください](https://docs.microsoft.com/azure/machine-learning/service/how-to-manage-workspace/?wt.mc_id=msignitethetour2019-github-aiml40))
+* 提供された Azure テンプレートからデプロイする
+* [Azure CLI](https://docs.microsoft.com/ru-ru/cli/azure/?view=azure-cli-latest&wt.mc_id=msignitethetour2019-github-aiml40) を使用して作成する
 
-> *NOTE: (we are using `absa` as a name, and *West US 2* datacenter in this example, but feel free to change that)*
+> *注: (この例では `absa` を名前として使用し、*米国西部 2* データセンターを使用していますが、自由に変更できます)*
 
 ```shell
 az extension add -n azure-cli-ml
@@ -58,34 +58,34 @@ az group create -n absa -l westus2
 az ml workspace create -w absa_space -g absa
 ```
 
-You would also need to know your subscription id, which can be obtained by running `az account list`.
+また、サブスクリプション ID も把握しておく必要があります。これは `az account list` を実行することで取得できます。
 
-#### Uploading data to the workspace
+#### <a name="uploading-data-to-the-workspace"></a>ワークスペースにデータをアップロードする
 
-In our demos, we use a few datasets:
-* A dataset for Automated ML demo - [clothing_automl.xlsx](dataset/clothing_automl.xlsx)
-* The large dataset [clothing_absa_train.csv](dataset/clothing_absa_train.csv) to train the full aspect based sentiment analysis model for demo 3
-* A smaller debugging dataset for aspect based sentiment analysis model [clothing_absa_train_small.csv](dataset/clothing_absa_train_small.csv)
-* A seperate validation set [clothing-absa-validation.json](dataset/clothing-absa-validation.json) to test the model
+このデモでは、次のいくつかのデータセットを使用します。
+* 自動 ML デモのデータセット - [clothing_automl.xlsx](dataset/clothing_automl.xlsx)
+* デモ 3 のアスペクトベースの感情分析モデル全体をトレーニングするための大規模なデータセット [clothing_absa_train.csv](dataset/clothing_absa_train.csv)
+* アスペクトベースの感情分析モデルの小規模なデバッグ データセット [clothing_absa_train_small.csv](dataset/clothing_absa_train_small.csv)
+* モデルをテストするための個別の検証セット [clothing-absa-validation.json](dataset/clothing-absa-validation.json)
 
-To follow the Automated ML Demo, please upload the dataset to your workspace. You can do it manually through [Azure ML Portal](http://ml.azure.com/?wt.mc_id=msignitethetour2019-github-aiml40), or use the provided file `upload_dataset.py` (csv/xlsx file should be in the current directory, and you should substitute `[subscription_id]` according to your subscription):
+自動 ML デモに従うには、データセットをワークスペースにアップロードしてください。 この操作は、[Azure ML ポータル](http://ml.azure.com/?wt.mc_id=msignitethetour2019-github-aiml40)を使用して手動で実行するか、または指定されたファイル `upload_dataset.py` を使用します (csv/.xlsx ファイルは現在のディレクトリに存在する必要があり、サブスクリプションに従って `[subscription_id]` を置き換える必要があります)。
 
 ```shell
 python upload_dataset.py -s [subscription_id] -w absa_space -g absa -f clothing_automl.xlsx
 ```
 
-The Automated ML clothing dataset would be uploaded to the AML service datastore by the demo code.
+自動 ML の clothing データセットは、デモ コードによって AML サービス データストアにアップロードされます。
 
-#### Using the Azure ML Demo Code
+#### <a name="using-the-azure-ml-demo-code"></a>Azure ML デモ コードを使用する
 
-You can execute demo code from any Jupyter Notebook Environment. You can:
- - Install Python environment locally, as described below in **Python Environment Installation**
- - Use [Azure Notebooks](https://docs.microsoft.com/azure/notebooks/azure-notebooks-overview/?wt.mc_id=absa-notebook-abornst). In this case you should upload the `absa.ipynb` file to a new Azure Notebooks project, or just clone the [notebook library](https://notebooks.azure.com/sosh/projects/ignite-absa).
+デモ コードは、任意の Jupyter Notebook 環境から実行できます。 次のことが行えます。
+ - 「**Python 環境のインストール**」の説明に従って、Python 環境をローカルにインストールする。
+ - [Azure Notebooks](https://docs.microsoft.com/azure/notebooks/azure-notebooks-overview/?wt.mc_id=absa-notebook-abornst) を使用する。 この場合、`absa.ipynb` ファイルを新しい Azure Notebooks プロジェクトにアップロードするか、または単に [notebook ライブラリ](https://notebooks.azure.com/sosh/projects/ignite-absa)を複製します。
  <!-- TODO: provide final path to notebook library -->
 
-#### Python Environment Installation
+#### <a name="python-environment-installation"></a>Python 環境のインストール
 
-If you decide not to use Azure Notebooks, and prefer to use your local Python environment, you need to install the Python Azure ML SDK, and make sure to install notebook and contrib:
+Azure Notebooks を使用せず、ローカルの Python 環境を使用する場合は、Python Azure ML SDK をインストールし、notebook と contrib をインストールする必要があります。
 
 ```shell
 conda create -n azureml -y Python=3.6
@@ -96,91 +96,91 @@ jupyter nbextension install --py --user azureml.widgets
 jupyter nbextension enable azureml.widgets --user --py
 ```
 
-You will need to restart Jupyter after this. Detailed instructions are [here](https://docs.microsoft.com/azure/machine-learning/service/quickstart-create-workspace-with-python/?WT.mc_id=msignitethetour2019-github-aiml40)
+この後、Jupyter を再起動する必要があります。 詳細な手順については、[こちら](https://docs.microsoft.com/azure/machine-learning/service/quickstart-create-workspace-with-python/?WT.mc_id=msignitethetour2019-github-aiml40)をご覧ください。
 
-If you need a free trial account to get started you can get one [here](https://azure.microsoft.com/offers/ms-azr-0044p/?WT.mc_id=msignitethetour2019-github-aiml40)
+開始するための無料試用版アカウントが必要な場合は、[ここで取得できます](https://azure.microsoft.com/offers/ms-azr-0044p/?WT.mc_id=msignitethetour2019-github-aiml40)。
 
-#### Pre-creating Compute Cluster
+#### <a name="pre-creating-compute-cluster"></a>コンピューティング クラスターを事前作成する
 
-For the last two demos, you need a compute cluster. For demo purposes, we will create a cluster that consists of one node only. This can be done in one of three ways:
+最後の 2 つのデモでは、コンピューティング クラスターが必要になります。 デモを目的として、1 つのノードのみで構成されるクラスターを作成します。 この操作は、次の 3 つの方法のいずれかで実行できます。
 
-1. Through [Azure ML Portal](http://ml.azure.com/?wt.mc_id=msignitethetour2019-github-aiml40) go to **Compute** section and manually create Azure ML Compute cluster with *Standard_DS3_v2* VMs, specifying number of nodes = 1. Name the cluster `absa-cluster`.
-2. Run the provided `create_cluster.py` script, providing parameters as above:
+1. [Azure ML ポータル](http://ml.azure.com/?wt.mc_id=msignitethetour2019-github-aiml40)で **[コンピューティング]** セクションに移動し、ノード番号 1 を指定して、*Standard_DS3_v2* VM を使用して Azure ML コンピューティング クラスターを手動で作成します。 クラスターに `absa-cluster` という名前を付けます。
+2. 上記のパラメーターを指定して、指定された `create_cluster.py` スクリプトを実行します。
 ```shell
 python create_cluster.py -s [subscription_id] -w absa_space -g absa
 ```
-3. Run first few cells from `absa.ipynb` notebook which will create the cluster for you.
+3. `absa.ipynb` ノートブックの最初のいくつかのセルを実行すると、クラスターが自動で作成されます。
 
-## Demos
+## <a name="demos"></a>デモ
 
-### Demo 1: Text Analytics Cognitive Service
+### <a name="demo-1-text-analytics-cognitive-service"></a>デモ 1:Text Analytics Cognitive Service
 
-In this demo, we show how Text Analytics can do sentiment analysis of a phrase in a web interface.
+このデモでは、Text Analytics を使用して Web インターフェイスで語句の感情分析をどのように実行できるかについて説明します。
 
-1. Open [Text Analytics Page](https://azure.microsoft.com/services/cognitive-services/text-analytics/?WT.mc_id=msignitethetour2019-github-aiml40)
-2. Scroll down to **see it in action** section and enter the phrase *I loved the polka dot pants that I bought in the london store* (You can also leave the default phrase to demonstrate the point).
-3. Press **Analyze** to get the following result:
+1. [Text Analytics ページ](https://azure.microsoft.com/services/cognitive-services/text-analytics/?WT.mc_id=msignitethetour2019-github-aiml40)を開きます。
+2. 下にスクロールして **[動作中に確認]** セクションに移動し、「*ロンドンの店で購入した水玉模様のズボンがとても気に入っています*」という語句を入力します (既定の語句をそのまま使用することもできます)。
+3. **[分析]** を押すと、次の結果が得られます。
 
-![Screenshot of Azure Text Analytics](images/analytics.png)
+![Azure Text Analytics のスクリーンショット](images/analytics.png)
 
-Note that Text Analytics does not only provide sentiment, but also extracts location and key words from text.
+Text Analytics では感情が得られるだけでなく、テキストから場所とキー ワードも抽出されることに注意してください。
 
-### Demo 2: Azure AutoML
+### <a name="demo-2-azure-automl"></a>デモ 2:Azure AutoML
 
-In this demo, we demonstrate how Automated ML can be used to build an ML model without coding.
+このデモでは、自動 ML を使用してコーディングなしで ML モデルを構築する方法について説明します。
 
-1. Navigate to your Azure ML Workspace (created above) in the [http://ml.azure.com](http://ml.azure.com/?WT.mc_id=msignitethetour2019-github-aiml40)
-2. Go to **Datasets** - you should see the previously uploaded dataset there (clothing_automl.xlsx). Note that you can also upload it here through the portal.
-3. Select the dataset.
-4. From the **Overview** tab, expand **Sample usage** and show the code that can be used to access the data programmatically, if needed.
-5. From the **Explore** tab, have a look at the data.
-6. Go to **Automated ML** tab and click **New Experiment**
-7. Select experiment name and compute to be used.
-8. Select the dataset.
-9. Chose the type of prediction task -- **Classification**.
-10. Select target column -- **Rating**.
-11. Click **Start**.
+1. [http://ml.azure.com](http://ml.azure.com/?WT.mc_id=msignitethetour2019-github-aiml40) で、(上記で作成した) Azure ML ワークスペースに移動します。
+2. **[データセット]** に移動します。前にアップロードしたデータセット (clothing_automl.xlsx) が表示されています。 ここでポータルからアップロードすることもできます。
+3. データセットを選択します。
+4. 必要に応じて、 **[概要]** タブで **[Sample usage]/(使用例/)** を展開し、プログラムでデータにアクセスするために使用できるコードを表示します。
+5. **[Explore]/(探索/)** タブで、データを確認します。
+6. **[自動 ML]** タブに移動し、 **[新しい実験]** をクリックします。
+7. 使用する実験名とコンピューティングを選択します。
+8. データセットを選択します。
+9. 予測タスクの種類を選択します -- **[分類]** 。
+10. ターゲット列を選択します -- **[評価]** 。
+11. **[開始]** をクリックします。
 
-The experiment will take quite a long time to run, because different algorithms will be investigated. If showing a demo, it would make sense to run this in advance and just show the results.
+さまざまなアルゴリズムが調査されるため、実験の実行にはかなりの時間がかかります。 デモを表示する場合は、これを事前に実行して単に結果を表示することをお勧めします。
 
-### Demo 3: Using Azure ML Workspace with Python SDK
+### <a name="demo-3-using-azure-ml-workspace-with-python-sdk"></a>デモ 3:Python SDK で Azure ML ワークスペースを使用する
 
-In this demo, we will run custom Python code that uses the Python Azure ML SDK to train, optimize and use the custom Aspect Based Sentiment Analysis (ABSA) model.
+このデモでは、Python Azure ML SDK を使用するカスタム Python コードを実行して、カスタムのアスペクトベースの感情分析 (ABSA) モデルをトレーニング、最適化、および使用します。
 
-All of the instructions for this part of the demo are located in the Jupyter Notebook itself. Use one of the methods described above to run the Notebook (in Azure Notebooks, or locally), and follow instructions there. 
+デモのこの部分のすべての手順は、Jupyter Notebook 自体に含まれています。 上記で説明したいずれかの方法を使用して Notebook を (Azure Notebooks で、またはローカルで) 実行し、その手順に従います。 
 
-## Tear Down
+## <a name="tear-down"></a>破棄
 
-To free up cloud resources used during the demo, you need to delete Azure ML workspace and resource group:
+デモ中に使用したクラウド リソースを解放するには、Azure ML ワークスペースとリソース グループを削除する必要があります。
 
 ```shell
 az ml workspace delete --w absa_space -g absa
 az group delete -n absa
 ```
 
-## Presenter Resources
+## <a name="presenter-resources"></a>プレゼンター リソース
 
-If you are going to present this content, please have a look at the [additional presenter resources](README-Instructor.md).
+このコンテンツをプレゼンテーションする場合は、「[その他のプレゼンター リソース](README-Instructor.md)」を参照してください。
 
-## Resources and Continue Learning
+## <a name="resources-and-continue-learning"></a>リソースと継続学習
 
-### Getting Started Series
+### <a name="getting-started-series"></a>「はじめに」シリーズ
 
-* [Azure Cognitive Services Text Analytics API](https://aka.ms/TextCogSvc​)
-* [Automated Machine Learning](https://aka.ms/AutomatedMLDoc​)
-* [Hyperparameter Tuning](https://aka.ms/AzureMLHyperDrive​)
-* [Azure ML Services and the Python SDK](https://aka.ms/AA3dzht) ​
+* [Azure Cognitive Services Text Analytics API](https://aka.ms/TextCogSvc)
+* [自動機械学習](https://aka.ms/AutomatedMLDoc)
+* [ハイパーパラメーターの調整](https://aka.ms/AzureMLHyperDrive)
+* [Azure ML サービスと Python SDK](https://aka.ms/AA3dzht) 
 
-### Other Materials
+### <a name="other-materials"></a>その他の資料
 
-* [9 Advanced Tips for Production Machine Learning](aka.ms/9TipsProdML)
-* [Intel Aspect-Based Sentiment Analysis Page](https://www.intel.ai/introducing-aspect-based-sentiment-analysis-in-nlp-architect/)
-* Azure ML Best Practice Repos:
-    * [Natural Language Processing](https://github.com/microsoft/nlp/)
-    * [Computer Vision](https://github.com/microsoft/ComputerVision)
-    * [Recommenders](https://github.com/microsoft/Recommenders)
+* [機械学習運用の高度なヒント 9 つ](aka.ms/9TipsProdML)
+* [Intel のアスペクトベースの感情分析ページ](https://www.intel.ai/introducing-aspect-based-sentiment-analysis-in-nlp-architect/)
+* Azure ML ベスト プラクティス リポジトリ:
+    * [自然言語処理](https://github.com/microsoft/nlp/)
+    * [コンピューティング バージョン](https://github.com/microsoft/ComputerVision)
+    * [推薦者](https://github.com/microsoft/Recommenders)
 
 
-## Feedback loop
+## <a name="feedback-loop"></a>フィードバック ループ
 
-Do you have a comment, feedback, suggestion? Currently, the best feedback loop for content changes/suggestions/feedback is to create a new issue on this GitHub repository. To get all the details about how to create an issue please refer to the [Contributing](../../contributing.md) docs
+コメント、フィードバック、ご提案はございますか。 現在のところ、コンテンツ変更/提案/フィードバックの最良のフィードバック ループは、この GitHub リポジトリで新しい問題を作成することです。 問題の作成方法については、[投稿に関するドキュメント](../../contributing.md)を参照してください。

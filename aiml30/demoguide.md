@@ -1,86 +1,87 @@
-# Demo Guide
-Make sure you have completed the [demo setup steps here](demosetup.md)
+# <a name="demo-guide"></a>デモ ガイド
+[こちらでデモのセットアップ手順](demosetup.md)を完了していることを確認してください
 
-# Demo 1: Data Prep Demo with App
-In the first demo highlight the data preparation that was discussed in the slides for Time Series models. Walk through step by step how to do this in the C# demo app. Make sure to highlight that this can be done in any language.
+# <a name="demo-1-data-prep-demo-with-app"></a>デモ 1:アプリを使用したデータ準備のデモ
+最初のデモでは、タイム シリーズ モデル用のスライドで説明したデータ準備を強調します。 C# デモ アプリで、これを行う方法について順を追って説明します。 これはどの言語でも実行できることを必ず強調してください。
 
-To navigate through code with `F12` and `CTRL-` shortcuts download the Visual Studio Shortcut Extension for VS Code [here](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vs-keybindings). This is super useful and keeps from having to scroll around trying to find things.
+`F12` と `CTRL-` のショートカットを使用してコード間を移動するには、[こちらで](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vs-keybindings) VS Code 用の Visual Studio ショートカット拡張機能をダウンロードしてください。 これは非常に便利であり、何かを探してスクロールする必要がなくなります。
 
-### Data Prep Demo Video [here](https://youtu.be/u1ppYaZuNmo?t=751)
+### <a name="data-prep-demo-video-herehttpsyoutubeu1ppyazunmot751"></a>データ準備のデモ ビデオは[こちら](https://youtu.be/u1ppYaZuNmo?t=751)
 
-### 1. Open the `IgniteAimlDataApp` App. I personally like to have this open before I start the talk so I can just flip to it.
-* Open the `Program.cs` file
-* Go to `GetProcessedDataForScore` method by right clicking and select `Go To Definition` or hitting `F12`
-    * Load data from data source. In this example we are loading for a local excel file in the solution.
-* `F12` to `AddWeeksToPredict` method and discuss logic.
-    * Get latest date and add 4 future weeks from that date
-    * Since the data is weekly and we want to know if a holiday occured during the week we calculate all dates that occured in the week and populate a collection called `DatesInWeek`
-    * Next create time futures for the 4 future weeks added to the collection.
-* `F12` to `CreateTimeFeatures` method from within `AddWeeksToPredict` logic and discuss logic.
-    * Use the current time property to calculate the time and holiday features needed.
-* `CTRL-` to navigate back to `AddWeeksToPredict`
-* `F12` to `CreateFourierFeatures`
-    * Calcuate Fourier Term features from the seasonality of 52 for our weekly data features. 
-* `CTRL-` to navigate back to `GetProcessedDataForScore`
-* `F12` to `CreateLagFeatures` method and discuss logic.
-    * Add the 26 prior week sales values to the current row.
-* `CTRL-` to navigate back to `GetProcessedDataForScore`
+### <a name="1-open-the-igniteaimldataapp-app-i-personally-like-to-have-this-open-before-i-start-the-talk-so-i-can-just-flip-to-it"></a>1.`IgniteAimlDataApp` アプリを開きます。 個人的には、説明を開始する前にこれを開いておいて、すぐに移動できるようにしておくことをお勧めします。
+* `Program.cs` ファイルを開きます
+* 右クリックして `Go To Definition` を選択するか、`F12` キーを押すことで、`GetProcessedDataForScore` メソッドに移動します
+    * データ ソースからデータを読み込みます。 この例では、ソリューション内にあるローカルの Excel ファイルに読み込みます。
+* `AddWeeksToPredict` メソッドに `F12` して、ロジックについて説明します。
+    * 最新の日付を取得し、その日付から先の 4 週間を追加します
+    * データは週単位であり、週の間に休日があるかどうかを確認する必要があるため、週に含まれるすべての日付を計算し、`DatesInWeek` という名前のコレクションを設定します
+    * 次に、コレクションに追加された未来の 4 週間に対する時刻の特徴を作成します。
+* `AddWeeksToPredict` ロジック内から `CreateTimeFeatures` メソッドに `F12` して、ロジックについて説明します。
+    * 現在の時刻のプロパティを使用して、必要な時刻と休日の特徴を計算します。
+* `CTRL-` を使って `AddWeeksToPredict` に戻ります
+* `CreateFourierFeatures` に `F12` します
+    * 週単位のデータの特徴の 52 個の季節性からフーリエ項の特徴を計算します。 
+* `CTRL-` を使って `GetProcessedDataForScore` に戻ります
+* `CreateLagFeatures` メソッドに `F12` して、ロジックについて説明します。
+    * 現在の行に、26 週間前の売上の値を追加します。
+* `CTRL-` を使って `GetProcessedDataForScore` に戻ります
 
-* Data Demo Backup Options
-    * Use the embedded mp4 video in the hidden slide. Talk along side this video without sound.
-    * Start at slide 21 and show the data prep code in static slide steps.
+* データ デモのバックアップ オプション
+    * 非表示スライドで埋め込みの mp4 ビデオを使用します。 音を消したこのビデオに沿って説明します。
+    * スライド 21 から開始し、静的なスライドの手順でデータ準備のコードを示します。
 
-# Demo 2: Build Model with Azure Machine Learning Visual Designer
+# <a name="demo-2-build-model-with-azure-machine-learning-visual-designer"></a>デモ 2:Azure Machine Learning ビジュアル デザイナーでモデルを構築する
 
-### Full Model Building Live Demo Video [here](https://youtu.be/u1ppYaZuNmo?t=1278)
+### <a name="full-model-building-live-demo-video-herehttpsyoutubeu1ppyazunmot1278"></a>完全なモデル構築のライブ デモ ビデオは[こちら](https://youtu.be/u1ppYaZuNmo?t=1278)
 
-### 1. Create Resource and Upload Dataset
+### <a name="1-create-resource-and-upload-dataset"></a>1.リソースの作成とデータセットのアップロード
 
-* Create Azure Machine Learning Workspace Resource and Navigate to the new Workspace.
-    * Review high level where the different tools are that was discussed in the slides.
-    * Video Resources for this step:
-        * [Here](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml30/CreateAMLNavToWorkspace.mp4) is video of this step without sound.
-        * [Here](https://youtu.be/u1ppYaZuNmo?t=1278) is video of how to create the resource with audio.
-* Upload the dataset to the Datasets in AML
-    * Click `Datasets`
-    * Click `Create from datastore`
-        * NOTE: you should have already uploaded the dataset to the datastore in the demo setup steps.
-    * Fill in required fields and select the `workspaceblobstorage` option
-    * Click `Create`
-    * Optional: Step through the data prep feature in the datasets upload for AML
+* Azure Machine Learning ワークスペースのリソースを作成し、新しいワークスペースに移動します。
+    * スライドで説明されていた、さまざまなツールが存在する場所を大まかに確認します。
+    * この手順のビデオ リソース:
+        * この手順の音のないビデオは[こちら](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml30/CreateAMLNavToWorkspace.mp4)です。
+        * リソースの作成方法に関する音声ありのビデオは[こちら](https://youtu.be/u1ppYaZuNmo?t=1278)です。
+* AML のデータセットにデータセットをアップロードします
+    * `Datasets` をクリックします
+    * `Create from datastore` をクリックします
+        * 注: デモのセットアップ手順で、データセットを既にデータストアにアップロードしている必要があります。
+    * 必須フィールドに入力し、`workspaceblobstorage` オプションを選択します
+    * `Create` をクリックします
+    * 省略可能:AML へのデータセットのアップロードで、データ準備の機能を説明します
 
-### 2. Launch Visual Designer and Explain Tool Features
+### <a name="2-launch-designer-and-explain-tool-features"></a>2.デザイナーを起動してツールの機能を説明します
 
-* Summarize the different modules in the left nav including the test datasets.
+* Studio で、左側のナビゲーションの [デザイナー] を選択します
+* 左側のナビゲーションに含まれる、テスト データセットなどのさまざまなモジュールの概要を説明します。
 
-### 3. Start Building the  Model
+### <a name="3-start-building-the--model"></a>3.モデルの構築を開始します
 
-* Drag and drop the dataset onto the experiment workspace
-    * Note the file upload module as an option for getting data into workspace
-* Drag the `Select Columns in Dataset` onto the workspace
-    * Click `Edit columns` from the properties menu on the right side.
-    * Click `All Columns`
-    * Click `Exclude`
-    * Click `column names`
-    * Exclude the `Time` column
-    * Exclude the `DatesInWeek`
-    * NOTE: Optionally exclude these columns in the data edit feature when uploading the dataset to the workspace in the data prep steps during upload.
-* Drag the `Split Data` onto the workspace
-    * Edit the properties to split the data 70/30. 
-    * Discuss that this is not a rule and can change base on different model needs.
-* Drag the `Train Model` onto the workspace
-    * Select the label column name `Value` from the properties on the right
-* Drag the `Boosted Decision Tree Regression` onto the workspace
-* Drag the `Score Model` onto the workspace
-* Drag the `Evaluate` onto the workspace
-* Connect the `Split Data` module to `Train Model` for the training data and `Score Model` for scoring the predicted results with unseen data.
-* Connect `Train Model` to the training algorithm `Boosted Decision Tree Regression` module.
-* Connect `Score Model` with the `Evaluate` module.
-* This is normally where you would run the model _however_ it takes too long to run in the demo. Discuss how you would click the `Run` button in the bottom nav and select compute. This will segway nicely into talking about how to create compute resources in AML.
+* データセットを実験ワークスペースにドラッグ アンド ドロップします
+    * ワークスペースにデータを追加するためのオプションとしてファイルのアップロード モジュールに言及してください
+* `Select Columns in Dataset` をワークスペースにドラッグします
+    * 右側のプロパティ メニューにある `Edit columns` をクリックします。
+    * `All Columns` をクリックします
+    * `Exclude` をクリックします
+    * `column names` をクリックします
+    * `Time` 列を除外します
+    * `DatesInWeek` を除外します
+    * 注:必要に応じて、アップロード中のデータ準備手順でワークスペースにデータセットをアップロードするときに、データ編集機能でこれらの列を除外します。
+* `Split Data` をワークスペースにドラッグします
+    * プロパティを編集し、データを 70/30 で分割します。 
+    * これはルールではなく、さまざまなモデル ニーズに基づいて変更できると説明します。
+* `Train Model` をワークスペースにドラッグします
+    * 右側のプロパティからラベルの列名 `Value` を選択します
+* `Boosted Decision Tree Regression` をワークスペースにドラッグします
+* `Score Model` をワークスペースにドラッグします
+* `Evaluate` をワークスペースにドラッグします
+* `Split Data` モジュールはトレーニング データ用として `Train Model` に接続し、未知のデータによる予測結果にスコアを付ける目的で `Score Model` に接続します。
+* `Train Model` をトレーニング アルゴリズム `Boosted Decision Tree Regression` モジュールに接続します。
+* `Score Model` を `Evaluate` モジュールと接続します。
+* このデモで実行するには時間がかかりすぎる "_としても_"、通常はここでモデルを実行します。 下部ナビゲーションにある `Run` ボタンをクリックし、コンピューティングを選択する方法について説明します。 ここから、AML でコンピューティング リソースを作成する方法の説明にスムーズに移行できます。
 
-* These next steps will be part of the completed model but no need to actually create them in the live demo version that will not be trained.
-    * Drag the `Execute Python Script` module onto the workspace and connect the `Score Model` module to it. 
-    * Copy and paste this code in:
+* 以下の手順は完成したモデルに含まれますが、トレーニングされないライブ デモ バージョンで、それらを実際に作成する必要はありません。
+    * `Execute Python Script` モジュールをワークスペースにドラッグし、`Score Model` モジュールをそれに接続します。 
+    * このコードをコピーし、次の場所に貼り付けます。
     
     
     ```python 
@@ -95,46 +96,46 @@ To navigate through code with `F12` and `CTRL-` shortcuts download the Visual St
       return df
     ```
       
-    * Drag the `Select Columns in Dataset`
-        * Select columns `ID1`, `ID2`, `Value` and `Forecast`
-        * These are the columns the data demo app will be expecting when we post to get a result from the completed and deployed model.
-### 4. Discuss Compute Target Creation
-* Navigate back to AML
-* Click the `Compute` navigation item
-* Click `Add`
-* Discuss the different compute types and what they are used for. The computes used for this demo are a `Machine Learning Compute` for training and the `Kubernetes Service` for deploying the API.
+    * `Select Columns in Dataset` をドラッグします
+        * 列 `ID1`、`ID2`、`Value`、`Forecast` を選択します
+        * これらは、完成したデプロイ済みのモデルから結果を取得するために投稿するときに、データ デモ アプリから求められる列です。
+### <a name="4-discuss-compute-target-creation"></a>4.コンピューティング先の作成について説明する
+* AML に戻ります
+* `Compute` ナビゲーション項目をクリックします
+* `Add` をクリックします
+* さまざまなコンピューティングの種類とその用途について説明します。 このデモで使用されるコンピューティングは、トレーニング用の `Machine Learning Compute` と、API をデプロイするための `Kubernetes Service` です。
 
-### 5. Explain Trained Model
-* Navigate back to Visual Designer
-* Right Click on the second module in the model to Visualize the data (most likely the `Select Columns in Dataset`)
-* Quickly scroll through the data to show how the data looks.
-* Click on a column and show how the the tool creates visualizations in the right panel.
-* Visualize the `Score Model` module to show how the model predicted on the unseen data
-* Visualize the `Evaluate Model` module and discuss the metrics used to score.
-    * Click `More Help` in the right panel of the properties.
-    * Highlight that every module has a link to the docs in the properties that will explain what the module is doing.
-    * Scroll down and show the metrics explanations in the docs for the model.
-### 6. Create Predictive Experiment and Deploy the Model
-This is normally where you would create the `Predictive Experiment` to deploy it to a web service _however_ we have done these steps in advance. 
-* Discuss these steps _do not do them live_:
-    * Click `Create` predictive experiment. Think of the `Predictive Experiment` model as the production model that gets deployed to the web service. The     `Training Experiment` as the dev model.
-    * Add the `Execute Python Script` and `Select Columns in Dataset` modules to    the created predictive experiment.
-    * Run the experiment
-    * Click `Deploy Web Service`
-* After discussing the steps to create the `Predictive Experiment` navigate to the deployed web service from the left nav.
-* Click on the name of the web service created in advance.
-* Click `Test` and show how it performs on a scored data item.
-* Click `Consume` and show the sample code provided for integrating the web service.
+### <a name="5-explain-trained-model"></a>5.トレーニング済みのモデルを説明する
+* ビジュアル デザイナーに戻ります
+* モデル内の 2 番目のモジュールを右クリックして、データを視覚化します (ほとんどの場合 `Select Columns in Dataset`)
+* データをすばやくスクロールして、データの外観を示します。
+* 列をクリックし、ツールによって右側のパネルに視覚化がどのように作成されるかを示します。
+* `Score Model` モジュールを視覚化し、モデルによって未知のデータに対するどのような予測が行われたかを示します
+* `Evaluate Model` モジュールを視覚化し、スコア付けに使用されるメトリックについて説明します。
+    * プロパティの右側のパネルで `More Help` をクリックします。
+    * すべてのモジュールのプロパティには、そのモジュールの機能を説明するドキュメントへのリンクが含まれていることを強調します。
+    * 下にスクロールし、そのモデルのドキュメント内のメトリックに関する説明を示します。
+### <a name="6-create-predictive-experiment-and-deploy-the-model"></a>6.予測実験の作成とモデルのデプロイ
+以下の手順をあらかじめ実行していた "_としても_"、通常はここで `Predictive Experiment` を作成して Web サービスにデプロイします。 
+* 次の手順は、"_ライブでは行わない_" ことを説明します。
+    * `Create` 予測実験をクリックします。 `Predictive Experiment` モデルは、Web サービスにデプロイされる運用モデルとお考えください。 `Training Experiment` は開発モデルと考えます。
+    * 作成された予測実験に `Execute Python Script` モジュールと `Select Columns in Dataset` モジュールを追加します。
+    * 実験を実行します
+    * `Deploy Web Service` をクリックします
+* `Predictive Experiment` を作成する手順について説明した後、左側のナビゲーションからデプロイした Web サービスに移動します。
+* あらかじめ作成した Web サービスの名前をクリックします。
+* `Test` をクリックし、それがスコア付けされたデータ項目に対してどのように実行されるかを示します。
+* `Consume` をクリックし、Web サービスを統合するためのサンプル コードを示します。
 
 
-# Demo 3: Testing API with C# console app (dotnet core)
-### API Demo Test Video [here](https://youtu.be/u1ppYaZuNmo?t=2136)
+# <a name="demo-3-testing-api-with-c-console-app-dotnet-core"></a>デモ 3:C# コンソール アプリで API をテストする (dotnet core)
+### <a name="api-demo-test-video-herehttpsyoutubeu1ppyazunmot2136"></a>API デモ テストのビデオは[こちら](https://youtu.be/u1ppYaZuNmo?t=2136)
 
-* Copy the API key from the `Consume` tab
-* Open the `App.config` and paste it in the value attribute
-* Copy the `Request-Response Url` from the `Consume` tab
-* Open the `Program.cs` and paste the value in `client.BaseAddress = new Uri("");`
-* Right click `Program.cs` and select `Open in Terminal`
-* Type the command `dotnet run` to run the console app
-* To use the default values of StoreID (ID1) of 2 and ItemID (ID2) of 1 and the number of weeks to predict. Just type `y`
-* This will run and should return the predicted values for the next 4 weeks.
+* `Consume` タブから API キーをコピーします
+* `App.config` を開き、値属性にそれを貼り付けます
+* `Consume` タブから `Request-Response Url` をコピーします
+* `Program.cs` を開き、`client.BaseAddress = new Uri("");` に値を貼り付けます
+* `Program.cs` を右クリックし、`Open in Terminal` を選択します
+* コマンド「`dotnet run`」を入力し、コンソール アプリを実行します
+* StoreID (ID1) の既定値 2、ItemID (ID2) の既定値 1、予測する週の数を使用するには。 「`y`」と入力します
+* これで実行され、次の 4 週間分の予測値が返されるはずです。

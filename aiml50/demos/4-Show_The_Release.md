@@ -1,22 +1,21 @@
-# Show the Release Process
+# <a name="show-the-release-process"></a>リリース プロセスを表示する
 
-## Automating the Manual Process
+## <a name="automating-the-manual-process"></a>手動プロセスの自動化
 
-Talking Points:
+トークのポイント:
 
-* So with those points in mind, let’s look at the build definition:
-* Rather than doing it in Jupyter Notebooks (like last demo), let’s make it just the code
+* これらのポイントを念頭に置いて、ビルド定義を見てみましょう。
+* Jupyter Notebook (最後のデモなど) で実行するのではなく、コードだけを作成してみましょう。
 
-Demo :
+デモ:
 
-* Let’s look at the Release:
-  * Show the Release Definition
-  * Show the extension for Azure DevOps and that it adds a new artifact type you can set CD on
-  * Show the important task – deploying to ACI (expand Deployment Options)
-  * Explain that if we wanted to (and we should), we can clone that stage, and maybe deploy to AKS or a different location. We can add gates or manual approvals or gradual rollouts.
-* Now we’ve deployed, let’s look at the results:
-  *Try uploading the same images again and see that the results are different. A little better, but not perfect – maybe we want to do some more training before releasing this into the wild.
+* それではリリースを見てみましょう。
+  * リリース定義を表示します
+  * Azure DevOps の拡張機能を表示し、CD の設定先である新しい成果物の種類を追加します
+  * 重要なタスクを表示する - ACI へのデプロイ (デプロイ オプションの展開)
+  * 必要に応じて、そのステージを複製して、AKS または別の場所にデプロイすることができます。 ゲートまたは手動の承認や段階的ロールアウトを追加することができます。
+* デプロイしたため、次は結果を見てみましょう: *同じイメージのアップロードを再度試行し、結果が異なることを確認します。 少しよくなりましたが、完璧ではありません。これをイン ザ ワイルドへリリースする前に、さらにトレーニングを行う必要があるかもしれません。
 
-## Example Demo
+## <a name="example-demo"></a>サンプル デモ
 
-* [Dry run starting at 24:44](https://youtu.be/UgM8_4fAni8?t=1951)
+* [ドライ ラン (24:44 に開始)](https://youtu.be/UgM8_4fAni8?t=1951)

@@ -1,71 +1,71 @@
-## Demo 2 - Using Form Recognizer
+## <a name="demo-2---using-form-recognizer"></a>デモ 2 - Form Recognizer を使用する
 
-[![Demo 2](images/demo2.png)](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/videos/Demo2.mp4 "Demo 2")
+[![デモ 2](images/demo2.png)](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/videos/Demo2.mp4 "デモ 2")
 
-## Summary
-In this exercise we learn how to use the Form Recognizer service. It is assumed that a storage account has been created (as described in the [first demo](demo1.md).)
-
-
-## What you need
-- [Invoice Training Set](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/data/train.zip)
-
-- Access to the limited-access preview. To get access to the preview, fill out and submit the [Form Recognizer access request](https://aka.ms/FormRecognizerRequestAccess) form.
-
-- [Postman](https://www.getpostman.com/) is used to send requests to the Form Recognizer service REST API. Refer to this [short primer](postman.md) to learn more.
-
-- Postman Form Recognizer requests [collection](src/Collections/Form_Recognizer.postman_collection.json).
-
-## Azure Resources
-The only resource we work with in this demonstration is the Form Recognizer service.
+## <a name="summary"></a>概要
+この演習では、Form Recognizer サービスを使用する方法について学習します。 ストレージ アカウントが作成されていることを前提としています ([最初のデモ](demo1.md)を参照してください)。
 
 
-| Name                       | Type                            | Purpose                    |
+## <a name="what-you-need"></a>必要なもの
+- [請求書トレーニング セット](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/data/train.zip)
+
+- アクセスが制限されたプレビューへのアクセス。 プレビューへのアクセスを取得するには、[Form Recognizer アクセス要求](https://aka.ms/FormRecognizerRequestAccess)フォームに記入して送信します。
+
+- Form Recognizer サービス REST API に要求を送信するには、[Postman](https://www.getpostman.com/) を使用します。 詳細については、この[簡単な概要](postman.md)を参照してください。
+
+- Postman Form Recognizer の要求の[コレクション](src/Collections/Form_Recognizer.postman_collection.json)。
+
+## <a name="azure-resources"></a>Azure リソース
+このデモで使用する唯一のリソースは、Form Recognizer サービスです。
+
+
+| 名前                       | 種類                            | 目的                    |
 | -------------------------- | ------------------------------- | ------------------------- |
-| **ttinvoicereader**       | Form Recognizer Service         | This service will eventually end up in the All-In-One sevice. For right now it is in limited-access preview. To get access to the preview, fill out and submit the [Form Recognizer access request](https://aka.ms/FormRecognizerRequestAccess) form.  |
+| **ttinvoicereader**       | Form Recognizer サービス         | このサービスは、最終的にオールインワン サービスになります。 現時点では、アクセス制限付きのプレビューです。 プレビューへのアクセスを取得するには、[Form Recognizer アクセス要求](https://aka.ms/FormRecognizerRequestAccess)フォームに記入して送信します。  |
 
 
-## What to do
+## <a name="what-to-do"></a>手順
 
-There are three main steps:
-1. Upload training data to the storage account
-2. Create Form Recognizer service
-3. Train and Use Form Recognizer service
+主な手順が 3 つあります。
+1. ストレージ アカウントにトレーニング データをアップロードする
+2. Form Recognizer サービスを作成する
+3. Form Recognizer サービスをトレーニングして使用する
 
-### Upload Training Data
+### <a name="upload-training-data"></a>トレーニング データをアップロードする
 
 
-1. Create a container called `train` in the storage account created in the previous demo.
+1. 前のデモで作成したストレージ アカウントに、`train` という名前のコンテナーを作成します。
 
-[![Create Container](images/create_container.png)](https://docs.microsoft.com/en-us/azure/storage/blobs/storage-quickstart-blobs-portal?WT.mc_id=msignitethetour2019-github-aiml10 "Create Container")
+[![コンテナーを作成する](images/create_container.png)](https://docs.microsoft.com/en-us/azure/storage/blobs/storage-quickstart-blobs-portal?WT.mc_id=msignitethetour2019-github-aiml10 "コンテナーを作成する")
 
-2. Download and unzip [invoice training set](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/data/train.zip).
+2. [請求書トレーニング セット](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/data/train.zip)をダウンロードして解凍します。
 
-3. Upload unzipped [invoice training set](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/data/train.zip) to the `train` container. This can be done directly using the [portal](https://docs.microsoft.com/en-us/azure/storage/blobs/storage-quickstart-blobs-portal?WT.mc_id=msignitethetour2019-github-aiml10#upload-a-block-blob) or by using the [Azure Storage Explorer](https://docs.microsoft.com/en-us/azure/vs-azure-tools-storage-explorer-blobs?WT.mc_id=msignitethetour2019-github-aiml10) (as shown in the [video](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/videos/Demo2.mp4 "Demo 1")).
+3. 解凍された[請求書トレーニング セット](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/data/train.zip)を `train` コンテナーにアップロードします。 これは、[ポータル](https://docs.microsoft.com/en-us/azure/storage/blobs/storage-quickstart-blobs-portal?WT.mc_id=msignitethetour2019-github-aiml10#upload-a-block-blob)を使用して直接、または [Azure Storage Explorer](https://docs.microsoft.com/en-us/azure/vs-azure-tools-storage-explorer-blobs?WT.mc_id=msignitethetour2019-github-aiml10) を使用して ([ビデオ](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/videos/Demo2.mp4 "デモ 1")を参照)、行うことができます。
 
-### Create Form Recognizer service
+### <a name="create-form-recognizer-service"></a>Form Recognizer サービスを作成する
 
-In order to do this you must have access to the Form Recognizer preview. To get access to the preview, fill out and submit the [Form Recognizer access request](https://aka.ms/FormRecognizerRequestAccess) form. 
+これを行うには、Form Recognizer プレビューにアクセスできる必要があります。 プレビューへのアクセスを取得するには、[Form Recognizer アクセス要求](https://aka.ms/FormRecognizerRequestAccess)フォームに記入して送信します。 
 
 
 [![Form Recognizer](images/form_recognizer.png)](https://docs.microsoft.com/en-us/azure/cognitive-services/form-recognizer/overview?WT.mc_id=msignitethetour2019-github-aiml10#request-access "Form Recognizer")
 
-### Train the Form Recognizer Service
+### <a name="train-the-form-recognizer-service"></a>Form Recognizer サービスをトレーニングする
 
-This section uses Postman and assumes you know about loading collections, handling variables, and setting pre-request scripts. To learn how to do these specific things we have included some [instructions](postman.md).
+このセクションでは、Postman を使用します。コレクションの読み込み、変数の処理、および事前要求スクリプトの設定について理解していることを前提としています。 これらの特定の操作を行う方法については、いくつかの[説明](postman.md)を用意してあります。
 
-The table below lists the variables set during this section of the exercise:
+次の表では、演習のこのセクションで設定する変数を示します。
 
-| Name                       | Type                            | Purpose                    |
+| 名前                       | 種類                            | 目的                    |
 | -------------------------- | ------------------------------- | ------------------------- |
-| `Ocp-Apim-Subscription-Key`       | Authorization         | Key for getting access to Form Recognizer service  |
-| `endpoint`       | Variable         | Specifies the Form Recognizer endpoint  |
-| `modelId`       | Variable         | Current Form Recognizer model (this is set in step 5)  |
+| `Ocp-Apim-Subscription-Key`       | 認可         | Form Recognizer サービスへのアクセスを取得するためのキー  |
+| `endpoint`       | 変数         | Form Recognizer エンドポイントを指定します  |
+| `modelId`       | 変数         | 現在の Form Recognizer モデル (ステップ 5 で設定されます)  |
 
-1. Load the [Form Recognizer collection](src/Collections/Form_Recognizer.postman_collection.json) into Postman.
+1. [Form Recognizer コレクション](src/Collections/Form_Recognizer.postman_collection.json)を Postman に読み込みます。
 
-2. Set the `Ocp-Apim-Subscription-Key` authorization header as well as the `endpoint` variable to the Form Recognizer service (these can be found in the portal).
+2. `Ocp-Apim-Subscription-Key` Authorization ヘッダーおよび `endpoint` 変数を、Form Recognizer サービスに設定します (これらはポータルで確認できます)。
 
-3. Open the `TrainModel` Request and change the Pre-request script to set the `storageAccount` variable to your storage account (in the video the variable is `ttinvoicestorage`) and the `SASValue` to the appropriate Secure Access Signature to the `train` container. To learn how to get a Secure Access Signature, refer to our [brief explanation](sas.md).
+3. `TrainModel` 要求を開き、事前要求スクリプトを変更して、`storageAccount` 変数にはお使いのストレージ アカウントを設定し (ビデオでの変数は `ttinvoicestorage`)、`SASValue` には `train` コンテナーに対する適切な Secure Access Signature を設定します。 Secure Access Signature を取得する方法については、[簡単な説明](sas.md)を参照してください。
 
 ```javascript
 pm.environment.set('storageAccount', '<YOUR STORAGE ACCOUNT>')
@@ -73,18 +73,18 @@ pm.environment.set('container', 'train')
 pm.environment.set('SASValue', '<SAS>')
 ```
 
-4. Hit Send on the Request. Your response should look something like this:
+4. 要求で [送信] をクリックします。 応答は次のようになります。
 
-![Training Response](images/form_training.png "Training Response")
+![トレーニングの応答](images/form_training.png "トレーニングの応答")
 
-5. Set the `modelId` variable for the collection to the returned `modelId` indicated above.
+5. コレクションの `modelId` 変数に、前に示した返された `modelId` を設定します。
 
 
-### Use the Form Recognizer Service
+### <a name="use-the-form-recognizer-service"></a>Form Recognizer サービスを使用する
 
-1. Open the `AnalyzeForm` request. In the **Body** section click on the `Select Files` button to choose an invoice downloaded previously. After sending the request you should get something similar to:
+1. `AnalyzeForm` 要求を開きます。 **[本文]** セクションで、[`Select Files`] ボタンをクリックして、以前にダウンロードした請求書を選択します。 要求を送信すると、次のような情報が表示されます。
 
-![Inference Response](images/form_inference.png "Inference Response")
+![推定応答](images/form_inference.png "推定応答")
 
-# Next Demo
-Learn how to create custom Invoice Reader Skill with Azure Functions by continuing on to [Demo 3 - Creating a Custom Invoice Reader Skill](demo3.md)
+# <a name="next-demo"></a>次のデモ
+「[デモ 3 - カスタム請求書リーダー スキルを作成する](demo3.md)」に進み、Azure Functions を使用してカスタム請求書リーダー スキルを作成する方法を学習します

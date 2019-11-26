@@ -1,92 +1,86 @@
-# DEMO: ONNX Deployment
+# <a name="demo-onnx-deployment"></a>デモ:ONNX のデプロイ
 
-In this demo, we take the ONNX file we exported in the [Custom
-Vision](DEMO%20Custom%20Vision.md) demo, and deploy it to the Tailwind Traders website.
+このデモでは、[Custom Vision](DEMO%20Custom%20Vision.md) デモでエクスポートした ONNX ファイルを取得し、Tailwind Traders の Web サイトにそれをデプロイします。
 
-The website uses the model in `products.onnx` for the Shop by Photo app. The
-uploaded image is processed by the model, which generates one of five labels:
-"hammer", "drill", "pliers", "screwdriver" or "hard hat". The website searches
-the product list for the generated label, and returns the results of the search.
+Web サイトでは、Shop by Photo アプリ用に `products.onnx` でモデルを使用します。 アップロードされる画像はモデルによって処理され、次の 5 つのいずれかのラベルが生成されます: "hammer (ハンマー)"、"drill (ドリル)"、"pliers (ペンチ)"、"screwdriver (スクリュードライバー)"、"hard hat (ヘルメット)"。 Web サイトにより、生成されたラベルの製品リストが検索され、検索結果が返されます。
 
-## Load the simple ONNX model
+## <a name="load-the-simple-onnx-model"></a>単純な ONNX モデルを読み込む
 
-(TIP: You can do this step ahead of time. This step is necessary if you have run
-this demo before on the same deployment.)
+(ヒント: この手順は、事前に行うことができます。 この手順は、同じデプロイで前にこのデモを実行している場合に必要です。)
 
-We will replace the products.onnx file in the Web app with a version that only recognizes two object categories: "hammer" and "drill".
+Web アプリの products.onnx ファイルを、2 つのオブジェクト カテゴリ ("hammer" と "drill") のみを認識するバージョンに置き換えます。
 
-1. In the Azure Portal, visit your aiml20-demo resource group
+1. Azure Portal で、aiml20-demo リソース グループにアクセスします。
 
-1. Click the "aiml20" App Service resource
+1. "aiml20" App Service リソースをクリックします。
 
-1. In the left menu under Development Tools, Click Advanced tools, then click "Go" in right pane to launch Kudu.
+1. 左側のメニューの [開発ツール] で、[高度なツール] をクリックし、右側のペインで [移動] をクリックして Kudu を起動します。
 
-1. In the main menu bar, Click Debug Console > PowerShell
+1. メイン メニュー バーで、[デバッグ コンソール] > [PowerShell] をクリックします。
 
-1. Browse to: site / wwwroot / Standalone / Onnxmodels
+1. 以下に移動します: site / wwwroot / Standalone / Onnxmodels
 
-1. With Explorer, open the `ONNX / simple model` folder from your AIML20 repo
+1. エクスプローラーで、AIML20 リポジトリから `ONNX / simple model` フォルダーを開きます。
 
-1. Drag products.onnx into the LEFT HALF of the Kudu window. (IMPORTANT: Do NOT drag into the box that says "drag here to upload and unzip".) This model only knows how to identify drills and hammers.
+1. products.onnx into を、Kudu ウィンドウの左半分にドラッグします。 (重要: "アップロードして解凍するにはここにドラッグしてください" というボックスにはドラッグしないでください。)このモデルは、ドリルとハンマーを識別する方法のみを認識します。
 
-1. Restart the web server. Return to the "aiml20" App Service resource and click "Restart" in the top menu bar. Wait two minutes for the website to restart completely.
+1. Web サーバーを再起動します。 "aiml20" App Service リソースに戻り、上部のメニュー バーで [再起動] をクリックします。 Web サイトが完全に再起動するまで 2 分待ちます。
 
-## Defining the problem: Shop by Photo doesn't work right
+## <a name="defining-the-problem-shop-by-photo-doesnt-work-right"></a>問題の定義: Shop by Photo が正しく機能しない
 
-(Note: This section was done at the beginning of the AIML20 presentation.)
+(注: このセクションは、AIML20 プレゼンテーションの冒頭で実行されました。)
 
-1. Visit the Tailwind Traders website you deployed earlier. 
+1. 以前にデプロイした Tailwind Traders Web サイトにアクセスします。 
 
-1. Scroll down to the "Shop by Photo" section of the website
+1. Web サイトの "Shop by Photo (写真でのショッピング)" セクションまで下にスクロールします。
 
-1. Click "Shop by Photo"
+1. [Shop by Photo]\(写真でのショッピング\) をクリックします。
 
-1. In your AIML20 repo, select: test images > drill.jpg
+1. AIML20 リポジトリで、[test images]\(テスト画像\) > [drill.jpg] を選択します。
 
-1. It correctly identifies it as a drill. Yay!
+1. これで、ドリルとして正しく認識されます 。
 
-1. Return to home page and click "Shop by Photo" again
+1. ホーム ページに戻り、[Shop by Photo]\(写真でのショッピング\) をもう一度クリックします。
 
-1. In your AIML20 repo, select: test images > pliers.jpg
+1. AIML20 リポジトリで、[test images]\(テスト画像\) > [pliers.jpg] を選択します。
 
-1. Oh no! It identifies it as a hammer. We'll fix that later, but first, let's understand why it failed.
+1. おっと!  ハンマーとして認識されます。 これは後で修正します。まず、失敗した理由について説明します。
 
-## Update the ONNX model in the Tailwind Traders website
+## <a name="update-the-onnx-model-in-the-tailwind-traders-website"></a>Tailwind Traders Web サイト内で ONNX モデルを更新する
 
-First, view the exported model in Netron:
+最初に、Netron 内のエクスポートされたモデルを表示します。
 
-1. Browse to https://lutzroeder.github.io/netron/, Click Open Model
+1. https://lutzroeder.github.io/netron/ に移動し、[モデルを開く] をクリックします。
 
-2. Open ONNX / Custom Model / products.onnx
+2. ONNX / Custom Model / products.onnx を開きます。
 
-3. Scroll through the neural network and note:
+3. ニューラル ネットワークをスクロールします。次の点に注意してください。
 
- - it's large
- - at the top, is a 224x224 image as input (dirty secret: computer vision models have pretty poor vision)
- - add the bottom, it outputs 5 values, these are the confidence scores for our class labels
+ - サイズが大きい
+ - 上部に入力として 224x224 画像があります (外聞の悪い事実として、Computer Vision モデルは画質が悪い)
+ - 下部には、5 という値が出力されます。これらはクラス ラベルの信頼度スコアです。
 
-Next, drop the ONNX file we exported into TWT filesystem
+次に、TWT ファイルシステムにエクスポートした ONNX ファイルを削除します。
 
-1. In the Azure Portal, visit your aiml20-demo resource group
+1. Azure Portal で、aiml20-demo リソース グループにアクセスします。
 
-1. Click the "aiml20" Web App resource
+1. "aiml20" Web アプリ リソースをクリックします。
 
-1. Under Development Tools, Click Advanced tools, then click "Go" in right pane to launch Kudu.
+1. [開発ツール] で、[高度なツール] をクリックし、右側のペインで [移動] をクリックして Kudu を起動します。
 
-1. In the main menu bar, Click Debug Console > PowerShell
+1. メイン メニュー バーで、[デバッグ コンソール] > [PowerShell] をクリックします。
 
-1. Browse to: site / wwwroot / Standalone / Onnxmodels
+1. 以下に移動します: site / wwwroot / Standalone / Onnxmodels
 
-1. With Explorer, open the `ONNX / custom model` folder from your AIML20 repo
+1. エクスプローラーで、AIML20 リポジトリから `ONNX / custom model` フォルダーを開きます。
 
-1. Drag products.onnx into the LEFT HALF of the Kudu window. (IMPORTANT: Do NOT
-   drag into the box that says "drag here to upload and unzip".)
+1. products.onnx into を、Kudu ウィンドウの左半分にドラッグします。 (重要: "アップロードして解凍するにはここにドラッグしてください" というボックスにはドラッグしないでください。)
 
-1. Restart the web server. Return to the "onnx" Web App resource and click "Restart".
+1. Web サーバーを再起動します。 "onnx" Web アプリ リソースに戻り、[再起動] をクリックします。
 
-Rerun Shop by Photo, upload `test images / pliers.jpg`. Now it works!
+Shop by Photo を再実行し、`test images / pliers.jpg` をアップロードします。 これで上手く行きます。
 
-## Next Step
+## <a name="next-step"></a>次のステップ
 
 [Personalizer](DEMO%20Personalizer.md)
 

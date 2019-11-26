@@ -1,98 +1,98 @@
-# Demo 1 - Azure Cognitive Search
+# <a name="demo-1---azure-cognitive-search"></a>デモ 1 - Azure Cognitive Search
 
-[![Demo 1](images/demo1.png)](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/videos/Demo1.mp4 "Demo 1")
+[![デモ 1](images/demo1.png)](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/videos/Demo1.mp4 "デモ 1")
 
-## Summary
-In this exercise we demonstrate the basic functions of Azure Cognitive Search in conjunction with the built-in intelligent skillset. There are a number of ways to create the resources required for this demo:
-1. Follow along with the video above (each step is outlined), or
-2. Use the [Azure CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest&WT.mc_id=msignitethetour2019-github-aiml10)
-
-
-## What you need
-- [Invoice Test Set](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/data/test.zip)
-
-## Azure Resources
-These are the resources that we create in the first demonstration. While this table outlines the names of the resources as shown in the video, please use your own names for each of the resources.
+## <a name="summary"></a>概要
+この演習では、Azure Cognitive Search と組み込みのインテリジェント スキルセットの組み合わせによる基本的な機能について見ていただきます。 このデモに必要なリソースを作成するには、いくつかの方法があります。
+1. 上のビデオに従います (各ステップについて説明されています)
+2. [Azure CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest&WT.mc_id=msignitethetour2019-github-aiml10) を使用します
 
 
-| Name                       | Type                            | Purpose                    |
+## <a name="what-you-need"></a>必要なもの
+- [請求書テスト セット](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/data/test.zip)
+
+## <a name="azure-resources"></a>Azure リソース
+これらは、最初のデモで作成するリソースです。 この表では、ビデオで示されているリソースの名前が使われていますが、リソースごとに独自の名前を使用してください。
+
+
+| 名前                       | 種類                            | 目的                    |
 | -------------------------- | ------------------------------- | ------------------------- |
-| **ttcognitivesearch**     | Resource Group                  | Groups services together   |
-| **ttinvoicestorage**      | Storage Account                 | Used to store invoices     |
-| **ttinvoicesearch**       | Search Service                  | Featured service           |
-| **ttinvoiceintelligence** | Cognitive Services (All-In-One) | Used in the search service |
+| **ttcognitivesearch**     | リソース グループ                  | サービスをグループにまとめます   |
+| **ttinvoicestorage**      | ストレージ アカウント                 | 請求書の格納に使用します     |
+| **ttinvoicesearch**       | 検索サービス                  | おすすめのサービスです           |
+| **ttinvoiceintelligence** | Cognitive Services (オールインワン) | 検索サービスで使用されます |
 
 
-## What to do
+## <a name="what-to-do"></a>手順
 
-There are three main steps:
-1. Create a Resource Group
-2. Create and use Storage Account
-3. Create and use a Search Service resource
+主な手順が 3 つあります。
+1. リソース グループを作成する
+2. ストレージ アカウントを作成して使用する
+3. 検索サービス リソースを作成して使用する
 
 
 
-### Create a Resource Group
-All of our resources will live in this group.
+### <a name="create-a-resource-group"></a>リソース グループを作成する
+すべてのリソースがこのグループに存在します。
 
 ```
 az group create --location {LOCATION} --name {YOUR_RG_NAME}
 ```
 
-### Create and use Storage Account
-The storage account is used primarily for storing invoices.
+### <a name="create-and-use-storage-account"></a>ストレージ アカウントを作成して使用する
+ストレージ アカウントは、主に請求書の格納に使用されます。
 
-1. Create storage account
+1. ストレージ アカウントを作成します
 
 ```
 az storage account create --name {YOUR_STORAGE_NAME} --location {LOCATION} --resource-group {YOUR_RG_NAME} --sku Standard_LRS
 ```
 
-2. Create a container called `test`
+2. `test` という名前のコンテナーを作成します
 
-[![Create Container](images/create_container.png)](https://docs.microsoft.com/en-us/azure/storage/blobs/storage-quickstart-blobs-portal?WT.mc_id=msignitethetour2019-github-aiml10 "Create Container")
+[![コンテナーを作成する](images/create_container.png)](https://docs.microsoft.com/en-us/azure/storage/blobs/storage-quickstart-blobs-portal?WT.mc_id=msignitethetour2019-github-aiml10 "コンテナーを作成する")
 
-3. Download and unzip [invoice test set](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/data/test.zip).
+3. [請求書テスト セット](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/data/test.zip)をダウンロードして解凍します。
 
-4. Upload unzipped [invoice test set](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/data/test.zip) to the `test` container. This can be done directly using the [portal](https://docs.microsoft.com/en-us/azure/storage/blobs/storage-quickstart-blobs-portal?WT.mc_id=msignitethetour2019-github-aiml10#upload-a-block-blob) or by using the [Azure Storage Explorer](https://docs.microsoft.com/en-us/azure/vs-azure-tools-storage-explorer-blobs?WT.mc_id=msignitethetour2019-github-aiml10) application (as shown in the [video](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/videos/Demo1.mp4 "Demo 1")).
+4. 解凍された[請求書テスト セット](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/data/test.zip)を `test` コンテナーにアップロードします。 これは、[ポータル](https://docs.microsoft.com/en-us/azure/storage/blobs/storage-quickstart-blobs-portal?WT.mc_id=msignitethetour2019-github-aiml10#upload-a-block-blob)を使用して直接、または [Azure Storage Explorer](https://docs.microsoft.com/en-us/azure/vs-azure-tools-storage-explorer-blobs?WT.mc_id=msignitethetour2019-github-aiml10) アプリケーションを使用して ([ビデオ](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/videos/Demo1.mp4 "デモ 1")を参照)、行うことができます。
 
-### Create and use a Search Service resource
-Create a search service:
+### <a name="create-and-use-a-search-service-resource"></a>検索サービス リソースを作成して使用する
+検索サービスを作成します。
 
 [![Azure Search](images/azure_search.png)](https://docs.microsoft.com/en-us/azure/search/search-create-service-portal?WT.mc_id=msignitethetour2019-github-aiml10 "Azure Search")
 
 
-Use Search Service:
+検索サービスを使用します。
 
-1. In the newly created service click on `Import Data`
+1. 新しく作成したサービスで、[`Import Data`] をクリックします
 
-[![Import Data](images/import_data.png)](https://docs.microsoft.com/en-us/azure/search/cognitive-search-quickstart-blob?WT.mc_id=msignitethetour2019-github-aiml10#create-the-enrichment-pipeline "Import Data")
+[![データをインポートする](images/import_data.png)](https://docs.microsoft.com/en-us/azure/search/cognitive-search-quickstart-blob?WT.mc_id=msignitethetour2019-github-aiml10#create-the-enrichment-pipeline "データをインポートする")
 
-2.Use an existing connection to the `test` container we created in our storage account.
+2. ストレージ アカウントで作成した `test` コンテナーへの既存の接続を使用します。
 
-[![Import Data](images/connect_data.png)](https://docs.microsoft.com/en-us/azure/search/cognitive-search-quickstart-blob?WT.mc_id=msignitethetour2019-github-aiml10#step-1-create-a-data-source "Import Data")
+[![データをインポートする](images/connect_data.png)](https://docs.microsoft.com/en-us/azure/search/cognitive-search-quickstart-blob?WT.mc_id=msignitethetour2019-github-aiml10#step-1-create-a-data-source "データをインポートする")
 
-3. Create a new Cognitive Services resource
+3. 新しい Cognitive Services リソースを作成します
 
-[![Create Cognitive Services](images/attach_cognitive_svcs.png)](https://docs.microsoft.com/en-us/azure/search/cognitive-search-quickstart-blob?WT.mc_id=msignitethetour2019-github-aiml10#step-2-add-cognitive-skills "Create Cognitive Services")
+[![Cognitive Services を作成する](images/attach_cognitive_svcs.png)](https://docs.microsoft.com/en-us/azure/search/cognitive-search-quickstart-blob?WT.mc_id=msignitethetour2019-github-aiml10#step-2-add-cognitive-skills "Cognitive Services を作成する")
 
-4. Go back to the wizard and hit refresh. You should see the newly created service. 
+4. ウィザードに戻り、[最新の情報に更新] をクリックします。 新しく作成したサービスが表示されます。 
 
-5. You can now add any enrichments you like!
+5. 好みの機能強化を追加できるようになります。
 
-[![Add Enrichments](images/add_enrichments.png)](https://docs.microsoft.com/en-us/azure/search/cognitive-search-quickstart-blob?WT.mc_id=msignitethetour2019-github-aiml10#step-2-add-cognitive-skills "Add Enrichments")
+[![機能強化を追加する](images/add_enrichments.png)](https://docs.microsoft.com/en-us/azure/search/cognitive-search-quickstart-blob?WT.mc_id=msignitethetour2019-github-aiml10#step-2-add-cognitive-skills "機能強化を追加する")
 
-6. After clicking on `Customize Target Index` review the proposed index and click `Create and Indexer`.
+6. [`Customize Target Index`] をクリックした後、提案されたインデックスを確認し、[`Create and Indexer`] をクリックします。
 
-[![First Index](images/first_index.png)](https://docs.microsoft.com/en-us/azure/search/cognitive-search-quickstart-blob?WT.mc_id=msignitethetour2019-github-aiml10#step-3-configure-the-index "First Index")
+[![最初のインデックス](images/first_index.png)](https://docs.microsoft.com/en-us/azure/search/cognitive-search-quickstart-blob?WT.mc_id=msignitethetour2019-github-aiml10#step-3-configure-the-index "最初のインデックス")
 
-7. Give the new indexer a name and click `Submit`
+7. 新しいインデクサーの名前を指定して、[`Submit`] をクリックします
 
-[![First Indexer](images/first_indexer.png)](https://docs.microsoft.com/en-us/azure/search/cognitive-search-quickstart-blob?WT.mc_id=msignitethetour2019-github-aiml10#step-4-configure-the-indexer "First Indexer")
+[![最初のインデクサー](images/first_indexer.png)](https://docs.microsoft.com/en-us/azure/search/cognitive-search-quickstart-blob?WT.mc_id=msignitethetour2019-github-aiml10#step-4-configure-the-indexer "最初のインデクサー")
 
-8. Once the indexing has taken place feel free to try some queries:
+8. インデックス付けが完了したら、自由にクエリをいくつか試してみます。
 
-[![First Search](images/first_search.png)](https://docs.microsoft.com/en-us/azure/search/cognitive-search-quickstart-blob?WT.mc_id=msignitethetour2019-github-aiml10#query-in-search-explorer "First Search")
+[![最初の検索](images/first_search.png)](https://docs.microsoft.com/en-us/azure/search/cognitive-search-quickstart-blob?WT.mc_id=msignitethetour2019-github-aiml10#query-in-search-explorer "最初の検索")
 
-# Next Demo
-Learn how to use the Form Recognizer Cognitive service by continuing on to [Demo 2 - Using Form Recognizer](demo2.md)
+# <a name="next-demo"></a>次のデモ
+「[デモ 2 - Form Recognizer を使用する](demo2.md)」に進み、Form Recognizer Cognitive サービスを使用する方法について学習します

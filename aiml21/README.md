@@ -1,9 +1,9 @@
-# Developers Guide to AI: A Data Story
+# <a name="developers-guide-to-ai-a-data-story"></a>AI 開発者ガイド:データ ストーリー
 
-In this theatre session we will show the data science process and how to apply it. From exploration of datasets to deployment of services - all applied to an interesting data story. This will also take you on a very brief tour of the Azure AI Platform.
+このシアター セッションでは、データ サイエンスのプロセスとその適用方法について説明します。 データ セットの探索からサービスのデプロイまで、すべてが興味深いデータ ストーリーに適用されます。 Azure AI プラットフォームの概要についても簡単に説明します。
 
-# I want to ...
+# <a name="i-want-to-"></a>ご希望のコースをお選びください。
 
-## [Learn to present this content](README-presenter.md)
+## <a name="learn-to-present-this-contentreadme-presentermd"></a>[このコンテンツのプレゼンテーション方法を習う](README-presenter.md)
 
-## [Continue learning after attending this session](README-attendee.md)
+## <a name="continue-learning-after-attending-this-sessionreadme-attendeemd"></a>[このセッションに参加後、学習を続ける](README-attendee.md)

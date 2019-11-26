@@ -1,33 +1,31 @@
-# Attributions for images in this folder
+# <a name="attributions-for-images-in-this-folder"></a>このフォルダー内のイメージの帰属
 
-All images are sourced from [Wikimedia Commons](https://commons.wikimedia.org/) and are used under their respective
-Creative Commons licenses.
+すべてのイメージは [Wikimedia Commons](https://commons.wikimedia.org/) から供給され、それぞれの Creative Commons ライセンスの下で使用されます。
 
-Images were selected manually for suitability as part of a custom vision model. Images not eligible for selection include: 
-- Line art
-- SVG files, video files
-- Images with multiple different objects or busy scenes
-- Images including people
-- Images with text or other annotations
-- File size exceeding 6Mb
+イメージは、カスタム ビジョン モデルの一部として適合するよう、手作業で選択されました。 選択の適さなかったイメージには次のものがあります。 
+- ライン アート
+- SVG ファイル、ビデオ ファイル
+- 複数の異なるオブジェクトまたは繁雑なシーンを含むイメージ
+- 人が含まれるイメージ
+- テキストまたはその他の注釈が含まれる画像
+- サイズが 6 MB を超えるファイル
 
-## Hammers
+## <a name="hammers"></a>ハンマー
 
 https://commons.wikimedia.org/wiki/Category:Claw_hammers  
 https://commons.wikimedia.org/wiki/Category:Ball-peen_hammers
 
-## Pliers
-https://commons.wikimedia.org/wiki/Category:Long-nose_pliers 
-https://commons.wikimedia.org/wiki/Category:Needle-nose_pliers  
+## <a name="pliers"></a>プライヤー
+https://commons.wikimedia.org/wiki/Category:Long-nose_pliers https://commons.wikimedia.org/wiki/Category:Needle-nose_pliers  
 https://commons.wikimedia.org/wiki/Category:Linesman%27s_pliers  
 
-## Screwdrivers
+## <a name="screwdrivers"></a>ドライバー
 
 https://commons.wikimedia.org/wiki/Category:Screwdrivers
 
-## Drills
+## <a name="drills"></a>ドリル
 https://commons.wikimedia.org/wiki/Category:Cordless_drills
 
-## Hard Hats:
+## <a name="hard-hats"></a>安全帽:
 https://commons.wikimedia.org/wiki/Category:Hard_hats
 
