@@ -20,7 +20,7 @@
 
 # Read CSV file
 import pandas as pd
-data = pd.read_csv('data/data_train.csv')
+data = pd.read_csv('../data/data_train.csv')
 data.head()
 
 
@@ -146,5 +146,6 @@ plt.show()
 # In[ ]:
 
 
-outputfile = data.to_csv('data_train_experiment.csv', index=False)
+dataedited = data.drop(['SupportTicketID', 'CustomerID', 'DateCreated', 'DateCompleted', 'CustomerID2', 'CompletedTutorial', 'Rating', 'GeographyID2', 'RoleID2', 'DateCompletedDay', 'DateCompletedMonth', 'DateCompletedYear'], axis=1)
+outputfile = dataedited.to_csv('data_train_experiment.csv', index=False)
 

@@ -6,27 +6,36 @@ Follow the below steps to get your environment ready for the live demo. Once you
  <img src="https://camo.githubusercontent.com/9285dd3998997a0835869065bb15e5d500475034/687474703a2f2f617a7572656465706c6f792e6e65742f6465706c6f79627574746f6e2e706e67" data-canonical-src="http://azuredeploy.net/deploybutton.png" style="max-width:100%;">
 </a>
 
+> Once created please upgrade your Azure Machine Learning resource to the enterprise edition for this session. You should see an 'Upgrade' button to complete this action. This is currently in preview, however the pricing structure is described [here](https://azure.microsoft.com/en-us/pricing/details/machine-learning/)
+
 ## Create Additional Resources Needed
-Once you have created the base Azure Machine Learning Service Workspace we need to add additional compute resources.
+
+* Select **'Launch the new Azure Machine Learning studio'**
+
+Once you have created the base Azure Machine Learning Service we need to add additional compute resources.
 ### Create Compute Targets
 1. Create Machine Learning Compute
     * Click on the nav "Compute"
+    * Select 'Training Clusters'
     * Click "New"
     * Enter a name for the resource
-    * Select "Machine Learning Compute" from the dropdown
-    * Select the machine size
+    * Select the machine size (ex: Standard_DS2_v2)
     * Enter the min and max nodes (recommend min of 0 and max of 5)
     * Click "Create"
     ![Create Compute](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml30/CreateMlCompute.gif)
 2. Create Kubernetes Compute
     * Click on the nav "Compute"
+    * Select 'Inference Clusters'
     * Click "New"
     * Enter a name for the resource
-    * Select "Kubernetes Service" from the dropdown
+    * Select a region
+    * Keep 'Virtual Machine Size' as default
+    * Cluster purpose set to 'Dev-test'
     * Click "Create"
     ![Create Kubernetes](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml30/CreateKubService.gif)
 3. Create Notebook Virtual Machine
-    * Click on the "Notebook VM" nav
+    * Click on the NAV "Compute"
+    * Select 'Notebook VMs'
     * Click "New"
     * Give the notebook a unique name
     * Select the VM size
@@ -48,6 +57,7 @@ The dataset needed is created weekly with updated dates to allow your demo to be
 The first demo is with VS Code and the C# IgniteAimlDataApp. This is to demonstrate how to do the data processing and highlight that the it can be done in any language.
 
 1. [Download VS Code here](https://code.visualstudio.com/download)
+2. Ensure that you have [.NET Core SDK 2.1.0](https://dotnet.microsoft.com/download/dotnet-core/2.1) installed on your local
 2. Clone the app with the following command
     * `git clone https://github.com/microsoft/ignite-learning-paths-training-aiml.git`
 3. Navigate to project path
@@ -58,6 +68,7 @@ The first demo is with VS Code and the C# IgniteAimlDataApp. This is to demonstr
 6. To run the app
     * Right click on `Program.cs` and select `Open in Terminal`
     * Run the command `dotnet run`
+    Note for Mac users: if you get an error that the program can't find the file you imported, change line 14 in Program.cs     to include forward slashes: `string sourceFile = $"{Environment.CurrentDirectory}//Datasets//{fileName}.csv";`
     * It will prompt with a question `Would you like to run the default params` type `y`
     * This will attempt to hit the API but it will fail since it hasn't been created yet.
 

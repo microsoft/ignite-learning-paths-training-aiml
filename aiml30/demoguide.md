@@ -49,8 +49,9 @@ To navigate through code with `F12` and `CTRL-` shortcuts download the Visual St
     * Click `Create`
     * Optional: Step through the data prep feature in the datasets upload for AML
 
-### 2. Launch Visual Designer and Explain Tool Features
+### 2. Launch Designer and Explain Tool Features
 
+* In the studio select 'Designer' on the left navigation
 * Summarize the different modules in the left nav including the test datasets.
 
 ### 3. Start Building the  Model
