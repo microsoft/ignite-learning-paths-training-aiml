@@ -26,7 +26,7 @@ Tailwind Traders is a retail company looking for support on how to benefit from 
 
 There is something for every stage of the AI learning curve; whether you want to consume ML technologies, increase technical knowledge of ML theory, or build your own custom ML models. The model is not the end of the data science story, we will conclude with applying DevOps practices to ML projects to build an end-to-end pipeline 
 
-## Session
+## Sessions
 
 * There are **x5 45 minute sessions** ([AIML10](aiml10/README.md), [AIML20](aiml20/README.md), [AIML30](aiml30/README.md), [AIML40](aiml40/README.md) and [AIML50](aiml50/README.md))
 * And **x1 20 min theatre session** ([AIML21](aiml21/README.md))
