@@ -1,211 +1,211 @@
-# Speaker Notes
+# <a name="speaker-notes"></a>演讲者备注
 
-## Slides
+## <a name="slides"></a>幻灯片
 
-* Slide: # 1
+* 幻灯片：# 1
 
-* Slide: # 2
-  * Machine Learning and DevOps are two hot buzzwords at the moment. Machine Learning is becoming more accessible to more organisations, but with that increased accessibility comes the need to manage our ML projects the same way we do the rest of our software.
-  * MLOps, Machine Learning Operations, or DevOps for Machine Learning is the confluence of DevOps and Machine Learning, and that's what we're going to examine today.
+* 幻灯片：# 2
+  * 机器学习和 DevOps 是目前两个热门词汇。 越来越多的组织可以使用机器学习，但是随着其易用性的增加，我们需要像管理其他软件一样管理 ML 项目。
+  * MLOps（或称机器学习操作、用于机器学习的 DevOps）融汇了 DevOps 和机器学习，这就是我们接下来要考察的内容。
 
-* Slide: # 3
-  * Before we get started, feel free to take a screenshot of this slide. You'll find this deck and all of the resources used in this presentation by visiting these links.
+* 幻灯片：# 3
+  * 在开始之前，可以保存此幻灯片的屏幕截图。 访问这些链接，可以找到此演示文稿和其中使用的所有资源。
 
-* Slide: # 4
-  * When programming, we solve a problem by writing an algorithm
-  * We run data (or input) through that algorithm and get an answer
-  * Importantly, we know (or can work out) how to solve that problem
-  * What happens when we don’t know what that algorithm looks like? E.g. is there a bird in the photo, or what is the probability that an applicant will default on a loan?
+* 幻灯片：# 4
+  * 编程时，我们通过编写算法解决问题
+  * 我们通过该算法运行数据（或输入）并获得答案
+  * 重要的是，我们知道（或者可以想出）如何解决该问题
+  * 当我们不知道应该使用什么样的算法时，会怎么样？ 例如， 照片中是否有鸟，或者申请人拖欠贷款的可能性有多大？
 
-* Slide: # 5
-  * These are the problems machine learning is good at
-  * With machine learning, we solve these problems by flipping it around and providing a whole lot of examples of correct answers and corresponding input, and let the computer decide what that algorithm is
+* 幻灯片：# 5
+  * 这些是机器学习擅长解决的问题
+  * 借助机器学习，我们要运用逆向思维来解决问题，即提供正确答案和相应输入的大量示例，让计算机来确定算法
 
-* Slide: # 6
-  * What we’re doing is letting the computer build a “model” to describe that data
+* 幻灯片：# 6
+  * 我们要做的就是让计算机生成一个“模型”来描述该数据
 
-* Slide: # 7
-  * What’s great about this, is we can use that model in place of the algorithm we would have written, had we known how.
+* 幻灯片：# 7
+  * 这样做的好处是，可以用模型来替代要编写的算法（编写算法的前提是我们知道如何编写）。
 
-* Slide: # 8
-  * By using the model, we can get predictions
-  * Note: these are predictions - not answers the way we’d think of it
-  * The quality and accuracy of those predictions depends on the techniques and algorithms we used to train the model, and importantly - the data we used to train the model
-  * If you’re using biased data to train the model, you’ll get a biased model
+* 幻灯片：# 8
+  * 使用模型，可以获取预测结果
+  * 注意：这些是预测结果，而不是我们所想的答案
+  * 这些预测的质量和准确性取决于我们用于训练模型的方法和算法，以及用于训练模型的数据（这很重要）
+  * 如果使用有偏差的数据来训练模型，就会得到有偏差的模型
 
-* Slide: # 9
-  * [See Demo #1](./demos/1-Show_Faulty_Prediction.md)
+* 幻灯片：# 9
+  * [请参阅演示 #1](./demos/1-Show_Faulty_Prediction.md)
 
-* Slide: # 10
-  * Let’s talk about the work that happens when creating a predictive model
-  * Usually, there’s some data discovery, transformation, and preparation… some building of a model and training using that data… then an evaluation of the suitability of that model
-  * This is a highly iterative, experimental process that might mean going back to the drawing board many times over, over a long period of time.
-  * When it’s time to actually deploy a model, it’s often similar to the way we used to do software – package it up, and let the developers or operations team deploy it somehow
+* 幻灯片：# 10
+  * 让我们讨论一下创建预测模型时要进行的工作
+  * 通常，会涉及数据发现、转换和准备工作… 还要生成模型并使用该数据训练模型… 然后评估该模型的适用性
+  * 这是一个需要反复迭代的试验性过程，可能需要在很长时间内多次从头开始。
+  * 实际部署模型时，所需的操作通常与我们以前部署软件的方式相似：将其打包，并让开发者或运营团队以某种方式对其进行部署
 
-* Slide: # 11
-  * The creation process often happens on a data scientist’s machine, or shared hardware for intensive training
-  * And deployment quite often happens by passing USB drives around, or even by email.
+* 幻灯片：# 11
+  * 创建过程通常在数据科学家的计算机或共享硬件上进行，以实现密集训练
+  * 部署常常是通过传递 U 盘甚至是通过电子邮件进行的。
 
-* Slide: # 12
-  * Let’s contrast this to a good devops process where we plan, develop and test, release to test then production environments, then monitor what happens in production…
-  * But is DevOps just for software development? The algorithms we spoke about at the start?
+* 幻灯片：# 12
+  * 让我们将其与良好的开发过程对比：后者包括计划、开发和测试、发布到测试和生产环境，然后监视生产中发生的情况…
+  * 但 DevOps 只是为了实现软件开发？ 我们一开始谈论的算法是什么？
 
-* Slide: # 13
-  * Let’s look at Microsoft’s definition of DevOps (read it).
-  * The most important word here is “value”. DevOps is not about code or bug fixes, it’s about continuously delivering value.
-  * If you have a predictive model, and you can make that model better – that is absolutely valuable.
-  * So this definition doesn’t exclude ML.
-  * Let’s look at a product that can help.
+* 幻灯片：# 13
+  * 让我们看看 Microsoft 的 DevOps 定义（朗读）。
+  * 这里最重要的一个词是“价值”。 DevOps 不在于代码或 bug 修复，而在于持续交付值。
+  * 如果你有一个预测模型，你可以改进它 - 这非常有价值。
+  * 因此，这一定义没有排除 ML。
+  * 让我们看一下可提供帮助的产品。
 
-* Slide: # 14
+* 幻灯片：# 14
 
-* Slide: # 15
-  * Azure Machine Learning Service is a set of services for helping your MLOps (or DevOps for ML) efforts.
-  * You can get to it by going to ml.azure.com
-  * Let’s drill into a few of the things it helps you manage
+* 幻灯片：# 15
+  * Azure 机器学习服务是一组服务，可帮助你完成 MLOps（或称适用于 ML 的 DevOps）工作。
+  * 可以转到 ml.azure.com 了解它
+  * 让我们深入了解它可帮助你处理哪些工作
 
-* Slide: # 16
-  * Just list and describe as per the individual points
+* 幻灯片：# 16
+  * 按各个点列出和说明
 
-* Slide: # 17
-  * We’re going to focus for the moment on Pipelines. Pipelines are workflows for training our models, and we want to build one so we can have a repeatable way to build our predictive model.
+* 幻灯片：# 17
+  * 我们将重点介绍“管道”。 管道是用于训练模型的工作流，我们想要生成一个管道，以便采用可重复的方式生成预测模型。
 
-* Slide: # 18
-  * You may have heard of Azure Pipelines, but it’s important to note these are different products.
-  * We’ll talk about the differences in a minute, but at a high level, ML pipelines are good for training workflows, and Azure Pipelines are good for orchestration. They have different focuses.
+* 幻灯片：# 18
+  * 你可能听说过 Azure Pipelines，但请务必注意，这是多种的产品的统称。
+  * 我们稍后会讲到它们的不同之处，但大致说来，ML 管道适用于训练工作流，Azure Pipelines 适用于业务流程。 它们有不同的侧重点。
 
-* Slide: # 19
-  * What’s the difference? Why use both?
+* 幻灯片：# 19
+  * 区别是什么？ 为何要同时使用这两者？
 
-* Slide: # 20
-  * ML Pipelines are designed for ML-specific workflows.
-  * Unattended runs – ML training can be very long-running, and ML pipelines can handle that extremely well
-  * Reusability – individual steps in a workflow can be resource intensive, and may not need to be run every time. If your data prep step doesn’t need to be run again, you can just reuse the output from last time.
-  * Tracking… - Everything that’s stored is focused on ML, rather than building general software
+* 幻灯片：# 20
+  * ML 管道是针对特定于 ML 的工作流设计的。
+  * 无人参与的运行 - ML 训练可能会运行很长时间，ML 管道可以很好地处理这种情况
+  * 可重用性 - 工作流中的各个步骤可能会占用大量资源，不一定需要每次都运行。 如果数据准备步骤无需再次运行，重复使用上一次的输出即可。
+  * 跟踪… - 存储的所有内容都专注于 ML，而不是生成常规软件
 
-* Slide: # 21
-  * By contrast, Azure Pipelines are really designed for CI/CD
-  * Gates… - They’re a great place to build in quality and checks and balances
-  * Integration – with other applications, artifacts, and dependencies
-  * Triggers – You way want to trigger orchestration for any number of reasons
+* 幻灯片：# 21
+  * 相对而言，Azure Pipelines 是针对 CI/CD 设计的
+  * 入口… - 管道是融入质量、检查和均衡的理想位置
+  * 集成 - 与其他应用程序、项目和依赖项集成
+  * 触发器 - 可以由任意多的原因触发业务流程
 
-* Slide: # 22
-  * While we’re building a pipeline, we’re really using most of these services
+* 幻灯片：# 22
+  * 构建管道时，我们实际上会用到这里的大多数服务
 
-* Slide: # 23
-  * Using Datasets or Datastores for training data, running an Experiment to train using managed Compute, then ending up with a Model.
-  * We will deploy that model, but let’s come back to that.
+* 幻灯片：# 23
+  * 使用数据集或数据存储训练数据，使用托管的计算运行试验以进行训练，最后生成模型。
+  * 我们将部署该模型，但稍后再讲这个吧。
 
-* Slide: # 24
-  * [See Demo #2](./demos/2-Build_a_Pipeline_With_Notebooks.md)
+* 幻灯片：# 24
+  * [请参阅演示 #2](./demos/2-Build_a_Pipeline_With_Notebooks.md)
 
-* Slide: # 25
-  * So here’s what we built – the AML pipeline
-  * Data prep
+* 幻灯片：# 25
+  * 下面是我们要生成的内容 - AML 管道
+  * 数据准备
 
-* Slide: # 26
-  * Training step
+* 幻灯片：# 26
+  * 训练步骤
 
-* Slide: # 27
-  * Registration of the model
+* 幻灯片：# 27
+  * 模型注册
 
-* Slide: # 28
-  * We also made use of a Dataset (or data source), and compute
+* 幻灯片：# 28
+  * 我们还使用了数据集（或数据源）和计算
 
-* Slide: # 29
-  * But let’s talk about working on a team for the moment.
+* 幻灯片：# 29
+  * 接下来，让我们讨论一下团队合作。
 
-* Slide: # 30
-  * Some of the good DevOps practices we use in software development can also apply for ML projects – let’s talk about them.
+* 幻灯片：# 30
+  * 我们在软件开发中使用的一些良好的 DevOps 做法也适用于 ML 项目 - 我们来谈谈它们。
 
-* Slide: # 31
-  * Jupyter Notebook files contain not just the input, but also the output. This can be confusing and make files difficult to merge. So we only want the input cells – the code that gets run.
-  * We also want to define everything in our pipeline (which we are)
-  * As well as infrastructure – like the compute – and any dependencies – python dependencies, libraries, etc.
-  * And maybe some data – not the whole lot (because there can be many PB in ML projects), but maybe enough to try some proofs of concept
+* 幻灯片：# 31
+  * Jupyter Notebook 文件不仅包含输入，还包含输出。 这可能会导致混乱，并使文件难以合并。 所以，我们只需要输入单元格（即运行的代码）。
+  * 我们还需要定义管道中的所有内容（这就是我们现在正在进行的工作）
+  * 以及基础结构（如计算）和任何依赖项（python 依赖项、库等）。
+  * 可能还包括某些数据 - 也许不是全部的数据（因为 ML 项目可能包含 PB 级的数据），但足以尝试进行一些概念证明
 
-* Slide: # 32
-  * A known shared data source means every data scientist is training against the same training data… and that training data is also being used to produce models
+* 幻灯片：# 32
+  * 已知的共享数据源意味着，每个数据科学家都针对相同的训练数据进行训练… 并使用该训练数据生成模型
 
-* Slide: # 33
-  * Let’s talk about CI. We want to:
-  * Know when code changes in our source repository
-  * Refresh then execute our AML Pipeline if we’ve change the way we’re training
-  * We also want to check code quality – it’s code, so we want tests, linting, etc.
-  * We can also add PR processes to ensure code still compiles before merging into master (and kicking off a potentially expensive training job!)
-  * If you want to know more about Azure DevOps, go here.
+* 幻灯片：# 33
+  * 我们来谈谈 CI。 我们的目标是：
+  * 了解源存储库中代码更改的时间
+  * 如果我们更改了训练的方式，则刷新然后执行 AML 管道
+  * 我们还希望检查代码质量 - 这是代码，因此我们需要测试、linting 等。
+  * 我们还可以添加 PR 过程，以确保代码在合并到主代码（并启动可能很昂贵的训练工作！）之前仍可进行编译
+  * 若要详细了解 Azure DevOps，请转到此处。
 
-* Slide: # 34
-  * The important point is – this is all code and software. The quality of your code matters even if it’s not what you’re used to writing!
+* 幻灯片：# 34
+  * 重点在于 - 代码和软件就是全部。 即使不是你所习惯编写的代码，代码的质量也很重要！
 
-* Slide: # 35
-  * [See Demo #3](./demos/3-Show_The_Build_And_Release.md)
+* 幻灯片：# 35
+  * [请参阅演示 #3](./demos/3-Show_The_Build_And_Release.md)
 
-* Slide: # 36
-  * But we still haven’t deployed anything – we have a newly trained model, so how do we deploy?
-  * AML Service has the ability to take a model and deploy it to ACI or AKS – we are going to make use of it, but not directly from the UI here.
+* 幻灯片：# 36
+  * 但我们仍未部署任何内容 - 我们有一个新训练的模型，那么如何部署？
+  * AML 服务能够采用模型并将其部署到 ACI 或 AKS - 我们将使用它，但不是直接从此处的 UI 使用。
 
-* Slide: # 37
-  * We could just add another step to the AML pipeline, but we don’t want to do that – we want a bit more control over our deployment.
+* 幻灯片：# 37
+  * 我们可以仅向 AML 管道添加另一个步骤，但我们不想这样做 - 我们想要对部署进行更多的控制。
 
-* Slide: # 38
-  * Continuous Delivery can absolutely be applied to ML.
-  * We’re going to use Azure Pipelines for our Continuous Delivery.
-  * When a new model is registered, we’ll kick off our deployment
-  * With Azure Pipelines, We can deploy to test and staging sites before putting our new model live
-  * We can run tests in pre-prod environments
-  * Importantly – what we’re doing is controlling our rollout using the same techniques we use for the rest of our software.
+* 幻灯片：# 38
+  * 持续交付当然可以应用于 ML。
+  * 我们将使用 Azure Pipelines 进行持续交付。
+  * 注册新模型后，我们将启动部署
+  * 借助 Azure Pipelines，我们可以在将新模型投入使用之前部署到测试和暂存站点
+  * 我们可以在预生产环境中运行测试
+  * 重要的是，我们要做的就是使用用于控制其他软件发布的技术来控制发布。
 
-* Slide: # 39
-  * Don’t just put new models in production – you wouldn’t do it with the rest of your software, why do it with your ML?
+* 幻灯片：# 39
+  * 不要立即将新模型投入生产 - 你不会对其他软件这么做，为什么要对 ML 这样？
 
-* Slide: # 40
-  * Here’s what we’ve created:
-  * A pipeline for training, which is an AML pipeline – specific to training our model
-  * When we get a new model, we kick off a deployment pipeline in Azure DevOps
-  * Deploy to ACI, run some tests, then if all is well, maybe deploy to AKS
+* 幻灯片：# 40
+  * 我们创建了以下内容：
+  * 用于训练的管道，它是一个 AML 管道，专用于训练我们的模型
+  * 获得新模型时，我们将在 Azure DevOps 中启动部署管道
+  * 部署到 ACI 并运行一些测试，如果结果良好，可以部署到 AKS
 
-* Slide: # 41
-  * Just like the rest of our software, we don’t want to put our model in production and leave it there, assuming it will always work.
-  * So we need a retraining strategy.
-  * Either periodically, or when the data is different enough in production that we’re not getting the results we want.
-  * Azure ML Service has a solution for this
+* 幻灯片：# 41
+  * 就像其余软件一样，我们不期望将模型投入生产就一劳永逸，假定它始终可以正常工作。
+  * 因此我们需要重新训练策略。
+  * 可以是周期性的重新训练，也可以是在生产中数据差异过大而无法获得想要的结果时重新训练。
+  * Azure ML 服务为此提供了一个解决方案
 
-* Slide: # 42
-  * When we train, we can do so from a known training data set
-  * When we ultimately deploy a model to production, we can store the inputs into another dataset – our inference dataset
+* 幻灯片：# 42
+  * 训练时，我们可以从已知的定型数据集进行此操作
+  * 当我们最终将模型部署到生产环境时，可以将输入存储在另一个数据集中，也就是我们的推理数据集
 
-* Slide: # 43
-  * Periodically, AML Service will let us compare these two data sets looking for “data drift”. If what we’re seeing in production drifts too much from what we trained our model on, we can kick off a new training process to produce a new model.
-  * This can be done automatically
+* 幻灯片：# 43
+  * AML 服务将定期让我们比较这两个数据集以查找“数据偏移”。 如果在生产中看到的结果与模型的训练目标偏移过大，可以开始新的训练过程以生成新模型。
+  * 此操作可以自动完成
 
-* Slide: # 44
-  * Of course, if we change our code, we also want to change our training pipeline, which is what we saw today.
+* 幻灯片：# 44
+  * 当然，如果更改代码，还需要同时更改训练管道，这就是我们今天介绍的内容。
 
-* Slide: # 45
-  * Importantly, this is just an example – we’re deploying our model to containers, but maybe we want to embed the models into our software
-  * Or maybe we’re not using AML at all – maybe we’re using different cognitive services – and they all have great APIs that Azure Pipelines can talk to.
-  * Ultimately, Azure Pipelines can orchestrate anything, so whatever set of tools you’re using, you can use it to manage your training.
+* 幻灯片：# 45
+  * 重要的是，这只是一个示例 - 在这里，我们将模型部署到容器，但或许需要将模型嵌入到软件中
+  * 又或许我们根本不使用 AML，而是使用其他认知服务，它们都有 Azure Pipelines 可以与之通信的良好 API。
+  * 最终，Azure Pipelines 可以协调任何内容，因此，无论使用哪种工具，都可以用它来管理训练。
 
-* Slide: # 46
-  * In summary
+* 幻灯片：# 46
+  * 总之，
 
-* Slide: # 47
+* 幻灯片：# 47
 
-* Slide: # 48
+* 幻灯片：# 48
 
-* Slide: # 49
+* 幻灯片：# 49
 
-* Slide: # 50
-  * You can find more resources and source code at these links
+* 幻灯片：# 50
+  * 可在下面的链接中找到更多资源和源代码
 
-* Slide: # 51
-  * You can also check our certification to become Microsoft Certified Azure Data Scientist Associate and/or Microsoft Certified Azure AI Engineer Associate
+* 幻灯片：# 51
+  * 还可查看我们的认证，成为 Microsoft 认证的 Azure 数据科学家助理和/或 Microsoft 认证的 Azure AI 工程师助理
 
-* Slide: # 52
-  * For the first time, Microsoft is offering FREE certification exams to all event attendees. You can take advantage of this for any Fundamentals or Role-based Certifications.
-  * The offer is for one free exam and it’s valid for up to 6 months post-event.
-  * You can utilize this at our onsite testing in the event expo hall or use it post-event using the same email address used to sign up for the event. (Gov. Officials are not eligible)
-  * Expect an email with details after the show for those of you who have opted-in to receive promotional email from Microsoft.
+* 幻灯片：# 52
+  * 这是 Microsoft 第一次向所有活动参与者提供免费认证考试。 你可利用本次优惠来获取任何基础知识认证或职位专属认证。
+  * 此优惠适用于一项免费考试，在活动后 6 个月内有效。
+  * 你可以来活动展示厅在我们的现场测试中使用本次优惠，也可在活动之后使用注册本次活动所用的电子邮件地址享有此优惠。 （政府 官员无优惠资格）
+  * 如果你选择了接收 Microsoft 的推广邮件，则将在展会后收到一封附有详细信息的电子邮件。
 
-* Slide: # 53
+* 幻灯片：# 53

@@ -1,27 +1,27 @@
-# Show the Build in Progress
+# <a name="show-the-build-in-progress"></a>展示进行中的生成
 
-## Automating the Manual Process
+## <a name="automating-the-manual-process"></a>自动执行手动过程
 
-Talking Points:
+讲课要点：
 
-* So with those points in mind, let’s look at the build definition:
-* Rather than doing it in Jupyter Notebooks (like last demo), let’s make it just the code
+* 考虑到这些要点，让我们看看生成定义：
+* 我们不在 Jupyter Notebook 中执行操作（像上一个演示那样），而仅仅关注代码
 
-Demo :
+演示：
 
-* Start in Azure DevOps in the browser and show build
-  * Start with the Pipeline
-  * Show last build with our change from the start
-  * Highlight the job summary
-  * look at the log for "Recreate and submit the pipeline"
-* Switch to VSCode and show the same code in a pure python file
-  * show the imports
-  * show the added arguments
-  * walk through the remainder and draw parallels to the notebook flow
-* Show the YAML build definition in VSCode if you like
-* Switch to the ML UI and show the AML Pipeline that ran, drill in and see the tasks that ran and show stats
-* Show the new model that got produced
+* 在浏览器中从 Azure DevOps 开始并展示生成
+  * 从管道开始
+  * 从头开始展示包含更改的最新生成
+  * 强调作业摘要
+  * 查看“重新创建并提交管道”日志
+* 切换到 VSCode，并在纯 python 文件中展示相同的代码
+  * 展示导入
+  * 展示添加的参数
+  * 串讲其余部分，并将相似的地方记到笔记本流中
+* 如果需要，请在 VSCode 中显示 YAML 生成定义
+* 切换到 ML UI 并显示运行的 AML 管道，深入研究并查看已运行的任务并显示统计信息
+* 展示生成的新模型
 
-## Example Demo
+## <a name="example-demo"></a>示例演示
 
-* [Dry run starting at 24:44](https://youtu.be/UgM8_4fAni8?t=1484)
+* [从 24:44 开始排练](https://youtu.be/UgM8_4fAni8?t=1484)

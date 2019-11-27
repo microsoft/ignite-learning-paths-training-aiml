@@ -2,9 +2,9 @@
 This is a machine generated file, and should not be edited, as it will be overwritten with future updates.
 -->
 
-# AIML20 Presentation Files
+# <a name="aiml20-presentation-files"></a>AIML20 演示文稿文件
 
-- [aiml20.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml20/aiml20.pptx)
+- [aiml20.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml20/zh-CN/aiml20.zh-CN.pptx)
 - [aiml20-2019-11_Nov-04.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml20/aiml20-2019-11_Nov-04.pptx)
 - [aiml20-2019-10_Oct-24.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml20/aiml20-2019-10_Oct-24.pptx)
 

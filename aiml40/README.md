@@ -1,31 +1,31 @@
-# AIML40 - Taking Models to the Next Level with Azure Machine Learning Best Practices
+# <a name="aiml40---taking-models-to-the-next-level-with-azure-machine-learning-best-practices"></a>AIML40 - 利用 Azure 机器学习最佳做法升级模型
 
-## Session information
+## <a name="session-information"></a>本节信息
 
-Artificial Intelligence and Machine Learning can be used in many ways to increase productivity of business processes and gather meaningful insights, by analyzing images, texts and trends within unstructured flows of data. While many tasks can be solved using existing models, in some cases it is also required to train your own model for more specific tasks, or for increased accuracy. 
+可以通过多种方式使用人工智能和机器学习，通过分析非结构化数据流中的图像、文本和趋势来提高业务流程的工作效率和收集有意义的见解。 虽然使用现有模型可以解决许多任务，但在某些情况下，还需要训练自己的模型才能实现更具体的任务或提高准确性。 
 
-In this session, we will explore the complete path of integrating text analysis intelligent services into the business processes of [Tailwind Traders](http://tailwindtraders.com), starting from pre-build models available as [cognitive services](https://azure.microsoft.com/services/cognitive-services/?WT.mc_id=msignitethetour2019-github-aiml40), up to training a third-party neural custom model for [Aspect-Based Sentiment Analysis](https://www.intel.ai/introducing-aspect-based-sentiment-analysis-in-nlp-architect/) availabe as part of [Intel NLP Architect](http://nlp_architect.nervanasys.com/) using [Azure Machine Learning Service](https://azure.microsoft.com/services/machine-learning-service/?wt.mc_id=msignitethetour2019-github-aiml40). We will talk about cases when one needs a custom model, and demonstrate quick ways to create such a model from scratch using [AutoML](https://docs.microsoft.com/azure/machine-learning/service/concept-automated-ml/?wt.mc_id=msignitethetour2019-github-aiml40), and show how to fine-tune model hyperparameters using [HyperDrive](https://docs.microsoft.com/azure/machine-learning/service/how-to-tune-hyperparameters/?wt.mc_id=msignitethetour2019-github-aiml40)
+在本讲座中，我们将介绍将文本分析智能服务集成到 [Tailwind Traders](http://tailwindtraders.com) 的业务流程中的完整路径，其中包括可用作[认知服务](https://azure.microsoft.com/services/cognitive-services/?WT.mc_id=msignitethetour2019-github-aiml40)的预构建模型、使用 [Azure 机器学习服务](https://azure.microsoft.com/services/machine-learning-service/?wt.mc_id=msignitethetour2019-github-aiml40)的适用于[基于方面的情绪分析](https://www.intel.ai/introducing-aspect-based-sentiment-analysis-in-nlp-architect/)的第三方神经自定义模型，它是 [Intel NLP Architect](http://nlp_architect.nervanasys.com/) 的一部分。 我们将讨论需要自定义模型的情况，并演示使用 [AutoML](https://docs.microsoft.com/azure/machine-learning/service/concept-automated-ml/?wt.mc_id=msignitethetour2019-github-aiml40) 从头开始创建这种模型的快捷方法，并展示如何使用 [HyperDrive](https://docs.microsoft.com/azure/machine-learning/service/how-to-tune-hyperparameters/?wt.mc_id=msignitethetour2019-github-aiml40) 微调模型超参数
 
-## Delivery Assets
+## <a name="delivery-assets"></a>发送资产
 
-* [PowerPoint deck](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml40/AIML40_Taking_Models_to_the_Next_Level_with_Azure_Machine_Learning_Best_Practices.pptx)
-* Demonstration videos:
-    * Demo 1 - [Cognitive Services Text Analytics](https://youtu.be/QJxjm5BirOA)
-    * Demo 2 - [Automated Machine Learning](https://youtu.be/qrstXN6TLZk)
-    * Demo 3 - [Azure Machine Learning SDK and Hyperdrive](https://youtu.be/sccNTPO3PwU)
-* [Additional Presenter Resources](README-Instructor.md)
+* [PowerPoint 幻灯片](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml40/AIML40_Taking_Models_to_the_Next_Level_with_Azure_Machine_Learning_Best_Practices.pptx)
+* 演示视频：
+    * 演示 1 - [认知服务文本分析](https://youtu.be/QJxjm5BirOA)
+    * 演示 2 - [自动化机器学习](https://youtu.be/qrstXN6TLZk)
+    * 演示 3 - [Azure 机器学习 SDK 和 Hyperdrive](https://youtu.be/sccNTPO3PwU)
+* [其他讲师资源](README-Instructor.md)
 
-## Overview of Demonstrations
+## <a name="overview-of-demonstrations"></a>演示概述
 
-In this presentation, the following demonstrations are made:
+在此演示文稿中，我们进行了以下演示：
 
-1. Using [Cognitive Services Text Analytics](https://azure.microsoft.com/services/cognitive-services/text-analytics/?wt.mc_id=msignitethetour2019-github-aiml40) to find out the sentiment of a clothing review
-2. Using [Azure Automated ML](https://docs.microsoft.com/azure/machine-learning/service/concept-automated-ml/?wt.mc_id=msignitethetour2019-github-aiml40) to build a text classifier almost with no code
-3. Using [Azure Machine Learning Service](https://azure.microsoft.com/services/machine-learning-service/?wt.mc_id=msignitethetour2019-github-aiml40) to train an Aspect-Based Sentiment Analysis model.
+1. 使用[认知服务文本分析](https://azure.microsoft.com/services/cognitive-services/text-analytics/?wt.mc_id=msignitethetour2019-github-aiml40)了解服装评论的情绪
+2. 通过使用 [Azure 自动化 ML](https://docs.microsoft.com/azure/machine-learning/service/concept-automated-ml/?wt.mc_id=msignitethetour2019-github-aiml40)，几乎不使用任何代码，便可构建文本分类器
+3. 使用 [Azure 机器学习服务](https://azure.microsoft.com/services/machine-learning-service/?wt.mc_id=msignitethetour2019-github-aiml40)训练基于方面的情绪分析模型。
 
-## Starting Fast
+## <a name="starting-fast"></a>快速开始
 
-If you want to start right away, you can deploy all required resources via Azure Template, and open the code in Azure Notebooks. 
+如果要立即开始，可以通过 Azure 模板部署所有必需的资源，然后在 Azure Notebooks 中打开代码。 
 
 <a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fmicrosoft%2Fignite-learning-paths-training-aiml%2Fmaster%2Faiml40%2Ftemplate%2Fazuredeploy.json" target="_blank">
  <img src="http://azuredeploy.net/deploybutton.png"/>
@@ -33,24 +33,24 @@ If you want to start right away, you can deploy all required resources via Azure
 <!-- TODO: provide correct Azure Notebook path -->
 <a href="https://notebooks.azure.com/sosh/projects/ignite-absa"><img src="https://notebooks.azure.com/launch.png" /></a>
 
-Below we provide more detailed instructions for the demo so you can perform the steps manually to fully understand the concepts being shown.
+下面我们提供了更详细的演示说明，以便你可以手动执行这些步骤，以完全理解所显示的概念。
 
-## Initial Environment Setup
+## <a name="initial-environment-setup"></a>初始环境设置
 
-In order to perform steps 2 and 3 of the demo, we would need to:
+若要执行演示的步骤 2 和步骤 3，我们需执行以下操作：
 
-1. Create an Azure Machine Learning Workspace
-2. Upload the data used for AutoML training - [clothing_automl.xlsx](dataset\clothing_automl.xlsx)
+1. 创建 Azure 机器学习工作区
+2. 上传用于 AutoML 训练的数据 - [clothing_automl.xlsx](dataset\clothing_automl.xlsx)
 
 
-#### Creating Azure Machine Learning Workspace
+#### <a name="creating-azure-machine-learning-workspace"></a>创建 Azure 机器学习工作区
 
-The Azure ML Workspace can either be created:
-* Manually from [Azure Portal](http://portal.azure.com/?wt.mc_id=msignitethetour2019-github-aiml40) ([here is the complete walk-through](https://docs.microsoft.com/azure/machine-learning/service/how-to-manage-workspace/?wt.mc_id=msignitethetour2019-github-aiml40))
-* Deployed from the Azure Template provided
-* Created through [Azure CLI](https://docs.microsoft.com/ru-ru/cli/azure/?view=azure-cli-latest&wt.mc_id=msignitethetour2019-github-aiml40)
+可以通过以下两种方式创建 Azure ML 工作区：
+* 从 [Azure 门户](http://portal.azure.com/?wt.mc_id=msignitethetour2019-github-aiml40)手动创建（[这里有完整的演练](https://docs.microsoft.com/azure/machine-learning/service/how-to-manage-workspace/?wt.mc_id=msignitethetour2019-github-aiml40)）
+* 从提供的 Azure 模板进行部署
+* 通过 [Azure CLI](https://docs.microsoft.com/ru-ru/cli/azure/?view=azure-cli-latest&wt.mc_id=msignitethetour2019-github-aiml40) 创建
 
-> *NOTE: (we are using `absa` as a name, and *West US 2* datacenter in this example, but feel free to change that)*
+> 注意：（在本示例中，我们使用 `absa` 作为名称，并使用美国西部 2 数据中心，但你可以随意更改它们）  
 
 ```shell
 az extension add -n azure-cli-ml
@@ -58,34 +58,34 @@ az group create -n absa -l westus2
 az ml workspace create -w absa_space -g absa
 ```
 
-You would also need to know your subscription id, which can be obtained by running `az account list`.
+还需要知道你的订阅 ID，可以通过运行 `az account list` 获取它。
 
-#### Uploading data to the workspace
+#### <a name="uploading-data-to-the-workspace"></a>将数据上传到工作区
 
-In our demos, we use a few datasets:
-* A dataset for Automated ML demo - [clothing_automl.xlsx](dataset/clothing_automl.xlsx)
-* The large dataset [clothing_absa_train.csv](dataset/clothing_absa_train.csv) to train the full aspect based sentiment analysis model for demo 3
-* A smaller debugging dataset for aspect based sentiment analysis model [clothing_absa_train_small.csv](dataset/clothing_absa_train_small.csv)
-* A seperate validation set [clothing-absa-validation.json](dataset/clothing-absa-validation.json) to test the model
+在演示中，我们使用几个数据集：
+* 用于自动化 ML 演示的数据集 - [clothing_automl.xlsx](dataset/clothing_automl.xlsx)
+* 大型数据集 [clothing_absa_train.csv](dataset/clothing_absa_train.csv)，用于训练完全基于方面的情绪分析模型供演示 3 使用
+* 用于基于方面的情绪分析模型的小型调试数据集 [clothing_absa_train_small.csv](dataset/clothing_absa_train_small.csv)
+* 用于测试模型的单独验证集 [clothing-absa-validation.json](dataset/clothing-absa-validation.json)
 
-To follow the Automated ML Demo, please upload the dataset to your workspace. You can do it manually through [Azure ML Portal](http://ml.azure.com/?wt.mc_id=msignitethetour2019-github-aiml40), or use the provided file `upload_dataset.py` (csv/xlsx file should be in the current directory, and you should substitute `[subscription_id]` according to your subscription):
+若要按照自动化 ML 演示操作，请将数据集上传到工作区。 可以通过 [Azure ML 门户](http://ml.azure.com/?wt.mc_id=msignitethetour2019-github-aiml40)手动上传，也可以使用提供的文件 `upload_dataset.py` 进行上传（csv/xlsx 文件应位于当前目录中，请根据你的订阅替换 `[subscription_id]`）：
 
 ```shell
 python upload_dataset.py -s [subscription_id] -w absa_space -g absa -f clothing_automl.xlsx
 ```
 
-The Automated ML clothing dataset would be uploaded to the AML service datastore by the demo code.
+演示代码会将自动化 ML 服装数据集上传到 AML 服务数据存储中。
 
-#### Using the Azure ML Demo Code
+#### <a name="using-the-azure-ml-demo-code"></a>使用 Azure ML 演示代码
 
-You can execute demo code from any Jupyter Notebook Environment. You can:
- - Install Python environment locally, as described below in **Python Environment Installation**
- - Use [Azure Notebooks](https://docs.microsoft.com/azure/notebooks/azure-notebooks-overview/?wt.mc_id=absa-notebook-abornst). In this case you should upload the `absa.ipynb` file to a new Azure Notebooks project, or just clone the [notebook library](https://notebooks.azure.com/sosh/projects/ignite-absa).
+你可以从任何 Jupyter Notebook 环境执行演示代码。 可以执行以下操作：
+ - 在本地安装 Python 环境，如“Python 环境安装”中所述 
+ - 使用 [Azure Notebooks](https://docs.microsoft.com/azure/notebooks/azure-notebooks-overview/?wt.mc_id=absa-notebook-abornst)。 在本例中，应将 `absa.ipynb` 文件上传到新的 Azure Notebooks 项目，或者克隆[笔记本库](https://notebooks.azure.com/sosh/projects/ignite-absa)。
  <!-- TODO: provide final path to notebook library -->
 
-#### Python Environment Installation
+#### <a name="python-environment-installation"></a>Python 环境安装
 
-If you decide not to use Azure Notebooks, and prefer to use your local Python environment, you need to install the Python Azure ML SDK, and make sure to install notebook and contrib:
+如果决定不使用 Azure Notebooks，而更愿意使用本地 Python 环境，则必须安装 Python Azure ML SDK，并确保安装笔记本和 contrib：
 
 ```shell
 conda create -n azureml -y Python=3.6
@@ -96,91 +96,91 @@ jupyter nbextension install --py --user azureml.widgets
 jupyter nbextension enable azureml.widgets --user --py
 ```
 
-You will need to restart Jupyter after this. Detailed instructions are [here](https://docs.microsoft.com/azure/machine-learning/service/quickstart-create-workspace-with-python/?WT.mc_id=msignitethetour2019-github-aiml40)
+进行此操作后需要重启 Jupyter。 [此处](https://docs.microsoft.com/azure/machine-learning/service/quickstart-create-workspace-with-python/?WT.mc_id=msignitethetour2019-github-aiml40)提供了详细说明
 
-If you need a free trial account to get started you can get one [here](https://azure.microsoft.com/offers/ms-azr-0044p/?WT.mc_id=msignitethetour2019-github-aiml40)
+如果需要使用免费的试用帐户，可以在[此处](https://azure.microsoft.com/offers/ms-azr-0044p/?WT.mc_id=msignitethetour2019-github-aiml40)获得一个帐户
 
-#### Pre-creating Compute Cluster
+#### <a name="pre-creating-compute-cluster"></a>预先创建计算群集
 
-For the last two demos, you need a compute cluster. For demo purposes, we will create a cluster that consists of one node only. This can be done in one of three ways:
+为完成最后两个演示，需要一个计算群集。 出于演示目的，我们将创建一个只包含一个节点的群集。 可以通过以下三种方式之一来完成此操作：
 
-1. Through [Azure ML Portal](http://ml.azure.com/?wt.mc_id=msignitethetour2019-github-aiml40) go to **Compute** section and manually create Azure ML Compute cluster with *Standard_DS3_v2* VMs, specifying number of nodes = 1. Name the cluster `absa-cluster`.
-2. Run the provided `create_cluster.py` script, providing parameters as above:
+1. 通过 [Azure ML 门户](http://ml.azure.com/?wt.mc_id=msignitethetour2019-github-aiml40)，转到“计算”部分，手动创建包含 Standard_DS3_v2 VM 的 Azure ML 计算群集，并将节点数指定为 1   。 将群集命名为 `absa-cluster`。
+2. 运行提供的 `create_cluster.py` 脚本，并提供上述参数：
 ```shell
 python create_cluster.py -s [subscription_id] -w absa_space -g absa
 ```
-3. Run first few cells from `absa.ipynb` notebook which will create the cluster for you.
+3. 运行 `absa.ipynb` 笔记本中的前几个单元格，这将创建一个群集。
 
-## Demos
+## <a name="demos"></a>演示
 
-### Demo 1: Text Analytics Cognitive Service
+### <a name="demo-1-text-analytics-cognitive-service"></a>演示 1：文本分析认知服务
 
-In this demo, we show how Text Analytics can do sentiment analysis of a phrase in a web interface.
+在本演示中，我们将展示文本分析如何对 Web 界面中的短语进行情绪分析。
 
-1. Open [Text Analytics Page](https://azure.microsoft.com/services/cognitive-services/text-analytics/?WT.mc_id=msignitethetour2019-github-aiml40)
-2. Scroll down to **see it in action** section and enter the phrase *I loved the polka dot pants that I bought in the london store* (You can also leave the default phrase to demonstrate the point).
-3. Press **Analyze** to get the following result:
+1. 打开[文本分析页](https://azure.microsoft.com/services/cognitive-services/text-analytics/?WT.mc_id=msignitethetour2019-github-aiml40)
+2. 向下滚动至“在操作中查看”部分，然后输入短语“我喜欢我在伦敦商店购买的圆点长裤”（也可以保留默认短语以阐明要点）   。
+3. 按“分析”，你将得到以下结果  ：
 
-![Screenshot of Azure Text Analytics](images/analytics.png)
+![Azure 文本分析的屏幕截图](images/analytics.png)
 
-Note that Text Analytics does not only provide sentiment, but also extracts location and key words from text.
+请注意，文本分析不仅提供情绪，而且还从文本中提取位置和关键字。
 
-### Demo 2: Azure AutoML
+### <a name="demo-2-azure-automl"></a>演示 2：Azure AutoML
 
-In this demo, we demonstrate how Automated ML can be used to build an ML model without coding.
+在本演示中，我们演示了如何使用自动化 ML 构建 ML 模型而无需编写代码。
 
-1. Navigate to your Azure ML Workspace (created above) in the [http://ml.azure.com](http://ml.azure.com/?WT.mc_id=msignitethetour2019-github-aiml40)
-2. Go to **Datasets** - you should see the previously uploaded dataset there (clothing_automl.xlsx). Note that you can also upload it here through the portal.
-3. Select the dataset.
-4. From the **Overview** tab, expand **Sample usage** and show the code that can be used to access the data programmatically, if needed.
-5. From the **Explore** tab, have a look at the data.
-6. Go to **Automated ML** tab and click **New Experiment**
-7. Select experiment name and compute to be used.
-8. Select the dataset.
-9. Chose the type of prediction task -- **Classification**.
-10. Select target column -- **Rating**.
-11. Click **Start**.
+1. 在 [http://ml.azure.com](http://ml.azure.com/?WT.mc_id=msignitethetour2019-github-aiml40) 中导航到（你在上面创建的）Azure ML 工作区
+2. 转到“数据集”，应可看到之前上传的数据集 (clothing_automl.xlsx)  。 请注意，你也可以通过门户将其上传到此处。
+3. 选择数据集。
+4. 在“概述”选项卡上，展开“样本使用情况”，并显示可用于以编程方式访问数据的代码（如果需要）   。
+5. 在“浏览”选项卡中，查看数据  。
+6. 转到“自动化 ML”选项卡，然后单击“新试验”  
+7. 选择要使用的试验名称和计算。
+8. 选择数据集。
+9. 选择预测任务的类型 - 分类  。
+10. 选择目标列 - 评级  。
+11. 单击“开始”  。
 
-The experiment will take quite a long time to run, because different algorithms will be investigated. If showing a demo, it would make sense to run this in advance and just show the results.
+由于要研究不同的算法，因此本试验将花费相当长的时间才能运行完毕。 如果要播放演示，最好提前运行本试验，只在最后显示结果。
 
-### Demo 3: Using Azure ML Workspace with Python SDK
+### <a name="demo-3-using-azure-ml-workspace-with-python-sdk"></a>演示 3：通过 Python SDK 使用 Azure ML 工作区
 
-In this demo, we will run custom Python code that uses the Python Azure ML SDK to train, optimize and use the custom Aspect Based Sentiment Analysis (ABSA) model.
+在本演示中，我们将运行自定义 Python 代码，该代码使用 Python Azure ML SDK 训练、优化和使用自定义的基于方面的情绪分析 (ABSA) 模型。
 
-All of the instructions for this part of the demo are located in the Jupyter Notebook itself. Use one of the methods described above to run the Notebook (in Azure Notebooks, or locally), and follow instructions there. 
+Jupyter Notebook 本身包含此演示部分的所有说明。 使用上述某个方法（在 Azure Notebooks 中或在本地）运行 Notebook，并按照其中的说明进行操作。 
 
-## Tear Down
+## <a name="tear-down"></a>清理空间
 
-To free up cloud resources used during the demo, you need to delete Azure ML workspace and resource group:
+为释放演示期间使用的云资源，需要删除 Azure ML 工作区和资源组：
 
 ```shell
 az ml workspace delete --w absa_space -g absa
 az group delete -n absa
 ```
 
-## Presenter Resources
+## <a name="presenter-resources"></a>讲师资源
 
-If you are going to present this content, please have a look at the [additional presenter resources](README-Instructor.md).
+如果要演示此内容，请查看[其他讲师资源](README-Instructor.md)。
 
-## Resources and Continue Learning
+## <a name="resources-and-continue-learning"></a>相关资源和继续学习
 
-### Getting Started Series
+### <a name="getting-started-series"></a>入门系列
 
-* [Azure Cognitive Services Text Analytics API](https://aka.ms/TextCogSvc​)
-* [Automated Machine Learning](https://aka.ms/AutomatedMLDoc​)
-* [Hyperparameter Tuning](https://aka.ms/AzureMLHyperDrive​)
-* [Azure ML Services and the Python SDK](https://aka.ms/AA3dzht) ​
+* [Azure 认知服务文本分析 API](https://aka.ms/TextCogSvc)
+* [自动化机器学习](https://aka.ms/AutomatedMLDoc)
+* [超参数优化](https://aka.ms/AzureMLHyperDrive)
+* [Azure ML 服务和 Python SDK](https://aka.ms/AA3dzht) 
 
-### Other Materials
+### <a name="other-materials"></a>其他资料
 
-* [9 Advanced Tips for Production Machine Learning](aka.ms/9TipsProdML)
-* [Intel Aspect-Based Sentiment Analysis Page](https://www.intel.ai/introducing-aspect-based-sentiment-analysis-in-nlp-architect/)
-* Azure ML Best Practice Repos:
-    * [Natural Language Processing](https://github.com/microsoft/nlp/)
-    * [Computer Vision](https://github.com/microsoft/ComputerVision)
-    * [Recommenders](https://github.com/microsoft/Recommenders)
+* [关于生产机器学习的 9 个进阶提示](aka.ms/9TipsProdML)
+* [基于 Intel 方面的情绪分析页面](https://www.intel.ai/introducing-aspect-based-sentiment-analysis-in-nlp-architect/)
+* Azure 机器学习最佳做法存储库：
+    * [自然语言处理](https://github.com/microsoft/nlp/)
+    * [计算机视觉](https://github.com/microsoft/ComputerVision)
+    * [推荐系统](https://github.com/microsoft/Recommenders)
 
 
-## Feedback loop
+## <a name="feedback-loop"></a>反馈回路
 
-Do you have a comment, feedback, suggestion? Currently, the best feedback loop for content changes/suggestions/feedback is to create a new issue on this GitHub repository. To get all the details about how to create an issue please refer to the [Contributing](../../contributing.md) docs
+想要提供意见、反馈、建议？ 目前，针对内容更改/建议/反馈的最佳反馈循环是在此 GitHub 存储库中创建新问题。 若要获取有关如何创建问题的所有详细信息，请参阅[投稿](../../contributing.md)文档

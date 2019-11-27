@@ -1,9 +1,9 @@
-# Developers Guide to AI: A Data Story
+# <a name="developers-guide-to-ai-a-data-story"></a>AI 开发人员指南：数据案例
 
-In this theatre session we will show the data science process and how to apply it. From exploration of datasets to deployment of services - all applied to an interesting data story. This will also take you on a very brief tour of the Azure AI Platform.
+本视频讲座将会演示数据科学过程及其应用方式。 从探索数据集到部署服务，所有这些都应用于有趣的数据案例。 我们还会针对 Azure AI 平台进行简短介绍。
 
-# I want to ...
+# <a name="i-want-to-"></a>我想…
 
-## [Learn to present this content](README-presenter.md)
+## <a name="learn-to-present-this-contentreadme-presentermd"></a>[了解如何呈现此内容](README-presenter.md)
 
-## [Continue learning after attending this session](README-attendee.md)
+## <a name="continue-learning-after-attending-this-sessionreadme-attendeemd"></a>[学完本讲座内容后继续学习](README-attendee.md)

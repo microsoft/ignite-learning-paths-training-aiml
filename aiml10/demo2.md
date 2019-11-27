@@ -1,71 +1,71 @@
-## Demo 2 - Using Form Recognizer
+## <a name="demo-2---using-form-recognizer"></a>演示 2 - 使用表单识别器
 
-[![Demo 2](images/demo2.png)](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/videos/Demo2.mp4 "Demo 2")
+[![演示 2](images/demo2.png)](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/videos/Demo2.mp4 "演示 2")
 
-## Summary
-In this exercise we learn how to use the Form Recognizer service. It is assumed that a storage account has been created (as described in the [first demo](demo1.md).)
-
-
-## What you need
-- [Invoice Training Set](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/data/train.zip)
-
-- Access to the limited-access preview. To get access to the preview, fill out and submit the [Form Recognizer access request](https://aka.ms/FormRecognizerRequestAccess) form.
-
-- [Postman](https://www.getpostman.com/) is used to send requests to the Form Recognizer service REST API. Refer to this [short primer](postman.md) to learn more.
-
-- Postman Form Recognizer requests [collection](src/Collections/Form_Recognizer.postman_collection.json).
-
-## Azure Resources
-The only resource we work with in this demonstration is the Form Recognizer service.
+## <a name="summary"></a>摘要
+在此练习中，我们了解如何使用表单识别器服务。 假定已创建存储帐户（如[第一个演示](demo1.md)中所述）。
 
 
-| Name                       | Type                            | Purpose                    |
+## <a name="what-you-need"></a>需要什么
+- [发票训练集](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/data/train.zip)
+
+- 对访问受限的预览版的访问权限。 若要访问预览版，请填写并提交[表单识别器访问请求](https://aka.ms/FormRecognizerRequestAccess)表单。
+
+- [Postman](https://www.getpostman.com/) 用于将请求发送到表单识别器服务 REST API。 请参阅此[简要入门](postman.md)以了解详细信息。
+
+- Postman 表单识别器会请求[集合](src/Collections/Form_Recognizer.postman_collection.json)。
+
+## <a name="azure-resources"></a>Azure 资源
+在此演示中，我们使用的唯一资源是表单识别器服务。
+
+
+| 名称                       | 类型                            | 用途                    |
 | -------------------------- | ------------------------------- | ------------------------- |
-| **ttinvoicereader**       | Form Recognizer Service         | This service will eventually end up in the All-In-One sevice. For right now it is in limited-access preview. To get access to the preview, fill out and submit the [Form Recognizer access request](https://aka.ms/FormRecognizerRequestAccess) form.  |
+| **ttinvoicereader**       | 表单识别器服务         | 此服务最终会出现在全合一服务中。 目前，它在访问受限的预览版中。 若要访问预览版，请填写并提交[表单识别器访问请求](https://aka.ms/FormRecognizerRequestAccess)表单。  |
 
 
-## What to do
+## <a name="what-to-do"></a>要执行的操作
 
-There are three main steps:
-1. Upload training data to the storage account
-2. Create Form Recognizer service
-3. Train and Use Form Recognizer service
+有三个主要步骤：
+1. 将训练数据上传到存储帐户
+2. 创建表单识别器服务
+3. 训练并使用表单识别器服务
 
-### Upload Training Data
-
-
-1. Create a container called `train` in the storage account created in the previous demo.
-
-[![Create Container](images/create_container.png)](https://docs.microsoft.com/en-us/azure/storage/blobs/storage-quickstart-blobs-portal?WT.mc_id=msignitethetour2019-github-aiml10 "Create Container")
-
-2. Download and unzip [invoice training set](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/data/train.zip).
-
-3. Upload unzipped [invoice training set](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/data/train.zip) to the `train` container. This can be done directly using the [portal](https://docs.microsoft.com/en-us/azure/storage/blobs/storage-quickstart-blobs-portal?WT.mc_id=msignitethetour2019-github-aiml10#upload-a-block-blob) or by using the [Azure Storage Explorer](https://docs.microsoft.com/en-us/azure/vs-azure-tools-storage-explorer-blobs?WT.mc_id=msignitethetour2019-github-aiml10) (as shown in the [video](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/videos/Demo2.mp4 "Demo 1")).
-
-### Create Form Recognizer service
-
-In order to do this you must have access to the Form Recognizer preview. To get access to the preview, fill out and submit the [Form Recognizer access request](https://aka.ms/FormRecognizerRequestAccess) form. 
+### <a name="upload-training-data"></a>上传训练数据
 
 
-[![Form Recognizer](images/form_recognizer.png)](https://docs.microsoft.com/en-us/azure/cognitive-services/form-recognizer/overview?WT.mc_id=msignitethetour2019-github-aiml10#request-access "Form Recognizer")
+1. 在存储帐户（已在前面的演示中创建）中创建名为 `train` 的容器。
 
-### Train the Form Recognizer Service
+[![创建容器](images/create_container.png)](https://docs.microsoft.com/en-us/azure/storage/blobs/storage-quickstart-blobs-portal?WT.mc_id=msignitethetour2019-github-aiml10 "创建容器")
 
-This section uses Postman and assumes you know about loading collections, handling variables, and setting pre-request scripts. To learn how to do these specific things we have included some [instructions](postman.md).
+2. 下载并解压缩[发票训练集](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/data/train.zip)。
 
-The table below lists the variables set during this section of the exercise:
+3. 将解压缩的[发票训练集](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/data/train.zip)上传到 `train` 容器。 可以直接通过[门户](https://docs.microsoft.com/en-us/azure/storage/blobs/storage-quickstart-blobs-portal?WT.mc_id=msignitethetour2019-github-aiml10#upload-a-block-blob)这样做，也可以通过 [Azure 存储资源管理器](https://docs.microsoft.com/en-us/azure/vs-azure-tools-storage-explorer-blobs?WT.mc_id=msignitethetour2019-github-aiml10)这样做（详见[视频](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/videos/Demo2.mp4 "演示 1")）。
 
-| Name                       | Type                            | Purpose                    |
+### <a name="create-form-recognizer-service"></a>创建表单识别器服务
+
+为此，必须有权访问表单识别器预览版。 若要访问预览版，请填写并提交[表单识别器访问请求](https://aka.ms/FormRecognizerRequestAccess)表单。 
+
+
+[![表单识别器](images/form_recognizer.png)](https://docs.microsoft.com/en-us/azure/cognitive-services/form-recognizer/overview?WT.mc_id=msignitethetour2019-github-aiml10#request-access "表单识别器")
+
+### <a name="train-the-form-recognizer-service"></a>训练表单识别器服务
+
+此部分使用 Postman 并假定你了解如何加载集合、处理变量和设置预请求脚本。 若要了解如何执行这些特定的操作，请查看我们提供的一些[说明](postman.md)。
+
+下表列出了在此部分练习中设置的变量：
+
+| 名称                       | 类型                            | 用途                    |
 | -------------------------- | ------------------------------- | ------------------------- |
-| `Ocp-Apim-Subscription-Key`       | Authorization         | Key for getting access to Form Recognizer service  |
-| `endpoint`       | Variable         | Specifies the Form Recognizer endpoint  |
-| `modelId`       | Variable         | Current Form Recognizer model (this is set in step 5)  |
+| `Ocp-Apim-Subscription-Key`       | 授权         | 用于获取表单识别器服务访问权限的密钥  |
+| `endpoint`       | 变量         | 指定表单识别器终结点  |
+| `modelId`       | 变量         | 当前的表单识别器模型（在步骤 5 中设置）  |
 
-1. Load the [Form Recognizer collection](src/Collections/Form_Recognizer.postman_collection.json) into Postman.
+1. 将[表单识别器集合](src/Collections/Form_Recognizer.postman_collection.json)加载到 Postman 中。
 
-2. Set the `Ocp-Apim-Subscription-Key` authorization header as well as the `endpoint` variable to the Form Recognizer service (these can be found in the portal).
+2. 将 `Ocp-Apim-Subscription-Key` 授权标头和 `endpoint` 变量设置为表单识别器服务（这些都可以在门户中找到）。
 
-3. Open the `TrainModel` Request and change the Pre-request script to set the `storageAccount` variable to your storage account (in the video the variable is `ttinvoicestorage`) and the `SASValue` to the appropriate Secure Access Signature to the `train` container. To learn how to get a Secure Access Signature, refer to our [brief explanation](sas.md).
+3. 打开 `TrainModel` 请求并更改预请求脚本，将 `storageAccount` 变量设置为你的存储帐户（在视频中，此变量为 `ttinvoicestorage`），并将 `SASValue` 设置为 `train` 容器的相应安全访问签名。 若要了解如何获取安全访问签名，请参阅我们的[简要说明](sas.md)。
 
 ```javascript
 pm.environment.set('storageAccount', '<YOUR STORAGE ACCOUNT>')
@@ -73,18 +73,18 @@ pm.environment.set('container', 'train')
 pm.environment.set('SASValue', '<SAS>')
 ```
 
-4. Hit Send on the Request. Your response should look something like this:
+4. 按请求上的“发送”。 响应应如下所示：
 
-![Training Response](images/form_training.png "Training Response")
+![训练响应](images/form_training.png "训练响应")
 
-5. Set the `modelId` variable for the collection to the returned `modelId` indicated above.
+5. 将集合的 `modelId` 变量设置为返回的 `modelId`，如上所示。
 
 
-### Use the Form Recognizer Service
+### <a name="use-the-form-recognizer-service"></a>使用表单识别器服务
 
-1. Open the `AnalyzeForm` request. In the **Body** section click on the `Select Files` button to choose an invoice downloaded previously. After sending the request you should get something similar to:
+1. 打开 `AnalyzeForm` 请求。 在“正文”  部分单击`Select Files`按钮，选择以前下载的发票。 发送请求后，应该会获得类似于以下内容的响应：
 
-![Inference Response](images/form_inference.png "Inference Response")
+![推理响应](images/form_inference.png "推理响应")
 
-# Next Demo
-Learn how to create custom Invoice Reader Skill with Azure Functions by continuing on to [Demo 3 - Creating a Custom Invoice Reader Skill](demo3.md)
+# <a name="next-demo"></a>下一演示
+请转到[演示 3 - 创建自定义发票读取者技能](demo3.md)，了解如何使用 Azure Functions 创建自定义发票读取者技能

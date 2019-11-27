@@ -1,143 +1,112 @@
-# Setup for AIML20 demos
+# <a name="setup-for-aiml20-demos"></a>AIML20 演示设置
 
-These tasks were performed ahead of time for the AIML20 presentation. Follow
-these same steps to prepare for the remaining demo scripts.
+这些任务是提前针对 AIML20 演示执行的。 请遵循相同的步骤来准备剩余的演示脚本。
 
-## Clone the repository to your local machine
+## <a name="clone-the-repository-to-your-local-machine"></a>将存储库克隆到本地计算机
 
-You will need the contents of https://github.com/microsoft/ignite-learning-paths-training-aiml/tree/master/aiml20 on your local machine. The easiest way to do this is to visit the [Developer's Guide to AI Learning Paths repository](https://github.com/microsoft/ignite-learning-paths-training-aiml) and click the "Clone or download" button. We will refer to files relative to the `aiml20` folder.
+需要在本地计算机上使用 https://github.com/microsoft/ignite-learning-paths-training-aiml/tree/master/aiml20 的内容。 最简单的克隆方法是访问 [AI 学习路径存储库的开发人员指南](https://github.com/microsoft/ignite-learning-paths-training-aiml)，然后单击“克隆或下载”按钮。 我们将引用相对于 `aiml20` 文件夹的文件。
 
-## Sign up for an Azure Subscription
+## <a name="sign-up-for-an-azure-subscription"></a>注册 Azure 订阅
 
-If you don't already have an Azure subscription, you can [sign up
-here](https://azure.microsoft.com/free/?WT.mc_id=msignitethetour2019-github-aiml20)
-and also get $200 in free Azure credits to use. 
+如果你没有 Azure 订阅，可以[在此处注册](https://azure.microsoft.com/free/?WT.mc_id=msignitethetour2019-github-aiml20)，并获取 200 美元的免费 Azure 额度。 
 
-## Find your Azure Subcription ID
+## <a name="find-your-azure-subcription-id"></a>查找 Azure 订阅 ID
 
-In the [Azure Portal](https://portal.azure.com), sign in and click on
-"Subscriptions" in the left menu bar. Click on the Subscription Name you will be
-using, and copy the "Subscription ID" shown there. You'll need it later when you
-create resources.
+在 [Azure 门户](https://portal.azure.com)中登录，然后在左侧菜单栏中单击“订阅”。 单击要使用的订阅名称，并复制此处显示的“订阅 ID”。 稍后在创建资源时会用到此 ID。
 
-Alternatively, run `az account show` in the Azure CLI and copy the "id" value
-shown.
+或者，在 Azure CLI 中运行 `az account show` 并复制显示的“id”值。
 
-## Start fresh.
+## <a name="start-fresh"></a>开始刷新。
 
- If you've run the demos before, delete these resource groups if they exist:
+ 如果以前曾经运行过演示，请删除这些资源组（如果存在）：
  
  - `aiml20-demo`
 
- You can use the Azure Portal, or run this command in the Azure CLI:
+ 可以使用 Azure 门户，或在 Azure CLI 中运行此命令：
 
  ```sh
  az group delete --name aiml20-demo
  ```
 
-## Deploy the Tailwind Traders website.
+## <a name="deploy-the-tailwind-traders-website"></a>部署 Tailwind Traders 网站。
 
-Click the button below. This will deploy
-[TailwindTraders-Website](https://github.com/Microsoft/TailwindTraders-Website)
-from Github, using an ARM
-template
-to enable the Personalizer integration and ONNX-based Shop by Photo feature. ([More details about this deployment](https://github.com/microsoft/TailwindTraders-Website/blob/master/Source/Tailwind.Traders.Web/Standalone/README.md).)
+单击下面的按钮。 随即会使用 ARM 模板从 Github 部署 [TailwindTraders-Website](https://github.com/Microsoft/TailwindTraders-Website)，以实现个性化体验创建服务集成和基于 ONNX 的“按图购物”功能。 （[有关此部署的更多详细信息](https://github.com/microsoft/TailwindTraders-Website/blob/master/Source/Tailwind.Traders.Web/Standalone/README.md)。）
 
-[![Deploy to Azure](https://azuredeploy.net/deploybutton.svg)](https://portal.azure.com/?feature.customportal=false#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FMicrosoft%2FTailwindTraders-Website%2Fmaster%2Fazuredeploy.json)
+[![部署到 Azure](https://azuredeploy.net/deploybutton.svg)](https://portal.azure.com/?feature.customportal=false#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FMicrosoft%2FTailwindTraders-Website%2Fmaster%2Fazuredeploy.json)
 
-In the form that appears, select the following options:
+在出现的窗体中选择以下选项：
 
-* Subscription: Select the subscription in which to deploy the resources
+* 订阅：选择要在其中部署资源的订阅
 
-* Resource Group: resources will be created in the resource group you specify.
-  We recommend choosing "New" and entering the name `aiml20-demo`. When
-  you're done, you can delete this resource group to shut down the site and
-  delete all associated resources.
+* 资源组：将在指定的资源组中创建资源。
+  建议选择“新建”并输入名称 `aiml20-demo`。 完成后，可以删除此资源组以关闭站点，并删除所有关联的资源。
 
-* Location: The Azure region where the resources will be deployed. You must
-  be able to deploy SQL Database and App Services in that region. 
+* 位置：要在其中部署资源的 Azure 区域。 必须能够在该区域中部署 SQL 数据库和应用服务。 
 
-  Note: Since Personalizer is currently only available in WestUS2 and WestEurope, it will be deployed there regardless of what you choose.
+  注意：由于个性化体验创建服务目前只能在美国西部 2 区和西欧使用，因此，不管选择哪个区域，都只会在上述两个区域部署该服务。
 
-* Site Name: This will be used in the site's URL and visible publicly, and must
-  be globally unique. To avoid clashes, choose `aiml20-xy` replacing `xy` with your initials, but we will refer to this name as just `aiml20` in these scripts. (If you
-  choose a name that is in use, you will get "Conflict" errors during the
-  deployment.)
+* 站点名称：将在站点 URL 中使用并公开显示，必须全局唯一。 为了避免冲突，请选择 `aiml20-xy`（将 `xy` 替换为姓名首字母缩写），但在这些脚本中，我们只是简单地使用 `aiml20` 来表示此名称。 （如果选择的名称已被使用，在部署过程中会出现“冲突”错误。）
 
-* Site Location: Enter the short version of "Location" above, e.g. `westus2`.
-  (You can get a list of short names in the Azure CLI with: `az account
-  list-locations -o table`).
+* 站点位置：输入上面指定的“位置”的简短版本，例如 `westus2`。
+  （可以在 Azure CLI 中使用 `az account
+  list-locations -o table` 获取短名称列表）。
 
-* Deployment mode: Choose `standalone`
+* 部署模式：选择 `standalone`
 
-* SQL Login: Enter `twt`
+* SQL 登录名：输入 `twt`
 
-* SQL Password: generate and use a secure password (it must include punctuation
-  and mixed case, but do not use `;`). You won't need it for our demos, so no
-  need to write it down.
+* SQL 密码：生成并使用安全密码（必须包含标点和混合大小写，但不要使用 `;`）。 我们的演示不需要密码，因此无需记下密码。
 
-* Enable Personalizer: choose `true`
+* 启用个性化体验创建服务：选择 `true`
 
-* Repo URL: accept the default, `https://github.com/microsoft/TailwindTraders-Website`
+* 存储库 URL：接受默认值 `https://github.com/microsoft/TailwindTraders-Website`
 
-* Branch: accept the default, `master`
+* 分支：接受默认值 `master`
 
-(As a backup, you can also use the Repo URL
-`https://github.com/revodavid/TailwindTraders-Website` with the branch `aiml20`.
-This was forked on 2019-10-25 and is known to work.)
+（作为备选方法，也可以同时使用存储库 URL `https://github.com/revodavid/TailwindTraders-Website` 和分支 `aiml20`。
+此分支是在 2019 年 10 月 25 日创建的，已知可正常工作。）
 
-Check "I agree to the terms and condtions" and click "Purchase".
+选中“我同意条款和条件”，然后单击“购买”。
 
-Allow at least 15 minutes for the site to deploy. 
+至少等待 15 分钟来部署站点。 
 
-The deployed website URL will be of the form SITENAME.azurewebsites.net (using the Site Name you provided above), or you can find it as follows:
+部署的网站 URL 采用 SITENAME.azurewebsites.net 格式（使用前面提供的站点名称），或者可按如下所示查找它：
 
-* click "Go To Resource" under "Next Steps"
+* 单击“后续步骤”下的“转到资源”
 
-* Click the "App Service" resource
+* 单击“应用服务”资源
 
-* Look at the "URL" value displayed in the right pane
+* 查看右窗格中显示的“URL”值
 
-The website URL will be displayed after the "Setting up Source Control" step, or you can inspect the "App Service" resource.
+网站 URL 将显示在“设置源代码管理”步骤后面，或者你可以检查“应用服务”资源。
 
-### Install the "Simple" ONNX model
+### <a name="install-the-simple-onnx-model"></a>安装“简单”的 ONNX 模型
 
-Follow the instructions in [DEMO ONNX deployment.md](DEMO%20ONNX%20deployment.md#load-the-simple-onnx-model) under the heading "Load the Simple ONNX model". This will degrade the "Shop by Photo" tool in the app to only recognize hammers and drills.
+按照 [DEMO ONNX deployment.md](DEMO%20ONNX%20deployment.md#load-the-simple-onnx-model) 中标题“加载简单的 ONNX 模型”下的说明操作。 这会导致应用中的“按图购物”工具降级，使之只能识别锤子和电钻。
 
-## Configure Visual Studio Code
+## <a name="configure-visual-studio-code"></a>配置 Visual Studio Code
 
-Install the extension [Azure
-Account](https://marketplace.visualstudio.com/items?itemName=ms-vscode.azure-account).
-(On Windows, you will also need to [install node.js](https://nodejs.org/).) In VS Code, log
-into Azure with the "Azure: Sign In" command (use Control-Shift-P to open the
-Command Palette). To run Azure CLI commands from a script in VS Code, use
-"Terminal: Run Selected Text in Azure Terminal" to copy commands.)
+安装 [Azure 帐户](https://marketplace.visualstudio.com/items?itemName=ms-vscode.azure-account)扩展。
+（在 Windows 上，还需要 [安装 Node.js](https://nodejs.org/)。）在 VS Code 中，使用“Azure: 登录”命令登录到 Azure（使用 Ctrl-Shift-P 打开命令面板）。 若要从 VS Code 中的脚本运行 Azure CLI 命令，请使用“终端:在 Azure 终端中运行所选文本”以复制命令。
 
-Alternatively you can [install the Azure
-CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest&WT.mc_id=https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest&WT.mc_id=msignitethetour2019-github-aiml20)
-on your local Windows, MacOS or Linux machine. If you don't have it installed,
-you can also launch the [Azure Cloud
-Shell](https://docs.microsoft.com/en-us/azure/cloud-shell/overview?WT.mc_id=msignitethetour2019-github-aiml20)
-and run these commands from a browser window. 
+或者，可以在本地 Windows、MacOS 或 Linux 计算机上[安装 Azure CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest&WT.mc_id=https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest&WT.mc_id=msignitethetour2019-github-aiml20)。 如果尚未安装 CLI，也可以在浏览器窗口中启动 [Azure Cloud Shell](https://docs.microsoft.com/en-us/azure/cloud-shell/overview?WT.mc_id=msignitethetour2019-github-aiml20) 并运行这些命令。 
 
-## Prepare Visual Studio for demo
+## <a name="prepare-visual-studio-for-demo"></a>为演示准备 Visual Studio
 
-- Open `vision_demo.sh`
-- launch a Cloud Shell with "Azure: Open Bash In Cloud Shell". (If you prefer, you can use the Azure CLI locally.)   
+- 打开 `vision_demo.sh`
+- 使用“Azure:打开 Cloud Shell 中的 Bash”启动 Cloud Shell。 （如果需要，可以在本地使用 Azure CLI。）   
 
-## Open browser pages ready to demo.
+## <a name="open-browser-pages-ready-to-demo"></a>打开随时可用于演示的浏览器页。
 
-* The deployed Tailwind Trader app 
-* https://portal.azure.com (browse to resources)  
+* 已部署的 Tailwind Trader 应用 
+* https://portal.azure.com （浏览到资源）  
 * https://azure.microsoft.com/en-us/services/cognitive-services/computer-vision/
 * https://customvision.ai
 * https://lutzroeder.github.io/netron/
 
-## Download image files to local machine
+## <a name="download-image-files-to-local-machine"></a>将图像文件下载到本地计算机
 
-Download "CV Training Images.zip" to your local machine, and expand the zip
-file. This will create a folder "CV Training Images" with the following
-subfolders:
+将“CV Training Images.zip”下载到本地计算机，然后展开 zip 文件。 这会创建包含以下子文件夹的文件夹“CV Training Images”：
 
 * drills
 * hammers
@@ -145,16 +114,12 @@ subfolders:
 * pliers
 * screwdrivers
 
-These images will be used to test the Computer Vision service and create a model
-with the Custom Vision service.
+这些图像用于测试计算机视觉服务，并通过自定义视觉服务创建模型。
 
-These images were sourced from Wikimedia Commons and used under their respective
-Creative Commons licenses. See the file [ATTRIBUTIONS.md](Attributions.md) for
-details.
+这些图像源自 Wikimedia Commons，是根据相应的 Creative Commons 许可条款使用的。 有关详细信息，请参阅文件 [ATTRIBUTIONS.md](Attributions.md)。
 
-Also download the folder "test images". These images will not be used in
-training, but will be used to test that our models are working.
+另请下载文件夹“test images”。 这些图像不会在训练中使用，而是用于测试模型的工作状况。
 
-## Next Step
+## <a name="next-step"></a>后续步骤
 
-[Computer Vision](DEMO%20Computer%20Vision.md)
+[计算机视觉](DEMO%20Computer%20Vision.md)

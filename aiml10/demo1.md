@@ -1,98 +1,98 @@
-# Demo 1 - Azure Cognitive Search
+# <a name="demo-1---azure-cognitive-search"></a>演示 1 - Azure 认知搜索
 
-[![Demo 1](images/demo1.png)](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/videos/Demo1.mp4 "Demo 1")
+[![演示 1](images/demo1.png)](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/videos/Demo1.mp4 "演示 1")
 
-## Summary
-In this exercise we demonstrate the basic functions of Azure Cognitive Search in conjunction with the built-in intelligent skillset. There are a number of ways to create the resources required for this demo:
-1. Follow along with the video above (each step is outlined), or
-2. Use the [Azure CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest&WT.mc_id=msignitethetour2019-github-aiml10)
-
-
-## What you need
-- [Invoice Test Set](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/data/test.zip)
-
-## Azure Resources
-These are the resources that we create in the first demonstration. While this table outlines the names of the resources as shown in the video, please use your own names for each of the resources.
+## <a name="summary"></a>摘要
+在本练习中，我们演示 Azure 认知搜索和内置的智能技能组的基本功能。 可通过多种方法来创建此演示所需的资源：
+1. 按上面的视频操作（每一步都已概述），或者
+2. 使用 [Azure CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest&WT.mc_id=msignitethetour2019-github-aiml10)
 
 
-| Name                       | Type                            | Purpose                    |
+## <a name="what-you-need"></a>需要什么
+- [发票测试集](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/data/test.zip)
+
+## <a name="azure-resources"></a>Azure 资源
+这些是我们在第一个演示中创建的资源。 此表概要介绍了视频中显示的资源的名称，但对于每项资源，请使用你自己的名称。
+
+
+| 名称                       | 类型                            | 用途                    |
 | -------------------------- | ------------------------------- | ------------------------- |
-| **ttcognitivesearch**     | Resource Group                  | Groups services together   |
-| **ttinvoicestorage**      | Storage Account                 | Used to store invoices     |
-| **ttinvoicesearch**       | Search Service                  | Featured service           |
-| **ttinvoiceintelligence** | Cognitive Services (All-In-One) | Used in the search service |
+| **ttcognitivesearch**     | 资源组                  | 将多种服务组合到一起   |
+| **ttinvoicestorage**      | 存储帐户                 | 用于存储发票     |
+| **ttinvoicesearch**       | 搜索服务                  | 特色服务           |
+| **ttinvoiceintelligence** | 认知服务（全合一） | 在搜索服务中使用 |
 
 
-## What to do
+## <a name="what-to-do"></a>要执行的操作
 
-There are three main steps:
-1. Create a Resource Group
-2. Create and use Storage Account
-3. Create and use a Search Service resource
+有三个主要步骤：
+1. 创建资源组
+2. 创建并使用存储帐户
+3. 创建并使用搜索服务资源
 
 
 
-### Create a Resource Group
-All of our resources will live in this group.
+### <a name="create-a-resource-group"></a>创建资源组
+我们的所有资源将在此组中运行。
 
 ```
 az group create --location {LOCATION} --name {YOUR_RG_NAME}
 ```
 
-### Create and use Storage Account
-The storage account is used primarily for storing invoices.
+### <a name="create-and-use-storage-account"></a>创建并使用存储帐户
+此存储帐户主要用于存储发票。
 
-1. Create storage account
+1. 创建存储帐户
 
 ```
 az storage account create --name {YOUR_STORAGE_NAME} --location {LOCATION} --resource-group {YOUR_RG_NAME} --sku Standard_LRS
 ```
 
-2. Create a container called `test`
+2. 创建名为 `test` 的容器
 
-[![Create Container](images/create_container.png)](https://docs.microsoft.com/en-us/azure/storage/blobs/storage-quickstart-blobs-portal?WT.mc_id=msignitethetour2019-github-aiml10 "Create Container")
+[![创建容器](images/create_container.png)](https://docs.microsoft.com/en-us/azure/storage/blobs/storage-quickstart-blobs-portal?WT.mc_id=msignitethetour2019-github-aiml10 "创建容器")
 
-3. Download and unzip [invoice test set](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/data/test.zip).
+3. 下载并解压缩[发票测试集](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/data/test.zip)。
 
-4. Upload unzipped [invoice test set](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/data/test.zip) to the `test` container. This can be done directly using the [portal](https://docs.microsoft.com/en-us/azure/storage/blobs/storage-quickstart-blobs-portal?WT.mc_id=msignitethetour2019-github-aiml10#upload-a-block-blob) or by using the [Azure Storage Explorer](https://docs.microsoft.com/en-us/azure/vs-azure-tools-storage-explorer-blobs?WT.mc_id=msignitethetour2019-github-aiml10) application (as shown in the [video](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/videos/Demo1.mp4 "Demo 1")).
+4. 将解压缩的[发票测试集](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/data/test.zip)上传到 `test` 容器。 可以直接通过[门户](https://docs.microsoft.com/en-us/azure/storage/blobs/storage-quickstart-blobs-portal?WT.mc_id=msignitethetour2019-github-aiml10#upload-a-block-blob)这样做，也可以通过 [Azure 存储资源管理器](https://docs.microsoft.com/en-us/azure/vs-azure-tools-storage-explorer-blobs?WT.mc_id=msignitethetour2019-github-aiml10)应用程序这样做（详见[视频](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/videos/Demo1.mp4 "演示 1")）。
 
-### Create and use a Search Service resource
-Create a search service:
+### <a name="create-and-use-a-search-service-resource"></a>创建并使用搜索服务资源
+创建搜索服务：
 
-[![Azure Search](images/azure_search.png)](https://docs.microsoft.com/en-us/azure/search/search-create-service-portal?WT.mc_id=msignitethetour2019-github-aiml10 "Azure Search")
+[![Azure 搜索](images/azure_search.png)](https://docs.microsoft.com/en-us/azure/search/search-create-service-portal?WT.mc_id=msignitethetour2019-github-aiml10 "Azure 搜索")
 
 
-Use Search Service:
+使用搜索服务：
 
-1. In the newly created service click on `Import Data`
+1. 在新建的服务中，单击`Import Data`
 
-[![Import Data](images/import_data.png)](https://docs.microsoft.com/en-us/azure/search/cognitive-search-quickstart-blob?WT.mc_id=msignitethetour2019-github-aiml10#create-the-enrichment-pipeline "Import Data")
+[![导入数据](images/import_data.png)](https://docs.microsoft.com/en-us/azure/search/cognitive-search-quickstart-blob?WT.mc_id=msignitethetour2019-github-aiml10#create-the-enrichment-pipeline "导入数据")
 
-2.Use an existing connection to the `test` container we created in our storage account.
+2. 使用现有的到 `test` 容器（我们已在存储帐户中创建）的连接。
 
-[![Import Data](images/connect_data.png)](https://docs.microsoft.com/en-us/azure/search/cognitive-search-quickstart-blob?WT.mc_id=msignitethetour2019-github-aiml10#step-1-create-a-data-source "Import Data")
+[![导入数据](images/connect_data.png)](https://docs.microsoft.com/en-us/azure/search/cognitive-search-quickstart-blob?WT.mc_id=msignitethetour2019-github-aiml10#step-1-create-a-data-source "导入数据")
 
-3. Create a new Cognitive Services resource
+3. 新建认知服务资源
 
-[![Create Cognitive Services](images/attach_cognitive_svcs.png)](https://docs.microsoft.com/en-us/azure/search/cognitive-search-quickstart-blob?WT.mc_id=msignitethetour2019-github-aiml10#step-2-add-cognitive-skills "Create Cognitive Services")
+[![创建认知服务](images/attach_cognitive_svcs.png)](https://docs.microsoft.com/en-us/azure/search/cognitive-search-quickstart-blob?WT.mc_id=msignitethetour2019-github-aiml10#step-2-add-cognitive-skills "创建认知服务")
 
-4. Go back to the wizard and hit refresh. You should see the newly created service. 
+4. 返回到向导并按“刷新”。 应该会看到新建的服务。 
 
-5. You can now add any enrichments you like!
+5. 现在可以添加你喜欢的任何扩充！
 
-[![Add Enrichments](images/add_enrichments.png)](https://docs.microsoft.com/en-us/azure/search/cognitive-search-quickstart-blob?WT.mc_id=msignitethetour2019-github-aiml10#step-2-add-cognitive-skills "Add Enrichments")
+[![添加扩充](images/add_enrichments.png)](https://docs.microsoft.com/en-us/azure/search/cognitive-search-quickstart-blob?WT.mc_id=msignitethetour2019-github-aiml10#step-2-add-cognitive-skills "添加扩充")
 
-6. After clicking on `Customize Target Index` review the proposed index and click `Create and Indexer`.
+6. 单击`Customize Target Index`后，查看提供的索引，然后单击`Create and Indexer`。
 
-[![First Index](images/first_index.png)](https://docs.microsoft.com/en-us/azure/search/cognitive-search-quickstart-blob?WT.mc_id=msignitethetour2019-github-aiml10#step-3-configure-the-index "First Index")
+[![第一个索引](images/first_index.png)](https://docs.microsoft.com/en-us/azure/search/cognitive-search-quickstart-blob?WT.mc_id=msignitethetour2019-github-aiml10#step-3-configure-the-index "第一个索引")
 
-7. Give the new indexer a name and click `Submit`
+7. 为新索引器命名，然后单击`Submit`
 
-[![First Indexer](images/first_indexer.png)](https://docs.microsoft.com/en-us/azure/search/cognitive-search-quickstart-blob?WT.mc_id=msignitethetour2019-github-aiml10#step-4-configure-the-indexer "First Indexer")
+[![第一个索引器](images/first_indexer.png)](https://docs.microsoft.com/en-us/azure/search/cognitive-search-quickstart-blob?WT.mc_id=msignitethetour2019-github-aiml10#step-4-configure-the-indexer "第一个索引器")
 
-8. Once the indexing has taken place feel free to try some queries:
+8. 索引到位以后，即可尝试一些查询：
 
-[![First Search](images/first_search.png)](https://docs.microsoft.com/en-us/azure/search/cognitive-search-quickstart-blob?WT.mc_id=msignitethetour2019-github-aiml10#query-in-search-explorer "First Search")
+[![首次搜索](images/first_search.png)](https://docs.microsoft.com/en-us/azure/search/cognitive-search-quickstart-blob?WT.mc_id=msignitethetour2019-github-aiml10#query-in-search-explorer "首次搜索")
 
-# Next Demo
-Learn how to use the Form Recognizer Cognitive service by continuing on to [Demo 2 - Using Form Recognizer](demo2.md)
+# <a name="next-demo"></a>下一演示
+转到[演示 2 - 使用表单识别器](demo2.md)，了解如何使用表单识别器认知服务

@@ -1,100 +1,100 @@
-## Demo 4 - Tying it all together
+## <a name="demo-4---tying-it-all-together"></a>演示 4 - 组合
 
-[![Demo 4](images/demo4.png)](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/videos/Demo4.mp4 "Demo 4")
+[![演示 4](images/demo4.png)](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/videos/Demo4.mp4 "演示 4")
 
-## Summary
-In this exercise we tie together all of the resources to create an index, skillset, datasource, and indexer inside of Azure Cognitive Search to exctract Invoice data from our colleciton of pdf files. It is assumed that all of the resources and services from the previous exercises are created and set up properly.
-
-
-## What you need
-- [Invoice Data Set](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/data/invoices_1000.zip) (this is a smaller set of 1000 invoices to run the service and test the functionality)
+## <a name="summary"></a>摘要
+在本练习中，我们将所有资源组合到一起，以便在 Azure 认知搜索内部创建索引、技能集、数据源和索引器，用于从 pdf 文件集合中提取发票数据。 假设已创建并正确设置了前面练习中所述的所有资源和服务。
 
 
-- [Postman](https://www.getpostman.com/) is used to send requests to the Form Recognizer service REST API. Refer to this [short primer](postman.md) to learn more.
-
-- Postman [Invoice Search Request collection](src/Collections/Invoice_Search.postman_collection.json).
-
-## What to do
-
-There are three main steps:
-1. Upload invoices to the storage account
-2. Prepare Azure Search Index, Skillset, Datasource, and Indexer
-3. Monitor and use Index
-
-### Upload Invoice Data
+## <a name="what-you-need"></a>需要什么
+- [发票数据集](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/data/invoices_1000.zip)（包含 1000 份发票的小数据集，用于运行服务和测试功能）
 
 
-1. Create a container called `invoices` in the storage account created in the first demo.
+- [Postman](https://www.getpostman.com/) 用于将请求发送到表单识别器服务 REST API。 请参阅此[简短入门](postman.md)以了解详细信息。
 
-[![Create Container](images/create_container.png)](https://docs.microsoft.com/en-us/azure/storage/blobs/storage-quickstart-blobs-portal?WT.mc_id=msignitethetour2019-github-aiml10 "Create Container")
+- Postman [发票搜索请求集合](src/Collections/Invoice_Search.postman_collection.json)。
 
-2. Download and unzip [invoice data set](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/data/invoices_1000.zip).
+## <a name="what-to-do"></a>要执行的操作
 
-3. Upload unzipped [invoice data set](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/data/invoices_1000.zip) to the `invoices` container. This can be done directly using the [portal](https://docs.microsoft.com/en-us/azure/storage/blobs/storage-quickstart-blobs-portal?WT.mc_id=msignitethetour2019-github-aiml10#upload-a-block-blob) or by using the [Azure Storage Explorer](https://docs.microsoft.com/en-us/azure/vs-azure-tools-storage-explorer-blobs?WT.mc_id=msignitethetour2019-github-aiml10).
+有三个主要步骤：
+1. 将发票上传到存储帐户
+2. 准备 Azure 搜索索引、技能集、数据源和索引器
+3. 监视和使用索引
 
-### Prepare Azure Search
+### <a name="upload-invoice-data"></a>上传发票数据
 
-This section uses Postman and assumes you know about loading collections, handling variables, and setting pre-request scripts. To learn how to do these specific things we have included some [instructions](postman.md).
 
-| Name                       | Type                            | Purpose                    |
+1. 在存储帐户（已在第一篇演示中创建）中创建名为 `invoices` 的容器。
+
+[![创建容器](images/create_container.png)](https://docs.microsoft.com/en-us/azure/storage/blobs/storage-quickstart-blobs-portal?WT.mc_id=msignitethetour2019-github-aiml10 "创建容器")
+
+2. 下载并解压缩[发票数据集](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/data/invoices_1000.zip)。
+
+3. 将解压缩的[发票数据集](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/data/invoices_1000.zip)上传到 `invoices` 容器。 可以直接通过[门户](https://docs.microsoft.com/en-us/azure/storage/blobs/storage-quickstart-blobs-portal?WT.mc_id=msignitethetour2019-github-aiml10#upload-a-block-blob)这样做，也可以通过 [Azure 存储资源管理器](https://docs.microsoft.com/en-us/azure/vs-azure-tools-storage-explorer-blobs?WT.mc_id=msignitethetour2019-github-aiml10)这样做。
+
+### <a name="prepare-azure-search"></a>准备 Azure 搜索
+
+本部分使用 Postman，并假设你了解如何加载集合、处理变量和设置预请求脚本。 若要了解如何执行这些特定的操作，请查看我们提供的一些[说明](postman.md)。
+
+| 名称                       | 类型                            | 用途                    |
 | -------------------------- | ------------------------------- | ------------------------- |
-| `api-key`       | Authorization         | Key for Azure Search access  |
-| `search_service`       | Variable         | Search service url (without the protocol or slashes)  |
-| `index_name`       | Variable         | Name of desired index  |
-| `storageConnectionString`       | Variable         | Connection string to storage account containing invoices  |
-| `cog_svcs_key`       | Variable         | Key for All-In-One Cognitive Services used in [Demo 1](demo1.md)  |
+| `api-key`       | 授权         | Azure 搜索访问密钥  |
+| `search_service`       | 变量         | 搜索服务 URL（不包含协议或斜杠）  |
+| `index_name`       | 变量         | 所需索引的名称  |
+| `storageConnectionString`       | 变量         | 包含发票的存储帐户的连接字符串  |
+| `cog_svcs_key`       | 变量         | [演示 1](demo1.md) 中使用的一体式认知服务的密钥  |
 
-1. Load the [Invoice Search Request collection](src/Collections/Invoice_Search.postman_collection.json) into Postman.
+1. 将[发票搜索请求集合](src/Collections/Invoice_Search.postman_collection.json)载入 Postman。
 
-2. Set all of the variables as described in the table above. Each of these values (with the exception of the `index_name`) can be found in the respective service in the portal. You can choose any `index_name` you like.
+2. 按上表所述设置所有变量。 可以在门户上的相应服务中找到其中的每个值（`index_name` 除外）。 可以选择所需的任何 `index_name`。
 
-3. Open and run the `Create Index` request (using the Send button). This creates the index where the invoice data is stored. After the request successfully completes you should see the changes reflected in the Azure Search service in the portal:
+3. 打开并运行 `Create Index` 请求（使用“发送”按钮）。 这会创建用于存储发票数据的索引。 请求成功完成后，门户上的 Azure 搜索服务中应会反映所做的更改：
 
-![Index](images/index.png "Index")
+![索引](images/index.png "索引")
 
-4. Open and run the `Create Skillset` request (using the Send button). This creates our custom skillset the indexer will use to extract the invoice data. This particular skillset only has a single skill (our custom `InvoiceReaderSkill`). As above, if the request completes successfully you should see the new Skillset reflected in the portal.
+4. 打开并运行 `Create Skillset` 请求（使用“发送”按钮）。 这会创建自定义技能集，供索引器用来提取发票数据。 此特定技能集只包含一个技能（自定义的 `InvoiceReaderSkill`）。 如上所述，如果请求成功完成，则门户中会反映新的技能集。
 
-5. Open and run the `Create Datasource` request (using the Send button). This creates a reference to our storage account where the invoices are located. As above, if the request completes successfully you should see the new Skillset reflected in the portal.
+5. 打开并运行 `Create Datasource` 请求（使用“发送”按钮）。 这会创建对发票所在的存储帐户的引用。 如上所述，如果请求成功完成，则门户中会反映新的技能集。
 
-6. Open and run the `Create Indexer` request (using the Send button). This creates the indexer that pulls the invoices from the `Datasource`, uses the `Skillset` on each invoice, and stores the data in the actual `Index`. As above, if the request completes successfully you should see the new Skillset reflected in the portal.
+6. 打开并运行 `Create Indexer` 请求（使用“发送”按钮）。 这会创建从 `Datasource` 提取发票、对每份发票使用 `Skillset`，并将数据存储在实际 `Index` 中的索引器。 如上所述，如果请求成功完成，则门户中会反映新的技能集。
 
 
-### Monitor and Use Index
-The indexer will take some time to go through all of the invoice documents. This can be monitored in the Search Service itself. You can also monitor the calls to the `InvoiceReaderSkill` by looking at the Live Metrics stream in the corresponding App Insights service attached to the Azure Function. Once there are some documents in the index you can run queries to verify it is working:
+### <a name="monitor-and-use-index"></a>监视和使用索引
+索引器需要一段时间才能完成所有发票文档的处理。 可以在搜索服务本身中监视此过程。 还可以通过查看附加到 Azure 函数的相应 App Insights 服务中的实时指标流，来监视对 `InvoiceReaderSkill` 的调用。 索引中出现一些文档后，可以运行查询来验证索引是否正常工作：
 
-![Azure Search Queries](images/queries.png "Azure Search Queries")
+![Azure 搜索查询](images/queries.png "Azure 搜索查询")
 
-**Some fun queries to run**:
+**一些可运行的有趣查询**：
 
-Orders with ItemId 49
+ItemId 为 49 的订单
 ```
 *&$filter=invoice/lineItems/any(lineItems: lineItems/itemId eq 49)
 ```
 
-invoiceId is 12179
+invoiceId 为 12179
 ```
 *&$filter=invoice/invoiceId eq 12179
 ```
 
-companies in Australia
+澳大利亚公司
 ```
 *&$filter=invoice/company/country eq 'Australia'
 ```
 
-companies in the UK (with a count)
+英国公司（以及计数）
 ```
 *&$count=true&$filter=invoice/company/country eq 'United Kingdom'
 ```
 
-only retrieve invoices
+仅检索发票
 ```
 *&$select=invoice&$count=true
 ```
 
-people in Germany
+在德国的人
 ```
 *&$count=true&$select=invoice/person&$filter=invoice/person/country eq 'Germany'
 ```
 
-# Next Demo
-Learn how to explore the Knowledge Store by continuing on to  [Demo 5 - Knowledge Store](demo5.md)
+# <a name="next-demo"></a>下一演示
+继续阅读[演示 5 - 知识存储](demo5.md)来了解如何浏览知识存储

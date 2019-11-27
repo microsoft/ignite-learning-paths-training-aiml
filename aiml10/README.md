@@ -1,82 +1,82 @@
-# AIML10: Making Sense of your Unstructured Data with AI
+# <a name="aiml10-making-sense-of-your-unstructured-data-with-ai"></a>AIML10：通过 AI 了解非结构化数据
 
-### Session Abstract
+### <a name="session-abstract"></a>讲座摘要
 
-Tailwind Traders has a lot of legacy data that they’d like their developers to leverage in their apps – from various sources, both structured and unstructured, and including images, forms, pdf files, and several others. In this session, you'll learn how the team used Cognitive Search to make sense of this data in a short amount of time and with amazing success. We'll discuss tons of AI concepts, like the ingest-enrich-explore pattern, skillsets, cognitive skills, natural language processing, computer vision, and beyond.
+Tailwind Traders 拥有大量遗留数据，他们希望开发人员在其应用中使用这些数据。这些数据来自结构化和非结构化的各种来源，包括图像、表单、pdf 文件和其他形式。 在本讲座中，你将了解该团队如何使用认知搜索在短时间内厘清此数据，并取得令人惊叹的成功。 我们将讨论各种 AI 概念，如引入-扩充-探索模式、技能组、认知技能、自然语言处理、计算机视觉等。
 
-# Overview
-In this solution we develop a process whereby we take a set of unstructured pdf invoices and generate structured tabular output using Azure Cognitive Search with a customized Form Recognizer Skill. 
+# <a name="overview"></a>概述
+在此解决方案中，我们制定了一个流程，通过该流程获取一组非结构化 pdf 发票并生成结构化的表格输出，只需将 Azure 认知搜索与自定义表单识别器技能配合使用即可。 
 
-When creating this solution there are a few Azure resources ([free trial here](https://azure.microsoft.com/en-gb/free/?WT.mc_id=msignitethetour2019-github-aiml10) if you need it) that are created. The following tables list each resource, its purpose, and any special instructions needed to implement the solution fully (I use the names as presented during the talk but they will need to be renamed for your particular solution):
+创建此解决方案时，会创建多项 Azure 资源（可以根据需要使用[此处的免费试用版](https://azure.microsoft.com/en-gb/free/?WT.mc_id=msignitethetour2019-github-aiml10)）。 下面的表列出了每项资源、其用途，以及完全实现解决方案所需的任何特殊说明（我使用讲座中提供的名称，但这些名称需要根据你的特定解决方案重命名）：
 
-![Azure Resources](images/resources.png "Azure Resources")
+![Azure 资源](images/resources.png "Azure 资源")
 
-## Azure Resources
+## <a name="azure-resources"></a>Azure 资源
 
-| Name                       | Type                            | Purpose                    |
+| 名称                       | 类型                            | 用途                    |
 | -------------------------- | ------------------------------- | ------------------------- |
-| **ttcognitivesearch**     | Resource Group                  | Groups services together   |
-| **ttinvoicestorage**      | Storage Account                 | Used to store invoices     |
-| **ttinvoicesearch**       | Search Service                  | Featured service           |
-| **ttinvoiceintelligence** | Cognitive Services (All-In-One) | Used in the search service |
-| **ttinvoicereader**       | Form Recognizer Service         | This service will eventually end up in the All-In-One sevice. For right now it is in limited-access preview. To get access to the preview, fill out and submit the [Form Recognizer access request](https://aka.ms/FormRecognizerRequestAccess) form.  |
-| **readerskillstorage**   | Storage Account              | Storage used for Azure Function |
-| **readerskill**          | Function App                 | Cognitive Skill App |
-| **readerskill**          | App Insights                   | Adds insights to Function App |
-| **EastUS2LinuxDynamicPlan** | App Service Plan                   | Consumption based plan for running Function App |
+| **ttcognitivesearch**     | 资源组                  | 将多种服务组合到一起   |
+| **ttinvoicestorage**      | 存储帐户                 | 用于存储发票     |
+| **ttinvoicesearch**       | 搜索服务                  | 特色服务           |
+| **ttinvoiceintelligence** | 认知服务（全合一） | 在搜索服务中使用 |
+| **ttinvoicereader**       | 表单识别器服务         | 此服务最终会出现在全合一服务中。 目前，它在访问受限的预览版中。 若要访问预览版，请填写并提交[表单识别器访问请求](https://aka.ms/FormRecognizerRequestAccess)表单。  |
+| **readerskillstorage**   | 存储帐户              | 用于 Azure 函数的存储 |
+| **readerskill**          | 函数应用                 | 认知技能应用 |
+| **readerskill**          | App Insights                   | 向函数应用添加见解 |
+| **EastUS2LinuxDynamicPlan** | 应用服务计划                   | 基于消耗情况的计划，用于运行函数应用 |
 
-# Presentation
+# <a name="presentation"></a>演示
 
-* [PowerPoint Download](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/aiml10.pptx)
-* [Microsoft Ignite Orlando Session Video](https://myignite.techcommunity.microsoft.com/sessions/82986?source=sessions)
-
-
-# Demonstrations
-This talk consisted of the 5 demonstrations listed below. 
-
-- **Demo 1**: [Azure Cognitive Search](demo1.md)
-- **Demo 2**: [Form Recognizer Service](demo2.md) - this demo requires access to the Form Recognizer Preview. To get access to the preview, fill out and submit the [Form Recognizer access request](https://aka.ms/FormRecognizerRequestAccess) form.
-- **Demo 3**: [Creating a Custom Invoice Reader Skill](demo3.md)
-- **Demo 4**: [Tying it all together](demo4.md)
-- **Demo 5**: [Knowledge Store](demo5.md)
+* [PowerPoint 下载](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/zh-CN/aiml10-translation.zh-CN.pptx)
+* [Microsoft Ignite 奥兰多大会视频](https://myignite.techcommunity.microsoft.com/sessions/82986?source=sessions)
 
 
-# Teardown Instructions
+# <a name="demonstrations"></a>演示
+此讲座包含 5 个演示（已列在下面）。 
 
-### Full Teardown
-
-* Enter the Azure Portal and delete the **Azure Resource Group** you created to remove all resources for this project
-
-
-# Resources and Continued Learning
-
-**Microsoft Learn:**
-* [Introduction to Azure Search](https://docs.microsoft.com/en-us/learn/modules/intro-to-azure-search/?WT.mc_id=msignitethetour2019-github-aiml10)
-* [Microsoft Azure Artificial Intelligence (AI) strategy and solutions](https://docs.microsoft.com/en-us/learn/modules/azure-artificial-intelligence/?WT.mc_id=msignitethetour2019-github-aiml10)
-
-**Azure Documentation**
-* [What is "cognitive search" in Azure Search?](https://docs.microsoft.com/en-us/azure/search/cognitive-search-concept-intro/?WT.mc_id=msignitethetour2019-github-aiml10)
-* [What is knowledge store in Azure Search?](https://docs.microsoft.com/en-us/azure/search/knowledge-store-concept-intro)
+- **演示 1**：[Azure 认知搜索](demo1.md)
+- **演示 2**：[表单识别器服务](demo2.md) - 此演示要求访问表单识别器预览版。 若要访问预览版，请填写并提交[表单识别器访问请求](https://aka.ms/FormRecognizerRequestAccess)表单。
+- **演示 3**：[创建自定义发票读取者技能](demo3.md)
+- **演示 4**：[将所有内容整合在一起](demo4.md)
+- **演示 5**：[知识存储](demo5.md)
 
 
-# Feedback Loop
+# <a name="teardown-instructions"></a>清理说明
 
-Do you have a comment, feedback, suggestion? Currently, the best feedback loop for content changes/suggestions/feedback is to create a new issue on this GitHub repository. To get all the details about how to create an issue please refer to the [Contributing docs](https://github.com/microsoft/ignite-learning-paths/blob/master/contributing.md)
+### <a name="full-teardown"></a>完全清理
 
-## Become a Trained Presenter
+* 进入 Azure 门户并删除创建的 **Azure 资源组**，这样就可以删除此项目的所有资源
 
-To become a trained presenter, contact [scalablecontent@microsoft.com](mailto:scalablecontent@microsoft.com). In your email please include:
 
-- Complete name
-- The code of this presentation: aiml10
-- Link to a video of you presenting (~10 minutes in length)(ex: unlisted YouTube video). 
-  > It doesn't need to be this content, the importance is to show your presenter skills
+# <a name="resources-and-continued-learning"></a>相关资源和继续学习
 
-A mentor will get back to you with information on the process.
+**Microsoft Learn：**
+* [Azure 搜索简介](https://docs.microsoft.com/en-us/learn/modules/intro-to-azure-search/?WT.mc_id=msignitethetour2019-github-aiml10)
+* [Microsoft Azure 人工智能 (AI) 战略和解决方案](https://docs.microsoft.com/en-us/learn/modules/azure-artificial-intelligence/?WT.mc_id=msignitethetour2019-github-aiml10)
 
-## Trained Presenters
+**Azure 文档**
+* [什么是 Azure 搜索中的“认知搜索”？](https://docs.microsoft.com/en-us/azure/search/cognitive-search-concept-intro/?WT.mc_id=msignitethetour2019-github-aiml10)
+* [什么是 Azure 搜索中的知识存储？](https://docs.microsoft.com/en-us/azure/search/knowledge-store-concept-intro)
 
-Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+
+# <a name="feedback-loop"></a>反馈循环
+
+想要提供意见、反馈、建议？ 目前，针对内容更改/建议/反馈的最佳反馈循环是在此 GitHub 存储库中创建新问题。 若要获取有关如何创建问题的所有详细信息，请参阅[贡献文档](https://github.com/microsoft/ignite-learning-paths/blob/master/contributing.md)
+
+## <a name="become-a-trained-presenter"></a>成为训练有素的演示者
+
+若要成为训练有素的演示者，请联系 [scalablecontent@microsoft.com](mailto:scalablecontent@microsoft.com)。 在电子邮件中，请提供：
+
+- 完整名称
+- 此演示文稿的代码：aiml10
+- 演示视频（约 10 分钟长）（例如：未列出的 YouTube 视频）链接。 
+  > 无需是此内容，重要的是展示演示者技能
+
+导师会将有关此过程的信息反馈给你。
+
+## <a name="trained-presenters"></a>训练有素的演示者
+
+感谢以下优秀参与者（[表情符号密钥](https://allcontributors.org/docs/en/emoji-key)）：
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore -->
@@ -86,8 +86,8 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/sethjuarez">
         <img src="https://avatars2.githubusercontent.com/u/115409?s=460&v=4" width="100px;" alt="Seth Juarez"/><br />
         <sub><b>Seth Juarez</b></sub></a><br />
-            <a href="Add link to powerpoint here" title="Talk">📢</a>
-            <a href="Add link to pull request here" title="Documentation">📖</a> 
+            <a href="Add link to powerpoint here" title="讲座">📢</a>
+            <a href="Add link to pull request here" title="文档">📖</a> 
     </td>
 </tr></table>
 

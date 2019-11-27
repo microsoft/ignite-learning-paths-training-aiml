@@ -1,47 +1,47 @@
-# Using Postman
-There are three concepts needed to carry out the exercises in all of the demonstrations:
+# <a name="using-postman"></a>使用 Postman
+在所有演示中，进行练习需要了解三个概念：
 
-1. Import a collection
-2. Set collection variables
-3. Use the pre-requests scripts to set variables
+1. 导入集合
+2. 设置集合变量
+3. 设使用预请求脚本来设置变量
 
-## What you need
-There are three collections used throughout the demos:
-1. [Form Recognizer API Calls](src/Collections/Form_Recognizer.postman_collection.json)
-2. [Reader Skill API Calls](src/Collections/Reader_Skill.postman_collection.json)
-3. [Invoice Search API Calls](src/Collections/Invoice_Search.postman_collection.json)
+## <a name="what-you-need"></a>需要什么
+整个演示过程使用三个集合：
+1. [表单识别器 API 调用](src/Collections/Form_Recognizer.postman_collection.json)
+2. [读取者技能 API 调用](src/Collections/Reader_Skill.postman_collection.json)
+3. [发票搜索 API 调用](src/Collections/Invoice_Search.postman_collection.json)
 
-## Importing a Collection
+## <a name="importing-a-collection"></a>导入集合
 
-1. Download the appropriate collection (see above).
-2. Open Postman
-3. Click on Import
+1. 下载相应的集合（见上）。
+2. 打开 Postman
+3. 单击“导入”
 
-![Import Collection](images/import_collection.png "Import Collection")
+![导入集合](images/import_collection.png "导入集合")
 
-4. Select the appropriate collection
+4. 选择相应的集合
 
-![Import Collection](images/import_collection_file.png "Import Collection")
+![导入集合](images/import_collection_file.png "导入集合")
 
-## Modifying collection variables
+## <a name="modifying-collection-variables"></a>修改集合变量
 
-Collection variables allow Postman to replace tokens such as `{variable}` with values set by the user. This allows requests to be more portable with changes to variables. For example, the `endpoint` variable in some of the exercises represents the endpoint to your particular Form Recognizer service. 
+Postman 可以通过集合变量将 `{variable}` 之类的令牌替换为用户设置的值。 这样可以在更改变量的情况下提高请求的可移植性。 例如，某些练习中的 `endpoint` 变量表示特定表单识别器服务的终结点。 
 
-1. After a collection is loaded, click on the ellipsis to edit the collection variables
+1. 加载集合以后，单击省略号即可编辑集合变量
 
-![Edit Variables](images/edit_variables.png "Edit Variables")
+![编辑变量](images/edit_variables.png "编辑变量")
 
-2. To edit authorization variables use the authorization tab.
+2. 若要编辑授权变量，请使用授权选项卡。
 
-![Edit Authorization](images/edit_authorization.png "Edit Authorization")
+![编辑授权](images/edit_authorization.png "编辑授权")
 
-3. All other variables used in these exercises are found under the variables tab
+3. 在这些练习中使用的所有其他变量位于变量选项卡下
 
-![Edit Variables](images/variables_tab.png "Edit Variables")
+![编辑变量](images/variables_tab.png "编辑变量")
 
-## Using pre-request scripts
+## <a name="using-pre-request-scripts"></a>使用预请求脚本
 
-Some of the exercises require changes made to the pre-request scripts. These are accessible in the Pre-request Script section of individual Requests as shown below.
+某些练习要求更改预请求脚本。 这些脚本可以在单个请求的“预请求脚本”部分访问，如下所示。
 
-![Pre-Request Scripts](images/pre_request.png "Pre-Request Scripts")
+![预请求脚本](images/pre_request.png "预请求脚本")
 

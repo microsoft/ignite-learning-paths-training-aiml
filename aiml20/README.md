@@ -1,84 +1,66 @@
-# AIML20: Using Pre-Built AI to Solve Business Challenges
+# <a name="aiml20-using-pre-built-ai-to-solve-business-challenges"></a>AIML20：使用预先构建的 AI 解决业务难题
 
-This is the repository supporting the Microsoft Ignite 2019 and Microsoft Ignite
-the Tour 2019-2020 talk, "Using Pre-Built AI to Solve Business Challenges". Here
-you will find links to the resources mentioned in the talk, and the code and
-scripts you will need to recreate the demos given in the talk.
+这是为 Microsoft Ignite 2019 和 Microsoft Ignite 的 Tour 2019-2020 讲座“使用预先构建的 AI 解决业务挑战”提供支持的存储库。 可在此处找到讲座中提到的资源的链接，还有重新创建讲座中提到的的演示所需的代码和脚本。
 
-[Download the slides for the AIML20 presentation here](presentations.md). (Use
-the first link for the latest version.) The slides are in PPT format and include
-detailed speaker notes and embedded demo videos.
+[在此处下载 AIML20 演示的幻灯片](presentations.md)。 （按第一个链接找到最新版本。）这些幻灯片采用 PPT 格式，里面有详细的演讲者备注和内嵌演示视频。
 
-[Watch a recording of this
-presentation](https://myignite.techcommunity.microsoft.com/sessions/82987?source=sessions)
-from Microsoft Ignite Orlando, November 7 2019.
+[观看此演示的记录](https://myignite.techcommunity.microsoft.com/sessions/82987?source=sessions)，该记录来自 2019 年 11 月 7 日的 Microsoft Ignite 奥兰多大会。
 
-Short-link to these resources: [aka.ms/AIML20repo](https://aka.ms/AIML20repo). 
+这些资源的短链接：[aka.ms/AIML20repo](https://aka.ms/AIML20repo)。 
 
-[Resources for presenters of this talk](README-Presenters.md) are also provided.
+也提供[此讲座的讲解者的资源](README-Presenters.md)。
 
-## Session Abstract
+## <a name="session-abstract"></a>讲座摘要
 
-**Using Pre-Built AI to Solve Business Challenges**
+**使用预先构建的 AI 解决业务挑战**
 
-Abstract: As a data-driven company, Tailwind Traders understands the importance of using Artificial Intelligence to improve business processes and delight customers. Before investing in an AI team, their existing developers were able to demonstrate some quick wins using pre-built AI technologies. In this session, we will show how you can use Azure Cognitive Services to extract insights from retail data. We’ll go into the neural networks behind computer vision, and show how you can augment the pre-built AI with your own images for custom image recognition applications.
+摘要：作为一家数据驱动型公司，Tailwind Traders 明白使用人工智能改善业务流程和让客户满意至关重要。 在投资 AI 团队之前，他们现有的开发人员能够使用预先构建的 AI 技术展示一些快速取得成效的案例。 在本讲座中，我们将介绍如何使用 Azure 认知服务从零售数据中提取见解。 我们将深入计算机视觉背后的神经网络，介绍如何使用自己的图像增强预构建的 AI 功能，以打造自定义图像识别应用程序。
 
-## Technologies used
+## <a name="technologies-used"></a>使用的技术
 
-* [Azure Cognitive Services](https://docs.microsoft.com/en-us/azure/cognitive-services/?WT.mc_id=msignitethetour2019-github-aiml20)
+* [Azure 认知服务](https://docs.microsoft.com/en-us/azure/cognitive-services/?WT.mc_id=msignitethetour2019-github-aiml20)
 * [Azure Cloud Shell](https://docs.microsoft.com/en-us/azure/cloud-shell/overview?WT.mc_id=msignitethetour2019-github-aiml20)
-* [Azure Command Line Interface (CLI)](https://docs.microsoft.com/en-us/cli/azure/?view=azure-cli-latest?WT.mc_id=msignitethetour2019-github-aiml20)
+* [Azure 命令行界面 (CLI)](https://docs.microsoft.com/en-us/cli/azure/?view=azure-cli-latest?WT.mc_id=msignitethetour2019-github-aiml20)
 * [ONNX](https://github.com/onnx/onnx)
 * [Visual Studio Code](https://code.visualstudio.com/)
 
-## Other resources mentioned in talk
+## <a name="other-resources-mentioned-in-talk"></a>讲座中提到的其他资源
 
-* How Neural Networks Work, by Brandon Rohrer: http://brohrer.github.io/blog.html
-* XKCD "Tasks": https://xkcd.com/1425
+* 神经网络的工作原理，作者：Brandon Rohrer： http://brohrer.github.io/blog.html
+* XKCD“任务”： https://xkcd.com/1425
 
-### Azure Cognitive Services docs and apps
+### <a name="azure-cognitive-services-docs-and-apps"></a>Azure 认知服务文档和应用
 
-* Cognitive Services Computer Vision: [https://aka.ms/try-computervision](https://azure.microsoft.com/en-us/services/cognitive-services/computer-vision/?WT.mc_id=ignitetour-talk-davidsmi)  
-* Cognitive Services Custom Vision: [Documentation](https://docs.microsoft.com/en-us/azure/cognitive-services/custom-vision-service/?WT.mc_id=ignitethetour-github-davidsmi) and application at [https://customvision.ai](https://www.customvision.ai/?WT.mc_id=ignitethetour-github-davidsmi)
-* ONNX Runtime: https://github.com/microsoft/onnxruntime
-* Cognitive Services Personalizer: [https://aka.ms/personalizer-intro](https://docs.microsoft.com/en-us/azure/cognitive-services/personalizer/?WT.mc_id=msignitethetour2019-github-aiml20)
-* Reinforcement Learning with Personalizer: https://aka.ms/personalizerdemo
-* Cognitive Services in containers: https://aka.ms/cs-containers
+* 认知服务计算机视觉：[https://aka.ms/try-computervision](https://azure.microsoft.com/en-us/services/cognitive-services/computer-vision/?WT.mc_id=ignitetour-talk-davidsmi)  
+* 认知服务自定义视觉：[https://customvision.ai](https://www.customvision.ai/?WT.mc_id=ignitethetour-github-davidsmi) 上的[文档](https://docs.microsoft.com/en-us/azure/cognitive-services/custom-vision-service/?WT.mc_id=ignitethetour-github-davidsmi)和应用程序
+* ONNX 运行时： https://github.com/microsoft/onnxruntime
+* 认知服务个性化体验创建服务：[https://aka.ms/personalizer-intro](https://docs.microsoft.com/en-us/azure/cognitive-services/personalizer/?WT.mc_id=msignitethetour2019-github-aiml20)
+* 使用个性化体验创建服务强化学习： https://aka.ms/personalizerdemo
+* 容器中的认知服务： https://aka.ms/cs-containers
 
-### Cognitive Services information
+### <a name="cognitive-services-information"></a>认知服务信息
 
-* Cognitive Services pricing: https://aka.ms/cs-pricing 
-* Cognitive Services compliance and privacy: https://aka.ms/az-compliance
-* Microsoft's approach to ethical AI: [https://microsoft.com/AI/our-approach-to-ai](https://www.microsoft.com/AI/our-approach-to-ai?rtc=1&WT.mc_id=msignitethetour2019-github-aiml20)
-* Cognitive Services training courses in Microsoft Learn: https://aka.ms/AIML20MSLearnCollection
-* Microsoft Certified Azure Data Scientist Associate: https://aka.ms/DataScientistCert 
-* Microsoft Certified Azure AI Engineer Associate https://aka.ms/AIEngineerCert
+* 认知服务定价： https://aka.ms/cs-pricing 
+* 认知服务符合性和隐私： https://aka.ms/az-compliance
+* Microsoft 的道德 AI 方法：[https://microsoft.com/AI/our-approach-to-ai](https://www.microsoft.com/AI/our-approach-to-ai?rtc=1&WT.mc_id=msignitethetour2019-github-aiml20)
+* Microsoft Learn 中的认知服务培训课程： https://aka.ms/AIML20MSLearnCollection
+* 经 Microsoft 认证的 Azure 数据科学家助理： https://aka.ms/DataScientistCert 
+* 经 Microsoft 认证的 Azure AI 工程师助理： https://aka.ms/AIEngineerCert
 
-## Demonstrations
+## <a name="demonstrations"></a>演示
 
-Follow the links below for details on how to recreate the demos given in the
-talk. You will need an Azure Subscription to run these demos; if you don't have
-one yet, here is a link for [$200 Free Azure Credits for new
-subscribers](https://aka.ms/azure-free-credits).
+请使用以下链接来详细了解如何重新创建讲座中提供的演示。 需要 Azure 订阅才能运行这些演示；如果还没有该订阅，请单击此链接：[为新订户提供的 200 美元免费 Azure 额度](https://aka.ms/azure-free-credits)。
 
-1. [Setup](DEMO%20Setup.md): Create accounts and deploy and configure resources
-   to support the demos below. Follow these instructions before attempting any
-   of the demos below.
+1. [设置](DEMO%20Setup.md)：创建帐户，部署并配置为以下演示提供支持的资源。 请按这些说明操作，然后尝试下面的任意演示。
 
-1. [Computer Vision](DEMO%20Computer%20Vision.md): Use Cognitive Services
-   Computer Vision to analyze an image, via a web application and via the Azure
-   CLI.
+1. [计算机视觉](DEMO%20Computer%20Vision.md)：通过 Web 应用程序和 Azure CLI 使用认知服务计算机视觉来分析图像。
 
-1. [Custom Vision](DEMO%20Custom%20Vision.md): Create a custom vision model to
-   detect only products sold by Tailwind Traders.
+1. [自定义视觉](DEMO%20Custom%20Vision.md)：创建一个自定义视觉模型，只检测由 Tailwind Traders 销售的产品。
 
-1. [ONNX Deployment](DEMO%20ONNX%20deployment.md): Deploy a custom vision model in
-   the ONNX format to the Tailwind Traders website "Shop by Photo feature
+1. [ONNX 部署](DEMO%20ONNX%20deployment.md)：以 ONNX 格式将自定义视觉模型部署到 Tailwind Traders 网站的“按图购买”功能
 
-1. [Personalizer](DEMO%20Personalizer.md): Dynamically reconfigure the layout of
-   the "Recommended" section of the Tailwind Traders website, to optimize
-   likelihood of an anonymous visitor clicking on the "featured" product.
+1. [个性化体验创建服务](DEMO%20Personalizer.md)：以动态方式重新配置 Tailwind Traders 网站“推荐”部分的布局，尽量提高匿名访问者单击“特色”产品的可能性。
 
-## Feedback Loop
+## <a name="feedback-loop"></a>反馈循环
 
-Do you have a comment, feedback, suggestion? The best feedback loop for content changes/suggestions/feedback is to create a new issue on this GitHub repository. To get all the details about how to create an issue please refer to the [Contributing docs](https://github.com/microsoft/ignite-learning-paths/blob/master/contributing.md)
+想要提供意见、反馈、建议？ 针对内容更改/建议/反馈的最佳反馈循环是在此 GitHub 存储库中创建新问题。 若要获取有关如何创建问题的所有详细信息，请参阅[贡献文档](https://github.com/microsoft/ignite-learning-paths/blob/master/contributing.md)

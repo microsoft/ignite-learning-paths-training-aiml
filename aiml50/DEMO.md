@@ -1,53 +1,53 @@
-# AIML50 - Demonstration Setup Instructions
+# <a name="aiml50---demonstration-setup-instructions"></a>AIML50 - 演示设置说明
 
-## Create Demonstration Environment
+## <a name="create-demonstration-environment"></a>创建演示环境
 
-[Video Walkthrough](https://youtu.be/C9WtOZaUoyA)
+[视频演练](https://youtu.be/C9WtOZaUoyA)
 
-### Prerequisites
+### <a name="prerequisites"></a>先决条件
 
-* An Azure subscription
-* An Azure DevOps organization that you have rights to add extensions to.
-  * A Personal Access Token(PAT) for that organization.
-* A GitHub account (to which you can fork this repository)
+* 一个 Azure 订阅
+* 一个你有权向其添加扩展的 Azure DevOps 组织。
+  * 一个适用于该组织的个人访问令牌 (PAT)
+* 一个可将此存储库分支到的 GitHub 帐户
 
-### Fork the repository
+### <a name="fork-the-repository"></a>为存储库创建分支
 
-In GitHub, [create a fork](https://help.github.com/en/github/getting-started-with-github/fork-a-repo) of this repository under a user or organization of which you have control.  You will need permissions to connect the GitHub repo to Azure DevOps.
+在 GitHub 中，在你可以控制的用户或组织下[创建此存储库的分支](https://help.github.com/en/github/getting-started-with-github/fork-a-repo)。  需要将 GitHub 存储库连接到 Azure DevOps 的权限。
 
-### Deploy the Template
+### <a name="deploy-the-template"></a>部署模板
 
-This environment can be deployed via the "Deploy to Azure" link below (or you can use Azure PowerShell or Azure CLI).  You will need an Azure subscription and the available quotas in a region to deploy:
+可以通过下面的“部署到 Azure”链接（或者可以使用 Azure PowerShell 或 Azure CLI）部署此环境。  你需要一个 Azure 订阅和一个区域中的可用配额才能进行部署：
 
-* Azure SQL Databases
-* Cosmos DB Databases
-* Azure App Services
-* Azure Machine Learning Services
+* Azure SQL 数据库
+* Cosmos DB 数据库
+* Azure 应用服务
+* Azure 机器学习服务
 
-You will be prompted to select an Azure subscription and resource group (you can create a resource group at that time).
+系统将提示你选择一个 Azure 订阅和资源组（此时你可以创建一个资源组）。
 
-You will also be asked for an event identifier (or reason for spinning up the environment) which will be used to help name the resources.  Shorter is better.
+系统还会要求你提供事件标识符（或转换环境的原因），以用于帮助命名资源。  标识符越短越好。
 
-You will need to provide a database username and password for the Azure SQL instance.
+你需要提供 Azure SQL 实例的数据库用户名和密码。
 
 <a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3a%2f%2fraw.githubusercontent.com%2fmicrosoft%2fignite-learning-paths-training-aiml%2fmaster%2faiml50%2ftemplate%2fazuredeploy.json" target="_blank">
     <img src="http://azuredeploy.net/deploybutton.png"/>
 </a>
 
-The deployment takes roughly 30 to 40 minutes.
+部署大约需要 30 到 40 分钟。
 
-Once the deployment is underway (at least with the Azure Machine Learning service created and the bootstrap-container Azure Container instance has run to completion), you can finish setting up the Azure DevOps environment.  Most of the environment will be configured, but there are a few manual steps.
+部署过程中（至少在创建 Azure 机器学习服务且启动容器 Azure 容器实例运行完毕后），可以完成 Azure DevOps 环境设置。  将完成大部分环境配置，但有一些步骤需要手动执行。
 
-### Set up Azure Notebooks
+### <a name="set-up-azure-notebooks"></a>设置 Azure Notebooks
 
-* Navigate to [Azure Notebooks](https://notebooks.azure.com/) and sign in with the Microsoft account that you are demoing with.
-* Add a new project.  You can either import directly from GitHub (the main repository or your fork) or upload the `aiml50/source` directory directly.
-* In the `aiml50/source` directory in the Azure Notebook, create a json file named `azureml-config` with:
-  * Your subscription ID
-  * The resource group name that contains the ML workspace
-  * The workspace name
+* 导航到 [Azure Notebooks](https://notebooks.azure.com/)，并使用用于演示的 Microsoft 帐户登录。
+* 添加新项目。  可以直接从 GitHub（主存储库或分支）导入，也可以直接上传 `aiml50/source` 目录。
+* 在 Azure Notebooks 的 `aiml50/source` 目录中，创建一个名为 `azureml-config` 的 json 文件，其中包括：
+  * 订阅 ID
+  * 包含 ML 工作区的资源组名称
+  * 工作区名称
 
-Example:
+示例：
 
 ```
 {
@@ -57,83 +57,83 @@ Example:
 }
 ```
 
-* Click on (which will open in a new tab)
+* 单击（将在新选项卡中打开）
   * `setup_pipeline.ipynb`
 
-#### seer_pipeline.ipynb
+#### <a name="seer_pipelineipynb"></a>seer_pipeline.ipynb
 
-* Ensure the kernel is set to Python 3.6
-* Set your storage account key
-* edit Step 4 and set your storage account name
-* Start to run the individual steps.  You will need to authenticate to azure (follow the prompts in the notebook). Remember to let individual steps finish before starting the next one.
+* 确保将内核设置为 Python 3.6
+* 设置存储帐户密钥
+* 编辑步骤 4 并设置存储帐户名称
+* 开始运行各个步骤。  需向 Azure 进行身份验证（请按照笔记本中的提示进行操作）。 请记住，请先完成一个步骤再开始下一个。
 
-### Setup the Azure DevOps Project
+### <a name="setup-the-azure-devops-project"></a>设置 Azure DevOps 项目
 
-Next, navigate to the AIML50 project that was created in the Azure DevOps Organization you specified to to the deployment template.
+接下来，导航到在指定到部署模板的 Azure DevOps 组织中创建的 AIML50 项目。
 
-#### Create the Service Connections
+#### <a name="create-the-service-connections"></a>创建服务连接
 
-From the project page, navigate to the project settings.
+从“项目”页，导航到项目设置。
 
 ![0-azure_devops_org](./images/0-azure_devops_org.png)
 ![1-azure_devops_project](./images/1-azure_devops_project.png)
 
-Select `Service Connections` under `Pipelines`.
+选择 `Pipelines` 下的 `Service Connections`。
 
 ![2-azure_devops_project_settings](./images/2-azure_devops_project_settings.png)
 
-Add two service connections:
+添加两个服务连接：
 
-* First connection `aiml50`
-  * Type: Azure Resource Manager
-  * Connection name: `aiml50`
-    * Name of the service connection. This needs to match, as it is already set in the build.
-  * Scope level: `Subscription`
-    * Scope of authorization for the service principal. For this one, set it to `subscription`.
-  * Subscription: `Ignite The Tour`
-    * The subscription you deployed the demo environment to. This may be different than the example above. You can pick subscriptions from the dropdown based on the user with which you logged in to Azure DevOps.
-  * Resource Group: `aiml50` or blank
-    * You can constrain the credentials to the resource group that you have deployed into or allow it rights across the subscription.
+* 第一个连接 `aiml50`
+  * 类型：Azure 资源管理器
+  * 连接名称：`aiml50`
+    * 服务连接的名称。 该名称必须一致，因为它已在生成中设置。
+  * 范围级别：`Subscription`
+    * 服务主体的授权范围。 对于此连接，请将其设置为 `subscription`。
+  * 订阅：`Ignite The Tour`
+    * 将演示环境部署到的订阅。 该订阅可以与上面的示例不同。 可以登录到 Azure DevOps 的用户身份，从下拉列表中选择订阅。
+  * 资源组：`aiml50` 或空白
+    * 你可以将凭据限制于已部署到的资源组，或允许在整个订阅中使用它。
 
 ![4-azure_devops_service_connection](./images/4-azure_devops_service_connection.png)
 ![3-azure_devops_service_connection](./images/3-azure_devops_service_connection.png)
 
-* Second connection: `aiml50-workspace`
-  * Type: Azure Resource Manager
-  * Connection name: `aiml50`
-    * Name of the service connection. This needs to match, as it is already set in the build.
-  * Scope level: `AzureMLWorkspace`
-    * Scope of authorization for the service principal. This will be required for the release.
-  * Subscription: `Ignite The Tour`
-    * The subscription you deployed the demo environment to. This may be different than the example above. You can pick subscriptions from the dropdown based on the user with which you logged in to Azure DevOps.
-  * Resource Group: `aiml50`
-    * This should be the resource group with your Azure Machine Learning Workspace.
-  * Machine Learning Workspace: `aiml50demo`
-    * Your name will vary based on which event or qualifier you use to provision the environment.
+* 第二个连接：`aiml50-workspace`
+  * 类型：Azure 资源管理器
+  * 连接名称：`aiml50`
+    * 服务连接的名称。 该名称必须一致，因为它已在生成中设置。
+  * 范围级别：`AzureMLWorkspace`
+    * 服务主体的授权范围。 发布要求设置此项。
+  * 订阅：`Ignite The Tour`
+    * 将演示环境部署到的订阅。 该订阅可以与上面的示例不同。 可以登录到 Azure DevOps 的用户身份，从下拉列表中选择订阅。
+  * 资源组：`aiml50`
+    * 这应该是包含 Azure 机器学习工作区的资源组。
+  * 机器学习工作区：`aiml50demo`
+    * 名称取决于用于预配环境的事件或限定符。
 
 ![5-azure_devops_service_connection_add](./images/5-azure_devops_service_connection_add.png)
 ![6-azure_devops_service_connection_detail](./images/6-azure_devops_service_connection_detail.png)
 
-#### Enable the Variable Group
+#### <a name="enable-the-variable-group"></a>启用变量组
 
-There is a variable group that was provisioned that has some shared values to be used by the build and release.  Pipeline access needs to be granted for the variable group.
+我们提供一个预配的变量组，其中包含生成和发布都会使用的一些共享值。  需要为变量组授予管道访问权限。
 
-* Navigate to Library (under Pipelines).
-* Select the `aiml50-demo` variable group.
-* Toggle `Allow access to all pipelines`
-* Save the variable group.
+* 导航到“库”（位于“管道”下）。
+* 选择 `aiml50-demo` 变量组。
+* 切换 `Allow access to all pipelines`
+* 保存变量组。
 
 ![7-azure_devops_library](./images/7-azure_devops_library.png)
 ![8-azure_devops_library_detail](./images/8-azure_devops_library_detail.png)
 
-#### Create the Build
+#### <a name="create-the-build"></a>创建生成
 
-Now, we need to create a build definition by pointing Azure DevOps to our build definition on GitHub.
+现在，我们需要通过将 Azure DevOps 指向 GitHub 上的生成定义来创建生成定义。
 
-* Navigate to `Pipelines` (under Pipelines).
-* Select `New Pipeline`
-* Connect to your fork of the GitHub project [Ignite Learning Paths Training AI/ML](https://github.com/microsoft/ignite-learning-paths-training-aiml)
-* Choose to use the build definition from the repository (`aiml50/azure-pipelines.yml`)
+* 导航到 `Pipelines`（位于“管道”下）。
+* 选择 `New Pipeline`
+* 连接到 GitHub 项目 [Ignite 学习路径训练 AI/ML](https://github.com/microsoft/ignite-learning-paths-training-aiml) 的相应分支
+* 选择使用存储库中的生成定义 (`aiml50/azure-pipelines.yml`)
 
 ![9-azure_devops_pipeline_new](./images/9-azure_devops_pipeline_new.png)
 ![10-azure_devops_pipeline_new_source](./images/10-azure_devops_pipeline_new_source.png)
@@ -141,36 +141,36 @@ Now, we need to create a build definition by pointing Azure DevOps to our build 
 ![12-azure_devops_pipeline_select_build_definition](./images/12-azure_devops_pipeline_select_build_definition.png)
 ![13-azure_devops_pipeline_select_build_definition_location](./images/13-azure_devops_pipeline_select_build_definition_location.png)
 
-#### Run the Build
+#### <a name="run-the-build"></a>运行生成
 
-After the build is connected to the source repository, we need to run a build to create the Machine Learning pipeline and create a build artifact so we can finish setting up the release pipeline.
+将生成连接到源存储库后，我们需要运行生成才能创建机器学习管道和创建生成工件，以便我们可以完成发布管道的设置。
 
-* Review the build definition and run the build. The build will complete in a few minutes, but it triggers a Machine Learning pipeline which can take about 20-40 minutes.
+* 查看生成定义并运行生成。 生成将在几分钟内完成，但它会触发机器学习管道，这可能需要 20 - 40 分钟。
 
 ![14-azure_devops_pipeline_review_build_definition](./images/14-azure_devops_pipeline_review_build_definition.png)
 ![15-azure_devops_pipeline_build_result](./images/15-azure_devops_pipeline_build_result.png)
 
-#### Update the Release
+#### <a name="update-the-release"></a>更新发布
 
-After the Machine Learning pipeline finishes, we can update the release pipeline.
+机器学习管道完成后，我们就可以更新发布管道。
 
-* Navigate to `Releases` (under Pipelines).
-* Select `Release Seer` and choose `Edit`
-  * Select `Add an artifact`
-  * Set a `Source type` of `AzureML`
-  * Set the service endpoint to `aiml50-workspace`
-  * Set the Model Names to `seer`.  You will not be able to do this until the first ML Pipeline finishes.
-  * Click `Add`
-  * Click the lightning icon on the new artifact and enable the `Continuous deployment trigger`
-* Next, open the `Deploy to ACI` environment.
-* Click on `Agent Job`
-  * Set `Agent Pool` to `Azure Pipelines`
-  * Set `Agent Specification` to `ubuntu-18.04`
-* Click on `Download deployment and inferencing code`
-  * Set `Package name` to `seer_deployment`
-* Click on `Azure ML Model Deploy`
-  * Verify that Azure ML Workspace is set to either `$(subscription_workspace)` or `aiml-workspace`.
-* Save the pipeline and create a new release.
+* 导航到 `Releases`（位于“管道”下）。
+* 选择 `Release Seer` 并选择 `Edit`
+  * 选择 `Add an artifact`
+  * 设置 `AzureML` 的 `Source type`
+  * 将服务终结点设置为 `aiml50-workspace`
+  * 将模型名称设置为 `seer`。  只有第一个 ML 管道完成后，你才能执行此操作。
+  * 单击 `Add`
+  * 单击新项目中的闪电图标，然后启用 `Continuous deployment trigger`
+* 接下来，打开 `Deploy to ACI` 环境。
+* 单击 `Agent Job`
+  * 将 `Agent Pool` 设置为 `Azure Pipelines`
+  * 将 `Agent Specification` 设置为 `ubuntu-18.04`
+* 单击 `Download deployment and inferencing code`
+  * 将 `Package name` 设置为 `seer_deployment`
+* 单击 `Azure ML Model Deploy`
+  * 验证是否已将 Azure ML 工作区设置为 `$(subscription_workspace)` 或 `aiml-workspace`。
+* 保存管道并创建新发布。
 
 ![16-azure_devops_release_new](./images/16-azure_devops_release_new.png)
 ![17-azure_devops_release_edit](./images/17-azure_devops_release_edit.png)
@@ -181,15 +181,15 @@ After the Machine Learning pipeline finishes, we can update the release pipeline
 ![22-azure_devops_release_task_edit](./images/22-azure_devops_release_task_edit.png)
 ![23-azure_devops_release_task_verify](./images/23-azure_devops_release_task_verify.png)
 
-## Troubleshooting and Reference
+## <a name="troubleshooting-and-reference"></a>疑难解答和参考
 
-### Checking the container deployment log
+### <a name="checking-the-container-deployment-log"></a>检查容器部署日志
 
-In the provisioned resource group, navigate to the `bootstrap-container` container instance. From there, you can check the logs for the container, which will show the steps taken and any errors encountered.
+在已预配的资源组中，导航到 `bootstrap-container` 容器实例。 你可以在此处检查容器的日志，其中将显示所执行的步骤和遇到的所有错误。
 
-### Provider registration
+### <a name="provider-registration"></a>提供程序注册
 
-The Tailwind Traders application uses many Azure services. In some cases, if a service has not yet been used in your subscription, a provider registration may be needed. The following commands will ensure your subscription is capable of running the Tailwind Traders application.
+Tailwind Traders 应用程序使用多个 Azure 服务。 在某些情况下，如果订阅中尚未使用某项服务，则可能需要进行提供程序注册。 以下命令将确认你的订阅能够运行 Tailwind Traders 应用程序。
 
 ```
 az provider register --namespace Microsoft.OperationalInsights
@@ -201,7 +201,7 @@ az provider register --namespace Microsoft.Sql
 az provider register --namespace Microsoft.ContainerRegistry
 ```
 
-### Source Repositories
+### <a name="source-repositories"></a>源存储库
 
 https://github.com/microsoft/TailwindTraders
 

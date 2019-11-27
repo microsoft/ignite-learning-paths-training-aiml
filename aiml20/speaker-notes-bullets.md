@@ -1,601 +1,459 @@
-# AIML20: Speaker Notes
+# <a name="aiml20-speaker-notes"></a>AIML20：演讲者备注
 
-If you prefer to work from bullet points instead of scripted text, here are the main points from each slide of the PPT presentation at:
-https://microsoft.sharepoint.com/:p:/t/CloudDevAdvocacy/EctuTXQCOdpGqc5lhQgUnMgBr-R6hlWR5MuLE3qCIFgoHA?e=r1szwF
+如果你希望根据要点而不是脚本文本进行讲述，下面是 PPT 演示文稿的每张幻灯片中的要点： https://microsoft.sharepoint.com/:p:/t/CloudDevAdvocacy/EctuTXQCOdpGqc5lhQgUnMgBr-R6hlWR5MuLE3qCIFgoHA?e=r1szwF
 
-Associated demo scripts are found at: https://github.com/microsoft/ignite-learning-paths/tree/master/aiml/aiml20. Start with `DEMO%20Setup.md`.
+相关的演示脚本可在以下位置找到： https://github.com/microsoft/ignite-learning-paths/tree/master/aiml/aiml20 。 从 `DEMO%20Setup.md` 开始。
 
-## Slide notes
+## <a name="slide-notes"></a>幻灯片备注
 
-Slides are identified by titles only.
+幻灯片仅按标题标识。
 
-### SLIDE: Microsoft Ignite the Tour
+### <a name="slide-microsoft-ignite-the-tour"></a>幻灯片：Microsft Ignite 巡演
 
-Pre-presentation walk-in slide
+演示前的开题幻灯片
 
-### SLIDE: Using pre-built AI to solve business problems
+### <a name="slide-using-pre-built-ai-to-solve-business-problems"></a>幻灯片：使用预构建的 AI 来解决业务问题
 
-Introduce yourself.
+自我介绍。
 
-How to add AI capabilities to applications, even if you don't have compute resources or AI expertise.
+如何将 AI 功能添加到应用程序（即使没有计算资源或 AI 专业知识）。
 
-Using pre-built AI services in the cloud.
+使用云中预构建的 AI 服务。
 
-### SLIDE: Resources
+### <a name="slide-resources"></a>幻灯片：资源
 
-We will provide lots of links, resources and demos.
+我们将提供大量链接、资源和演示。
 
-Links to everything, including complete source code and a one-click deployment for the app, at the links here.
+所有信息，包括完整源代码和应用一键式部署，在此处都以链接的形式提供。
 
-This slide will be shown again at the end.
+最后会再次显示此幻灯片。
 
-### SLIDE: Adding humanlike capabilities to apps
+### <a name="slide-adding-humanlike-capabilities-to-apps"></a>幻灯片：向应用添加类似于人的功能
 
-We'll be using pre-built AI services to add humanlike capabilities to
-applications, but what does that mean? Well, here are some examples.
+我们将使用预构建的 AI 服务向应用程序添加类似于人的功能，但这是什么意思呢？ 下面是一些例子。
 
-### SLIDE: Enhance apps with humanlike capabilities
+### <a name="slide-enhance-apps-with-humanlike-capabilities"></a>幻灯片：借助类似于人的功能增强应用
 
-[CLICK] Give your app the power of speech (e.g. chat).
+[点击声] 为应用赋予语音能力（例如聊天）。
  
-[CLICK] Give your app the ability to see (understand images).
+[点击声] 为应用赋予观察能力（识别图像）。
 
-[CLICK] Give your app intuition about human behavior (adapt interfaces).
+[点击声] 为应用赋予类似于人的直觉（适配接口）。
 
-[CLICK] Give your app the power of comprehension (communicate in any language)
+[点击声] 为应用赋予领悟能力（以任何语言进行沟通）
 
-[CLICK] Automate the human process of scanning streams of data for anomalies (and scale)
+[点击声] 自动化扫描数据流中异常的人工过程（和缩放）
 
-These are just a few examples.
+这只是一些示例。
 
-### SLIDE: Overview of Azure Cognitive Services
+### <a name="slide-overview-of-azure-cognitive-services"></a>幻灯片：Azure 认知服务概述
 
-Doesn't it take a lot of data, and a lot of technical expertise, to implement humanlike AI?
+实现类似于人的 AI 是否需要引入大量的数据并具备丰富的技术专业知识？
 
-No. Draw on the expertise of Microsoft Research. Add capabilities with simple REST API calls. 
+否。 可利用 Microsoft Research 的专业技术。 通过简单的 REST API 调用即可添加功能。 
 
-That's Azure Cognitive Services.
+这就是 Azure 认知服务。
 
-### SLIDE: Azure Cognitive Services
+### <a name="slide-azure-cognitive-services"></a>幻灯片：Azure 认知服务
 
-Azure Cognitive Services includes more than two dozen APIs.
+Azure 认知服务包含二十多个 API。
 
-Services within these categories of human capability:
+这些服务属于下列人类能力类别：
 
-Vision: Understanding the content of photographs, drawings, text and handwriting, and video
+视觉：理解照片、绘画、文本、手写资料和视频中的内容
 
-Speech: Tools to understand and recognize speech, and generate natural, humanlike spoken voice.
+语音：用于理解和识别语音并生成类人自然口语的工具。
 
-Language: Understand the content of written documents and text, and translate between human languages.
+语言:理解书面文档和文本的内容，并翻译成不同的人类语言。
 
-Decision: entirely new category for Azure Cognitive Services, about making humanlike choices about data, content, and application user interfaces.
+决策：Azure 认知服务的全新类别，关于像人一样对数据、内容和应用程序用户界面作出选择。
 
-Search: answer natural language questions about the content of large, unstructured repositories. 
+搜索：回答用自然语言表述的关于大型非结构化存储库的内容的问题。 
 
-### SLIDE: Azure Cognitive Services (with service names)
+### <a name="slide-azure-cognitive-services-with-service-names"></a>幻灯片：Azure 认知服务（包括服务名称）
 
-"Search" already covered. 
+已包括“搜索”。 
 
-We use a few of the other available services to enhance a retail website: [CLICK]
+我们将使用其他一些可用服务来增强某个零售网站：[点击声]
 
-Computer Vision: which we'll use to analyze the content of product photographs.
+计算机视觉：我们用它来分析产品照片的内容。
 
-Custom Vision: which we'll use to identify the specific products that our retailer sells.
+自定义视觉：我们用它来识别零售商们销售的具体产品。
 
-Personalizer: which will automatically adapt the layout of our website 
+个性化体验创建服务：将自动适应网站布局 
 
-But the principles of setting up and using Cognitive Services are the same for all the APIs, so what you learn here today applies to any of the AI services you want to use.
+有关设置和使用认知服务的原则对所有 API 来说都相同，所以你今天在这里学到的知识也适用于你想要使用的任何 AI 服务。
 
-### SLIDE: Computer Vision
+### <a name="slide-computer-vision"></a>幻灯片：计算机视觉
 
-First, let's look at pre-built AI for Computer Vision.
+首先，我们看一下计算机视觉的预构建 AI。
 
-### SLIDE: Shop By Photo
+### <a name="slide-shop-by-photo"></a>幻灯片：按图购物
 
-This is the website for Tailwind Traders, a hardware retailer (and a fictitious company). 
+这是 Tailwind Traders 的网站，它是一家硬件零售商（虚构的公司）。 
 
-### SLIDE: Demo: Shop by Photo
+### <a name="slide-demo-shop-by-photo"></a>幻灯片：演示：按图购物
 
-DEMO: "Defining the problem: Shop by Photo is broken"
+演示：“定义问题：按图购物功能失效”
 
-### VIDEO: Shop by Photo
+### <a name="video-shop-by-photo"></a>视频：按图购物
 
-Let's go to the live Tailwind Traders website. [CLICK]
+让我们转到 Tailwind Traders 实时网站。 [点击声]
 
-One of the AI-enabled features is called "Shop by Photo". This feature that
-allows the customer to upload a photo of a product they might want to purchase,
-and the idea is that the app will tell them if the product is available. Let's
-go ahead and try it now. We'll upload this picture of a drill that we're
-interested in, and the Tailwind Traders app analyzes the picture, recognizes
-that it's a drill, and shows me the drill that Tailwind Traders has for sale,
-and where to find it in the store.
+AI 支持的其中一项功能称为“按图购物”。 这项功能的构想是，客户可以上传他们想要购买的产品的照片，让应用显示该产品是否有库存。 接下来，让我试一试。 我们将上传这张我们感兴趣的电钻的图片，Tailwind Traders 应用会分析该图片，识别出它是一个电钻，然后向我显示 Tailwind Traders 在出售的电钻以及我可在商店中的哪个位置找到它。
 
-But let's try that with a different picture. Let me return to the homepage, use
-the "Shop by Photo" feature once again, and this time choose this picture of a
-pair of pliers. Unfortunately, when the app analyzes that picture, it thinks
-it's a hammer. It's obviously not working very well, so now let's see if we can
-figure out what went wrong, find a way to fix it using computer vision. 
+但是，让我们用其他图片来试一下。 我要返回主页，再次使用“按图购物”功能，但这次选择这张钳子的图片。 遗憾的是，应用分析图片后，将其识别为锤子。 这一结果明显不尽人意，因此我们现在来看看是否能找到问题原因，想办法使用计算机视觉纠正问题。 
 
-### SLIDE: How Computer Vision Works
+### <a name="slide-how-computer-vision-works"></a>幻灯片：计算机视觉的工作原理
 
-We will go into a bit of theory now. Not much math.
+现在我们大致了解一下理论。 这不会涉及到很多的数学知识。
 
-Helpful to understand what can go wrong and how to fix it.
+这些内容可帮助我们了解问题的原因及解决方法。
 
-### SLIDE: Tasks (XKCD comic)
+### <a name="slide-tasks-xkcd-comic"></a>幻灯片：任务（XKCD 漫画）
 
-(Pause 10 seconds)
+（暂停 10 秒）
 
-A computer understanding a photo used to be literal science fiction.
+计算机理解科幻小说中使用的照片。
 
-Now 5 years later, it's not just possible, it's easy.
+5 年之后，这种识别能力并非有可能，而是非常容易实现。
 
-### SLIDE: How Neural Networks Work (Brandon Rohrer)
+### <a name="slide-how-neural-networks-work-brandon-rohrer"></a>幻灯片：神经网络的工作原理 (Brandon Rohrer)
 
-Adapted with permission from Brandon Rohrer.
+在 Brandon Rohrer 的许可下改编。
 
-Check out his blog for video tutorials series with in-depth explanations of many
-aspects of AI and machine learning. 
+请查看他的视频教程系列博客，其中深入介绍了 AI 和机器学习的各个方面。 
 
-### SLIDE: Computer Vision / Convolutional Neural Network
+### <a name="slide-computer-vision--convolutional-neural-network"></a>幻灯片：计算机视觉/卷积神经网络
 
-AI is powered by "Deep Learning", but "Deep" does not mean "profound".
+AI 基于“深度学习”，但“深度”并不意味着“深奥”。
 
-This is a simple NN. Real-word ones have many more layers.
+这是一个简单的神经网络。 真实的神经网络包含的层要多得多。
 
-It's designed to detect just five objects. It can't recognize anything else.
+它在设计上仅检测五个对象。 它无法识别其他任何内容。
 
-### SLIDE: Trained Convolutional NN
+### <a name="slide-trained-convolutional-nn"></a>幻灯片：经过训练的卷积神经网络
 
-Input image goes in on the left. 
+输入的图像位于左侧。 
 
-Each node processes and recombines the original images, shrinking them down, until
-at end is a single value: the classification confidence.
+每个节点处理并重新组合原始图像，将其缩小，直到最终出现单个值：分类置信度。
 
-Here the input is a bicycle, and the node at the right with the highest value is
-"bicycle". The image has been correctly identified.
+此处的输入是一辆自行车，右侧包含最高值的节点为“自行车”。 已正确识别该图像。
 
-### SLIDE: Filters (1)
+### <a name="slide-filters-1"></a>幻灯片：筛选器 (1)
 
-Skipped for time.
+由于时间有限，已跳过。
 
-### SLIDE: Filters (2)
+### <a name="slide-filters-2"></a>幻灯片：筛选器 (2)
 
-Skipped for time.
+由于时间有限，已跳过。
 
-### SLIDE: Filters (3)
+### <a name="slide-filters-3"></a>幻灯片：筛选器 (3)
 
-Skipped for time.
+由于时间有限，已跳过。
 
-### SLIDE: Training an image classifier
+### <a name="slide-training-an-image-classifier"></a>幻灯片：训练图像分类器
 
-But how do you train a NN to do that?
+但如何通过训练神经网络来做到这一点呢？
 
-[CLICK] By choosing the right filters. Each filter is controlled by a small grid of weights (usually 3x3 or 5x5).
+[点击声] 选择适当的筛选器。 每个筛选器按权重小网格（通常为 3x3 或 5x5）控制。
 
-[CLICK] We choose the weights by using lots of training images where the
-classification is known. Choose the weights so that the correct classification is chosen (or at least most of the time)
+[点击声] 我们使用许多训练图像（其中的分类是已知的）选择了权重。 选择权重，以选择正确的分类（至少在大部分时间是正确的）
 
-In real vision networks, there may be millions of weights to choose. How will we determine the
-weights?
+在现实视觉网络中，可能有数百万个权重需要选择。 我们如何确定权重？
 
-### SLIDE: Learning: Backpropagation
+### <a name="slide-learning-backpropagation"></a>幻灯片：学习：反向传播
 
-This is where the heavy math comes in.
+此处涉及到大量的数学计算。
 
-But unless you're an AI engineer, you don't need to care. You can just use networks with weights optimized by others.
+但除非你是 AI 工程师，否则可以忽略这一步。 只需使用权重已由其他人优化的网络。
 
-That covers probably 80% of applications. But if you do need to design your own NN and optimize weights, there are tools for that, like Tensorflow and PyTorch. Hear about those in AIML40 and AIML50.
+这也许会涉及到 80% 的应用程序。 但是，如果你确实需要设计自己的神经网络和优化权重，可借助 Tensorflow 和 Pytorch 等工具。 AIML40 和 AIML50 中提供了操作方法。
 
-### SLIDE: Pre-Trained Convolutional NN
+### <a name="slide-pre-trained-convolutional-nn"></a>幻灯片：预训练的卷积神经网络
 
-But as long as you have access to an NN that can detect the images you need, you
-can just provide your image, and the network will classify it for you.
+但是，只要你有权访问可以检测所需图像的神经网络，就只需提供图像，而网络会自动将图像分类。
 
-Some models do more than just classify: detect the location
-of objects, or analyze the image in other ways.
+有些模型不仅可以分类，还能检测对象的位置，或者以其他方式分析图像。
 
-### SLIDE: Demo: Cognitive Services Computer Vision
+### <a name="slide-demo-cognitive-services-computer-vision"></a>幻灯片：演示：认知服务计算机视觉
 
-Cognitive Services Computer Vision provides a powerful NN that can classify many thousands of objects.
+认知服务计算机视觉提供可对数千个对象进行分类的强大神经网络。
 
-Simple web-based UI you can use to try it out at aka.ms/try-computervision
+可以在 aka.ms/try-computervision 上，使用简单的基于 Web 的 UI 来尝试该神经网络
 
-Let's try it now.
+现在让我们试一试。
 
-### VIDEO: Computer Vision via web
+### <a name="video-computer-vision-via-web"></a>视频：通过 Web 实现计算机视觉
 
-[CLICK] This is the Cognitive Services Computer Vision page. If you scroll down
-a little bit on that page, you’ll find a nice web-based form that allows us to
-upload an image for analysis, either from the web or as a local file. So let’s
-try uploading this picture of a man in a hard hat. In just a few seconds we’ll
-get back the analysis of that picture by the Computer Vision service. On the
-left, it shows us the objects detected in the image, and on the right we have
-the JSON output with the detailed analysis. That includes the names and
-locations of the objects detected in the image, a list of tags or labels
-associated with the image, a plain-language description of the image (in this
-case, “a man wearing a helmet”), and lots of other useful information.
+[点击声] 这是认知服务计算机视觉页面。 如果在该页面上向下滚动一点，就会发现一个很不错的基于 Web 的窗体，该窗体可用于从 Web 或以本地文件形式上传图像进行分析。 接下来，让我们尝试上传这张戴着安全帽的男子的图片。 只需几秒钟，我们就能通过计算机视觉服务获得对该图片的分析结果。 左侧显示在该图像中检测到的对象，右侧显示包含详细分析的 JSON 输出。 其中包括在图像中检测到的对象的名称和位置，与图像关联的标记或标签的列表，对图像的纯语言描述（在本例中为“戴头盔的男人”）以及许多其他有用的信息。
 
-### SLIDE: Cognitive Services Computer Vision
+### <a name="slide-cognitive-services-computer-vision"></a>幻灯片：认知服务计算机视觉
 
-Look in Objects: two objects detected. Headwear, and Person.
+查找对象：已检测到两个对象。 “头戴用具”和“人”。
 
-Look at Tags. Highest confidence: man. Next is Headdress. Helmet is only 6th.
-Model not trained for "hard hat" specifically.
+查看标记。 最高置信度：男人。 接下来是“头戴用具”。 “头盔”仅排在第 6 位。
+尚未专门针对“安全帽”训练模型。
 
-We'll learn how to fix that in just a moment.
+稍后我们将了解如何修复该问题。
 
-If you want to incorporate vision into an app you can access API programmatically. Let's see how.
+若要将视觉整合到应用中，可以通过编程方式访问 API。 让我们了解一下。
 
-### VIDEO: Computer Vision via CLI
+### <a name="video-computer-vision-via-cli"></a>视频：通过 CLI 实现计算机视觉
 
-You can interface to the Cognitive Service APIs using any language that can
-connect to an HTTP endpoint, but what I have here [CLICK] is a bash script that
-uses the Azure CLI to create resources, and connects to the Computer Vision API
-using "curl". You can install the Azure CLI in your local shell, but here I am
-using the "Azure Account" extension in Visual Studio Code to launch a Cloud
-Shell, which means I don't have to install anything. Once that shell is ready, I
-can execute commands directly from this bash script. 
+可以使用任何可连接到 HTTP 终结点的语言来连接到认知服务 API，但我这里 [点击声] 是一个 bash 脚本，它使用 Azure CLI 创建资源，并使用“curl”连接到计算机视觉 API。 可以在本地 Shell 中安装 Azure CLI，但在这里，我使用 Visual Studio Code 中的“Azure 帐户”扩展来启动 Cloud Shell，这意味着无需安装任何程序。 等该 Shell 准备就绪后，就可以直接从此 bash 脚本执行命令。 
 
-This first command creates a resource group, which I'll use to hold the keys I
-need to authenticate the API.
+第一个命令创建一个资源组，我用它来保存对 API 进行身份验证所需的密钥。
 
-The next step is to create the keys. Here I'm creating an omnibus Cognitive
-Services key which I can use with many services including Computer Vision.
+下一步是创建密钥。 我正在创建一个综合认知服务密钥，它可以用于包括计算机视觉在内的许多服务。
 
-Then, we can display the key directly in the terminal. [WAIT] You can use either
-of these keys to interface with the API, so I will save the first one here in an
-environment variable.
+然后，我们可以直接在终端显示该密钥。 [等待] 可以使用这两个密钥中的任何一个来与 API 对接，因此，我将这里的第一个密钥保存在环境变量中。
 
-With that key, we can connect to the endpoint URL provided by the Computer
-Vision service, so let's save that URL in an environment variable as well.
+使用该密钥，我们可以连接到计算机视觉服务提供的终结点 URL，因此我们也将该 URL 保存在环境变量中。
 
-And then you can choose an image to analyze. Here we provide the URL of an
-image, the same image of a man in a hard hat that we looked at a moment ago.
+然后可以选择要分析的图像。 在这里，我们提供一张图像的 URL，就是我们刚才看到的戴安全帽的男人图像。
 
-Now we can pass the key and the image URL into the endpoint by passing in a JSON
-input using curl. And in just a few milliseconds we get back the analysis of the
-image as JSON. You can see the same outputs we saw in the web interface a moment
-ago.
+现在，我们可以通过使用 curl 传入 JSON 输入，将密钥和图像 URL 传递到终结点中。 在短短几毫秒内，我们就获得了 JSON 形式的图像分析结果。 可以看到刚才在 Web 界面中看到的相同输出。
 
-We can do that with any image we like, of course. Let's try that again with a
-different image, in this case the picture of a drill. Once again, we can pass
-that to the API using curl. [WAIT] Interestingly the top tag associated with
-this image is "camera", which sadly wouldn't help us search for the actual tool
--- we would want "drill".
+当然，我们可以使用任何喜欢的图像做到这一点。 让我们用其他图像再试一次，这次是一张电钻图片。 同样，我们可以使用 curl 将其传递给 API。 [等待] 有趣的是，与此图像关联的排名第一的标记是“相机”。很遗憾，它无法帮助我们搜索到真正的工具 - 我们要的是“电钻”。
 
-### SLIDE: Adapting Computer Vision models with your own data
+### <a name="slide-adapting-computer-vision-models-with-your-own-data"></a>幻灯片：用你自己的数据改编计算机视觉模型
 
-Computer Vision API won't work for Shop by Photo. 
+计算机视觉 API 不适用于“按图购物”。 
 
-Trained to detect too many kinds of objects.
+训练后检测的对象种类过多。
 
-Fortunately, we can fix that problem. Let's dive back into the theory for a moment.
+幸运的是，我们可以解决这个问题。 让我们暂时回到理论知识。
 
-There's a way to adapt a model for thousands of objects, and adapt it to detect
-only object you want. EVEN if they weren't part of the original model. 
+可通过某种方式来改编模型，使其既可以检测数千个对象，也可以仅检测所需的对象， 即使这些对象不是原始模型的一部分。 
 
-Let's see how, using an AI technique called Transfer Learning. 
+让我们看看如何使用称作“迁移学习”的 AI 技术。 
 
-### SLIDE: Transfer Learning
+### <a name="slide-transfer-learning"></a>幻灯片：迁移学习
 
-Same CNN as before, with last layer stripped off.
+与前面所述的卷积神经网络相同，只是剥除了最后一层。
 
-Second last layer gives "features" - think of as a vector of numbers. Each image generates a different set of features.
+倒数第二个层提供“特征”- 可将其视为数字矢量。 每张图像生成一组不同的特征。
 
-Don't know what the features represent, but they are useful in general for classifying images.
+我们不知道这些特征的含义，但它们往往可用于分类图像。
 
-Trick: we can use those features to classify a new set of objects.
+技巧：可以使用这些特征对一组新对象进行分类。
 
-### SLIDE: Transfer Learning Training (1 - with the hammer)
+### <a name="slide-transfer-learning-training-1---with-the-hammer"></a>幻灯片：迁移学习训练（1 - 使用锤子图像）
 
-Use transfer learning to create a model to identify hammers and hard hats.
+使用迁移学习创建一个模型来识别锤子和安全帽。
 
-Pass a picture of a hammer, collect features. And a binary indicator for "hammer". Repeat for lots of hammers.
+传递锤子的图片，并收集特征。 此外传递“锤子”的二元指示符。 对大量的锤子重复上述操作。
 
-### SLIDE: Transfer Learning Training (2 - with the white hard hat)
+### <a name="slide-transfer-learning-training-2---with-the-white-hard-hat"></a>幻灯片：迁移学习训练（2 - 使用安全帽图像）
 
-Now do the same with pictures of hard hats.
+现在，针对安全帽重复相同的操作。
 
-In each case, collect 8 data vectors and a binary indicator for each image.
+在每种情况下，针对每个图像收集 8 个数据矢量和 1 个二元指示符。
 
-Put it all together, you have a collection of data vectors, each
-with an associated a binary outcome. 
+总之，你会获得一个数据矢量的集合，且每个集合都有一个关联的二元结果。 
 
-With this you can make a simple predictive model.
+这样就可以创建一个简单的预测模型。
 
-### SLIDE: Transfer Learning Trained Model
+### <a name="slide-transfer-learning-trained-model"></a>幻灯片：迁移学习 - 已训练的模型
 
-This works surprisingly well.
+结果非常不错。
 
-You don't need a lot of images or computing power.
+不需要大量的图像或计算能力。
 
-This is a toy example but the principle applies to large models too.
+这只是一个玩具示例，但原理也适用于大型模型。
 
-### SLIDE: Microsoft Cognitive Services Custom Vision
+### <a name="slide-microsoft-cognitive-services-custom-vision"></a>幻灯片：Microsoft 认知服务自定义视觉
 
-You don't have to train a transfer learning model yourself.
+你不必亲自训练迁移学习模型。
 
-Use one of Microsoft's pre-trained vision models and adapt it with images of your own objects, with Custom Vision.
+使用 Microsoft 预先训练的视觉模型之一，并通过自定义视觉使用自己的对象图像对该模型进行改编。
 
-Let's try use it now to build a vision model for Shop by Photo.
+现在，让我们尝试使用它来构建一个“按图购物”的视觉模型。
 
-### SLIDE: Demo: Customized object recognition
+### <a name="slide-demo-customized-object-recognition"></a>幻灯片：演示：自定义的对象识别
 
-Demo instructions: https://github.com/microsoft/ignite-learning-paths/blob/master/aiml/aiml20/DEMO%20Custom%20Vision.md
+演示说明： https://github.com/microsoft/ignite-learning-paths/blob/master/aiml/aiml20/DEMO%20Custom%20Vision.md
 
-### VIDEO: customvision.ai
+### <a name="video-customvisionai"></a>视频：customvision.ai
 
-[CLICK] So here I am in the Custom Vision web-based interface. It provides us with a
-nice UI where we can provide new images for the transfer learning analysis. And
-you can see in this project I've already uploaded a number of pictures. I've
-uploaded pictures of screwdrivers, pliers, drills, and hammers, which I'm going
-to use to train my custom model. We'd also like to detect one other product that
-Tailwind Traders sells: hard hats. So let's click "add images", browse to a
-folder on my hard drive where I've collected a few photos of hard hats, select
-them all, and add them to the service while providing the label "hard hat" to
-use in training.
+[点击声] 现在，我已进入自定义视觉基于 Web 的界面。 它为我们提供了优秀的 UI，让我们可以在其中提供用于迁移学习分析的新图像。 可以在此项目中看到我已经上传了多张图片。 我上传了螺丝刀、钳子、电钻和锤子的图片，我将使用这些图片训练自定义模型。 我们还想检测 Tailwind Traders 销售的另一款产品：安全帽。 让我们单击“添加图像”，浏览到硬盘上收集了一些安全帽图片的文件夹，并全部选中这些图片，然后将其添加到服务中，同时提供“安全帽”标签用于训练。
 
-It will take a few moments to upload those files, but while it's doing that,
-notice that there aren't that many images in this project: about 180, or a few
-dozen for each of the five categories. Sometimes even less. Despite that,
-because my five object types are fairly distinct, the model should work fairly
-well.
+上传这些文件需要花费一些时间，但在进行此操作时，请注意，此项目中的图像并不多：约 180 个，即五个类别中的每个类别各有数十个。 有时甚至更少。 尽管如此，由于我的五个对象类型截然不同，该模型的效果应该非常不错。
 
-So let's go ahead and click the Train button to start transfer learning. We'll
-choose Quick Training. Now it's running all those images through a complex
-vision model, and using transfer learning to create a predictive model for our
-five categories. It only takes a few seconds, and our model does fairly well!
-The probability threshold sets a limit below which we will predict no
-classification at all. If we only accept classifications with 50% confidence or
-more, 90.9% of those predictions are correct: that's "Precision". And the model
-correctly classifies 88.2% of our images overall: that's "Recall". In your apps,
-you will choose a threshold according to your tolerance for making the wrong
-call, versus making no call at all. For Tailwind Traders we can set the
-threshold on the low side, because it's not so big a deal to suggest the wrong
-product to a customer. If this were a cancer detection app, you'd likely make a
-different call.
+因此，让我们继续并单击“训练”按钮以开始迁移学习。 我们选择“快速训练”。 现在，它通过复杂的视觉模型运行所有这些图像，并使用迁移学习针对我们的五个类别创建预测模型。 只需几秒钟，我们的模型就做得有模有样了！
+概率阈值设置了一个限制，低于该限制时我们完全无法预测任何分类。 如果我们仅接受置信度为 50% 或更高的分类，则其中 90.9% 的预测是正确的：这称为“精准率”。 整体而言，该模型正确地对 88.2% 的图像进行了分类：这称为“召回率”。 在你的应用中，请根据自己对做出错误召回以及完全不做出召回的容忍度选择阈值。 对于 Tailwind Traders，我们可将阈值设置得较低，因为向客户建议错误的产品并不是一件大事。 如果这是一个癌症检测应用，则你可能会做出其他选择。
 
-Now let's try out our model on some new images it hasn't seen before. We do that
-by clicking on the “Quick Test” button. We will upload a new file from our "test
-images" folder. Let's try our man in the hard hat. And you can see that our
-prediction is indeed of a "hard hat" with probability 99.9%, so we'd make that
-call with pretty much any threshold we choose.
+现在，让我们使用模型之前未见过的新图像对模型进行试用。 我们通过单击“快速测试”按钮来实现此目的。 我们上传来自“test images”文件夹的新文件。 让我们用安全帽试试我们的模型。 你会看到，预测结果确实是“安全帽”，概率为 99.9%，因此，我们几乎可使用所选择的任何阈值完成此任务。
 
-Let's try a different image: the drill. Our model identifies the image as a
-drill with probability 94.5%. And lastly, let's try the picture of the pliers,
-which it identifies with 99.9% confidence.
+让我们试试其他图像：电钻。 我们的模型将图像识别为电钻的概率为 94.5%。 最后，让我们试试钳子的图片，其识别结果的置信度为 99.9%。
 
-So our model works well, even though it's been trained on less than 200 images.
-That's because we've constrained the potential labels to only those products we
-sell at Tailwind Traders.
+因此，即使我们只使用了不到 200 个图像对模型进行训练，我们的模型也能很好地完成任务。
+那是因为我们将可能的标签约束为仅限于在 Tailwind Traders 销售的那些产品。
 
-Now that we're happy with our model, we can export it and incorporate it into
-our app. If you click on the Export button, you can export the model for iOS or
-Android, as a container, or in our case in the universal ONNX format. So now we
-have downloaded the model to the hard drive.
+现在，我们对模型感到满意，可将其导出并合并到我们的应用中。 如果单击“导出”按钮，可将模型作为容器导出以用于 iOS 或 Android，或在我们的示例中，模型以通用 ONNX 格式导出。 现在，我们已将模型下载到硬盘上。
 
-### SLIDE: Portable Deep Learning Models
+### <a name="slide-portable-deep-learning-models"></a>幻灯片：可移植深度学习模型
 
-We exported our custom model in the ONNX format.
+我们以 ONNX 格式导出了自定义模型。
 
-ONNX, or Open Neural Network Exchange, is an open standard launched by Microsoft
-and Facebook to promote the free exchange and deployment of AI models, and
-supported by a wide range of applications and technology vendors.
+ONNX 又称为“开放神经网络交换”，是 Microsoft 和 Facebook 联合推出的一种开放标准，旨在促进 AI 模型的自由交换和部署，并得到了众多应用程序和技术供应商的支持。
 
-We used ONNX Runtime to integrate the exported model into the website.
+我们已使用 ONNX 运行时将导出的模型集成到网站中。
 
-### SLIDE: ONNXImageSearchTermPredictor.cs
+### <a name="slide-onnximagesearchtermpredictorcs"></a>幻灯片：ONNXImageSearchTermPredictor.cs
 
-InferenceSession refers to the exported .onnx file
+InferenceSession 引用导出的 .onnx 文件
 
-Model generates a classification label, which gets passed to search.
+模型将生成一个要传递到搜索中的分类标签。
 
-### SLIDE: DEMO: ONNX
+### <a name="slide-demo-onnx"></a>幻灯片：演示：ONNX
 
-DEMO: ONNX Deployment
+演示：ONNX 部署
 
-### VIDEO: Kudu
+### <a name="video-kudu"></a>视频：Kudu
 
-[CLICK] The model that we just exported from Custom Vision is actually a ZIP file,
-containing the actual ONNX file, model.onnx, which is the text representation of
-the neural network we just created, and also a manifest file. 
+[点击声] 我们刚才从自定义视觉中导出的模型实际上是一个 ZIP 文件，其中包含实际的 ONNX 文件 model.onnx，这是我们刚才创建的神经网络的文本表示形式，也是一个清单文件。 
 
-The existing Tailwind Traders website already uses a computer vision model
-represented as an ONNX file called products.onnx. The problem is, that model
-doesn't properly recognize many of the products we sell at Tailwind Traders. So
-we'll take the model.onnx file we just exported from Custom Vision, rename it as
-products.onnx, and replace it in our web app, so that Shop by Photo can
-recognize all five products we trained it on.
+现有的 Tailwind Traders 网站已在使用计算机视觉模型，该模型以名为 products.onnx 的 ONNX 文件的形式表示。 问题在于，该模型无法正确识别我们在 Tailwind Traders 销售的许多产品。 我们将使用刚才从自定义视觉中导出的 model.onnx 文件，将其重命名为products.onnx，并在我们的 Web 应用中替换它，以便“按图购物”功能可识别我们对其进行训练的全部五种产品。
 
-Here in the Azure Portal you can see the App Service resource which runs the
-Tailwind Traders website. What I can do now within this App Service is go to the
-Development Tools section and choose the Advanced Tools feature. This launches
-the Kudu interface. Now that's launched, I can browse through the website
-filesystem using the debug console. Let's browse to site, w-root, Standalone,
-OnnxModels, where the products.onnx file is located. Now we can replace it with
-the new version of the products.onnx file we created with Custom Vision.
+在 Azure 门户中，可以看到运行 Tailwind Traders 网站的应用服务资源。 现在可以在此应用服务中执行的操作就是转到“开发工具”部分，然后选择“高级工具”功能。 随后会启动 Kudu 界面。 界面启动后，可以使用调试控制台浏览网站文件系统。 让我们浏览到 products.onnx 文件所在的位置：site -> w-root -> Standalone -> OnnxModels。 现在，可将其替换为我们使用自定义视觉创建的 product.onnx 文件的新版本。
 
-Now, returning to the App Service, we can go ahead and restart the web server,
-which will make it use the new ONNX model in the Shop by Photo Feature.
+现在，返回应用服务，我们可以继续并重启 Web 服务器，这将使其在“按图购物”功能中使用新的 ONNX 模型。
 
-### VIDEO: Netron
+### <a name="video-netron"></a>视频：Netron
 
-[CLICK] While we're waiting for the website to restart, lets take a look inside the ONNX
-model we just installed. There's a nice little web app by Lutz Roeder called
-Netron, which allows us to inspect the neural networks in ONNX files. So let's
-go ahead and open that products.onnx file. Here you can see the actual layers of
-the neural network represented by the model. Let's zoom in a little bit and take
-a look at the input at the top. The input is an image. It's a 3-layer RGB image,
-of size 224x224 pixels. I actually had to crop and scale down the image provided
-by the user before providing it to ONNX runtime. It's a bit of a dirty secret
-that computer vision systems have rather poor vision -- they work with quite low
-image resolutions -- but nonetheless still work quite well.
+[点击声] 在等待网站重启时，让我们深入了解刚才安装的 ONNX 模型。 Lutz Roeder 开发了一个不错的小型 Web 应用，名为 Netron，它使我们能够检查 ONNX 文件中的神经网络。 让我们继续，打开 product.onnx 文件。 现在可以看到模型代表的神经网络的实际层。 让我们放大一点，看看顶部的输入。 该输入是一个图像。 它是一个 3 层的 RGB 图像，大小为 224x224 像素。 实际上，在将用户提供的图像提供给 ONNX 运行时之前，我必须裁剪并缩小该图像。 计算机视觉系统的视觉效果很差是一个不太光彩的秘密 -- 它们在图像分辨率相当低的环境下工作 -- 但仍然有出色的表现。
 
-Now let's zoom out and scroll through the network. You can see all of the layers
-in the neural network created by the custom vision, each layer transforming the
-input image, applying filters and recombining the output images, just as you
-learned earlier in this talk. But when you get down to the output layer at the
-very end, you can see that the output is a list of five values -- the five
-products we trained it on: hammer, hard hat, and so on -- along with this value
-labelled "loss" which is the confidence the model predicts for each category. In
-your app, you'll choose your own threshold for how high the confidence needs to
-be.
+现在，让我们缩小并滚动浏览网络。 可以看到由自定义视觉创建的神经网络中的所有层，每一层都可以转换输入图像、应用筛选器并重新组合输出图像，就像本讲座前面部分所述的那样。 但是，最终到达输出层时，会看到输出是一个包含五个值的列表 -- 即我们对其进行训练的五种产品：锤子、安全帽等 -- 以及标记为“损失”的这个值，这是模型针对每个类别预测的置信度。 在你的应用中，可选择自己的阈值用于设置所需的置信度。
 
-Anyway, now that the Tailwind Traders website has restarted, let's go back to
-the homepage and see how our new vision model works. Let's go ahead and upload a
-photo, and try once again one of our test images, specifically our image of
-pliers that didn't work well before. We can see that indeed, rather than
-thinking it was a hammer, the website has searched for "pliers" and shown me all
-the products on offer.
+不管怎样，Tailwind Traders 网站现在已重启，让我们回到主页，看看新视觉模型表现如何。 让我们继续并上传图片，然后再次使用测试图像之一进行尝试，特别是之前表现不佳的钳子图像。 可以看到，该网站确实没有将其视为锤子，而是搜索“钳子”，并向我展示了其提供的所有产品。
 
-### SLIDE: Optimizing App UI with Cognitive Services Personalizer
+### <a name="slide-optimizing-app-ui-with-cognitive-services-personalizer"></a>幻灯片：使用认知服务个性化体验创建服务优化应用 UI
 
-Time for one more quick example: Personalizer.
+现在让我们演示另一个快速示例：个性化体验创建服务。
 
-The "Personalizer" service allows us to customize the interface of apps in real-time by learning from user behavior.
+借助个性化体验创建服务，可通过从用户行为中学习，实时自定义应用的界面。
 
-### SLIDE: Recommended (screenshot)
+### <a name="slide-recommended-screenshot"></a>幻灯片：推荐（屏幕截图）
 
-Recommended section shows one large "hero" image, coupled with a few smaller images.
+“推荐”部分显示一张较大的“主图”，以及几张小图。
 
-Personalizer will select the order sections appear
+个性化体验创建服务将选择各个部分的显示顺序
 
-Uses an AI technique called "reinforcement learning".
+使用称作“强化学习”的 AI 技术。
 
-### SLIDE: Personalizer in Action
+### <a name="slide-personalizer-in-action"></a>幻灯片：个性化体验创建服务实践
 
-Personalizer has been in development at Microsoft for many years. 
+多年来，Microsoft 一直致力于个性化体验创建服务的开发。 
 
-Used on XBox and in Bing and MSN News.
+XBox、必应和 MSN 新闻中都使用了该服务。
 
-Now you can use Personalizer in your own apps, as well.
+现在你也可以在自己的应用中使用个性化体验创建服务。
 
-### SLIDE: Reinforcement Learning
+### <a name="slide-reinforcement-learning"></a>幻灯片：强化学习
 
-Personalizer implements an AI technique called Reinforcement Learning. Here's
-how it works.
+个性化体验创建服务实现一种称作“强化学习”的 AI 技术。 工作原理如下。
 
-[CLICK] Suppose we want to display a "hero" action to the user. [CLICK] The user
-might not be sure what to do next, [CLICK] but we could display one of several
-suggestions. For a gaming app, [CLICK] that might be: "play a game", "watch a
-movie", or "join a clan". [CLICK] Based on that user's history and other
-contextual information -- say, their location, the time of day, and the day of
-the week -- the Personalizer service will [CLICK] rank the possible actions and
-[CLICK] suggest the best one to promote [CLICK]. 
+[点击声] 假设我们要向用户显示一个主要操作。 [点击声] 用户可能不确定下一步该怎么做，[点击声] 但我们可以显示其中一项建议。 对于游戏应用，[点击声] 那可能是：“玩游戏”、“看视频”或“加入部落”。 [点击声] 根据该用户的历史记录和其他上下文信息（例如，他们的位置、当天时间和星期几），个性化体验创建服务将 [点击声] 排列可能的操作并 [点击声] 对要提升的最佳操作提出建议 [点击声]。 
 
-Hopefully, the user will be happy [CLICK], but how can we be sure? That depends
-on what the user does next, and whether that was something we wanted them to do.
-According to our business logic [CLICK], we'll assign a "reward score" between 0
-and 1 to what happens next. For example, spending more time playing a game or
-reading an article, or spending more money in the store, might lead to higher
-reward scores. [CLICK] Personalizer feeds that info back into the ranking system
-for the next time we need to feature an activity.
+希望用户会满意 [点击声]，但我们如何确定这一点呢？ 这取决于用户下一步要执行的操作，以及我们是否希望他们这样做。
+根据我们的业务逻辑 [点击声]，我们将为接下来执行的操作分配一个“奖励评分”，评分范围为 0 至 1。 例如，花更多的时间玩游戏或阅读文章，或在商店里花更多的钱，可能会获得更高的奖励评分。 [点击声] 个性化体验创建服务将这些信息馈送回排名系统，以便下次我们需要安排某个活动时使用。
 
-### SLIDE: Discovering Patterns and Causality
+### <a name="slide-discovering-patterns-and-causality"></a>幻灯片：发现模式和因果关系
 
-Not just a recommender system.
+个性化体验创建服务不仅仅是一个推荐器系统。
 
-Explore mode surfaces other options at a rate you specify.
+探索模式可按指定的比率显示其他选项。
 
-Like real-time A/B testing.
+例如实时 A/B 测试。
 
-### SLIDE: Personalizer for Tailwind Traders
+### <a name="slide-personalizer-for-tailwind-traders"></a>幻灯片：适用于 Tailwind Traders 的个性化体验创建服务
 
-Context: time of day, day of week, and browser OS  
+上下文：时间、星期和浏览器 OS  
 
-Reward score: 1 if the featured category was clicked, and zero
-otherwise.
+奖励评分：如果单击了特色类别，则为 1；否则为 0。
 
-Explore rate: 20%
+探索比率：20%
 
-### SLIDE: DEMO: Personalizer
+### <a name="slide-demo-personalizer"></a>幻灯片：演示：个性化体验创建服务
 
-[ClICK] Now, let's see Personalizer in action. Let's go back to the Tailwind
-Traders homepage. What I didn't mention before is that in this Recommended
-section, the ordering of the product departments is determined by Personalizer.
-In this case, it's presenting the Electrical department as the hero image. We
-can also see the "Explore" behavior if we refresh the website a few times.
-Apparently Personalizer currently thinks that the Garden Center gets the best
-engagement from anonymous users at this time of day using the browser and
-operating system that I am using here, but eventually it will try out different
-categories -- here, plumbing has popped up, and Personalizer will use that to
-measure engagement as well.
+[点击声] 现在让我们在实践中了解个性化体验创建服务。 让我们返回到 Tailwind Traders 主页。 我之前没有提到的是，在这个“推荐”部分，产品部门的顺序是由个性化体验创建服务决定的。
+在本例中，它将电气部门显示为主图。 我们刷新网站几次，也可以看到“探索”行为。
+显然，个性化体验创建服务目前认为，在每天的这个时候，通过使用我在此处使用的浏览器和操作系统，Garden Center 获得了来自匿名用户的最佳参与度，但最终它会尝试不同的类别 - 此时将弹出管道，个性化体验创建服务将使用它来衡量参与度。
 
-### SLIDE: Pre-built AI in Production
+### <a name="slide-pre-built-ai-in-production"></a>幻灯片：生产环境中的预构建 AI
 
-Wrap up with some considerations for putting AI into production.
+最后，请注意在将 AI 投入生产时的一些事项。
 
-### SLIDE: Cost Considerations
+### <a name="slide-cost-considerations"></a>幻灯片：成本注意事项
 
-First consideration: cost. 
+首要考虑因素：成本。 
 
-New to Azure? Use this link to sign up and get $200 in free credits.
+不熟悉 Azure？ 请使用此链接注册并获取 200 美元的免费额度。
 
-[CLICK] Development-scale workloads generally free 
+[点击声] 开发规模的工作负荷一般是免费的 
 
-[CLICK] Production volumes is where charges will kick in
+[点击声] 费用在生产卷中产生
 
-[CLICK] Specific details by service and region at this link
+[点击声] 此链接按服务和区域列出了具体的详细信息
 
-### SLIDE: Data Considerations
+### <a name="slide-data-considerations"></a>幻灯片：数据注意事项
 
-Think about where your data is going and how it will be used.
+需考虑数据的去向及其用法。
 
-Data is uploaded for inference, but deleted immediately after use. Details at this link.
+数据将上传以用于推理，但用后会立即删除。 此链接提供了详细信息。
 
-If bandwidth is an issue, or data is regulated, consider containers.
+如果带宽是一个问题，或数据受到管控，请考虑使用容器。
 
-### SLIDE: Deployment with containers
+### <a name="slide-deployment-with-containers"></a>幻灯片：使用容器的部署
 
-Some services available in downloadable containers.
+可下载的容器中提供了一些服务。
 
-Install container behind your firewall, and none of your data goes to Microsoft.
+请将容器安装在防火墙的后面，任何数据都不会发送到 Microsoft。
 
-Internet connection only used for billing. Charged at usual rate.
+Internet 连接仅用于计费。 按正常费率计费。
 
-### SLIDE: Ethical Considerations
+### <a name="slide-ethical-considerations"></a>幻灯片：道德注意事项
 
-Most important slide.
+最重要的幻灯片。
 
-Understand ethical implications of your AI apps affect people.
+请了解 AI 应用对人类造成的道德影响。
 
-Have an ethical framework:
+使用合乎道德的框架：
 
-*enable* people to achieve more in what they already do (don't replace people)
+使人们能够按他们的惯常方式实现更多的目的（而不是替代人类） 
 
-Be *inclusive* of all types of user: make sure everyone can benefit equally  from your application, and
+包容所有类型的用户：确保每个人都能平等地通过你的应用程序受益 
 
-Be fair and transparent.
+公平且透明。
 
-Remember what AI is only as good as the data it was trained on. Be sure that your application works for all of your potential users.
+请记住，AI 的表现只能以训练它所用的数据质量为界限。 请确保你的应用程序适用于所有潜在用户。
 
-If you don't have an ethical framework set up, a great place to start is Microsoft's own principles for artificial intelligence, and you can read more at this link.
+如果尚未设置道德框架，可以从 Microsoft 自己的人工智能原则开始；可以通过此处的链接阅读详细信息。
 
-### SLIDE: Wrapping up
+### <a name="slide-wrapping-up"></a>幻灯片：总结
 
-Pre-built models can't do everything, but they can get you a long way, quickly. 
+预构建的模型不能执行任何操作，但可以快速为你带来长足的发展。 
 
-AI is driven by data. Always keep the data in mind and what can go wrong.
+AI 由数据驱动。 请始终留意这些数据，以及可能出现的错误。
 
-Try it out! You don't need a lot of expertise, but think about ethical implications.
+试试看！ 无需丰富的专业知识，但要考虑道德影响。
 
-### SLIDE: Docs Alert
+### <a name="slide-docs-alert"></a>幻灯片：文档提醒
 
-For all the details on Azure Cognitive Services, including getting started
-guides and references, check out Microsoft Docs.
+有关 Azure 认知服务的所有详细信息，包括入门指南和参考，请查看 Microsoft Docs。
 
-### SLIDE: MS Learn Alert
+### <a name="slide-ms-learn-alert"></a>幻灯片：MS Learn 提醒
 
-And if you'd like to learn how to use Cognitive Services, there are free courses
-on Microsoft Learn that will take you through using them step-by-step.
+如果想要学习如何使用认知服务，可以在 Microsoft Learn 上找到免费的课程，这些课程将为你提供分步指导。
 
-### SLIDE: Resources
+### <a name="slide-resources"></a>幻灯片：资源
 
-All links and code in the Github repository.
+Github 存储库中的所有链接和代码。
 
-And if you'd like to get a Microsoft Certification in AI or Data Science, there's a special offer for a free certificate for attendees today: check out this link for details.
+如果你想获得人工智能或数据科学方面的 Microsoft 认证，今天我们面向与会者提供免费认证特殊优惠：有关详细信息，请查看该链接。
 
-I'll be here to answer questions. (And at...)
+我随时乐意解答各种问题。 （还有 ...）
 
-Thank you.
+谢谢。

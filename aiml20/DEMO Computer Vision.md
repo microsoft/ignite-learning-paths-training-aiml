@@ -1,137 +1,107 @@
-# Using pre-built AI to understand images
+# <a name="using-pre-built-ai-to-understand-images"></a>使用预构建的 AI 来理解图像
 
-In this demonstration, we will use Azure Computer Vision to detect the type of
-object an image represents. 
+本演示将使用 Azure 计算机视觉来检测图像代表的对象类型。 
 
-First, we will use the Computer Vision online web-form to upload an image and
-observe the results.
+首先，我们将使用计算机视觉在线 Web 窗体上传图像并观察结果。
 
-Then, we will use the Computer Vision API to collect the same information
-programatically, using curl.
+然后，我们将使用计算机视觉 API 通过 curl 以编程方式收集相同的信息。
 
-## Defining the problem: Shop by Photo doesn't work right
+## <a name="defining-the-problem-shop-by-photo-doesnt-work-right"></a>定义问题：“按图购物”不正常工作
 
-The problem that motivates this talk is that the Shop by Photo tool in the
-Tailwind Traders website isn't correctly identifying products. It's useful to
-run this section in [ONNX Deployment](DEMO%20ONNX%20deployment.md#defining-the-problem-shop-by-photo-doesnt-work-right) at this point
-to set the scene.
+促成此次研讨的问题是 Tailwind Traders 网站上的“按图购物”工具无法正常识别产品。 此时，最好是在 [ONNX 部署](DEMO%20ONNX%20deployment.md#defining-the-problem-shop-by-photo-doesnt-work-right)中运行此环节，以设置场景。
 
-## Using Computer Vision via the Web interface
+## <a name="using-computer-vision-via-the-web-interface"></a>通过 Web 界面使用计算机视觉
 
-Let's try using computer vision on a picture of a hardware product. If we can
-identify a product that Tailwind Traders sells by name, we can search for that
-name in the catalog for the "Shop by Photo" app.
+让我们针对某张五金产品图片尝试使用计算机视觉。 如果可以按名称识别出 Tailwind Traders 销售的某个产品，则我们可以在“按图购物”应用的目录中搜索该名称。
 
-1. Visit the Computer Vision webpage at
-   [https://azure.microsoft.com/en-us/services/cognitive-services/computer-vision/](https://azure.microsoft.com/en-us/services/cognitive-services/computer-vision/?WT.mc_id=msignitethetour2019-github-aiml20)
+1. 访问计算机视觉网页 ([https://azure.microsoft.com/en-us/services/cognitive-services/computer-vision/](https://azure.microsoft.com/en-us/services/cognitive-services/computer-vision/?WT.mc_id=msignitethetour2019-github-aiml20))
 
-2. Scroll down to the "Analyze an Image" section. It looks like this:
+2. 向下滚动到“分析图像”部分。 如下所示：
 
-!["Computer Vision: Analyze an Image"](img/Computer%20Vision%20Analyze%20an%20Image.png)
+![“计算机视觉:分析图像”](img/Computer%20Vision%20Analyze%20an%20Image.png)
 
-3. Click the "Browse" button, and choose "man in hardhat.jpg" from the "test
-   images" folder in "CV Training Images".
+3. 单击“浏览”按钮，然后从“计算机视觉训练图像”中的“test images”文件夹内选择“man in hardhat.jpg”。
 
-4. After a moment, the analysis of your image will appear in the right pane. It
-   looks like this:
+4. 片刻之后，图像分析结果将显示在右窗格中。 如下所示：
 
 ```
-FEATURE NAME:	VALUE
+FEATURE NAME:   VALUE
 
-Objects	[ { "rectangle": { "x": 138, "y": 27, "w": 746, "h": 471 }, "object": "headwear", "confidence": 0.616 }, { "rectangle": { "x": 52, "y": 33, "w": 910, "h": 951 }, "object": "person", "confidence": 0.802 } ]
+Objects [ { "rectangle": { "x": 138, "y": 27, "w": 746, "h": 471 }, "object": "headwear", "confidence": 0.616 }, { "rectangle": { "x": 52, "y": 33, "w": 910, "h": 951 }, "object": "person", "confidence": 0.802 } ]
 
-Tags	[ { "name": "man", "confidence": 0.999212 }, { "name": "headdress", "confidence": 0.99731946 }, { "name": "person", "confidence": 0.995057464 }, { "name": "clothing", "confidence": 0.991814733 }, { "name": "wearing", "confidence": 0.9827137 }, { "name": "hat", "confidence": 0.9691986 }, { "name": "helmet", "confidence": 0.9227209 }, { "name": "headgear", "confidence": 0.840476155 }, { "name": "personal protective equipment", "confidence": 0.8358513 }, { "name": "looking", "confidence": 0.832229853 }, { "name": "hard hat", "confidence": 0.8004248 }, { "name": "human face", "confidence": 0.785058737 }, { "name": "green", "confidence": 0.774940848 }, { "name": "fashion accessory", "confidence": 0.706475437 } ]
+Tags    [ { "name": "man", "confidence": 0.999212 }, { "name": "headdress", "confidence": 0.99731946 }, { "name": "person", "confidence": 0.995057464 }, { "name": "clothing", "confidence": 0.991814733 }, { "name": "wearing", "confidence": 0.9827137 }, { "name": "hat", "confidence": 0.9691986 }, { "name": "helmet", "confidence": 0.9227209 }, { "name": "headgear", "confidence": 0.840476155 }, { "name": "personal protective equipment", "confidence": 0.8358513 }, { "name": "looking", "confidence": 0.832229853 }, { "name": "hard hat", "confidence": 0.8004248 }, { "name": "human face", "confidence": 0.785058737 }, { "name": "green", "confidence": 0.774940848 }, { "name": "fashion accessory", "confidence": 0.706475437 } ]
 
-Description	{ "tags": [ "man", "headdress", "person", "clothing", "wearing", "hat", "helmet", "looking", "green", "jacket", "shirt", "standing", "head", "suit", "glasses", "yellow", "white", "large", "phone", "holding" ], "captions": [ { "text": "a man wearing a helmet", "confidence": 0.8976638 } ] }
+Description { "tags": [ "man", "headdress", "person", "clothing", "wearing", "hat", "helmet", "looking", "green", "jacket", "shirt", "standing", "head", "suit", "glasses", "yellow", "white", "large", "phone", "holding" ], "captions": [ { "text": "a man wearing a helmet", "confidence": 0.8976638 } ] }
 
-Image format	"Jpeg"
+Image format    "Jpeg"
 
-Image dimensions	1000 x 1000
+Image dimensions    1000 x 1000
 
-Clip art type	0
+Clip art type   0
 
-Line drawing type	0
+Line drawing type   0
 
-Black and white	false
+Black and white false
 
-Adult content	false
+Adult content   false
 
-Adult score	0.0126242451
+Adult score 0.0126242451
 
-Racy	false
+Racy    false
 
-Racy score	0.0156497136
+Racy score  0.0156497136
 
-Categories	[ { "name": "people_", "score": 0.69140625 } ]
+Categories  [ { "name": "people_", "score": 0.69140625 } ]
 
-Faces	[ { "age": 37, "gender": "Male", "faceRectangle": { "top": 419, "left": 363, "width": 398, "height": 398 } } ]
+Faces   [ { "age": 37, "gender": "Male", "faceRectangle": { "top": 419, "left": 363, "width": 398, "height": 398 } } ]
 
-Dominant color background	"White"
+Dominant color background   "White"
 
-Dominant color foreground	"White"
+Dominant color foreground   "White"
 
-Accent Color	#90A526
+Accent Color    #90A526
 ```
 
-(Note, the above analysis may change in the future: the Computer Vision model is
-updated regularly.)
+（请注意，上述分析将来可能会发生变化：计算机视觉模型会定期更新。）
 
-Note that in the first "Objects" result, two objects "headwear" and "person" are
-detected, and their locations in the image is given. The object we want to
-detect is classified "headwear", but for our application we need a more specific
-classification: "hard hat". However "hard hat" is not one of the object types
-that Computer Vision currently detects. (We'll address this problem with Custom
-Vision, later.) Also note that a confidence score is given for each object
-classification.
+请注意，在第一个“对象”结果中，检测到了两个对象“头戴用具”和“人”，并指出了它们在图像中的位置。 我们要检测的对象分类为“头戴用具”，但我们的应用场景需要更具体的分类：“安全帽”。 不过，“安全帽”并非计算机视觉目前可以检测的对象类型之一。 （稍后我们将解决自定义视觉的这一问题。）另请注意，为每个对象分类提供了置信度评分。
 
-The second "Tags" result gives a list of labels associated with the entire
-image. The tag with the highest confidence (listed first) is "man", which
-doesn't help us much. The second tag, "headdress", is not exactly what we are
-looking for either.
+第二个“标记”结果提供与整个图像关联的标签列表。 置信度最高的标记（最先列出）是“男人”，这没有太大的作用。 第二个标记“头戴用具”也不完全是我们所需的标记。
 
-The other responses are also interesting, but we won't focus on them for our
-demo. But take a look at what's included:
+其他响应也很有趣，但本演示不会重点关注它们。 请看一下包含的内容：
 
-* A caption for the photo ("a man wearing a helmet") in the Description field.
+* “说明”字段中照片的标题（“戴头盔的男人”）。
 
-* Image features (is it black and white? a line drawing?)
+* 图像特征（是否为黑白色？是否为素描？）
 
-* Details of any faces detected in the image (identified as a 37-year-old male in this case)
+* 在图像中检测到的任何人脸的细节（在本例中识别为 37 岁的男性）
 
-* A score for the content of the image: is it "Adult" or "Racy"?
+* 图像内容评分：是否为“成人”或“猥亵”内容？
 
-* Color analysis for the image: the dominant foreground, accent, and background colors.
+* 图像的颜色分析：主导前景色、强调色和背景色。
 
-We're really only interested in the "Tags" field for our purposes, so we'll find
-out how to extract that programatically in the next section.
+对于本演示，我们实际上只关注“标记”字段，在下一部分我们将了解如何以编程方式提取该字段。
 
-## Using Computer Vision via the API
+## <a name="using-computer-vision-via-the-api"></a>通过 API 使用计算机视觉
 
-You can [control Computer Vision programatically using its REST
-API](https://docs.microsoft.com/en-us/azure/cognitive-services/computer-vision/vision-api-how-to-topics/howtocallvisionapi?WT.mc_id=msignitethetour2019-github-aiml20).
-You can do this from just about any language or application that has access to
-the Web, but we will use [curl](https://curl.haxx.se/), a common command-line
-application for interfacing with URLs and collecting their outputs. The curl
-application comes pre-installed on most Linux distributions and in recent
-versions of Windows 10 (1706 and later). 
+可以[使用计算机视觉的 REST API 以编程方式对其进行控制](https://docs.microsoft.com/en-us/azure/cognitive-services/computer-vision/vision-api-how-to-topics/howtocallvisionapi?WT.mc_id=msignitethetour2019-github-aiml20)。
+几乎可以在任何语言中或者在任何能够访问 Web 的应用程序中进行这种控制，但本演示使用的是 [curl](https://curl.haxx.se/)：一个常用的命令行应用程序，用来与 URL 交互并收集其输出。 大多数 Linux 分发版以及最新版本的 Windows 10（1706 和更高版本）已预装了 curl 应用程序。 
 
-Run the commands in the file [`vision_demo.sh`](vision_demo.sh). You can use a local Azure CLI or
-Azure Cloud Shell, but you must use bash as the shell.
+运行文件 [`vision_demo.sh`](vision_demo.sh) 中的命令。 可以使用本地 Azure CLI 或 Azure Cloud Shell，但必须将 bash 用作 shell。
 
-The commands in this script will:
+此脚本中的命令将会：
 
-1. Log into your Azure subscription (this step is unneccessary if using Cloud Shell)
-2. Create an Azure Resource Group
-3. Create a Cognitive Service key. (Note: this is an omnibus key that we will also use for Custom Vision, later.)
-4. Find the key
-5. Use CURL to analyze two images
+1. 登录到 Azure 订阅（如果使用 Cloud Shell，则不需要执行此步骤）
+2. 创建 Azure 资源组
+3. 创建认知服务密钥。 （注意：这相当于一个公交车钥匙，我们以后还会在自定义视觉中用到它。）
+4. 查找密钥
+5. 使用 CURL 分析两张图像
 
-## Manually generating Keys for use with Computer Vision
+## <a name="manually-generating-keys-for-use-with-computer-vision"></a>手动生成用于计算机视觉的密钥
 
-In the script [vision_demo.sh](vision_demo.sh), run the section "Create a Key" to programatically create a Cognitive Sevices key using the Azure Command Line Interface.
-(If you prefer, you can [create keys interactively with the Azure
-Portal](https://docs.microsoft.com/en-us/azure/cognitive-services/cognitive-services-apis-create-account?tabs=multiservice%2Clinux&WT.mc_id=msignitethetour2019-github-aiml20).)
+在脚本 [vision_demo.sh](vision_demo.sh) 中运行“Create a Key”节，使用 Azure 命令行接口以编程方式创建认知服务密钥。
+（如果需要，可以[使用 Azure 门户以交互方式创建密钥](https://docs.microsoft.com/en-us/azure/cognitive-services/cognitive-services-apis-create-account?tabs=multiservice%2Clinux&WT.mc_id=msignitethetour2019-github-aiml20)。）
 
-## Next Step
+## <a name="next-step"></a>后续步骤
 
-[Custom Vision](DEMO%20Custom%20Vision.md)
+[自定义视觉](DEMO%20Custom%20Vision.md)

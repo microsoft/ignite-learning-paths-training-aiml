@@ -1,24 +1,17 @@
-# Personalizer Demo
+# <a name="personalizer-demo"></a>个性化体验创建服务演示
 
-In this demo, observe how the layout of a website adapts to visitor actions using reinforcement learning and [Cognitive Services Personalizer](https://docs.microsoft.com/en-us/azure/cognitive-services/personalizer/?WT.mc_id=msignitethetour2019-github-aiml20).
+在此演示中，观察网站的布局如何通过强化学习和[认知服务个性化体验创建服务](https://docs.microsoft.com/en-us/azure/cognitive-services/personalizer/?WT.mc_id=msignitethetour2019-github-aiml20)来适应访问者的操作。
 
-Personalizer will dynamically reconfigure the interface to optimize the
-likelihood of an anonymous visitor clicking on the featured category in the
-Recommended section.
+个性化体验创建服务会以动态方式重新配置界面，尽量提高匿名访问者在“推荐”部分单击“特色”类别的可能性。
 
-1. Deploy the Tailwind Traders Website app (if you didn't already do so with `DEMO Setup.md`)
+1. 部署 Tailwind Traders 网站应用（如果尚未使用 `DEMO Setup.md` 这样做）
 
-2. Visit the Tailwind Traders homepage
+2. 访问 Tailwind Traders 主页
 
-3. Observe the "Recommended" section and the order of the featured categories
+3. 观察“推荐”部分以及特色类别的顺序
 
-4. Refresh the page (you may need to do this a couple of times). Observe that
-   the layout changes.
+4. 刷新页面（可能需要多次执行此操作）。 可以观察到布局进行了更改。
 
-The Personalizer service is tracking the anonymous visitors and recording the
-time of day, day of week, and browser OS used when clicking on categories. 
-The "reward" is whether or not the large, featured section was clicked. 
+个性化体验创建服务会跟踪匿名访问者并记录当天的时间、星期几以及单击类别时使用的浏览器 OS。 “奖励”取决于是否单击了大型特色部分。 
 
-Over time, Personalizer will determine the best category to feature based on
-time of day, day of week, and OS. It will also "explore" 20% of the time, to
-surface categories that would otherwise not be presented.
+随着时间的推移，个性化体验创建服务将根据当天的时间、星期几和 OS 来确定最佳特色类别。 它还将在 20% 的时间进行“浏览”，以显示其他本来不会显示的类别。

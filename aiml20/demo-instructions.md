@@ -1,66 +1,57 @@
-# Demo Instructions for Presenters
+# <a name="demo-instructions-for-presenters"></a>供演示者使用的演示说明
 
-Demo scripts are made available to everyone in this repo.
+此存储库中的演示脚本提供给所有人。
 
-You should follow the same scripts for the presentations, but with the additional
-notes given below.
+对于演示，你应该遵循相同的脚本，但可以参考下面提供的其他说明。
 
-Recordings of demos are also available as videos in the [PPT
-Slides](presentations.md) (and also some additional videos linked below). You
-can use the embedded videos instead of a live demo in the case of lack of
-internet or other technical issues. (In this case, we recommend muting the audio
-and speaking to the video yourself.) [Speaker notes](speaker-notes.md) are timed
-to the events in the embedded videos.
+另外，我们还在 [PPT 幻灯片](presentations.md)中以视频形式提供演示记录（下面还提供了一些其他视频的链接）。 如果没有 Internet 或出现其他技术问题，则可使用嵌入的视频而不使用实时演示。 （在这种情况下，建议将音频静音，自行对着视频讲述。）[发言人说明](speaker-notes.md)根据嵌入视频中的事件计时。
 
-## DEMO Setup
+## <a name="demo-setup"></a>演示设置
 
-Before your presentation, run all of the instructions in the script below.
+在演示之前，请浏览下面脚本中的所有说明。
 
-[Demo script](DEMO%20Setup.md)
+[演示脚本](DEMO%20Setup.md)
 
-## DEMO Computer Vision
+## <a name="demo-computer-vision"></a>演示计算机视觉
 
-[Demo script](DEMO%20Computer%20Vision.md)
+[演示脚本](DEMO%20Computer%20Vision.md)
 
-### SLIDE: DEMO / shop by photo
+### <a name="slide-demo--shop-by-photo"></a>幻灯片：演示/按图购买
 
-Note the actual instructions for this demo are [here](DEMO%20ONNX%20deployment.md#defining-the-problem-shop-by-photo-doesnt-work-right).
+注意，此演示的实际说明在[这里](DEMO%20ONNX%20deployment.md#defining-the-problem-shop-by-photo-doesnt-work-right)。
 
-Additional demo video: https://www.dropbox.com/s/ylxjuifg9x0h4n3/ITT-aiml20-demo1.mp4?dl=0 
+其他演示视频： https://www.dropbox.com/s/ylxjuifg9x0h4n3/ITT-aiml20-demo1.mp4?dl=0 
 
-### SLIDE: DEMO / cognitive services computer vision
+### <a name="slide-demo--cognitive-services-computer-vision"></a>幻灯片：演示/认知服务计算机视觉
 
-[Demo script](DEMO%20Computer%20Vision.md#using-computer-vision-via-the-web-interface)
+[演示脚本](DEMO%20Computer%20Vision.md#using-computer-vision-via-the-web-interface)
 
-## DEMO Custom Vision
+## <a name="demo-custom-vision"></a>演示自定义视觉
 
-[Demo script](DEMO%20Custom%20Vision.md)
+[演示脚本](DEMO%20Custom%20Vision.md)
 
-Do the first part of the demo ahead of time.
+提前完成演示的第一部分。
 
-### SLIDE: DEMO / Customized object recognition
+### <a name="slide-demo--customized-object-recognition"></a>幻灯片：演示/自定义的对象识别
 
-Start the live demo at "[Add images and train a model](DEMO%20Custom%20Vision.md#add-images-and-train-a-model)".
+在“[添加图像并训练模型](DEMO%20Custom%20Vision.md#add-images-and-train-a-model)”中启动实时演示。
 
-## DEMO ONNX Deployment
+## <a name="demo-onnx-deployment"></a>演示 ONNX 部署
 
-[Demo Script](DEMO%20ONNX%20deployment.md)
+[演示脚本](DEMO%20ONNX%20deployment.md)
 
-Run the section "[Load the simple ONNX model](DEMO%20ONNX%20deployment.md#load-the-simple-onnx-model)" ahead of time.
+提前运行“[加载简单的 ONNX 模型](DEMO%20ONNX%20deployment.md#load-the-simple-onnx-model)”部分。
 
-You did the section "[Defining the problem](DEMO%20ONNX%20deployment.md#defining-the-problem-shop-by-photo-doesnt-work-right)" at the beginning of the presentation, so skip that.
+你已在演示开头完成了“[定义问题](DEMO%20ONNX%20deployment.md#defining-the-problem-shop-by-photo-doesnt-work-right)”，因此请跳过它。
 
-### SLIDE: DEMO / ONNX
+### <a name="slide-demo--onnx"></a>幻灯片：演示/ONNX
 
-Start the live demo at "Update the ONNX model in the Tailwind Traders website".
+在“在 Tailwind Traders 网站中更新 ONNX 模型”部分启动实时演示。
 
-For viewing in Netron, you can view the file you exported from Custom Vision
-directly, or you can use the pre-prepared one from the repo at `ONNX/custom model/products.onnx`
+若要在 Netron 中查看，可以查看直接从“自定义视觉”中导出的文件，也可以使用在 `ONNX/custom model/products.onnx` 的存储库中预先准备的文件
 
-Note that when you deploy the file it **must** be called `products.onnx`, so
-it's easiest to take the pre-prepared file by that name from your desktop,
-rather than re-naming the exported file.
+请注意，部署文件时，其名称**必须**为 `products.onnx`，以便从桌面按该名称获取预先准备的文件，这是最轻松的，不必重命名导出的文件。
 
-### SLIDE: DEMO / Personalizer
+### <a name="slide-demo--personalizer"></a>幻灯片：演示/个性化体验创建服务
 
-[Demo script](DEMO%20Personalizer.md)
+[演示脚本](DEMO%20Personalizer.md)
