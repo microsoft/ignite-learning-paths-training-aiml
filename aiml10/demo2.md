@@ -7,7 +7,7 @@ In this exercise we learn how to use the Form Recognizer service. It is assumed 
 
 
 ## What you need
-- [Invoice Training Set](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/data/train.zip)
+- [Invoice Training Set](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/data/training.zip)
 
 - Access to the limited-access preview. To get access to the preview, fill out and submit the [Form Recognizer access request](https://aka.ms/FormRecognizerRequestAccess) form.
 
