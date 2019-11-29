@@ -9,7 +9,7 @@
 
 ## <a name="create-additional-resources-needed"></a>创建所需的其他资源
 
-* 选择“启动新的 Azure 机器学习工作室” 
+* 选择“启动新的 Azure 机器学习工作室” ****
 
 创建基础 Azure 机器学习服务后，需添加其他计算资源。
 ### <a name="create-compute-targets"></a>创建计算目标
@@ -53,22 +53,23 @@
 第一个演示是使用 VS Code 和 C# IgniteAimlDataApp。 这是为了演示如何进行数据处理，并突出显示它可以使用任何语言来完成。
 
 1. [在此处下载 VS Code](https://code.visualstudio.com/download)
-2. 使用以下命令克隆应用
+2. 确保在本地安装了 [.NET Core SDK 2.1.0](https://dotnet.microsoft.com/download/dotnet-core/2.1)
+3. 使用以下命令克隆应用
     * `git clone https://github.com/microsoft/ignite-learning-paths-training-aiml.git`
-3. 导航到项目路径
+4. 导航到项目路径
     * `cd ignite-learning-paths-training-aiml/aiml30/C#/IgniteAimlDataApp/IgniteAimlDataApp`
-4. 在 VS Code 中打开项目
+5. 在 VS Code 中打开项目
     * `code .`
-5. 在 `IgniteAimlDataApp/Datasets` 文件夹中将本地数据集替换为在上面的步骤中下载的数据集。
-6. 若要运行应用，请执行以下步骤
+6. 在 `IgniteAimlDataApp/Datasets` 文件夹中将本地数据集替换为在上面的步骤中下载的数据集。
+7. 若要运行应用，请执行以下步骤
     * 右键单击 `Program.cs`，选择`Open in Terminal`
-    * 运行 `dotnet run` 命令
+    * 运行命令 `dotnet run` Mac 用户请注意：如果收到错误，显示程序找不到你导入的文件，请更改 Program.cs 中第 14 行，使其包含正斜杠：`string sourceFile = $"{Environment.CurrentDirectory}//Datasets//{fileName}.csv";`
     * 它会提示你回答问题：`Would you like to run the default params`，请键入 `y`
     * 此操作会尝试命中 API，但会失败，因为该 API 尚未创建。
 
 ## <a name="run-through-the-live-demo"></a>执行实时演示
 请进行完整的实时演示，通过一个完成的备份模型打开并显示最终结果。
 
-#### <a name="there-will-not-be-enough-time-to-run-the-model-during-the-live-demo-make-sure-to-build-the-model-_without_-running-it-in-the-live-session-once-you-have-added-all-the-modules-to-the-experiment-workspace-then-navigate-to-the-model-you-created-and-trained-prior-to-the-session"></a>在实时演示期间，将没有足够的时间运行该模型。 确保生成该模型，但不在实时会话中运行它。  将所有模块添加到试验工作区以后，请在该会话之前导航到已创建并训练的模型。
+#### <a name="there-will-not-be-enough-time-to-run-the-model-during-the-live-demo-make-sure-to-build-the-model-_without_-running-it-in-the-live-session-once-you-have-added-all-the-modules-to-the-experiment-workspace-then-navigate-to-the-model-you-created-and-trained-prior-to-the-session"></a>在实时演示期间，将没有足够的时间运行该模型。 确保生成该模型，但不在实时会话中运行它。 __ 将所有模块添加到试验工作区以后，请在该会话之前导航到已创建并训练的模型。
 
 [下一步 - 实时演示步骤](demoguide.md)
