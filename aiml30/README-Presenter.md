@@ -23,7 +23,7 @@ code.
 ## Assets in Train-The-Trainer kit
 
 - This guide
-- PowerPoint presentation including notes for each slide [here](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml30/AIML30_How%20to%20Build%20Machine%20Learning%20Models.pptx)
+- PowerPoint presentation including notes for each slide [here](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml30/aiml30.pptx) or [presentations.md](https://github.com/microsoft/ignite-learning-paths-training-aiml/blob/master/aiml30/presentations.md)
 - Full-length recording of presentation [here](https://www.youtube.com/watch?v=u1ppYaZuNmo&amp=&feature=youtu.be)
 - Individual recording of stage-ready hands-on demo [here](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml30/FullIgniteModelBuildDemo.mp4). This is also included in a hidden slide in the slide deck.
 - Demo Resource Guides
