@@ -22,8 +22,7 @@ code.
 ## Assets in Train-The-Trainer kit
 
 - This guide
-- Public materials for AIML40 Session [here](http://github.com/microsoft/ignite-learning-paths/aiml/aiml40/) - this document contains a lot of relevant materials
-- PowerPoint presentation including notes for each slide [here](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml40/AIML40_Taking_Models_to_the_Next_Level_with_Azure_Machine_Learning_Best_Practices.pptx)
+- PowerPoint presentation including notes for each slide [here](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml40/aiml40.pptx) or [presentations.md](https://github.com/microsoft/ignite-learning-paths-training-aiml/blob/master/aiml40/presentations.md)
 - Full-length recording of presentation [here](https://youtu.be/If9IQm3gWVQ)
 - Individual recordings of stage-ready hands-on demos:
     * Demo 1 - [Cognitive Services Text Analytics](https://youtu.be/QJxjm5BirOA)
