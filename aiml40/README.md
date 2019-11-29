@@ -8,7 +8,7 @@ In this session, we will explore the complete path of integrating text analysis 
 
 ## Delivery Assets
 
-* [PowerPoint deck](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml40/AIML40_Taking_Models_to_the_Next_Level_with_Azure_Machine_Learning_Best_Practices.pptx)
+* [PowerPoint deck](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml40/aiml40.pptx) or [presentations.md](https://github.com/microsoft/ignite-learning-paths-training-aiml/blob/master/aiml40/presentations.md)
 * Demonstration videos:
     * Demo 1 - [Cognitive Services Text Analytics](https://youtu.be/QJxjm5BirOA)
     * Demo 2 - [Automated Machine Learning](https://youtu.be/qrstXN6TLZk)
@@ -40,7 +40,7 @@ Below we provide more detailed instructions for the demo so you can perform the 
 In order to perform steps 2 and 3 of the demo, we would need to:
 
 1. Create an Azure Machine Learning Workspace
-2. Upload the data used for AutoML training - [clothing_automl.xlsx](dataset\clothing_automl.xlsx)
+2. Upload the data used for AutoML training - [clothing_automl.xlsx](https://github.com/microsoft/ignite-learning-paths-training-aiml/blob/master/aiml40/dataset/clothing_automl.xlsx)
 
 
 #### Creating Azure Machine Learning Workspace
@@ -63,10 +63,10 @@ You would also need to know your subscription id, which can be obtained by runni
 #### Uploading data to the workspace
 
 In our demos, we use a few datasets:
-* A dataset for Automated ML demo - [clothing_automl.xlsx](dataset/clothing_automl.xlsx)
-* The large dataset [clothing_absa_train.csv](dataset/clothing_absa_train.csv) to train the full aspect based sentiment analysis model for demo 3
-* A smaller debugging dataset for aspect based sentiment analysis model [clothing_absa_train_small.csv](dataset/clothing_absa_train_small.csv)
-* A seperate validation set [clothing-absa-validation.json](dataset/clothing-absa-validation.json) to test the model
+* A dataset for Automated ML demo - [clothing_automl.xlsx](https://github.com/microsoft/ignite-learning-paths-training-aiml/blob/master/aiml40/dataset/clothing_automl.xlsx)
+* The large dataset [clothing_absa_train.csv](https://github.com/microsoft/ignite-learning-paths-training-aiml/blob/master/aiml40/dataset/clothing_absa_train.csv) to train the full aspect based sentiment analysis model for demo 3
+* A smaller debugging dataset for aspect based sentiment analysis model [clothing_absa_train_small.csv](https://github.com/microsoft/ignite-learning-paths-training-aiml/blob/master/aiml40/dataset/clothing_absa_train_small.csv)
+* A seperate validation set [clothing-absa-validation.json](https://github.com/microsoft/ignite-learning-paths-training-aiml/blob/master/aiml40/dataset/clothing-absa-validation.json) to test the model
 
 To follow the Automated ML Demo, please upload the dataset to your workspace. You can do it manually through [Azure ML Portal](http://ml.azure.com/?wt.mc_id=msignitethetour2019-github-aiml40), or use the provided file `upload_dataset.py` (csv/xlsx file should be in the current directory, and you should substitute `[subscription_id]` according to your subscription):
 
