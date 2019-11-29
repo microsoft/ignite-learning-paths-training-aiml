@@ -1,31 +1,21 @@
 
-# Contributing
+# <a name="contributing"></a>投稿
 
-This project welcomes contributions and suggestions.  Most contributions require you to agree to a
-Contributor License Agreement (CLA) declaring that you have the right to, and actually do, grant us
-the rights to use your contribution. For details, visit https://cla.opensource.microsoft.com.
+このプロジェクトでは、投稿と提案を歓迎しています。  ほとんどの投稿では、共同作成者使用許諾契約書 (CLA) に同意し、ご自分の投稿物を使用する権利を Microsoft に付与する権利をご自分がお持ちで、実際に付与することを、宣言する必要があります。 詳細については、 https://cla.opensource.microsoft.com を参照してください。
 
-When you submit a pull request, a CLA bot will automatically determine whether you need to provide
-a CLA and decorate the PR appropriately (e.g., status check, comment). Simply follow the instructions
-provided by the bot. You will only need to do this once across all repos using our CLA.
+プル要求を送信すると、CLA ボットによって、送信者が CLA を提供し、PR を適切に装飾する (状態チェック、コメントなど) 必要があるかどうかが、自動的に判断されます。 ボットによって提供される手順にそのまま従ってください。 この操作は、Microsoft の CLA を使用するすべてのリポジトリについて、1 回だけ行う必要があります。
 
-This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/).
-For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or
-contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
+このプロジェクトでは、[Microsoft オープン ソースの倫理規定](https://opensource.microsoft.com/codeofconduct/)を採用しています。
+詳細については、[倫理規定についてよくある質問](https://opensource.microsoft.com/codeofconduct/faq/)を参照するか、[opencode@microsoft.com](mailto:opencode@microsoft.com) 宛てに質問またはコメントをお送りください。
 
-# Legal Notices
+# <a name="legal-notices"></a>法的通知
 
-Microsoft and any contributors grant you a license to the Microsoft documentation and other content
-in this repository under the [Creative Commons Attribution 4.0 International Public License](https://creativecommons.org/licenses/by/4.0/legalcode),
-see the [LICENSE](LICENSE) file, and grant you a license to any code in the repository under the [MIT License](https://opensource.org/licenses/MIT), see the
-[LICENSE-CODE](LICENSE-CODE) file.
+Microsoft およびコントリビューターは、[クリエイティブ コモンズ表示 4.0 国際パブリック ライセンス](https://creativecommons.org/licenses/by/4.0/legalcode) ([ライセンス](LICENSE) ファイルを参照) のもとに Microsoft ドキュメントやこのリポジトリ内のその他のコンテンツへのライセンスを付与し、[MIT ライセンス](https://opensource.org/licenses/MIT) ([ライセンス コード](LICENSE-CODE) ファイルを参照) のもとにリポジトリ内のすべてのコードへのライセンスを付与します。
 
-Microsoft, Windows, Microsoft Azure and/or other Microsoft products and services referenced in the documentation
-may be either trademarks or registered trademarks of Microsoft in the United States and/or other countries.
-The licenses for this project do not grant you rights to use any Microsoft names, logos, or trademarks.
-Microsoft's general trademark guidelines can be found at http://go.microsoft.com/fwlink/?LinkID=254653.
+このドキュメントで参照されている、Microsoft、Windows、Microsoft Azure、その他のマイクロソフト製品およびサービスは、米国およびその他の国におけるマイクロソフトの商標または登録商標です。
+このプロジェクトに対するライセンスでは、Microsoft の名前、ロゴ、または商標を使用するための権利は付与されません。
+Microsoft の商標に関する一般的なガイドラインは、 http://go.microsoft.com/fwlink/?LinkID=254653 にあります。
 
-Privacy information can be found at https://privacy.microsoft.com/en-us/
+プライバシー情報は、 https://privacy.microsoft.com/en-us/ にあります
 
-Microsoft and any contributors reserve all other rights, whether under their respective copyrights, patents,
-or trademarks, whether by implication, estoppel or otherwise.
+マイクロソフトおよびコントリビューターは、著作権、特許、または商標のいずれかにかかわらず、また黙示、禁反言、その他の方法によるかを問わず、他のすべての権利を留保します。

@@ -1,46 +1,88 @@
-# Developers Guide to AI
+# <a name="ignite-learning-paths---developers-guide-to-ai"></a>Ignite ラーニング パス - AI 開発者ガイド
 
-**Welcome to the Train-the-Trainer content for the 'Developers Guide to AI' Learning Path**. 
+![ラーニング パス](https://img.shields.io/badge/Learning%20Path-AIML-fe5e00?logo=microsoft)  ![セッション](https://img.shields.io/badge/🗣️Sessions-6-31c754)
 
-We are looking forward to working with all speakers who will deliver the content built below - we welcome your feedback and help to keep the content up-to-date. 
+ようこそ!
 
-* There are **x5 45 minute sessions** ([AIML10](aiml10/README.md), [AIML20](aiml20/README.md), [AIML30](aiml30/README.md), [AIML40](aiml40/README.md) and [AIML50](aiml50/README.md))
-* And **x1 20 min theatre session** ([AIML21](aiml21/README.md))
+このリポジトリのコンテンツを利用できるので、デモを再現したり、[Migrosoft Ignite](https://www.microsoft.com/en-us/ignite) および [Microsoft Ignite The Tour](https://www.microsoft.com/en-ca/ignite-the-tour/) で提供されているラーニング パスの任意のセッションを提示する方法を、ローカル フィールド オフィスやコミュニティ ユーザー グループで、または会社でのランチミーティング イベントとして学ぶことができます。
 
-## Learning Path Description
+## <a name="do-the-demos"></a>デモを実行する
 
-Artificial Intelligence (AI) is driving innovative solutions across all industries but with machine learning (ML) applying a paradigm change to how we approach building products we are all exploring how to expand our skill-sets  
+自宅やオフィスにいながらデモを再現する場合は、「[セッション](#sessions)」セクションを参照してください。 各セッションでは、デプロイの手順を確認し、必要な環境を作成します。また、デモの手順を実行するチュートリアルも用意されています。
 
-Tailwind Traders is a retail company looking for support on how to benefit from applying AI across their business. In 'Developers Guide to AI’ we’ll show how Tailwind Traders has achieved this 
+## <a name="presenting-the-content"></a>コンテンツを表示する
 
-There is something for every stage of the AI learning curve; whether you want to consume ML technologies, increase technical knowledge of ML theory, or build your own custom ML models. The model is not the end of the data science story, we will conclude with applying DevOps practices to ML projects to build an end-to-end pipeline 
+こちらをご覧いただきありがとうございます。この素晴らしいコンテンツが発表されることを楽しみにしています。 経験豊富な発表者として、プレゼンテーションの方法はご存知であると考え、このガイドでは、何についてプレゼンテーションを行う必要があるかということに焦点を絞ります。 プレゼンテーション デザイン チームが作成したプレゼンテーションを、全体にわたってリハーサルします。
 
-## Session Descriptions
+プレゼンテーションのビデオに加えて、このリポジトリは、PowerPoint のスライドやデモの手順とコードなど、プレゼンテーションを成功させるために必要なすべての資産にリンクしています。
 
-### [AIML10: Making Sense of your Unstructured Data with AI](aiml10/README.md)
-#### Abstract:
-Tailwind Traders has a lot of legacy data that they’d like their developers to leverage in their apps – from various sources, both structured and unstructured, and including images, forms, pdf files, and several others. In this session, you'll learn how the team used Cognitive Search to make sense of this data in a short amount of time and with amazing success. We'll discuss tons of AI concepts, like the ingest-enrich-explore pattern, skillsets, cognitive skills, natural language processing, computer vision, and beyond.
+以下に示すコンテンツを発表してくださる、すべての話者の皆様との連携を楽しみにしています。コンテンツを最新の状態に保つために、皆さまからのフィードバックとサポートは大歓迎です。 
 
-### [AIML20: Using Pre-Built AI to Solve Business Challenges](aiml20/README.md)
-#### Abstract:
-As a data-driven company, Tailwind Traders understands the importance of using Artificial Intelligence to improve business processes and delight customers. Before investing in an AI team, their existing developers were able to demonstrate some quick wins using pre-built AI technologies. In this session, we will show how you can use Azure Cognitive Services to extract insights from retail data and go into the neural networks behind computer vision. You’ll learn how it works and how to augment the pre-built AI with your own images for custom image recognition applications.
+## <a name="learning-path-description"></a>ラーニング パスの説明
 
-### [AIML30: Start Building Machine Learning Models Faster than You Think](aiml30/README.md)
-#### Abstract:
-Tailwind Traders uses custom machine learning models to fix their inventory issues – without changing their Software Development Life Cycle! How? Azure Machine Learning Visual Interface. In this session, you’ll learn the data science process that Tailwind Traders’ uses and get an introduction to Azure Machine Learning Visual Interface. You’ll see how to find, import, and prepare data, select a machine learning algorithm, train and test the model, and deploy a complete model to an API. Get the tips, best practices, and resources you and your development team need to continue your machine learning journey, build your first model, and more.
+人工知能 (AI) は、あらゆる業界で革新的なソリューションを推し進めていますが、機械学習 (ML) を使用することにより、製品の構築方法のパラダイムが変化しています。そして、誰もがスキルセットの広げ方を模索しています  
 
-### [AIML40: Taking Models to the Next Level with Azure Machine Learning Best Practices](aiml40/README.md)
-#### Abstract:
-Tailwind Traders’ data science team uses natural language processing (NLP), and recently discovered how to fine-tune and build a baseline models with Automated ML. 
+小売会社である Tailwind Traders は自社のビジネス全体での AI の活用方法に関してサポートを求めています。 ’AI 開発者ガイド’ では、Tailwind Traders がこれをどのようにして成し遂げたかを説明します 
 
-In this session, you’ll learn what Automated ML is and why it’s so powerful, then dive into how to improve upon baseline models, using examples from the NLP best practices repository. We’ll highlight Azure Machine Learning key features and how you can apply them to your organization, including low priority compute instances, distributed training with auto scale, hyperparameter optimization, collaboration, logging, and deployment. 
+AI 学習曲線の各ステージでは、ML のテクノロジを使うべきか、ML の理論の技術的な知識を増やすべきか、独自のカスタム ML モデルを構築すべきかなどを考えます。 このモデルでデータ サイエンスのストーリーが終わるわけではありません。引き続き DevOps のプラクティスを ML プロジェクトに活用し、エンドツーエンドのパイプラインを構築していきます 
 
-### [AIML50: Machine Learning Operations – Applying DevOps to Data Science](aiml50/README.md) 
-#### Abstract:
-While many companies have adopted DevOps practices to improve their software delivery, these same techniques are rarely applied to machine learning projects. Collaboration between developers and data scientists can be limited and deploying models to production in a consistent and trustworthy way is often a pipedream. 
+## <a name="sessions"></a>セッション
 
-In this session, you’ll learn how to apply DevOps practices to your machine learning projects 	using Azure DevOps and Azure Machine Learning Service. We’ll set up automated training, scoring, and storage of versioned models and wrap the models in docker containers and deploy them to Azure Container Instances and Azure Kubernetes Service. We’ll even collect continuous feedback on model behavior so we know when to retrain. 
+* **45 分 のセッションが 5 回**あります ([AIML10](aiml10/README.md)、[AIML20](aiml20/README.md)、[AIML30](aiml30/README.md)、[AIML40](aiml40/README.md)、および [AIML50](aiml50/README.md))
+* また、**20 分のシアター セッションが 1 回**あります ([AIML21](aiml21/README.md))
 
-### [AIML21: Developers Guide to AI: A Data Story](aiml21/README.md)
-#### Abstract:
-In this theatre session we will show the data science process and how to apply it. From exploration of datasets to deployment of services - all applied to an interesting data story. This will also take you on a very brief tour of the Azure AI Platform.
+ここには、ラーニング パス「**開発者ガイドの AI**」で利用可能なすべてのセッションがあります (aka:**AIML**)
+
+### <a name="aiml10-making-sense-of-your-unstructured-data-with-aiaiml10readmemd"></a>[AIML10:AI を使用して非構造化データを理解する](aiml10/README.md)
+
+Tailwind Traders 社では、構造化と非構造化の両方からなるさまざまなソースに、画像、フォーム、PDF ファイル、その他の大量のレガシ データが存在しており、開発者にはそれらをアプリで利用することが求められています。 このセッションでは、チームが Cognitive Search を使用して短時間でこのデータを理解し、すばらしい成功を収めた方法について説明します。 ここでは、取り込み - 強化 - 探索パターン、スキルセット、コグニティブ スキル、自然言語処理、コンピューター ビジョンなど、多くの AI の概念について説明します。
+
+### <a name="aiml20-using-pre-built-ai-to-solve-business-challengesaiml20readmemd"></a>[AIML20:事前構築済み AI を使用してビジネスの課題を解決する](aiml20/README.md)
+
+データ主導型企業である Tailwind Traders 社は、人工知能を利用してビジネス プロセスを改善し、顧客を満足させることの重要性を理解しています。 AI チームに投資する前に、既存の開発者は、事前構築された AI テクノロジを使用していくつかの成果を簡単にデモンストレーションできました。 このセッションでは、Azure Cognitive Services を使用して、小売データから分析情報を抽出する方法を示し、コンピューター ビジョンの背後にあるニューラル ネットワークについて詳しく説明します。 それがどのように機能するか、また、独自の画像を使って事前構築された AI を拡張して、カスタム画像認識アプリケーションを作成する方法について説明します。
+
+### <a name="aiml30-start-building-machine-learning-models-faster-than-you-thinkaiml30readmemd"></a>[AIML30:予想よりも速く機械学習モデルの構築を開始する](aiml30/README.md)
+
+Tailwind Traders 社では、カスタムの機械学習モデルを使用することで、自社のソフトウェア開発のライフ サイクルを変えることなく、在庫問題を解決しています。 方法を知りたいですか。 Azure Machine Learning のビジュアル インターフェイスです。 このセッションでは、Tailwind Traders 社で使用されているデータ サイエンス プロセスについて学習し、Azure Machine Learning のビジュアル インターフェイスの概要を説明します。 データの検索、インポート、準備、機械学習アルゴリズムの選択、モデルのトレーニングとテスト、API への完全なモデルのデプロイを行う方法について説明します。 あなたやあなたが属する開発チームが機械学習の導入を続け、最初のモデルを構築したりするために必要なヒント、ベスト プラクティス、リソースを手に入れてください。
+
+### <a name="aiml40-taking-models-to-the-next-level-with-azure-machine-learning-best-practicesaiml40readmemd"></a>[AIML40:Azure Machine Learning のベスト プラクティスでモデルを次のレベルに進める](aiml40/README.md)
+
+Tailwind Traders 社のデータ サイエンス チームは、自然言語処理 (NLP) を使用しており、最近、自動 ML を使用してベースライン モデルを微調整および構築する方法を発見しました。 
+
+このセッションでは、自動 ML の概要と、それが強力である理由について説明した後、NLP のベスト プラクティス リポジトリの例を使用して、ベースライン モデルの改善方法について説明します。 ここでは、優先度の低いコンピューティング インスタンス、自動スケーリングによる分散トレーニング、ハイパーパラメーターの最適化、コラボレーション、ログ記録、デプロイなど、Azure Machine Learning の主要な機能と、それらを組織に適用する方法に注目します。 
+
+### <a name="aiml50-machine-learning-operations-applying-devops-to-data-scienceaiml50readmemd"></a>[AIML50:機械学習の操作 – データ サイエンスへの DevOps の適用](aiml50/README.md) 
+
+多くの企業では、ソフトウェアの配布を改善するために DevOps の方法が導入されていますが、これらの同じ手法が機械学習プロジェクトに適用されることはほとんどありません。 開発者とデータ サイエンティストの間のコラボレーションは限られており、一貫した信頼性の高い方法で運用環境にモデルをデプロイすることは、非現実的であることがほとんどです。 
+
+このセッションでは、Azure DevOps と Azure Machine Learning サービスを使用して機械学習プロジェクトに DevOps の手法を適用する方法について説明します。 ここでは、バージョン管理されたモデルの自動化されたトレーニング、スコアリング、ストレージを設定し、docker コンテナーにモデルをラップして、それを Azure Container Instances および Azure Kubernetes Service にデプロイします。 再トレーニングのタイミングを把握できるように、モデルの動作についての継続的なフィードバックの収集も行います。 
+
+### <a name="aiml21-developers-guide-to-ai-a-data-storyaiml21readmemd"></a>[AIML21:AI 開発者ガイド:データ ストーリー](aiml21/README.md)
+
+このシアター セッションでは、データ サイエンスのプロセスとその適用方法について説明します。 データ セットの探索からサービスのデプロイまで、すべてが興味深いデータ ストーリーに適用されます。 ここでは、Azure AI プラットフォームの概要についても簡単に説明します。
+
+## <a name="contributing"></a>投稿
+
+このプロジェクトに投稿する方法の詳細については、[倫理規定](CODE_OF_CONDUCT.md)と[投稿](CONTRIBUTING.md)に関するページを参照してください。
+
+
+## <a name="become-a-trained-presenter"></a>トレーニングを受けた発表者になる
+
+このコンテンツを表示するために何もする必要はありません。すべて使用できます。 ただし、*トレーニングを受けた発表者*になると、スケーラブルなコンテンツ チームにも認められるようになります。 *トレーニングを受けた発表者*については、各セッションの下部にある連絡先情報 (名前、画像、Web サイト) を参照してください。  
+ 
+*トレーニングを受けた発表者*になるには、[scalablecontent@microsoft.com](mailto:scalablecontent@microsoft.com) にお問い合わせください。 メールには、次を含めてください。
+
+- フル ネーム:
+- このプレゼンテーションのコード:\<セッション コード (例: APPS10)\>
+- この特定のセッションについては、約 10 分間のコンテンツを提供する、一覧にはない YouTube ビデオにリンクします。
+
+
+## <a name="legal-notices"></a>法的通知
+
+Microsoft およびコントリビューターは、[クリエイティブ コモンズ表示 4.0 国際パブリック ライセンス](https://creativecommons.org/licenses/by/4.0/legalcode) ([ライセンス](LICENSE) ファイルを参照) のもとに Microsoft ドキュメントやこのリポジトリ内のその他のコンテンツへのライセンスを付与し、[MIT ライセンス](https://opensource.org/licenses/MIT) ([ライセンス コード](LICENSE-CODE)を参照) のもとにリポジトリ内のすべてのコードへのライセンスを付与します
+
+このドキュメントで参照されている、Microsoft、Windows、Microsoft Azure、その他のマイクロソフト製品およびサービスは、北米およびその他の国におけるマイクロソフトの商標または登録商標です。 このプロジェクトに対するライセンスでは、Microsoft の名前、ロゴ、または商標を使用するための権利は付与されません。 Microsoft の商標に関する一般的なガイドラインは、 http://go.microsoft.com/fwlink/?LinkID=254653 にあります。
+
+プライバシー情報は、 https://privacy.microsoft.com/en-us/ にあります
+
+マイクロソフトおよびコントリビューターは、著作権、特許、または商標のいずれかにかかわらず、また黙示、禁反言、その他の方法によるかを問わず、他のすべての権利を留保します。
