@@ -60,7 +60,7 @@ Please download all the code and data files in this repository to get started. T
 
 # Delivery of Assets
 
-* [PowerPoint presentation](https://globaleventcdn.blob.core.windows.net/assets/aiml/AIML21_DevelopersGuidetoAI_ADataStory.pptx)
+* [PowerPoint presentation](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml21/aiml21.pptx) or go to [presentations.md](https://github.com/microsoft/ignite-learning-paths-training-aiml/blob/master/aiml21/presentations.md)
 * [Datasets used](aiml21/data)
 * [Code files to run](aiml21/code)
 * Separate Demo Videos: 
