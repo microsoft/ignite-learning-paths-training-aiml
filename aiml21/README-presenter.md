@@ -21,10 +21,10 @@ Along with the video of the presentation, this document will link to all the ass
 # Assets in Train-the-Trainer Kit
 
 * This guide
-* [PowerPoint presentation](https://globaleventcdn.blob.core.windows.net/assets/aiml/AIML21_DevelopersGuidetoAI_ADataStory.pptx)
+* [PowerPoint presentation](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml21/aiml21.pptx) or go to [presentations.md](https://github.com/microsoft/ignite-learning-paths-training-aiml/blob/master/aiml21/presentations.md)
 * [Full-length recording of presentation](https://youtu.be/K8upKkvtEI0)
-* [Datasets used](aiml21/data)
-* [Code files to run](aiml21/code)
+* [Datasets used](https://github.com/microsoft/ignite-learning-paths-training-aiml/tree/master/aiml21/data)
+* [Code files to run](https://github.com/microsoft/ignite-learning-paths-training-aiml/tree/master/aiml21/code)
 * Separate Demo Videos: 
     * Demo 1 - [Explore](https://youtu.be/1Xtmrsfkzfs)
     * Demo 2 - [Experiment](https://youtu.be/sUKuRBRvo7U)
