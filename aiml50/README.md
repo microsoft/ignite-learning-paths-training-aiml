@@ -21,7 +21,7 @@ Along with the video of the presentation, this document will link to all the ass
 ## Assets in Train-The-Trainer kit
 
 - This guide
-- PowerPoint presentation including notes for each slide [here](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml50/AIML50_MachineLearningOperations–ApplyingDevOpstoDataScience.pptx)
+- PowerPoint presentation including notes for each slide [here](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml50/aiml50.pptx) or [presentations.md](https://github.com/microsoft/ignite-learning-paths-training-aiml/blob/master/aiml50/presentations.md)
   - [Exported Speaker Notes](./SpeakerNotes.md)
 - Session at Microsoft Ignite 2019 Orlando [here](https://myignite.techcommunity.microsoft.com/sessions/83003)
 - Full-length recording of presentation [here](https://youtu.be/UgM8_4fAni8)
