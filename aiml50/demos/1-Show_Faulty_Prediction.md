@@ -1,22 +1,22 @@
-# Show Faulty Prediction and Make a Change
+# <a name="show-faulty-prediction-and-make-a-change"></a>Mostrar previsão com falha e fazer uma alteração
 
-## Show the Faulty Prediction
+## <a name="show-the-faulty-prediction"></a>Mostrar a previsão com falha
 
-* Navigate to the Tailwind Traders website
-    * https://aiml50{eventname}.azurewebsites.net (replace {eventname} with the event name parameter you used to create the demo environment)
+* Navegar até o site do Tailwind Traders
+    * https://aiml50{eventname}.azurewebsites.net (substitua {eventname} pelo parâmetro de nome do evento usado para criar o ambiente de demonstração)
 
-* Click on `start smart shopping by uploading a photo`
-* Upload an image from the [test images folder](../source/test-images)
-* The model provides an incorrect prediction.
+* Clique em `start smart shopping by uploading a photo`
+* Carregue uma imagem da [pasta de imagens de teste](../source/test-images)
+* O modelo fornece uma previsão incorreta.
 
-## Start the Change
+## <a name="start-the-change"></a>Iniciar a mudança
 
-* Adjust the model by changing `setup_pipeline.py`
-  * Lines 162 - Change `epochs` to 20
-  * Lines 163 - Change `batch` to 10
-* Commit the change and push to master.  This will trigger a build and deployment of the model.  This process will take about 25 or 30 minutes, which should finish up towards the end of the talk.
-* We'll come back and check the results of this towards the end of talk
+* Ajuste o modelo alterando `setup_pipeline.py`
+  * Linhas 162 – Alterar `epochs` para 20
+  * Linhas 163 – Alterar `batch` para 10
+* Confirme as alterações e envie por push para o mestre.  Isso dispara um build e a implantação do modelo.  Esse processo levará cerca de 25 ou 30 minutos e deverá ser concluído ao final da conversa.
+* Voltaremos para verificar os resultados ao final da conversa
 
-## Example Demo
+## <a name="example-demo"></a>Exemplo de demonstração
 
-* [Dry run starting at 2:36](https://youtu.be/UgM8_4fAni8?t=158)
+* [Simulação iniciando às 2:36](https://youtu.be/UgM8_4fAni8?t=158)

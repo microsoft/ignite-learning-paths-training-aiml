@@ -1,9 +1,9 @@
-# Developers Guide to AI: A Data Story
+# <a name="developers-guide-to-ai-a-data-story"></a>Guia de desenvolvedores para IA: Uma história sobre dados
 
-In this theatre session we will show the data science process and how to apply it. From exploration of datasets to deployment of services - all applied to an interesting data story. This will also take you on a very brief tour of the Azure AI Platform.
+Nesta sessão de teatro, mostraremos o processo de ciência de dados e como aplicá-lo. Desde a exploração de conjuntos de dados até a implantação de serviços, tudo aplicado a uma história de dados interessante. Isso também vai levá-lo a um tour muito breve pela Plataforma de IA do Azure.
 
-# I want to ...
+# <a name="i-want-to-"></a>Eu quero ...
 
-## [Learn to present this content](README-presenter.md)
+## <a name="learn-to-present-this-contentreadme-presentermd"></a>[Saber como apresentar este conteúdo](README-presenter.md)
 
-## [Continue learning after attending this session](README-attendee.md)
+## <a name="continue-learning-after-attending-this-sessionreadme-attendeemd"></a>[Continuar aprendendo após participar desta sessão](README-attendee.md)

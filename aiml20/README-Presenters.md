@@ -1,45 +1,39 @@
-# AIML20: Notes for Presenters
+# <a name="aiml20-notes-for-presenters"></a>AIML20: Notas para os apresentadores
 
-Welcome, Presenter! 
+Seja bem-vindo, apresentador! 
 
-We're glad you are here and look forward to your delivery of this amazing
-content. As an experienced presenter, we know you know HOW to present so this
-guide will focus on WHAT you need to present. It will provide you a full
-run-through of the presentation created by the presentation design team. 
+Estamos felizes por você estar aqui, animado para ver este conteúdo incrível. Como apresentador experiente, sabemos que você SABE fazer apresentações; assim, este guia se concentra NO QUE você precisa apresentar. Ele percorrerá toda a apresentação criada pela equipe de design de apresentação. 
 
-Along with the video of the presentation, this document will link to all the
-assets you need to successfully present including PowerPoint slides and demo
-instructions & code.
+Com o vídeo da apresentação, este documento será vinculado a todos os ativos de que você precisa para fazer uma apresentação de sucesso, incluindo slides do PowerPoint e códigos e instruções de demonstração.
 
-1.  Read document in its entirety.
-2.  Watch the video presentation
-3.  Ask questions of the Lead Presenter
+1.  Leia o documento por inteiro.
+2.  Assista à apresentação em vídeo
+3.  Faça perguntas ao apresentador principal
 
-## Assets in Train-The-Trainer kit
+## <a name="assets-in-train-the-trainer-kit"></a>Ativos no Kit Treinamento para Treinador
 
-- This guide
-- [PowerPoint presentation](presentations.md). Includes embedded demo videos and complete talk track in notes.
-- [Speaker script](speaker-notes.md) as a single file (also in PPT notes)
-- [Speaker bullet points](speaker-notes-bullets.md), for those that prefer to ad-lib to bullet points
-- [Demo Instructions](README.md#Demonstrations) and [Demo notes for presenters](demo-instructions.md)
-- [Recording of this presentation](https://myignite.techcommunity.microsoft.com/sessions/82987?source=sessions)
-from Microsoft Ignite Orlando, November 7 2019.
-- [Full-length rehearsal of presentation](https://youtu.be/jRO-5g-HYuU) 
+- Este guia
+- [Apresentação do PowerPoint](presentations.md). Inclui vídeos de demonstração incorporados e acompanhamento de fala completo nas notas.
+- [Script do palestrante](speaker-notes.md) como um único arquivo (também nas notas do PPT)
+- [Marcadores do orador](speaker-notes-bullets.md), para quem prefere improvisar de acordo com os marcadores
+- [Instruções de demonstração](README.md#Demonstrations) e [Notas de demonstração para apresentadores](demo-instructions.md)
+- [Gravação desta apresentação](https://myignite.techcommunity.microsoft.com/sessions/82987?source=sessions) no Microsoft Ignite Orlando, 7 de novembro de 2019.
+- [Teste completo da apresentação](https://youtu.be/jRO-5g-HYuU) 
 
-## Become a Trained Presenter
+## <a name="become-a-trained-presenter"></a>Torne-se um apresentador treinado
 
-To become a trained presenter, contact [scalablecontent@microsoft.com](mailto:scalablecontent@microsoft.com). In your email please include:
+Para se tornar um apresentador treinado, entre em contato com [scalablecontent@microsoft.com](mailto:scalablecontent@microsoft.com). Em seu email, inclua:
 
-- Complete name:
-- The code of this presentation: AIML20
-- Link (ex: unlisted YouTube video) to a video of you presenting (~10 minutes). 
-  > It doesn't need to be this content, the important is to show your presenter skills
+- Nome completo:
+- O código desta apresentação: AIML20
+- Link (por exemplo: vídeo do YouTube não listado) para um vídeo de sua apresentação (aproximadamente 10 minutos). 
+  > O conteúdo pode ser diferente deste, o importante é mostrar suas habilidades com o apresentador
 
-A mentor will get back to you with the information on the process.
+Um orientador entrará em contato com as informações sobre o processo.
 
-## Trained Presenters
+## <a name="trained-presenters"></a>Apresentadores treinados
 
-Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+Agradecemos a estas pessoas maravilhosas ([chave de emoji](https://allcontributors.org/docs/en/emoji-key)):
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore -->
@@ -49,19 +43,19 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="">
         <img src="https://avatars0.githubusercontent.com/u/152948?s=460&v=4" width="100px;" alt="David Smith"/><br />
         <sub><b>David Smith</b></sub></a><br />
-            <a href="https://github.com/microsoft/ignite-learning-paths/commits?author=revodavid" title="talk">📢</a>
-            <a href="https://github.com/microsoft/ignite-learning-paths-training-aiml/commits?author=revodavid" title="Documentation">📖</a> 
+            <a href="https://github.com/microsoft/ignite-learning-paths/commits?author=revodavid" title="Documentação da">📢</a>
+            <a href="https://github.com/microsoft/ignite-learning-paths-training-aiml/commits?author=revodavid" title="palestra">📖</a> 
     </td>
     <td align="center"><a href="">
         <img src="https://avatars2.githubusercontent.com/u/4598064?s=460&v=4" width="100px;" alt="Chris Noring"/><br />
         <sub><b>Chris Noring</b></sub></a><br />
-            <a href="https://github.com/neilpeterson/ignite-tour-fy20/commits?author=neilpeterson" title="talk">🎨</a>
+            <a href="https://github.com/neilpeterson/ignite-tour-fy20/commits?author=neilpeterson" title="palestra">🎨</a>
             <a href="https://github.com/neilpeterson/ignite-tour-fy20/commits?author=neilpeterson" title="design">📖</a> 
     </td>
 </tr></table>
 
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
-## Feedback Loop
+## <a name="feedback-loop"></a>Loop de comentários
 
-Do you have a comment, feedback, suggestion? The best feedback loop for content changes/suggestions/feedback is to create a new issue on this GitHub repository. To get all the details about how to create an issue please refer to the [Contributing docs](https://github.com/microsoft/ignite-learning-paths/blob/master/contributing.md)
+Você tem um comentário, feedback ou sugestão? O melhor loop de comentários para alterações/sugestões/feedback de conteúdo é criar um problema neste repositório GitHub. Para obter todos os detalhes sobre como criar um problema, consulte a [Documentação de contribuição](https://github.com/microsoft/ignite-learning-paths/blob/master/contributing.md)

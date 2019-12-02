@@ -1,80 +1,80 @@
-# AIML40 - Demo Instructions
+# <a name="aiml40---demo-instructions"></a>AIML40 — Instruções de demonstração
 
-Instructions for the demos in AIML40, including the preparation needed, is described in detail in [AIML40 Public Materials](http://github.com/microsoft/ignite-learning-paths/aiml/aiml40/). We will not duplicate the steps described there, but highlight some important tricks that make the demo better (and fit within 45 mins). Please read the public material first to familiarize yourself with the demo scenario.
+As instruções para as demonstrações do AIML40, incluindo a preparação necessária, são descritas em detalhes em [Materiais públicos do AIML40](http://github.com/microsoft/ignite-learning-paths/aiml/aiml40/). Não duplicaremos as etapas descritas aqui, mas destacaremos alguns truques importantes que melhoram a demonstração (e se encaixam em 45 minutos). Primeiro, leia o material público para se familiarizar com o cenário de demonstração.
 
-## Demo Preparation
+## <a name="demo-preparation"></a>Preparação da demonstração
 
-As described in [AIML40 Public Readme](http://github.com/microsoft/ignite-learning-paths/aiml/aiml40/README.md), there are the following preparation steps:
+Como descrito em [Leiame público do AIML40](http://github.com/microsoft/ignite-learning-paths/aiml/aiml40/README.md), estas são as etapas de preparação:
 
-1. Create Azure ML Workspace (using Azure Template or CLI Commands)
-2. Upload the dataset for the Automated ML demo to the workspace
-3. Create a compute cluster to speed up the demo
-4. Setup the Jupyter notebook environment and open `asba.ipynb` file in it, getting ready to execute.
+1. Crie o Workspace do Azure Machine Learning (usando os comandos de CLI ou o modelo do Azure)
+2. Carregue o conjunto de dados em uma demonstração do AML automatizado para o workspace
+3. Crie um cluster de cálculo para acelerar a demonstração
+4. Configure o ambiente do Jupyter Notebook e abra o arquivo `asba.ipynb` nele, preparando para execução.
 
-So, before the demo, you would have a browser with the following 3 pages open:
- - [Text Analytics Page](https://azure.microsoft.com/services/cognitive-services/text-analytics/?WT.mc_id=msignitethetour2019-github-aiml40)
- - [Azure ML Workspace](http://ml.azure.com)
- - Jupyter Notebook with `asba.ipynb`
+Portanto, antes da demonstração, você teria um navegador com as três páginas a seguir abertas:
+ - [Página de análise de texto](https://azure.microsoft.com/services/cognitive-services/text-analytics/?WT.mc_id=msignitethetour2019-github-aiml40)
+ - [Workspace do Azure Machine Learning](http://ml.azure.com)
+ - Jupyter Notebook com `asba.ipynb`
 
-In addition to those steps, to ensure speedy demo you need to do the following:
+Além dessas etapas, para garantir uma demonstração rápida, você precisa fazer o seguinte:
 
-1. **For Demo 1:** Open the browser to [Text Analytics Page](https://azure.microsoft.com/services/cognitive-services/text-analytics/?WT.mc_id=msignitethetour2019-github-aiml40) and in the text box below enter the following text and press **Analyze**: 
-> I loved the polka dot pants that I bought in the london store
+1. **Para a demonstração 1:** Abra o navegador na [Página de análise de texto](https://azure.microsoft.com/services/cognitive-services/text-analytics/?WT.mc_id=msignitethetour2019-github-aiml40), na caixa de texto abaixo, insira o texto a seguir e pressione **Analisar**: 
+> Adorei as calças de bolinhas que comprei na london store
 
-[Video Link to Demo 1: Cognitive Services Text Analytics](https://youtu.be/QJxjm5BirOA)
+[Link do vídeo da demonstração 1: análise de texto de serviços cognitivos](https://youtu.be/QJxjm5BirOA)
 
-2. **For Demo 2:**
-   - Open the page with your [Azure ML Workspace](http://ml.azure.com). If required -- select the correct workspace.
-   - Make sure the dataset is uploaded
-   - Go to **Automated ML** tab in Azure Machine Learning workspace and perform the Automated ML experiment as described in the [AIML40 Public Readme](http://github.com/microsoft/ignite-learning-paths/aiml/aiml40/README.md). It will take quite a lot of time to run, so do it in advance.
-   - Make sure that you refresh the page shortly before the presentation, so that you do not have to login again when doing the demo
+2. **Para a demonstração 2:**
+   - Abra a página do seu [Workspace do Azure Machine Learning](http://ml.azure.com). Se necessário, selecione o workspace correto.
+   - Garanta que o conjunto de dados esteja carregado
+   - Acesse a guia **ML automatizado** no workspace do Azure Machine Learning e execute o teste do ML automatizado, como descrito no [Leiame público do AIML40](http://github.com/microsoft/ignite-learning-paths/aiml/aiml40/README.md). A execução levará muito tempo, então faça isso com antecedência.
+   - Atualize a página pouco antes da apresentação, para que você não precise fazer logon novamente ao fazer a demonstração
 
-[Video Link to Demo 2: Automated Machine Learning](https://youtu.be/qrstXN6TLZk)
+[Link para o vídeo da demonstração 2: machine learning automatizado](https://youtu.be/qrstXN6TLZk)
 
-3. **For Demo 3:**
-   - Open `asba.ipynb` in the Jupyter Environment
-   - Make sure you have correct Subscription ID pasted in the code (and also Cluster name / Resource Group name, in case you have changed the defaults)
-   - Run all cells in the notebook making sure all steps run correctly. Some of the steps will take quite a lot of time to run, so prepare in advance. (the experiment takes ~3.5 hrs to run - this is why its important to have your compute cluster as low priority to save money)
-   - Make sure you finish working with the notebook just before the demo, so that you do not have to enter credentials again.
+3. **Para a demonstração 3:**
+   - Abrir `asba.ipynb` no Ambiente Jupyter
+   - Verifique se a ID de assinatura correta está colada no código (e também os nomes do cluster/grupo de recursos, caso você tenha alterado os padrões.
+   - Execute todas as células no notebook, verificando se todas as etapas foram executadas corretamente. A execução de algumas das etapas levará muito tempo, portanto, prepare-se com antecedência. O experimento leva cerca de 3,5 horas para ser executado, por isso é importante ter seu cluster de computação como baixa prioridade para economizar dinheiro.
+   - Conclua o trabalho com o bloco de anotações antes da demonstração, para que você não precise inserir as credenciais novamente.
 
-[Video Link to Demo 3: Azure Machine Learning SDK and Hyperdrive](https://youtu.be/sccNTPO3PwU)
+[Link do vídeo da demonstração 3: Hyperdrive e SDK do Azure Machine Learning](https://youtu.be/sccNTPO3PwU)
 
 
-## Demo Time!
+## <a name="demo-time"></a>Hora da demonstração!
 
-During the demo, we recommend to show the following:
+Durante a demonstração, recomendamos mostrar o seguinte:
 
-1. **Demo 1.1**: Just open the browser with [Text Analytics Page](https://azure.microsoft.com/services/cognitive-services/text-analytics/?WT.mc_id=msignitethetour2019-github-aiml40) and click **Analyze**. Page should be pre-loaded.
-2. **Demo 1.2**: 
-  - On the same page, click **Example-English-Positive** to switch to default phrase *I had a wonderful trip to Seattle last week and even visited the Space Needle two times*, and then click **Analyze**
-  - Observe good positive score
-  - Remove the word **wonderful**
-  - Click **Analyze** and observe the score drop significantly
-3. **Demo 2:** Azure ML Workspace and Automated ML
-  - Open the browser with [Azure ML Workspace](http://ml.azure.com) -- page should be pre-loaded
-  - Navigate to **Datasets**
-  - Open the dateset
-  - Expand **Sample Usage** on **Overview** tab to show the code
-  - Switch to **Explore** to show the data
-  - Switch to **Automated ML**
-  - Put in experiment name, select compute, select dataset (clothing_automl.xlsx)
-  - Choose **Classification** task and **Rating** as target column
-  - Expand **Advanced settings** and demonstrate available options, including the selection of algorithms
-  - Click *Start* (but make sure you have a previously run experiment ready), as it will take a lot of time!
-  - Click on the **Automated ML** tab again, and bring up the previous experiment you have performed before during preparation phase
-  - Explain the graph showing different model runs, and what the best run is
-  - Click on the best model to explore the **ROC**, **Precision-Recall** and other metrics graphs in more detail
-  - Demonstrate the **Deploy model** button to show how simple it is to deploy a model
-4. **Demo 3:** Using Azure ML Service with Python SDK
-  - During this demo, you should follow and explain the cells of `absa.ipynb` notebook
-  - To be completely on the safe side, you can just show the code without running it at all - this would be safe, but will not create an impression of code being executed in live demo mode
-  - To make more live demo, please refer to [absa-instuctions.ipynb](absa-instuctions.ipynb) notebook, which explains which cells should *not* be run during the demo, and which can be safely run
-  - In general, what we want to avoid is long-running tasks
+1. **Demonstração 1.1**: Basta abrir o navegador na [Página de análise de texto](https://azure.microsoft.com/services/cognitive-services/text-analytics/?WT.mc_id=msignitethetour2019-github-aiml40) e clicar em **Analisar**. A página deve ser pré-carregada.
+2. **Demonstração 1.2**: 
+  - Na mesma página, clique em **Exemplo-inglês-positivo** para alternar para a frase padrão *Fiz uma viagem maravilhosa a Seattle na semana passada e até visitei a Space Needle duas vezes* e, em seguida, clique em **Analisar**
+  - Observe uma boa pontuação positiva
+  - Remova a palavra **maravilhosa**
+  - Clique em **Analisar** e observe a queda significativa da pontuação
+3. **Demonstração 2:** Workspace do Azure Machine Learning e ML automatizado
+  - Abra o navegador com o [Workspace do ML do Azure](http://ml.azure.com); a página deve ser pré-carregada
+  - Navegue até **Conjuntos de dados**
+  - Abra o conjunto de dados
+  - Expanda **Exemplo de uso** na guia **Visão geral** para mostrar o código
+  - Alterne para **Explorar** a fim de mostrar os dados
+  - Alterne para **ML automatizado**
+  - Coloque o nome do experimento, selecione computar, selecione um conjunto de dados (clothing_automl.xlsx)
+  - Escolha a tarefa **Classificação** e a coluna de destino **Classificação**
+  - Expanda as **Configurações avançadas** e demonstre as opções disponíveis, incluindo a seleção de algoritmos
+  - Clique em *Iniciar*, mas tenha um experimento pronto para execução porque levará muito tempo!
+  - Clique novamente na guia **ML automatizado** e ative o experimento anterior executado durante a fase de preparação
+  - Explique o gráfico que mostra diferentes execuções de modelos e qual é a melhor execução
+  - Clique no melhor modelo para explorar mais detalhadamente o **ROC**, o **Recall de precisão** e outros gráficos de métricas
+  - Demonstre o botão **Implantar modelo** para mostrar como é simples implantar um modelo
+4. **Demonstração 3:** Usar o serviço do Azure ML com o SDK do Python
+  - Durante esta demonstração, você deve seguir e explicar as células do Notebook `absa.ipynb`
+  - Para garantir totalmente a segurança, você pode  mostrar o código sem executá-lo, o que seria seguro, mas não criaria a impressão do código em execução no modo de demonstração ao vivo
+  - Para fazer mais uma demonstração ao vivo, confira o notebook [absa-instuctions.ipynb](absa-instuctions.ipynb), que explica quais células *não* devem ser executadas durante a demonstração e quais podem ser executadas com segurança
+  - Em geral, o que queremos evitar é tarefas de execução longa
 
-## Tear Down
+## <a name="tear-down"></a>Desfazer
 
-Because the demo is resource-intensive, please do not forget to:
-* Delete the compute cluster (especially because auto-scale is turned off in our demo to save on cluster preparation time)
-* If you are running with Azure Machine Learning compute - make sure the minimum nodes are edited to 0 during down time and 1 during demo time - this will save cost
-* You may also delete the Azure ML Workspace and Resource group -- instructions are provided in the [Public Readme](http://github.com/microsoft/ignite-learning-paths/aiml/aiml40/README.md)
+Como a demonstração tem um uso intensivo de recursos, lembre-se de:
+* Excluir o cluster de computação (especialmente porque o dimensionamento automático está desativado em nossa demonstração para economizar no tempo de preparação do cluster)
+* Se você estiver executando a computação do Azure Machine Learning, verifique se os nós mínimos estão editados como 0 durante o tempo de inatividade e como 1 durante o tempo de demonstração, o que economizará custos
+* Também é possível excluir o Workspace do Azure Machine Learning e o grupo de Recursos; as instruções são fornecidas no [Leiame público](http://github.com/microsoft/ignite-learning-paths/aiml/aiml40/README.md)
 

@@ -1,31 +1,31 @@
-# AIML40 - Taking Models to the Next Level with Azure Machine Learning Best Practices
+# <a name="aiml40---taking-models-to-the-next-level-with-azure-machine-learning-best-practices"></a>AIML40 – Condução dos modelos para o próximo nível com as práticas recomendadas do Azure Machine Learning
 
-## Session information
+## <a name="session-information"></a>Informações da sessão
 
-Artificial Intelligence and Machine Learning can be used in many ways to increase productivity of business processes and gather meaningful insights, by analyzing images, texts and trends within unstructured flows of data. While many tasks can be solved using existing models, in some cases it is also required to train your own model for more specific tasks, or for increased accuracy. 
+A Inteligência Artificial e o Machine Learning podem ser usados de várias maneiras para aumentar a produtividade dos processos de negócios e reunir informações significativas, analisando imagens, textos e tendências em fluxos de dados não estruturados. Embora muitas tarefas possam ser resolvidas usando modelos existentes, em alguns casos também é necessário treinar seu próprio modelo para tarefas mais específicas ou para aumentar a precisão. 
 
-In this session, we will explore the complete path of integrating text analysis intelligent services into the business processes of [Tailwind Traders](http://tailwindtraders.com), starting from pre-build models available as [cognitive services](https://azure.microsoft.com/services/cognitive-services/?WT.mc_id=msignitethetour2019-github-aiml40), up to training a third-party neural custom model for [Aspect-Based Sentiment Analysis](https://www.intel.ai/introducing-aspect-based-sentiment-analysis-in-nlp-architect/) availabe as part of [Intel NLP Architect](http://nlp_architect.nervanasys.com/) using [Azure Machine Learning Service](https://azure.microsoft.com/services/machine-learning-service/?wt.mc_id=msignitethetour2019-github-aiml40). We will talk about cases when one needs a custom model, and demonstrate quick ways to create such a model from scratch using [AutoML](https://docs.microsoft.com/azure/machine-learning/service/concept-automated-ml/?wt.mc_id=msignitethetour2019-github-aiml40), and show how to fine-tune model hyperparameters using [HyperDrive](https://docs.microsoft.com/azure/machine-learning/service/how-to-tune-hyperparameters/?wt.mc_id=msignitethetour2019-github-aiml40)
+Nesta sessão, vamos explorar o caminho completo da integração dos serviços inteligentes de análise de texto aos processos de negócios da [Tailwind Traders](http://tailwindtraders.com), começando pelos modelos pré-compilados disponíveis como [serviços cognitivos](https://azure.microsoft.com/services/cognitive-services/?WT.mc_id=msignitethetour2019-github-aiml40), até o treinamento de um modelo neural personalizado de terceiros para a [Análise de Sentimento com base em aspecto](https://www.intel.ai/introducing-aspect-based-sentiment-analysis-in-nlp-architect/) disponível como parte da [Intel NLP Architect](http://nlp_architect.nervanasys.com/) usando o [Serviço do Azure Machine Learning](https://azure.microsoft.com/services/machine-learning-service/?wt.mc_id=msignitethetour2019-github-aiml40). Falaremos sobre os casos em que um modelo personalizado é necessário e demonstraremos maneiras rápidas de criar um modelo desse tipo do zero, usando o [AutoML](https://docs.microsoft.com/azure/machine-learning/service/concept-automated-ml/?wt.mc_id=msignitethetour2019-github-aiml40), além disso mostraremos como ajustar hiperparâmetros de modelo usando o [HyperDrive](https://docs.microsoft.com/azure/machine-learning/service/how-to-tune-hyperparameters/?wt.mc_id=msignitethetour2019-github-aiml40)
 
-## Delivery Assets
+## <a name="delivery-assets"></a>Ativos de entrega
 
-* [PowerPoint deck](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml40/AIML40_Taking_Models_to_the_Next_Level_with_Azure_Machine_Learning_Best_Practices.pptx)
-* Demonstration videos:
-    * Demo 1 - [Cognitive Services Text Analytics](https://youtu.be/QJxjm5BirOA)
-    * Demo 2 - [Automated Machine Learning](https://youtu.be/qrstXN6TLZk)
-    * Demo 3 - [Azure Machine Learning SDK and Hyperdrive](https://youtu.be/sccNTPO3PwU)
-* [Additional Presenter Resources](README-Instructor.md)
+* [Baralho do PowerPoint](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml40/AIML40_Taking_Models_to_the_Next_Level_with_Azure_Machine_Learning_Best_Practices.pptx)
+* Vídeos de demonstração:
+    * Demonstração 1 – [Análise de Texto de Serviços Cognitivos](https://youtu.be/QJxjm5BirOA)
+    * Demonstração 2 – [Aprendizado de máquina automatizado](https://youtu.be/qrstXN6TLZk)
+    * Demonstração 3 – [SDK e Hyperdrive do Azure Machine Learning](https://youtu.be/sccNTPO3PwU)
+* [Recursos adicionais do apresentador](README-Instructor.md)
 
-## Overview of Demonstrations
+## <a name="overview-of-demonstrations"></a>Visão geral das demonstrações
 
-In this presentation, the following demonstrations are made:
+Nesta apresentação, as seguintes demonstrações serão feitas:
 
-1. Using [Cognitive Services Text Analytics](https://azure.microsoft.com/services/cognitive-services/text-analytics/?wt.mc_id=msignitethetour2019-github-aiml40) to find out the sentiment of a clothing review
-2. Using [Azure Automated ML](https://docs.microsoft.com/azure/machine-learning/service/concept-automated-ml/?wt.mc_id=msignitethetour2019-github-aiml40) to build a text classifier almost with no code
-3. Using [Azure Machine Learning Service](https://azure.microsoft.com/services/machine-learning-service/?wt.mc_id=msignitethetour2019-github-aiml40) to train an Aspect-Based Sentiment Analysis model.
+1. Como usar a [Análise de Texto dos Serviços Cognitivos](https://azure.microsoft.com/services/cognitive-services/text-analytics/?wt.mc_id=msignitethetour2019-github-aiml40) para descobrir o sentimento de uma avaliação de roupas
+2. Como usar o [Azure ML Automatizado](https://docs.microsoft.com/azure/machine-learning/service/concept-automated-ml/?wt.mc_id=msignitethetour2019-github-aiml40) para criar um classificador de texto quase sem código
+3. Como usar o [Serviço do Azure Machine Learning](https://azure.microsoft.com/services/machine-learning-service/?wt.mc_id=msignitethetour2019-github-aiml40) para treinar um modelo de Análise de Sentimento Baseado em Aspecto.
 
-## Starting Fast
+## <a name="starting-fast"></a>Iniciar rapidamente
 
-If you want to start right away, you can deploy all required resources via Azure Template, and open the code in Azure Notebooks. 
+Caso queira começar imediatamente, será possível implantar todos os recursos necessários por meio do Modelo do Azure e abrir o código no Azure Notebooks. 
 
 <a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fmicrosoft%2Fignite-learning-paths-training-aiml%2Fmaster%2Faiml40%2Ftemplate%2Fazuredeploy.json" target="_blank">
  <img src="http://azuredeploy.net/deploybutton.png"/>
@@ -33,24 +33,24 @@ If you want to start right away, you can deploy all required resources via Azure
 <!-- TODO: provide correct Azure Notebook path -->
 <a href="https://notebooks.azure.com/sosh/projects/ignite-absa"><img src="https://notebooks.azure.com/launch.png" /></a>
 
-Below we provide more detailed instructions for the demo so you can perform the steps manually to fully understand the concepts being shown.
+Fornecemos abaixo instruções mais detalhadas para a demonstração, com o objetivo de possibilitar a execução das etapas manualmente para você entender totalmente os conceitos mostrados.
 
-## Initial Environment Setup
+## <a name="initial-environment-setup"></a>Configuração inicial do ambiente
 
-In order to perform steps 2 and 3 of the demo, we would need to:
+Para executar as etapas 2 e 3 da demonstração, precisaremos:
 
-1. Create an Azure Machine Learning Workspace
-2. Upload the data used for AutoML training - [clothing_automl.xlsx](dataset\clothing_automl.xlsx)
+1. Criar um Workspace do Azure Machine Learning
+2. Carregar os dados usados para treinamento de AutoML – [clothing_automl.xlsx](dataset\clothing_automl.xlsx)
 
 
-#### Creating Azure Machine Learning Workspace
+#### <a name="creating-azure-machine-learning-workspace"></a>Como criar um Workspace do Azure Machine Learning
 
-The Azure ML Workspace can either be created:
-* Manually from [Azure Portal](http://portal.azure.com/?wt.mc_id=msignitethetour2019-github-aiml40) ([here is the complete walk-through](https://docs.microsoft.com/azure/machine-learning/service/how-to-manage-workspace/?wt.mc_id=msignitethetour2019-github-aiml40))
-* Deployed from the Azure Template provided
-* Created through [Azure CLI](https://docs.microsoft.com/ru-ru/cli/azure/?view=azure-cli-latest&wt.mc_id=msignitethetour2019-github-aiml40)
+O Workspace do Azure ML pode ser criado:
+* De forma manual com base no [portal do Azure](http://portal.azure.com/?wt.mc_id=msignitethetour2019-github-aiml40) ([aqui está o passo a passo completo](https://docs.microsoft.com/azure/machine-learning/service/how-to-manage-workspace/?wt.mc_id=msignitethetour2019-github-aiml40))
+* Implantado com base no Modelo do Azure fornecido
+* Criado por meio da [CLI do Azure](https://docs.microsoft.com/ru-ru/cli/azure/?view=azure-cli-latest&wt.mc_id=msignitethetour2019-github-aiml40)
 
-> *NOTE: (we are using `absa` as a name, and *West US 2* datacenter in this example, but feel free to change that)*
+> *OBSERVAÇÃO: estamos usando `absa` como um nome e o datacenter do *Oeste dos EUA 2* neste exemplo, mas fique à vontade para fazer alterações*
 
 ```shell
 az extension add -n azure-cli-ml
@@ -58,34 +58,34 @@ az group create -n absa -l westus2
 az ml workspace create -w absa_space -g absa
 ```
 
-You would also need to know your subscription id, which can be obtained by running `az account list`.
+Também convém saber a ID de sua assinatura que pode ser obtida ao executar `az account list`.
 
-#### Uploading data to the workspace
+#### <a name="uploading-data-to-the-workspace"></a>Como carregar dados para o workspace
 
-In our demos, we use a few datasets:
-* A dataset for Automated ML demo - [clothing_automl.xlsx](dataset/clothing_automl.xlsx)
-* The large dataset [clothing_absa_train.csv](dataset/clothing_absa_train.csv) to train the full aspect based sentiment analysis model for demo 3
-* A smaller debugging dataset for aspect based sentiment analysis model [clothing_absa_train_small.csv](dataset/clothing_absa_train_small.csv)
-* A seperate validation set [clothing-absa-validation.json](dataset/clothing-absa-validation.json) to test the model
+Em nossas demonstrações, usaremos alguns conjuntos de dados:
+* Um conjunto de dados para a demonstração de um ML Automatizado – [clothing_automl.xlsx](dataset/clothing_automl.xlsx)
+* O grande conjunto de dados [clothing_absa_train.csv](dataset/clothing_absa_train.csv) para treinar o modelo completo de análise de sentimento baseado em aspecto para a demonstração 3
+* Um conjunto de dados de depuração menor para o modelo de análise de sentimento baseado em aspecto [clothing_absa_train_small.csv](dataset/clothing_absa_train_small.csv)
+* Um conjunto separado de validação [clothing-absa-validation.json](dataset/clothing-absa-validation.json) para testar o modelo
 
-To follow the Automated ML Demo, please upload the dataset to your workspace. You can do it manually through [Azure ML Portal](http://ml.azure.com/?wt.mc_id=msignitethetour2019-github-aiml40), or use the provided file `upload_dataset.py` (csv/xlsx file should be in the current directory, and you should substitute `[subscription_id]` according to your subscription):
+Para seguir a demonstração de ML Automatizado, carregue o conjunto de dados em seu workspace. É possível fazer isso manualmente por meio do [portal do Azure ML](http://ml.azure.com/?wt.mc_id=msignitethetour2019-github-aiml40) ou usar o arquivo fornecido `upload_dataset.py` (o arquivo csv/xlsx deve estar no diretório atual e você deve substituir `[subscription_id]` de acordo com a sua assinatura):
 
 ```shell
 python upload_dataset.py -s [subscription_id] -w absa_space -g absa -f clothing_automl.xlsx
 ```
 
-The Automated ML clothing dataset would be uploaded to the AML service datastore by the demo code.
+O conjunto de dados de vestuário do ML Automatizado deve ser carregado no armazenamento de dados de serviço do AML pelo código de demonstração.
 
-#### Using the Azure ML Demo Code
+#### <a name="using-the-azure-ml-demo-code"></a>Como usar o Código de Demonstração do Azure ML
 
-You can execute demo code from any Jupyter Notebook Environment. You can:
- - Install Python environment locally, as described below in **Python Environment Installation**
- - Use [Azure Notebooks](https://docs.microsoft.com/azure/notebooks/azure-notebooks-overview/?wt.mc_id=absa-notebook-abornst). In this case you should upload the `absa.ipynb` file to a new Azure Notebooks project, or just clone the [notebook library](https://notebooks.azure.com/sosh/projects/ignite-absa).
+É possível executar o código de demonstração de qualquer ambiente do Jupyter Notebook. Você poderá:
+ - Instalar o ambiente do Python localmente, conforme descrito abaixo na **Instalação de Ambiente do Python**
+ - Usar o [Azure Notebooks](https://docs.microsoft.com/azure/notebooks/azure-notebooks-overview/?wt.mc_id=absa-notebook-abornst). Nesse caso, será necessário carregar o arquivo `absa.ipynb` em um novo projeto do Azure Notebooks ou simplesmente clonar a [biblioteca de notebooks](https://notebooks.azure.com/sosh/projects/ignite-absa).
  <!-- TODO: provide final path to notebook library -->
 
-#### Python Environment Installation
+#### <a name="python-environment-installation"></a>Instalação de ambiente do Python
 
-If you decide not to use Azure Notebooks, and prefer to use your local Python environment, you need to install the Python Azure ML SDK, and make sure to install notebook and contrib:
+Caso não queira usar o Azure Notebooks e prefira usar seu ambiente do Python local, será necessário instalar o SDK do Azure ML do Python, além de garantir a instalação do notebook e do contrib:
 
 ```shell
 conda create -n azureml -y Python=3.6
@@ -96,91 +96,91 @@ jupyter nbextension install --py --user azureml.widgets
 jupyter nbextension enable azureml.widgets --user --py
 ```
 
-You will need to restart Jupyter after this. Detailed instructions are [here](https://docs.microsoft.com/azure/machine-learning/service/quickstart-create-workspace-with-python/?WT.mc_id=msignitethetour2019-github-aiml40)
+Será necessário reiniciar o Jupyter depois disso. As instruções detalhadas estão [aqui](https://docs.microsoft.com/azure/machine-learning/service/quickstart-create-workspace-with-python/?WT.mc_id=msignitethetour2019-github-aiml40)
 
-If you need a free trial account to get started you can get one [here](https://azure.microsoft.com/offers/ms-azr-0044p/?WT.mc_id=msignitethetour2019-github-aiml40)
+Caso precise de uma conta de avaliação gratuita para começar, poderá obter uma [aqui](https://azure.microsoft.com/offers/ms-azr-0044p/?WT.mc_id=msignitethetour2019-github-aiml40)
 
-#### Pre-creating Compute Cluster
+#### <a name="pre-creating-compute-cluster"></a>Como pré-criar um Cluster de Cálculo
 
-For the last two demos, you need a compute cluster. For demo purposes, we will create a cluster that consists of one node only. This can be done in one of three ways:
+Para as duas últimas demonstrações, será necessário obter um cluster de cálculo. Para fins de demonstração, criaremos um cluster que consiste em somente um nó. Isso pode ser feito de três maneiras:
 
-1. Through [Azure ML Portal](http://ml.azure.com/?wt.mc_id=msignitethetour2019-github-aiml40) go to **Compute** section and manually create Azure ML Compute cluster with *Standard_DS3_v2* VMs, specifying number of nodes = 1. Name the cluster `absa-cluster`.
-2. Run the provided `create_cluster.py` script, providing parameters as above:
+1. Por meio do [portal do Azure ML](http://ml.azure.com/?wt.mc_id=msignitethetour2019-github-aiml40) vá para a seção **Computação** e crie um cluster de Computação do Azure ML com VMs *Standard_DS3_v2*, especificando o número de nós = 1. Nomeie o cluster `absa-cluster`.
+2. Execute o script de `create_cluster.py` fornecido, informando os parâmetros conforme acima:
 ```shell
 python create_cluster.py -s [subscription_id] -w absa_space -g absa
 ```
-3. Run first few cells from `absa.ipynb` notebook which will create the cluster for you.
+3. Execute as primeiras células do notebook `absa.ipynb` que criará o cluster para você.
 
-## Demos
+## <a name="demos"></a>Demonstrações
 
-### Demo 1: Text Analytics Cognitive Service
+### <a name="demo-1-text-analytics-cognitive-service"></a>Demonstração 1: Serviço Cognitivo de Análise de Texto
 
-In this demo, we show how Text Analytics can do sentiment analysis of a phrase in a web interface.
+Nesta demonstração, mostraremos como a Análise de Texto pode fazer a análise do sentimento de uma frase em uma interface da Web.
 
-1. Open [Text Analytics Page](https://azure.microsoft.com/services/cognitive-services/text-analytics/?WT.mc_id=msignitethetour2019-github-aiml40)
-2. Scroll down to **see it in action** section and enter the phrase *I loved the polka dot pants that I bought in the london store* (You can also leave the default phrase to demonstrate the point).
-3. Press **Analyze** to get the following result:
+1. Abrir [Página de Análise de Texto](https://azure.microsoft.com/services/cognitive-services/text-analytics/?WT.mc_id=msignitethetour2019-github-aiml40)
+2. Role para baixo até a seção **ver em ação** e insira a frase *Adorei a calça de bolinhas que comprei na loja de Londres* (Também é possível manter a frase padrão para demonstrar o argumento).
+3. Pressione **Analisar** para obter o seguinte resultado:
 
-![Screenshot of Azure Text Analytics](images/analytics.png)
+![Captura de tela da Análise de Texto do Azure](images/analytics.png)
 
-Note that Text Analytics does not only provide sentiment, but also extracts location and key words from text.
+Observe que Análise de Texto não fornece somente o sentimento, mas também extrai o local e palavras-chave do texto.
 
-### Demo 2: Azure AutoML
+### <a name="demo-2-azure-automl"></a>Demonstração 2: Azure AutoML
 
-In this demo, we demonstrate how Automated ML can be used to build an ML model without coding.
+Nesta demonstração, mostraremos como o ML Automatizado pode ser usado para criar um modelo de ML sem codificação.
 
-1. Navigate to your Azure ML Workspace (created above) in the [http://ml.azure.com](http://ml.azure.com/?WT.mc_id=msignitethetour2019-github-aiml40)
-2. Go to **Datasets** - you should see the previously uploaded dataset there (clothing_automl.xlsx). Note that you can also upload it here through the portal.
-3. Select the dataset.
-4. From the **Overview** tab, expand **Sample usage** and show the code that can be used to access the data programmatically, if needed.
-5. From the **Explore** tab, have a look at the data.
-6. Go to **Automated ML** tab and click **New Experiment**
-7. Select experiment name and compute to be used.
-8. Select the dataset.
-9. Chose the type of prediction task -- **Classification**.
-10. Select target column -- **Rating**.
-11. Click **Start**.
+1. Navegue até o Workspace do Azure ML (criado acima) no [http://ml.azure.com](http://ml.azure.com/?WT.mc_id=msignitethetour2019-github-aiml40)
+2. Vá para **Conjunto de dados** – será possível ver ali o conjunto de dados previamente carregado (clothing_automl. xlsx). Observe que também é possível carregá-lo aqui por meio do portal.
+3. Selecione o conjunto de dados.
+4. Na guia **Visão geral**, expanda o **Uso de exemplo** e exiba o código que pode ser usado para acessar os dados de maneira programática, se necessário.
+5. Na guia **Explorar**, observe os dados.
+6. Vá para a guia **ML Automatizado** e clique em **Novo experimento**
+7. Selecione nome do experimento e a computação a ser usada.
+8. Selecione o conjunto de dados.
+9. Escolha o tipo de tarefa de previsão – **Classificação**.
+10. Selecione a coluna de destino – **Classificação**.
+11. Clique em **Iniciar**.
 
-The experiment will take quite a long time to run, because different algorithms will be investigated. If showing a demo, it would make sense to run this in advance and just show the results.
+O experimento demorará muito tempo para ser executado, pois algoritmos diferentes serão investigados. Ao exibir uma demonstração, faz sentido executá-la com antecedência e mostrar somente os resultados.
 
-### Demo 3: Using Azure ML Workspace with Python SDK
+### <a name="demo-3-using-azure-ml-workspace-with-python-sdk"></a>Demonstração 3: Como usar o Workspace do Azure ML com o SDK do Python
 
-In this demo, we will run custom Python code that uses the Python Azure ML SDK to train, optimize and use the custom Aspect Based Sentiment Analysis (ABSA) model.
+Nesta demonstração, executaremos um código Python personalizado que usa o SDK do Azure ML do Python para treinar, otimizar e usar o modelo de ABSA (Análise de Sentimento Baseado em Aspecto) personalizado.
 
-All of the instructions for this part of the demo are located in the Jupyter Notebook itself. Use one of the methods described above to run the Notebook (in Azure Notebooks, or locally), and follow instructions there. 
+Todas as instruções desta parte da demonstração estão localizadas no próprio Jupyter Notebook. Use um dos métodos descritos acima para executar o Notebook (no Azure Notebooks ou localmente) e siga as instruções. 
 
-## Tear Down
+## <a name="tear-down"></a>Desativar
 
-To free up cloud resources used during the demo, you need to delete Azure ML workspace and resource group:
+Para liberar os recursos de nuvem usados durante a demonstração, será necessário excluir o workspace e o grupo de recursos do Azure ML:
 
 ```shell
 az ml workspace delete --w absa_space -g absa
 az group delete -n absa
 ```
 
-## Presenter Resources
+## <a name="presenter-resources"></a>Recursos do apresentador
 
-If you are going to present this content, please have a look at the [additional presenter resources](README-Instructor.md).
+Se for apresentar esse conteúdo, consulte os [recursos adicionais do apresentador](README-Instructor.md).
 
-## Resources and Continue Learning
+## <a name="resources-and-continue-learning"></a>Recursos e Aprendizado Contínuo
 
-### Getting Started Series
+### <a name="getting-started-series"></a>Série de Introdução
 
-* [Azure Cognitive Services Text Analytics API](https://aka.ms/TextCogSvc​)
-* [Automated Machine Learning](https://aka.ms/AutomatedMLDoc​)
-* [Hyperparameter Tuning](https://aka.ms/AzureMLHyperDrive​)
-* [Azure ML Services and the Python SDK](https://aka.ms/AA3dzht) ​
+* [API de Análise de Texto de Serviços Cognitivos do Azure](https://aka.ms/TextCogSvc)
+* [Machine Learning Automatizado](https://aka.ms/AutomatedMLDoc)
+* [Ajuste de Hiperparâmetro](https://aka.ms/AzureMLHyperDrive)
+* [Serviços do Azure ML e o SDK do Python](https://aka.ms/AA3dzht) 
 
-### Other Materials
+### <a name="other-materials"></a>Outros materiais
 
-* [9 Advanced Tips for Production Machine Learning](aka.ms/9TipsProdML)
-* [Intel Aspect-Based Sentiment Analysis Page](https://www.intel.ai/introducing-aspect-based-sentiment-analysis-in-nlp-architect/)
-* Azure ML Best Practice Repos:
-    * [Natural Language Processing](https://github.com/microsoft/nlp/)
-    * [Computer Vision](https://github.com/microsoft/ComputerVision)
-    * [Recommenders](https://github.com/microsoft/Recommenders)
+* [Nove dicas avançadas para Machine Learning de Produção](aka.ms/9TipsProdML)
+* [Página de Análise de Sentimento Baseado em Aspecto da Intel](https://www.intel.ai/introducing-aspect-based-sentiment-analysis-in-nlp-architect/)
+* Repositórios de Práticas Recomendadas do Azure ML:
+    * [Processamento de Idioma Natural](https://github.com/microsoft/nlp/)
+    * [Pesquisa Visual Computacional](https://github.com/microsoft/ComputerVision)
+    * [Recomendações](https://github.com/microsoft/Recommenders)
 
 
-## Feedback loop
+## <a name="feedback-loop"></a>Ciclo de comentários
 
-Do you have a comment, feedback, suggestion? Currently, the best feedback loop for content changes/suggestions/feedback is to create a new issue on this GitHub repository. To get all the details about how to create an issue please refer to the [Contributing](../../contributing.md) docs
+Tem um comentário, feedback ou sugestão? Atualmente, a melhor forma de criar um ciclo de comentários para alterações/sugestões/feedback de conteúdo é abrindo um novo problema neste repositório GitHub. Para obter todos os detalhes sobre como criar um problema, consulte os documentos sobre [Contribuição](../../contributing.md)

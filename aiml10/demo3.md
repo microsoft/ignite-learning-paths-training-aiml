@@ -1,43 +1,43 @@
-## Demo 3 - Creating a Custom Invoice Reader Skill
+## <a name="demo-3---creating-a-custom-invoice-reader-skill"></a>Demonstração 3 – Criar uma habilidade personalizada de Leitor de Faturas
 
-[![Demo 3](images/demo3.png)](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/videos/Demo2.mp4 "Demo 3")
+[![Demonstração 3](images/demo3.png)](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/videos/Demo2.mp4 "Demonstração 3")
 
-## Summary
-In this exercise we create an Azure Search Skill (in the form of an Azure Function) that takes data from Azure Search and returns a structured json document representing the contents of the pdf Invoice. To get a more in depth treatment of creating an Azure Function please refer to the [docs](https://docs.microsoft.com/en-us/azure/azure-functions/functions-create-first-azure-function-azure-cli?WT.mc_id=msignitethetour2019-github-aiml10). It is assumed that a storage account has been created (as described in the [first demo](demo1.md) as well as the Form Recognizer service created in the [second demo](demo2.md))
-
-
-## What you need
-- [Invoice Test Set](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/data/train.zip) (used to test the Azure Function)
+## <a name="summary"></a>Resumo
+Neste exercício, criamos uma habilidade do Azure Search (na forma de uma função do Azure) que coleta dados do Azure Search e retorna um documento json estruturado que representa o conteúdo da fatura em PDF. Para obter uma análise mais aprofundada sobre a criação de uma função do Azure, confira a [documentação](https://docs.microsoft.com/en-us/azure/azure-functions/functions-create-first-azure-function-azure-cli?WT.mc_id=msignitethetour2019-github-aiml10). Supõe-se que foi criada uma conta de armazenamento (como descrito no [primeira demonstração](demo1.md), bem como o serviço de Reconhecimento de Formulários criado na [segunda demonstração](demo2.md))
 
 
-- [Postman](https://www.getpostman.com/) is used to send requests to the Form Recognizer service REST API. Refer to this [short primer](postman.md) to learn more.
+## <a name="what-you-need"></a>Do que você precisa
+- [Conjunto de teste de faturas](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/data/train.zip) (usado para testar a função do Azure)
 
-- Postman Reader Skill Request [collection](src/Collections/Reader_Skill.postman_collection.json).
+
+- O [Postman](https://www.getpostman.com/) é usado para enviar solicitações para a API REST do serviço Reconhecimento de Formulários. Confira este [manual rápido](postman.md) para saber mais.
+
+- [Coleção](src/Collections/Reader_Skill.postman_collection.json) de Solicitações de Habilidades de Leitura do Postman.
 
 - [Azure Functions Core Tools](https://docs.microsoft.com/en-us/azure/azure-functions/functions-run-local?WT.mc_id=msignitethetour2019-github-aiml10#v2)
 
-## Azure Resources
-The table below describes the resources created throughout this exercise.
+## <a name="azure-resources"></a>Recursos do Azure
+A tabela a seguir descreve os recursos criados neste exercício.
 
-| Name                       | Type                            | Purpose                    |
+| Nome                       | Tipo                            | Finalidade                    |
 | -------------------------- | ------------------------------- | ------------------------- |
-| **readerskillstorage**   | Storage Account              | Storage used for Azure Function |
-| **readerskill**          | Function App                 | Cognitive Skill App |
-| **readerskill**          | App Insights                   | Adds insights to Function App |
-| **EastUS2LinuxDynamicPlan** | App Service Plan                   | Consumption based plan for running Function App (this is created implicitly) |
+| **readerskillstorage**   | Conta de armazenamento              | Armazenamento usado na função do Azure |
+| **readerskill**          | Aplicativo de Funções                 | Aplicativo de habilidades cognitivas |
+| **readerskill**          | App Insights                   | Adiciona informações ao aplicativo de funções |
+| **EastUS2LinuxDynamicPlan** | Plano do Serviço de Aplicativo                   | Plano baseado em consumo para executar aplicativos de funções (que é criado implicitamente) |
 
-## What to do
+## <a name="what-to-do"></a>O que fazer
 
-There are three main steps:
-1. Run the `InvoiceReaderSkill` Azure Function locally
-2. Create resources to support the `InvoiceReaderSkill` Azure Function
-3. Run the `InvoiceReaderSkill` on Azure
+Existem três etapas principais:
+1. Executar localmente a função `InvoiceReaderSkill` do Azure
+2. Criar recursos para dar suporte à função `InvoiceReaderSkill` do Azure
+3. Executar `InvoiceReaderSkill` no Azure
 
-### Run the Azure Function Locally
+### <a name="run-the-azure-function-locally"></a>Executar localmente a função do Azure
 
-1. Download the [InvoiceReaderSkill](src/InvoiceReaderSkill) code found in this repo in [Visual Studio Code](https://code.visualstudio.com/) (make sure the [Azure Tools](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-node-azure-pack) are installed).
+1. Baixe o código do [InvoiceReaderSkill](src/InvoiceReaderSkill) encontrado neste repositório em [Visual Studio Code](https://code.visualstudio.com/) (verifique se as [ferramentas](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-node-azure-pack) do Azure estão instaladas).
 
-2. Add a `local.settings.json` file to the folder with the following contents:
+2. Adicione o arquivo `local.settings.json` à pasta com o seguinte conteúdo:
 
 ```json
 {
@@ -51,11 +51,11 @@ There are three main steps:
   }
 }
 ```
-3. Run the `func host start` command to start the function.
+3. Execute o comando `func host start` para iniciar a função.
 
-4. Import the Postman Reader Skill Request [collection](src/Collections/Reader_Skill.postman_collection.json) to Postman
+4. Importe a [coleção](src/Collections/Reader_Skill.postman_collection.json) de Solicitações de Habilidades de Leitura do Postman
 
-5. Open the `Local Forms Skills` Request and change the Pre-request script to set the `storageAccount` variable to your storage account (in the video the variable is `ttinvoicestorage`) and the `SASValue` to the appropriate Secure Access Signature to the `train` container. To learn how to get a Secure Access Signature, refer to our [brief explanation](sas.md).
+5. Abra a Solicitação `Local Forms Skills` e altere o script de pré-solicitação para definir a variável `storageAccount` para a sua conta de armazenamento (no vídeo, a variável é `ttinvoicestorage`) e o `SASValue` para a Assinatura de Acesso Seguro apropriada para o contêiner `train`. Para saber como obter uma Assinatura de Acesso Seguro, confira nossa [breve explicação](sas.md).
 
 ```javascript
 pm.environment.set('storageAccount', '<YOUR STORAGE ACCOUNT>')
@@ -63,42 +63,42 @@ pm.environment.set('container', 'test')
 pm.environment.set('SASValue', '<SAS>')
 ```
 
-6. Verify that the `POST` uri matches the one for the Azure Function (in our running of it we use `http://localhost:7071/api/AnalyzeInvoice`) and click on Send. You should get a response similar to that below:
+6. Verifique se o URI `POST` corresponde ao URI da função do Azure (em nossa execução, usamos `http://localhost:7071/api/AnalyzeInvoice`) e clique em Enviar. Você deve receber uma resposta semelhante a esta:
 
-![Local Skill](images/local_skill.png "Local Skill")
+![Habilidades locais](images/local_skill.png "Habilidade Local")
 
-### Create Azure Function Resources
+### <a name="create-azure-function-resources"></a>Criar Recursos para o Azure Functions
 
-It is assumed that the following commands are run in the same directory as the actual Function
+Supõe-se que os comandos a seguir sejam executados no mesmo diretório que a função real
 
-1. Run the following Azure CLI Commands to create the appropriate resources and publish the function:
+1. Execute os seguintes comandos de CLI do Azure para criar os recursos apropriados e publicar a função:
 
-Create Function Storage
+Criar Armazenamento de Função
 
 ```
 az storage account create --name {FUNCTION_STORAGE} --location {LOCATION} --resource-group {YOUR_RG} --sku Standard_LRS
 ```
 
-Create Function App
+Criar Aplicativo de Função
 ```
 az functionapp create --resource-group {YOUR_RG} --consumption-plan-location {LOCATION} --name {FUNCTION_NAME} --storage-account {FUNCTION_STORAGE} --runtime python --os-type linux
 ```
-Publish Function
+Publicar Função
 ```
 func azure functionapp publish {FUNCTION_NAME} --build remote
 ```
 
-2. Use Visual Studio Code to sync the local settings to the Azure Function by selecting the Azure button, navigating to the newly created function, right clicking on `Application Settings` and selecting `Upload Local Settings` (NOTE: Do not overwrite the existing variables).
+2. Use Visual Studio Code para sincronizar as configurações locais para a função do Azure: selecione o botão Azure, navegue até a função recém-criada, clique com o botão direito do mouse em `Application Settings` e selecione `Upload Local Settings` (observação: não substitua as variáveis existentes).
 
-![Local Skill](images/upload_settings.png "Local Skill")
+![Habilidades locais](images/upload_settings.png "Habilidade Local")
 
-3. Browse to the newly created Function App in the portal to add Application Insights to the service.
+3. Navegue até o Aplicativo de Funções recém-criado no portal para adicionar o Application Insights ao serviço.
 
-![Add App Insights](images/app_insights.png "Add App Insights")
+![Adicionar App Insights](images/app_insights.png "Adicionar App Insights")
 
-### Run the Azure Function in the Cloud
+### <a name="run-the-azure-function-in-the-cloud"></a>Executar a Função do Azure localmente
 
-1. Open the `Cloud Forms Skills` Request and change the Pre-request script to set the `storageAccount` variable to your storage account (in the video the variable is `ttinvoicestorage`) and the `SASValue` to the appropriate Secure Access Signature to the `train` container. To learn how to get a Secure Access Signature, refer to our [brief explanation](sas.md).
+1. Abra a Solicitação `Cloud Forms Skills` e altere o script de pré-solicitação para definir a variável `storageAccount` para a sua conta de armazenamento (no vídeo, a variável é `ttinvoicestorage`) e o `SASValue` para a Assinatura de Acesso Seguro apropriada para o contêiner `train`. Para saber como obter uma Assinatura de Acesso Seguro, confira nossa [breve explicação](sas.md).
 
 ```javascript
 pm.environment.set('storageAccount', '<YOUR STORAGE ACCOUNT>')
@@ -106,9 +106,9 @@ pm.environment.set('container', 'test')
 pm.environment.set('SASValue', '<SAS>')
 ```
 
-2. Verify that the `POST` uri matches the one for the Azure Function (should look something like `https://<YOUR_ENDPOINT>.azurewebsites.net/api/AnalyzeInvoice`) and click on Send. You should get a response similar to that below:
+2. Verifique se o URI `POST` corresponde ao URI da função do Azure (deve se parecer com `https://<YOUR_ENDPOINT>.azurewebsites.net/api/AnalyzeInvoice`) e clique em Enviar. Você deve receber uma resposta semelhante a esta:
 
-![Cloud Skill](images/local_skill.png "Cloud Skill")
+![Habilidade de Nuvem](images/local_skill.png "Habilidade de Nuvem")
 
-# Next Demo
-Learn how to tie everything together and finally build the end to end solution by continuing on to [Demo 4 - Tying it all together](demo4.md)
+# <a name="next-demo"></a>Próxima demonstração
+Saiba como unir tudo para finalmente criar a solução de ponta a ponta ao continuar na [Demonstração 4 – Reunir tudo](demo4.md)

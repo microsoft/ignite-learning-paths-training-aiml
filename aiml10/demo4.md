@@ -1,100 +1,100 @@
-## Demo 4 - Tying it all together
+## <a name="demo-4---tying-it-all-together"></a>Etapa 4 – Reunir tudo
 
-[![Demo 4](images/demo4.png)](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/videos/Demo4.mp4 "Demo 4")
+[![Demonstração 4](images/demo4.png)](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/videos/Demo4.mp4 "Demonstração 4")
 
-## Summary
-In this exercise we tie together all of the resources to create an index, skillset, datasource, and indexer inside of Azure Cognitive Search to exctract Invoice data from our colleciton of pdf files. It is assumed that all of the resources and services from the previous exercises are created and set up properly.
-
-
-## What you need
-- [Invoice Data Set](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/data/invoices_1000.zip) (this is a smaller set of 1000 invoices to run the service and test the functionality)
+## <a name="summary"></a>Resumo
+Neste exercício, reunimos todos os recursos para criar um índice, o conjunto de qualificações, a fonte de dados e o indexador dentro do Azure Cognitive Search para extrair dados de faturas da nosso coleção de arquivos PDF. Supõe-se que todos os recursos e serviços dos exercícios anteriores foram criados e configurados corretamente.
 
 
-- [Postman](https://www.getpostman.com/) is used to send requests to the Form Recognizer service REST API. Refer to this [short primer](postman.md) to learn more.
-
-- Postman [Invoice Search Request collection](src/Collections/Invoice_Search.postman_collection.json).
-
-## What to do
-
-There are three main steps:
-1. Upload invoices to the storage account
-2. Prepare Azure Search Index, Skillset, Datasource, and Indexer
-3. Monitor and use Index
-
-### Upload Invoice Data
+## <a name="what-you-need"></a>Do que você precisa
+- [Conjunto de Dados da Fatura](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/data/invoices_1000.zip) (trata-se de um conjunto menor de 1.000 faturas para executar o serviço e testar a funcionalidade)
 
 
-1. Create a container called `invoices` in the storage account created in the first demo.
+- O [Postman](https://www.getpostman.com/) é usado para enviar solicitações para a API REST do serviço Reconhecimento de Formulários. Confira este [manual rápido](postman.md) para saber mais.
 
-[![Create Container](images/create_container.png)](https://docs.microsoft.com/en-us/azure/storage/blobs/storage-quickstart-blobs-portal?WT.mc_id=msignitethetour2019-github-aiml10 "Create Container")
+- A [coleção de Solicitações de Pesquisa de Faturas](src/Collections/Invoice_Search.postman_collection.json) do Postman.
 
-2. Download and unzip [invoice data set](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/data/invoices_1000.zip).
+## <a name="what-to-do"></a>O que fazer
 
-3. Upload unzipped [invoice data set](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/data/invoices_1000.zip) to the `invoices` container. This can be done directly using the [portal](https://docs.microsoft.com/en-us/azure/storage/blobs/storage-quickstart-blobs-portal?WT.mc_id=msignitethetour2019-github-aiml10#upload-a-block-blob) or by using the [Azure Storage Explorer](https://docs.microsoft.com/en-us/azure/vs-azure-tools-storage-explorer-blobs?WT.mc_id=msignitethetour2019-github-aiml10).
+Existem três etapas principais:
+1. Carregar as faturas na conta de armazenamento
+2. Preparar o Índice, o Conjunto de habilidades, a Fonte de Dados e o Indexador do Azure Search
+3. Monitorar e usar o Índice
 
-### Prepare Azure Search
+### <a name="upload-invoice-data"></a>Carregar os Dados da Fatura
 
-This section uses Postman and assumes you know about loading collections, handling variables, and setting pre-request scripts. To learn how to do these specific things we have included some [instructions](postman.md).
 
-| Name                       | Type                            | Purpose                    |
+1. Crie o contêiner `invoices` na conta de armazenamento criada na primeira demonstração.
+
+[![Criar Contêiner](images/create_container.png)](https://docs.microsoft.com/en-us/azure/storage/blobs/storage-quickstart-blobs-portal?WT.mc_id=msignitethetour2019-github-aiml10 "Criar contêiner")
+
+2. Baixe e descompacte o [conjunto de dados de faturas](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/data/invoices_1000.zip).
+
+3. Carregue o [conjunto de dados de faturas](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/data/invoices_1000.zip) descompactado no contêiner `invoices`. Isso pode ser feito diretamente usando o [portal](https://docs.microsoft.com/en-us/azure/storage/blobs/storage-quickstart-blobs-portal?WT.mc_id=msignitethetour2019-github-aiml10#upload-a-block-blob) ou o [Gerenciador de Armazenamento do Azure ](https://docs.microsoft.com/en-us/azure/vs-azure-tools-storage-explorer-blobs?WT.mc_id=msignitethetour2019-github-aiml10).
+
+### <a name="prepare-azure-search"></a>Preparar o Azure Search
+
+Esta seção usa o Postman e pressupõe que você saiba como carregar coleções, manipular variáveis e configurar scripts de pré-solicitação. Para saber como fazer essas tarefas específicas, incluímos algumas [instruções](postman.md).
+
+| Nome                       | Tipo                            | Finalidade                    |
 | -------------------------- | ------------------------------- | ------------------------- |
-| `api-key`       | Authorization         | Key for Azure Search access  |
-| `search_service`       | Variable         | Search service url (without the protocol or slashes)  |
-| `index_name`       | Variable         | Name of desired index  |
-| `storageConnectionString`       | Variable         | Connection string to storage account containing invoices  |
-| `cog_svcs_key`       | Variable         | Key for All-In-One Cognitive Services used in [Demo 1](demo1.md)  |
+| `api-key`       | Autorização         | Chave para acesso ao Azure Search  |
+| `search_service`       | Variável         | URL do serviço de pesquisa (sem protocolo ou barras)  |
+| `index_name`       | Variável         | Nome do índice desejado  |
+| `storageConnectionString`       | Variável         | Cadeia de conexão para a conta de armazenamento que contém faturas  |
+| `cog_svcs_key`       | Variável         | Chave para os Serviços Cognitivos Tudo-em-um usados na [Demonstração 1](demo1.md)  |
 
-1. Load the [Invoice Search Request collection](src/Collections/Invoice_Search.postman_collection.json) into Postman.
+1. Carregue a [coleção de Solicitações de Pesquisa de Faturas](src/Collections/Invoice_Search.postman_collection.json) do Postman.
 
-2. Set all of the variables as described in the table above. Each of these values (with the exception of the `index_name`) can be found in the respective service in the portal. You can choose any `index_name` you like.
+2. Defina todas as variáveis como descrito na tabela acima. Cada um desses valores (com exceção do `index_name`) pode ser encontrado no respectivo serviço no portal. Você pode escolher qualquer `index_name` que desejar.
 
-3. Open and run the `Create Index` request (using the Send button). This creates the index where the invoice data is stored. After the request successfully completes you should see the changes reflected in the Azure Search service in the portal:
+3. Abra e execute a solicitação `Create Index` (usando o botão Enviar). Isso cria o índice em que os dados da nota fiscal são armazenados. Depois que a solicitação for concluída com êxito, você deve ver as alterações refletidas no serviço Azure Search no portal:
 
-![Index](images/index.png "Index")
+![Índice](images/index.png "Índice")
 
-4. Open and run the `Create Skillset` request (using the Send button). This creates our custom skillset the indexer will use to extract the invoice data. This particular skillset only has a single skill (our custom `InvoiceReaderSkill`). As above, if the request completes successfully you should see the new Skillset reflected in the portal.
+4. Abra e execute a solicitação `Create Skillset` (usando o botão Enviar). Isso cria nosso conjunto de habilidades personalizado que o indexador usará para extrair os dados das faturas. Esse determinado conjunto de habilidades tem uma única habilidade (nossa `InvoiceReaderSkill` personalizada). Como acima, se a solicitação for concluída com êxito, você deve ver o novo conjunto de habilidades refletido no Portal.
 
-5. Open and run the `Create Datasource` request (using the Send button). This creates a reference to our storage account where the invoices are located. As above, if the request completes successfully you should see the new Skillset reflected in the portal.
+5. Abra e execute a solicitação `Create Datasource` (usando o botão Enviar). Isso cria uma referência à nossa conta de armazenamento na qual estão as notas fiscais. Como acima, se a solicitação for concluída com êxito, você deve ver o novo conjunto de habilidades refletido no Portal.
 
-6. Open and run the `Create Indexer` request (using the Send button). This creates the indexer that pulls the invoices from the `Datasource`, uses the `Skillset` on each invoice, and stores the data in the actual `Index`. As above, if the request completes successfully you should see the new Skillset reflected in the portal.
+6. Abra e execute a solicitação `Create Indexer` (usando o botão Enviar). Isso cria o indexador que efetua pull das notas fiscais do `Datasource`, usa o `Skillset` em cada fatura e armazena os dados no `Index` real. Como acima, se a solicitação for concluída com êxito, você deve ver o novo conjunto de habilidades refletido no Portal.
 
 
-### Monitor and Use Index
-The indexer will take some time to go through all of the invoice documents. This can be monitored in the Search Service itself. You can also monitor the calls to the `InvoiceReaderSkill` by looking at the Live Metrics stream in the corresponding App Insights service attached to the Azure Function. Once there are some documents in the index you can run queries to verify it is working:
+### <a name="monitor-and-use-index"></a>Monitorar e Usar o Índice
+O indexador leva algum tempo para passar por todos os documentos de faturas. Isso pode ser monitorado no próprio Serviço de Pesquisa. Você também pode monitorar as chamadas para o `InvoiceReaderSkill` examinando o fluxo de métricas ao vivo no serviço App Insights correspondente que está anexado à função do Azure. Quando houver alguns documentos no índice, você poderá executar consultas para verificar se ele está funcionando:
 
-![Azure Search Queries](images/queries.png "Azure Search Queries")
+![Consultas do Azure Search](images/queries.png "Consultas do Azure Search")
 
-**Some fun queries to run**:
+**Algumas consultas divertidas a executar**:
 
-Orders with ItemId 49
+Pedidos com ItemId 49
 ```
 *&$filter=invoice/lineItems/any(lineItems: lineItems/itemId eq 49)
 ```
 
-invoiceId is 12179
+a invoiceId é 12179
 ```
 *&$filter=invoice/invoiceId eq 12179
 ```
 
-companies in Australia
+empresas na Austrália
 ```
 *&$filter=invoice/company/country eq 'Australia'
 ```
 
-companies in the UK (with a count)
+empresas no Reino Unido (com uma contagem)
 ```
 *&$count=true&$filter=invoice/company/country eq 'United Kingdom'
 ```
 
-only retrieve invoices
+recuperar somente faturas
 ```
 *&$select=invoice&$count=true
 ```
 
-people in Germany
+pessoas na Alemanha
 ```
 *&$count=true&$select=invoice/person&$filter=invoice/person/country eq 'Germany'
 ```
 
-# Next Demo
-Learn how to explore the Knowledge Store by continuing on to  [Demo 5 - Knowledge Store](demo5.md)
+# <a name="next-demo"></a>Próxima demonstração
+Saiba como explorar o repositório de conhecimento em [Demonstração 5 – Repositório de Conhecimento](demo5.md)

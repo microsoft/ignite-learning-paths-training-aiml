@@ -1,47 +1,47 @@
-# Using Postman
-There are three concepts needed to carry out the exercises in all of the demonstrations:
+# <a name="using-postman"></a>Uso do Postman
+Há três conceitos necessários para realizar os exercícios em todas as demonstrações:
 
-1. Import a collection
-2. Set collection variables
-3. Use the pre-requests scripts to set variables
+1. Importar uma coleção
+2. Definir variáveis de coleção
+3. Usar os scripts de pré-solicitações para definir variáveis
 
-## What you need
-There are three collections used throughout the demos:
-1. [Form Recognizer API Calls](src/Collections/Form_Recognizer.postman_collection.json)
-2. [Reader Skill API Calls](src/Collections/Reader_Skill.postman_collection.json)
-3. [Invoice Search API Calls](src/Collections/Invoice_Search.postman_collection.json)
+## <a name="what-you-need"></a>Do que você precisa
+Três coleções são usadas em todas as demonstrações:
+1. [Chamadas de API de Reconhecimento de Formulários](src/Collections/Form_Recognizer.postman_collection.json)
+2. [Chamadas da API de Habilidade do Leitor](src/Collections/Reader_Skill.postman_collection.json)
+3. [Chamadas de API de Pesquisa de Fatura](src/Collections/Invoice_Search.postman_collection.json)
 
-## Importing a Collection
+## <a name="importing-a-collection"></a>Importar uma coleção
 
-1. Download the appropriate collection (see above).
-2. Open Postman
-3. Click on Import
+1. Baixe a coleção apropriada (veja acima).
+2. Abra o Postman
+3. Clique em Importar
 
-![Import Collection](images/import_collection.png "Import Collection")
+![Importar Coleção](images/import_collection.png "Importar Coleção")
 
-4. Select the appropriate collection
+4. Selecione a coleção apropriada
 
-![Import Collection](images/import_collection_file.png "Import Collection")
+![Importar Coleção](images/import_collection_file.png "Importar Coleção")
 
-## Modifying collection variables
+## <a name="modifying-collection-variables"></a>Modificar as variáveis da coleção
 
-Collection variables allow Postman to replace tokens such as `{variable}` with values set by the user. This allows requests to be more portable with changes to variables. For example, the `endpoint` variable in some of the exercises represents the endpoint to your particular Form Recognizer service. 
+As variáveis da coleção permitem que o Postman substitua os tokens, como `{variable}`, por valores definidos pelo usuário. Isso permite que as solicitações sejam mais portáteis com alterações em variáveis. Por exemplo, em alguns dos exercícios, a variável `endpoint` representa o ponto de extremidade de seu serviço específico de Reconhecimento de Formulários. 
 
-1. After a collection is loaded, click on the ellipsis to edit the collection variables
+1. Depois que uma coleção for carregada, clique nas reticências para editar as variáveis da coleção
 
-![Edit Variables](images/edit_variables.png "Edit Variables")
+![Editar Variáveis](images/edit_variables.png "Editar Variáveis")
 
-2. To edit authorization variables use the authorization tab.
+2. Para editar as variáveis de autorização, use a guia de autorização.
 
-![Edit Authorization](images/edit_authorization.png "Edit Authorization")
+![Editar Autorização](images/edit_authorization.png "Editar Autorização")
 
-3. All other variables used in these exercises are found under the variables tab
+3. Todas as outras variáveis usadas nesses exercícios são encontradas na guia de variáveis
 
-![Edit Variables](images/variables_tab.png "Edit Variables")
+![Editar Variáveis](images/variables_tab.png "Editar Variáveis")
 
-## Using pre-request scripts
+## <a name="using-pre-request-scripts"></a>Usar os scripts de pré-solicitação
 
-Some of the exercises require changes made to the pre-request scripts. These are accessible in the Pre-request Script section of individual Requests as shown below.
+Alguns dos exercícios exigem alterações a serem executadas nos scripts de pré-solicitação. É possível acessá-los na seção script de pré-solicitação de solicitações individuais, como mostrado abaixo.
 
-![Pre-Request Scripts](images/pre_request.png "Pre-Request Scripts")
+![Scripts de Pré-Solicitação](images/pre_request.png "Scripts de Pré-Solicitação")
 

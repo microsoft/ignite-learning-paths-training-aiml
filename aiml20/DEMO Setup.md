@@ -1,160 +1,125 @@
-# Setup for AIML20 demos
+# <a name="setup-for-aiml20-demos"></a>Configuração para demonstrações do AIML20
 
-These tasks were performed ahead of time for the AIML20 presentation. Follow
-these same steps to prepare for the remaining demo scripts.
+Estas tarefas foram executadas com antecedência para a apresentação do AIML20. Siga estas mesmas etapas e se prepare para os scripts de demonstração restantes.
 
-## Clone the repository to your local machine
+## <a name="clone-the-repository-to-your-local-machine"></a>Clone o repositório em seu computador local
 
-You will need the contents of https://github.com/microsoft/ignite-learning-paths-training-aiml/tree/master/aiml20 on your local machine. The easiest way to do this is to visit the [Developer's Guide to AI Learning Paths repository](https://github.com/microsoft/ignite-learning-paths-training-aiml) and click the "Clone or download" button. We will refer to files relative to the `aiml20` folder.
+Você precisará dos conteúdos de https://github.com/microsoft/ignite-learning-paths-training-aiml/tree/master/aiml20 em computador local. A maneira mais fácil de fazer isso é visitar o [Guia do Desenvolvedor para o repositório do Roteiro de Aprendizagem de IA](https://github.com/microsoft/ignite-learning-paths-training-aiml) e clicar no botão "Clonar ou baixar". Faremos referências aos arquivos relativos à pasta `aiml20`.
 
-## Sign up for an Azure Subscription
+## <a name="sign-up-for-an-azure-subscription"></a>Inscrever-se para uma assinatura do Azure
 
-If you don't already have an Azure subscription, you can [sign up
-here](https://azure.microsoft.com/free/?WT.mc_id=msignitethetour2019-github-aiml20)
-and also get $200 in free Azure credits to use. 
+Caso ainda não tenha uma assinatura do Azure, é possível [inscrever-se aqui](https://azure.microsoft.com/free/?WT.mc_id=msignitethetour2019-github-aiml20) e também obter US$ 200 para usar em créditos gratuitos do Azure. 
 
-## Find your Azure Subcription ID
+## <a name="find-your-azure-subcription-id"></a>Localizar sua ID de assinatura do Azure
 
-In the [Azure Portal](https://portal.azure.com), sign in and click on
-"Subscriptions" in the left menu bar. Click on the Subscription Name you will be
-using, and copy the "Subscription ID" shown there. You'll need it later when you
-create resources.
+No [portal do Azure](https://portal.azure.com), entre e clique em "Assinaturas" na barra de menus à esquerda. Clique no Nome da Assinatura que você usará e copie a "ID da Assinatura" exibida. Você precisará delas posteriormente quando criar os recursos.
 
-Alternatively, run `az account show` in the Azure CLI and copy the "id" value
-shown.
+Como alternativa, execute `az account show` na CLI do Azure e copie o valor exibido da "ID".
 
-## Start fresh.
+## <a name="start-fresh"></a>Comece de novo.
 
- If you've run the demos before, delete these resource groups if they exist:
+ Caso tenha executado as demonstrações anteriormente, exclua estes grupos de recursos se eles existirem:
  
  - `aiml20-demo`
 
- You can use the Azure Portal, or run this command in the Azure CLI:
+ É possível usar o portal do Azure ou executar este comando na CLI do Azure:
 
  ```sh
  az group delete --name aiml20-demo
  ```
 
-## Deploy the Tailwind Traders website.
+## <a name="deploy-the-tailwind-traders-website"></a>Implantar o site da Tailwind Traders.
 
-Click the button below. This will deploy
-[TailwindTraders-Website](https://github.com/Microsoft/TailwindTraders-Website)
-from Github, using an ARM
-template
-to enable the Personalizer integration and ONNX-based Shop by Photo feature. ([More details about this deployment](https://github.com/microsoft/TailwindTraders-Website/blob/master/Source/Tailwind.Traders.Web/Standalone/README.md).)
+Clique no botão abaixo. Isso implantará o [site da TailwindTraders](https://github.com/Microsoft/TailwindTraders-Website) do GitHub usando um modelo ARM para habilitar a integração do Personalizador e do recurso Comprar pela Foto baseado em ONNX. ([Mais detalhes sobre essa implantação](https://github.com/microsoft/TailwindTraders-Website/blob/master/Source/Tailwind.Traders.Web/Standalone/README.md).)
 
-[![Deploy to Azure](https://azuredeploy.net/deploybutton.svg)](https://portal.azure.com/?feature.customportal=false#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FMicrosoft%2FTailwindTraders-Website%2Fmaster%2Fazuredeploy.json)
+[![Implantar no Azure](https://azuredeploy.net/deploybutton.svg)](https://portal.azure.com/?feature.customportal=false#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FMicrosoft%2FTailwindTraders-Website%2Fmaster%2Fazuredeploy.json)
 
-In the form that appears, select the following options:
+No formulário que aparecer, selecione as seguintes opções:
 
-* Subscription: Select the subscription in which to deploy the resources
+* Assinatura: Selecione a assinatura na qual deseja implantar os recursos
 
-* Resource Group: resources will be created in the resource group you specify.
-  We recommend choosing "New" and entering the name `aiml20-demo`. When
-  you're done, you can delete this resource group to shut down the site and
-  delete all associated resources.
+* Grupo de recursos: os recursos serão criados no grupo de recursos que você especificar.
+  Recomendamos escolher "Novo" e inserir o nome `aiml20-demo`. Quando terminar, será possível excluir esse grupo de recursos para desligar o site e excluir todos os recursos associados.
 
-* Location: The Azure region where the resources will be deployed. You must
-  be able to deploy SQL Database and App Services in that region. 
+* Local: A região do Azure onde os recursos serão implantados. Será preciso implantar o Banco de Dados SQL e os Serviços de Aplicativos nessa região. 
 
-  Note: Since Personalizer is currently only available in WestUS2 and WestEurope, it will be deployed there regardless of what you choose.
+  Observação: Como o Personalizador atualmente está disponível somente no Oeste dos EUA 2 e no Oeste da Europa, ele será implantado nessas regiões, independentemente de sua escolha.
 
-* Site Name: This will be used in the site's URL and visible publicly, and must
-  be globally unique. To avoid clashes, choose `aiml20-xy` replacing `xy` with your initials, but we will refer to this name as just `aiml20` in these scripts. (If you
-  choose a name that is in use, you will get "Conflict" errors during the
-  deployment.)
+* Nome do site: Isso será usado na URL do site e visível publicamente, bem como deve ser globalmente exclusivo. Para evitar conflitos, escolha `aiml20-xy` substituindo `xy` por suas iniciais, porém faremos referência a esse nome como `aiml20` nesses scripts. (Caso escolha um nome que esteja em uso, você receberá mensagens de erros de "Conflito" durante a implantação.)
 
-* Site Location: Enter the short version of "Location" above, e.g. `westus2`.
-  (You can get a list of short names in the Azure CLI with: `az account
+* Local do site: Insira a versão curta do "Local" acima, por exemplo, `westus2`.
+  (É possível obter uma lista de nomes curtos na CLI do Azure com: `az account
   list-locations -o table`).
 
-* Deployment mode: Choose `standalone`
+* Modo de implantação: Escolha `standalone`
 
-* SQL Login: Enter `twt`
+* Logon do SQL: Inserir `twt`
 
-* SQL Password: generate and use a secure password (it must include punctuation
-  and mixed case, but do not use `;`). You won't need it for our demos, so no
-  need to write it down.
+* Senha do SQL: gere e use uma senha segura (ela deve incluir pontuação e maiúsculas e minúsculas, mas não use `;`). Ela não será necessária para nossas demonstrações, portanto, não há necessidade de escrevê-la.
 
-* Enable Personalizer: choose `true`
+* Habilitar o Personalizador: escolha `true`
 
-* Repo URL: accept the default, `https://github.com/microsoft/TailwindTraders-Website`
+* URL do repositório: aceite o padrão, `https://github.com/microsoft/TailwindTraders-Website`
 
-* Branch: accept the default, `master`
+* Ramificação: aceite o padrão, `master`
 
-(As a backup, you can also use the Repo URL
-`https://github.com/revodavid/TailwindTraders-Website` with the branch `aiml20`.
-This was forked on 2019-10-25 and is known to work.)
+(Como um backup, também é possível usar a URL do repositório `https://github.com/revodavid/TailwindTraders-Website` com a ramificação `aiml20`.
+Isso foi bifurcado em 25/10/2019 e funciona bem.)
 
-Check "I agree to the terms and condtions" and click "Purchase".
+Marque "Concordo com os termos e as condições" e clique em "Comprar".
 
-Allow at least 15 minutes for the site to deploy. 
+Aguarde pelo menos 15 minutos para que o site seja implantado. 
 
-The deployed website URL will be of the form SITENAME.azurewebsites.net (using the Site Name you provided above), or you can find it as follows:
+A URL do site implantado terá o formato SITENAME.azurewebsites.net (usando o Nome do Site fornecido acima) ou é possível encontrá-lo da seguinte maneira:
 
-* click "Go To Resource" under "Next Steps"
+* clique em "Ir para o Recurso" em "Próximas Etapas"
 
-* Click the "App Service" resource
+* Clique no recurso "Serviço de Aplicativo"
 
-* Look at the "URL" value displayed in the right pane
+* Veja o valor da "URL" exibido no painel à direita
 
-The website URL will be displayed after the "Setting up Source Control" step, or you can inspect the "App Service" resource.
+A URL do site será exibida após a etapa "Configurar o Controle do Código-Fonte" ou será possível inspecionar o recurso "Serviço de Aplicativo".
 
-### Install the "Simple" ONNX model
+### <a name="install-the-simple-onnx-model"></a>Instalar o modelo de ONNX "simples"
 
-Follow the instructions in [DEMO ONNX deployment.md](DEMO%20ONNX%20deployment.md#load-the-simple-onnx-model) under the heading "Load the Simple ONNX model". This will degrade the "Shop by Photo" tool in the app to only recognize hammers and drills.
+Siga as instruções em [DEMO ONNX deployment.md](DEMO%20ONNX%20deployment.md#load-the-simple-onnx-model) sob o título "Carregar o modelo de ONNX simples". Isso degradará a ferramenta "Comprar pela Foto" no aplicativo para reconhecer somente os martelos e as furadeiras.
 
-## Configure Visual Studio Code
+## <a name="configure-visual-studio-code"></a>Configurar o código do Visual Studio Code
 
-Install the extension [Azure
-Account](https://marketplace.visualstudio.com/items?itemName=ms-vscode.azure-account).
-(On Windows, you will also need to [install node.js](https://nodejs.org/).) In VS Code, log
-into Azure with the "Azure: Sign In" command (use Control-Shift-P to open the
-Command Palette). To run Azure CLI commands from a script in VS Code, use
-"Terminal: Run Selected Text in Azure Terminal" to copy commands.)
+Instale a extensão [Conta do Azure](https://marketplace.visualstudio.com/items?itemName=ms-vscode.azure-account).
+(No Windows, também será necessário [instalar o node.js](https://nodejs.org/).) No VS Code, faça logon no Azure com o comando "Azure: Entrar" (use Control-Shift-P para abrir a Paleta de Comandos). Para executar os comandos da CLI do Azure de um script no VS Code, use "Terminal: Executar o Texto Selecionado no Terminal do Azure" para copiar os comandos.
 
-Alternatively you can [install the Azure
-CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest&WT.mc_id=https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest&WT.mc_id=msignitethetour2019-github-aiml20)
-on your local Windows, MacOS or Linux machine. If you don't have it installed,
-you can also launch the [Azure Cloud
-Shell](https://docs.microsoft.com/en-us/azure/cloud-shell/overview?WT.mc_id=msignitethetour2019-github-aiml20)
-and run these commands from a browser window. 
+Como alternativa, será possível [instalar a CLI do Azure](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest&WT.mc_id=https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest&WT.mc_id=msignitethetour2019-github-aiml20) em seu computador local com Windows, MacOS ou Linux. Caso ela não esteja instalada, também será possível iniciar o [Azure Cloud Shell](https://docs.microsoft.com/en-us/azure/cloud-shell/overview?WT.mc_id=msignitethetour2019-github-aiml20) e executar esses comandos em uma janela do navegador. 
 
-## Prepare Visual Studio for demo
+## <a name="prepare-visual-studio-for-demo"></a>Preparar o Visual Studio para demonstração
 
-- Open `vision_demo.sh`
-- launch a Cloud Shell with "Azure: Open Bash In Cloud Shell". (If you prefer, you can use the Azure CLI locally.)   
+- Abra `vision_demo.sh`
+- inicie um Cloud Shell com "Azure: Abrir o Bash no Cloud Shell". (Se preferir, será possível usar a CLI do Azure localmente.)   
 
-## Open browser pages ready to demo.
+## <a name="open-browser-pages-ready-to-demo"></a>Abra as páginas do navegador prontas para a demonstração.
 
-* The deployed Tailwind Trader app 
-* https://portal.azure.com (browse to resources)  
+* O aplicativo da Tailwind Trader implantado 
+* https://portal.azure.com (procurar recursos)  
 * https://azure.microsoft.com/en-us/services/cognitive-services/computer-vision/
 * https://customvision.ai
 * https://lutzroeder.github.io/netron/
 
-## Download image files to local machine
+## <a name="download-image-files-to-local-machine"></a>Baixar arquivos de imagem para o computador local
 
-Download "CV Training Images.zip" to your local machine, and expand the zip
-file. This will create a folder "CV Training Images" with the following
-subfolders:
+Baixe "Imagens de Treinamento de CV.zip" em seu computador local e expanda o arquivo zip. Isso criará uma pasta "Imagens de Treinamento de CV" com as seguintes subpastas:
 
-* drills
-* hammers
-* hard hats
-* pliers
-* screwdrivers
+* furadeiras
+* martelos
+* capacetes
+* alicate
+* chaves de fenda
 
-These images will be used to test the Computer Vision service and create a model
-with the Custom Vision service.
+Essas imagens serão usadas para testar o serviço de Pesquisa Visual Computacional e criar um modelo com o serviço de Visão Personalizada.
 
-These images were sourced from Wikimedia Commons and used under their respective
-Creative Commons licenses. See the file [ATTRIBUTIONS.md](Attributions.md) for
-details.
+Essas imagens foram obtidas do Wikimedia Commons e usadas de acordo com suas respectivas licenças do Creative Commons. Consulte o arquivo [ATTRIBUTIONS.md](Attributions.md) para obter detalhes.
 
-Also download the folder "test images". These images will not be used in
-training, but will be used to test that our models are working.
+Baixe também a pasta "imagens de teste". Essas imagens não serão usadas no treinamento, e sim para testar se nossos modelos estão funcionando.
 
-## Next Step
+## <a name="next-step"></a>Próxima etapa
 
-[Computer Vision](DEMO%20Computer%20Vision.md)
+[Pesquisa Visual Computacional](DEMO%20Computer%20Vision.md)

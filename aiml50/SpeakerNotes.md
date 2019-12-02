@@ -1,211 +1,211 @@
-# Speaker Notes
+# <a name="speaker-notes"></a>Notas do palestrante
 
-## Slides
+## <a name="slides"></a>Slides
 
-* Slide: # 1
+* Slide 1
 
-* Slide: # 2
-  * Machine Learning and DevOps are two hot buzzwords at the moment. Machine Learning is becoming more accessible to more organisations, but with that increased accessibility comes the need to manage our ML projects the same way we do the rest of our software.
-  * MLOps, Machine Learning Operations, or DevOps for Machine Learning is the confluence of DevOps and Machine Learning, and that's what we're going to examine today.
+* Slide 2
+  * O Machine Learning e o DevOps são dois termos em voga atualmente. O Machine Learning está se tornando mais acessível para mais organizações. Porém, junto com essa maior acessibilidade, vem a necessidade de gerenciar nossos projetos de ML da mesma forma que fazemos com o restante do nosso software.
+  * MLOps, Operações de Machine Learning ou DevOps para Machine Learning é a confluência do DevOps e do Machine Learning, e é isso que vamos examinar hoje.
 
-* Slide: # 3
-  * Before we get started, feel free to take a screenshot of this slide. You'll find this deck and all of the resources used in this presentation by visiting these links.
+* Slide 3
+  * Antes de começarmos, fique à vontade para fazer uma captura de tela deste slide. Para encontrar este conjunto de slides e todos os recursos usados nesta apresentação, acesse estes links.
 
-* Slide: # 4
-  * When programming, we solve a problem by writing an algorithm
-  * We run data (or input) through that algorithm and get an answer
-  * Importantly, we know (or can work out) how to solve that problem
-  * What happens when we don’t know what that algorithm looks like? E.g. is there a bird in the photo, or what is the probability that an applicant will default on a loan?
+* Slide 4
+  * Durante a programação, resolvemos um problema escrevendo um algoritmo
+  * Fazemos com que dados (ou uma entrada) sejam submetidos a esse algoritmo e obtemos uma resposta
+  * O mais importante é que sabemos (ou podemos descobrir) como resolver esse problema
+  * O que acontece quando não sabemos qual é a aparência desse algoritmo? Por exemplo, será que há um pássaro na foto? Qual é a probabilidade de um candidato não cumprir o pagamento de um empréstimo?
 
-* Slide: # 5
-  * These are the problems machine learning is good at
-  * With machine learning, we solve these problems by flipping it around and providing a whole lot of examples of correct answers and corresponding input, and let the computer decide what that algorithm is
+* Slide 5
+  * Estes são os problemas que o aprendizado de máquina é bom em resolver
+  * Com o aprendizado de máquina, resolvemos esses problemas invertendo a perspectiva e fornecendo muitos exemplos de respostas corretas e entradas correspondentes, deixando que o computador decida qual é o algoritmo
 
-* Slide: # 6
-  * What we’re doing is letting the computer build a “model” to describe that data
+* Slide 6
+  * O que estamos fazendo é deixar o computador criar um "modelo" para descrever esses dados
 
-* Slide: # 7
-  * What’s great about this, is we can use that model in place of the algorithm we would have written, had we known how.
+* Slide 7
+  * A parte ótima disso é que podemos usar esse modelo no lugar do algoritmo que teríamos escrito, se soubéssemos como fazer isso.
 
-* Slide: # 8
-  * By using the model, we can get predictions
-  * Note: these are predictions - not answers the way we’d think of it
-  * The quality and accuracy of those predictions depends on the techniques and algorithms we used to train the model, and importantly - the data we used to train the model
-  * If you’re using biased data to train the model, you’ll get a biased model
+* Slide 8
+  * Usando o modelo, podemos obter previsões
+  * Observação: tratam-se de previsões, não de respostas dentro do conceito que teríamos
+  * A qualidade e a precisão dessas previsões dependem das técnicas e dos algoritmos que usamos para treinar o modelo e dos dados que usamos para treinar o modelo, os quais têm um papel importante
+  * Se você estiver usando dados com desvio para treinar o modelo, obterá um modelo com desvio
 
-* Slide: # 9
-  * [See Demo #1](./demos/1-Show_Faulty_Prediction.md)
+* Slide 9
+  * [Veja a demonstração nº 1](./demos/1-Show_Faulty_Prediction.md)
 
-* Slide: # 10
-  * Let’s talk about the work that happens when creating a predictive model
-  * Usually, there’s some data discovery, transformation, and preparation… some building of a model and training using that data… then an evaluation of the suitability of that model
-  * This is a highly iterative, experimental process that might mean going back to the drawing board many times over, over a long period of time.
-  * When it’s time to actually deploy a model, it’s often similar to the way we used to do software – package it up, and let the developers or operations team deploy it somehow
+* Slide 10
+  * Vamos falar sobre o trabalho que é realizado ao criar um modelo preditivo
+  * Normalmente, há descoberta de dados, transformação e preparação… um pouco de criação de modelo e treinamento usando esses dados… em seguida, uma avaliação da adequação do modelo
+  * Esse é um processo experimental altamente iterativo que pode significar vários retornos à prancheta, por um longo período.
+  * Quando é hora de realmente implantar um modelo, isso geralmente ocorre de maneira semelhante a como usamos o software – empacote-o e permita que os desenvolvedores ou a equipe de operações o implantem de alguma maneira
 
-* Slide: # 11
-  * The creation process often happens on a data scientist’s machine, or shared hardware for intensive training
-  * And deployment quite often happens by passing USB drives around, or even by email.
+* Slide 11
+  * O processo de criação geralmente ocorre no computador de um cientista de dados ou em hardware compartilhado para treinamento intensivo
+  * E, muitas vezes, a implantação acontece por meio do compartilhamento de unidades USB ou até mesmo por email.
 
-* Slide: # 12
-  * Let’s contrast this to a good devops process where we plan, develop and test, release to test then production environments, then monitor what happens in production…
-  * But is DevOps just for software development? The algorithms we spoke about at the start?
+* Slide 12
+  * Vamos comparar isso com um bom processo de DevOps em que planejamos, desenvolvemos e testamos e, por fim, lançamos para testar os ambientes de produção, depois monitoramos o que acontece na produção…
+  * Mas o DevOps é apenas para o desenvolvimento de software? E quanto aos algoritmos sobre os quais falamos no início?
 
-* Slide: # 13
-  * Let’s look at Microsoft’s definition of DevOps (read it).
-  * The most important word here is “value”. DevOps is not about code or bug fixes, it’s about continuously delivering value.
-  * If you have a predictive model, and you can make that model better – that is absolutely valuable.
-  * So this definition doesn’t exclude ML.
-  * Let’s look at a product that can help.
+* Slide 13
+  * Vejamos a definição do DevOps pela Microsoft (leia).
+  * A palavra mais importante aqui é "valor". O DevOps não é focado em correções de código ou de bug, mas sim em fornecer valor continuamente.
+  * Se você tiver um modelo preditivo e puder melhorar esse modelo, isso será algo absolutamente valioso.
+  * Portanto, essa definição não exclui o ML.
+  * Vejamos um produto que pode ajudar.
 
-* Slide: # 14
+* Slide 14
 
-* Slide: # 15
-  * Azure Machine Learning Service is a set of services for helping your MLOps (or DevOps for ML) efforts.
-  * You can get to it by going to ml.azure.com
-  * Let’s drill into a few of the things it helps you manage
+* Slide 15
+  * O serviço do Azure Machine Learning é um conjunto de serviços para auxiliar em seus esforços de MLOps (ou DevOps para ML).
+  * Você pode acessá-lo em ml.azure.com
+  * Vamos analisar mais a fundo algumas das atividades que ele ajuda você a gerenciar
 
-* Slide: # 16
-  * Just list and describe as per the individual points
+* Slide 16
+  * Apenas listar e descrever de acordo com os pontos individuais
 
-* Slide: # 17
-  * We’re going to focus for the moment on Pipelines. Pipelines are workflows for training our models, and we want to build one so we can have a repeatable way to build our predictive model.
+* Slide 17
+  * No momento, vamos nos concentrar nos Pipelines. Pipelines são fluxos de trabalho para treinar nossos modelos, e queremos criar um desses fluxos para que possamos ter uma maneira reproduzível de criar nosso modelo de previsão.
 
-* Slide: # 18
-  * You may have heard of Azure Pipelines, but it’s important to note these are different products.
-  * We’ll talk about the differences in a minute, but at a high level, ML pipelines are good for training workflows, and Azure Pipelines are good for orchestration. They have different focuses.
+* Slide 18
+  * Você pode ter ouvido falar do Azure Pipelines, mas é importante observar que se tratam de produtos diferentes.
+  * Falaremos sobre as diferenças em breve, mas, de modo geral, os Pipelines de ML são ideais para treinamento de fluxos de trabalho e o Azure Pipelines é bom para orquestração. Eles têm focos diferentes.
 
-* Slide: # 19
-  * What’s the difference? Why use both?
+* Slide 19
+  * Qual é a diferença? Por que usar os dois?
 
-* Slide: # 20
-  * ML Pipelines are designed for ML-specific workflows.
-  * Unattended runs – ML training can be very long-running, and ML pipelines can handle that extremely well
-  * Reusability – individual steps in a workflow can be resource intensive, and may not need to be run every time. If your data prep step doesn’t need to be run again, you can just reuse the output from last time.
-  * Tracking… - Everything that’s stored is focused on ML, rather than building general software
+* Slide 20
+  * Os Pipelines do ML são projetados para fluxos de trabalho específicos de ML.
+  * Execuções autônomas – o treinamento de ML pode ser muito demorado, e os Pipelines do ML podem lidar com isso muito bem
+  * Capacidade de reutilização – as etapas individuais em um fluxo de trabalho podem consumir muitos recursos e talvez não precisem ser executadas todas as vezes. Se a etapa de preparação de dados não precisar ser executada novamente, você poderá simplesmente reutilizar a saída obtida na última vez.
+  * Acompanhamento… – tudo o que está armazenado é focado em ML, e não na criação de software em geral
 
-* Slide: # 21
-  * By contrast, Azure Pipelines are really designed for CI/CD
-  * Gates… - They’re a great place to build in quality and checks and balances
-  * Integration – with other applications, artifacts, and dependencies
-  * Triggers – You way want to trigger orchestration for any number of reasons
+* Slide 21
+  * Por outro lado, o Azure Pipelines é, na realidade, projetado para CI/CD
+  * Portões… – são um ótimo lugar para aumentar a qualidade, fazer verificações e ajustes
+  * Integração – com outros aplicativos, artefatos e dependências
+  * Gatilhos – você pode querer disparar a orquestração por vários motivos
 
-* Slide: # 22
-  * While we’re building a pipeline, we’re really using most of these services
+* Slide 22
+  * Quando criamos um pipeline, usamos a maioria destes serviços
 
-* Slide: # 23
-  * Using Datasets or Datastores for training data, running an Experiment to train using managed Compute, then ending up with a Model.
-  * We will deploy that model, but let’s come back to that.
+* Slide 23
+  * Usar Conjuntos de dados ou Armazenamentos de dados para treinar dados, realizar um Experimento para treinar usando a Computação gerenciada e terminar com um Modelo.
+  * Implantaremos esse modelo, mas vamos voltar para isso.
 
-* Slide: # 24
-  * [See Demo #2](./demos/2-Build_a_Pipeline_With_Notebooks.md)
+* Slide 24
+  * [Veja a demonstração nº 2](./demos/2-Build_a_Pipeline_With_Notebooks.md)
 
-* Slide: # 25
-  * So here’s what we built – the AML pipeline
-  * Data prep
+* Slide 25
+  * Aqui está o que criamos, o pipeline do AML
+  * Preparação de dados
 
-* Slide: # 26
-  * Training step
+* Slide 26
+  * Etapa de treinamento
 
-* Slide: # 27
-  * Registration of the model
+* Slide 27
+  * Registro do modelo
 
-* Slide: # 28
-  * We also made use of a Dataset (or data source), and compute
+* Slide 28
+  * Também usamos um Conjunto de dados (ou fonte de dados) e a computação
 
-* Slide: # 29
-  * But let’s talk about working on a team for the moment.
+* Slide 29
+  * Mas vamos falar sobre como trabalhar em equipe por enquanto.
 
-* Slide: # 30
-  * Some of the good DevOps practices we use in software development can also apply for ML projects – let’s talk about them.
+* Slide 30
+  * Algumas de melhores práticas do DevOps que usamos para o desenvolvimento de software também podem se aplicar a projetos de ML, vamos descrevê-las.
 
-* Slide: # 31
-  * Jupyter Notebook files contain not just the input, but also the output. This can be confusing and make files difficult to merge. So we only want the input cells – the code that gets run.
-  * We also want to define everything in our pipeline (which we are)
-  * As well as infrastructure – like the compute – and any dependencies – python dependencies, libraries, etc.
-  * And maybe some data – not the whole lot (because there can be many PB in ML projects), but maybe enough to try some proofs of concept
+* Slide 31
+  * Os arquivos do Jupyter Notebook contêm não apenas a entrada, mas também a saída. Isso pode ser confuso e dificultar a mesclagem dos arquivos. Portanto, só queremos as células de entrada, o código que é executado.
+  * Também queremos definir tudo em nosso pipeline (o que estamos fazendo)
+  * Assim como a infraestrutura — como a computação — e quaisquer dependências, dependências de Python, bibliotecas etc.
+  * E, talvez, alguns dados — não todo o lote (porque pode haver muitos PB em projetos de ML), mas o suficiente para experimentar provas de conceito
 
-* Slide: # 32
-  * A known shared data source means every data scientist is training against the same training data… and that training data is also being used to produce models
+* Slide 32
+  * Uma fonte de dados compartilhada significa que todos os cientistas de dados estão treinando em relação aos mesmos dados de treinamento… e que os dados de treinamento também estão sendo usados para produzir modelos
 
-* Slide: # 33
-  * Let’s talk about CI. We want to:
-  * Know when code changes in our source repository
-  * Refresh then execute our AML Pipeline if we’ve change the way we’re training
-  * We also want to check code quality – it’s code, so we want tests, linting, etc.
-  * We can also add PR processes to ensure code still compiles before merging into master (and kicking off a potentially expensive training job!)
-  * If you want to know more about Azure DevOps, go here.
+* Slide 33
+  * Vamos falar sobre a integração contínua. Queremos:
+  * Saber quando o código muda em nosso repositório de dados
+  * Atualizar e executar nosso Pipeline do AML se alterarmos a forma como treinamos
+  * Também queremos verificar a qualidade do código — é um código, por isso, queremos testar, fazer lint etc.
+  * Também podemos adicionar processos de PR para garantir que o código ainda esteja de acordo, antes de mesclar no mestre (e iniciar um trabalho de treinamento potencialmente caro!)
+  * Se você quiser saber mais sobre o Azure DevOps, acesse aqui.
 
-* Slide: # 34
-  * The important point is – this is all code and software. The quality of your code matters even if it’s not what you’re used to writing!
+* Slide 34
+  * O ponto importante é: tudo se trata de código e software. A qualidade do código é importante, ainda que ele não seja o que você está acostumado a escrever!
 
-* Slide: # 35
-  * [See Demo #3](./demos/3-Show_The_Build_And_Release.md)
+* Slide 35
+  * [Veja a demonstração nº 3](./demos/3-Show_The_Build_And_Release.md)
 
-* Slide: # 36
-  * But we still haven’t deployed anything – we have a newly trained model, so how do we deploy?
-  * AML Service has the ability to take a model and deploy it to ACI or AKS – we are going to make use of it, but not directly from the UI here.
+* Slide 36
+  * Mas ainda não implantamos nada — temos um modelo recém-treinado, como implantá-lo?
+  * O Serviço do AML consegue pegar um modelo e implantá-lo no ACI ou no AKS — vamos usá-lo, mas não diretamente na interface do usuário aqui.
 
-* Slide: # 37
-  * We could just add another step to the AML pipeline, but we don’t want to do that – we want a bit more control over our deployment.
+* Slide 37
+  * Poderíamos adicionar outra etapa ao pipeline do AML, mas não queremos fazer isso — queremos ter um pouco mais de controle sobre a implantação.
 
-* Slide: # 38
-  * Continuous Delivery can absolutely be applied to ML.
-  * We’re going to use Azure Pipelines for our Continuous Delivery.
-  * When a new model is registered, we’ll kick off our deployment
-  * With Azure Pipelines, We can deploy to test and staging sites before putting our new model live
-  * We can run tests in pre-prod environments
-  * Importantly – what we’re doing is controlling our rollout using the same techniques we use for the rest of our software.
+* Slide 38
+  * A Entrega Contínua pode ser aplicada ao ML.
+  * Vamos usar o Azure Pipelines para nossa Entrega Contínua.
+  * Quando um novo modelo for registrado, iniciaremos nossa implantação
+  * Com o Azure Pipelines, podemos fazer a implantação em locais de teste e de preparo antes de ativar nosso novo modelo
+  * Podemos executar testes em ambientes de pré-produção
+  * É importante destacar que o que estamos fazendo é controlar a distribuição usando as mesmas técnicas que usamos para os demais softwares.
 
-* Slide: # 39
-  * Don’t just put new models in production – you wouldn’t do it with the rest of your software, why do it with your ML?
+* Slide 39
+  * Não basta colocar seus novos modelos em produção — você não faria isso com seus outros softwares, por que fazer com seu ML?
 
-* Slide: # 40
-  * Here’s what we’ve created:
-  * A pipeline for training, which is an AML pipeline – specific to training our model
-  * When we get a new model, we kick off a deployment pipeline in Azure DevOps
-  * Deploy to ACI, run some tests, then if all is well, maybe deploy to AKS
+* Slide 40
+  * Veja o que criamos:
+  * Um pipeline para treinamento, que é um pipeline do AML, específico para treinar nosso modelo
+  * Quando obtemos um novo modelo, iniciamos um pipeline de implantação no Azure DevOps
+  * Implante no ACI, faça alguns testes e, se tudo estiver certo, implante no AKS
 
-* Slide: # 41
-  * Just like the rest of our software, we don’t want to put our model in production and leave it there, assuming it will always work.
-  * So we need a retraining strategy.
-  * Either periodically, or when the data is different enough in production that we’re not getting the results we want.
-  * Azure ML Service has a solution for this
+* Slide 41
+  * Assim como fazemos com nossos outros softwares, não queremos simplesmente colocar nosso modelo em produção e abandoná-lo, pressupondo que ele sempre funcionará.
+  * Por isso, precisamos de uma estratégia de retreinamento.
+  * Seja periodicamente ou quando os dados forem muito diferentes na produção e não estivermos obtendo os resultados desejados.
+  * O Serviço do Azure Machine Learning tem a solução para isso
 
-* Slide: # 42
-  * When we train, we can do so from a known training data set
-  * When we ultimately deploy a model to production, we can store the inputs into another dataset – our inference dataset
+* Slide 42
+  * Podemos realizar os treinamentos usando um conjunto de dados de treinamento conhecido
+  * Quando implantamos um modelo para produção, podemos armazenar as entradas em outro conjunto de dados — o conjunto de dados da nossa interface
 
-* Slide: # 43
-  * Periodically, AML Service will let us compare these two data sets looking for “data drift”. If what we’re seeing in production drifts too much from what we trained our model on, we can kick off a new training process to produce a new model.
-  * This can be done automatically
+* Slide 43
+  * Periodicamente, o Serviço do Azure Machine Learning nos permite comparar esses dois conjuntos de dados em relação ao "descompasso de dados". Se o que você estiver vendo na produção for muito diferente daquilo para o que treinamos nosso modelo, poderemos iniciar um novo processo de treinamento para produzir um novo modelo.
+  * Isso pode ser feito automaticamente
 
-* Slide: # 44
-  * Of course, if we change our code, we also want to change our training pipeline, which is what we saw today.
+* Slide 44
+  * Obviamente, caso alteremos nosso código, também convém alterar o pipeline de treinamento, como vimos hoje.
 
-* Slide: # 45
-  * Importantly, this is just an example – we’re deploying our model to containers, but maybe we want to embed the models into our software
-  * Or maybe we’re not using AML at all – maybe we’re using different cognitive services – and they all have great APIs that Azure Pipelines can talk to.
-  * Ultimately, Azure Pipelines can orchestrate anything, so whatever set of tools you’re using, you can use it to manage your training.
+* Slide 45
+  * É importante lembrar que este é apenas um exemplo, estamos implantando o modelo para contêineres, mas talvez queiramos inserir os modelos no nosso software
+  * Ou, talvez, não estejamos usando o AML, talvez estejamos usando serviços cognitivos diferentes e todos eles tenham excelentes APIs com as quais o Azure Pipelines consegue se comunicar.
+  * Por fim, o Azure Pipelines pode organizar qualquer coisa, portanto, seja qual for o conjunto de ferramentas que você esteja usando, você pode usá-lo para gerenciar seu treinamento.
 
-* Slide: # 46
-  * In summary
+* Slide 46
+  * Em resumo
 
-* Slide: # 47
+* Slide 47
 
-* Slide: # 48
+* Slide 48
 
-* Slide: # 49
+* Slide 49
 
-* Slide: # 50
-  * You can find more resources and source code at these links
+* Slide 50
+  * Veja mais recursos e códigos-fonte nestes links
 
-* Slide: # 51
-  * You can also check our certification to become Microsoft Certified Azure Data Scientist Associate and/or Microsoft Certified Azure AI Engineer Associate
+* Slide 51
+  * Confira também nossa certificação para se tornar um Cientista de Dados Associado com Certificação do Microsoft Azure e/ou um Engenheiro de IA Associado com Certificação do Microsoft Azure
 
-* Slide: # 52
-  * For the first time, Microsoft is offering FREE certification exams to all event attendees. You can take advantage of this for any Fundamentals or Role-based Certifications.
-  * The offer is for one free exam and it’s valid for up to 6 months post-event.
-  * You can utilize this at our onsite testing in the event expo hall or use it post-event using the same email address used to sign up for the event. (Gov. Officials are not eligible)
-  * Expect an email with details after the show for those of you who have opted-in to receive promotional email from Microsoft.
+* Slide 52
+  * Pela primeira vez, a Microsoft está oferecendo exames de certificação GRATUITOS para todos os participantes do evento. Aproveite isso para todas as certificações de Conceitos básicos ou Baseadas em funções.
+  * A oferta destina-se a um exame gratuito e é válida por até 6 meses após o evento.
+  * Use-a em nosso teste no local no salão de exposição do evento ou após o evento usando o mesmo endereço de email da inscrição no evento. (Oficiais do governo não são qualificados para participar.)
+  * Aqueles que optaram por receber emails promocionais da Microsoft receberão um email com detalhes após a apresentação.
 
-* Slide: # 53
+* Slide 53

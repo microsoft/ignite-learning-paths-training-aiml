@@ -1,9 +1,9 @@
-## Demo 5
+## <a name="demo-5"></a>Demonstração 5
 
-[![Demo 5](images/demo4.png)](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/videos/Demo5.mp4 "Demo 5")
+[![Demonstração 5](images/demo4.png)](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/videos/Demo5.mp4 "Demonstração 5")
 
-## Summary
-In this exercise we explore the data pushed into the Knowledge Store by the Skillset created in the [previous exercise](demo4.md). This projection was part of the `Skillset` definition in the `Create Skillset` PUT request executed in previously. The portion of what was submitted to the service is as follows:
+## <a name="summary"></a>Resumo
+Neste exercício, exploraremos os dados enviados por push para o repositório de conhecimento pelo conjunto de habilidades criado no [exercício anterior](demo4.md). Essa projeção era parte da definição de `Skillset` na solicitação PUT de `Create Skillset` executada anteriormente. A parte enviada para o serviço é a seguinte:
 
 ```json
 "knowledgeStore": { 
@@ -18,9 +18,9 @@ In this exercise we explore the data pushed into the Knowledge Store by the Skil
     }]
 }
 ```
-This used the `storageConnectionString` as the target of the projections. In this case it uses the Azure Storage tables that are part of our storage service in order to save the data.
+Ele usou `storageConnectionString` como o destino das projeções. Nesse caso, ele usa as tabelas do Armazenamento do Azure que fazem parte do nosso serviço de armazenamento a fim de salvar os dados.
 
-## What to do
-The only thing left to do is explore how the indexer used the skillset to project the data into our knowledge store. This can be done using the Microsoft [Azure Storage Explorer](https://docs.microsoft.com/en-us/azure/vs-azure-tools-storage-explorer-blobs?WT.mc_id=msignitethetour2019-github-aiml10):
+## <a name="what-to-do"></a>O que fazer
+Só o que resta a fazer é explorar como o indexador usou o conjunto de habilidades para projetar os dados em nosso repositório de conhecimento. Isso é possível com o [Gerenciador de Armazenamento do Microsoft Azure](https://docs.microsoft.com/en-us/azure/vs-azure-tools-storage-explorer-blobs?WT.mc_id=msignitethetour2019-github-aiml10):
 
-![Knowledge Store](images/knowledge_store.png "Knowledge Store")
+![Repositório de conhecimento](images/knowledge_store.png "Repositório de Conhecimento")

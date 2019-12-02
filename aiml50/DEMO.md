@@ -1,53 +1,53 @@
-# AIML50 - Demonstration Setup Instructions
+# <a name="aiml50---demonstration-setup-instructions"></a>AIML50 – Instruções de Instalação da Demonstração
 
-## Create Demonstration Environment
+## <a name="create-demonstration-environment"></a>Criar Ambiente de Demonstração
 
-[Video Walkthrough](https://youtu.be/C9WtOZaUoyA)
+[Tutorial em vídeo](https://youtu.be/C9WtOZaUoyA)
 
-### Prerequisites
+### <a name="prerequisites"></a>Pré-requisitos
 
-* An Azure subscription
-* An Azure DevOps organization that you have rights to add extensions to.
-  * A Personal Access Token(PAT) for that organization.
-* A GitHub account (to which you can fork this repository)
+* Uma assinatura do Azure
+* Uma organização do Azure DevOps à qual você tenha direitos para adicionar extensões.
+  * Um PAT (Token de Acesso Pessoal) para sua organização.
+* Uma conta do GitHub (na qual você poderá bifurcar este repositório)
 
-### Fork the repository
+### <a name="fork-the-repository"></a>Bifurcar o repositório
 
-In GitHub, [create a fork](https://help.github.com/en/github/getting-started-with-github/fork-a-repo) of this repository under a user or organization of which you have control.  You will need permissions to connect the GitHub repo to Azure DevOps.
+No GitHub, [crie uma bifurcação](https://help.github.com/en/github/getting-started-with-github/fork-a-repo) deste repositório em um usuário ou uma organização da qual tenha controle.  Será necessário obter permissões para conectar o repositório do GitHub ao Azure DevOps.
 
-### Deploy the Template
+### <a name="deploy-the-template"></a>Implantar o modelo
 
-This environment can be deployed via the "Deploy to Azure" link below (or you can use Azure PowerShell or Azure CLI).  You will need an Azure subscription and the available quotas in a region to deploy:
+Este ambiente pode ser implantado por meio do link abaixo "Implantar no Azure" (ou será possível usar o Azure PowerShell ou a CLI do Azure).  Será necessário ter uma assinatura do Azure e as cotas disponíveis em uma região para implantação:
 
-* Azure SQL Databases
-* Cosmos DB Databases
-* Azure App Services
-* Azure Machine Learning Services
+* Bancos de Dados SQL do Azure
+* Bancos de Dados Cosmos DB
+* Serviços de Aplicativo do Azure
+* Serviços do Azure Machine Learning
 
-You will be prompted to select an Azure subscription and resource group (you can create a resource group at that time).
+Será solicitado que você selecione uma assinatura do Azure e um grupo de recursos (será possível criar um grupo de recursos nesse momento).
 
-You will also be asked for an event identifier (or reason for spinning up the environment) which will be used to help name the resources.  Shorter is better.
+Também será solicitado que você forneça um identificador de evento (ou o motivo para a rotação do ambiente) que será usado para ajudar a nomear os recursos.  Quanto mais curto, melhor.
 
-You will need to provide a database username and password for the Azure SQL instance.
+Será necessário fornecer um nome de usuário e senha do banco de dados para a instância SQL do Azure.
 
 <a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3a%2f%2fraw.githubusercontent.com%2fmicrosoft%2fignite-learning-paths-training-aiml%2fmaster%2faiml50%2ftemplate%2fazuredeploy.json" target="_blank">
     <img src="http://azuredeploy.net/deploybutton.png"/>
 </a>
 
-The deployment takes roughly 30 to 40 minutes.
+A implantação leva aproximadamente de 30 a 40 minutos.
 
-Once the deployment is underway (at least with the Azure Machine Learning service created and the bootstrap-container Azure Container instance has run to completion), you can finish setting up the Azure DevOps environment.  Most of the environment will be configured, but there are a few manual steps.
+Depois que a implantação estiver em andamento (ao menos com o serviço do Azure Machine Learning criado e quando a instância de Contêiner do Azure de contêiner de inicialização tiver sido executada até a conclusão), será possível concluir a configuração do ambiente do Azure DevOps.  A maior parte do ambiente será configurada, mas existem algumas etapas manuais.
 
-### Set up Azure Notebooks
+### <a name="set-up-azure-notebooks"></a>Configurar o Azure Notebooks
 
-* Navigate to [Azure Notebooks](https://notebooks.azure.com/) and sign in with the Microsoft account that you are demoing with.
-* Add a new project.  You can either import directly from GitHub (the main repository or your fork) or upload the `aiml50/source` directory directly.
-* In the `aiml50/source` directory in the Azure Notebook, create a json file named `azureml-config` with:
-  * Your subscription ID
-  * The resource group name that contains the ML workspace
-  * The workspace name
+* Navegue até o [Azure Notebooks](https://notebooks.azure.com/) e entre com a conta Microsoft com a qual você está usando a demonstração.
+* Adicione um novo projeto.  É possível importar diretamente do GitHub (o repositório principal ou sua bifurcação) ou ainda carregar o diretório `aiml50/source` diretamente.
+* No diretório `aiml50/source` no Azure Notebook, crie um arquivo json chamado `azureml-config` com:
+  * Sua ID da assinatura
+  * O nome do grupo de recursos que contém o workspace do ML
+  * O nome do workspace
 
-Example:
+Exemplo:
 
 ```
 {
@@ -57,83 +57,83 @@ Example:
 }
 ```
 
-* Click on (which will open in a new tab)
+* Clique em ativado (que será aberto em uma nova guia)
   * `setup_pipeline.ipynb`
 
-#### seer_pipeline.ipynb
+#### <a name="seer_pipelineipynb"></a>seer_pipeline.ipynb
 
-* Ensure the kernel is set to Python 3.6
-* Set your storage account key
-* edit Step 4 and set your storage account name
-* Start to run the individual steps.  You will need to authenticate to azure (follow the prompts in the notebook). Remember to let individual steps finish before starting the next one.
+* Verifique se o kernel está definido como Python 3.6
+* Defina sua chave de conta de armazenamento
+* Edite a etapa 4 e defina o nome da conta de armazenamento
+* Comece a executar as etapas individuais.  Será necessário se autenticar no Azure (siga os prompts no notebook). Lembre-se de permitir que etapas individuais sejam concluídas antes de iniciar a próxima.
 
-### Setup the Azure DevOps Project
+### <a name="setup-the-azure-devops-project"></a>Configurar o projeto do Azure DevOps
 
-Next, navigate to the AIML50 project that was created in the Azure DevOps Organization you specified to to the deployment template.
+Em seguida, navegue até o projeto AIML50 que foi criado na organização do Azure DevOps especificada para o modelo de implantação.
 
-#### Create the Service Connections
+#### <a name="create-the-service-connections"></a>Criar as Conexões de Serviço
 
-From the project page, navigate to the project settings.
+Na página do projeto, navegue até as configurações do projeto.
 
 ![0-azure_devops_org](./images/0-azure_devops_org.png)
 ![1-azure_devops_project](./images/1-azure_devops_project.png)
 
-Select `Service Connections` under `Pipelines`.
+Selecione `Service Connections` em `Pipelines`.
 
 ![2-azure_devops_project_settings](./images/2-azure_devops_project_settings.png)
 
-Add two service connections:
+Adicionar duas conexões de serviço:
 
-* First connection `aiml50`
-  * Type: Azure Resource Manager
-  * Connection name: `aiml50`
-    * Name of the service connection. This needs to match, as it is already set in the build.
-  * Scope level: `Subscription`
-    * Scope of authorization for the service principal. For this one, set it to `subscription`.
-  * Subscription: `Ignite The Tour`
-    * The subscription you deployed the demo environment to. This may be different than the example above. You can pick subscriptions from the dropdown based on the user with which you logged in to Azure DevOps.
-  * Resource Group: `aiml50` or blank
-    * You can constrain the credentials to the resource group that you have deployed into or allow it rights across the subscription.
+* Primeira conexão `aiml50`
+  * Tipo: Azure Resource Manager
+  * Nome da conexão: `aiml50`
+    * Nome da conexão de serviço. Isso precisa corresponder, pois já está definido no build.
+  * Nível de escopo: `Subscription`
+    * Escopo de autorização para a entidade de serviço. Para isso, defina-o como `subscription`.
+  * Assinatura: `Ignite The Tour`
+    * A assinatura na qual você implantou o ambiente de demonstração. Isso pode ser diferente do exemplo acima. É possível escolher as assinaturas na lista suspensa com base no usuário com o qual fez logon no Azure DevOps.
+  * Grupo de recursos: `aiml50` ou em branco
+    * É possível restringir as credenciais para o grupo de recursos que você implantou ou permitir os direitos dele em toda a assinatura.
 
 ![4-azure_devops_service_connection](./images/4-azure_devops_service_connection.png)
 ![3-azure_devops_service_connection](./images/3-azure_devops_service_connection.png)
 
-* Second connection: `aiml50-workspace`
-  * Type: Azure Resource Manager
-  * Connection name: `aiml50`
-    * Name of the service connection. This needs to match, as it is already set in the build.
-  * Scope level: `AzureMLWorkspace`
-    * Scope of authorization for the service principal. This will be required for the release.
-  * Subscription: `Ignite The Tour`
-    * The subscription you deployed the demo environment to. This may be different than the example above. You can pick subscriptions from the dropdown based on the user with which you logged in to Azure DevOps.
-  * Resource Group: `aiml50`
-    * This should be the resource group with your Azure Machine Learning Workspace.
-  * Machine Learning Workspace: `aiml50demo`
-    * Your name will vary based on which event or qualifier you use to provision the environment.
+* Segunda conexão: `aiml50-workspace`
+  * Tipo: Azure Resource Manager
+  * Nome da conexão: `aiml50`
+    * Nome da conexão de serviço. Isso precisa corresponder, pois já está definido no build.
+  * Nível de escopo: `AzureMLWorkspace`
+    * Escopo de autorização para a entidade de serviço. Isso será necessário para o lançamento.
+  * Assinatura: `Ignite The Tour`
+    * A assinatura na qual você implantou o ambiente de demonstração. Isso pode ser diferente do exemplo acima. É possível escolher as assinaturas na lista suspensa com base no usuário com o qual fez logon no Azure DevOps.
+  * Grupo de Recursos: `aiml50`
+    * Esse deve ser o grupo de recursos em seu Workspace do Azure Machine Learning.
+  * Workspace do Machine Learning: `aiml50demo`
+    * Seu nome variará de acordo com o evento ou qualificador usado para provisionar o ambiente.
 
 ![5-azure_devops_service_connection_add](./images/5-azure_devops_service_connection_add.png)
 ![6-azure_devops_service_connection_detail](./images/6-azure_devops_service_connection_detail.png)
 
-#### Enable the Variable Group
+#### <a name="enable-the-variable-group"></a>Habilitar Grupo de Variáveis
 
-There is a variable group that was provisioned that has some shared values to be used by the build and release.  Pipeline access needs to be granted for the variable group.
+Existe um grupo de variáveis provisionado que tem alguns valores compartilhados a serem usados pelo build e pelo lançamento.  O acesso ao pipeline precisa ser concedido para o grupo de variáveis.
 
-* Navigate to Library (under Pipelines).
-* Select the `aiml50-demo` variable group.
-* Toggle `Allow access to all pipelines`
-* Save the variable group.
+* Navegue até a Biblioteca (nos Pipelines).
+* Selecione o grupo de variáveis `aiml50-demo`.
+* Alterne o `Allow access to all pipelines`
+* Salve o grupo de variáveis.
 
 ![7-azure_devops_library](./images/7-azure_devops_library.png)
 ![8-azure_devops_library_detail](./images/8-azure_devops_library_detail.png)
 
-#### Create the Build
+#### <a name="create-the-build"></a>Criar o Build
 
-Now, we need to create a build definition by pointing Azure DevOps to our build definition on GitHub.
+Precisamos criar agora uma definição de build apontando o Azure DevOps para nossa definição de build no GitHub.
 
-* Navigate to `Pipelines` (under Pipelines).
-* Select `New Pipeline`
-* Connect to your fork of the GitHub project [Ignite Learning Paths Training AI/ML](https://github.com/microsoft/ignite-learning-paths-training-aiml)
-* Choose to use the build definition from the repository (`aiml50/azure-pipelines.yml`)
+* Navegue até `Pipelines` (nos Pipelines).
+* Selecione `New Pipeline`
+* Conecte-se à bifurcação do projeto do GitHub [Roteiros de Aprendizagem de IA/ML de Treinamento da Ignite](https://github.com/microsoft/ignite-learning-paths-training-aiml)
+* Escolha usar a definição de build do repositório (`aiml50/azure-pipelines.yml`)
 
 ![9-azure_devops_pipeline_new](./images/9-azure_devops_pipeline_new.png)
 ![10-azure_devops_pipeline_new_source](./images/10-azure_devops_pipeline_new_source.png)
@@ -141,36 +141,36 @@ Now, we need to create a build definition by pointing Azure DevOps to our build 
 ![12-azure_devops_pipeline_select_build_definition](./images/12-azure_devops_pipeline_select_build_definition.png)
 ![13-azure_devops_pipeline_select_build_definition_location](./images/13-azure_devops_pipeline_select_build_definition_location.png)
 
-#### Run the Build
+#### <a name="run-the-build"></a>Executar o Build
 
-After the build is connected to the source repository, we need to run a build to create the Machine Learning pipeline and create a build artifact so we can finish setting up the release pipeline.
+Depois que o build estiver conectado ao repositório de origem, precisamos executar um build para criar o pipeline de Machine Learning e um artefato de compilação para que seja possível concluir a configuração do pipeline de lançamento.
 
-* Review the build definition and run the build. The build will complete in a few minutes, but it triggers a Machine Learning pipeline which can take about 20-40 minutes.
+* Examine a definição e execute o build. O build será concluído em alguns minutos, mas acionará um pipeline de Machine Learning que pode levar de 20 a 40 minutos.
 
 ![14-azure_devops_pipeline_review_build_definition](./images/14-azure_devops_pipeline_review_build_definition.png)
 ![15-azure_devops_pipeline_build_result](./images/15-azure_devops_pipeline_build_result.png)
 
-#### Update the Release
+#### <a name="update-the-release"></a>Atualizar o Lançamento
 
-After the Machine Learning pipeline finishes, we can update the release pipeline.
+Após a conclusão do pipeline do Machine Learning, podemos atualizar o pipeline de lançamento.
 
-* Navigate to `Releases` (under Pipelines).
-* Select `Release Seer` and choose `Edit`
-  * Select `Add an artifact`
-  * Set a `Source type` of `AzureML`
-  * Set the service endpoint to `aiml50-workspace`
-  * Set the Model Names to `seer`.  You will not be able to do this until the first ML Pipeline finishes.
-  * Click `Add`
-  * Click the lightning icon on the new artifact and enable the `Continuous deployment trigger`
-* Next, open the `Deploy to ACI` environment.
-* Click on `Agent Job`
-  * Set `Agent Pool` to `Azure Pipelines`
-  * Set `Agent Specification` to `ubuntu-18.04`
-* Click on `Download deployment and inferencing code`
-  * Set `Package name` to `seer_deployment`
-* Click on `Azure ML Model Deploy`
-  * Verify that Azure ML Workspace is set to either `$(subscription_workspace)` or `aiml-workspace`.
-* Save the pipeline and create a new release.
+* Navegue até `Releases` (nos Pipelines).
+* Selecione `Release Seer` e escolha `Edit`
+  * Selecione `Add an artifact`
+  * Defina um `Source type` de `AzureML`
+  * Defina o ponto de extremidade de serviço como `aiml50-workspace`
+  * Defina os Nomes de Modelo como `seer`.  Não será possível fazer isso até que o primeiro Pipeline de ML termine.
+  * Clique em `Add`
+  * Clique no ícone relâmpago no novo artefato e habilite o `Continuous deployment trigger`
+* Em seguida, abra o ambiente de `Deploy to ACI`.
+* Clique em `Agent Job`
+  * Defina `Agent Pool` como `Azure Pipelines`
+  * Defina `Agent Specification` como `ubuntu-18.04`
+* Clique em `Download deployment and inferencing code`
+  * Defina `Package name` como `seer_deployment`
+* Clique em `Azure ML Model Deploy`
+  * Verifique se o Workspace do Azure ML está definido para `$(subscription_workspace)` ou `aiml-workspace`.
+* Salve o pipeline e crie um novo lançamento.
 
 ![16-azure_devops_release_new](./images/16-azure_devops_release_new.png)
 ![17-azure_devops_release_edit](./images/17-azure_devops_release_edit.png)
@@ -181,15 +181,15 @@ After the Machine Learning pipeline finishes, we can update the release pipeline
 ![22-azure_devops_release_task_edit](./images/22-azure_devops_release_task_edit.png)
 ![23-azure_devops_release_task_verify](./images/23-azure_devops_release_task_verify.png)
 
-## Troubleshooting and Reference
+## <a name="troubleshooting-and-reference"></a>Solução de problemas e Referência
 
-### Checking the container deployment log
+### <a name="checking-the-container-deployment-log"></a>Verificar o log de implantação do contêiner
 
-In the provisioned resource group, navigate to the `bootstrap-container` container instance. From there, you can check the logs for the container, which will show the steps taken and any errors encountered.
+No grupo de recursos provisionado, navegue até a instância de contêiner `bootstrap-container`. Nela, é possível verificar os logs do contêiner que mostrarão as etapas executadas e os erros encontrados.
 
-### Provider registration
+### <a name="provider-registration"></a>Registro do provedor
 
-The Tailwind Traders application uses many Azure services. In some cases, if a service has not yet been used in your subscription, a provider registration may be needed. The following commands will ensure your subscription is capable of running the Tailwind Traders application.
+O aplicativo da Tailwind Traders usa vários serviços do Azure. Em alguns casos, se um serviço ainda não foi usado em sua assinatura, pode ser necessário obter um registro do provedor. Os comandos a seguir garantirão que sua assinatura seja capaz de executar o aplicativo da Tailwind Traders.
 
 ```
 az provider register --namespace Microsoft.OperationalInsights
@@ -201,7 +201,7 @@ az provider register --namespace Microsoft.Sql
 az provider register --namespace Microsoft.ContainerRegistry
 ```
 
-### Source Repositories
+### <a name="source-repositories"></a>Repositórios de Origem
 
 https://github.com/microsoft/TailwindTraders
 

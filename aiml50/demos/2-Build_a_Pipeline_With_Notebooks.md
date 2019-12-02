@@ -1,22 +1,22 @@
-# Build a Pipeline with Jupyter Notebooks
+# <a name="build-a-pipeline-with-jupyter-notebooks"></a>Criar um pipeline com Jupyter Notebooks
 
-## Talking Points
+## <a name="talking-points"></a>Pontos de discussão
 
-* Show the easy connection to a workspace, data source, and compute
-* Show each of the steps (you can largely ignore the python files)
-* Show the code that does the pipeline registration and submitting the experiment
+* Mostrar a conexão fácil a um workspace, fonte de dados e computação
+* Mostrar cada uma das etapas (você pode ignorar grande parte dos arquivos do Python)
+* Mostrar o código que faz o registro do pipeline e enviar o experimento
 
-## Demo
+## <a name="demo"></a>Demonstração
 
-* Show the Jupyter Notebook and that we can use this interactively to build these pipelines
-  * Walk through the steps in the already run through `seer_pipeline.ipynb` notebook
-* Show that we’re building a workflow with
-  * data prep,
-  * training,
-  * and registration steps
-* Show that we’re creating and submitting this pipeline in AML services
-  * Follow the link to the Azure Portal and details of the run.
+* Mostrar o Jupyter Notebook e que podemos usá-lo interativamente para criar esses pipelines
+  * Percorrer as etapas no bloco de anotações `seer_pipeline.ipynb` já executado
+* Mostrar que estamos criando um fluxo de trabalho com
+  * preparação de dados,
+  * treinamento
+  * e etapas de registro
+* Mostrar que estamos criando e enviando este pipeline nos serviços do AML
+  * Seguir o link para acessar o portal do Azure e os detalhes da execução.
 
-## Example Demo
+## <a name="example-demo"></a>Exemplo de demonstração
 
-* [Dry run starting at 17:41](https://youtu.be/UgM8_4fAni8?t=1061)
+* [A simulação é iniciada em 17:41](https://youtu.be/UgM8_4fAni8?t=1061)

@@ -1,50 +1,49 @@
-# AIML40 - Taking Models to the Next Level with Azure Machine Learning Best Practices
+# <a name="aiml40---taking-models-to-the-next-level-with-azure-machine-learning-best-practices"></a>AIML40 – Como levar os modelos para o próximo nível com as melhores práticas do Azure Machine Learning
 
-## Session Abstract
+## <a name="session-abstract"></a>Resumo da Sessão
 
-Artificial Intelligence and Machine Learning can be used in many ways to increase productivity of business processes and gather meaningful insights, by analyzing images, texts and trends within unstructured flows of data. While many tasks can be solved using existing models, in some cases it is also required to train your own model for more specific tasks, or for increased accuracy. 
+É possível usar a inteligência artificial e o Machine Learning de várias maneiras para aumentar a produtividade dos processos de negócios e reunir informações significativas ao analisar imagens, textos e tendências em fluxos de dados não estruturados. Embora muitas tarefas possam ser resolvidas usando modelos existentes, em alguns casos também é necessário treinar seu próprio modelo para tarefas mais específicas ou para aumentar a precisão. 
 
-In this session, we will explore the complete path of integrating text analysis intelligent services into the business processes of [Tailwind Traders](http://tailwindtraders.com), starting from pre-build models available as [cognitive services](https://azure.microsoft.com/services/cognitive-services/?WT.mc_id=msignitethetour2019-github-aiml40), up to training a third-party neural custom model for [Aspect-Based Sentiment Analysis](https://www.intel.ai/introducing-aspect-based-sentiment-analysis-in-nlp-architect/) availabe as part of [Intel NLP Architect](http://nlp_architect.nervanasys.com/) using [Azure Machine Learning Service](https://azure.microsoft.com/services/machine-learning-service/?wt.mc_id=msignitethetour2019-github-aiml40). We will talk about cases when one needs a custom model, and demonstrate quick ways to create such a model from scratch using [AutoML](https://docs.microsoft.com/azure/machine-learning/service/concept-automated-ml/?wt.mc_id=msignitethetour2019-github-aiml40), and show how to fine-tune model hyperparameters using [HyperDrive](https://docs.microsoft.com/en-us/azure/machine-learning/service/how-to-tune-hyperparameters/?wt.mc_id=msignitethetour2019-github-aiml40)
+Nesta sessão, vamos explorar o caminho completo da integração dos serviços inteligentes de análise de texto aos processos de negócios da [Tailwind Traders](http://tailwindtraders.com), começando pelos modelos pré-compilados disponíveis como [serviços cognitivos](https://azure.microsoft.com/services/cognitive-services/?WT.mc_id=msignitethetour2019-github-aiml40), até o treinamento de um modelo neural personalizado de terceiros para a [Análise de Sentimento com base em aspecto](https://www.intel.ai/introducing-aspect-based-sentiment-analysis-in-nlp-architect/) disponível como parte da [Intel NLP Architect](http://nlp_architect.nervanasys.com/) usando o [Serviço do Azure Machine Learning](https://azure.microsoft.com/services/machine-learning-service/?wt.mc_id=msignitethetour2019-github-aiml40). Falaremos sobre casos em que um modelo personalizado é necessário, demonstraremos maneiras rápidas de criar um modelo desse tipo a partir do zero usando o [AutoML](https://docs.microsoft.com/azure/machine-learning/service/concept-automated-ml/?wt.mc_id=msignitethetour2019-github-aiml40) e mostraremos como ajustar hiperparâmetros de modelo usando o [HyperDrive](https://docs.microsoft.com/en-us/azure/machine-learning/service/how-to-tune-hyperparameters/?wt.mc_id=msignitethetour2019-github-aiml40)
 
-## How To Use
+## <a name="how-to-use"></a>Como usar
 
-Welcome, Presenter! 
+Seja bem-vindo, apresentador! 
 
-We're glad you are here and look forward to your delivery of this amazing content. As an experienced presenter, we know you know *HOW* to present so this guide will focus on *WHAT* you need to present. It will provide you a full run-through of the presentation created by the presentation design team. 
+Estamos felizes por você estar aqui, animado para ver este conteúdo incrível. Como apresentador experiente, sabemos que você *SABE* fazer apresentações. Assim, este guia tem como foco *AQUILO* de que você precisa apresentar. Ele fornece a visualização completa da apresentação criada pela equipe de design da apresentação. 
 
-Along with the video of the presentation, this document will link to all the assets you need to successfully present including PowerPoint slides and demo instructions &
-code.
+Com o vídeo da apresentação, este documento será vinculado a todos os ativos de que você precisa para fazer uma apresentação de sucesso, incluindo slides do PowerPoint e códigos e instruções de demonstração.
 
-1.  Read document in its entirety.
-2.  Watch the video presentation
-3.  Ask questions of the Lead Presenter
+1.  Leia o documento por inteiro.
+2.  Assista à apresentação em vídeo
+3.  Faça perguntas ao apresentador principal
 
-## Assets in Train-The-Trainer kit
+## <a name="assets-in-train-the-trainer-kit"></a>Ativos no Kit Treinamento para Treinador
 
-- This guide
-- Public materials for AIML40 Session [here](http://github.com/microsoft/ignite-learning-paths/aiml/aiml40/) - this document contains a lot of relevant materials
-- PowerPoint presentation including notes for each slide [here](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml40/AIML40_Taking_Models_to_the_Next_Level_with_Azure_Machine_Learning_Best_Practices.pptx)
-- Full-length recording of presentation [here](https://youtu.be/If9IQm3gWVQ)
-- Individual recordings of stage-ready hands-on demos:
-    * Demo 1 - [Cognitive Services Text Analytics](https://youtu.be/QJxjm5BirOA)
-    * Demo 2 - [Automated Machine Learning](https://youtu.be/qrstXN6TLZk)
-    * Demo 3 - [Azure Machine Learning SDK and Hyperdrive](https://youtu.be/sccNTPO3PwU)
-- Demo Guide [here](Demo.md)
+- Este guia
+- Materiais públicos para a sessão AIML40 [aqui](http://github.com/microsoft/ignite-learning-paths/aiml/aiml40/) – este documento contém muitos materiais relevantes
+- Apresentação do PowerPoint, incluindo as observações para cada slide, [aqui](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml40/AIML40_Taking_Models_to_the_Next_Level_with_Azure_Machine_Learning_Best_Practices.pptx)
+- Gravação completa da apresentação [aqui](https://youtu.be/If9IQm3gWVQ)
+- Gravações individuais das demonstrações práticas de palco:
+    * Demonstração 1 – [Análise de texto de Serviços Cognitivos](https://youtu.be/QJxjm5BirOA)
+    * Demonstração 2 – [Aprendizado de máquina automatizado](https://youtu.be/qrstXN6TLZk)
+    * Demonstração 3 – [Hyperdrive e SDK do Azure Machine Learning](https://youtu.be/sccNTPO3PwU)
+- Guia da demonstração [aqui](Demo.md)
 
-## Become a Trained Presenter
+## <a name="become-a-trained-presenter"></a>Torne-se um apresentador treinado
 
-To become a *Trained Presenter*, contact [scalablecontent@microsoft.com](mailto:scalablecontent@microsoft.com). In your email please include:
+Para se tornar um *apresentador treinado*, entre em contato com [scalablecontent@microsoft.com](mailto:scalablecontent@microsoft.com). Em seu email, inclua:
 
-- Complete name:
-- The code of this presentation: \<Session Code (ex:aiml40)\>
-- Link (ex: unlisted YouTube video) to a video of you presenting (~10 minutes). 
+- Nome completo:
+- O código desta apresentação: \<Código da sessão (ex: aiml40)\>
+- Link (por exemplo: vídeo do YouTube não listado) para um vídeo de sua apresentação (aproximadamente 10 minutos). 
 
-> It doesn't need to be this content, the importance is to show your presenter skills
+> O conteúdo pode ser diferente deste; o importante é mostrar suas habilidades como apresentador
 
 
-## Trained Presenters
+## <a name="trained-presenters"></a>Apresentadores treinados
 
-Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+Agradecemos a estas pessoas maravilhosas ([chave de emoji](https://allcontributors.org/docs/en/emoji-key)):
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore -->
@@ -54,12 +53,12 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/aribornstein">
         <img src="https://avatars3.githubusercontent.com/u/3045407?s=460&v=4" width="100px;" alt="Ari Bornstein"/><br />
         <sub><b>Ari Bornstein</b></sub></a><br />
-            <a href="" title="talk">📢</a>
+            <a href="" title="palestra">📢</a>
     </td>
     <td align="center"><a href="https://github.com/shwars">
         <img src="https://avatars0.githubusercontent.com/u/2892110?s=460&v=4" width="100px;" alt="Dmitri Soshnikov"/><br />
         <sub><b>Dmitri Soshnikov</b></sub></a><br />
-            <a href="https://github.com/microsoft/ignite-learning-paths-training-aiml/pull/4" title="documentation">📖</a> 
+            <a href="https://github.com/microsoft/ignite-learning-paths-training-aiml/pull/4" title="documentação">📖</a> 
     </td>
 </tr></table>
 

@@ -1,137 +1,107 @@
-# Using pre-built AI to understand images
+# <a name="using-pre-built-ai-to-understand-images"></a>Como usar a IA pré-criada para entender imagens
 
-In this demonstration, we will use Azure Computer Vision to detect the type of
-object an image represents. 
+Nesta demonstração, usaremos a Pesquisa Visual Computacional do Azure para detectar o tipo de objeto que uma imagem representa. 
 
-First, we will use the Computer Vision online web-form to upload an image and
-observe the results.
+Primeiro, usaremos o formulário Web online da Pesquisa Visual Computacional para carregar uma imagem e observar os resultados.
 
-Then, we will use the Computer Vision API to collect the same information
-programatically, using curl.
+Em seguida, usaremos a API da Pesquisa Visual Computacional para coletar as mesmas informações de maneira programática, usando uma ondulação.
 
-## Defining the problem: Shop by Photo doesn't work right
+## <a name="defining-the-problem-shop-by-photo-doesnt-work-right"></a>Definição do problema: Comprar pela Foto não funciona bem
 
-The problem that motivates this talk is that the Shop by Photo tool in the
-Tailwind Traders website isn't correctly identifying products. It's useful to
-run this section in [ONNX Deployment](DEMO%20ONNX%20deployment.md#defining-the-problem-shop-by-photo-doesnt-work-right) at this point
-to set the scene.
+O problema que motiva essa conversa é que a ferramenta Comprar pela Foto no site da Tailwind Traders não está identificando os produtos corretamente. É útil executar agora esta seção na [Implantação do ONNX](DEMO%20ONNX%20deployment.md#defining-the-problem-shop-by-photo-doesnt-work-right) para definir a cena.
 
-## Using Computer Vision via the Web interface
+## <a name="using-computer-vision-via-the-web-interface"></a>Como usar a Pesquisa Visual Computacional por meio da interface da Web
 
-Let's try using computer vision on a picture of a hardware product. If we can
-identify a product that Tailwind Traders sells by name, we can search for that
-name in the catalog for the "Shop by Photo" app.
+Vamos tentar usar a pesquisa visual computacional em uma imagem de um produto de hardware. Se pudermos identificar um produto que a Tailwind Traders vende por nome, poderemos pesquisar esse nome no catálogo para o aplicativo "Comprar pela Foto".
 
-1. Visit the Computer Vision webpage at
-   [https://azure.microsoft.com/en-us/services/cognitive-services/computer-vision/](https://azure.microsoft.com/en-us/services/cognitive-services/computer-vision/?WT.mc_id=msignitethetour2019-github-aiml20)
+1. Visite a página da Web da Pesquisa Visual Computacional em [https://azure.microsoft.com/en-us/services/cognitive-services/computer-vision/](https://azure.microsoft.com/en-us/services/cognitive-services/computer-vision/?WT.mc_id=msignitethetour2019-github-aiml20)
 
-2. Scroll down to the "Analyze an Image" section. It looks like this:
+2. Role para baixo até a seção "Analisar uma Imagem". Ela tem esta aparência:
 
-!["Computer Vision: Analyze an Image"](img/Computer%20Vision%20Analyze%20an%20Image.png)
+!["Pesquisa Visual Computacional: analisar uma imagem"](img/Computer%20Vision%20Analyze%20an%20Image.png)
 
-3. Click the "Browse" button, and choose "man in hardhat.jpg" from the "test
-   images" folder in "CV Training Images".
+3. Clique no botão "Procurar" e escolha "homem com capacete.jpg" na pasta "imagens de teste" em "Imagens de Treinamento de CV".
 
-4. After a moment, the analysis of your image will appear in the right pane. It
-   looks like this:
+4. Após alguns instantes, a análise da imagem será exibida no painel direito. Ela tem esta aparência:
 
 ```
-FEATURE NAME:	VALUE
+FEATURE NAME:   VALUE
 
-Objects	[ { "rectangle": { "x": 138, "y": 27, "w": 746, "h": 471 }, "object": "headwear", "confidence": 0.616 }, { "rectangle": { "x": 52, "y": 33, "w": 910, "h": 951 }, "object": "person", "confidence": 0.802 } ]
+Objects [ { "rectangle": { "x": 138, "y": 27, "w": 746, "h": 471 }, "object": "headwear", "confidence": 0.616 }, { "rectangle": { "x": 52, "y": 33, "w": 910, "h": 951 }, "object": "person", "confidence": 0.802 } ]
 
-Tags	[ { "name": "man", "confidence": 0.999212 }, { "name": "headdress", "confidence": 0.99731946 }, { "name": "person", "confidence": 0.995057464 }, { "name": "clothing", "confidence": 0.991814733 }, { "name": "wearing", "confidence": 0.9827137 }, { "name": "hat", "confidence": 0.9691986 }, { "name": "helmet", "confidence": 0.9227209 }, { "name": "headgear", "confidence": 0.840476155 }, { "name": "personal protective equipment", "confidence": 0.8358513 }, { "name": "looking", "confidence": 0.832229853 }, { "name": "hard hat", "confidence": 0.8004248 }, { "name": "human face", "confidence": 0.785058737 }, { "name": "green", "confidence": 0.774940848 }, { "name": "fashion accessory", "confidence": 0.706475437 } ]
+Tags    [ { "name": "man", "confidence": 0.999212 }, { "name": "headdress", "confidence": 0.99731946 }, { "name": "person", "confidence": 0.995057464 }, { "name": "clothing", "confidence": 0.991814733 }, { "name": "wearing", "confidence": 0.9827137 }, { "name": "hat", "confidence": 0.9691986 }, { "name": "helmet", "confidence": 0.9227209 }, { "name": "headgear", "confidence": 0.840476155 }, { "name": "personal protective equipment", "confidence": 0.8358513 }, { "name": "looking", "confidence": 0.832229853 }, { "name": "hard hat", "confidence": 0.8004248 }, { "name": "human face", "confidence": 0.785058737 }, { "name": "green", "confidence": 0.774940848 }, { "name": "fashion accessory", "confidence": 0.706475437 } ]
 
-Description	{ "tags": [ "man", "headdress", "person", "clothing", "wearing", "hat", "helmet", "looking", "green", "jacket", "shirt", "standing", "head", "suit", "glasses", "yellow", "white", "large", "phone", "holding" ], "captions": [ { "text": "a man wearing a helmet", "confidence": 0.8976638 } ] }
+Description { "tags": [ "man", "headdress", "person", "clothing", "wearing", "hat", "helmet", "looking", "green", "jacket", "shirt", "standing", "head", "suit", "glasses", "yellow", "white", "large", "phone", "holding" ], "captions": [ { "text": "a man wearing a helmet", "confidence": 0.8976638 } ] }
 
-Image format	"Jpeg"
+Image format    "Jpeg"
 
-Image dimensions	1000 x 1000
+Image dimensions    1000 x 1000
 
-Clip art type	0
+Clip art type   0
 
-Line drawing type	0
+Line drawing type   0
 
-Black and white	false
+Black and white false
 
-Adult content	false
+Adult content   false
 
-Adult score	0.0126242451
+Adult score 0.0126242451
 
-Racy	false
+Racy    false
 
-Racy score	0.0156497136
+Racy score  0.0156497136
 
-Categories	[ { "name": "people_", "score": 0.69140625 } ]
+Categories  [ { "name": "people_", "score": 0.69140625 } ]
 
-Faces	[ { "age": 37, "gender": "Male", "faceRectangle": { "top": 419, "left": 363, "width": 398, "height": 398 } } ]
+Faces   [ { "age": 37, "gender": "Male", "faceRectangle": { "top": 419, "left": 363, "width": 398, "height": 398 } } ]
 
-Dominant color background	"White"
+Dominant color background   "White"
 
-Dominant color foreground	"White"
+Dominant color foreground   "White"
 
-Accent Color	#90A526
+Accent Color    #90A526
 ```
 
-(Note, the above analysis may change in the future: the Computer Vision model is
-updated regularly.)
+(Observe que a análise acima pode mudar no futuro: o modelo de Pesquisa Visual Computacional é atualizado regularmente.)
 
-Note that in the first "Objects" result, two objects "headwear" and "person" are
-detected, and their locations in the image is given. The object we want to
-detect is classified "headwear", but for our application we need a more specific
-classification: "hard hat". However "hard hat" is not one of the object types
-that Computer Vision currently detects. (We'll address this problem with Custom
-Vision, later.) Also note that a confidence score is given for each object
-classification.
+Observe que no primeiro resultado de "Objetos", dois objetos "touca" e "pessoa" são detectados e os locais na imagem são fornecidos. O objeto que queremos detectar é classificado como "touca", mas, para nosso aplicativo, precisamos de uma classificação mais específica: "capacete". No entanto, "capacete" não é um dos tipos de objetos que a Pesquisa Visual Computacional atualmente detecta. (Abordaremos esse problema da Visão Personalizada mais tarde.) Observe também que uma pontuação de confiança é fornecida para cada classificação de objeto.
 
-The second "Tags" result gives a list of labels associated with the entire
-image. The tag with the highest confidence (listed first) is "man", which
-doesn't help us much. The second tag, "headdress", is not exactly what we are
-looking for either.
+O segundo resultado de "Marcas" fornece uma lista de rótulos associados à imagem inteira. A marca com a maior confiança (listada primeiro) é "homem", o que não nos ajuda muito. A segunda marca, "enfeite de chapéu", não é exatamente o que estamos procurando.
 
-The other responses are also interesting, but we won't focus on them for our
-demo. But take a look at what's included:
+As outras respostas também são interessantes, mas não nos concentraremos nelas em nossa demonstração. No entanto, veja o que está incluído:
 
-* A caption for the photo ("a man wearing a helmet") in the Description field.
+* Uma legenda para a foto ("um homem que usa um capacete") no campo Descrição.
 
-* Image features (is it black and white? a line drawing?)
+* Recursos de imagem (Ela é preto e branco? Um desenho de linha?)
 
-* Details of any faces detected in the image (identified as a 37-year-old male in this case)
+* Detalhes de todos os rostos detectados na imagem (nesse caso, identificado como um homem de 37 anos)
 
-* A score for the content of the image: is it "Adult" or "Racy"?
+* Uma pontuação para o conteúdo da imagem: para "Adultos" ou "Erótico"?
 
-* Color analysis for the image: the dominant foreground, accent, and background colors.
+* Análise de cores para a imagem: as cores dominantes de primeiro plano, de destaque e de segundo plano.
 
-We're really only interested in the "Tags" field for our purposes, so we'll find
-out how to extract that programatically in the next section.
+Estamos interessados somente no campo "Marcas" para nossos objetivos, então descobriremos como extrair isso de maneira programática na próxima seção.
 
-## Using Computer Vision via the API
+## <a name="using-computer-vision-via-the-api"></a>Como usar a Pesquisa Visual Computacional por meio da API
 
-You can [control Computer Vision programatically using its REST
-API](https://docs.microsoft.com/en-us/azure/cognitive-services/computer-vision/vision-api-how-to-topics/howtocallvisionapi?WT.mc_id=msignitethetour2019-github-aiml20).
-You can do this from just about any language or application that has access to
-the Web, but we will use [curl](https://curl.haxx.se/), a common command-line
-application for interfacing with URLs and collecting their outputs. The curl
-application comes pre-installed on most Linux distributions and in recent
-versions of Windows 10 (1706 and later). 
+É possível [controlar a Pesquisa Visual Computacional de maneira programática usando a API REST](https://docs.microsoft.com/en-us/azure/cognitive-services/computer-vision/vision-api-how-to-topics/howtocallvisionapi?WT.mc_id=msignitethetour2019-github-aiml20).
+É possível fazer isso de praticamente qualquer linguagem ou aplicativo que tenha acesso à Web, mas usaremos a [ondulação](https://curl.haxx.se/), um aplicativo de linha de comando comum para a interface com URLs e coleta de saídas. O aplicativo de ondulação vem pré-instalado na maioria das distribuições do Linux e nas versões recentes do Windows 10 (1706 e posteriores). 
 
-Run the commands in the file [`vision_demo.sh`](vision_demo.sh). You can use a local Azure CLI or
-Azure Cloud Shell, but you must use bash as the shell.
+Execute os comandos no arquivo [`vision_demo.sh`](vision_demo.sh). É possível usar uma CLI do Azure ou o Azure Cloud Shell local, mas você deverá usar o bash assim como o shell.
 
-The commands in this script will:
+Os comandos neste script vão:
 
-1. Log into your Azure subscription (this step is unneccessary if using Cloud Shell)
-2. Create an Azure Resource Group
-3. Create a Cognitive Service key. (Note: this is an omnibus key that we will also use for Custom Vision, later.)
-4. Find the key
-5. Use CURL to analyze two images
+1. Fazer logon em sua assinatura do Azure (esta etapa é desnecessária caso esteja usando o Cloud Shell)
+2. Criar um Grupo de Recursos do Azure
+3. Criar uma chave de Serviço Cognitivo. (Observação: essa é uma chave omnibus que também usaremos mais tarde para a Visão Personalizada.)
+4. Localizar a chave
+5. Use a ONDULAÇÃO para analisar duas imagens
 
-## Manually generating Keys for use with Computer Vision
+## <a name="manually-generating-keys-for-use-with-computer-vision"></a>Como gerar chaves manualmente para uso com a Pesquisa Visual Computacional
 
-In the script [vision_demo.sh](vision_demo.sh), run the section "Create a Key" to programatically create a Cognitive Sevices key using the Azure Command Line Interface.
-(If you prefer, you can [create keys interactively with the Azure
-Portal](https://docs.microsoft.com/en-us/azure/cognitive-services/cognitive-services-apis-create-account?tabs=multiservice%2Clinux&WT.mc_id=msignitethetour2019-github-aiml20).)
+No script [vision_demo.sh](vision_demo.sh), execute a seção "Criar uma Chave" para criar uma chave de Serviços Cognitivos de maneira programática usando a Interface de Linha de Comando do Azure.
+(Se preferir, será possível [criar chaves de maneira interativa com o portal do Azure](https://docs.microsoft.com/en-us/azure/cognitive-services/cognitive-services-apis-create-account?tabs=multiservice%2Clinux&WT.mc_id=msignitethetour2019-github-aiml20).)
 
-## Next Step
+## <a name="next-step"></a>Próxima etapa
 
-[Custom Vision](DEMO%20Custom%20Vision.md)
+[Visão Personalizada](DEMO%20Custom%20Vision.md)

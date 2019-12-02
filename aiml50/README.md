@@ -1,55 +1,55 @@
-# Machine Learning Operations – Applying DevOps to Data Science
+# <a name="machine-learning-operations--applying-devops-to-data-science"></a>Operações de Aprendizado de Máquina – Aplicação de DevOps à ciência de dados
 
-## Session Abstract
+## <a name="session-abstract"></a>Resumo da Sessão
 
-While many companies have adopted DevOps practices to improve their software delivery, these same techniques are rarely applied to machine learning projects. Collaboration between developers and data scientists can be limited and deploying models to production in a consistent and trustworthy way is often a pipedream.
+Embora muitas empresas tenham adotado práticas de DevOps para melhorar a entrega de software, essas mesmas técnicas raramente são aplicadas a projetos de aprendizado de máquina. A colaboração entre desenvolvedores e cientistas de dados pode ser limitada e a implantação de modelos em produção confiante e consistente geralmente é uma utopia.
 
-In this session, you’ll learn how to apply DevOps practices to your machine learning projects using Azure DevOps and Azure Machine Learning Service. We’ll set up automated training, scoring, and storage of versioned models and wrap the models in docker containers and deploy them to Azure Container Instances and Azure Kubernetes Service. We’ll even collect continuous feedback on model behavior so we know when to retrain.
+Nesta sessão, você aprenderá a aplicar práticas de DevOps aos seus projetos de aprendizado de máquina usando o Azure DevOps e o Serviço do Azure Machine Learning. Configuraremos o treinamento, a pontuação e o armazenamento automatizados de modelos com versão, além de encapsular os modelos em contêineres do docker e implantá-los em Instâncias de Contêiner do Azure e no Serviço de Kubernetes do Azure. Coletaremos até mesmo comentários contínuos sobre o comportamento do modelo para saber quando treinar novamente.
 
-## How To Use
+## <a name="how-to-use"></a>Como usar
 
-Welcome, Presenter!
+Seja bem-vindo, apresentador!
 
-We're glad you are here and look forward to your delivery of this amazing content. As an experienced presenter, we know you know HOW to present so this guide will focus on WHAT you need to present. It will provide you a full run-through of the presentation created by the presentation design team.
+Estamos felizes por você estar aqui e animados para você ver esse conteúdo incrível. Como apresentador experiente, sabemos que você SABE fazer apresentações; assim, este guia se concentra NO QUE você precisa apresentar. Ele percorrerá toda a apresentação criada pela equipe de design de apresentação.
 
-Along with the video of the presentation, this document will link to all the assets you need to successfully present including PowerPoint slides and demo instructions & code.
+Com o vídeo da apresentação, este documento será vinculado a todos os ativos de que você precisa para apresentar com êxito, incluindo slides do PowerPoint e códigos e instruções de demonstração.
 
-1. Read document in its entirety.
-2. Watch the video presentation
-3. Ask questions of the Lead Presenter
+1. Leia o documento por inteiro.
+2. Assista à apresentação em vídeo
+3. Faça perguntas ao Apresentador Principal
 
-## Assets in Train-The-Trainer kit
+## <a name="assets-in-train-the-trainer-kit"></a>Ativos no Kit Treinamento para Treinador
 
-- This guide
-- PowerPoint presentation including notes for each slide [here](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml50/AIML50_MachineLearningOperations–ApplyingDevOpstoDataScience.pptx)
-  - [Exported Speaker Notes](./SpeakerNotes.md)
-- Session at Microsoft Ignite 2019 Orlando [here](https://myignite.techcommunity.microsoft.com/sessions/83003)
-- Full-length recording of presentation [here](https://youtu.be/UgM8_4fAni8)
-- Individual recordings of stage-ready hands-on demos
-  - [Demo #1](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml50/AIML50_demo_1.mp4)
-  - [Demo #2](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml50/AIML50_demo_2.mp4)
-  - [Demo #3](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml50/AIML50_demo_3.mp4)
-  - [Demo #4](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml50/AIML50_demo_4.mp4)
-- Demo Guides
-  - [Setup](./DEMO.md) and [Video Walkthrough](https://youtu.be/C9WtOZaUoyA)
-  - [Demo #1](./demos/1-Show_Faulty_Prediction.md)
-  - [Demo #2](./demos/2-Build_a_Pipeline_With_Notebooks.md)
-  - [Demo #3](./demos/3-Show_The_Build.md)
-  - [Demo #4](./demos/4-Show_The_Release.md)
+- Este guia
+- Apresentação do PowerPoint, incluindo as observações para cada slide [aqui](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml50/AIML50_MachineLearningOperations–ApplyingDevOpstoDataScience.pptx)
+  - [Notas do palestrante exportadas](./SpeakerNotes.md)
+- Sessão no Microsoft Ignite 2019 Orlando [aqui](https://myignite.techcommunity.microsoft.com/sessions/83003)
+- Gravação completa da apresentação [aqui](https://youtu.be/UgM8_4fAni8)
+- Gravações individuais das demonstrações práticas de palco
+  - [Demonstração nº 1](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml50/AIML50_demo_1.mp4)
+  - [Demonstração nº 2](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml50/AIML50_demo_2.mp4)
+  - [Demonstração nº 3](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml50/AIML50_demo_3.mp4)
+  - [Demonstração nº 4](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml50/AIML50_demo_4.mp4)
+- Guias de demonstração
+  - [Instalação](./DEMO.md) e [Passo a passo em vídeo](https://youtu.be/C9WtOZaUoyA)
+  - [Demonstração nº 1](./demos/1-Show_Faulty_Prediction.md)
+  - [Demonstração nº 2](./demos/2-Build_a_Pipeline_With_Notebooks.md)
+  - [Demonstração nº 3](./demos/3-Show_The_Build.md)
+  - [Demonstração nº 4](./demos/4-Show_The_Release.md)
 
-## Become a Trained Presenter
+## <a name="become-a-trained-presenter"></a>Torne-se um apresentador treinado
 
-To become a *Trained Presenter*, contact [scalablecontent@microsoft.com](mailto:scalablecontent@microsoft.com). In your email please include:
+Para se tornar um *apresentador treinado*, entre em contato com [scalablecontent@microsoft.com](mailto:scalablecontent@microsoft.com). Em seu email, inclua:
 
-- Complete name:
-- The code of this presentation: AIML50
-- Link (ex: unlisted YouTube video) to a video of you presenting (~10 minutes).
+- Nome completo:
+- O código desta apresentação: AIML50
+- Link (por exemplo: vídeo do YouTube não listado) para um vídeo de sua apresentação (aproximadamente 10 minutos).
 
-> It doesn't need to be this content, the important is to show your presenter skills
+> O conteúdo pode ser diferente deste; o importante é mostrar suas habilidades como apresentador
 
-## Trained Presenters
+## <a name="trained-presenters"></a>Apresentadores treinados
 
-Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+Agradecemos a essas pessoas maravilhosas ([emoji de chave](https://allcontributors.org/docs/en/emoji-key)):
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore -->
@@ -59,12 +59,12 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/Damovisa">
         <img src="https://avatars2.githubusercontent.com/u/1887732?s=460&v=4" width="100px;" alt="Damian Brady"/><br />
         <sub><b>Damian Brady</b></sub></a><br />
-        <a href="" title="talk">📢</a>
+        <a href="" title="palestra">📢</a>
     </td>
     <td align="center"><a href="https://github.com/smurawski">
         <img src="https://avatars1.githubusercontent.com/u/4006985?s=460&v=4" width="100px;" alt="Steven Murawski"/><br />
         <sub><b>Steven Murawski</b></sub></a><br />
-            <a href="https://github.com/microsoft/ignite-learning-paths-training-aiml/pull/9" title="Documentation">📖</a>
+            <a href="https://github.com/microsoft/ignite-learning-paths-training-aiml/pull/9" title="Documentação">📖</a>
     </td>
 </tr></table>
 

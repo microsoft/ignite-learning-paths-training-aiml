@@ -1,24 +1,17 @@
-# Personalizer Demo
+# <a name="personalizer-demo"></a>Demonstração do Personalizador
 
-In this demo, observe how the layout of a website adapts to visitor actions using reinforcement learning and [Cognitive Services Personalizer](https://docs.microsoft.com/en-us/azure/cognitive-services/personalizer/?WT.mc_id=msignitethetour2019-github-aiml20).
+Nesta demonstração, observe como o layout de um site se adapta às ações do visitante usando o aprendizado por reforço e o [Personalizador de Serviços Cognitivos](https://docs.microsoft.com/en-us/azure/cognitive-services/personalizer/?WT.mc_id=msignitethetour2019-github-aiml20).
 
-Personalizer will dynamically reconfigure the interface to optimize the
-likelihood of an anonymous visitor clicking on the featured category in the
-Recommended section.
+O Personalizador reconfigurará dinamicamente a interface para otimizar a probabilidade de um visitante anônimo clicar na categoria em destaque na seção Recomendada.
 
-1. Deploy the Tailwind Traders Website app (if you didn't already do so with `DEMO Setup.md`)
+1. Implantar o aplicativo Web da Tailwind Traders (caso ainda não tenha feito com `DEMO Setup.md`)
 
-2. Visit the Tailwind Traders homepage
+2. Visite a home page da Tailwind Traders
 
-3. Observe the "Recommended" section and the order of the featured categories
+3. Observe a seção "Recomendado" e a ordem das categorias em destaque
 
-4. Refresh the page (you may need to do this a couple of times). Observe that
-   the layout changes.
+4. Atualize a página (talvez seja necessário fazer isso algumas vezes). Observe que o layout é alterado.
 
-The Personalizer service is tracking the anonymous visitors and recording the
-time of day, day of week, and browser OS used when clicking on categories. 
-The "reward" is whether or not the large, featured section was clicked. 
+O serviço Personalizador está acompanhando os visitantes anônimos e registrando a hora do dia, o dia da semana e o SO do navegador usado quando as categorias são clicadas. A "recompensa" indica se a seção grande e em destaque foi clicada. 
 
-Over time, Personalizer will determine the best category to feature based on
-time of day, day of week, and OS. It will also "explore" 20% of the time, to
-surface categories that would otherwise not be presented.
+Com o tempo, o Personalizador determinará a melhor categoria para o recurso com base na hora do dia, no dia da semana e no SO. Ele também "explorará" 20% do tempo para orientar as categorias que, de outra forma, não seriam apresentadas.

@@ -1,15 +1,15 @@
 
-# AIML30 -Start Building Machine Learning Models Faster than You Think -Train the trainer
+# <a name="aiml30--start-building-machine-learning-models-faster-than-you-think--train-the-trainer"></a>AIML30 – Comece a criar modelos de Machine Learning mais rápido do que você imagina – Treinar o instrutor
 
 
-## Session Abstract
+## <a name="session-abstract"></a>Resumo da sessão
 
-Tailwind Traders uses custom machine learning models to fix their inventory issues – without changing their Software Development Life Cycle! How? Azure Machine Learning Visual Interface.
+O Tailwind Traders usa modelos de machine learning personalizados para corrigir problemas de inventário, sem alterar o ciclo de vida de desenvolvimento do software. Como? Interface visual do Azure Machine Learning.
  
-In this session, you’ll learn the data science process that Tailwind Traders’ uses and get an introduction to Azure Machine Learning Visual Interface. You’ll see how to find, import, and prepare data, select a machine learning algorithm, train and test the model, and deploy a complete model to an API. Get the tips, best practices, and resources you and your development team need to continue your machine learning journey, build your first model, and more.
+Nesta sessão, você aprenderá o processo de ciência de dados que a Tailwind Traders usa e obterá uma introdução à interface visual do Azure Machine Learning. Você verá como localizar, importar e preparar dados, selecionar um algoritmo de aprendizado de máquina, treinar, testar e implantar um modelo completo em uma API. Receba dicas, práticas recomendadas e os recursos de que você e sua equipe de desenvolvimento precisam para continuar na jornada de aprendizado de máquina, criar seu primeiro modelo e muito mais.
 
-[Microsoft Ignite Orlando AIML30 Presentation Video: 7th November 2019](https://myignite.techcommunity.microsoft.com/sessions/82993?source=sessions)
+[Vídeo de apresentação do Microsoft Ignite Orlando AIML30: 7 de novembro de 2019](https://myignite.techcommunity.microsoft.com/sessions/82993?source=sessions)
 
-# I want to...
-## [Learn to present this content](README-Presenter.md)
-## [Continue learning after attending this session](README-Attendee.md)
+# <a name="i-want-to"></a>Eu quero…
+## <a name="learn-to-present-this-contentreadme-presentermd"></a>[Saber como apresentar este conteúdo](README-Presenter.md)
+## <a name="continue-learning-after-attending-this-sessionreadme-attendeemd"></a>[Continuar aprendendo após participar desta sessão](README-Attendee.md)

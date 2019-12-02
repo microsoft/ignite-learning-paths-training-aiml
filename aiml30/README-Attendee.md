@@ -1,76 +1,73 @@
-# AIML30 -Start Building Machine Learning Models Faster than You Think -Train the trainer
+# <a name="aiml30--start-building-machine-learning-models-faster-than-you-think--train-the-trainer"></a>AIML30 – Comece a criar modelos de Machine Learning mais rápido do que você imagina – Treinar o instrutor
 
-Tailwind Traders uses custom machine learning models to fix their inventory issues – without changing their Software Development Life Cycle! How? Azure Machine Learning Visual Interface.
+O Tailwind Traders usa modelos de aprendizado de máquina personalizados para corrigir seus problemas de inventário, sem alterar o ciclo de vida de desenvolvimento de software. Como? Interface visual do Azure Machine Learning.
  
-In this session, you’ll learn the data science process that Tailwind Traders’ uses and get an introduction to Azure Machine Learning Visual Interface. You’ll see how to find, import, and prepare data, select a machine learning algorithm, train and test the model, and deploy a complete model to an API. Get the tips, best practices, and resources you and your development team need to continue your machine learning journey, build your first model, and more.
+Nesta sessão, você aprenderá o processo de ciência de dados que a Tailwind Traders usa e verá a introdução à interface visual do Azure Machine Learning. Você verá como localizar, importar e preparar dados, selecionar um algoritmo de aprendizado de máquina, treinar, testar e implantar um modelo completo em uma API. Receba dicas, práticas recomendadas e recursos que você e sua equipe de desenvolvimento precisam para continuar sua jornada de aprendizado de máquina, criar seu primeiro modelo e muito mais.
 
 
-## Demo Environment Deployment
-<a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fcassieview%2Fignite-learning-paths-training-aiml%2Fmaster%2Faiml30%2Fdeploy.json" rel="nofollow">
- <img src="https://camo.githubusercontent.com/9285dd3998997a0835869065bb15e5d500475034/687474703a2f2f617a7572656465706c6f792e6e65742f6465706c6f79627574746f6e2e706e67" data-canonical-src="http://azuredeploy.net/deploybutton.png" style="max-width:100%;">
+## <a name="demo-environment-deployment"></a>Implantação do ambiente de demonstração
+<a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fcassieview%2Fignite-learning-paths-training-aiml%2Fmaster%2Faiml30%2Fdeploy.json" rel="nofollow"> <img src="https://camo.githubusercontent.com/9285dd3998997a0835869065bb15e5d500475034/687474703a2f2f617a7572656465706c6f792e6e65742f6465706c6f79627574746f6e2e706e67" data-canonical-src="http://azuredeploy.net/deploybutton.png" style="max-width:100%;">
 </a>
 
 
-## Create Additional Resources Needed
-Once you have created the base Azure Machine Learning Service Workspace we need to add additional compute resources.
-### Create Compute Targets
-1. Create Machine Learning Compute
-    * Click on the nav "Compute"
-    * Click "New"
-    * Enter a name for the resource
-    * Select "Machine Learning Compute" from the dropdown
-    * Select the machine size
-    * Enter the min and max nodes (recommend min of 0 and max of 5)
-    * Click "Create"
-    ![Create Compute](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml30/CreateMlCompute.gif)
-2. Create Kubernetes Compute
-    * Click on the nav "Compute"
-    * Click "New"
-    * Enter a name for the resource
-    * Select "Kubernetes Service" from the dropdown
-    * Click "Create"
-    ![Create Kubernetes](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml30/CreateKubService.gif)
+## <a name="create-additional-resources-needed"></a>Criar os recursos adicionais necessários
+Depois de criar a base do espaço de trabalho do serviço de Azure Machine Learning, precisamos adicionar recursos adicionais de computação.
+### <a name="create-compute-targets"></a>Criar Destinos de Computação
+1. Criar Computação do Machine Learning
+    * Clique no nav "Computação"
+    * Clique em "Novo"
+    * Insira um nome para o recurso
+    * Selecione na lista suspensa "Computação do Machine Learning"
+    * Selecione o tamanho da máquina
+    * Insira os nós mínimo e máximo (recomendável mín. de 0 e máx. de 5)
+    * Clique em "Criar" ![Criar Computação](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml30/CreateMlCompute.gif)
+2. Criar Computação de Kubernetes
+    * Clique no nav "Computação"
+    * Clique em "Novo"
+    * Insira um nome para o recurso
+    * Selecione na lista suspensa "Serviço do Kubernetes"
+    * Clique em "Criar" ![Criar Kubernetes](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml30/CreateKubService.gif)
 
 
-## Build Model with Azure Machine Learning Visual Designer
+## <a name="build-model-with-azure-machine-learning-visual-designer"></a>Criar modelo com o designer visual do Azure Machine Learning
 
-### 1. Upload the dataset to the Datasets in AML
-* Download dataset to local from [here](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml30/datasets/ForecastingData.csv)
-* Click `Datasets`
-* Click `Create from local`
-* Fill out the form and upload the dataset
+### <a name="1-upload-the-dataset-to-the-datasets-in-aml"></a>1. Carregar o conjunto de dados nos Conjuntos de dados em AML
+* Baixe [aqui](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml30/datasets/ForecastingData.csv) o conjunto de dados para o local
+* Clique em `Datasets`
+* Clique em `Create from local`
+* Preencher o formulário e carregar o conjunto de dados
 
-### 2. Start Building the  Model
+### <a name="2-start-building-the--model"></a>2. Iniciar criação de modelo
 
-* Click `Visual Interface` from the left nav
-* Click `Launch Visual Interface`
-* Click `New` from the bottom left corner
-* Click `Blank Experiment`
-* Expand `Datasets` and `My Datasets`
-* Drag and drop the uploaded dataset onto the experiment workspace
-* Drag the `Select Columns in Dataset` onto the workspace
-    * Click `Edit columns` from the properties menu on the right side.
-    * Click `All Columns`
-    * Click `Exclude`
-    * Click `column names`
-    * Exclude the `Time` column
-    * Exclude the `DatesInWeek`
-    * NOTE: Optionally exclude these columns in the data edit feature when uploading the dataset to the workspace in the data prep steps during upload.
-* Drag the `Split Data` onto the workspace
-    * Edit the properties to split the data 70/30. 
-    * Discuss that this is not a rule and can change base on different model needs.
-* Drag the `Train Model` onto the workspace
-    * Select the label column name `Values` from the properties on the right
-* Drag the `Boosted Decision Tree Regression` onto the workspace
-* Drag the `Score Model` onto the workspace
-* Drag the `Evaluate` onto the workspace
-* Connect the `Split Data` module to `Train Model` for the training data and `Score Model` for scoring the predicted results with unseen data.
-* Connect `Train Model` to the training algorithm `Boosted Decision Tree Regression` module.
-* Connect `Score Model` with the `Evaluate` module.
-* Click the `Run` button in the bottom nav and select compute. 
+* Clique em `Visual Interface` na barra de navegação à esquerda
+* Clique em `Launch Visual Interface`
+* Clique em `New` no canto inferior esquerdo
+* Clique em `Blank Experiment`
+* Expandir `Datasets` e `My Datasets`
+* Arraste e solte o conjunto de dados carregado no espaço de trabalho do experimento
+* Arraste `Select Columns in Dataset` para o espaço de trabalho
+    * Clique em `Edit columns` no menu Propriedades no lado direito.
+    * Clique em `All Columns`
+    * Clique em `Exclude`
+    * Clique em `column names`
+    * Exclua a coluna `Time`
+    * Exclua `DatesInWeek`
+    * OBSERVAÇÃO: opcionalmente, exclua essas colunas no recurso de edição de dados durante o carregamento do conjunto de dados no espaço de trabalho nas etapas de preparação dos dados para carregamento.
+* Arraste `Split Data` para o espaço de trabalho
+    * Edite as propriedades para dividir os dados em 70/30. 
+    * Explique que isso não é uma regra e a base pode ser alterada com base nas diferentes necessidades do modelo.
+* Arraste `Train Model` para o espaço de trabalho
+    * Selecione o nome da coluna de rótulo `Values` nas propriedades à direita
+* Arraste `Boosted Decision Tree Regression` para o espaço de trabalho
+* Arraste `Score Model` para o espaço de trabalho
+* Arraste `Evaluate` para o espaço de trabalho
+* Conecte o módulo `Split Data` ao `Train Model` para os dados de treinamento e ao `Score Model` para pontuar os resultados previstos com dados não vistos.
+* Conecte `Train Model` ao módulo `Boosted Decision Tree Regression` do algoritmo de treinamento.
+* Conecte `Score Model` ao módulo `Evaluate`.
+* Clique no botão `Run` na barra de navegação inferior e selecione calcular. 
 
-* Drag the `Execute Python Script` module onto the workspace and connect the `Score Model` module to it. 
-* Copy and paste this code in:
+* Arraste o módulo `Execute Python Script` para o espaço de trabalho e conecte o módulo `Score Model` a ele. 
+* Copie e cole este código em:
     * `import pandas as pd` </br>
        `import numpy as np` </br>
         `def azureml_main(dataframe1 = None, dataframe2 = None):` </br>
@@ -79,57 +76,57 @@ Once you have created the base Azure Machine Learning Service Workspace we need 
             `df['Value'] = np.exp(df['Value'])`</br>
             `df['Forecast'] = np.exp(df['Scored Labels'])`</br>
             `return df`
-* Drag the `Select Columns in Dataset`
-* Select columns `ID1`, `ID2`, `Value` and `Forecast`
-* These are the columns the data demo app will be expecting when we post to get a result from the completed and deployed model.
-* Run the training
+* Arraste `Select Columns in Dataset`
+* Selecione as colunas `ID1`, `ID2`, `Value` e `Forecast`
+* Essas são as colunas que o aplicativo de demonstração de dados esperará ao publicarmos para obter um resultado do modelo concluído e implantado.
+* Execute o treinamento
 
-### 4. Create Predictive Experiment and Deploy the Model
+### <a name="4-create-predictive-experiment-and-deploy-the-model"></a>4. Criar o experimento de previsão e implantar o modelo
 
-* Click `Create` predictive experiment. Think of the `Predictive Experiment` model as the production model that gets deployed to the web service. The `Training Experiment` as the dev model.
-* Add the `Execute Python Script` and `Select Columns in Dataset` modules to the created predictive experiment.
-* Run the experiment
-* Click `Deploy Web Service`
-* Navigate to the deployed web service from the left nav.
-* Click on the name of the web service created.
-* Click `Test` and to see how it performs on a scored data item.
-* Click `Consume` and show the sample code provided for integrating the web service.
+* Clique em experimento de previsão de `Create`. Considere o modelo `Predictive Experiment` como o modelo de produção que será implantado no serviço Web. O `Training Experiment` como o modelo de desenvolvimento.
+* Adicione os módulos `Execute Python Script` e `Select Columns in Dataset` ao experimento de previsão criado.
+* Execute o experimento
+* Clique em `Deploy Web Service`
+* Navegue até o serviço Web implantado na barra de navegação à esquerda.
+* Clique no nome do serviço Web criado.
+* Clique em `Test` e veja como ele é executado em um item de dados com pontuação.
+* Clique em `Consume` e mostre o código de exemplo fornecido para a integração do serviço Web.
 
-### 5. Testing API with C# console app (dotnet core)
+### <a name="5-testing-api-with-c-console-app-dotnet-core"></a>5. Teste da API com o aplicativo de console C# (núcleo dotnet)
 
-1. [Download VS Code here](https://code.visualstudio.com/download)
-2. Clone the app with the following command
+1. [Baixe aqui o VS Code](https://code.visualstudio.com/download)
+2. Clone o aplicativo com o seguinte comando
     * `git clone https://github.com/microsoft/ignite-learning-paths.git`
-3. Navigate to project path
+3. Navegue até o caminho do projeto
     * `cd ignite-learning-paths\aiml\aiml30\C#\IgniteAimlDataApp`
-4. Open the project in VS Code
+4. Abra o projeto no VS Code
     * `code .`
-5. Replace the local dataset with the downloaded dataset from the step above in the `IgniteAimlDataApp/Datasets` Folder.
-6. To run the test
-    * Copy the API key from the `Consume` tab
-    * Open the `App.config` and paste it in the value attribute
-    * Copy the `Request-Response Url` from the `Consume` tab
-    * Open the `Program.cs` and paste the value in  `client.BaseAddress = new Uri("");`
-    * Right click `Program.cs` and select `Open in Terminal`
-    * Type the command `dotnet run` to run the console app
-    * To use the default values of StoreID (ID1) of 2 and ItemID    (ID2) of 1 and the number of weeks to predict. Just type `y`
-    * This will run and should return the predicted values for the  next 4 weeks.
+5. Substitua o conjunto de dados local pelo conjunto de dados baixado na etapa acima na pasta `IgniteAimlDataApp/Datasets`.
+6. Para executar o teste
+    * Copie a chave de API da guia `Consume`
+    * Abra o `App.config` e cole-o no atributo value
+    * Copie o `Request-Response Url` da guia `Consume`
+    * Abra o `Program.cs` e cole o valor em `client.BaseAddress = new Uri("");`
+    * Clique com o botão direito do mouse em `Program.cs` e selecione `Open in Terminal`
+    * Digite o comando `dotnet run` para executar o aplicativo de console
+    * Para usar os valores padrão de StoreID (ID1), que é 2, e de ItemID (ID2), que é 1, e o número de semanas a prever. Apenas digite `y`
+    * Isso será executado e deverá retornar os valores previstos para as próximas 4 semanas.
 
-## Delivery assets
+## <a name="delivery-assets"></a>Ativos de entrega
 
-The following asset can be used for delivering this talk:
+O ativo a seguir pode ser usado para entrega nesta conversa:
 
-- [PowerPoint deck](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml30/AIML30_How%20to%20Build%20Machine%20Learning%20Models.pptx)
-- [Demonstration videos](https://www.youtube.com/watch?v=u1ppYaZuNmo&feature=youtu.be)
+- [Área do PowerPoint](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml30/AIML30_How%20to%20Build%20Machine%20Learning%20Models.pptx)
+- [Vídeos de demonstração](https://www.youtube.com/watch?v=u1ppYaZuNmo&feature=youtu.be)
 
-## Resources and Continue Learning
+## <a name="resources-and-continue-learning"></a>Recursos e continuar aprendendo
 
-Here is a list of related training and documentation.
+Aqui está uma lista de documentações e treinamentos relacionados.
 
-- [What is the visual interface for Azure Machine Learning?](https://docs.microsoft.com/en-us/azure/machine-learning/service/ui-concept-visual-interface?WT.mc_id=msignitethetour-slides-cxa)
-- [Publish a Machine Learning Experiment with Microsoft Azure Machine Learning](https://docs.microsoft.com/en-us/learn/paths/publish-experiment-with-ml-studio/)
+- [O que é a interface visual do Azure Machine Learning?](https://docs.microsoft.com/en-us/azure/machine-learning/service/ui-concept-visual-interface?WT.mc_id=msignitethetour-slides-cxa)
+- [Publicar um experimento de aprendizado de máquina com o Microsoft Azure Machine Learning](https://docs.microsoft.com/en-us/learn/paths/publish-experiment-with-ml-studio/)
 
 
-## Feedback loop
+## <a name="feedback-loop"></a>Loop de comentários
 
-Do you have a comment, feedback, suggestion? Currently, the best feedback loop for content changes/suggestions/feedback is to create a new issue on this GitHub repository. To get all the details about how to create an issue please refer to the [Contributing](../../contributing.md) docs
+Tem um comentário, feedback ou sugestão? Atualmente, a melhor forma de criar um ciclo de comentários para alterações/sugestões/feedback de conteúdo é abrindo um novo problema neste repositório GitHub. Para obter todos os detalhes sobre como criar um problema, consulte os documentos sobre [Contribuição](../../contributing.md)

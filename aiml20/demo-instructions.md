@@ -1,66 +1,57 @@
-# Demo Instructions for Presenters
+# <a name="demo-instructions-for-presenters"></a>Instruções de demonstração para apresentadores
 
-Demo scripts are made available to everyone in this repo.
+Os scripts de demonstração são disponibilizados para todos neste repositório.
 
-You should follow the same scripts for the presentations, but with the additional
-notes given below.
+Você deve seguir os mesmos scripts nas apresentações, mas com as anotações adicionais fornecidas abaixo.
 
-Recordings of demos are also available as videos in the [PPT
-Slides](presentations.md) (and also some additional videos linked below). You
-can use the embedded videos instead of a live demo in the case of lack of
-internet or other technical issues. (In this case, we recommend muting the audio
-and speaking to the video yourself.) [Speaker notes](speaker-notes.md) are timed
-to the events in the embedded videos.
+As gravações de demonstrações também estão disponíveis como vídeos nos [Slides PPT](presentations.md) (e também em alguns links dos vídeos adicionais abaixo). Você pode usar os vídeos inseridos em vez de uma demonstração ao vivo no caso de falta de Internet ou outros problemas técnicos. (nesse caso, é recomendável ativar mudo no áudio e falar com o vídeo). As [anotações para orador](speaker-notes.md) são cronometradas para os eventos nos vídeos inseridos.
 
-## DEMO Setup
+## <a name="demo-setup"></a>Configuração de DEMONSTRAÇÃO
 
-Before your presentation, run all of the instructions in the script below.
+Antes de sua apresentação, execute todas as instruções no script abaixo.
 
-[Demo script](DEMO%20Setup.md)
+[Script de demonstração](DEMO%20Setup.md)
 
-## DEMO Computer Vision
+## <a name="demo-computer-vision"></a>Pesquisa Visual Computacional de DEMONSTRAÇÃO
 
-[Demo script](DEMO%20Computer%20Vision.md)
+[Script de demonstração](DEMO%20Computer%20Vision.md)
 
-### SLIDE: DEMO / shop by photo
+### <a name="slide-demo--shop-by-photo"></a>SLIDE: DEMONSTRAÇÃO/compra pela foto
 
-Note the actual instructions for this demo are [here](DEMO%20ONNX%20deployment.md#defining-the-problem-shop-by-photo-doesnt-work-right).
+Observe que as instruções reais para esta demonstração estão [aqui](DEMO%20ONNX%20deployment.md#defining-the-problem-shop-by-photo-doesnt-work-right).
 
-Additional demo video: https://www.dropbox.com/s/ylxjuifg9x0h4n3/ITT-aiml20-demo1.mp4?dl=0 
+Vídeo de demonstração adicional: https://www.dropbox.com/s/ylxjuifg9x0h4n3/ITT-aiml20-demo1.mp4?dl=0 
 
-### SLIDE: DEMO / cognitive services computer vision
+### <a name="slide-demo--cognitive-services-computer-vision"></a>SLIDE: DEMONSTRAÇÃO/Pesquisa Visual Computacional dos Serviços Cognitivos
 
-[Demo script](DEMO%20Computer%20Vision.md#using-computer-vision-via-the-web-interface)
+[Script de demonstração](DEMO%20Computer%20Vision.md#using-computer-vision-via-the-web-interface)
 
-## DEMO Custom Vision
+## <a name="demo-custom-vision"></a>Visão Personalizada de DEMONSTRAÇÃO
 
-[Demo script](DEMO%20Custom%20Vision.md)
+[Script de demonstração](DEMO%20Custom%20Vision.md)
 
-Do the first part of the demo ahead of time.
+Faça a primeira parte da demonstração com antecedência.
 
-### SLIDE: DEMO / Customized object recognition
+### <a name="slide-demo--customized-object-recognition"></a>SLIDE: DEMONSTRAÇÃO/Reconhecimento de objeto personalizado
 
-Start the live demo at "[Add images and train a model](DEMO%20Custom%20Vision.md#add-images-and-train-a-model)".
+Inicie a demonstração ao vivo em "[Adicionar imagens e treinar um modelo](DEMO%20Custom%20Vision.md#add-images-and-train-a-model)".
 
-## DEMO ONNX Deployment
+## <a name="demo-onnx-deployment"></a>Implantação de ONNX de DEMONSTRAÇÃO
 
-[Demo Script](DEMO%20ONNX%20deployment.md)
+[Script de demonstração](DEMO%20ONNX%20deployment.md)
 
-Run the section "[Load the simple ONNX model](DEMO%20ONNX%20deployment.md#load-the-simple-onnx-model)" ahead of time.
+Execute a seção "[Carregar o modelo simples de ONNX](DEMO%20ONNX%20deployment.md#load-the-simple-onnx-model)" antes do tempo.
 
-You did the section "[Defining the problem](DEMO%20ONNX%20deployment.md#defining-the-problem-shop-by-photo-doesnt-work-right)" at the beginning of the presentation, so skip that.
+Você fez a seção "[Definir o problema](DEMO%20ONNX%20deployment.md#defining-the-problem-shop-by-photo-doesnt-work-right)" no início da apresentação, então poderá ignorá-la.
 
-### SLIDE: DEMO / ONNX
+### <a name="slide-demo--onnx"></a>SLIDE: DEMONSTRAÇÃO/ONNX
 
-Start the live demo at "Update the ONNX model in the Tailwind Traders website".
+Inicie a demonstração ao vivo em "Atualizar o modelo ONNX no site do Tailwind Traders".
 
-For viewing in Netron, you can view the file you exported from Custom Vision
-directly, or you can use the pre-prepared one from the repo at `ONNX/custom model/products.onnx`
+Para exibir no Netron, você pode exibir diretamente o arquivo exportado da Visão Personalizada ou pode usar um arquivo pré-preparado do repositório em `ONNX/custom model/products.onnx`
 
-Note that when you deploy the file it **must** be called `products.onnx`, so
-it's easiest to take the pre-prepared file by that name from your desktop,
-rather than re-naming the exported file.
+Observe que, ao implantar o arquivo, ele **deverá** se chamar `products.onnx`, portanto, é mais fácil usar o arquivo pré-preparado com esse nome da sua área de trabalho, em vez de renomear o arquivo exportado.
 
-### SLIDE: DEMO / Personalizer
+### <a name="slide-demo--personalizer"></a>SLIDE: DEMONSTRAÇÃO/Personalizador
 
-[Demo script](DEMO%20Personalizer.md)
+[Script de demonstração](DEMO%20Personalizer.md)

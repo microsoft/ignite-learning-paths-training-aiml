@@ -1,80 +1,67 @@
-# DEMO: Custom Vision
+# <a name="demo-custom-vision"></a>DEMONSTRAÇÃO: Visão Personalizada
 
-In this demo, we create a custom vision model using the service at
-customvision.ai.
+Nesta demonstração, criaremos um modelo de visão personalizada usando o serviço em customvision.ai.
 
-## Create a custom model project with Custom Vision
+## <a name="create-a-custom-model-project-with-custom-vision"></a>Criar um projeto de modelo personalizado com a Visão Personalizada
 
-TIP: You can do this section ahead of time, to save time in a live demo.
+DICA: É possível concluir esta seção com antecedência para economizar tempo em uma demonstração ao vivo.
 
-1. Sign into [Custom Vision](https://customvision.ai) and create a new project.
-   [Follow the instructions
-   here](https://docs.microsoft.com/azure/cognitive-services/custom-vision-service/getting-started-build-a-classifier?WT.mc_id=msignitethetour2019-github-aiml20).
+1. Entre em [Visão Personalizada](https://customvision.ai) e crie um novo projeto.
+   [Siga as instruções aqui](https://docs.microsoft.com/azure/cognitive-services/custom-vision-service/getting-started-build-a-classifier?WT.mc_id=msignitethetour2019-github-aiml20).
 
-1. Your new project should have the following settings:
+1. Seu novo projeto deverá ter as seguintes configurações:
 
-    - Name: Tools
-    - Description: Products sold by Tailwind   Traders
-    - Resource: aiml20-cs-resource
-    - Project Type: classification
-    - Classification Types: Multiclass
-    - Domains: Retail (compact)
-    - Export capabilities: Basic Platforms
+    - Nome: Ferramentas
+    - Descrição: Produtos vendidos pela Tailwind Traders
+    - Recurso: aiml20-cs-resource
+    - Tipo de projeto: classificação
+    - Tipos de classificação: Multiclasse
+    - Domínios: Varejo (compacto)
+    - Exportar funcionalidades: Plataformas Básicas
 
-1. In the "Tags" tool in the left side, use the "+" button to add the following tags:
+1. Na ferramenta "Marcas" no lado esquerdo, use o botão "+" para adicionar as seguintes marcas:
 
-    - drill
-    - hammer
-    - pliers
-    - screwdriver
+    - furadeira
+    - martelo
+    - alicate
+    - chave de fenda
 
-1. We will now add images for each tag from the corresponding folder in "CV Training Images". Here's how to do it for "drill"
+1. Agora, adicionaremos imagens para cada marca da pasta correspondente em "Imagens de Treinamento de CV". Veja como fazer isso para "furadeira"
 
-    - Click "Add Images" in the top row
-    - Browse to CV Training Images / drills
-    - Select all files: click one file, then press Control-A
-    - Click Open
-    - In the "Image Upload" dialog that appears next, select "drill" in "My Tags" and then click "Upload 16 Files"
-    - repeat this process for the tags: hammer, pliers, screwdriver (we will do "hard hat" later)
+    - Clique em "Adicionar Imagens" na linha superior
+    - Navegue até as Imagens de Treinamento de CV/furadeiras
+    - Selecione todos os arquivos: clique em um arquivo e pressione Control-A
+    - Clique em Abrir
+    - Na caixa de diálogo "Carregamento de Imagem" que aparece em seguida, selecione "furadeira" em "Minhas Marcas" e clique em "Carregar 16 arquivos"
+    - repita esse processo para as marcas: martelo, alicate e chave de fenda (faremos o "capacete" posteriormente)
 
-## Add images and train a model
+## <a name="add-images-and-train-a-model"></a>Adicionar imagens e treinar um modelo
 
-At Ignite Tour, the prior steps were all done ahead of time in preparation. Only
-the remaining steps were done live, to save time.
+No Ignite Tour, as etapas anteriores foram todas feitas com antecedência na preparação. Somente as etapas restantes foram feitas ao vivo para economizar tempo.
 
-1. If you haven't already, sign into customvision.ai and open your "tools" project.
+1. Caso ainda não tenha feito, entre no customvision.ai e abra seu projeto "ferramentas".
 
-1. This project has already been provided with images of drills, hammers, pliers, and screwdrivers. Let's add some images of hard hats as well.
+1. Esse projeto já foi fornecido com imagens de furadeiras, martelos, alicates e chaves de fenda. Adicionaremos algumas imagens de capacetes também.
 
-- Click "Add Images" in the top row
-- Browse to CV Training Images / drills
-- Select all files: click one file, then press Control-A
-- Click Open
-- In the "Image Upload" dialog that appears next, select "hard hat" in "My Tags" and then click "Upload 16 Files"
+- Clique em "Adicionar Imagens" na linha superior
+- Navegue até as Imagens de Treinamento de CV/furadeiras
+- Selecione todos os arquivos: clique em um arquivo e pressione Control-A
+- Clique em Abrir
+- Na caixa de diálogo "Carregamento de Imagem" que aparece em seguida, selecione "capacete" em "Minhas Marcas" e clique em "Carregar 16 arquivos"
 
-1. Click "Performance" in the top menu bar, and then click the green "Train" button. Choose "Quick Training" and then click "Train"
+1. Clique em "Desempenho" na barra de menus superior e, em seguida, clique no botão verde "Treinar". Escolha "Treinamento Rápido" e clique em "Treinar"
 
-1. Click on the most recent iteration in the left pane to see the results. You
-   should have 90.9% Precision (how many of our training images does the model
-   predict correctly?), 88.2% Recall (when we generate a prediction, is it
-   correct?), and 98.7% AP (overall measure). Note that these depend on the
-   probability threshold -- make this low if you want to avoid false positives.
-   For our retail app, it's safe to make it high.
+1. Clique na iteração mais recente no painel esquerdo para ver os resultados. Você deverá ter uma precisão de 90,9%. Quantas imagens de treinamento o modelo prevê corretamente? Recall de 88,2%. Quando geramos uma previsão, ela estará correta? E PA de 98,7% (medida geral). Observe que eles dependem do limite de probabilidade, reduza-os caso queira evitar falsos positivos.
+   Para nosso aplicativo de varejo é seguro aumentá-los.
 
-1. Test out the model with a new picture. Click "Quick Test" and "Browse Local
-   Files", and then choose "test images / man in hardhat.jpg". See that it
-   identifies as a hard hat with 99.9% probability. Try the same with "test images / drill.jpg", which is also identified correctly.
+1. Teste o modelo com uma nova imagem. Clique em "Teste Rápido" e "Procurar Arquivos Locais" e, em seguida, escolha "imagens de teste/homem com capacete. jpg". Veja que ele identifica como um capacete com 99,9% de probabilidade. Experimente o mesmo com "imagens de teste/furadeira.jpg", que também será identificada corretamente.
 
-Now we will save the model in the ONNX format for integration into the Tailwind
-Traders app.
+Agora, salvaremos o modelo no formato ONNX para integração com o aplicativo da Tailwind Traders.
 
-1. Click Export, and choose "ONNX". Note the other platform-specific formats
-   available as well.
+1. Clique em Exportar e escolha "ONNX". Observe também outros formatos específicos de plataforma disponíveis.
 
-1. Select the version ONNX 1.2, and then click Export. The TWT app expects a
-   file called products.onnx, so we'll use the one that's already saved in the
-   repo.
+1. Selecione a versão ONNX 1.2 e clique em Exportar. O aplicativo TWT espera um arquivo chamado products.onnx, portanto, usaremos aquele que já está salvo no repositório.
 
-## Next Step
+## <a name="next-step"></a>Próxima etapa
 
-[ONNX Deployment](DEMO%20ONNX%20deployment.md)
+[Implantação do ONNX](DEMO%20ONNX%20deployment.md)

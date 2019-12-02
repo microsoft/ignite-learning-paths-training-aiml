@@ -1,36 +1,36 @@
-# InvoiceReaderSkill
-How to publish:
+# <a name="invoicereaderskill"></a>InvoiceReaderSkill
+Como publicar:
 ```
 func azure functionapp publish <FUNCAPP> --build remote
 ```
 
-# Some fun search filters
-Orders with ItemId 49
+# <a name="some-fun-search-filters"></a>Alguns filtros de pesquisa divertidos
+Pedidos com ItemId 49
 ```
 *&$filter=invoice/lineItems/any(lineItems: lineItems/itemId eq 49)
 ```
 
-invoiceId is 12179
+a invoiceId é 12179
 ```
 *&$filter=invoice/invoiceId eq 12179
 ```
 
-companies in Australia
+empresas na Austrália
 ```
 *&$filter=invoice/company/country eq 'Australia'
 ```
 
-companies in the UK (with a count)
+empresas no Reino Unido (com uma contagem)
 ```
 *&$count=true&$filter=invoice/company/country eq 'United Kingdom'
 ```
 
-only retrieve invoices
+recuperar somente faturas
 ```
 *&$select=invoice&$count=true
 ```
 
-people in Germany
+pessoas na Alemanha
 ```
 *&$count=true&$select=invoice/person&$filter=invoice/person/country eq 'Germany'
 ```
