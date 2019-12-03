@@ -5,23 +5,30 @@ the Tour 2019-2020 talk, "Using Pre-Built AI to Solve Business Challenges". Here
 you will find links to the resources mentioned in the talk, and the code and
 scripts you will need to recreate the demos given in the talk.
 
-[Download the slides for the AIML20 presentation here](presentations.md). (Use
-the first link for the latest version.) The slides are in PPT format and include
-detailed speaker notes and embedded demo videos.
-
-[Watch a recording of this
-presentation](https://myignite.techcommunity.microsoft.com/sessions/82987?source=sessions)
-from Microsoft Ignite Orlando, November 7 2019.
-
-Short-link to these resources: [aka.ms/AIML20repo](https://aka.ms/AIML20repo). 
-
-[Resources for presenters of this talk](README-Presenters.md) are also provided.
-
 ## Session Abstract
 
 **Using Pre-Built AI to Solve Business Challenges**
 
 Abstract: As a data-driven company, Tailwind Traders understands the importance of using Artificial Intelligence to improve business processes and delight customers. Before investing in an AI team, their existing developers were able to demonstrate some quick wins using pre-built AI technologies. In this session, we will show how you can use Azure Cognitive Services to extract insights from retail data. We’ll go into the neural networks behind computer vision, and show how you can augment the pre-built AI with your own images for custom image recognition applications.
+
+## Table of Content
+ 
+
+| Resources          | Links                            |
+|-------------------|----------------------------------|
+| PowerPoint        | - [Presentation](presentations.md) |
+| Videos            | - [Dry Run Rehearsal](https://youtu.be/jRO-5g-HYuU) <br/>- [Microsoft Ignite Orlando Recording](https://myignite.techcommunity.microsoft.com/sessions/82987?source=sessions) |
+| Demos             | - [Demo 1 - Setup ](https://github.com/microsoft/ignite-learning-paths-training-aiml/blob/master/aiml20/DEMO%20Setup.md) <br/>- [Demo 2 - Computer Vision](https://github.com/microsoft/ignite-learning-paths-training-aiml/blob/master/aiml20/DEMO%20Computer%20Vision.md) <br/>- [Demo 3 - Custom Vision](https://github.com/microsoft/ignite-learning-paths-training-aiml/blob/master/aiml20/DEMO%20Custom%20Vision.md)<br/>- [Demo 4 - ONNX Deployment](https://github.com/microsoft/ignite-learning-paths-training-aiml/blob/master/aiml20/DEMO%20ONNX%20deployment.md) <br/>- [Demo 5 - Personalizer](https://github.com/microsoft/ignite-learning-paths-training-aiml/blob/master/aiml20/DEMO%20Personalizer.md) | 
+
+[Download the slides for the AIML20 presentation here](presentations.md). (Use
+the first link for the latest version.) The slides are in PPT format and include
+detailed speaker notes and embedded demo videos.
+
+Short-link to these resources: [aka.ms/AIML20repo](https://aka.ms/AIML20repo). 
+
+[Resources for presenters of this talk](README-Presenters.md) are also provided.
+
+
 
 ## Technologies used
 

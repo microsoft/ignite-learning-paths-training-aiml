@@ -149,7 +149,7 @@ These images will be used to test the Computer Vision service and create a model
 with the Custom Vision service.
 
 These images were sourced from Wikimedia Commons and used under their respective
-Creative Commons licenses. See the file [ATTRIBUTIONS.md](Attributions.md) for
+Creative Commons licenses. See the file [ATTRIBUTIONS.md](https://github.com/microsoft/ignite-learning-paths-training-aiml/blob/master/aiml20/CV%20training%20images/ATTRIBUTIONS.md) for
 details.
 
 Also download the folder "test images". These images will not be used in

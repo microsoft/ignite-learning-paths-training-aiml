@@ -18,6 +18,8 @@ So, before the demo, you would have a browser with the following 3 pages open:
 
 In addition to those steps, to ensure speedy demo you need to do the following:
 
+> 💡 You must have completed the [environment setup](https://github.com/microsoft/ignite-learning-paths-training-aiml/blob/master/aiml40/Demo.md#demo-preparation) before attempting to do the demo.
+
 1. **For Demo 1:** Open the browser to [Text Analytics Page](https://azure.microsoft.com/services/cognitive-services/text-analytics/?WT.mc_id=msignitethetour2019-github-aiml40) and in the text box below enter the following text and press **Analyze**: 
 > I loved the polka dot pants that I bought in the london store
 

@@ -1,5 +1,7 @@
 # Show Faulty Prediction and Make a Change
 
+> 💡 You must have completed the [setup](../DEMO.md) before attempting to do the demo.
+
 ## Show the Faulty Prediction
 
 * Navigate to the Tailwind Traders website
