@@ -84,22 +84,21 @@ Once you have created the base Azure Machine Learning Service Workspace we need 
 * These are the columns the data demo app will be expecting when we post to get a result from the completed and deployed model.
 * Run the training
 
-### 4. Create Predictive Experiment and Deploy the Model
-
-* Click `Create` predictive experiment. Think of the `Predictive Experiment` model as the production model that gets deployed to the web service. The `Training Experiment` as the dev model.
-* Add the `Execute Python Script` and `Select Columns in Dataset` modules to the created predictive experiment.
-* Run the experiment
-* Click `Deploy Web Service`
+### 4. Create Inference Pipeline and Deploy the Model
+* Click `Create inference pipeline` then select `Real-time inference pipeline`
+* Ensure the `Web Service Output` is connected to the last data processing step module `Select Columns in Dataset`
+* Click `Run`
+* Click `Deploy`
 * Navigate to the deployed web service from the left nav.
-* Click on the name of the web service created.
+* Click on the name of the web service created in advance.
 * Click `Test` and to see how it performs on a scored data item.
-* Click `Consume` and show the sample code provided for integrating the web service.
+* Click `Consume` and to see the sample code provided for integrating the web service.
 
 ### 5. Testing API with C# console app (dotnet core)
 
 1. [Download VS Code here](https://code.visualstudio.com/download)
 2. Clone the app with the following command
-    * `git clone https://github.com/microsoft/ignite-learning-paths.git`
+    * `git clone https://github.com/microsoft/ignite-learning-paths-training-aiml.git`
 3. Navigate to project path
     * `cd ignite-learning-paths\aiml\aiml30\C#\IgniteAimlDataApp`
 4. Open the project in VS Code
@@ -115,9 +114,7 @@ Once you have created the base Azure Machine Learning Service Workspace we need 
     * To use the default values of StoreID (ID1) of 2 and ItemID    (ID2) of 1 and the number of weeks to predict. Just type `y`
     * This will run and should return the predicted values for the  next 4 weeks.
 
-## Delivery assets
-
-The following asset can be used for delivering this talk:
+## PowerPoint Deck and Video Demo
 
 - [PowerPoint deck](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml30/AIML30_How%20to%20Build%20Machine%20Learning%20Models.pptx)
 - [Demonstration videos](https://www.youtube.com/watch?v=u1ppYaZuNmo&feature=youtu.be)

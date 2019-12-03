@@ -30,7 +30,7 @@ To navigate through code with `F12` and `CTRL-` shortcuts download the Visual St
     * Use the embedded mp4 video in the hidden slide. Talk along side this video without sound.
     * Start at slide 21 and show the data prep code in static slide steps.
 
-# Demo 2: Build Model with Azure Machine Learning Visual Designer
+# Demo 2: Build Model with Azure Machine Learning Designer
 
 ### Full Model Building Live Demo Video [here](https://youtu.be/u1ppYaZuNmo?t=1278)
 
@@ -110,14 +110,15 @@ To navigate through code with `F12` and `CTRL-` shortcuts download the Visual St
     * Click `More Help` in the right panel of the parameters.
     * Highlight that every module has a link to the docs in the parameters that will explain what the module is doing.
     * Scroll down and show the metrics explanations in the docs for the model.
-### 6. Create Predictive Experiment and Deploy the Model
-This is normally where you would create the `Predictive Experiment` to deploy it to a web service _however_ we have done these steps in advance. 
+    
+### 6. Create Inference Pipeline and Deploy the Model
+This is normally where you would create the `Inference Pipeline` to deploy it to a web service _however_ we have done these steps in advance. 
 * Discuss these steps _do not do them live_:
-    * Click `Create` predictive experiment. Think of the `Predictive Experiment` model as the production model that gets deployed to the web service. The     `Training Experiment` as the dev model.
-    * Add the `Execute Python Script` and `Select Columns in Dataset` modules to    the created predictive experiment.
-    * Run the experiment
-    * Click `Deploy Web Service`
-* After discussing the steps to create the `Predictive Experiment` navigate to the deployed web service from the left nav.
+    * Click `Create inference pipeline` then select `Real-time inference pipeline`
+    * Ensure the `Web Service Output` is connected to the last data processing step module `Select Columns in Dataset`
+    * Click `Run`
+    * Click `Deploy`
+* After discussing the steps to create the `Inference Pipeline` navigate to the deployed web service from the left nav.
 * Click on the name of the web service created in advance.
 * Click `Test` and show how it performs on a scored data item.
 * Click `Consume` and show the sample code provided for integrating the web service.
