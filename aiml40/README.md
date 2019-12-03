@@ -13,7 +13,7 @@ In this session, we will explore the complete path of integrating text analysis 
 |-------------------|----------------------------------|
 | PowerPoint        | - [Presentation](presentations.md) |
 | Videos            | - [Dry Run Rehearsal](https://youtu.be/If9IQm3gWVQ) <br/>- [Microsoft Ignite Orlando Recording](https://myignite.techcommunity.microsoft.com/sessions/83002?source=sessions) |
-| Demos             | - [Demo 1 - Cognitive Services Text Analytics](https://youtu.be/QJxjm5BirOA) <br/>- [Demo 2 - Automated Machine Learning](https://youtu.be/qrstXN6TLZk) <br/>- [Demo 3 - Azure Machine Learning SDK and Hyperdrive](https://youtu.be/sccNTPO3PwU) |
+| Demos             | - [Demo 1 - Cognitive Services Text Analytics](https://github.com/microsoft/ignite-learning-paths-training-aiml/tree/master/aiml40#demo-1-text-analytics-cognitive-service) <br/>- [Demo 2 - Automated Machine Learning](https://github.com/microsoft/ignite-learning-paths-training-aiml/tree/master/aiml40#demo-2-azure-automl) <br/>- [Demo 3 - Azure Machine Learning SDK and Hyperdrive](https://github.com/microsoft/ignite-learning-paths-training-aiml/tree/master/aiml40#demo-3-using-azure-ml-workspace-with-python-sdk) |
 
 ## Delivery Assets
 
@@ -125,6 +125,8 @@ python create_cluster.py -s [subscription_id] -w absa_space -g absa
 
 ### Demo 1: Text Analytics Cognitive Service
 
+> 💡 You must have completed the [environment setup](https://github.com/microsoft/ignite-learning-paths-training-aiml/tree/master/aiml40#starting-fast) before attempting to do the demo.
+
 In this demo, we show how Text Analytics can do sentiment analysis of a phrase in a web interface.
 
 1. Open [Text Analytics Page](https://azure.microsoft.com/services/cognitive-services/text-analytics/?WT.mc_id=msignitethetour2019-github-aiml40)
@@ -136,6 +138,8 @@ In this demo, we show how Text Analytics can do sentiment analysis of a phrase i
 Note that Text Analytics does not only provide sentiment, but also extracts location and key words from text.
 
 ### Demo 2: Azure AutoML
+
+> 💡 You must have completed the [environment setup](https://github.com/microsoft/ignite-learning-paths-training-aiml/tree/master/aiml40#starting-fast) before attempting to do the demo.
 
 In this demo, we demonstrate how Automated ML can be used to build an ML model without coding.
 
@@ -154,6 +158,8 @@ In this demo, we demonstrate how Automated ML can be used to build an ML model w
 The experiment will take quite a long time to run, because different algorithms will be investigated. If showing a demo, it would make sense to run this in advance and just show the results.
 
 ### Demo 3: Using Azure ML Workspace with Python SDK
+
+> 💡 You must have completed the [environment setup](https://github.com/microsoft/ignite-learning-paths-training-aiml/tree/master/aiml40#starting-fast) before attempting to do the demo.
 
 In this demo, we will run custom Python code that uses the Python Azure ML SDK to train, optimize and use the custom Aspect Based Sentiment Analysis (ABSA) model.
 
