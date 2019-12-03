@@ -1,8 +1,8 @@
 # AIML30 -Start Building Machine Learning Models Faster than You Think -Train the trainer
 
-Tailwind Traders uses custom machine learning models to fix their inventory issues – without changing their Software Development Life Cycle! How? Azure Machine Learning Visual Interface.
+Tailwind Traders uses custom machine learning models to fix their inventory issues – without changing their Software Development Life Cycle! How? Azure Machine Learning Designer.
  
-In this session, you’ll learn the data science process that Tailwind Traders’ uses and get an introduction to Azure Machine Learning Visual Interface. You’ll see how to find, import, and prepare data, select a machine learning algorithm, train and test the model, and deploy a complete model to an API. Get the tips, best practices, and resources you and your development team need to continue your machine learning journey, build your first model, and more.
+In this session, you’ll learn the data science process that Tailwind Traders’ uses and get an introduction to Azure Machine Learning Designer. You’ll see how to find, import, and prepare data, select a machine learning algorithm, train and test the model, and deploy a complete model to an API. Get the tips, best practices, and resources you and your development team need to continue your machine learning journey, build your first model, and more.
 
 
 ## Demo Environment Deployment
@@ -42,25 +42,20 @@ Once you have created the base Azure Machine Learning Service Workspace we need 
 
 ### 2. Start Building the  Model
 
-* Click `Visual Interface` from the left nav
-* Click `Launch Visual Interface`
-* Click `New` from the bottom left corner
-* Click `Blank Experiment`
+* Click `Designer` from the left nav
+* Click plus sign to create a new Pipeline
 * Expand `Datasets` and `My Datasets`
 * Drag and drop the uploaded dataset onto the experiment workspace
 * Drag the `Select Columns in Dataset` onto the workspace
-    * Click `Edit columns` from the properties menu on the right side.
-    * Click `All Columns`
-    * Click `Exclude`
-    * Click `column names`
-    * Exclude the `Time` column
-    * Exclude the `DatesInWeek`
-    * NOTE: Optionally exclude these columns in the data edit feature when uploading the dataset to the workspace in the data prep steps during upload.
+    * Click `Edit columns` from the parameters menu on the right side.
+    * Click `By Name`
+    * Click `Add All`
+    * Click `Minus` icon on the `Time` column to exclude it
 * Drag the `Split Data` onto the workspace
-    * Edit the properties to split the data 70/30. 
-    * Discuss that this is not a rule and can change base on different model needs.
+    * Edit the parameters to split the data 70/30. 
+    * This is not a rule and can change base on different model needs.
 * Drag the `Train Model` onto the workspace
-    * Select the label column name `Values` from the properties on the right
+    * Select the label column name `Values` from the parameters on the right
 * Drag the `Boosted Decision Tree Regression` onto the workspace
 * Drag the `Score Model` onto the workspace
 * Drag the `Evaluate` onto the workspace
@@ -69,18 +64,23 @@ Once you have created the base Azure Machine Learning Service Workspace we need 
 * Connect `Score Model` with the `Evaluate` module.
 * Click the `Run` button in the bottom nav and select compute. 
 
-* Drag the `Execute Python Script` module onto the workspace and connect the `Score Model` module to it. 
-* Copy and paste this code in:
-    * `import pandas as pd` </br>
-       `import numpy as np` </br>
-        `def azureml_main(dataframe1 = None, dataframe2 = None):` </br>
-            `print(f'Input pandas.DataFrame #1: {dataframe1}')`</br>
-            `df = dataframe1`</br>
-            `df['Value'] = np.exp(df['Value'])`</br>
-            `df['Forecast'] = np.exp(df['Scored Labels'])`</br>
-            `return df`
-* Drag the `Select Columns in Dataset`
-* Select columns `ID1`, `ID2`, `Value` and `Forecast`
+* Rename the created column `Scored Labels` to `Forecast`
+    * Drag the `Edit Metadata` onto the workspace
+    * Connect `Score Model` with the `Edit Metadata` module
+    * In the `Parameters` of the `Edit Metadata` module. Click `Edit Columns`
+    * Type `Score Labels` into the text box (no need to change any of the defaults)
+    * Click `Save`
+    * Next update the `New Column Name` field on the `Parameters` to `Forecast`
+* Transform the normalized value back to full item counts
+    * Drag the `Apply Math Operation` onto the workspace
+    * Connect `Edit Metadata` to `Apply Math Operation`
+    * Set the `Basic math function` to `Exp`
+    * Click `Edit Columns` and type `Value` and `Forecast`
+    * Click `Save`
+    * Set the `Output mode` to `Inplace`
+* Drag the `Select Columns in Dataset` module onto the workspace
+* Connect the `Apply Math Operation` to `Select Columns in Dataset`
+* Click `Edit Columns` and type the following column names `ID1,ID2,Value,Forecast`
 * These are the columns the data demo app will be expecting when we post to get a result from the completed and deployed model.
 * Run the training
 
@@ -126,7 +126,7 @@ The following asset can be used for delivering this talk:
 
 Here is a list of related training and documentation.
 
-- [What is the visual interface for Azure Machine Learning?](https://docs.microsoft.com/en-us/azure/machine-learning/service/ui-concept-visual-interface?WT.mc_id=msignitethetour-slides-cxa)
+- [What is the Designer for Azure Machine Learning?](https://docs.microsoft.com/en-us/azure/machine-learning/service/ui-concept-visual-interface?WT.mc_id=msignitethetour-slides-cxa)
 - [Publish a Machine Learning Experiment with Microsoft Azure Machine Learning](https://docs.microsoft.com/en-us/learn/paths/publish-experiment-with-ml-studio/)
 
 

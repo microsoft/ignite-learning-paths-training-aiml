@@ -58,17 +58,16 @@ The first demo is with VS Code and the C# IgniteAimlDataApp. This is to demonstr
 
 1. [Download VS Code here](https://code.visualstudio.com/download)
 2. Ensure that you have [.NET Core SDK 2.1.0](https://dotnet.microsoft.com/download/dotnet-core/2.1) installed on your local
-2. Clone the app with the following command
+3. Clone the app with the following command
     * `git clone https://github.com/microsoft/ignite-learning-paths-training-aiml.git`
-3. Navigate to project path
+4. Navigate to project path
     * `cd ignite-learning-paths-training-aiml/aiml30/C#/IgniteAimlDataApp/IgniteAimlDataApp`
-4. Open the project in VS Code
+5. Open the project in VS Code
     * `code .`
-5. Replace the local dataset with the downloaded dataset from the step above in the `IgniteAimlDataApp/Datasets` Folder.
-6. To run the app
+6. Replace the local dataset with the downloaded dataset from the step above in the `IgniteAimlDataApp/Datasets` Folder.
+7. To run the app
     * Right click on `Program.cs` and select `Open in Terminal`
     * Run the command `dotnet run`
-    Note for Mac users: if you get an error that the program can't find the file you imported, change line 14 in Program.cs     to include forward slashes: `string sourceFile = $"{Environment.CurrentDirectory}//Datasets//{fileName}.csv";`
     * It will prompt with a question `Would you like to run the default params` type `y`
     * This will attempt to hit the API but it will fail since it hasn't been created yet.
 
