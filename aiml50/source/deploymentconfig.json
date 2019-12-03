@@ -4,6 +4,5 @@
        "memoryInGB": 4
     },
     "computeType": "ACI",
-    "enableAppInsights": "True",
-	"location":"southeastasia"
+    "enableAppInsights": "True"
  }
