@@ -6,6 +6,15 @@ While many companies have adopted DevOps practices to improve their software del
 
 In this session, you’ll learn how to apply DevOps practices to your machine learning projects using Azure DevOps and Azure Machine Learning Service. We’ll set up automated training, scoring, and storage of versioned models and wrap the models in docker containers and deploy them to Azure Container Instances and Azure Kubernetes Service. We’ll even collect continuous feedback on model behavior so we know when to retrain.
 
+## Table of Content
+ 
+
+| Resources          | Links                            |
+|-------------------|----------------------------------|
+| PowerPoint        | - [Presentation](presentations.md) |
+| Videos            | - [Dry Run Rehearsal](https://youtu.be/UgM8_4fAni8) <br/>- [Microsoft Ignite Orlando Recording](https://myignite.techcommunity.microsoft.com/sessions/83003) |
+| Demos             | - [Demo 1 - Show Faulty Prediction and Make a Change](https://github.com/microsoft/ignite-learning-paths-training-aiml/blob/master/aiml50/demos/1-Show_Faulty_Prediction.md) <br/>- [Demo 2 - Build a Pipeline with Jupyter Notebooks](https://github.com/microsoft/ignite-learning-paths-training-aiml/blob/master/aiml50/demos/2-Build_a_Pipeline_With_Notebooks.md) <br/>- [Demo 3 - Show the Build in Progress](https://github.com/microsoft/ignite-learning-paths-training-aiml/blob/master/aiml50/demos/3-Show_The_Build.md) <br/>- [Demo 4 - Show the Release Process](https://github.com/microsoft/ignite-learning-paths-training-aiml/blob/master/aiml50/demos/4-Show_The_Release.md)|
+
 ## How To Use
 
 Welcome, Presenter!
