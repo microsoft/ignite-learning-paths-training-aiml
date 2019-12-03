@@ -1,5 +1,7 @@
 # DEMO: Custom Vision
 
+> 💡 You must have completed the [setup](https://github.com/microsoft/ignite-learning-paths-training-aiml/blob/master/aiml20/DEMO%20Setup.md) before attempting to do the demo.
+
 In this demo, we create a custom vision model using the service at
 customvision.ai.
 

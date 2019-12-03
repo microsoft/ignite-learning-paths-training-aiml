@@ -1,5 +1,7 @@
 # Using pre-built AI to understand images
 
+> 💡 You must have completed the [setup](https://github.com/microsoft/ignite-learning-paths-training-aiml/blob/master/aiml20/DEMO%20Setup.md) before attempting to do the demo.
+
 In this demonstration, we will use Azure Computer Vision to detect the type of
 object an image represents. 
 
