@@ -6,14 +6,24 @@ Artificial Intelligence and Machine Learning can be used in many ways to increas
 
 In this session, we will explore the complete path of integrating text analysis intelligent services into the business processes of [Tailwind Traders](http://tailwindtraders.com), starting from pre-build models available as [cognitive services](https://azure.microsoft.com/services/cognitive-services/?WT.mc_id=msignitethetour2019-github-aiml40), up to training a third-party neural custom model for [Aspect-Based Sentiment Analysis](https://www.intel.ai/introducing-aspect-based-sentiment-analysis-in-nlp-architect/) availabe as part of [Intel NLP Architect](http://nlp_architect.nervanasys.com/) using [Azure Machine Learning Service](https://azure.microsoft.com/services/machine-learning-service/?wt.mc_id=msignitethetour2019-github-aiml40). We will talk about cases when one needs a custom model, and demonstrate quick ways to create such a model from scratch using [AutoML](https://docs.microsoft.com/azure/machine-learning/service/concept-automated-ml/?wt.mc_id=msignitethetour2019-github-aiml40), and show how to fine-tune model hyperparameters using [HyperDrive](https://docs.microsoft.com/azure/machine-learning/service/how-to-tune-hyperparameters/?wt.mc_id=msignitethetour2019-github-aiml40)
 
+## Table of Content
+ 
+
+| Resources          | Links                            |
+|-------------------|----------------------------------|
+| PowerPoint        | - [Presentation](presentations.md) |
+| Videos            | - [Dry Run Rehearsal](https://youtu.be/If9IQm3gWVQ) <br/>- [Microsoft Ignite Orlando Recording](https://myignite.techcommunity.microsoft.com/sessions/83002?source=sessions) |
+| Demos             | - [Demo 1 - Cognitive Services Text Analytics](https://youtu.be/QJxjm5BirOA) <br/>- [Demo 2 - Automated Machine Learning](https://youtu.be/qrstXN6TLZk) <br/>- [Demo 3 - Azure Machine Learning SDK and Hyperdrive](https://youtu.be/sccNTPO3PwU) |
+
 ## Delivery Assets
 
-* [PowerPoint deck](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml40/aiml40.pptx) or [presentations.md](https://github.com/microsoft/ignite-learning-paths-training-aiml/blob/master/aiml40/presentations.md)
+* [PowerPoint deck](https://github.com/microsoft/ignite-learning-paths-training-aiml/blob/master/aiml40/presentations.md)
+* [Additional Presenter Resources](README-Instructor.md)
 * Demonstration videos:
     * Demo 1 - [Cognitive Services Text Analytics](https://youtu.be/QJxjm5BirOA)
     * Demo 2 - [Automated Machine Learning](https://youtu.be/qrstXN6TLZk)
     * Demo 3 - [Azure Machine Learning SDK and Hyperdrive](https://youtu.be/sccNTPO3PwU)
-* [Additional Presenter Resources](README-Instructor.md)
+
 
 ## Overview of Demonstrations
 
