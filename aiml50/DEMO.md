@@ -201,6 +201,9 @@ After the Machine Learning pipeline finishes, we can update the release pipeline
 
 ![23-azure_devops_release_task_verify](./images/23-azure_devops_release_task_verify.png)
 
+
+
+
 * Save the pipeline and create a new release.
 
 ## Troubleshooting and Reference
