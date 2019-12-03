@@ -73,7 +73,7 @@ Next, navigate to the AIML50 project that was created in the Azure DevOps Organi
 
 #### Create the Service Connections
 
-From the project page, navigate to the project settings.
+From the project page, navigate to the `project settings`.
 
 ![0-azure_devops_org](./images/0-azure_devops_org.png)
 ![1-azure_devops_project](./images/1-azure_devops_project.png)
@@ -132,13 +132,19 @@ Now, we need to create a build definition by pointing Azure DevOps to our build 
 
 * Navigate to `Pipelines` (under Pipelines).
 * Select `New Pipeline`
-* Connect to your fork of the GitHub project [Ignite Learning Paths Training AI/ML](https://github.com/microsoft/ignite-learning-paths-training-aiml)
-* Choose to use the build definition from the repository (`aiml50/azure-pipelines.yml`)
 
 ![9-azure_devops_pipeline_new](./images/9-azure_devops_pipeline_new.png)
 ![10-azure_devops_pipeline_new_source](./images/10-azure_devops_pipeline_new_source.png)
+
+
+* Connect to your fork of the GitHub project [Ignite Learning Paths Training AI/ML](https://github.com/microsoft/ignite-learning-paths-training-aiml)
+
 ![11-azure_devops_pipeline_select_repo](./images/11-azure_devops_pipeline_select_repo.png)
+
 ![12-azure_devops_pipeline_select_build_definition](./images/12-azure_devops_pipeline_select_build_definition.png)
+
+* Choose to use the build definition from the repository (`aiml50/azure-pipelines.yml`)
+
 ![13-azure_devops_pipeline_select_build_definition_location](./images/13-azure_devops_pipeline_select_build_definition_location.png)
 
 #### Run the Build
@@ -155,37 +161,55 @@ After the build is connected to the source repository, we need to run a build to
 After the Machine Learning pipeline finishes, we can update the release pipeline.
 
 * Navigate to `Releases` (under Pipelines).
+
+![16-azure_devops_release_new](./images/16-azure_devops_release_new.png)
+
 * Select `Release Seer` and choose `Edit`
+
+![17-azure_devops_release_edit](./images/17-azure_devops_release_edit.png)
+
   * Select `Add an artifact`
+![18-azure_devops_release_artifact](./images/18-azure_devops_release_artifact.png)
+
+
   * Set a `Source type` of `AzureML`
   * Set the service endpoint to `aiml50-workspace`
   * Set the Model Names to `seer`.  You will not be able to do this until the first ML Pipeline finishes.
   * Click `Add`
   * Click the lightning icon on the new artifact and enable the `Continuous deployment trigger`
+
+![19-azure_devops_release_artifact_set](./images/19-azure_devops_release_artifact_set.png)
+
+
 * Next, open the `Deploy to ACI` environment.
+
+![20-azure_devops_release_edit_2](./images/20-azure_devops_release_edit_2.png)
+
 * Click on `Agent Job`
   * Set `Agent Pool` to `Azure Pipelines`
   * Set `Agent Specification` to `ubuntu-18.04`
+
+![21-azure_devops_release_task_agent](./images/21-azure_devops_release_task_agent.png)
+
 * Click on `Download deployment and inferencing code`
   * Set `Package name` to `seer_deployment`
+
+![22-azure_devops_release_task_edit](./images/22-azure_devops_release_task_edit.png)
+
 * Click on `Azure ML Model Deploy`
   * Verify that Azure ML Workspace is set to either `$(subscription_workspace)` or `aiml-workspace`.
-* Save the pipeline and create a new release.
 
-![16-azure_devops_release_new](./images/16-azure_devops_release_new.png)
-![17-azure_devops_release_edit](./images/17-azure_devops_release_edit.png)
-![18-azure_devops_release_artifact](./images/18-azure_devops_release_artifact.png)
-![19-azure_devops_release_artifact_set](./images/19-azure_devops_release_artifact_set.png)
-![20-azure_devops_release_edit_2](./images/20-azure_devops_release_edit_2.png)
-![21-azure_devops_release_task_agent](./images/21-azure_devops_release_task_agent.png)
-![22-azure_devops_release_task_edit](./images/22-azure_devops_release_task_edit.png)
 ![23-azure_devops_release_task_verify](./images/23-azure_devops_release_task_verify.png)
+
+* Save the pipeline and create a new release.
 
 ## Troubleshooting and Reference
 
 ### Checking the container deployment log
 
 In the provisioned resource group, navigate to the `bootstrap-container` container instance. From there, you can check the logs for the container, which will show the steps taken and any errors encountered.
+
+After deployment model to ACI, please check all 3 container run. If terminated, please restart ACI instance.
 
 ### Provider registration
 
