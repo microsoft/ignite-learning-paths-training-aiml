@@ -75,6 +75,11 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
         <sub><b>Steven Murawski</b></sub></a><br />
             <a href="https://github.com/microsoft/ignite-learning-paths-training-aiml/pull/9" title="Documentation">📖</a>
     </td>
+    <td align="center"><a href="https://github.com/sethjuarez">
+        <img src="https://avatars2.githubusercontent.com/u/115409?s=460&v=4" width="100px;" alt="Seth Juarez"/><br />
+        <sub><b>Seth Juarez</b></sub></a><br />
+            <a href="Add link to powerpoint here" title="Talk">📢</a>
+    </td>
 </tr></table>
 
 <!-- ALL-CONTRIBUTORS-LIST:END -->

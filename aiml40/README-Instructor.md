@@ -60,6 +60,11 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
         <sub><b>Dmitri Soshnikov</b></sub></a><br />
             <a href="https://github.com/microsoft/ignite-learning-paths-training-aiml/pull/4" title="documentation">📖</a> 
     </td>
+        <td align="center"><a href="https://github.com/amynic">
+        <img src="https://avatars3.githubusercontent.com/u/13828867?s=400&u=f6aca8528d65d6c191114d3a7328b46137eda162&v=4" width="100px;" alt="Amy Boyd"/><br />
+        <sub><b>Amy Boyd</b></sub></a><br />
+            <a href="https://github.com/microsoft/ignite-learning-paths-training-aiml/blob/master/aiml30/presentations.md" title="Talk">📢</a>
+    </td>
 </tr></table>
 
 <!-- ALL-CONTRIBUTORS-LIST:END -->
