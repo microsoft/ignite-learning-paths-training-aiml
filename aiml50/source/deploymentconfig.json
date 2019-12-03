@@ -5,5 +5,5 @@
     },
     "computeType": "ACI",
     "enableAppInsights": "True",
-	"location":"Japan East"
+	"location":"southeastasia"
  }
