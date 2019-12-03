@@ -1,5 +1,7 @@
 # Build a Pipeline with Jupyter Notebooks
 
+> 💡 You must have completed the [setup](../DEMO.md) before attempting to do the demo.
+
 ## Talking Points
 
 * Show the easy connection to a workspace, data source, and compute

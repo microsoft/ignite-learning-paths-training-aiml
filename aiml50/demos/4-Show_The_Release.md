@@ -1,5 +1,7 @@
 # Show the Release Process
 
+> 💡 You must have completed the [setup](../DEMO.md) before attempting to do the demo.
+
 ## Automating the Manual Process
 
 Talking Points:
