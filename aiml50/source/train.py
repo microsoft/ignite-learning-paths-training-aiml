@@ -85,20 +85,21 @@ def main(run, source_path, target_path, epochs, batch, lr):
 
     # model
     info('Creating Model')
-    base_model = tf.keras.applications.MobileNetV2(input_shape=img_shape,
-                                               include_top=False, 
-                                               weights='imagenet',
-                                               pooling='avg')
+
+#    base_model = tf.keras.applications.MobileNetV2(input_shape=img_shape,
+#                                               include_top=False, 
+#                                               weights='imagenet',
+#                                               pooling='avg')
 
     #base_model = tf.keras.applications.VGG19(input_shape=img_shape,
     #                                           include_top=False, 
     #                                           weights='imagenet',
     #                                           pooling='avg')
 
-    #base_model = tf.keras.applications.ResNet50(input_shape=img_shape,
-    #                                           include_top=False, 
-    #                                           weights='imagenet',
-    #                                           pooling='avg')
+    base_model = tf.keras.applications.ResNet50(input_shape=img_shape,
+                                               include_top=False, 
+                                               weights='imagenet',
+                                               pooling='avg')
 
     tf.keras.applications
 
