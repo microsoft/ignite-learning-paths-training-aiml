@@ -6,6 +6,15 @@ While many companies have adopted DevOps practices to improve their software del
 
 In this session, you’ll learn how to apply DevOps practices to your machine learning projects using Azure DevOps and Azure Machine Learning Service. We’ll set up automated training, scoring, and storage of versioned models and wrap the models in docker containers and deploy them to Azure Container Instances and Azure Kubernetes Service. We’ll even collect continuous feedback on model behavior so we know when to retrain.
 
+## Table of Content
+ 
+
+| Resources          | Links                            |
+|-------------------|----------------------------------|
+| PowerPoint        | - [Presentation](presentations.md) |
+| Videos            | - [Dry Run Rehearsal](https://youtu.be/UgM8_4fAni8) <br/>- [Microsoft Ignite Orlando Recording](https://myignite.techcommunity.microsoft.com/sessions/83003) |
+| Demos             | - [Demo 1 - Show Faulty Prediction and Make a Change](https://github.com/microsoft/ignite-learning-paths-training-aiml/blob/master/aiml50/demos/1-Show_Faulty_Prediction.md) <br/>- [Demo 2 - Build a Pipeline with Jupyter Notebooks](https://github.com/microsoft/ignite-learning-paths-training-aiml/blob/master/aiml50/demos/2-Build_a_Pipeline_With_Notebooks.md) <br/>- [Demo 3 - Show the Build in Progress](https://github.com/microsoft/ignite-learning-paths-training-aiml/blob/master/aiml50/demos/3-Show_The_Build.md) <br/>- [Demo 4 - Show the Release Process](https://github.com/microsoft/ignite-learning-paths-training-aiml/blob/master/aiml50/demos/4-Show_The_Release.md)|
+
 ## How To Use
 
 Welcome, Presenter!
@@ -21,7 +30,7 @@ Along with the video of the presentation, this document will link to all the ass
 ## Assets in Train-The-Trainer kit
 
 - This guide
-- PowerPoint presentation including notes for each slide [here](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml50/AIML50_MachineLearningOperations–ApplyingDevOpstoDataScience.pptx)
+- PowerPoint presentation including notes for each slide [here](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml50/aiml50.pptx) or [presentations.md](https://github.com/microsoft/ignite-learning-paths-training-aiml/blob/master/aiml50/presentations.md)
   - [Exported Speaker Notes](./SpeakerNotes.md)
 - Session at Microsoft Ignite 2019 Orlando [here](https://myignite.techcommunity.microsoft.com/sessions/83003)
 - Full-length recording of presentation [here](https://youtu.be/UgM8_4fAni8)
@@ -65,6 +74,11 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
         <img src="https://avatars1.githubusercontent.com/u/4006985?s=460&v=4" width="100px;" alt="Steven Murawski"/><br />
         <sub><b>Steven Murawski</b></sub></a><br />
             <a href="https://github.com/microsoft/ignite-learning-paths-training-aiml/pull/9" title="Documentation">📖</a>
+    </td>
+    <td align="center"><a href="https://github.com/sethjuarez">
+        <img src="https://avatars2.githubusercontent.com/u/115409?s=460&v=4" width="100px;" alt="Seth Juarez"/><br />
+        <sub><b>Seth Juarez</b></sub></a><br />
+            <a href="Add link to powerpoint here" title="Talk">📢</a>
     </td>
 </tr></table>
 

@@ -1,4 +1,4 @@
-## Demo 5
+## Demo 5 - Knowledge Store
 
 [![Demo 5](images/demo4.png)](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/videos/Demo5.mp4 "Demo 5")
 

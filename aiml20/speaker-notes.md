@@ -1,9 +1,8 @@
 # AIML20: Speaker Notes
 
-These are the notes for the PPT presentation at:
-https://microsoft.sharepoint.com/:p:/t/CloudDevAdvocacy/EctuTXQCOdpGqc5lhQgUnMgBr-R6hlWR5MuLE3qCIFgoHA?e=r1szwF
+These are the notes for the PPT presentation at: [presentations.md](https://github.com/microsoft/ignite-learning-paths-training-aiml/blob/master/aiml20/presentations.md)
 
-Associated demo scripts are found at: https://github.com/microsoft/ignite-learning-paths/tree/master/aiml/aiml20. Start with `DEMO%20Setup.md`.
+Associated demo scripts are found at: https://github.com/microsoft/ignite-learning-paths-training-aiml/tree/master/aiml20. Start with `DEMO%20Setup.md`.
 
 ## Slide notes
 
@@ -450,7 +449,7 @@ Photo feature of Tailwind Traders.
 
 ### SLIDE: Demo: Customized object recognition
 
-Demo instructions: https://github.com/microsoft/ignite-learning-paths/blob/master/aiml/aiml20/DEMO%20Custom%20Vision.md
+Demo instructions: https://github.com/microsoft/ignite-learning-paths-training-aiml/blob/master/aiml20/DEMO%20Custom%20Vision.md
 
 ### VIDEO: customvision.ai
 

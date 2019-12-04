@@ -60,9 +60,9 @@ Please download all the code and data files in this repository to get started. T
 
 # Delivery of Assets
 
-* [PowerPoint presentation](https://globaleventcdn.blob.core.windows.net/assets/aiml/AIML21_DevelopersGuidetoAI_ADataStory.pptx)
-* [Datasets used](aiml21/data)
-* [Code files to run](aiml21/code)
+* [PowerPoint presentation](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml21/aiml21.pptx) or go to [presentations.md](https://github.com/microsoft/ignite-learning-paths-training-aiml/blob/master/aiml21/presentations.md)
+* [Datasets used](https://github.com/microsoft/ignite-learning-paths-training-aiml/tree/master/aiml21/data)
+* [Code files to run](https://github.com/microsoft/ignite-learning-paths-training-aiml/tree/master/aiml21/code)
 * Separate Demo Videos: 
     * Demo 1 - [Explore](https://youtu.be/1Xtmrsfkzfs)
     * Demo 2 - [Experiment](https://youtu.be/sUKuRBRvo7U)
@@ -70,6 +70,8 @@ Please download all the code and data files in this repository to get started. T
     * Demo 4 - [Present](https://youtu.be/g7aBaC9s9qQ)
 
 # Demo 1 - Explore
+
+> 💡 You must have completed the [setup](https://github.com/microsoft/ignite-learning-paths-training-aiml/blob/master/aiml21/README-attendee.md#demo-environment-deployment) before attempting to do the demo.
 
 ### Video Demo with Voice Over: [AIML21 - Demo 1 - Explore](https://youtu.be/1Xtmrsfkzfs)
 
@@ -82,6 +84,8 @@ Please download all the code and data files in this repository to get started. T
 * Run through all code cells using SHIFT + ENTER
 
 # Demo 2 - Experiment
+
+> 💡 You must have completed the [setup](https://github.com/microsoft/ignite-learning-paths-training-aiml/blob/master/aiml21/README-attendee.md#demo-environment-deployment) before attempting to do the demo.
 
 ### Video Demo with Voice Over: [AIML21 - Demo 2 - Experiment](https://youtu.be/sUKuRBRvo7U)
 
@@ -107,6 +111,8 @@ Please download all the code and data files in this repository to get started. T
 
 # Demo 3 - Deploy
 
+> 💡 You must have completed the [setup](https://github.com/microsoft/ignite-learning-paths-training-aiml/blob/master/aiml21/README-attendee.md#demo-environment-deployment) before attempting to do the demo.
+
 ### Video Demo with Voice Over: [AIML21 - Demo 3 - Deploy](https://youtu.be/IgSaMKsyexg)
 
 * From the end of demo 2
@@ -129,6 +135,8 @@ Please download all the code and data files in this repository to get started. T
 * Run all cells in notebook and review output
 
 # Demo 4 - Present
+
+> 💡 You must have completed the [setup](https://github.com/microsoft/ignite-learning-paths-training-aiml/blob/master/aiml21/README-attendee.md#demo-environment-deployment) before attempting to do the demo.
 
 ### Video Demo with Voice Over: [AIML21 - Demo 4 - Present](https://youtu.be/g7aBaC9s9qQ)
 
@@ -170,4 +178,4 @@ Please download all the code and data files in this repository to get started. T
 
 # Feedback Loop
 
-Do you have a comment, feedback, suggestion? Currently, the best feedback loop for content changes/suggestions/feedback is to create a new issue on this GitHub repository. To get all the details about how to create an issue please refer to the [Contributing docs](https://github.com/microsoft/ignite-learning-paths/blob/master/contributing.md)
+Do you have a comment, feedback, suggestion? Currently, the best feedback loop for content changes/suggestions/feedback is to create a new issue on this GitHub repository. To get all the details about how to create an issue please refer to the [Contributing docs](../CONTRIBUTING.md)

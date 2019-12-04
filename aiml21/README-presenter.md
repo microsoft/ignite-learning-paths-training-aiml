@@ -21,10 +21,10 @@ Along with the video of the presentation, this document will link to all the ass
 # Assets in Train-the-Trainer Kit
 
 * This guide
-* [PowerPoint presentation](https://globaleventcdn.blob.core.windows.net/assets/aiml/AIML21_DevelopersGuidetoAI_ADataStory.pptx)
+* [PowerPoint presentation](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml21/aiml21.pptx) or go to [presentations.md](https://github.com/microsoft/ignite-learning-paths-training-aiml/blob/master/aiml21/presentations.md)
 * [Full-length recording of presentation](https://youtu.be/K8upKkvtEI0)
-* [Datasets used](aiml21/data)
-* [Code files to run](aiml21/code)
+* [Datasets used](https://github.com/microsoft/ignite-learning-paths-training-aiml/tree/master/aiml21/data)
+* [Code files to run](https://github.com/microsoft/ignite-learning-paths-training-aiml/tree/master/aiml21/code)
 * Separate Demo Videos: 
     * Demo 1 - [Explore](https://youtu.be/1Xtmrsfkzfs)
     * Demo 2 - [Experiment](https://youtu.be/sUKuRBRvo7U)
@@ -109,6 +109,8 @@ Please download all the code and data files in this repository to get started. T
 
 ## Demo 1 - Explore
 
+> 💡 You must have completed the [setup](https://github.com/microsoft/ignite-learning-paths-training-aiml/blob/master/aiml21/README-presenter.md#demo-instructions) before attempting to do the demo.
+
 ### Video Demo with Voice Over: [AIML21 - Demo 1 - Explore](https://youtu.be/1Xtmrsfkzfs)
 
 * Sign into your [Azure Portal](https://azure.microsoft.com/en-gb/?WT.mc_id=msignitethetour2019-github-aiml21) and open **Azure Machine Learning** you created with the template above
@@ -123,6 +125,8 @@ Please download all the code and data files in this repository to get started. T
 * Note further cells and visualizations are available and attendees should download the code from **[aka.ms/AIML21repo](http://aka.ms/aiml21repo)**
 
 ## Demo 2 - Experiment
+
+> 💡 You must have completed the [setup](https://github.com/microsoft/ignite-learning-paths-training-aiml/blob/master/aiml21/README-presenter.md#demo-instructions) before attempting to do the demo.
 
 ### Video Demo with Voice Over: [AIML21 - Demo 2 - Experiment](https://youtu.be/sUKuRBRvo7U)
 
@@ -152,6 +156,8 @@ Please download all the code and data files in this repository to get started. T
 
 ## Demo 3 - Deploy
 
+> 💡 You must have completed the [setup](https://github.com/microsoft/ignite-learning-paths-training-aiml/blob/master/aiml21/README-presenter.md#demo-instructions) before attempting to do the demo.
+
 ### Video Demo with Voice Over: [AIML21 - Demo 3 - Deploy](https://youtu.be/IgSaMKsyexg)
 
 > You will use the previously run experiment you reviewed above to deploy
@@ -178,6 +184,8 @@ Please download all the code and data files in this repository to get started. T
 * Run all cells in notebook and explain the code - **Review the video for all talking points for each demo**
 
 ## Demo 4 - Present
+
+> 💡 You must have completed the [setup](https://github.com/microsoft/ignite-learning-paths-training-aiml/blob/master/aiml21/README-presenter.md#demo-instructions) before attempting to do the demo.
 
 ### Video Demo with Voice Over: [AIML21 - Demo 4 - Present](https://youtu.be/g7aBaC9s9qQ)
 
@@ -213,7 +221,7 @@ Please download all the code and data files in this repository to get started. T
 
 All speakers will have the opportunity to attend **Train-the-Trainer Q&A sessions** every month (two sessions covering all timezones) and also after delivering the content on stage we would be keen for you to join us in the **Feedback sessions** organized to share your experience of the content and anything you would like to provide feedback or ideas on. 
 
-Do you have a comment, feedback, suggestion? Currently, the best feedback loop for content changes/suggestions/feedback is to create a new issue on this GitHub repository. To get all the details about how to create an issue please refer to the [Contributing docs](https://github.com/microsoft/ignite-learning-paths/blob/master/contributing.md)
+Do you have a comment, feedback, suggestion? Currently, the best feedback loop for content changes/suggestions/feedback is to create a new issue on this GitHub repository. To get all the details about how to create an issue please refer to the [Contributing docs](../CONTRIBUTING.md)
 
 ## Become a Trained Presenter
 
@@ -238,8 +246,8 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/amynic">
         <img src="https://avatars3.githubusercontent.com/u/13828867?s=400&u=f6aca8528d65d6c191114d3a7328b46137eda162&v=4" width="100px;" alt="Amy Boyd"/><br />
         <sub><b>Amy Boyd</b></sub></a><br />
-            <a href="https://globaleventcdn.blob.core.windows.net/assets/aiml/AIML21_DevelopersGuidetoAI_ADataStory.pptx" title="Talk">📢</a>
-            <a href="https://github.com/microsoft/ignite-learning-paths-training/pulls?q=is%3Apr+author%3Aamynic+is%3Aclosed" title="Documentation">📖</a> 
+            <a href="https://github.com/microsoft/ignite-learning-paths-training-aiml/commits?author=amynic" title="Talk">📢</a>
+            <a href="https://github.com/microsoft/ignite-learning-paths-training-aiml/commits?author=amynic" title="Documentation">📖</a> 
     </td>
 </tr></table>
 

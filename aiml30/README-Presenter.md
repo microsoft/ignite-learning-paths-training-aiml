@@ -4,9 +4,9 @@
 
 ## Session Abstract
 
-Tailwind Traders uses custom machine learning models to fix their inventory issues – without changing their Software Development Life Cycle! How? Azure Machine Learning Visual Interface.
+Tailwind Traders uses custom machine learning models to fix their inventory issues – without changing their Software Development Life Cycle! How? Azure Machine Learning Designer.
  
-In this session, you’ll learn the data science process that Tailwind Traders’ uses and get an introduction to Azure Machine Learning Visual Interface. You’ll see how to find, import, and prepare data, select a machine learning algorithm, train and test the model, and deploy a complete model to an API. Get the tips, best practices, and resources you and your development team need to continue your machine learning journey, build your first model, and more.
+In this session, you’ll learn the data science process that Tailwind Traders’ uses and get an introduction to Azure Machine Learning Designer. You’ll see how to find, import, and prepare data, select a machine learning algorithm, train and test the model, and deploy a complete model to an API. Get the tips, best practices, and resources you and your development team need to continue your machine learning journey, build your first model, and more.
 
 Welcome, Presenter! 
 
@@ -23,7 +23,7 @@ code.
 ## Assets in Train-The-Trainer kit
 
 - This guide
-- PowerPoint presentation including notes for each slide [here](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml30/AIML30_How%20to%20Build%20Machine%20Learning%20Models.pptx)
+- PowerPoint presentation including notes for each slide [here](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml30/aiml30.pptx) or [presentations.md](https://github.com/microsoft/ignite-learning-paths-training-aiml/blob/master/aiml30/presentations.md)
 - Full-length recording of presentation [here](https://www.youtube.com/watch?v=u1ppYaZuNmo&amp=&feature=youtu.be)
 - Individual recording of stage-ready hands-on demo [here](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml30/FullIgniteModelBuildDemo.mp4). This is also included in a hidden slide in the slide deck.
 - Demo Resource Guides
@@ -61,6 +61,11 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
         <sub><b>Francesca Lazzeri</b></sub><br />
             <a href="https://github.com/microsoft/ignite-learning-paths-training-aiml/aiml30/" title="talk">📢</a>
             <a href="https://github.com/microsoft/ignite-learning-paths-training-aiml/aiml30/" title="Documentation">📖</a>
+    </td>
+        <td align="center"><a href="https://github.com/amynic">
+        <img src="https://avatars3.githubusercontent.com/u/13828867?s=400&u=f6aca8528d65d6c191114d3a7328b46137eda162&v=4" width="100px;" alt="Amy Boyd"/><br />
+        <sub><b>Amy Boyd</b></sub></a><br />
+            <a href="https://github.com/microsoft/ignite-learning-paths-training-aiml/blob/master/aiml30/presentations.md" title="Talk">📢</a>
     </td>
 </tr></table>
 
