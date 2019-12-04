@@ -58,7 +58,7 @@ Example:
 ```
 
 * Click on (which will open in a new tab)
-  * `setup_pipeline.ipynb`
+  * `seer_pipeline.ipynb`
 
 #### seer_pipeline.ipynb
 
@@ -200,9 +200,6 @@ After the Machine Learning pipeline finishes, we can update the release pipeline
   * Verify that Azure ML Workspace is set to either `$(subscription_workspace)` or `aiml-workspace`.
 
 ![23-azure_devops_release_task_verify](./images/23-azure_devops_release_task_verify.png)
-
-
-
 
 * Save the pipeline and create a new release.
 
