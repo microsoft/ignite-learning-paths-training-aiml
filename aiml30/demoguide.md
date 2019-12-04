@@ -1,14 +1,14 @@
 # <a name="demo-guide"></a>デモ ガイド
-[こちらでデモのセットアップ手順](demosetup.md)を完了していることを確認してください
+[こちらのデモのセットアップ手順](demosetup.md)が完了済みであることをご確認ください
 
 # <a name="demo-1-data-prep-demo-with-app"></a>デモ 1:アプリを使用したデータ準備のデモ
 最初のデモでは、タイム シリーズ モデル用のスライドで説明したデータ準備を強調します。 C# デモ アプリで、これを行う方法について順を追って説明します。 これはどの言語でも実行できることを必ず強調してください。
 
-`F12` と `CTRL-` のショートカットを使用してコード間を移動するには、[こちらで](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vs-keybindings) VS Code 用の Visual Studio ショートカット拡張機能をダウンロードしてください。 これは非常に便利であり、何かを探してスクロールする必要がなくなります。
+`F12` と `CTRL-` のショートカットを使用してコード間を移動するには、[こちらで](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vs-keybindings) VS Code 用の Visual Studio ショートカット拡張機能をダウンロードしてください。 これは非常に便利で、何かを探してスクロールする必要がなくなります。
 
 ### <a name="data-prep-demo-video-herehttpsyoutubeu1ppyazunmot751"></a>データ準備のデモ ビデオは[こちら](https://youtu.be/u1ppYaZuNmo?t=751)
 
-### <a name="1-open-the-igniteaimldataapp-app-i-personally-like-to-have-this-open-before-i-start-the-talk-so-i-can-just-flip-to-it"></a>1.`IgniteAimlDataApp` アプリを開きます。 個人的には、説明を開始する前にこれを開いておいて、すぐに移動できるようにしておくことをお勧めします。
+### <a name="1-open-the-igniteaimldataapp-app-i-personally-like-to-have-this-open-before-i-start-the-talk-so-i-can-just-flip-to-it"></a>1.`IgniteAimlDataApp` アプリを開きます。 個人的には、トークを開始する前にこれを開いておいて、すぐに移動できるようにしておくことをお勧めします。
 * `Program.cs` ファイルを開きます
 * 右クリックして `Go To Definition` を選択するか、`F12` キーを押すことで、`GetProcessedDataForScore` メソッドに移動します
     * データ ソースからデータを読み込みます。 この例では、ソリューション内にあるローカルの Excel ファイルに読み込みます。
@@ -27,7 +27,7 @@
 * `CTRL-` を使って `GetProcessedDataForScore` に戻ります
 
 * データ デモのバックアップ オプション
-    * 非表示スライドで埋め込みの mp4 ビデオを使用します。 音を消したこのビデオに沿って説明します。
+    * 非表示スライド内の埋め込み mp4 ビデオを使用します。 音を消したこのビデオに沿ってトークを行います。
     * スライド 21 から開始し、静的なスライドの手順でデータ準備のコードを示します。
 
 # <a name="demo-2-build-model-with-azure-machine-learning-visual-designer"></a>デモ 2:Azure Machine Learning ビジュアル デザイナーでモデルを構築する
@@ -68,7 +68,7 @@
     * 注:必要に応じて、アップロード中のデータ準備手順でワークスペースにデータセットをアップロードするときに、データ編集機能でこれらの列を除外します。
 * `Split Data` をワークスペースにドラッグします
     * プロパティを編集し、データを 70/30 で分割します。 
-    * これはルールではなく、さまざまなモデル ニーズに基づいて変更できると説明します。
+    * これはルールではなく、さまざまなモデルのニーズに基づいて変更可能であることを説明します。
 * `Train Model` をワークスペースにドラッグします
     * 右側のプロパティからラベルの列名 `Value` を選択します
 * `Boosted Decision Tree Regression` をワークスペースにドラッグします
@@ -77,11 +77,11 @@
 * `Split Data` モジュールはトレーニング データ用として `Train Model` に接続し、未知のデータによる予測結果にスコアを付ける目的で `Score Model` に接続します。
 * `Train Model` をトレーニング アルゴリズム `Boosted Decision Tree Regression` モジュールに接続します。
 * `Score Model` を `Evaluate` モジュールと接続します。
-* このデモで実行するには時間がかかりすぎる "_としても_"、通常はここでモデルを実行します。 下部ナビゲーションにある `Run` ボタンをクリックし、コンピューティングを選択する方法について説明します。 ここから、AML でコンピューティング リソースを作成する方法の説明にスムーズに移行できます。
+* このデモで実行するには時間がかかりすぎる "_としても_"、通常はここでモデルを実行します。 下部ナビゲーションにある `Run` ボタンをクリックし、コンピューティングを選択する方法について説明します。 これにより、AML でコンピューティング リソースを作成する方法の説明にスムーズに移行できます。
 
-* 以下の手順は完成したモデルに含まれますが、トレーニングされないライブ デモ バージョンで、それらを実際に作成する必要はありません。
-    * `Execute Python Script` モジュールをワークスペースにドラッグし、`Score Model` モジュールをそれに接続します。 
-    * このコードをコピーし、次の場所に貼り付けます。
+* 以下の手順は完成したモデルに含まれますが、トレーニングされないライブ デモ バージョンでこれらを実際に作成する必要はありません。
+    * `Execute Python Script` モジュールをワークスペースにドラッグし、それに `Score Model` モジュールを接続します。 
+    * 次のコードをコピーして貼り付けます。
     
     
     ```python 
@@ -98,7 +98,7 @@
       
     * `Select Columns in Dataset` をドラッグします
         * 列 `ID1`、`ID2`、`Value`、`Forecast` を選択します
-        * これらは、完成したデプロイ済みのモデルから結果を取得するために投稿するときに、データ デモ アプリから求められる列です。
+        * これらは、ポストして完成したデプロイ済みモデルから結果を取得するときに、データ デモ アプリによって想定される列です。
 ### <a name="4-discuss-compute-target-creation"></a>4.コンピューティング先の作成について説明する
 * AML に戻ります
 * `Compute` ナビゲーション項目をクリックします
@@ -117,7 +117,7 @@
     * 下にスクロールし、そのモデルのドキュメント内のメトリックに関する説明を示します。
 ### <a name="6-create-predictive-experiment-and-deploy-the-model"></a>6.予測実験の作成とモデルのデプロイ
 以下の手順をあらかじめ実行していた "_としても_"、通常はここで `Predictive Experiment` を作成して Web サービスにデプロイします。 
-* 次の手順は、"_ライブでは行わない_" ことを説明します。
+* 次の手順について説明します ("_ライブでは行わないでください_")
     * `Create` 予測実験をクリックします。 `Predictive Experiment` モデルは、Web サービスにデプロイされる運用モデルとお考えください。 `Training Experiment` は開発モデルと考えます。
     * 作成された予測実験に `Execute Python Script` モジュールと `Select Columns in Dataset` モジュールを追加します。
     * 実験を実行します
@@ -137,5 +137,5 @@
 * `Program.cs` を開き、`client.BaseAddress = new Uri("");` に値を貼り付けます
 * `Program.cs` を右クリックし、`Open in Terminal` を選択します
 * コマンド「`dotnet run`」を入力し、コンソール アプリを実行します
-* StoreID (ID1) の既定値 2、ItemID (ID2) の既定値 1、予測する週の数を使用するには。 「`y`」と入力します
+* StoreID (ID1) の既定値 2、ItemID (ID2) の既定値 1、予測する週の数を使用するには、 ただ「`y`」と入力します
 * これで実行され、次の 4 週間分の予測値が返されるはずです。

@@ -18,35 +18,35 @@ AIML40 のデモの手順 (必要な準備を含む) については、「[AIML4
 
 これらの手順に加えて、デモを迅速に行うため、次のことを行う必要があります。
 
-1. **デモ 1 の場合:** ブラウザーで [Text Analytics ページ](https://azure.microsoft.com/services/cognitive-services/text-analytics/?WT.mc_id=msignitethetour2019-github-aiml40)を開き、下のテキスト ボックスに次のテキストを入力して、**[分析]** をクリックします。 
+1. **デモ 1 の場合:** ブラウザーで [Text Analytics ページ](https://azure.microsoft.com/services/cognitive-services/text-analytics/?WT.mc_id=msignitethetour2019-github-aiml40)を開き、下のテキスト ボックスに次のテキストを入力して、 **[分析]** をクリックします。 
 > ロンドンの店で購入した水玉模様のズボンが気に入っています
 
-[デモ 1 へのビデオ リンク: Cognitive Services Text Analytics](https://youtu.be/QJxjm5BirOA)
+[デモ 1 へのビデオ リンク:Cognitive Services Text Analytics](https://youtu.be/QJxjm5BirOA)
 
-2. **デモ 2 の場合:** 
+2. **デモ 2 の場合:**
    - [Azure ML ワークスペース](http://ml.azure.com)でページを開きます。 必要に応じて、適切なワークスペースを選択します。
    - データセットがアップロードされていることを確認します
    - Azure Machine Learning ワークスペースの **[Automated ML]\(自動 ML\)** タブに移動し、「[AIML40 公開 Readme](http://github.com/microsoft/ignite-learning-paths/aiml/aiml40/README.md)」で説明されているように、自動 ML の実験を実行します。 実行にはかなりの時間がかかるため、前もって行っておきます。
    - デモを行うときにログインし直す必要がないように、プレゼンテーションの直前にページを更新してください。
 
-[デモ 2 へのビデオ リンク: 自動化された機械学習](https://youtu.be/qrstXN6TLZk)
+[デモ 2 へのビデオ リンク:自動化された機械学習](https://youtu.be/qrstXN6TLZk)
 
-3. **デモ 3 の場合:** 
+3. **デモ 3 の場合:**
    - Jupyter 環境で `asba.ipynb` を開きます
    - コードに正しいサブスクリプション ID を貼り付けてあることを確認します (また、既定値を変更した場合は、クラスター名とリソース グループ名も)
    - ノートブックのすべてのセルを実行し、すべてのステップが正常に実行されることを確認します。 一部のステップの実行にはかなりの時間がかかるため、事前に準備しておきます。 (実験の実行には 3.5 時間近くかかります。そのため、コンピューティング クラスターを低優先度にして、コストを節約することが重要です)
    - 資格情報を再度入力する必要がないよう、デモの直前にノートブックの作業が完了するようにします。
 
-[デモ 3 へのビデオ リンク: Azure Machine Learning SDK と Hyperdrive](https://youtu.be/sccNTPO3PwU)
+[デモ 3 へのビデオ リンク:Azure Machine Learning SDK と Hyperdrive](https://youtu.be/sccNTPO3PwU)
 
 
 ## <a name="demo-time"></a>デモの時間です!
 
 デモでは、以下を示すことをお勧めします。
 
-1. **デモ 1.1**: [Text Analytics ページ](https://azure.microsoft.com/services/cognitive-services/text-analytics/?WT.mc_id=msignitethetour2019-github-aiml40)をブラウザーで開き、**[分析]** をクリックするだけにします。 ページはあらかじめ読み込んでおきます。
-2. **デモ 1.2**:  
-  - 同じページで、**[例 - 英語 - 肯定的]** をクリックして、既定の語句 "*I had a wonderful trip to Seattle last week and even visited the Space Needle two times*" に切り替え、**[分析]** をクリックします
+1. **デモ 1.1**:[Text Analytics ページ](https://azure.microsoft.com/services/cognitive-services/text-analytics/?WT.mc_id=msignitethetour2019-github-aiml40)をブラウザーで開き、 **[分析]** をクリックするだけにします。 ページはあらかじめ読み込んでおきます。
+2. **デモ 1.2**: 
+  - 同じページで、 **[例 - 英語 - 肯定的]** をクリックして、既定の語句 "*I had a wonderful trip to Seattle last week and even visited the Space Needle two times*" に切り替え、 **[分析]** をクリックします
   - 良好な正のスコアを確認します
   - "**wonderful**" という単語を削除します
   - **[分析]** クリックして、スコアが大きく下がることを確認します

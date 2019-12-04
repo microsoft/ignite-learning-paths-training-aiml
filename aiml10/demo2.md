@@ -40,7 +40,7 @@
 
 2. [請求書トレーニング セット](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/data/train.zip)をダウンロードして解凍します。
 
-3. 解凍された[請求書トレーニング セット](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/data/train.zip)を `train` コンテナーにアップロードします。 これは、[ポータル](https://docs.microsoft.com/en-us/azure/storage/blobs/storage-quickstart-blobs-portal?WT.mc_id=msignitethetour2019-github-aiml10#upload-a-block-blob)を使用して直接、または [Azure Storage Explorer](https://docs.microsoft.com/en-us/azure/vs-azure-tools-storage-explorer-blobs?WT.mc_id=msignitethetour2019-github-aiml10) を使用して ([ビデオ](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/videos/Demo2.mp4 "デモ 1")を参照)、行うことができます。
+3. 解凍された[請求書トレーニング セット](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/data/train.zip)を `train` コンテナーにアップロードします。 これは、[ポータル](https://docs.microsoft.com/en-us/azure/storage/blobs/storage-quickstart-blobs-portal?WT.mc_id=msignitethetour2019-github-aiml10#upload-a-block-blob)を使用して直接、または [Azure ストレージ エクスプローラー](https://docs.microsoft.com/en-us/azure/vs-azure-tools-storage-explorer-blobs?WT.mc_id=msignitethetour2019-github-aiml10)を使用して ([ビデオ](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/videos/Demo2.mp4 "デモ 1")を参照)、行うことができます。
 
 ### <a name="create-form-recognizer-service"></a>Form Recognizer サービスを作成する
 
@@ -65,7 +65,7 @@
 
 2. `Ocp-Apim-Subscription-Key` Authorization ヘッダーおよび `endpoint` 変数を、Form Recognizer サービスに設定します (これらはポータルで確認できます)。
 
-3. `TrainModel` 要求を開き、事前要求スクリプトを変更して、`storageAccount` 変数にはお使いのストレージ アカウントを設定し (ビデオでの変数は `ttinvoicestorage`)、`SASValue` には `train` コンテナーに対する適切な Secure Access Signature を設定します。 Secure Access Signature を取得する方法については、[簡単な説明](sas.md)を参照してください。
+3. `TrainModel` 要求を開き、事前要求スクリプトを変更して、`storageAccount` 変数にはお使いのストレージ アカウントを設定し (ビデオでの変数は `ttinvoicestorage`)、`SASValue` には `train` コンテナーに対する適切なセキュリティで保護されたアクセス署名を設定します。 セキュリティで保護されたアクセス署名を取得する方法については、[簡単な説明](sas.md)を参照してください。
 
 ```javascript
 pm.environment.set('storageAccount', '<YOUR STORAGE ACCOUNT>')

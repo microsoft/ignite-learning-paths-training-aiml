@@ -1,6 +1,6 @@
 # <a name="build-a-pipeline-with-jupyter-notebooks"></a>Jupyter Notebook でパイプラインを作成する
 
-## <a name="talking-points"></a>概要
+## <a name="talking-points"></a>テーマ
 
 * ワークスペース、データ ソース、コンピューティングへの簡単な接続を示します
 * 各ステップを示します (ほとんどの場合、Python ファイルは無視できます)

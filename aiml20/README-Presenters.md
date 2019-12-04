@@ -1,39 +1,39 @@
-# <a name="aiml20-notes-for-presenters"></a>AIML20: プレゼンター向けメモ
+# <a name="aiml20-notes-for-presenters"></a>AIML20:発表者向けメモ
 
-プレゼンターのあなたへ、ようこそ。 
+発表者の皆様、ようこそ。 
 
-こちらをご覧いただきありがとうございます。この素晴らしいコンテンツが発表されることを楽しみにしています。 経験豊富な発表者として、プレゼンテーションの方法はご存知であると考え、このガイドでは、何についてプレゼンテーションを行う必要があるかということに焦点を絞ります。 プレゼンテーション デザイン チームが作成したプレゼンテーションを、全体にわたってリハーサルします。 
+こちらをご覧いただきありがとうございます。この素晴らしいコンテンツを発表していただける日を心待ちにしております。 経験豊富な発表者として、プレゼンテーションの "方法" は既によくご存知でしょう。従ってこのガイドでは、プレゼンテーションを行うべき "内容" に焦点を絞ります。 プレゼンテーション デザイン チームが作成したプレゼンテーションを、全体にわたってリハーサルします。 
 
 プレゼンテーションのビデオに加えて、このドキュメントは、PowerPoint のスライドやデモの手順とコードなど、プレゼンテーションを成功させるために必要なすべての資産にリンクしています。
 
 1.  ドキュメント全体を読む。
 2.  ビデオ プレゼンテーションを見る
-3.  リード プレゼンターに質問する
+3.  リード発表者に質問する
 
 ## <a name="assets-in-train-the-trainer-kit"></a>トレーナー トレーニング キットの資産
 
 - 本ガイド
 - [PowerPoint プレゼンテーション](presentations.md)。 メモには、組み込みのデモ ビデオと完全なトーク トラックが含まれています。
-- 1 つのファイルとしての[スピーカー スクリプト](speaker-notes.md) (PPT のノートでも)
-- [スピーカー箇条書き](speaker-notes-bullets.md)、箇条書きをアドリブで説明するのが好きなスピーカー向け
-- [デモの手順](README.md#Demonstrations)と[プレゼンター向けデモ ノート](demo-instructions.md)
+- 1 ファイルの[話者向け原稿](speaker-notes.md) (PPT のノートでも)
+- [話者向けの箇条書き](speaker-notes-bullets.md) (箇条書きを使用してアドリブで説明するのが好きな話者向け)
+- [デモの手順](README.md#Demonstrations)と[発表者向けのデモに関するメモ](demo-instructions.md)
 - Microsoft Ignite Orlando、November 7 2019 での[このプレゼンテーションの録画](https://myignite.techcommunity.microsoft.com/sessions/82987?source=sessions)。
 - [プレゼンテーションの全リハーサル](https://youtu.be/jRO-5g-HYuU) 
 
-## <a name="become-a-trained-presenter"></a>トレーニングされたプレゼンターになる
+## <a name="become-a-trained-presenter"></a>熟練した発表者になる
 
-トレーニングされたプレゼンターになるには、[scalablecontent@microsoft.com](mailto:scalablecontent@microsoft.com) にお問い合わせください。 メールには、次を含めてください。
+熟練した発表者になるには、[scalablecontent@microsoft.com](mailto:scalablecontent@microsoft.com) にお問い合わせください。 メールには、次を含めてください。
 
 - フル ネーム:
 - このプレゼンテーションのコード:AIML20
 - プレゼンテーションのビデオ (最長 10 分間) へのリンク (例: リストにない YouTube ビデオ)。 
-  > プレゼンターとしてのスキルを示すことが重要であり、このコンテンツである必要はありません
+  > このコンテンツを使用する必要はなく、ご自身の発表者としてのスキルをお示しいただくことが重要です
 
 指導者からプロセスに関する情報提供があります。
 
-## <a name="trained-presenters"></a>トレーニングされたプレゼンター
+## <a name="trained-presenters"></a>熟練した発表者
 
-次の素晴らしい方々に感謝を捧げます ([絵文字キー](https://allcontributors.org/docs/en/emoji-key))。
+次の素晴らしい方々に深く感謝いたします ([Emoji キー](https://allcontributors.org/docs/en/emoji-key))。
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore -->
@@ -58,4 +58,4 @@
 
 ## <a name="feedback-loop"></a>フィードバック ループ
 
-コメント、フィードバック、ご提案はございますか。 コンテンツ変更/提案/フィードバックの最良のフィードバック ループは、この GitHub リポジトリで新しい問題を作成することです。 問題の作成方法については、[投稿に関するドキュメント](https://github.com/microsoft/ignite-learning-paths/blob/master/contributing.md)を参照してください
+コメント、フィードバック、ご提案はございますか。 コンテンツ変更/提案/フィードバックの最良のフィードバック ループは、この GitHub リポジトリで新しいイシューを作成することです。 イシューの作成方法については、[共同作成に関するドキュメント](https://github.com/microsoft/ignite-learning-paths/blob/master/contributing.md)を参照してください

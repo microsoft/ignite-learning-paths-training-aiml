@@ -2,7 +2,7 @@
 
 このプロジェクトでは、[Microsoft オープンソースの倫理規定](https://opensource.microsoft.com/codeofconduct/)を採用しています。
 
-リソース: 
+リソース:
 
 - [Microsoft オープンソースの倫理規定](https://opensource.microsoft.com/codeofconduct/)
 - [Microsoft 倫理規定 FAQ](https://opensource.microsoft.com/codeofconduct/faq/)

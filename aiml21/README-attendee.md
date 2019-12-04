@@ -1,10 +1,10 @@
 # <a name="developers-guide-to-ai-a-data-story"></a>AI 開発者ガイド:データ ストーリー
 
-このシアター セッションでは、データ サイエンスのプロセスとその適用方法について説明します。 データ セットの探索からサービスのデプロイまで、すべてが興味深いデータ ストーリーに適用されます。 Azure AI プラットフォームの概要についても簡単に説明します。
+このシアター セッションでは、データ サイエンスのプロセスとその適用方法について説明します。 データ セットの探索からサービスのデプロイまで、すべてが興味深いデータ ストーリーに適用されます。 ここでは、Azure AI プラットフォームの概要についても簡単に説明します。
 
 # <a name="demo-environment-deployment"></a>デモ環境のデプロイ
 
-まず、このリポジトリ内のコードとデータ ファイルをすべてダウンロードしてください。 すべてのデモを実行するために必要なあらゆる情報が含まれるコードとデータ フォルダーです
+まず、このリポジトリ内のコードとデータ ファイルをすべてダウンロードしてください。 すべてのデモを行うために必要なあらゆる情報が含まれるコードとデータ フォルダーです
 
 **以下のものが必要になります。**
 * Azure サブスクリプション - 必要であれば、[こちらから無料の試用版](https://azure.microsoft.com/en-gb/free/?WT.mc_id=msignitethetour2019-github-aiml21)を取得してください
@@ -16,7 +16,7 @@
 [![Azure へのデプロイ](https://azuredeploy.net/deploybutton.png)](https://azuredeploy.net/)
 
 * Azure portal と Azure Machine Learning service にログインします
-* [Upgrade the workspace to the **Enterprise edition (Preview)** ]\(Enterprise edition (プレビュー) にワークスペースをアップグレードします。\) を選択します。[現行価格の詳細はこちらをご覧ください](https://azure.microsoft.com/en-us/pricing/details/machine-learning/)。実験デモ (デモ 2) を完了するには Enterprise Edition が必要になります
+* [Upgrade the workspace to the **Enterprise edition (Preview)** ]\(Enterprise edition (プレビュー) にワークスペースをアップグレードします\) を選択します。[現行価格の詳細はこちらをご覧ください](https://azure.microsoft.com/en-us/pricing/details/machine-learning/)。実験デモ (デモ 2) を完了するには Enterprise Edition が必要になります
 * **Preview UI** を起動します
 * **ノートブック VM** を作成します
     * 左側のペインから [コンピューティング] を選択します
@@ -76,7 +76,7 @@
 * [Azure portal](https://azure.microsoft.com/en-gb/?WT.mc_id=msignitethetour2019-github-aiml21) にサインインし、上のテンプレートで作成した **Azure Machine Learning** を開きます
 * **[プレビューを今すぐ起動]** をクリックし、プレビュー エクスペリエンスを開始します
 * 左側のペインから **[コンピューティング]** を開きます
-* Notebook VM で **[Jupyter]** リンクを選択します
+* ノートブック VM で **[Jupyter]** リンクを選択します
 * "*必要に応じて、ご自身の Azure 資格情報でログインします*"
 * [**Explore.ipynb**](code/explore.ipynb) を開きます
 * SHIFT + ENTER キーを使用して、すべてのコード セルを実行します
@@ -87,7 +87,7 @@
 
 * [ml.azure.com](https://ml.azure.com/?WT.mc_id=msignitethetour2019-github-aiml21) Azure Machine Learning studio に移動します。 これには URL から直接アクセスできます。その後、サインインして、今回のトーク用に作成した正しいワークスペースを選択します。 あるいは、Azure portal の Azure Machine Learning service から、 **[プレビューを今すぐ起動]** ボタンを選択します
 * 左側のペインで **[自動 ML]** を選択します
-* **各デモの論点について動画を確認します**
+* **各デモのテーマについてビデオを確認します**
 * **[New automated ML run]\(新しい自動 ML の実行\)** をクリックします
 * トレーニング データ データセットを選択します (data_train_experiment-XXXXXX)
 * 実験名として「example/ aiml21-regression-duration」を指定します
@@ -95,7 +95,7 @@
 * 上で設定したコンピューティングの [トレーニング クラスター] を選択します
 * **[次へ]** を選択します
 * 予測タスクに **[回帰]** を選択します
-* **[View additional configuration settings]\(追加の構成設定を表示します。\)** を選択し、[プライマリ] メトリックを **[normalized_root_mean_squared_error]** に設定します
+* **[View additional configuration settings]\(追加の構成設定を表示します\)** を選択し、[プライマリ] メトリックを **[normalized_root_mean_squared_error]** に設定します
 * [Concurrency, Max concurrent iterations]\(同時実行、最大同時実行\) を 3 に設定します
 * [Exit criterion, Training job time (hours)]\(終了条件、トレーニング ジョブ時間 (時間)\) を 1 に設定します
 * **[保存]** を選択します
@@ -170,4 +170,4 @@
 
 # <a name="feedback-loop"></a>フィードバック ループ
 
-コメント、フィードバック、ご提案はございますか。 現在のところ、コンテンツ変更/提案/フィードバックの最良のフィードバック ループは、この GitHub リポジトリで新しいイシューを作成することです。 イシューの作成方法については、[投稿に関するドキュメント](https://github.com/microsoft/ignite-learning-paths/blob/master/contributing.md)を参照してください。
+コメント、フィードバック、ご提案はございますか。 現在のところ、コンテンツ変更/提案/フィードバックの最良のフィードバック ループは、この GitHub リポジトリで新しいイシューを作成することです。 イシューの作成方法については、[共同作成に関するドキュメント](https://github.com/microsoft/ignite-learning-paths/blob/master/contributing.md)を参照してください

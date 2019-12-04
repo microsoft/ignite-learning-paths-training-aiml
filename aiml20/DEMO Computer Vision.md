@@ -6,9 +6,9 @@
 
 次に、Computer Vision API を使用して、curl を使ってプログラムにより同じ情報を収集します。
 
-## <a name="defining-the-problem-shop-by-photo-doesnt-work-right"></a>問題の定義: Shop by Photo が正しく機能しない
+## <a name="defining-the-problem-shop-by-photo-doesnt-work-right"></a>問題の定義:Shop by Photo が正しく機能しない
 
-この講演の動機となる問題は、Tailwind Traders Web サイトの Shop by Photo ツールが製品を正しく識別しないことです。 この時点で「[ONNX のデプロイ](DEMO%20ONNX%20deployment.md#defining-the-problem-shop-by-photo-doesnt-work-right)」のこのセクションを実行して、シーンを設定しておくと便利です。
+このトークの動機となる問題は、Tailwind Traders Web サイトの Shop by Photo ツールが製品を正しく識別しないことです。 この時点で「[ONNX のデプロイ](DEMO%20ONNX%20deployment.md#defining-the-problem-shop-by-photo-doesnt-work-right)」のこのセクションを実行して、シーンを設定しておくと便利です。
 
 ## <a name="using-computer-vision-via-the-web-interface"></a>Web インターフェイス経由での Computer Vision の使用
 
@@ -62,7 +62,7 @@ Dominant color foreground   "White"
 Accent Color    #90A526
 ```
 
-(上記の分析は将来変更される可能性があります。Computer Vision モデルは定期的に更新されます。)
+(注: 上記の分析は将来変更される可能性があります。Computer Vision モデルは定期的に更新されます。)
 
 最初の "オブジェクト" の結果で、2 つのオブジェクト "headwear" と "person" が検出され、画像内の場所が指定されていることに注意してください。 検出したいオブジェクトは "headwear (かぶりもの)" に分類されますが、このアプリケーションでは、より具体的な分類 "hard hat (ヘルメット)" が必要です。 ただし、"hard hat" は Computer Vision で現在検出されるオブジェクトの種類には含まれません。 (この問題は後で Custom Vision で対処します。)また、各オブジェクトの分類に信頼度スコアが指定されていることにも注意してください。
 
@@ -89,7 +89,7 @@ Accent Color    #90A526
 
 ファイル [`vision_demo.sh`](vision_demo.sh) でコマンドを実行します。 ローカル Azure CLI または Azure Cloud Shell を使用できますが、シェルとして bash を使用する必要があります。
 
-このスクリプトのコマンドは次のようになります。
+このスクリプト内のコマンドにより、次が実行されます。
 
 1. Azure サブスクリプションにログインします (この手順は Cloud Shell を使用する場合は必要ありません)
 2. Azure リソース グループを作成します。

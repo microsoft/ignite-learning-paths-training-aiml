@@ -6,27 +6,27 @@
 
 ### <a name="prerequisites"></a>前提条件
 
-* Azure サブスクリプション。
-* 追加権限のある拡張機能の追加先である Azure DevOps 組織。
+* Azure サブスクリプション
+* 拡張機能の追加権限をお持ちの Azure DevOps 組織。
   * その組織の個人用アクセス トークン (PAT)。
-* GitHub アカウント (このリポジトリのフォーク先)。
+* GitHub アカウント (このリポジトリのフォーク先)
 
 ### <a name="fork-the-repository"></a>リポジトリをフォークする
 
-GitHub で、ユーザーまたは管理対象の組織の下にある、このリポジトリの[フォークを作成](https://help.github.com/en/github/getting-started-with-github/fork-a-repo)します。  GitHub リポジトリを Azure DevOps に接続するための接続許可が必要です。
+GitHub で、管理対象のユーザーまたは組織の下に、このリポジトリの[フォークを作成](https://help.github.com/en/github/getting-started-with-github/fork-a-repo)します。  GitHub リポジトリを Azure DevOps に接続する権限が必要です。
 
 ### <a name="deploy-the-template"></a>テンプレートをデプロイする
 
-この環境は、下の "Azure に配置する" リンクを使用してデプロイできます (または、Azure PowerShell または Azure CLI を使用できます)。  デプロイするリージョンには、Azure サブスクリプションと使用可能なクォータが必要です。
+この環境は、下の "Azure にデプロイする" リンクを使用してデプロイできます (Azure PowerShell または Azure CLI を使用することもできます)。  デプロイするリージョンの Azure サブスクリプションと使用可能なクォータが必要になります。
 
 * Azure SQL データベース
 * Cosmos DB データベース
 * Azure App Service
-* Azure Machine Learning サービス
+* Azure Machine Learning service
 
 Azure サブスクリプションとリソース グループを選択するよう求められます (リソース グループは、このとき作成することができます)。
 
-また、リソースの名前を指定するために使用されるイベント識別子 (または、環境を起動する理由) を求められます。  短いものをお勧めします。
+また、リソースの名前を指定するために使用されるイベント識別子 (または、環境を起動する理由) も求められます。  短いものをお勧めします。
 
 Azure SQL インスタンスのデータベース ユーザー名とパスワードを入力する必要があります。
 
@@ -36,12 +36,12 @@ Azure SQL インスタンスのデータベース ユーザー名とパスワー
 
 デプロイには約 30 分から 40 分かかります。
 
-デプロイが進行し始めたら (少なくとも Azure Machine Learning サービスが作成され、ブートストラップコンテナーの Azure コンテナー インスタンスの実行が完了するまで)、Azure DevOps 環境のセットアップを完了できます。  ほとんどの環境が構成されますが、手動の手順がいくつかあります。
+デプロイが進行し始めたら (少なくとも Azure Machine Learning service が作成され、ブートストラップコンテナーの Azure コンテナー インスタンスの実行が完了すること)、Azure DevOps 環境のセットアップを完了できます。  ほとんどの環境が構成されますが、手動の手順がいくつかあります。
 
 ### <a name="set-up-azure-notebooks"></a>Azure Notebooks を設定する
 
-* [Azure Notebooks](https://notebooks.azure.com/) に移動し、デモで使用する Microsoft アカウントでサインインします。
-* 新しいプロジェクトを追加します。  GitHub (メイン リポジトリまたはお使いのフォーク) から直接インポートするか、`aiml50/source` ディレクトリを直接アップロードすることができます。
+* [Azure Notebooks](https://notebooks.azure.com/) に移動し、デモに使用している Microsoft アカウントでサインインします。
+* 新しいプロジェクトを追加します。  GitHub (メイン リポジトリまたはご自分のフォーク) から直接インポートするか、`aiml50/source` ディレクトリを直接アップロードすることができます。
 * Azure Notebook の `aiml50/source` ディレクトリで、次を使用して `azureml-config` という名前の json ファイルを作成します。
   * サブスクリプション ID
   * ML ワークスペースを含むリソース グループの名前
@@ -69,7 +69,7 @@ Azure SQL インスタンスのデータベース ユーザー名とパスワー
 
 ### <a name="setup-the-azure-devops-project"></a>Azure DevOps プロジェクトを設定する
 
-次に、デプロイ テンプレートに対して指定した Azure DevOps 組織で作成された AIML50 プロジェクトに移動します。
+次に、デプロイ テンプレートに指定した Azure DevOps 組織で作成された AIML50 プロジェクトに移動します。
 
 #### <a name="create-the-service-connections"></a>サービス接続を作成する
 
@@ -84,10 +84,10 @@ Azure SQL インスタンスのデータベース ユーザー名とパスワー
 
 サービス接続を 2 つ追加します。
 
-* 最初の接続 `aiml50`
+* 1 番目の接続 `aiml50`
   * 型: Azure Resource Manager
   * 接続名: `aiml50`
-    * サービス接続の名前。 これは、ビルドで既に設定されているため、一致する必要があります。
+    * サービス接続の名前。 これは、ビルドで既に設定されているものと一致する必要があります。
   * スコープ レベル: `Subscription`
     * サービス プリンシパルの承認のスコープ。 この場合は、`subscription` に設定します。
   * サブスクリプション: `Ignite The Tour`
@@ -101,7 +101,7 @@ Azure SQL インスタンスのデータベース ユーザー名とパスワー
 * 2 番目の接続: `aiml50-workspace`
   * 型: Azure Resource Manager
   * 接続名: `aiml50`
-    * サービス接続の名前。 これは、ビルドで既に設定されているため、一致する必要があります。
+    * サービス接続の名前。 これは、ビルドで既に設定されているものと一致する必要があります。
   * スコープ レベル: `AzureMLWorkspace`
     * サービス プリンシパルの承認のスコープ。 これは、リリースに必要です。
   * サブスクリプション: `Ignite The Tour`
@@ -116,11 +116,11 @@ Azure SQL インスタンスのデータベース ユーザー名とパスワー
 
 #### <a name="enable-the-variable-group"></a>変数グループを有効にする
 
-ビルドとリリースで使用される共有値を持つ、プロビジョニングされた変数グループがあります。  変数グループには、パイプライン アクセスが付与されている必要があります。
+ビルドとリリースで使用される共有値を持つ、プロビジョニングされた変数グループがあります。  変数グループには、パイプライン アクセス権が付与されている必要があります。
 
 * [パイプライン] の下にある [ライブラリ] に移動します。
 * `aiml50-demo` 変数グループを選択します。
-* `Allow access to all pipelines` を切り替えます。
+* `Allow access to all pipelines` を切り替えます
 * 変数グループを保存します。
 
 ![7-azure_devops_library](./images/7-azure_devops_library.png)
@@ -128,11 +128,11 @@ Azure SQL インスタンスのデータベース ユーザー名とパスワー
 
 #### <a name="create-the-build"></a>ビルドを作成する
 
-ここで、GitHub のビルド定義に Azure DevOps を指定することで、ビルド定義を作成する必要があります。
+ここで、GitHub のビルド定義に Azure DevOps を指定して、ビルド定義を作成する必要があります。
 
 * [パイプライン] の下にある [`Pipelines`] に移動します。
 * [`New Pipeline`] を選択します
-* GitHub プロジェクト [Ignite Learning Paths トレーニング AI/ML](https://github.com/microsoft/ignite-learning-paths-training-aiml) のフォークに接続します
+* GitHub プロジェクト [Ignite Learning Paths トレーニング AI/ML](https://github.com/microsoft/ignite-learning-paths-training-aiml) のご自分のフォークに接続します
 * リポジトリからビルド定義の使用を選択します (`aiml50/azure-pipelines.yml`)
 
 ![9-azure_devops_pipeline_new](./images/9-azure_devops_pipeline_new.png)
@@ -185,7 +185,7 @@ Machine Learning パイプラインが終了したら、リリース パイプ�
 
 ### <a name="checking-the-container-deployment-log"></a>コンテナーのデプロイ ログを確認する
 
-プロビジョニングされたリソース グループで、`bootstrap-container` コンテナー インスタンスに移動します。 そこから、コンテナーのログを確認することができます。これにより、実行済みの手順と発生したエラーが表示されます。
+プロビジョニングされたリソース グループで、`bootstrap-container` コンテナー インスタンスに移動します。 そこから、コンテナーのログを確認できます。実行済みの手順と発生したエラーが表示されます。
 
 ### <a name="provider-registration"></a>プロバイダーの登録
 

@@ -42,7 +42,7 @@ az group create --location {LOCATION} --name {YOUR_RG_NAME}
 ### <a name="create-and-use-storage-account"></a>ストレージ アカウントを作成して使用する
 ストレージ アカウントは、主に請求書の格納に使用されます。
 
-1. ストレージ アカウントを作成します
+1. ストレージ アカウントを作成する
 
 ```
 az storage account create --name {YOUR_STORAGE_NAME} --location {LOCATION} --resource-group {YOUR_RG_NAME} --sku Standard_LRS
@@ -72,7 +72,7 @@ az storage account create --name {YOUR_STORAGE_NAME} --location {LOCATION} --res
 
 [![データをインポートする](images/connect_data.png)](https://docs.microsoft.com/en-us/azure/search/cognitive-search-quickstart-blob?WT.mc_id=msignitethetour2019-github-aiml10#step-1-create-a-data-source "データをインポートする")
 
-3. 新しい Cognitive Services リソースを作成します
+3. 新しい Cognitive Services リソースを作成する
 
 [![Cognitive Services を作成する](images/attach_cognitive_svcs.png)](https://docs.microsoft.com/en-us/azure/search/cognitive-search-quickstart-blob?WT.mc_id=msignitethetour2019-github-aiml10#step-2-add-cognitive-skills "Cognitive Services を作成する")
 

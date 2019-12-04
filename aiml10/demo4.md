@@ -7,7 +7,7 @@
 
 
 ## <a name="what-you-need"></a>必要なもの
-- [請求書データ セット](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/data/invoices_1000.zip) (これは、サービスを実行して機能をテストするための 1000 権の請求書の小さなセットです)
+- [請求書データ セット](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/data/invoices_1000.zip) (これは、サービスを実行して機能をテストするための 1000 件の請求書の小さなセットです)
 
 
 - Form Recognizer サービス REST API に要求を送信するには、[Postman](https://www.getpostman.com/) を使用します。 詳細については、この[簡単な概要](postman.md)を参照してください。
@@ -60,7 +60,7 @@
 
 
 ### <a name="monitor-and-use-index"></a>インデックスを監視して使用する
-インデクサーによってすべての請求書ドキュメントが処理されるまで、少し時間がかかります。 これは Search Service 自体で監視できます。 また、Azure 関数にアタッチされている対応する App Insights サービスの Live Metrics Stream を調べることによって、`InvoiceReaderSkill` の呼び出しを監視することもできます。 インデックスにいくつかのドキュメントが存在するようになったら、クエリを実行して動作していることを確認できます。
+インデクサーによってすべての請求書ドキュメントが処理されるまで、少し時間がかかります。 これは検索サービス自体で監視できます。 また、Azure 関数にアタッチされている対応する App Insights サービスのライブ メトリック ストリームを調べることによって、`InvoiceReaderSkill` の呼び出しを監視することもできます。 インデックスにいくつかのドキュメントが存在するようになったら、クエリを実行して動作していることを確認できます。
 
 ![Azure Search クエリ](images/queries.png "Azure Search クエリ")
 
@@ -97,4 +97,4 @@ invoiceId が 12179
 ```
 
 # <a name="next-demo"></a>次のデモ
-「[デモ 5 - ナレッジストア](demo5.md)」に進んで、ナレッジ ストアを調べる方法について学習します
+「[デモ 5 - ナレッジ ストア](demo5.md)」に進んで、ナレッジ ストアを調べる方法について学習します

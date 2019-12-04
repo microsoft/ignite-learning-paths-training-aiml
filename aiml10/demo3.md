@@ -10,7 +10,7 @@
 - [請求書テスト セット](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/data/train.zip) (Azure 関数のテストに使用)
 
 
-- Form Recognizer サービス REST API に要求を送信するには、[Postman](https://www.getpostman.com/) を使用します。 詳細については、この[簡単な概要](postman.md)を参照してください。
+- Form Recognizer サービス REST API に要求を送信するには、[Postman](https://www.getpostman.com/) を使用します。 詳細については、こちらの[簡単な概要](postman.md)を参照してください。
 
 - Postman リーダー スキル要求の[コレクション](src/Collections/Reader_Skill.postman_collection.json)。
 
@@ -111,4 +111,4 @@ pm.environment.set('SASValue', '<SAS>')
 ![クラウド スキル](images/local_skill.png "クラウド スキル")
 
 # <a name="next-demo"></a>次のデモ
-すべてをまとめて結び付け、最後にエンドツーエンド ソリューションを構築する方法については、「[デモ 4 - すべてをまとめて結び付ける](demo4.md)」に進んでください
+すべてをまとめて結び付け、最後にエンドツーエンド ソリューションを構築する方法については、「[デモ 4 - すべてをまとめて結び付ける](demo4.md)」にお進みください

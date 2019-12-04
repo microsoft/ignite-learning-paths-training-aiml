@@ -4,12 +4,12 @@
 
 ## <a name="session-abstract"></a>セッションの要約
 
-Tailwind Traders では、カスタムの機械学習モデルを使用することで、ソフトウェア開発のライフ サイクルを変えることなく、在庫問題を解決しています。 方法を知りたいですか。 Azure Machine Learning のビジュアル インターフェイスです。
+Tailwind Traders では、カスタムの機械学習モデルを使用することで、ソフトウェア開発のライフ サイクルを変えることなく、在庫問題を解決しています。 その方法をご紹介しましょう。 Azure Machine Learning のビジュアル インターフェイスです。
  
-このセッションでは、Tailwind Traders 社で使用されているデータ サイエンス プロセスについて学習し、Azure Machine Learning のビジュアル インターフェイスの概要を説明します。 データの検索、インポート、準備、機械学習アルゴリズムの選択、モデルのトレーニングとテスト、API への完全なモデルのデプロイを行う方法について説明します。 あなたやあなたが属する開発チームが機械学習の導入を続け、最初のモデルを構築し、さらに多くを行うために必要なヒント、ベスト プラクティス、リソースを入手してください。
+このセッションでは、Tailwind Traders で使用されているデータ サイエンス プロセスについて学習し、Azure Machine Learning のビジュアル インターフェイスの概要を理解します。 データの検索、インポート、準備、機械学習アルゴリズムの選択、モデルのトレーニングとテスト、完成したモデルを API にデプロイする方法について説明します。 あなたやあなたが属する開発チームが機械学習の導入を続け、最初のモデルを構築したりするために必要なヒント、ベスト プラクティス、リソースを手に入れてください。
 
 [オーランド州で行われた Microsoft Ignite の AIML30 のプレゼンテーション ビデオ:2019 年 11 月 7 日](https://myignite.techcommunity.microsoft.com/sessions/82993?source=sessions)
 
 # <a name="i-want-to"></a>ご希望のコースをお選びください。
-## <a name="learn-to-present-this-contentreadme-presentermd"></a>[このコンテンツのプレゼンテーション方法を習う](README-Presenter.md)
+## <a name="learn-to-present-this-contentreadme-presentermd"></a>[このコンテンツのプレゼンテーション方法を学ぶ](README-Presenter.md)
 ## <a name="continue-learning-after-attending-this-sessionreadme-attendeemd"></a>[このセッションに参加後、学習を続ける](README-Attendee.md)
