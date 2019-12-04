@@ -57,6 +57,23 @@ Example:
 }
 ```
 
+
+* Also, add `location` parameter to your region in the `deploymentconfig.json` file if necessary. The default ACI region is westus.
+
+Example:
+```
+{
+   "containerResourceRequirements": {
+       "cpu":        2,
+       "memoryInGB": 4
+    },
+    "computeType":       "ACI",
+    "enableAppInsights": "True",
+    "location":          "westus"
+}
+```
+Reference: https://docs.microsoft.com/en-us/azure/container-instances/container-instances-region-availability
+
 * Click on (which will open in a new tab)
   * `seer_pipeline.ipynb`
 
@@ -203,13 +220,15 @@ After the Machine Learning pipeline finishes, we can update the release pipeline
 
 * Save the pipeline and create a new release.
 
+
+
 ## Troubleshooting and Reference
 
 ### Checking the container deployment log
 
 In the provisioned resource group, navigate to the `bootstrap-container` container instance. From there, you can check the logs for the container, which will show the steps taken and any errors encountered.
 
-After deployment model to ACI, please check all 3 container run. If terminated, please restart ACI instance.
+After deployment model to ACI, please check all **3** container run. If it's terminated, please **restart** ACI instance.
 
 ### Provider registration
 
