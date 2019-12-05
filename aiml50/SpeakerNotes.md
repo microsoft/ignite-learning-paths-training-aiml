@@ -139,7 +139,7 @@
   * The important point is – this is all code and software. The quality of your code matters even if it’s not what you’re used to writing!
 
 * Slide: # 35
-  * [See Demo #3](./demos/3-Show_The_Build_And_Release.md)
+  * [See Demo #3](./demos/3-Show_The_Build.md)
 
 * Slide: # 36
   * But we still haven’t deployed anything – we have a newly trained model, so how do we deploy?
@@ -156,56 +156,55 @@
   * We can run tests in pre-prod environments
   * Importantly – what we’re doing is controlling our rollout using the same techniques we use for the rest of our software.
 
-* Slide: # 39
-  * Don’t just put new models in production – you wouldn’t do it with the rest of your software, why do it with your ML?
+* Slide: #39
+  * [See Demo #4](./demos/4-Show_The_Release.md)
 
 * Slide: # 40
+  * Don’t just put new models in production – you wouldn’t do it with the rest of your software, why do it with your ML?
+
+* Slide: # 41
   * Here’s what we’ve created:
   * A pipeline for training, which is an AML pipeline – specific to training our model
   * When we get a new model, we kick off a deployment pipeline in Azure DevOps
   * Deploy to ACI, run some tests, then if all is well, maybe deploy to AKS
 
-* Slide: # 41
+* Slide: # 42
   * Just like the rest of our software, we don’t want to put our model in production and leave it there, assuming it will always work.
   * So we need a retraining strategy.
   * Either periodically, or when the data is different enough in production that we’re not getting the results we want.
   * Azure ML Service has a solution for this
 
-* Slide: # 42
+* Slide: # 43
   * When we train, we can do so from a known training data set
   * When we ultimately deploy a model to production, we can store the inputs into another dataset – our inference dataset
 
-* Slide: # 43
+* Slide: # 44
   * Periodically, AML Service will let us compare these two data sets looking for “data drift”. If what we’re seeing in production drifts too much from what we trained our model on, we can kick off a new training process to produce a new model.
   * This can be done automatically
 
-* Slide: # 44
+* Slide: # 45
   * Of course, if we change our code, we also want to change our training pipeline, which is what we saw today.
 
-* Slide: # 45
+* Slide: # 46
   * Importantly, this is just an example – we’re deploying our model to containers, but maybe we want to embed the models into our software
   * Or maybe we’re not using AML at all – maybe we’re using different cognitive services – and they all have great APIs that Azure Pipelines can talk to.
   * Ultimately, Azure Pipelines can orchestrate anything, so whatever set of tools you’re using, you can use it to manage your training.
 
-* Slide: # 46
-  * In summary
-
 * Slide: # 47
+  * In summary
 
 * Slide: # 48
 
 * Slide: # 49
-
-* Slide: # 50
   * You can find more resources and source code at these links
 
-* Slide: # 51
+* Slide: # 50
   * You can also check our certification to become Microsoft Certified Azure Data Scientist Associate and/or Microsoft Certified Azure AI Engineer Associate
 
-* Slide: # 52
+* Slide: # 51
   * For the first time, Microsoft is offering FREE certification exams to all event attendees. You can take advantage of this for any Fundamentals or Role-based Certifications.
   * The offer is for one free exam and it’s valid for up to 6 months post-event.
   * You can utilize this at our onsite testing in the event expo hall or use it post-event using the same email address used to sign up for the event. (Gov. Officials are not eligible)
   * Expect an email with details after the show for those of you who have opted-in to receive promotional email from Microsoft.
 
-* Slide: # 53
+* Slide: # 52
