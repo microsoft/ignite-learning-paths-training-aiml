@@ -4,7 +4,7 @@
 
 Artificial Intelligence and Machine Learning can be used in many ways to increase productivity of business processes and gather meaningful insights, by analyzing images, texts and trends within unstructured flows of data. While many tasks can be solved using existing models, in some cases it is also required to train your own model for more specific tasks, or for increased accuracy. 
 
-In this session, we will explore the complete path of integrating text analysis intelligent services into the business processes of [Tailwind Traders](http://tailwindtraders.com), starting from pre-build models available as [cognitive services](https://azure.microsoft.com/services/cognitive-services/?WT.mc_id=msignitethetour2019-github-aiml40), up to training a third-party neural custom model for [Aspect-Based Sentiment Analysis](https://www.intel.ai/introducing-aspect-based-sentiment-analysis-in-nlp-architect/) availabe as part of [Intel NLP Architect](http://nlp_architect.nervanasys.com/) using [Azure Machine Learning Service](https://azure.microsoft.com/services/machine-learning-service/?wt.mc_id=msignitethetour2019-github-aiml40). We will talk about cases when one needs a custom model, and demonstrate quick ways to create such a model from scratch using [AutoML](https://docs.microsoft.com/azure/machine-learning/service/concept-automated-ml/?wt.mc_id=msignitethetour2019-github-aiml40), and show how to fine-tune model hyperparameters using [HyperDrive](https://docs.microsoft.com/azure/machine-learning/service/how-to-tune-hyperparameters/?wt.mc_id=msignitethetour2019-github-aiml40)
+In this session, we will explore the complete path of integrating text analysis intelligent services into the business processes of [Tailwind Traders](http://tailwindtraders.com), starting from pre-build models available as [cognitive services](https://azure.microsoft.com/services/cognitive-services/?WT.mc_id=msignitethetour2019-github-aiml40), up to training a third-party neural custom model for [Aspect-Based Sentiment Analysis](https://www.intel.ai/introducing-aspect-based-sentiment-analysis-in-nlp-architect/) available as part of [Intel NLP Architect](http://nlp_architect.nervanasys.com/) using [Azure Machine Learning Service](https://azure.microsoft.com/services/machine-learning-service/?wt.mc_id=msignitethetour2019-github-aiml40). We will talk about cases when one needs a custom model, and demonstrate quick ways to create such a model from scratch using [AutoML](https://docs.microsoft.com/azure/machine-learning/service/concept-automated-ml/?wt.mc_id=msignitethetour2019-github-aiml40), and show how to fine-tune model hyperparameters using [HyperDrive](https://docs.microsoft.com/azure/machine-learning/service/how-to-tune-hyperparameters/?wt.mc_id=msignitethetour2019-github-aiml40)
 
 ## Delivery Assets
 
@@ -25,13 +25,11 @@ In this presentation, the following demonstrations are made:
 
 ## Starting Fast
 
-If you want to start right away, you can deploy all required resources via Azure Template, and open the code in Azure Notebooks. 
+If you want to start right away, you can deploy all required resources via Azure Template. 
 
 <a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fmicrosoft%2Fignite-learning-paths-training-aiml%2Fmaster%2Faiml40%2Ftemplate%2Fazuredeploy.json" target="_blank">
  <img src="http://azuredeploy.net/deploybutton.png"/>
 </a>
-<!-- TODO: provide correct Azure Notebook path -->
-<a href="https://notebooks.azure.com/sosh/projects/ignite-absa"><img src="https://notebooks.azure.com/launch.png" /></a>
 
 Below we provide more detailed instructions for the demo so you can perform the steps manually to fully understand the concepts being shown.
 
@@ -41,7 +39,6 @@ In order to perform steps 2 and 3 of the demo, we would need to:
 
 1. Create an Azure Machine Learning Workspace
 2. Upload the data used for AutoML training - [clothing_automl.xlsx](dataset\clothing_automl.xlsx)
-
 
 #### Creating Azure Machine Learning Workspace
 
@@ -78,10 +75,14 @@ The Automated ML clothing dataset would be uploaded to the AML service datastore
 
 #### Using the Azure ML Demo Code
 
-You can execute demo code from any Jupyter Notebook Environment. You can:
+You can execute demo code from any Jupyter Notebook Environment. You can use any one of the following options:
  - Install Python environment locally, as described below in **Python Environment Installation**
- - Use [Azure Notebooks](https://docs.microsoft.com/azure/notebooks/azure-notebooks-overview/?wt.mc_id=absa-notebook-abornst). In this case you should upload the `absa.ipynb` file to a new Azure Notebooks project, or just clone the [notebook library](https://notebooks.azure.com/sosh/projects/ignite-absa).
- <!-- TODO: provide final path to notebook library -->
+ - Use Jupyter Notebooks from within Azure ML Workspace. To do that:
+     - Navigate to your [Azure ML Portal](https://ml.azure.com/)
+     - Select **Notebooks** from left-hand-side menu
+     - Upload `absa.ipynb` file and select it
+     - You will be prompted to **Create a notebook VM**. Now you can use the notebook directly from the portal.
+ - Use [Azure Notebooks](https://docs.microsoft.com/azure/notebooks/azure-notebooks-overview/?wt.mc_id=absa-notebook-abornst). In this case you should upload the `absa.ipynb` file to a new Azure Notebooks project. Also, because of limitations of free compute in Azure Notebooks (1 Gb disk space), you will only be able to run this notebook on a virtual machine, as described [here](https://docs.microsoft.com/azure/notebooks/use-data-science-virtual-machine/?wt.mc_id=msignitethetour2019-github-aiml40). 
 
 #### Python Environment Installation
 
@@ -173,7 +174,7 @@ If you are going to present this content, please have a look at the [additional 
 
 ### Other Materials
 
-* [9 Advanced Tips for Production Machine Learning](aka.ms/9TipsProdML)
+* [9 Advanced Tips for Production Machine Learning](http://aka.ms/9TipsProdML)
 * [Intel Aspect-Based Sentiment Analysis Page](https://www.intel.ai/introducing-aspect-based-sentiment-analysis-in-nlp-architect/)
 * Azure ML Best Practice Repos:
     * [Natural Language Processing](https://github.com/microsoft/nlp/)
