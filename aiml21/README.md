@@ -2,6 +2,8 @@
 
 In this theatre session we will show the data science process and how to apply it. From exploration of datasets to deployment of services - all applied to an interesting data story. This will also take you on a very brief tour of the Azure AI Platform.
 
+* [AI 开发人员指南：数据案例](https://github.com/microsoft/ignite-learning-paths-training-aiml/tree/master-SimplifiedChinese/aiml21)
+
 ## Table of Content
  
 

@@ -5,6 +5,8 @@ the Tour 2019-2020 talk, "Using Pre-Built AI to Solve Business Challenges". Here
 you will find links to the resources mentioned in the talk, and the code and
 scripts you will need to recreate the demos given in the talk.
 
+* [AIML20：使用预先构建的 AI 解决业务难题](https://github.com/microsoft/ignite-learning-paths-training-aiml/tree/master-SimplifiedChinese/aiml20)
+
 ## Session Abstract
 
 **Using Pre-Built AI to Solve Business Challenges**
