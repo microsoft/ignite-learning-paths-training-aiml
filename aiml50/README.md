@@ -6,6 +6,8 @@ While many companies have adopted DevOps practices to improve their software del
 
 In this session, you’ll learn how to apply DevOps practices to your machine learning projects using Azure DevOps and Azure Machine Learning Service. We’ll set up automated training, scoring, and storage of versioned models and wrap the models in docker containers and deploy them to Azure Container Instances and Azure Kubernetes Service. We’ll even collect continuous feedback on model behavior so we know when to retrain.
 
+* [机器学习操作 - 将 DevOps 应用到数据科学](https://github.com/microsoft/ignite-learning-paths-training-aiml/tree/master-SimplifiedChinese/aiml50)
+
 ## Table of Content
  
 
