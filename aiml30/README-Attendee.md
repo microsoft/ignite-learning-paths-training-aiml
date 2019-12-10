@@ -114,7 +114,7 @@ Once you have created the base Azure Machine Learning Service Workspace we need 
     * To use the default values of StoreID (ID1) of 2 and ItemID    (ID2) of 1 and the number of weeks to predict. Just type `y`
     * This will run and should return the predicted values for the  next 4 weeks.
 
-### 6. Test API with Python in Notebook VMs using Jupyter Notebooks
+### 6. Optional: Additionally Test API with Python in Notebook VMs using Jupyter Notebooks
 1. Navigate to `Compute` and create a new Notebook VM
 ![Create Compute](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml30/CreateNotebookVM.gif)
 2. Once created under column `Application URI`click the `Jupyter Lab` option. (This will not display until the VM is in a `running` state.)
