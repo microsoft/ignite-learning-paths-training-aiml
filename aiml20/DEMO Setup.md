@@ -128,7 +128,7 @@ and run these commands from a browser window.
 ## Open browser pages ready to demo.
 
 * The deployed Tailwind Trader app 
-* https://portal.azure.com (browse to resources)  
+* https://portal.azure.com/?feature.customportal=false#home (browse to resources - note this link shows the public portal, not the preview version for those with access)  
 * https://azure.microsoft.com/en-us/services/cognitive-services/computer-vision/
 * https://customvision.ai
 * https://lutzroeder.github.io/netron/
