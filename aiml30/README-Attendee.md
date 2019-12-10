@@ -128,7 +128,7 @@ Once you have created the base Azure Machine Learning Service Workspace we need 
 
 ## PowerPoint Deck and Video Demo
 
-- [PowerPoint deck](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml30/AIML30_How%20to%20Build%20Machine%20Learning%20Models.pptx)
+- [PowerPoint deck](presentations.md)
 - [Demonstration videos](https://www.youtube.com/watch?v=u1ppYaZuNmo&feature=youtu.be)
 
 ## Resources and Continue Learning
