@@ -49,14 +49,14 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="">
         <img src="https://avatars0.githubusercontent.com/u/152948?s=460&v=4" width="100px;" alt="David Smith"/><br />
         <sub><b>David Smith</b></sub></a><br />
-            <a href="https://github.com/microsoft/ignite-learning-paths/commits?author=revodavid" title="talk">📢</a>
-            <a href="https://github.com/microsoft/ignite-learning-paths-training-aiml/commits?author=revodavid" title="Documentation">📖</a> 
+            <a href="https://github.com/microsoft/ignite-learning-paths-training-aiml/commits/master?author=revodavid" title="talk">📢</a>
+            <a href="https://github.com/microsoft/ignite-learning-paths-training-aiml/commits/master?author=revodavid" title="Documentation">📖</a> 
     </td>
     <td align="center"><a href="">
         <img src="https://avatars2.githubusercontent.com/u/4598064?s=460&v=4" width="100px;" alt="Chris Noring"/><br />
         <sub><b>Chris Noring</b></sub></a><br />
-            <a href="https://github.com/neilpeterson/ignite-tour-fy20/commits?author=neilpeterson" title="talk">🎨</a>
-            <a href="https://github.com/neilpeterson/ignite-tour-fy20/commits?author=neilpeterson" title="design">📖</a> 
+            <a href="https://github.com/microsoft/ignite-learning-paths-training-aiml/commits/master" title="talk">🎨</a>
+            <a href="https://github.com/microsoft/ignite-learning-paths-training-aiml/commits/master" title="design">📖</a> 
     </td>
 </tr></table>
 
@@ -64,4 +64,4 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 
 ## Feedback Loop
 
-Do you have a comment, feedback, suggestion? The best feedback loop for content changes/suggestions/feedback is to create a new issue on this GitHub repository. To get all the details about how to create an issue please refer to the [Contributing docs](https://github.com/microsoft/ignite-learning-paths/blob/master/contributing.md)
+Do you have a comment, feedback, suggestion? The best feedback loop for content changes/suggestions/feedback is to create a new issue on this GitHub repository. To get all the details about how to create an issue please refer to the [Contributing docs](../CONTRIBUTING.md)
