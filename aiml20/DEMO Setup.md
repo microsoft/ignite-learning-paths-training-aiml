@@ -20,7 +20,7 @@ In the [Azure Portal](https://portal.azure.com), sign in and click on
 using, and copy the "Subscription ID" shown there. You'll need it later when you
 create resources.
 
-Alternatively, run `az account show` in the Azure CLI and copy the "id" value
+Alternatively, run `az account show` in the Azure CLI and copy the `id` value
 shown.
 
 ## Start fresh.
@@ -133,11 +133,10 @@ and run these commands from a browser window.
 * https://customvision.ai
 * https://lutzroeder.github.io/netron/
 
-## Download image files to local machine
+## Find the image files on your local machine
 
-Download "CV Training Images.zip" to your local machine, and expand the zip
-file. This will create a folder "CV Training Images" with the following
-subfolders:
+Once you have cloned the repository, you can find the training images in the `aiml20/CV Training Images` folder. You will
+use these images to train the Custom Vision model. The folder contains the following subfolders:
 
 * drills
 * hammers
@@ -152,7 +151,7 @@ These images were sourced from Wikimedia Commons and used under their respective
 Creative Commons licenses. See the file [ATTRIBUTIONS.md](https://github.com/microsoft/ignite-learning-paths-training-aiml/blob/master/aiml20/CV%20training%20images/ATTRIBUTIONS.md) for
 details.
 
-Also download the folder "test images". These images will not be used in
+Additional test images can be found in the `test images` folder. These images will not be used in
 training, but will be used to test that our models are working.
 
 ## Next Step
