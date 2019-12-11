@@ -94,7 +94,7 @@ Once you have created the base Azure Machine Learning Service Workspace we need 
 * Click `Test` and to see how it performs on a scored data item.
 * Click `Consume` and to see the sample code provided for integrating the web service.
 
-### 5. Testing API with C# console app (dotnet core)
+### 5. Test API with C# console app (dotnet core)
 
 1. [Download VS Code here](https://code.visualstudio.com/download)
 2. Clone the app with the following command
@@ -114,9 +114,23 @@ Once you have created the base Azure Machine Learning Service Workspace we need 
     * To use the default values of StoreID (ID1) of 2 and ItemID    (ID2) of 1 and the number of weeks to predict. Just type `y`
     * This will run and should return the predicted values for the  next 4 weeks.
 
+
+### 6. Optional: Additionally Test API with Python in Notebook VMs using Jupyter Notebooks
+1. Navigate to `Compute` and create a new Notebook VM
+![Create Compute](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml30/CreateNotebookVM.gif)
+2. Once created under column `Application URI`click the `Jupyter Lab` option. (This will not display until the VM is in a `running` state.)
+3. Click the terminal from the home page of Jupyter lab
+4. Clone the repo from the terminal in Jupyter lab
+    * `git clone https://github.com/microsoft/ignite-learning-paths-training-aiml.git`
+5. Open the `ignite-learning-paths-training-aiml` cloned folder and navigate to the `ignite-ailml30-get-prediction.ipynb` file and click to open it.
+    * The full path should be something like this: `ignite-learning-paths-training-aiml\aiml30\Python\ignite-ailml30-get-prediction.ipynb`
+6. Update the path to the csv file, the endpoint and the key.
+7. `SHIFT + Enter` or click play on each cell from the top menu to run each cell
+
 ## PowerPoint Deck and Video Demo
 
-- [PowerPoint deck](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml30/AIML30_How%20to%20Build%20Machine%20Learning%20Models.pptx)
+- [PowerPoint deck](presentations.md)
+
 - [Demonstration videos](https://www.youtube.com/watch?v=u1ppYaZuNmo&feature=youtu.be)
 
 ## Resources and Continue Learning
