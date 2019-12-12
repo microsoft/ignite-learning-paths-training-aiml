@@ -21,14 +21,14 @@ Along with the video of the presentation, this document will link to all the ass
 # Assets in Train-the-Trainer Kit
 
 * This guide
-* [PowerPoint presentation](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml21/aiml21.pptx) or go to [presentations.md](https://github.com/microsoft/ignite-learning-paths-training-aiml/blob/master/aiml21/presentations.md)
+* [PowerPoint presentation](https://github.com/microsoft/ignite-learning-paths-training-aiml/blob/master/aiml21/presentations.md)
 * [Full-length recording of presentation](https://youtu.be/K8upKkvtEI0)
 * [Datasets used](https://github.com/microsoft/ignite-learning-paths-training-aiml/tree/master/aiml21/data)
 * [Code files to run](https://github.com/microsoft/ignite-learning-paths-training-aiml/tree/master/aiml21/code)
 * Separate Demo Videos: 
-    * Demo 1 - [Explore](https://youtu.be/1Xtmrsfkzfs)
-    * Demo 2 - [Experiment](https://youtu.be/sUKuRBRvo7U)
-    * Demo 3 - [Deploy](https://youtu.be/IgSaMKsyexg)
+    * Demo 1 - [Explore](https://youtu.be/-z6nfyq-WrI)
+    * Demo 2 - [Experiment](https://youtu.be/c7p_4CRYT8k)
+    * Demo 3 - [Deploy](https://youtu.be/7bkBO7NQd4Q)
     * Demo 4 - [Present](https://youtu.be/g7aBaC9s9qQ)
 * Demo Instructions
 
@@ -111,7 +111,7 @@ Please download all the code and data files in this repository to get started. T
 
 > 💡 You must have completed the [setup](https://github.com/microsoft/ignite-learning-paths-training-aiml/blob/master/aiml21/README-presenter.md#demo-instructions) before attempting to do the demo.
 
-### Video Demo with Voice Over: [AIML21 - Demo 1 - Explore](https://youtu.be/1Xtmrsfkzfs)
+### Video Demo with Voice Over: [AIML21 - Demo 1 - Explore](https://youtu.be/-z6nfyq-WrI)
 
 * Sign into your [Azure Portal](https://azure.microsoft.com/en-gb/?WT.mc_id=msignitethetour2019-github-aiml21) and open **Azure Machine Learning** you created with the template above
 * Launch the Preview experience by clicking **'Launch Preview Now'**
@@ -128,7 +128,7 @@ Please download all the code and data files in this repository to get started. T
 
 > 💡 You must have completed the [setup](https://github.com/microsoft/ignite-learning-paths-training-aiml/blob/master/aiml21/README-presenter.md#demo-instructions) before attempting to do the demo.
 
-### Video Demo with Voice Over: [AIML21 - Demo 2 - Experiment](https://youtu.be/sUKuRBRvo7U)
+### Video Demo with Voice Over: [AIML21 - Demo 2 - Experiment](https://youtu.be/c7p_4CRYT8k)
 
 * Go to [ml.azure.com](https://ml.azure.com/?WT.mc_id=msignitethetour2019-github-aiml21) Azure Machine Learning studio. You can access this via the URL directly and then sign in and select the correct workspace you created for this talk. Or from the Azure Machine Learning Service in the Azure portal selecting the **'Launch Preview now'** button
 * Select **Automated ML** on the left pane
@@ -158,7 +158,7 @@ Please download all the code and data files in this repository to get started. T
 
 > 💡 You must have completed the [setup](https://github.com/microsoft/ignite-learning-paths-training-aiml/blob/master/aiml21/README-presenter.md#demo-instructions) before attempting to do the demo.
 
-### Video Demo with Voice Over: [AIML21 - Demo 3 - Deploy](https://youtu.be/IgSaMKsyexg)
+### Video Demo with Voice Over: [AIML21 - Demo 3 - Deploy](https://youtu.be/7bkBO7NQd4Q)
 
 > You will use the previously run experiment you reviewed above to deploy
 
