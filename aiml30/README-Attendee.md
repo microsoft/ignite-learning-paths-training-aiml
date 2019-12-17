@@ -122,10 +122,11 @@ Once you have created the base Azure Machine Learning Service Workspace we need 
 3. Click the terminal from the home page of Jupyter lab
 4. Clone the repo from the terminal in Jupyter lab
     * `git clone https://github.com/microsoft/ignite-learning-paths-training-aiml.git`
-5. Open the `ignite-learning-paths-training-aiml` cloned folder and navigate to the `ignite-ailml30-get-prediction.ipynb` file and click to open it.
+5. Also in the terminal `pip install holidays`
+6. Open the `ignite-learning-paths-training-aiml` cloned folder and navigate to the `ignite-ailml30-get-prediction.ipynb` file and click to open it.
     * The full path should be something like this: `ignite-learning-paths-training-aiml\aiml30\Python\ignite-ailml30-get-prediction.ipynb`
-6. Update the path to the csv file, the endpoint and the key.
-7. `SHIFT + Enter` or click play on each cell from the top menu to run each cell
+7. Update the path to the csv file, the endpoint and the key.
+8. `SHIFT + Enter` or click play on each cell from the top menu to run each cell
 
 ## PowerPoint Deck and Video Demo
 
