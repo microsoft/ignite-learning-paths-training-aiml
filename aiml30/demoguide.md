@@ -77,7 +77,7 @@ To navigate through code with `F12` and `CTRL-` shortcuts download the Visual St
 * Connect the `Split Data` module to `Train Model` for the training data and `Score Model` for scoring the predicted results with unseen data.
 * Connect `Train Model` to the training algorithm `Boosted Decision Tree Regression` module.
 * Connect `Score Model` with the `Evaluate` module.
-* This is normally where you would run the model _however_ it takes too long to run in the demo. Discuss how you would click the `Run` button in the bottom nav and select compute. This will segway nicely into talking about how to create compute resources in AML.
+* This is normally where you would run the model _however_ it takes too long to run in the demo. Discuss how you would click the `Run` button in the bottom nav and select compute. This will segue nicely into talking about how to create compute resources in AML.
 
 * Rename the created column `Scored Labels` to `Forecast`
     * Drag the `Edit Metadata` onto the workspace
