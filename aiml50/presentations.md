@@ -4,10 +4,10 @@ This is a machine generated file, and should not be edited, as it will be overwr
 
 # AIML50 Presentation Files
 
-- [aiml50.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml50/aiml50.pptx) (Updated: Nov 16, 2019)
-- [aiml50.pt-br.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml50/aiml50.pt-br.pptx) (Updated: Dec 04, 2019)
-- [aiml50.zh-cn.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml50/aiml50.zh-cn.pptx) (Updated: Dec 04, 2019)
-- [aiml50.ja-jp.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml50/aiml50.ja-jp.pptx) (Updated: Dec 04, 2019)
+- [aiml50.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml50/aiml50.pptx) (Updated: Nov 15, 2019)
+- [aiml50.pt-br.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml50/aiml50.pt-br.pptx) (Updated: Dec 03, 2019)
+- [aiml50.zh-cn.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml50/aiml50.zh-cn.pptx) (Updated: Dec 03, 2019)
+- [aiml50.ja-jp.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml50/aiml50.ja-jp.pptx) (Updated: Dec 03, 2019)
 ---
 ## Historical Files
 - [aiml50-2019-10_Oct-24.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml50/aiml50-2019-10_Oct-24.pptx)
