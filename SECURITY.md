@@ -1,41 +1,41 @@
 <!-- BEGIN MICROSOFT SECURITY.MD V0.0.3 BLOCK -->
 
-## Security
+## <a name="security"></a>Seguridad
 
-Microsoft takes the security of our software products and services seriously, which includes all source code repositories managed through our GitHub organizations, which include [Microsoft](https://github.com/Microsoft), [Azure](https://github.com/Azure), [DotNet](https://github.com/dotnet), [AspNet](https://github.com/aspnet), [Xamarin](https://github.com/xamarin), and [our GitHub organizations](https://opensource.microsoft.com/).
+Microsoft se toma muy en serio la seguridad de nuestros productos de software y servicios, lo que incluye todos los repositorios de código fuente administrados a través de nuestras organizaciones de GitHub, entre las que se incluyen [Microsoft](https://github.com/Microsoft), [Azure](https://github.com/Azure), [DotNet](https://github.com/dotnet), [AspNet](https://github.com/aspnet), [Xamarin](https://github.com/xamarin) y [nuestras organizaciones de GitHub](https://opensource.microsoft.com/).
 
-If you believe you have found a security vulnerability in any Microsoft-owned repository that meets Microsoft's [Microsoft's definition of a security vulnerability](https://docs.microsoft.com/en-us/previous-versions/tn-archive/cc751383(v=technet.10)) of a security vulnerability, please report it to us as described below.
+Si cree que ha encontrado una vulnerabilidad de seguridad en cualquier repositorio propiedad de Microsoft que cumpla la [definición de Microsoft de vulnerabilidad de seguridad](https://docs.microsoft.com/en-us/previous-versions/tn-archive/cc751383(v=technet.10)) de una vulnerabilidad de seguridad, infórmenos de ello como se describe a continuación.
 
-## Reporting Security Issues
+## <a name="reporting-security-issues"></a>Informe de problemas de seguridad
 
-**Please do not report security vulnerabilities through public GitHub issues.**
+**No informe de vulnerabilidades de seguridad en problemas públicos de GitHub.**
 
-Instead, please report them to the Microsoft Security Response Center (MSRC) at [https://msrc.microsoft.com/create-report](https://msrc.microsoft.com/create-report).
+En su lugar, debe notificarlos al Centro de respuestas de seguridad de Microsoft (MSRC), en [https://msrc.microsoft.com/create-report](https://msrc.microsoft.com/create-report).
 
-If you prefer to submit without logging in, send email to [secure@microsoft.com](mailto:secure@microsoft.com).  If possible, encrypt your message with our PGP key; please download it from the the [Microsoft Security Response Center PGP Key page](https://www.microsoft.com/en-us/msrc/pgp-key-msrc).
+Si prefiere hacerlo sin iniciar sesión, envíe un correo electrónico a [secure@microsoft.com](mailto:secure@microsoft.com).  Si es posible, cifre el mensaje con nuestra clave PGP; descárguela desde la [página de la clave PGP del Centro de respuestas de seguridad de Microsoft](https://www.microsoft.com/en-us/msrc/pgp-key-msrc).
 
-You should receive a response within 24 hours. If for some reason you do not, please follow up via email to ensure we received your original message. Additional information can be found at [microsoft.com/msrc](https://www.microsoft.com/msrc).
+Debería recibir una respuesta en 24 horas. Si por algún motivo no es así, haga un seguimiento por correo electrónico para asegurarse de que hayamos recibido el mensaje original. Puede encontrar más información en [microsoft.com/msrc](https://www.microsoft.com/msrc).
 
-Please include the requested information listed below (as much as you can provide) to help us better understand the nature and scope of the possible issue:
+Incluya la información solicitada que se indica a continuación (toda la que pueda proporcionar) para ayudarnos a comprender mejor la naturaleza y el ámbito del posible problema:
 
-  * Type of issue (e.g. buffer overflow, SQL injection, cross-site scripting, etc.)
-  * Full paths of source file(s) related to the manifestation of the issue
-  * The location of the affected source code (tag/branch/commit or direct URL)
-  * Any special configuration required to reproduce the issue
-  * Step-by-step instructions to reproduce the issue
-  * Proof-of-concept or exploit code (if possible)
-  * Impact of the issue, including how an attacker might exploit the issue
+  * Tipo de problema (por ejemplo, desbordamiento de búfer, inyección de SQL, scripting entre sitios, etc.)
+  * Rutas de acceso completas de los archivos de origen relacionados con la manifestación del problema
+  * Ubicación del código fuente afectado (etiqueta, rama, confirmación o dirección URL directa)
+  * Cualquier configuración especial necesaria para reproducir el problema
+  * Instrucciones paso a paso para reproducir el problema
+  * Código de prueba de concepto o de vulnerabilidad (si es posible)
+  * Impacto del problema, incluido el modo en que un atacante podría aprovecharse de él
 
-This information will help us triage your report more quickly.
+Esta información nos ayudará a evaluar el informe con mayor rapidez.
 
-If you are reporting for a bug bounty, more complete reports can contribute to a higher bounty award. Please visit our [Microsoft Bug Bounty Program](https://microsoft.com/msrc/bounty) page for more details about our active programs.
+Si está informando de un problema con el objetivo de recibir una recompensa por un error, tenga en cuenta que los informes más completos pueden contribuir a conseguir una recompensa mayor. Visite nuestra página del [programa de recompensas por errores de Microsoft](https://microsoft.com/msrc/bounty) para obtener más información sobre nuestros programas activos.
 
-## Preferred Languages
+## <a name="preferred-languages"></a>Idiomas preferidos
 
-We prefer all communications to be in English.
+Preferimos que todas las comunicaciones sean en inglés.
 
-## Policy
+## <a name="policy"></a>Directiva
 
-Microsoft follows the principle of [Coordinated Vulnerability Disclosure](https://www.microsoft.com/en-us/msrc/cvd).
+Microsoft sigue el principio de [divulgación coordinada de vulnerabilidades](https://www.microsoft.com/en-us/msrc/cvd).
 
 <!-- END MICROSOFT SECURITY.MD BLOCK -->

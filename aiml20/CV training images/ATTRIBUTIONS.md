@@ -1,33 +1,31 @@
-# Attributions for images in this folder
+# <a name="attributions-for-images-in-this-folder"></a>Atribuciones para imágenes en esta carpeta
 
-All images are sourced from [Wikimedia Commons](https://commons.wikimedia.org/) and are used under their respective
-Creative Commons licenses.
+Todas estas imágenes se han obtenido de [Wikimedia Commons](https://commons.wikimedia.org/) y se usan bajo sus correspondientes licencias de Creative Commons.
 
-Images were selected manually for suitability as part of a custom vision model. Images not eligible for selection include: 
-- Line art
-- SVG files, video files
-- Images with multiple different objects or busy scenes
-- Images including people
-- Images with text or other annotations
-- File size exceeding 6Mb
+Las imágenes se han seleccionado manualmente por su idoneidad como parte de un modelo de visión personalizado. Entre las imágenes no válidas para la selección se incluyen: 
+- Líneas
+- Archivos SVG y archivos de vídeo
+- Imágenes con varios objetos diferentes o escenas saturadas
+- Imágenes que incluyen personas
+- Imágenes con texto u otras anotaciones
+- Tamaño de archivo superior a 6 MB
 
-## Hammers
+## <a name="hammers"></a>Martillos
 
 https://commons.wikimedia.org/wiki/Category:Claw_hammers  
 https://commons.wikimedia.org/wiki/Category:Ball-peen_hammers
 
-## Pliers
-https://commons.wikimedia.org/wiki/Category:Long-nose_pliers 
-https://commons.wikimedia.org/wiki/Category:Needle-nose_pliers  
+## <a name="pliers"></a>Alicates
+https://commons.wikimedia.org/wiki/Category:Long-nose_pliers https://commons.wikimedia.org/wiki/Category:Needle-nose_pliers  
 https://commons.wikimedia.org/wiki/Category:Linesman%27s_pliers  
 
-## Screwdrivers
+## <a name="screwdrivers"></a>Destornilladores
 
 https://commons.wikimedia.org/wiki/Category:Screwdrivers
 
-## Drills
+## <a name="drills"></a>Taladros
 https://commons.wikimedia.org/wiki/Category:Cordless_drills
 
-## Hard Hats:
+## <a name="hard-hats"></a>Cascos:
 https://commons.wikimedia.org/wiki/Category:Hard_hats
 

@@ -1,24 +1,19 @@
-# Personalizer Demo
+# <a name="personalizer-demo"></a>Demostración de Personalizer
 
-In this demo, observe how the layout of a website adapts to visitor actions using reinforcement learning and [Cognitive Services Personalizer](https://docs.microsoft.com/en-us/azure/cognitive-services/personalizer/?WT.mc_id=msignitethetour2019-github-aiml20).
+> 💡 Debe haber completado la [configuración](https://github.com/microsoft/ignite-learning-paths-training-aiml/blob/master/aiml20/DEMO%20Setup.md) antes de intentar realizar la demostración.
 
-Personalizer will dynamically reconfigure the interface to optimize the
-likelihood of an anonymous visitor clicking on the featured category in the
-Recommended section.
+En esta demostración, veremos cómo el diseño de un sitio web se adapta a las acciones de los visitantes mediante el aprendizaje de refuerzo y [Personalizer de Cognitive Services](https://docs.microsoft.com/en-us/azure/cognitive-services/personalizer/?WT.mc_id=msignitethetour2019-github-aiml20).
 
-1. Deploy the Tailwind Traders Website app (if you didn't already do so with `DEMO Setup.md`)
+Personalizer reconfigurará dinámicamente la interfaz para optimizar la probabilidad de que un visitante anónimo haga clic en la categoría destacada de la sección Recomendados.
 
-2. Visit the Tailwind Traders homepage
+1. Implementación de la aplicación web de Tailwind Traders con `DEMO Setup.md` (si aún no se ha hecho)
 
-3. Observe the "Recommended" section and the order of the featured categories
+2. Vaya a la página principal de Tailwind Traders.
 
-4. Refresh the page (you may need to do this a couple of times). Observe that
-   the layout changes.
+3. Observe la sección "Recomendados" y el orden de las categorías destacadas.
 
-The Personalizer service is tracking the anonymous visitors and recording the
-time of day, day of week, and browser OS used when clicking on categories. 
-The "reward" is whether or not the large, featured section was clicked. 
+4. Actualice la página (puede que tenga que hacerlo un par de veces). Observe que el diseño cambia.
 
-Over time, Personalizer will determine the best category to feature based on
-time of day, day of week, and OS. It will also "explore" 20% of the time, to
-surface categories that would otherwise not be presented.
+El servicio Personalizer hace un seguimiento de los visitantes anónimos y registra la hora del día, el día de la semana y el sistema operativo del explorador que se usa al hacer clic en las categorías. La "recompensa" está en si se ha hecho clic o no en la sección grande y destacada. 
+
+Con el tiempo, Personalizer determinará la categoría que es mejor destacar para los usuarios anónimos según la hora del día, el día de la semana y el sistema operativo. También "explorará" el 20 % del tiempo para exponer categorías que, de lo contrario, no se presentarían.

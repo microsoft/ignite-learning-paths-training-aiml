@@ -1,33 +1,31 @@
-Bulk Bing Image Downloader
+<a name="bulk-bing-image-downloader"></a>Aplicación de descarga masiva de imágenes de Bing
 ==========================
-*Bulk Bing Image Downloader (BBID)* is downloader which:
-- downloads full-size images from bing image search results
-- is asynchronous -> downloads images super fast
-- is crossplatform
-- bypasses bing API
-- has option to disable adult content filtering
-- is written in python 3.
-- uses SSL connection
+La *aplicación de descarga masiva de imágenes de Bing (BBID)* es una aplicación de descarga que:
+- descarga imágenes de tamaño completo de los resultados de la búsqueda de imágenes de Bing;
+- funciona de forma asincrónica, es decir, descarga las imágenes a gran velocidad;
+- es multiplataforma;
+- omite la API de Bing;
+- tiene la opción de deshabilitar el filtrado de contenido para adultos;
+- está escrita en Python 3;
+- usa conexión SSL.
 
-### Usage
+### <a name="usage"></a>Uso
 ```
 bbid.py [-h] [-s SEARCH_STRING] [-f SEARCH_FILE] [-o OUTPUT]
                [--adult-filter-on] [--adult-filter-off] [--filters FILTERS]
                [--limit LIMIT]
 
 ```
-### Example
+### <a name="example"></a>Ejemplo
 `./bbid.py -s "hello world"`
 
-### Advanced filtering
-You might want to apply some of Bing's filters, such as filter by license, image size, etc.
-BBID doesn't expose to you nice, human readable variants of those, but allows you to utilize all filters exposed by Bing website.
-All you need to do is apply filters you want via Bing website and copy them from URL. They are located after `&qft=` and before `&`.
+### <a name="advanced-filtering"></a>Filtrado avanzado
+Es posible que quiera aplicar algunos de los filtros de Bing, como filtrar por licencia, tamaño de la imagen, etc. BBID no le muestra las variantes agradables y legibles para el usuario, pero le permite usar todos los filtros expuestos por el sitio web de Bing.
+Lo único que debe hacer es aplicar los filtros que quiera a través del sitio web de Bing y copiarlos desde la dirección URL. Se encuentran después de `&qft=` y antes de `&`.
 
-For example, when you search for `code` and apply filters `past week` and image size `large`, URL you will see will be
-`http://www.bing.com/images/search?sp=-1&pq=code&sc=0-0&sk=&cvid=39A810C4AF314AB6A5A923F4FB6E5282&q=code&qft=+filterui:age-lt10080+filterui:imagesize-large&FORM=IRFLTR`
+Por ejemplo, al buscar `code` y aplicar los filtros `past week` y tamaño de imagen `large`, la dirección URL que verá será `http://www.bing.com/images/search?sp=-1&pq=code&sc=0-0&sk=&cvid=39A810C4AF314AB6A5A923F4FB6E5282&q=code&qft=+filterui:age-lt10080+filterui:imagesize-large&FORM=IRFLTR`.
 
-Filters string you want to extract from this URL is `+filterui:age-lt10080+filterui:imagesize-large`. You can then apply them in BBID with --filters, e.g.
+La cadena de filtros que quiere extraer de esta dirección URL es `+filterui:age-lt10080+filterui:imagesize-large`. Después, puede aplicarlos en BBID con--filters, por ejemplo:
 ```
 ./bbid.py -s code --filters +filterui:age-lt10080+filterui:imagesize-large
 ```

@@ -1,27 +1,29 @@
-# Show the Build in Progress
+# <a name="show-the-build-in-progress"></a>Representación de la compilación en curso
 
-## Automating the Manual Process
+> 💡 Debe haber completado la [configuración](../DEMO.md) antes de intentar realizar la demostración.
 
-Talking Points:
+## <a name="automating-the-manual-process"></a>Automatización del proceso manual
 
-* So with those points in mind, let’s look at the build definition:
-* Rather than doing it in Jupyter Notebooks (like last demo), let’s make it just the code
+Puntos de conversación:
 
-Demo :
+* Por tanto, teniendo en cuenta estos puntos, a continuación se examinará la definición de compilación:
+* En lugar de hacerlo en cuadernos de Jupyter Notebook (como en la última demostración), simplemente se hará el código.
 
-* Start in Azure DevOps in the browser and show build
-  * Start with the Pipeline
-  * Show last build with our change from the start
-  * Highlight the job summary
-  * look at the log for "Recreate and submit the pipeline"
-* Switch to VSCode and show the same code in a pure python file
-  * show the imports
-  * show the added arguments
-  * walk through the remainder and draw parallels to the notebook flow
-* Show the YAML build definition in VSCode if you like
-* Switch to the ML UI and show the AML Pipeline that ran, drill in and see the tasks that ran and show stats
-* Show the new model that got produced
+Demostración:
 
-## Example Demo
+* Inicio en Azure DevOps en el explorador y mostrar la compilación
+  * Empiece con la canalización:
+  * Muestre la última compilación con el cambio desde el principio.
+  * Resalte el resumen del trabajo.
+  * Busque en el registro "Volver a crear y enviar la canalización".
+* Cambie a VS Code y muestre el mismo código en un archivo de Python puro:
+  * Muestre las importaciones.
+  * Muestre los argumentos agregados.
+  * Recorra el resto y trace paralelismos con respecto al flujo del cuaderno.
+* Muestre la definición de compilación YAML en VS Code si quiere.
+* Cambie a la interfaz de usuario de ML y muestre la canalización de AML que se ha ejecutado, profundice y vea las tareas que se han ejecutado y muestre estadísticas.
+* Muestre el modelo nuevo que se ha creado
 
-* [Dry run starting at 24:44](https://youtu.be/UgM8_4fAni8?t=1484)
+## <a name="example-demo"></a>Demostración de ejemplo
+
+* [El simulacro empieza en 24:44](https://youtu.be/UgM8_4fAni8?t=1484)

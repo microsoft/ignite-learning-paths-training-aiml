@@ -1,22 +1,24 @@
-# Show Faulty Prediction and Make a Change
+# <a name="show-faulty-prediction-and-make-a-change"></a>Representación de la predicción con errores y realización de un cambio
 
-## Show the Faulty Prediction
+> 💡 Debe haber completado la [configuración](../DEMO.md) antes de intentar realizar la demostración.
 
-* Navigate to the Tailwind Traders website
-    * https://aiml50{eventname}.azurewebsites.net (replace {eventname} with the event name parameter you used to create the demo environment)
+## <a name="show-the-faulty-prediction"></a>Mostrar la predicción defectuosa
 
-* Click on `start smart shopping by uploading a photo`
-* Upload an image from the [test images folder](../source/test-images)
-* The model provides an incorrect prediction.
+* Exploración del sitio web de Tailwind Traders
+    * https://aiml50{eventname}.azurewebsites.net (reemplace {eventname} por el parámetro de nombre de evento que ha usado para crear el entorno de demostración)
 
-## Start the Change
+* Haga clic en `start smart shopping by uploading a photo`.
+* Cargue una imagen de la [carpeta Test images](../source/test-images)
+* El modelo proporciona una predicción incorrecta.
 
-* Adjust the model by changing `setup_pipeline.py`
-  * Lines 162 - Change `epochs` to 20
-  * Lines 163 - Change `batch` to 10
-* Commit the change and push to master.  This will trigger a build and deployment of the model.  This process will take about 25 or 30 minutes, which should finish up towards the end of the talk.
-* We'll come back and check the results of this towards the end of talk
+## <a name="start-the-change"></a>Iniciar el intercambio
 
-## Example Demo
+* Ajustar el modelo cambiando `setup_pipeline.py`
+  * Líneas 162: cambiar `epochs` por 20
+  * Líneas 163: cambiar `batch` por 10
+* Confirme el cambio y la inserción en la rama maestra.  Esto desencadenará una compilación e implementación del modelo.  Este proceso tardará unos 25 o 30 minutos, coincidiendo aproximadamente con el final de la charla.
+* Regresaremos a comprobar los resultados hacia el final de la charla.
 
-* [Dry run starting at 2:36](https://youtu.be/UgM8_4fAni8?t=158)
+## <a name="example-demo"></a>Demostración de ejemplo
+
+* [El simulacro empieza en 2:36](https://youtu.be/UgM8_4fAni8?t=158)

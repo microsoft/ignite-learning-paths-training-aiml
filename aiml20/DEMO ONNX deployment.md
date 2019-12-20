@@ -1,92 +1,88 @@
-# DEMO: ONNX Deployment
+# <a name="demo-onnx-deployment"></a>DEMOSTRACIÓN: Implementación de ONNX
 
-In this demo, we take the ONNX file we exported in the [Custom
-Vision](DEMO%20Custom%20Vision.md) demo, and deploy it to the Tailwind Traders website.
+> 💡 Debe haber completado la [configuración](https://github.com/microsoft/ignite-learning-paths-training-aiml/blob/master/aiml20/DEMO%20Setup.md) antes de intentar realizar la demostración.
 
-The website uses the model in `products.onnx` for the Shop by Photo app. The
-uploaded image is processed by the model, which generates one of five labels:
-"hammer", "drill", "pliers", "screwdriver" or "hard hat". The website searches
-the product list for the generated label, and returns the results of the search.
+En esta demostración, tomamos el archivo ONNX exportado en la demostración de [Custom Vision](DEMO%20Custom%20Vision.md) y lo implementaremos en el sitio web de Tailwind Traders.
 
-## Load the simple ONNX model
+En el sitio web se usa el modelo de `products.onnx` para la aplicación Comprar por foto. El modelo procesa la imagen cargada, que genera una de estas cinco etiquetas: "hammer" (martillo), "drill" (taladro), "pliers" (alicates), "screwdriver" (destornillador) o "hard hat" (casco). El sitio web busca la etiqueta generada en la lista de productos y devuelve los resultados de la búsqueda.
 
-(TIP: You can do this step ahead of time. This step is necessary if you have run
-this demo before on the same deployment.)
+## <a name="load-the-simple-onnx-model"></a>Carga del modelo ONNX simple
 
-We will replace the products.onnx file in the Web app with a version that only recognizes two object categories: "hammer" and "drill".
+(SUGERENCIA: Puede realizar este paso con antelación. Este paso es necesario si ha ejecutado esta demostración antes en la misma implementación).
 
-1. In the Azure Portal, visit your aiml20-demo resource group
+Se reemplazará el archivo products.onnx de la aplicación web por una versión que solo reconoce dos categorías de objetos: "hammer" y "drill".
 
-1. Click the "aiml20" App Service resource
+1. En Azure Portal, visite el grupo de recursos aiml20-demo.
 
-1. In the left menu under Development Tools, Click Advanced tools, then click "Go" in right pane to launch Kudu.
+1. Haga clic en el recurso de App Service "aiml20".
 
-1. In the main menu bar, Click Debug Console > PowerShell
+1. En el menú de la izquierda, en Herramientas de desarrollo, haga clic en Herramientas avanzadas y después en "Ir" en el panel de la derecha para iniciar Kudu.
 
-1. Browse to: site / wwwroot / Standalone / Onnxmodels
+1. En la barra de menús principal, haga clic en Consola de depuración > PowerShell.
 
-1. With Explorer, open the `ONNX / simple model` folder from your AIML20 repo
+1. Vaya a: sitio / wwwroot / Standalone / Onnxmodels
 
-1. Drag products.onnx into the LEFT HALF of the Kudu window. (IMPORTANT: Do NOT drag into the box that says "drag here to upload and unzip".) This model only knows how to identify drills and hammers.
+1. Con Explorer, abra la carpeta `ONNX / simple model` del repositorio de AIML20
 
-1. Restart the web server. Return to the "aiml20" App Service resource and click "Restart" in the top menu bar. Wait two minutes for the website to restart completely.
+1. Arrastre products.onnx a la mitad izquierda de la ventana de Kudu. (IMPORTANTE: NO arrastre el cuadro que dice "drag here to upload and unzip" (Arrastre aquí para cargar y descomprimir)). Este modelo solo sabe cómo identificar taladros y martillos.
 
-## Defining the problem: Shop by Photo doesn't work right
+1. Reinicie el servidor web. Vuelva al recurso de App Service "aiml20" y haga clic en "Reiniciar" en la barra de menús superior. Espere dos minutos para que el sitio web se reinicie completamente.
 
-(Note: This section was done at the beginning of the AIML20 presentation.)
+## <a name="defining-the-problem-shop-by-photo-doesnt-work-right"></a>Definición del problema: Comprar por foto no funciona correctamente
 
-1. Visit the Tailwind Traders website you deployed earlier. 
+(Nota: Esta sección se ha realizado al principio de la presentación AIML20).
 
-1. Scroll down to the "Shop by Photo" section of the website
+1. Visite el sitio web de Tailwind Traders que ha implementado antes. 
 
-1. Click "Shop by Photo"
+1. Desplácese hacia abajo hasta la sección "Comprar por foto" del sitio web.
 
-1. In your AIML20 repo, select: test images > drill.jpg
+1. Haga clic en "Comprar por foto".
 
-1. It correctly identifies it as a drill. Yay!
+1. En el repositorio AIML20, seleccione: test images > drill.jpg.
 
-1. Return to home page and click "Shop by Photo" again
+1. Lo identifica correctamente como un taladro. Bien.
 
-1. In your AIML20 repo, select: test images > pliers.jpg
+1. Vuelva a la página principal y haga clic en "Comprar por foto" de nuevo.
 
-1. Oh no! It identifies it as a hammer. We'll fix that later, but first, let's understand why it failed.
+1. En el repositorio AIML20, seleccione: test images > pliers.jpg
 
-## Update the ONNX model in the Tailwind Traders website
+1. ¡No! Lo identifica como un martillo. Eso se corregirá más adelante, pero primero se describirá por qué se produjo el error.
 
-First, view the exported model in Netron:
+## <a name="update-the-onnx-model-in-the-tailwind-traders-website"></a>Actualización del modelo de ONNX en el sitio web de Tailwind Traders
 
-1. Browse to https://lutzroeder.github.io/netron/, Click Open Model
+En primer lugar, vea el modelo exportado en Netron:
 
-2. Open ONNX / Custom Model / products.onnx
+1. Vaya a https://lutzroeder.github.io/netron/, haga clic en Abrir modelo.
 
-3. Scroll through the neural network and note:
+2. Abra ONNX / Custom Model / products.onnx.
 
- - it's large
- - at the top, is a 224x224 image as input (dirty secret: computer vision models have pretty poor vision)
- - add the bottom, it outputs 5 values, these are the confidence scores for our class labels
+3. Desplácese por la red neuronal y observe lo siguiente:
 
-Next, drop the ONNX file we exported into TWT filesystem
+ - es grande
+ - en la parte superior, hay una imagen de 224 x 224 como entrada (un secreto: los modelos de Computer Vision tienen una visión bastante deficiente)
+ - en la parte inferior se muestran cinco valores, que son las puntuaciones de confianza de las etiquetas de clase
 
-1. In the Azure Portal, visit your aiml20-demo resource group
+A continuación, quite el archivo ONNX que se ha exportado al sistema de archivos de TWT.
 
-1. Click the "aiml20" Web App resource
+1. En Azure Portal, visite el grupo de recursos aiml20-demo.
 
-1. Under Development Tools, Click Advanced tools, then click "Go" in right pane to launch Kudu.
+1. Haga clic en el recurso de aplicación web "aiml20"
 
-1. In the main menu bar, Click Debug Console > PowerShell
+1. En Herramientas de desarrollo, haga clic en Herramientas avanzadas y después en "Ir" en el panel de la derecha para iniciar Kudu.
 
-1. Browse to: site / wwwroot / Standalone / Onnxmodels
+1. En la barra de menús principal, haga clic en Consola de depuración > PowerShell.
 
-1. With Explorer, open the `ONNX / custom model` folder from your AIML20 repo
+1. Vaya a: sitio / wwwroot / Standalone / Onnxmodels
 
-1. Drag products.onnx into the LEFT HALF of the Kudu window. (IMPORTANT: Do NOT
-   drag into the box that says "drag here to upload and unzip".)
+1. Con Explorer, abra la carpeta `ONNX / custom model` del repositorio de AIML20
 
-1. Restart the web server. Return to the "onnx" Web App resource and click "Restart".
+1. Arrastre products.onnx a la mitad izquierda de la ventana de Kudu. (IMPORTANTE: NO arrastre el cuadro que dice "drag here to upload and unzip" (Arrastre aquí para cargar y descomprimir)).
 
-Rerun Shop by Photo, upload `test images / pliers.jpg`. Now it works!
+1. Reinicie el servidor web. Vuelva al recurso de aplicación web "onnx" y haga clic en "Reiniciar".
 
-## Next Step
+Vuelva a ejecutar Comprar por foto y cargue `test images / pliers.jpg`. Ahora funciona.
+
+## <a name="next-step"></a>Siguiente paso
 
 [Personalizer](DEMO%20Personalizer.md)
 

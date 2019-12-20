@@ -1,88 +1,88 @@
-# Ignite Learning Paths - Developers Guide to AI
+# <a name="ignite-learning-paths---developers-guide-to-ai"></a>Rutas de aprendizaje de Ignite: Guía para desarrolladores de IA
 
-![Learning Path](https://img.shields.io/badge/Learning%20Path-AIML-fe5e00?logo=microsoft)  ![Session](https://img.shields.io/badge/🗣️Sessions-6-31c754)
+![Ruta de aprendizaje](https://img.shields.io/badge/Learning%20Path-AIML-fe5e00?logo=microsoft)  ![Sesión](https://img.shields.io/badge/🗣️Sessions-6-31c754)
 
-Welcome!
+Le damos la bienvenida.
 
-The content of this repository is available for you so you can reproduce any demo or learn how to present any session of the Learning Path presented at [Migrosoft Ignite](https://www.microsoft.com/en-us/ignite) and during [Microsoft Ignite The Tour](https://www.microsoft.com/en-ca/ignite-the-tour/), in your local field office, a community user group, or even as a lunch-and-learn event for your company.
+El contenido de este repositorio está disponible para que pueda reproducir cualquier demostración o aprender a presentar cualquier sesión de la ruta de aprendizaje en [Microsoft Ignite](https://www.microsoft.com/en-us/ignite) y durante el [paseo sobre Microsoft Ignite](https://www.microsoft.com/en-ca/ignite-the-tour/), en su oficina local, en un grupo de usuarios de la comunidad o, incluso, como un evento de almuerzo y aprendizaje para su empresa.
 
-## Do the Demos
+## <a name="do-the-demos"></a>Realización de las demostraciones
 
-If you are here to reproduce a demo in the comfort of your home/office, go in in the section [Sessions](#sessions). In each session you will find deployment instructions, to create the environment you need, and a tutorial to do the demo step by step.
+Si lo que quiere es reproducir una demostración en la comodidad de su hogar u oficina, vaya a la sección [Sesiones](#sessions). En cada sesión encontrará instrucciones de implementación, así como para crear el entorno que necesita, y un tutorial para realizar la demostración paso a paso.
 
-## Presenting the content
+## <a name="presenting-the-content"></a>Presentación del contenido
 
-We're glad you are here and look forward to your delivery of this amazing content. As an experienced presenter, we know you know HOW to present so this guide will focus on WHAT you need to present. It will provide you a full run-through of the presentation created by the presentation design team.
+Nos complace que esté aquí y espere con ganas la llegada de este increíble contenido. Como presentador experimentado, estamos convencidos de que sabe cómo hacerlo, de modo que esta guía se centra en aquello que necesita presentar. Le proporcionará un repaso completo de la presentación creada por el equipo de diseño de presentaciones.
 
-Along with the video of the presentation, this repository will link to all the assets you need to successfully present including PowerPoint slides and demo instructions & code.
+Junto con el vídeo de la presentación, este repositorio proporcionará vínculos a todos los recursos que necesita para presentar correctamente las diapositivas de PowerPoint, así como las instrucciones y el código de demostración.
 
-We are looking forward to working with all speakers who will deliver the content built below - we welcome your feedback and help to keep the content up-to-date. 
+Estamos deseando trabajar con todos los oradores que entreguen el contenido creado a continuación. Asimismo, agradecemos sus comentarios y le ayudaremos a mantener el contenido actualizado. 
 
-## Learning Path Description
+## <a name="learning-path-description"></a>Descripción de la ruta de aprendizaje
 
-Artificial Intelligence (AI) is driving innovative solutions across all industries but with machine learning (ML) applying a paradigm change to how we approach building products we are all exploring how to expand our skill-sets  
+La IA impulsa soluciones innovadoras en todos los sectores, pero con el cambio de paradigma en la forma de crear productos que supone el aprendizaje automático (ML), estamos explorando cómo expandir nuestras aptitudes.  
 
-Tailwind Traders is a retail company looking for support on how to benefit from applying AI across their business. In 'Developers Guide to AI’ we’ll show how Tailwind Traders has achieved this 
+Tailwind Traders es una empresa de venta al por menor que busca aplicar la IA en su negocio. Aquí se mostrará cómo lo ha logrado. 
 
-There is something for every stage of the AI learning curve; whether you want to consume ML technologies, increase technical knowledge of ML theory, or build your own custom ML models. The model is not the end of the data science story, we will conclude with applying DevOps practices to ML projects to build an end-to-end pipeline 
+Se contemplan todas las fases de la curva de aprendizaje de IA, tanto si quiere consumir tecnologías de ML como aprender la teoría de ML o crear modelos de ML personalizados. El modelo no es el final de la ciencia de datos, sino que concluirá con procedimientos de DevOps aplicados a proyectos de ML para crear una canalización de un extremo a otro. 
 
-## Sessions
+## <a name="sessions"></a>Sesiones
 
-* There are **x5 45 minute sessions** ([AIML10](aiml10/README.md), [AIML20](aiml20/README.md), [AIML30](aiml30/README.md), [AIML40](aiml40/README.md) and [AIML50](aiml50/README.md))
-* And **x1 20 min theatre session** ([AIML21](aiml21/README.md))
+* **5 sesiones de 45 minutos** ([AIML10](aiml10/README.md), [AIML20](aiml20/README.md), [AIML30](aiml30/README.md), [AIML40](aiml40/README.md) y [AIML50](aiml50/README.md))
+* **1 sesión de teatro de 20 minutos** ([AIML21](aiml21/README.md))
 
-Here all the sessions available in the learning path **Developers Guide to AI** (aka: **AIML**)
+Aquí están todas las sesiones disponibles en la ruta de aprendizaje **Guía para desarrolladores de IA** (también conocida como: **AIML**).
 
-### [AIML10: Making Sense of your Unstructured Data with AI](aiml10/README.md)
+### <a name="aiml10-making-sense-of-your-unstructured-data-with-aiaiml10readmemd"></a>[AIML10: Datos no estructurados con sentido gracias a la inteligencia artificial](aiml10/README.md)
 
-Tailwind Traders has a lot of legacy data that they’d like their developers to leverage in their apps – from various sources, both structured and unstructured, and including images, forms, pdf files, and several others. In this session, you'll learn how the team used Cognitive Search to make sense of this data in a short amount of time and with amazing success. We'll discuss tons of AI concepts, like the ingest-enrich-explore pattern, skillsets, cognitive skills, natural language processing, computer vision, and beyond.
+Tailwind Traders posee una enorme cantidad de datos heredados que les gustaría que sus desarrolladores usaran en sus aplicaciones. Estos datos proceden de diversos orígenes (tanto estructurados como no estructurados) y engloban imágenes, formularios, archivos PDF y otros muchos elementos. En esta sesión, veremos cómo el equipo usó Cognitive Search para dar sentido a estos datos en un breve período de tiempo y con un éxito asombroso. Abordaremos infinidad de conceptos de inteligencia artificial, como el patrón de ingesta, enriquecimiento y exploración, los conjuntos de aptitudes, las aptitudes cognitivas, el procesamiento de lenguaje natural, Computer Vision, etc.
 
-### [AIML20: Using Pre-Built AI to Solve Business Challenges](aiml20/README.md)
+### <a name="aiml20-using-pre-built-ai-to-solve-business-challengesaiml20readmemd"></a>[AIML20: Uso de inteligencia artificial pregenerada para superar desafíos empresariales](aiml20/README.md)
 
-As a data-driven company, Tailwind Traders understands the importance of using Artificial Intelligence to improve business processes and delight customers. Before investing in an AI team, their existing developers were able to demonstrate some quick wins using pre-built AI technologies. In this session, we will show how you can use Azure Cognitive Services to extract insights from retail data and go into the neural networks behind computer vision. You’ll learn how it works and how to augment the pre-built AI with your own images for custom image recognition applications.
+Como compañía orientada a datos, Tailwind Traders entiende la importancia del uso de la inteligencia artificial para mejorar los procesos empresariales y satisfacer a los clientes. Antes de invertir en un equipo de inteligencia artificial, los desarrolladores existentes tuvieron la oportunidad de demostrar algunos beneficios inmediatos usando tecnologías de inteligencia artificial creadas previamente. En esta sesión, explicaremos cómo se pueden usar los servicios de Azure Cognitive Services para obtener información de los datos comerciales y adentrarse en las redes neuronales tras Computer Vision. Veremos cómo funciona esto y cómo se puede aumentar la inteligencia artificial pregenerada con imágenes propias para aplicaciones de reconocimiento de imágenes personalizadas.
 
-### [AIML30: Start Building Machine Learning Models Faster than You Think](aiml30/README.md)
+### <a name="aiml30-start-building-machine-learning-models-faster-than-you-thinkaiml30readmemd"></a>[AIML30: Creación de modelos de Machine Learning más rápido de lo que piensa](aiml30/README.md)
 
-Tailwind Traders uses custom machine learning models to fix their inventory issues – without changing their Software Development Life Cycle! How? Azure Machine Learning Visual Interface. In this session, you’ll learn the data science process that Tailwind Traders’ uses and get an introduction to Azure Machine Learning Visual Interface. You’ll see how to find, import, and prepare data, select a machine learning algorithm, train and test the model, and deploy a complete model to an API. Get the tips, best practices, and resources you and your development team need to continue your machine learning journey, build your first model, and more.
+Tailwind Traders usa modelos de aprendizaje automático personalizados para corregir sus problemas de inventario, sin cambiar su ciclo de vida de desarrollo de software. ¿Cómo? Interfaz visual de Azure Machine Learning. En esta sesión, conoceremos el proceso de ciencia de datos que Tailwind Traders usa y veremos una introducción a la interfaz visual de Azure Machine Learning. Veremos cómo buscar, importar y preparar datos, cómo seleccionar un algoritmo de Machine Learning, cómo entrenar y probar el modelo e implementar un modelo completo en una API. Obtenga las sugerencias, los procedimientos recomendados y los recursos que usted y su equipo de desarrollo necesitan para continuar con el recorrido de aprendizaje automático, compilar el primer modelo y mucho más.
 
-### [AIML40: Taking Models to the Next Level with Azure Machine Learning Best Practices](aiml40/README.md)
+### <a name="aiml40-taking-models-to-the-next-level-with-azure-machine-learning-best-practicesaiml40readmemd"></a>[AIML40: Traslado de modelos al siguiente nivel con los procedimientos recomendados de Azure Machine Learning](aiml40/README.md)
 
-Tailwind Traders’ data science team uses natural language processing (NLP), and recently discovered how to fine-tune and build a baseline models with Automated ML. 
+El equipo de ciencia de datos de Tailwind Traders usa el procesamiento de lenguaje natural (PNL) y hace poco ha descubierto cómo ajustar y crear un modelo de base de referencia con Machine Learning automatizado. 
 
-In this session, you’ll learn what Automated ML is and why it’s so powerful, then dive into how to improve upon baseline models, using examples from the NLP best practices repository. We’ll highlight Azure Machine Learning key features and how you can apply them to your organization, including low priority compute instances, distributed training with auto scale, hyperparameter optimization, collaboration, logging, and deployment. 
+En esta sesión, veremos qué es Machine Learning automatizado y por qué es tan eficaz y, después, veremos más exhaustivamente cómo mejorar los modelos de línea base mediante ejemplos del repositorio de procedimientos recomendados de PNL. Resaltaremos las principales características de Azure Machine Learning y cómo se pueden poner en marcha en su organización, entre otras, las instancias de proceso de prioridad baja, el entrenamiento distribuido con escalado automático, la optimización de hiperparámetros, la colaboración, el registro y la implementación. 
 
-### [AIML50: Machine Learning Operations – Applying DevOps to Data Science](aiml50/README.md) 
+### <a name="aiml50-machine-learning-operations-applying-devops-to-data-scienceaiml50readmemd"></a>[AIML50: Operaciones de Machine Learning: aplicación de DevOps a la ciencia de datos](aiml50/README.md) 
 
-While many companies have adopted DevOps practices to improve their software delivery, these same techniques are rarely applied to machine learning projects. Collaboration between developers and data scientists can be limited and deploying models to production in a consistent and trustworthy way is often a pipedream. 
+Aunque muchas empresas han adoptado prácticas de DevOps para mejorar la entrega de software, estas mismas técnicas rara vez se aplican a proyectos de Machine Learning. La colaboración entre desarrolladores y científicos de datos puede ser limitada, e implementar modelos en producción de manera uniforme y confiable es muchas veces un sueño inalcanzable. 
 
-In this session, you’ll learn how to apply DevOps practices to your machine learning projects 	using Azure DevOps and Azure Machine Learning Service. We’ll set up automated training, scoring, and storage of versioned models and wrap the models in docker containers and deploy them to Azure Container Instances and Azure Kubernetes Service. We’ll even collect continuous feedback on model behavior so we know when to retrain. 
+En esta sesión, aprenderá a poner en marcha procedimientos de DevOps en sus proyectos de Machine Learning, usando para ello Azure DevOps y Azure Machine Learning Service. Configuraremos el entrenamiento, la puntuación y el almacenamiento automatizados de los modelos con versiones, y encapsularemos los modelos en contenedores de Docker y los implementaremos en Azure Container Instances y en Azure Kubernetes Service. Hasta recabaremos comentarios continuos sobre el comportamiento del modelo para saber cuándo volver a entrenarlo. 
 
-### [AIML21: Developers Guide to AI: A Data Story](aiml21/README.md)
+### <a name="aiml21-developers-guide-to-ai-a-data-storyaiml21readmemd"></a>[AIML21: Guía de inteligencia artificial para desarrolladores: una historia sobre datos](aiml21/README.md)
 
-In this theatre session we will show the data science process and how to apply it. From exploration of datasets to deployment of services - all applied to an interesting data story. This will also take you on a very brief tour of the Azure AI Platform.
+En esta sesión de teatro, explicaremos el proceso de ciencia de datos y cómo aplicarlo. Desde la exploración de conjuntos de datos a la implementación de servicios: todo contextualizado dentro de una historia de datos muy interesante. Esto también nos permitirá recorrer brevemente la plataforma de Azure AI.
 
-## Contributing
+## <a name="contributing"></a>Contribución
 
-To know more about about to contribute to this project please refer to the [Code of Conduct](CODE_OF_CONDUCT.md) and [Contributing](CONTRIBUTING.md) page.
+Para obtener más información sobre cómo contribuir con este proyecto, consulte el [Código de conducta](CODE_OF_CONDUCT.md) y la página de [Contribución](CONTRIBUTING.md).
 
 
-## Become a Trained Presenter
+## <a name="become-a-trained-presenter"></a>Convertirse en un presentador entrenado
 
-You don't need anything to present this content, it's all there to be used. However, by becoming a *Trained Presenter* the scalable content team will recognize you as well. *Trained Presenter* see their contact information (name, picture, website) in the bottom of each session.  
+No necesita nada para presentar este contenido, ya que lo tiene todo para usarlo. Sin embargo, al convertirse en un *presentador entrenado* el equipo de contenido escalable también lo reconocerá como tal. El *presentador entrenado* verá su información de contacto (nombre, imagen y sitio web) en la parte inferior de cada sesión.  
  
-To become a *Trained Presenter*, contact [scalablecontent@microsoft.com](mailto:scalablecontent@microsoft.com). In your email please include:
+Para convertirse en un *presentador entrenado*, póngase en contacto con [scalablecontent@microsoft.com](mailto:scalablecontent@microsoft.com). En el correo electrónico, incluya lo siguiente:
 
-- Complete name:
-- The code of this presentation: \<Session Code (ex:APPS10)\>
-- Link to an unlisted YouTube video of you presenting around 10 minutes of the content for this specific session.
+- Nombre completo:
+- Código de esta presentación: \<Código de sesión (por ejemplo, APPS10)\>.
+- Vínculo a un vídeo de YouTube no publicado de usted realizando una presentación de contenido durante unos 10 minutos sobre esta sesión específica.
 
 
-## Legal Notices
+## <a name="legal-notices"></a>Avisos legales
 
-Microsoft and any contributors grant you a license to the Microsoft documentation and other content in this repository under the [Creative Commons Attribution 4.0 International Public License](https://creativecommons.org/licenses/by/4.0/legalcode), see the [LICENSE](LICENSE) file, and grant you a license to any code in the repository under the [MIT License](https://opensource.org/licenses/MIT), see the [LICENSE-CODE](LICENSE-CODE)
+Microsoft y los colaboradores le conceden una licencia para la documentación de Microsoft y otro contenido de este repositorio de conformidad con la [licencia pública Attribution 4.0 International de Creative Commons](https://creativecommons.org/licenses/by/4.0/legalcode) (vea el archivo [Licencia](LICENSE)). Asimismo, le conceden licencia para usar cualquier código del repositorio de conformidad con la [licencia MIT](https://opensource.org/licenses/MIT) (vea el archivo [LICENSE-CODE](LICENSE-CODE)).
 
-Microsoft, Windows, Microsoft Azure and/or other Microsoft products and services referenced in the documentation may be either trademarks or registered trademarks of Microsoft in the United States and/or other countries. The licenses for this project do not grant you rights to use any Microsoft names, logos, or trademarks. Microsoft's general trademark guidelines can be found at http://go.microsoft.com/fwlink/?LinkID=254653.
+Microsoft, Windows, Microsoft Azure y otros productos y servicios de Microsoft a los que se hace referencia en la documentación pueden ser marcas comerciales o marcas registradas de Microsoft Corporation en los Estados Unidos y/o en otros países. Las licencias de este proyecto no le conceden derechos de uso de nombres, logotipos ni marcas comerciales de Microsoft. Las directrices generales de marca registrada de Microsoft se encuentran en http://go.microsoft.com/fwlink/?LinkID=254653.
 
-Privacy information can be found at https://privacy.microsoft.com/en-us/
+La información sobre privacidad se puede encontrar en https://privacy.microsoft.com/en-us/.
 
-Microsoft and any contributors reserve all other rights, whether under their respective copyrights, patents, or trademarks, whether by implication, estoppel or otherwise.
+Microsoft y sus colaboradores se reservan todos los demás derechos, ya sea por los derechos de autor, las patentes o las marcas registradas correspondientes, o de forma implícita, por exclusión o de otro modo.

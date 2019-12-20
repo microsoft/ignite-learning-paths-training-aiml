@@ -1,141 +1,143 @@
-# Demo Guide
-Make sure you have completed the [demo setup steps here](demosetup.md)
+# <a name="demo-guide"></a>Guía de la demostración
+> 💡 Debe haber completado la [ implementación](demosetup.md) antes de intentar realizar la demostración.
 
-# Demo 1: Data Prep Demo with App
-In the first demo highlight the data preparation that was discussed in the slides for Time Series models. Walk through step by step how to do this in the C# demo app. Make sure to highlight that this can be done in any language.
+# <a name="demo-1-data-prep-demo-with-app"></a>Demostración 1: Demostración de preparación de datos con la aplicación
+En la primera demostración, resalte la preparación de datos que se ha descrito en las diapositivas de los modelos de serie temporal. Revise paso a paso cómo hacerlo en la aplicación de demostración de C#. Asegúrese de resaltar que esto se puede realizar en cualquier lenguaje.
 
-To navigate through code with `F12` and `CTRL-` shortcuts download the Visual Studio Shortcut Extension for VS Code [here](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vs-keybindings). This is super useful and keeps from having to scroll around trying to find things.
+Para navegar por el código con los métodos abreviados de teclado `F12` y `CTRL-`, descargue [aquí](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vs-keybindings) la extensión de métodos abreviados de teclado de Visual Studio para VS Code. Esto es muy útil y evita tener que desplazarse para intentar buscar cosas. (Tenga en cuenta que esta extensión no funciona en Mac o Linux)
 
-### Data Prep Demo Video [here](https://youtu.be/u1ppYaZuNmo?t=751)
+### <a name="data-prep-demo-video-herehttpsyoutubeu1ppyazunmot751"></a>Vídeo de la demostración de preparación de datos [aquí](https://youtu.be/u1ppYaZuNmo?t=751)
 
-### 1. Open the `IgniteAimlDataApp` App. I personally like to have this open before I start the talk so I can just flip to it.
-* Open the `Program.cs` file
-* Go to `GetProcessedDataForScore` method by right clicking and select `Go To Definition` or hitting `F12`
-    * Load data from data source. In this example we are loading for a local excel file in the solution.
-* `F12` to `AddWeeksToPredict` method and discuss logic.
-    * Get latest date and add 4 future weeks from that date
-    * Since the data is weekly and we want to know if a holiday occured during the week we calculate all dates that occured in the week and populate a collection called `DatesInWeek`
-    * Next create time futures for the 4 future weeks added to the collection.
-* `F12` to `CreateTimeFeatures` method from within `AddWeeksToPredict` logic and discuss logic.
-    * Use the current time property to calculate the time and holiday features needed.
-* `CTRL-` to navigate back to `AddWeeksToPredict`
-* `F12` to `CreateFourierFeatures`
-    * Calcuate Fourier Term features from the seasonality of 52 for our weekly data features. 
-* `CTRL-` to navigate back to `GetProcessedDataForScore`
-* `F12` to `CreateLagFeatures` method and discuss logic.
-    * Add the 26 prior week sales values to the current row.
-* `CTRL-` to navigate back to `GetProcessedDataForScore`
+> 💡 Debe haber completado la [ implementación](demosetup.md) antes de intentar realizar la demostración.
 
-* Data Demo Backup Options
-    * Use the embedded mp4 video in the hidden slide. Talk along side this video without sound.
-    * Start at slide 21 and show the data prep code in static slide steps.
+### <a name="1-open-the-igniteaimldataapp-app-i-personally-like-to-have-this-open-before-i-start-the-talk-so-i-can-just-flip-to-it"></a>1. Abra la aplicación `IgniteAimlDataApp`. Personalmente prefiero tenerla abierta antes de comenzar la presentación, para pasar a ella directamente.
+* Abra el archivo `Program.cs`.
+* Vaya al método `GetProcessedDataForScore`; para ello, haga clic con el botón derecho y seleccione `Go To Definition`, o bien presione `F12`.
+    * Cargue los datos desde el origen de datos. En este ejemplo, se carga un archivo de Excel local en la solución.
+* Presione `F12` para el método `AddWeeksToPredict` y analice la lógica.
+    * Obtenga la fecha más reciente y agregue cuatro semanas futuras a partir de esa fecha.
+    * Como los datos son semanales y quiere saber si ha habido algún día festivo durante la semana, se calculan todas las fechas de esa semana y se rellena una colección denominada `DatesInWeek`.
+    * A continuación, cree horas futuras para las cuatro semanas futuras que ha agregado a la colección.
+* Presione `F12` para el método `CreateTimeFeatures` desde la lógica de `AddWeeksToPredict` y descríbala.
+    * Use la propiedad de hora actual para calcular las características de hora y días festivos necesarias.
+* Presione `CTRL-` para volver a `AddWeeksToPredict`.
+* Presione `F12` en `CreateFourierFeatures`.
+    * Calcule las características de los términos de Fourier de la estacionalidad de las 52 características de datos semanales. 
+* Presione `CTRL-` para volver a `GetProcessedDataForScore`.
+* Presione `F12` para el método `CreateLagFeatures` y analice la lógica.
+    * Agregue los valores de ventas de las 26 semanas anteriores a la fila actual.
+* Presione `CTRL-` para volver a `GetProcessedDataForScore`.
 
-# Demo 2: Build Model with Azure Machine Learning Visual Designer
+* Opciones de copia de seguridad de la demostración de datos
+    * Use el vídeo mp4 insertado en la diapositiva oculta. Hable sobre este vídeo sin sonido.
+    * Comience en la diapositiva 21 y muestre el código de preparación de datos en pasos de diapositiva estáticos.
 
-### Full Model Building Live Demo Video [here](https://youtu.be/u1ppYaZuNmo?t=1278)
+# <a name="demo-2-build-model-with-azure-machine-learning-designer"></a>Demostración 2: Compilación del modelo con el diseñador de Azure Machine Learning
+💡 Debe haber completado la [ implementación](demosetup.md) antes de intentar realizar la demostración.
 
-### 1. Create Resource and Upload Dataset
+### <a name="full-model-building-live-demo-video-herehttpsyoutubeu1ppyazunmot1278"></a>Vídeo completo de la demostración en directo de la compilación del modelo [aquí](https://youtu.be/u1ppYaZuNmo?t=1278)
 
-* Create Azure Machine Learning Workspace Resource and Navigate to the new Workspace.
-    * Review high level where the different tools are that was discussed in the slides.
-    * Video Resources for this step:
-        * [Here](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml30/CreateAMLNavToWorkspace.mp4) is video of this step without sound.
-        * [Here](https://youtu.be/u1ppYaZuNmo?t=1278) is video of how to create the resource with audio.
-* Upload the dataset to the Datasets in AML
-    * Click `Datasets`
-    * Click `Create from datastore`
-        * NOTE: you should have already uploaded the dataset to the datastore in the demo setup steps.
-    * Fill in required fields and select the `workspaceblobstorage` option
-    * Click `Create`
-    * Optional: Step through the data prep feature in the datasets upload for AML
+### <a name="1-create-resource-and-upload-dataset"></a>1. Creación del recurso y carga del conjunto de datos
 
-### 2. Launch Designer and Explain Tool Features
+* Cree el recurso en Azure Machine Learning Studio y navegue hasta el área de trabajo nueva.
+    * Revise el nivel anterior en el que se describen las diferentes herramientas en las diapositivas.
+    * Recursos de vídeo para este paso:
+        * [Este](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml30/CreateAMLNavToWorkspace.mp4) es el vídeo de este paso sin sonido.
+        * [Este](https://youtu.be/u1ppYaZuNmo?t=1278) es un vídeo sobre cómo crear el recurso con audio.
+* Carga del conjunto de datos en los conjuntos de datos de AML
+    * Haga clic en `Datasets`.
+    * Haga clic en `Create from datastore` o desde el equipo local (el que prefiera).
+        * NOTA: Ya debería haber cargado el conjunto de datos al almacén de datos en los pasos de configuración de la demostración.
+    * Rellene los campos obligatorios y seleccione la opción `workspaceblobstorage`.
+    * Haga clic en `Create`.
+    * Opcional: recorra paso a paso la característica de preparación de datos en la carga de conjuntos de datos para AML
 
-* In the studio select 'Designer' on the left navigation
-* Summarize the different modules in the left nav including the test datasets.
+### <a name="2-launch-designer-and-explain-tool-features"></a>2. Inicio del diseñador y explicación de las características de las herramientas
 
-### 3. Start Building the  Model
+* En Studio, seleccione "Designer" (Diseñador) en el panel de navegación de la izquierda.
+* Resuma los distintos módulos en el panel de navegación de la izquierda, incluidos los conjuntos de datos de prueba.
 
-* Drag and drop the dataset onto the experiment workspace
-    * Note the file upload module as an option for getting data into workspace
-* Drag the `Select Columns in Dataset` onto the workspace
-    * Click `Edit columns` from the properties menu on the right side.
-    * Click `All Columns`
-    * Click `Exclude`
-    * Click `column names`
-    * Exclude the `Time` column
-    * Exclude the `DatesInWeek`
-    * NOTE: Optionally exclude these columns in the data edit feature when uploading the dataset to the workspace in the data prep steps during upload.
-* Drag the `Split Data` onto the workspace
-    * Edit the properties to split the data 70/30. 
-    * Discuss that this is not a rule and can change base on different model needs.
-* Drag the `Train Model` onto the workspace
-    * Select the label column name `Value` from the properties on the right
-* Drag the `Boosted Decision Tree Regression` onto the workspace
-* Drag the `Score Model` onto the workspace
-* Drag the `Evaluate` onto the workspace
-* Connect the `Split Data` module to `Train Model` for the training data and `Score Model` for scoring the predicted results with unseen data.
-* Connect `Train Model` to the training algorithm `Boosted Decision Tree Regression` module.
-* Connect `Score Model` with the `Evaluate` module.
-* This is normally where you would run the model _however_ it takes too long to run in the demo. Discuss how you would click the `Run` button in the bottom nav and select compute. This will segway nicely into talking about how to create compute resources in AML.
+### <a name="3-start-building-the--model"></a>3. Inicio de la compilación del modelo
 
-* These next steps will be part of the completed model but no need to actually create them in the live demo version that will not be trained.
-    * Drag the `Execute Python Script` module onto the workspace and connect the `Score Model` module to it. 
-    * Copy and paste this code in:
+* Arrastre y suelte el conjunto de datos en el área de trabajo del experimento.
+    * Tenga en cuenta que el módulo de carga de archivos es una opción para hacer llegar los datos al área de trabajo.
+* Arrastre `Select Columns in Dataset` hasta el área de trabajo.
+    * Haga clic en `Edit columns` en el menú de parámetros del lado derecho.
+    * Haga clic en `By Name`.
+    * Haga clic en `Add All`.
+    * Haga clic en el icono `Minus` de la columna `Time` para excluirla.
+* Arrastre `Split Data` hasta el área de trabajo.
+    * Edite los parámetros para dividir los datos 70/30. 
+    * El porcentaje de división no es una regla y se puede cambiar según las necesidades de cada modelo.
+* Arrastre `Train Model` hasta el área de trabajo.
+    * Seleccione el nombre de la columna de etiqueta `Value` de los parámetros de la derecha.
+* Arrastre `Boosted Decision Tree Regression` hasta el área de trabajo.
+* Arrastre `Score Model` hasta el área de trabajo.
+* Arrastre `Evaluate` hasta el área de trabajo.
+* Conecte el módulo `Split Data` a `Train Model` para los datos de entrenamiento y `Score Model` para puntuar los resultados previstos con datos no vistos.
+* Conecte `Train Model` al módulo `Boosted Decision Tree Regression` del algoritmo de entrenamiento.
+* Conecte `Score Model` al módulo `Evaluate`.
+* Normalmente, aquí se ejecutaría el modelo _pero_ en la demostración tarda demasiado en ejecutarse. Explique cómo haría clic en el botón `Run` de la navegación inferior y seleccionaría Proceso. De este modo, puede pasar con facilidad a describir cómo crear recursos de proceso en AML.
+
+* Cambie el nombre de la columna creada `Scored Labels` por `Forecast`.
+    * Arrastre `Edit Metadata` hasta el área de trabajo.
+    * Conecte `Score Model` con el módulo `Edit Metadata`.
+    * En la sección `Parameters` del módulo `Edit Metadata`, haga clic en `Edit Columns`.
+    * Escriba `Score Labels` en el cuadro de texto (no es necesario cambiar ninguno de los valores predeterminados).
+    * Haga clic en `Save`.
+    * A continuación, actualice el campo `New Column Name` de `Parameters` a `Forecast`.
+* Volver a transformar el valor normalizado en recuentos de elementos completos.
+    * Arrastre `Apply Math Operation` hasta el área de trabajo.
+    * Conecte `Edit Metadata` a `Apply Math Operation`.
+    * Establezca `Basic math function` en `Exp`.
+    * Haga clic en `Edit Columns` y escriba `Value` y `Forecast`.
+    * Haga clic en `Save`.
+    * Establezca `Output mode` en `Inplace`.
+* Arrastre el módulo `Select Columns in Dataset` hasta el área de trabajo.
+* Conecte `Apply Math Operation` a `Select Columns in Dataset`.
+* Haga clic en `Edit Columns` y escriba los siguientes nombres de columna `ID1,ID2,Value,Forecast`.
+
+### <a name="4-discuss-compute-target-creation"></a>4. Descripción de la creación del destino de proceso
+
+* Haga clic en el elemento de navegación `Compute`.
+* Haga clic en `Add`.
+* Describa los distintos tipos de proceso y para qué se usan. Los procesos que se usan para esta demostración son `Machine Learning Compute` para el entrenamiento y `Kubernetes Service` para implementar la API.
+
+### <a name="5-explain-trained-model"></a>5. Explicación del modelo entrenado
+* Vuelva al diseñador visual.
+* Haga clic con el botón derecho en el segundo módulo del modelo para visualizar los datos (probablemente `Select Columns in Dataset`).
+* Desplácese rápidamente por los datos para mostrar su aspecto.
+* Haga clic en una columna y muestre cómo la herramienta crea visualizaciones en el panel de la derecha.
+* Visualice el módulo `Score Model` para mostrar cómo predice el modelo a partir de datos no vistos.
+* Visualice el módulo `Evaluate Model` y analice las métricas que se usan para la puntuación.
+    * Haga clic en `More Help` en el panel derecho de los parámetros.
+    * Resalte que cada módulo tiene un vínculo a la documentación de los parámetros en la que se explicará lo que hace el módulo.
+    * Desplácese hacia abajo y muestre las explicaciones de las métricas en la documentación del modelo.
     
-    
-    ```python 
-    import pandas as pd
-    import numpy as np
-
-    def azureml_main(dataframe1 = None, dataframe2 = None):
-      print(f'Input pandas.DataFrame #1: {dataframe1}')
-      df = dataframe1
-      df['Value'] = np.exp(df['Value'])
-      df['Forecast'] = np.exp(df['Scored Labels'])
-      return df
-    ```
-      
-    * Drag the `Select Columns in Dataset`
-        * Select columns `ID1`, `ID2`, `Value` and `Forecast`
-        * These are the columns the data demo app will be expecting when we post to get a result from the completed and deployed model.
-### 4. Discuss Compute Target Creation
-* Navigate back to AML
-* Click the `Compute` navigation item
-* Click `Add`
-* Discuss the different compute types and what they are used for. The computes used for this demo are a `Machine Learning Compute` for training and the `Kubernetes Service` for deploying the API.
-
-### 5. Explain Trained Model
-* Navigate back to Visual Designer
-* Right Click on the second module in the model to Visualize the data (most likely the `Select Columns in Dataset`)
-* Quickly scroll through the data to show how the data looks.
-* Click on a column and show how the the tool creates visualizations in the right panel.
-* Visualize the `Score Model` module to show how the model predicted on the unseen data
-* Visualize the `Evaluate Model` module and discuss the metrics used to score.
-    * Click `More Help` in the right panel of the properties.
-    * Highlight that every module has a link to the docs in the properties that will explain what the module is doing.
-    * Scroll down and show the metrics explanations in the docs for the model.
-### 6. Create Predictive Experiment and Deploy the Model
-This is normally where you would create the `Predictive Experiment` to deploy it to a web service _however_ we have done these steps in advance. 
-* Discuss these steps _do not do them live_:
-    * Click `Create` predictive experiment. Think of the `Predictive Experiment` model as the production model that gets deployed to the web service. The     `Training Experiment` as the dev model.
-    * Add the `Execute Python Script` and `Select Columns in Dataset` modules to    the created predictive experiment.
-    * Run the experiment
-    * Click `Deploy Web Service`
-* After discussing the steps to create the `Predictive Experiment` navigate to the deployed web service from the left nav.
-* Click on the name of the web service created in advance.
-* Click `Test` and show how it performs on a scored data item.
-* Click `Consume` and show the sample code provided for integrating the web service.
+### <a name="6-create-inference-pipeline-and-deploy-the-model"></a>6. Creación de una canalización de inferencia e implementación el modelo
+Normalmente, aquí es donde se crearía `Inference Pipeline` para implementarlo en un servicio web, _pero_ estos pasos se han realizado con antelación. 
+* Describa estos pasos, _no los ejecute en directo_:
+    * Haga clic en `Create inference pipeline` y luego seleccione `Real-time inference pipeline`.
+    * Asegúrese de que `Web Service Output` está conectado al último módulo del paso de procesamiento de datos `Select Columns in Dataset`.
+    * Haga clic en `Run`.
+    * Haga clic en `Deploy`.
+* Después de explicar los pasos para crear `Inference Pipeline`, vaya al servicio web implementado desde el panel de navegación de la izquierda.
+* Haga clic en el nombre del servicio web que ha creado antes.
+* Haga clic en `Test` y muestre cómo funciona en un elemento de datos puntuado.
+* Haga clic en `Consume` y muestre el código de ejemplo proporcionado para integrar el servicio web.
 
 
-# Demo 3: Testing API with C# console app (dotnet core)
-### API Demo Test Video [here](https://youtu.be/u1ppYaZuNmo?t=2136)
+# <a name="demo-3-testing-api-with-c-console-app-dotnet-core"></a>Demostración 3: Prueba de la API con la aplicación de consola de C# (dotnet core)
 
-* Copy the API key from the `Consume` tab
-* Open the `App.config` and paste it in the value attribute
-* Copy the `Request-Response Url` from the `Consume` tab
-* Open the `Program.cs` and paste the value in `client.BaseAddress = new Uri("");`
-* Right click `Program.cs` and select `Open in Terminal`
-* Type the command `dotnet run` to run the console app
-* To use the default values of StoreID (ID1) of 2 and ItemID (ID2) of 1 and the number of weeks to predict. Just type `y`
-* This will run and should return the predicted values for the next 4 weeks.
+> 💡 Debe haber completado la [ implementación](demosetup.md) antes de intentar realizar la demostración.
+
+### <a name="api-demo-test-video-herehttpsyoutubeu1ppyazunmot2136"></a>Vídeo de prueba de la demostración de la API [aquí](https://youtu.be/u1ppYaZuNmo?t=2136).
+
+* Copie la clave de API desde la pestaña `Consume`.
+* Abra el archivo `App.config` y pegue el atributo value.
+* Copie `Request-Response Url` desde la pestaña `Consume`.
+* Abra `Program.cs` y pegue el valor en `client.BaseAddress = new Uri("");`.
+* Haga clic con el botón derecho en `Program.cs` y seleccione `Open in Terminal`.
+* Escriba el comando `dotnet run` para ejecutar la aplicación de consola.
+* Para usar los valores predeterminados StoreID (ID1) de 2 e ItemID (ID2) de 1, y el número de semanas que se va a predecir, simplemente escriba `y`.
+* Esto se ejecutará y devolverá los valores de predicción de las cuatro semanas siguientes.

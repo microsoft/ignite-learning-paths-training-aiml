@@ -1,80 +1,75 @@
-# Demo Setup
-Follow the below steps to get your environment ready for the live demo. Once you complete this setup then follow the [demo guide](demoguide.md).
+# <a name="demo-setup"></a>Configuración de la demostración
+Siga los pasos siguientes para preparar el entorno para la demostración en directo. Una vez completada la configuración, siga la [guía de demostración](demoguide.md).
 
-## Create Azure Machine Learninge Resources with the Deploy to Azure Button below
-<a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fcassieview%2Fignite-learning-paths-training-aiml%2Fmaster%2Faiml30%2Fdeploy.json" rel="nofollow">
- <img src="https://camo.githubusercontent.com/9285dd3998997a0835869065bb15e5d500475034/687474703a2f2f617a7572656465706c6f792e6e65742f6465706c6f79627574746f6e2e706e67" data-canonical-src="http://azuredeploy.net/deploybutton.png" style="max-width:100%;">
+## <a name="create-azure-machine-learninge-resources-with-the-deploy-to-azure-button-below"></a>Creación de recursos de Azure Machine Learning con el botón Implementar en Azure
+<a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fcassieview%2Fignite-learning-paths-training-aiml%2Fmaster%2Faiml30%2Fdeploy.json" rel="nofollow"> <img src="https://camo.githubusercontent.com/9285dd3998997a0835869065bb15e5d500475034/687474703a2f2f617a7572656465706c6f792e6e65742f6465706c6f79627574746f6e2e706e67" data-canonical-src="http://azuredeploy.net/deploybutton.png" style="max-width:100%;">
 </a>
 
-> Once created please upgrade your Azure Machine Learning resource to the enterprise edition for this session. You should see an 'Upgrade' button to complete this action. This is currently in preview, however the pricing structure is described [here](https://azure.microsoft.com/en-us/pricing/details/machine-learning/)
+> Una vez creado, actualice el recurso de Azure Machine Learning a la edición Enterprise para esta sesión. Debe ver un botón "Actualizar" para completar esta acción. Actualmente esto se encuentra en versión preliminar; pero la estructura de precios se describe [aquí](https://azure.microsoft.com/en-us/pricing/details/machine-learning/).
 
-## Create Additional Resources Needed
+## <a name="create-additional-resources-needed"></a>Creación de los recursos adicionales necesarios
 
-* Select **'Launch the new Azure Machine Learning studio'**
+* Seleccione **"Launch the new Azure Machine Learning studio"** (Iniciar el nuevo Azure Machine Learning Studio).
 
-Once you have created the base Azure Machine Learning Service we need to add additional compute resources.
-### Create Compute Targets
-1. Create Machine Learning Compute
-    * Click on the nav "Compute"
-    * Select 'Training Clusters'
-    * Click "New"
-    * Enter a name for the resource
-    * Select the machine size (ex: Standard_DS2_v2)
-    * Enter the min and max nodes (recommend min of 0 and max of 5)
-    * Click "Create"
-    ![Create Compute](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml30/CreateMlCompute.gif)
-2. Create Kubernetes Compute
-    * Click on the nav "Compute"
-    * Select 'Inference Clusters'
-    * Click "New"
-    * Enter a name for the resource
-    * Select a region
-    * Keep 'Virtual Machine Size' as default
-    * Cluster purpose set to 'Dev-test'
-    * Click "Create"
-    ![Create Kubernetes](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml30/CreateKubService.gif)
-3. Create Notebook Virtual Machine
-    * Click on the NAV "Compute"
-    * Select 'Notebook VMs'
-    * Click "New"
-    * Give the notebook a unique name
-    * Select the VM size
-    * Click "Create"
-    ![Create VM](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml30/CreateNotebookVM.gif)
+Una vez que haya creado el servicio Azure Machine Learning base, tendrá que agregar más recursos de proceso.
+### <a name="create-compute-targets"></a>Creación de destinos de proceso
+1. Para crear el proceso de Machine Learning:
+    * Haga clic en el elemento de navegación "Proceso".
+    * Seleccione "Clústeres de entrenamiento".
+    * Haga clic en "Nuevo".
+    * Escriba un nombre para el recurso.
+    * Seleccione el tamaño de la máquina (por ejemplo: Standard_DS2_v2)
+    * Escriba el número mínimo y máximo de nodos (se recomienda un valor mínimo de 0 y uno máximo de 5).
+    * Haga clic en "Crear" ![Crear proceso](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml30/CreateMlCompute.gif).
+2. Para crear el proceso de Kubernetes:
+    * Haga clic en el elemento de navegación "Proceso".
+    * Seleccione "Inference Clusters" (Clústeres de inferencia).
+    * Haga clic en "Nuevo".
+    * Escriba un nombre para el recurso.
+    * Seleccione una región.
+    * Mantenga el valor predeterminado de "Tamaño de la máquina virtual".
+    * Establezca el propósito del clúster en "Dev-test".
+    * Haga clic en "Crear" ![Crear Kubernetes](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml30/CreateKubService.gif).
+3. Para crear la máquina virtual de Notebook:
+    * Haga clic en el elemento de navegación "Proceso".
+    * Seleccione "Máquinas virtuales de Notebook".
+    * Haga clic en "Nuevo".
+    * Asigne un nombre único al cuaderno.
+    * Seleccione el tamaño de VM.
+    * Haga clic en "Crear" ![Crear máquina virtual](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml30/CreateNotebookVM.gif).
 
 
-## Upload Dataset to Workspace Blob Storage and Save to Local
-The dataset needed is created weekly with updated dates to allow your demo to be predicting future weeks. Below are the steps to get the new dataset and add it to the Azure Machine Learning Storage account and the demo data app.
+## <a name="upload-dataset-to-workspace-blob-storage-and-save-to-local"></a>Carga del conjunto de datos en el almacenamiento de blobs del área de trabajo y guardado en el equipo local
+El conjunto de datos necesario se crea semanalmente con fechas actualizadas para permitir que la demostración realice la predicción de semanas futuras. A continuación se indican los pasos para obtener el nuevo conjunto de datos y agregarlo a la cuenta de almacenamiento de Azure Machine Learning y a la aplicación de datos de demostración.
 
-1. Download dataset to local from [here](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml30/datasets/ForecastingData.csv)
-2. Open Azure Storage Explorer - [Download Here](https://azure.microsoft.com/en-us/features/storage-explorer/).
-3. Navigate to `azureml-blobstore-<guid>`
-4. Create a new folder called `datasets`
-5. Upload the dataset
-6. Replace local ForecastingData.csv file in the C# Demo app in order to be predicting for future dates. There is a default csv however it will not be the updated data.
+1. Descargue [aquí](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml30/datasets/ForecastingData.csv) el conjunto de datos al equipo local.
+2. Abra el Explorador de Azure Storage ([descárguelo aquí](https://azure.microsoft.com/en-us/features/storage-explorer/)).
+3. Vaya a `azureml-blobstore-<guid>`.
+4. Cree una carpeta con el nombre `datasets`.
+5. Cargue el conjunto de datos.
+6. Reemplace el archivo ForecastingData.csv local de la aplicación de demostración de C# para predecir fechas futuras. Hay un archivo .csv predeterminado, pero sin los datos actualizados.
 
-## Get the C# Demo App
-The first demo is with VS Code and the C# IgniteAimlDataApp. This is to demonstrate how to do the data processing and highlight that the it can be done in any language.
+## <a name="get-the-c-demo-app"></a>Obtención de la aplicación de demostración de C#
+La primera demostración se realiza con VS Code e IgniteAimlDataApp de C#. Sirve para demostrar cómo realizar el procesamiento de datos y resaltar que se puede realizar en cualquier lenguaje.
 
-1. [Download VS Code here](https://code.visualstudio.com/download)
-2. Ensure that you have [.NET Core SDK 2.1.0](https://dotnet.microsoft.com/download/dotnet-core/2.1) installed on your local
-2. Clone the app with the following command
+1. [Descargue aquí VS Code](https://code.visualstudio.com/download).
+2. Asegúrese de que tiene el [SDK de .NET Core 2.1.0](https://dotnet.microsoft.com/download/dotnet-core/2.1) instalado en el equipo local.
+3. Clone la aplicación con el comando siguiente.
     * `git clone https://github.com/microsoft/ignite-learning-paths-training-aiml.git`
-3. Navigate to project path
+4. Vaya a la ruta de acceso del proyecto.
     * `cd ignite-learning-paths-training-aiml/aiml30/C#/IgniteAimlDataApp/IgniteAimlDataApp`
-4. Open the project in VS Code
+5. Abra el proyecto en VS Code.
     * `code .`
-5. Replace the local dataset with the downloaded dataset from the step above in the `IgniteAimlDataApp/Datasets` Folder.
-6. To run the app
-    * Right click on `Program.cs` and select `Open in Terminal`
-    * Run the command `dotnet run`
-    Note for Mac users: if you get an error that the program can't find the file you imported, change line 14 in Program.cs     to include forward slashes: `string sourceFile = $"{Environment.CurrentDirectory}//Datasets//{fileName}.csv";`
-    * It will prompt with a question `Would you like to run the default params` type `y`
-    * This will attempt to hit the API but it will fail since it hasn't been created yet.
+6. Reemplace el conjunto de datos local por el que ha descargado en el paso anterior en la carpeta `IgniteAimlDataApp/Datasets`.
+7. Para ejecutar la aplicación:
+    * Haga clic con el botón derecho en `Program.cs` y seleccione `Open in Terminal`.
+    * Ejecute el comando `dotnet run`.
+    * Se le mostrará una pregunta `Would you like to run the default params`; escriba `y`.
+    * Esto intentará llegar a la API, pero se producirá un error porque todavía no se ha creado.
 
-## Run through the Live Demo
-Do a complete run through of the live demo to have a completed backup model to open and show the end result.
+## <a name="run-through-the-live-demo"></a>Ejecución de la demostración en directo
+Realice una ejecución completa de la demostración en directo para tener un modelo de respaldo completado para abrirlo y mostrar el resultado final.
 
-#### There will not be enough time to run the model during the live demo. Make sure to build the model _without_ running it in the live session. Once you have added all the modules to the experiment workspace then navigate to the model you created and trained prior to the session.
+#### <a name="there-will-not-be-enough-time-to-run-the-model-during-the-live-demo-make-sure-to-build-the-model-_without_-running-it-in-the-live-session-once-you-have-added-all-the-modules-to-the-experiment-workspace-then-navigate-to-the-model-you-created-and-trained-prior-to-the-session"></a>No habrá tiempo suficiente para ejecutar el modelo durante la demostración en directo. Asegúrese de compilar el modelo _sin_ ejecutarlo en la sesión en directo. Una vez que haya agregado todos los módulos al área de trabajo del experimento, navegue hasta el modelo que ha creado y entrenado antes de la sesión.
 
-[Next - Live Demo Steps](demoguide.md)
+[Siguiente: Pasos de la demostración en directo](demoguide.md)

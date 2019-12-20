@@ -1,527 +1,283 @@
-# AIML20: Speaker Notes
+# <a name="aiml20-speaker-notes"></a>AIML20: Notas del orador
 
-These are the notes for the PPT presentation at: [presentations.md](https://github.com/microsoft/ignite-learning-paths-training-aiml/blob/master/aiml20/presentations.md)
+Estas son las notas de la presentación en PPT que encontrará en: [presentations.md](https://github.com/microsoft/ignite-learning-paths-training-aiml/blob/master/aiml20/presentations.md)
 
-Associated demo scripts are found at: https://github.com/microsoft/ignite-learning-paths/tree/master/aiml/aiml20. Start with `DEMO%20Setup.md`.
+Los scripts de demostración asociados se encuentran en: https://github.com/microsoft/ignite-learning-paths-training-aiml/tree/master/aiml20. Comience con `DEMO%20Setup.md`.
 
-## Slide notes
+## <a name="slide-notes"></a>Notas de la diapositiva
 
-Slides are identified by titles only.
+Las diapositivas solo se identifican mediante títulos.
 
-### SLIDE: Microsft Ignite the Tour
+### <a name="slide-microsft-ignite-the-tour"></a>DIAPOSITIVA: Un paseo por Microsoft Ignite
 
-Pre-presentation walk-in slide
+Diapositiva de introducción previa a la presentación
 
-### SLIDE: Using pre-built AI to solve business problems
+### <a name="slide-using-pre-built-ai-to-solve-business-problems"></a>DIAPOSITIVA: Uso de inteligencia artificial pregenerada para superar problemas empresariales
 
-Welcome everyone, I’m \<name and affiliation\>. Today I’m going to talk about
-how you can add artificial intelligence capabilities to your applications,
-without the need for massive amounts of computing power or even AI expertise.
-We’ll do that by using pre-built AI services that are available in the cloud,
-and even customize them for our specific needs.
+Bienvenida a todos, soy \<nombre y afiliación\>. Hoy voy a hablar sobre cómo puede agregar funcionalidades de inteligencia artificial a sus aplicaciones, sin necesidad de cantidades masivas de potencia de cálculo ni conocimientos de inteligencia artificial.
+Lo haremos mediante servicios de inteligencia artificial pregenerada que están disponibles en la nube, que incluso podemos personalizar según nuestras necesidades específicas.
 
-(Replace your contact details on this slide.)
+(Reemplace los detalles de contacto en esta diapositiva).
 
-### SLIDE: Resources
+### <a name="slide-resources"></a>DIAPOSITIVA: Recursos
 
-In the talk today, I’ll include lots of links to information and resources, but
-don’t worry if you don’t catch them during the presentation, because all of the
-details are included on the Session Resources Hub shown here. There will also be
-several demos, and you’ll be able to try them all out yourself because complete
-source code, including a one-click button to deploy everything to Azure, is
-available in this Github repository. I’ll show this slide at again at the end
-of the presentation, too, so you might want to have your camera ready then.
+En la charla de hoy incluiré muchos vínculos a información y recursos, pero no se preocupe si no los encuentra durante la presentación, porque todos los detalles están incluidos en el centro de recursos de la sesión que se muestra aquí. También habrá varias demostraciones y podrá probarlas todas, ya que el código fuente completo, incluido un botón de un clic para implementar todo en Azure, se encuentra disponible en este repositorio de Github. Además, mostraré esta diapositiva de nuevo al final de la presentación, por si quiere tener la cámara preparada para entonces.
 
-### SLIDE: Adding humanlike capabilities to apps
+### <a name="slide-adding-humanlike-capabilities-to-apps"></a>DIAPOSITIVA: Incorporación de funcionalidad similar a la humana a las aplicaciones
 
-We'll be using pre-built AI services to add humanlike capabilities to
-applications, but what does that mean? Well, here are some examples.
+Utilizaremos servicios de inteligencia artificial pregenerada para agregar funcionalidad similar a la humana a las aplicaciones, pero ¿qué significa esto? A continuación le mostramos algunos ejemplos.
 
-### SLIDE: Enhance apps with humanlike capabilities
+### <a name="slide-enhance-apps-with-humanlike-capabilities"></a>DIAPOSITIVA: Mejora de las aplicaciones con funcionalidad similar a la humana
 
-[CLICK] You could give your app the power of speech, say by adding a chat interface.
+[CLIC] Puede darle a la aplicación la capacidad de hablar, por ejemplo, agregando una interfaz de chat.
  
-[CLICK] You could give your app the ability to see, and understand the content of images.
+[CLIC] Puede darle a la aplicación la capacidad de ver y entender el contenido de las imágenes.
 
-[CLICK] You could give your app the intuition to understand what your users are most
-likely to want to do, and optimize your user interface automatically.
+[CLIC] Puede darle a la aplicación la intuición de entender lo que es más probable que sus usuarios quieran hacer y optimizar automáticamente la interfaz de usuario.
 
-[CLICK] You could give your app the power of comprehension, and communicate with your
-users whatever their spoken language.
+[CLIC] Puede darle a la aplicación la capacidad de comprensión y comunicarse con sus usuarios, sea cual sea el idioma que hablen.
 
-[CLICK] Or, you could automate the human process of scanning streams of data for anomalies, and react accordingly.
+[CLIC] También puede automatizar el proceso humano de análisis de secuencias de datos en busca de anomalías y reaccionar en consecuencia.
 
-These are just a few examples.
+Estos son solo algunos ejemplos.
 
-### SLIDE: Overview of Azure Cognitive Services
+### <a name="slide-overview-of-azure-cognitive-services"></a>DIAPOSITIVA: Introducción de Azure Cognitive Services
 
-We've talked a lot about how AI techniques can help. But doesn't it take a lot
-of data, and a lot of technical expertise, to implement?
+Hemos hablado mucho sobre cómo pueden ayudar las técnicas de inteligencia artificial. Pero, ¿no se requieren muchos datos y una gran experiencia técnica para implementarlas?
 
-No. You can draw on the expertise of Microsoft Research, which has used its
-extensive data repositories and AI experts to create off-the-shelf AI services
-in Azure for you to use via simple REST API calls. 
+No. Puede aprovechar la experiencia de Microsoft Research, que ha usado sus extensos repositorios de datos y expertos de inteligencia artificial para crear servicios comerciales de inteligencia artificial en Azure que puede usar a través de llamadas API REST sencillas. 
 
-That's Azure Cognitive Services.
+Esto es Azure Cognitive Services.
 
-### SLIDE: Azure Cognitive Services
+### <a name="slide-azure-cognitive-services"></a>DIAPOSITIVA: Azure Cognitive Services
 
-Azure Cognitive Services includes more than two dozen APIs, but at the broadest
-level they offer capabilities within these cateegories of human capability:
+Azure Cognitive Services incluye más de dos docenas de API, pero, en un nivel más amplio, ofrecen funciones en estas categorías de funcionalidad humana:
 
-* Vision: Understanding the content of photographs, drawings, text and
-  handwriting, and video
+* Visión: descripción del contenido de fotografías, dibujos, texto y escritura a mano, y vídeo
 
-* Speech: Tools to understand and recognize speech, and generate natural, humanlike
-  spoken voice.
+* Voz: herramientas para comprender y reconocer voz, y generar voz natural y similar a la humana.
 
-* Language: Understand the content of written documents and text, and translate
-  between human languages.
+* Idioma: comprensión del contenido de documentos escritos y texto, y traducción entre lenguajes humanos.
 
-* Decision: this is an entirely new category for Azure Cognitive Services, which
-  is all about makinghumanlike choices about data, content, and application user
-  interfaces.
+* Decisión: esta es una categoría completamente nueva de Azure Cognitive Services que trata de la toma de decisiones de funcionalidad similar a la humana sobre los datos, el contenido y las interfaces de usuario de la aplicación.
 
-* Search: answer natural language questions about the content of large,
-  unstructured repositories. 
+* Búsqueda: respuesta a preguntas del lenguaje natural sobre el contenido de los repositorios grandes y no estructurados. 
 
-### SLIDE: Azure Cognitive Services (with service names)
+### <a name="slide-azure-cognitive-services-with-service-names"></a>DIAPOSITIVA: Azure Cognitive Services (con nombres de servicio)
 
-The "Search" category was covered in the previous talk in this learning path,
-AIML10. In this talk, we're going to touch on just a few of the other available
-services, and use them to enhance the website of a retailer: [CLICK]
+La categoría "Búsqueda" se trató en la conversación anterior en esta ruta de aprendizaje, AIML10. En este caso, abordaremos tan solo algunos de los demás servicios disponibles y los usaremos para mejorar el sitio web de un minorista: [CLIC]
 
-Computer Vision: which we'll use to analyze the content of product photographs.
+Computer Vision: se usará para analizar el contenido de las fotografías del producto.
 
-Custom Vision: which we'll use to identify the specific products that our retailer sells.
+Custom Vision: se usará para identificar los productos específicos que el distribuidor vende.
 
-and Personalizer: which will automatically adapt the layout of our website by
-observing customer preferences and present the best product categories first,
-even for anonymous users.
+Personalizer: que adaptará automáticamente el diseño de nuestro sitio web observando las preferencias del cliente y presentará las mejores categorías de producto en primer lugar, incluso para los usuarios anónimos.
 
-But the principles of setting up and using Cognitive Services are the same for all the APIs, so what you learn here today applies to any of the AI services you want to use.
+Con todo, los principios de configuración y uso de Cognitive Services son los mismos para todas las API. Por lo tanto, lo que se aprende aquí se aplica a cualquiera de los servicios de inteligencia artificial que quiera usar.
 
-### SLIDE: Computer Vision
+### <a name="slide-computer-vision"></a>DIAPOSITIVA: Computer Vision
 
-First, let's look at pre-built AI for Computer Vision, and how we can use to
-give an application the ability to see, and then customize it to our particular
-needs.
+En primer lugar, echaremos un vistazo a la inteligencia artificial pregenerada para Computer Vision, y veremos cómo podemos usarla para dotar a una aplicación de la capacidad de ver y luego personalizarla según nuestras necesidades particulares.
 
-### SLIDE: Shop By Photo
+### <a name="slide-shop-by-photo"></a>DIAPOSITIVA: Comprar por foto
 
-This is the website for Tailwind Traders, a hardware retailer. The Tailwind
-Traders website has many of the usual e-commerce features: the ability to browse
-the product catalog, order products online, and find products in retail stores.
-But it has a few AI-enabled features too, as we'll see.
+Este es el sitio web de Tailwind Traders, un minorista de hardware. Tailwind Traders tiene muchas de las características de comercio electrónico habituales: la posibilidad de examinar el catálogo de productos, pedidos de productos en línea y búsqueda de productos en tiendas.
+Pero también tiene algunas características habilitadas para inteligencia artificial, como veremos.
 
-As you might have guessed, Tailwind Traders is a fictitious company, but that
-means I can give you all of the source code to deploy this app yourself. You can
-find it at the link at the bottom of this slide.
+Como puede suponer, Tailwind Traders es una empresa ficticia, pero eso significa que puedo proporcionarle todo el código fuente para implementar esta aplicación. Puede encontrarlo en el vínculo de la parte inferior de esta diapositiva.
 
-### SLIDE: Demo: Shop by Photo
+### <a name="slide-demo-shop-by-photo"></a>DIAPOSITIVA: Demostración: Comprar por foto
 
-DEMO: "Defining the problem: Shop by Photo is broken"
+DEMOSTRACIÓN: "Definición del problema: Comprar por foto está dañado"
 
-Let's go to the live Tailwind Traders website. [CLICK]
+Vamos al sitio web real de Tailwind Traders. [CLIC]
 
-One of the AI-enabled features is called "Shop by Photo". This feature that
-allows the customer to upload a photo of a product they might want to purchase,
-and the idea is that the app will tell them if the product is available. Let's
-go ahead and try it now. We'll upload this picture of a drill that we're
-interested in, and the Tailwind Traders app analyzes the picture, recognizes
-that it's a drill, and shows me the drill that Tailwind Traders has for sale,
-and where to find it in the store.
+Una de las características habilitadas para la inteligencia artificial se denomina "Comprar por foto". Esta característica permite al cliente cargar una foto de un producto que quizás quiere comprar y la idea es que la aplicación le indicará si el producto está disponible. Vamos a continuar y a probarlo ahora. Cargaremos esta imagen de un taladro que nos interese y la aplicación Tailwind Traders analizará la imagen, reconocerá que se trata de un taladro y mostrará el taladro que Tailwind Traders tiene a la venta, así como dónde encontrarlo en la tienda.
 
-But let's try that with a different picture. Let me return to the homepage, use
-the "Shop by Photo" feature once again, and this time choose this picture of a
-pair of pliers. Unfortunately, when the app analyzes that picture, it thinks
-it's a hammer. It's obviously not working very well, so now let's see if we can
-figure out what went wrong, find a way to fix it using computer vision. 
+Pero vamos a intentarlo con una imagen diferente. Voy a volver a la página principal, usaré la característica "Comprar por foto" una vez más y esta vez elegiré esta imagen de unas tenazas. Por desgracia, cuando la aplicación analiza esa imagen, considera que es un martillo. Obviamente, no funciona bien, por lo que ahora vamos a ver si podemos averiguar qué es lo que ha salido mal y encontrar una manera de corregirlo mediante Computer Vision. 
 
-### SLIDE: How Computer Vision Works
+### <a name="slide-how-computer-vision-works"></a>DIAPOSITIVA: Funcionamiento de Computer Vision
 
-But before we do that, it's going to be helpful to dive into a bit of theory to
-understand how computer vision works. Don't worry though: there will be very
-little math, and understanding a bit about how computer vision works will help
-us understand what can go wrong, and how to fix it.
-
-### SLIDE: Tasks (XKCD comic)
-
-(Pause 10 seconds)
-
-Not long ago, being able to give a computer a photograph and it being able to
-give us useful information about what’s in the picture was literally the stuff of science
-fiction. This XKCD was published in September, 2014. Now, five years later, a
-computer can easily tell whether a photo is of a bird, thanks to the advent of
-big data, GPU computing, and convolutional neural networks. Let's see how.
-
-### SLIDE: How Neural Networks Work (Brandon Rohrer)
-
-This explanation is adapted with permission from Brandon Rohrer, who maintains
-an excellent blog and video tutorial series with in-depth explanations of many
-aspects of AI and machine learning. Check out Brandon's blog for more details;
-I'll only have time for a sketch here.
-
-### SLIDE: Computer Vision / Convolutional Neural Network
-
-You've probably heard that AI is powered by something called "Deep Learning".
-The "Deep" in "Deep Learning" doesn't mean "profound", it simply means that
-the image passes through a neural network with many layers when
-it's being analyzed. That's it.
-
-On your screen is a very simple Neural Network. This one only has five layers;
-real-world vision systems have many dozens of layers, perhaps hundreds. This one
-is designed to take an image as input, and then classify that image as one of
-exactly four objects: dog, bicycle, apple, and tennis ball. That's it: it is not
-capable of detecting any other kind of object except those it's been trained to
-recognize.
-
-### SLIDE: Trained Convolutional NN
-
-When a Neural Network has been trained, it passes the input image through the
-network layer by layer, at each layer transforming the image into different,
-smaller images. Each layer recombines the images genrated in the prior layer,
-and the images get smaller and smaller until at the very end they are just a
-single pixel with a value between 0 and 1. That value represents the confidence
-the Neural Network has that the image represents the given object: they higher
-the number, the more confident it is.
-
-In this case, we've inputted an image of a bicycle and the "bicycle" node at the
-right side is the one with the highest value. So it looks like this neural
-network has been well-trained to detect bicycles (or at least this one). But how
-do you "train" a neural network, and how is the image being transformed along
-the way?
-
-At each node of the network -- each circle -- a filter is applied to the image.
-It's much the same idea as a Snapshot filter or an Instagram filter, but instead
-of doing something useful like making the image sepia toned or adding bunny ears
-to all the faces, it's doing something ... different ... that was decided in the
-training process. Let's dive in to see what that is.
-
-### SLIDE: Filters (1)
-
-Let's consider a simple image. This is an image of a cross. It's 9 pixels by 9
-pixels, and white is "+1" and black is "-1". We're going to apply a filter to
-this image, like what happens at each of the nodes in the neural network.
-
-### SLIDE: Filters (2)
-
-To transform this image, we'll apply a 3x3 grid of weights. Small grids like
-this are commonly used in computer vision systems: sometimes 3x3, sometimes 5x5,
-and with weights determined in the training process. This grid only uses the
-weights -1 and 1, but typically they will look more like random numbers in that
-range. [CLICK]
-
-To apply the weights to the image, we overlay the grid of weights, centered on a
-particular pixel in the image. [CLICK] Then, we multiply each weight by each
-pixel value, and take the average. That average becomes the corresponding pixel
-in the output image, aligned to the center pixel of the weights grid.
-
-You've probably noticed we can't use the edges of the input image as center
-pixels, which is why the output image is smaller than the input by two rows and
-two columns. This (along with other types of transformations) is why the image
-gets smaller and smaller as we go down the layers, until it's only one pixel in
-size.
-
-### SLIDE: Filters (3)
-
-Let's shift the weights grid two pixels down and to the right. Now when we
-multiply the weights by the source pixels and take the average, we get a
-different output pixel (.55). The Neural Network sweeps the weights across the
-rows and columns of the source image to create the pixels in the output image.
-
-By the way, that process of sweeping the filter across the image has a complex
-name for a simple mathematical operation: convolution. That's why they call them
-Convolutional Neural Networks.
-
-### SLIDE: Training an image classifier
-
-So, now we know: each node (circle) in the neural network is a transformation of
-its input images, which is determined by a grid of weights. The trick to
-training a neural network is to choose those weights in such a way that the
-right numbers come out at the end.
-
-[CLICK] We'll do that with training data: lots of images of dogs, bicycles,
-appes and tennis balls. We know what each image represents (because a human has
-looked at them and labeled -- or "annotated" them), so all we do is pick weights
-in such a way that the correct node gets the largest value in each case, or at
-least as often as possible.
-
-But in real vision networks, there may be millions of weights to choose, and
-millions of labelled images to compute against. How will we determine the
-weights?
-
-### SLIDE: Learning: Backpropagation
-
-This is the point where most books on machine learning dive into the math, and
-start talking about things like "backpropagation" and "learning rate" and "cost
-function". But unless you're an AI researcher, you can ignore all that, for two
-reasons.
-
-First, there are lots of great tools available that will do all that math for
-you, while taking advantage of powerful computing resources like big data stores
-and GPU processors. You've probably heard of tools like Tensorflow or Pytorch
-that do this, and you'll hear more about them in the later talks in this
-learning path. 
-
-Secondly, even then, to make use of those tools you'll need: lots of training
-data, those powerful computing resources, and a team of AI engineers to make use
-of it all. Instead, you can just use the resources of a project or company that
-has already used lots of data and computing and expertise to train a neural
-network, and use that through an API.
-
-### SLIDE: Pre-Trained Convolutional NN
-
-So, you can just use the model with the pre-determined weights, and as long as
-you only need to detect the object classifications the model is trained for,
-you're all set to go. Just provide your image, and use the classifications that
-the pre-trained model generates. 
-
-Some models do more than just classify, too: they can also detect the location
-of objects within images, or analyze the image in other ways.
-
-### SLIDE: Demo: Cognitive Services Computer Vision
-
-Now let's try a pre-trained AI model: Cognitive Service Computer Vision. This
-service will analyze an image you provide, and provide tags (or classifications)
-for the objects it detects. These are just the labels associated with the top
-confidence scores at the right of the convolutional neural network from before,
-but now you're using a powerful neural network from Microsoft, capable of
-identifying many thousands of objects.
-
-There's a simple web-based UI you can use to try it out at
-aka.ms/try-computervision, so let's try it out now. In a moment, I'll also show
-you how to access the API programatically as well.
-
-### VIDEO: Computer Vision via web
-
-[CLICK] This is the Cognitive Services Computer Vision page. If you scroll down
-a little bit on that page, you’ll find a nice web-based form that allows us to
-upload an image for analysis, either from the web or as a local file. So let’s
-try uploading this picture of a man in a hard hat. In just a few seconds we’ll
-get back the analysis of that picture by the Computer Vision service. On the
-left, it shows us the objects detected in the image, and on the right we have
-the JSON output with the detailed analysis. That includes the names and
-locations of the objects detected in the image, a list of tags or labels
-associated with the image, a plain-language description of the image (in this
-case, “a man wearing a helmet”), and lots of other useful information.
-
-### SLIDE: Cognitive Services Computer Vision
-
-We can see here in the Objects section of the output that two objects have been
-detected in the image: and some headwear, and a person.
-
-We're more interested in the "tags" section, which provides classifications for
-the overall image along with confidence scores. In this case, the classification
-with the highest confidence, after "man", is "headdress" which isn't exactly
-what we need for the Shop by Photo app: we were looking for "hard hat".
-Unfortunately, this API isn't trained to detect hard hats, only helmets, and
-that's only the 6th most confident classification here. We'll learn how to fix
-that in just a moment.
-
-But if you want to incorporate vision capabilities into an app, rather than
-using a web form, you'll want to access the Computer Vision API programatically.
-Let's see how.
-
-### VIDEO: Computer Vision via CLI
-
-You can interface to the Cognitive Service APIs using any language that can
-connect to an HTTP endpoint, but what I have here [CLICK] is a bash script that
-uses the Azure CLI to create resources, and connects to the Computer Vision API
-using "curl". You can install the Azure CLI in your local shell, but here I am
-using the "Azure Account" extension in Visual Studio Code to launch a Cloud
-Shell, which means I don't have to install anything. Once that shell is ready, I
-can execute commands directly from this bash script. 
-
-This first command creates a resource group, which I'll use to hold the keys I
-need to authenticate the API.
-
-The next step is to create the keys. Here I'm creating an omnibus Cognitive
-Services key which I can use with many services including Computer Vision.
-
-Then, we can display the key directly in the terminal. [WAIT] You can use either
-of these keys to interface with the API, so I will save the first one here in an
-environment variable.
-
-With that key, we can connect to the endpoint URL provided by the Computer
-Vision service, so let's save that URL in an environment variable as well.
-
-And then you can choose an image to analyze. Here we provide the URL of an
-image, the same image of a man in a hard hat that we looked at a moment ago.
-
-Now we can pass the key and the image url into the endpoint by passing in a JSON
-input using curl. And in just a few milliseconds we get back the analysis of the
-image as JSON. You can see the same outputs we saw in the web interface a moment
-ago.
-
-We can do that with any image we like, of course. Let's try that again with a
-different image, in this case the picture of a drill. Once again, we can pass
-that to the API using curl. [WAIT] Interestingly the top tag associated with
-this image is "camera", which sadly wouldn't help us search for the actual tool
--- we would want "drill".
-
-### SLIDE: Adapting Computer Vision models with your own data
-
-So, now you can see why the Computer Vision API might not be the best choice for
-the Shop by Photo feature at Tailwind Traders. In some cases, the vision model
-it's using isn't trained to identify the specific products that Tailwind Traders
-sells. In other cases, it's been trained to detect *too many* different kinds of
-objects, and the wrong one is being found. As you just saw, given a picture of a
-drill, it gave us back the tag of "camera", a product that Tailwind Traders
-doesn't sell.
-
-Fortunately, we can fix that problem. Let's dive back into the theory for a moment.
-
-What if I told you there's a way to start with a vision model that's been
-pre-trained to identify many thousands of images, and adapt it to identify just
-the objects you're interested in -- even if those objects weren't part of the
-training data for the original model! That sounds strange, I know, but let's see
-how it might work.
-
-### SLIDE: Transfer Learning
-
-Here we have the trained convolutional neural network from before, but
-something's different: the final layer with the object classifications has been
-stripped off. What we're left with is the images from the second-last layer. We
-can ignore the fact that they are images -- say, 3x3 images -- and just think of
-them as data. Now, when we feed an image to the left hand side, instead of
-getting confidence scores, we get a collection of arrays, or "features", each
-with 9 data points. In this toy network, they are labelled F1, F2, ... up to F8.
-Each image you put in on the left side generates a different collection of
-features on the right side.
-
-We don't really know what those features *are*, but what we do know is that they
-are useful, because they were useful to classify all of the image types the
-neural network was *originally* trained for. Who knows: one feature might
-represent "greenness", and was useful to classify trees and tennis balls.
-Another might count the number of circle-shaped regions in the image, and was
-useful in classifying bicycles and traffic lights. The point is: those features
-weren't defined in advance: they were _learned_ from the training data, and are
-useful for classifying images _in general_. 
-
-And here's the trick: we can use those features to classify objects that the
-original network wasn't even trained on.
-
-### SLIDE: Transfer Learning Training (1 - with the hammer)
-
-Let's suppose we want a new model to identify hammers and hard hats. We can pass
-an images of a hammer on the left, and collect the features on the right. In
-this case, we get 8 data vectors (one for each feature), and a binary indicator
-of the object type. We can repeat that for several different pictures of a
-hammer, and collect the data vectors and the binary indicator each time.
-
-### SLIDE: Transfer Learning Training (2 - with the white hard hat)
-
-Now let's do the same with pictures of hard hats. Again, in each case, we
-collect 8 data vectors and a binary indicator for each image.
-
-Put it all together, and what do you have? A collection of data vectors, each
-with an associated a binary outcome. If you've done any data science, you can
-guess what happens next: we could build a simple predictive model, like a
-logistic regression or a one-layer neural network, to predict the new object
-classifications from the features.
-
-### SLIDE: Transfer Learning Trained Model
-
-It turns out, this often works surprisingly well. You don't even need a lot of
-data -- a few dozen images will often do the trick, as long as the categories
-you want to predict are fairly distinct. And you don't need a lot of computing
-power to predict a hundred or so binary outcomes from a relatively small amount
-of data.
-
-Of course, this is a toy example: you will likely want to identify more than two
-objects, and the underlying neural network will certainly generate many more
-than 8 features at its second-to-last-layer. But the principle remains: you can
-do this with modest new data and computing power, and it often works really
-well.
-
-### SLIDE: Microsoft Cognitive Services Custom Vision
-
-Of course, you don't have to train a transfer learning model by yourself. You
-can use the advanced vision models from Cognitive Services Computer Vision as
-the base, and provide your own images and classifications to the service called
-Custom Vision.
-
-Just like with Computer Vision, you can train transfer learning models
-programatically using the API, but Custom Vision also provides a convenient Web
-UI for training models. Let's use that now to train a model for the Shop by
-Photo feature of Tailwind Traders.
-
-### SLIDE: Demo: Customized object recognition
-
-Demo instructions: https://github.com/microsoft/ignite-learning-paths/blob/master/aiml/aiml20/DEMO%20Custom%20Vision.md
-
-### VIDEO: customvision.ai
-
-[CLICK] So here I am in the Custom Vision web-based interface. It provides us with a
-nice UI where we can provide new images for the transfer learning analysis. And
-you can see in this project I've already uploaded a number of pictures. I've
-uploaded pictures of screwdrivers, pliers, drills, and hammers, which I'm going
-to use to train my custom model. We'd also like to detect one other product that
-Tailwind Traders sells: hard hats. So let's click "add images", browse to a
-folder on my hard drive where I've collected a few photos of hard hats, select
-them all, and add them to the service while providing the label "hard hat" to
-use in training.
-
-It will take a few moments to upload those files, but while it's doing that,
-notice that there aren't that many images in this project: about 180, or a few
-dozen for each of the five categories. Sometimes even less. Despite that,
-because my five object types are fairly distinct, the model should work fairly
-well.
-
-So let's go ahead and click the Train button to start transfer learning. We'll
-choose Quick Training. Now it's running all those images through a complex
-vision model, and using transfer learning to create a predictive model for our
-five categories. It only takes a few seconds, and our model does fairly well!
-The probability threshold sets a limit below which we will predict no
-classification at all. If we only accept classifications with 50% confidence or
-more, 90.9% of those predictions are correct: that's "Precision". And the model
-correctly classifies 88.2% of our images overall: that's "Recall". In your apps,
-you will choose a threshold according to your tolerance for making the wrong
-call, versus making no call at all. For Tailwind Traders we can set the
-threshold on the low side, because it's not so big a deal to suggest the wrong
-product to a customer. If this were a cancer detection app, you'd likely make a
-different call.
-
-Now let's try out our model on some new images it hasn't seen before. We do that
-by clicking on the “Quick Test” button. We will upload a new file from our "test
-images" folder. Let's try our man in the hard hat. And you can see that our
-prediction is indeed of a "hard hat" with probability 99.9%, so we'd make that
-call with pretty much any threshold we choose.
-
-Let's try a different image: the drill. Our model identifies the image as a
-drill with probability 94.5%. And lastly, let's try the picture of the pliers,
-which it identifies with 99.9% confidence.
-
-So our model works well, even though it's been trained on less than 200 images.
-That's because we've constrained the potential labels to only those products we
-sell at Tailwind Traders.
-
-Now that we're happy with our model, we can export it and incorporate it into
-our app. If you click on the Export button, you can export the model for iOS or
-Android, as a container, or in our case in the universal ONNX format. So now we
-have downloaded the model to the hard drive.
-
-### SLIDE: Portable Deep Learning Models
-
-We exported our custom model in the ONNX format.
-
-ONNX, or Open Neural Network Exchange, is an open standard launched by Microsoft
-and Facebook to promote the free exchange and deployment of AI models, and
-supported by a wide range of applications and technology vendors.
-
-Now that we've trained our custom vision model, let's integrate it into the
-Tailwind Traders app. For that we'll use ONNX Runtime, an open-source inference
-engine that provides functions to generate predictions from models in the ONNX
-format.
-
-### SLIDE: OnnxImageSearchTermPredictor.cs
-
-Now that we've created our custom model, we can call it in the app using its
-API. Here we create a new "Inference Session" from the ONNX file we generated,
-and then generate a classification label from the uploaded image as a string.
-Then we just pass that into the existing search feature of the Tailwind Traders
-website and display the results.
+Pero antes de hacerlo, conviene sumergirse en un poco de teoría para entender cómo funciona Computer Vision. No se preocupe: habrá muy poca matemáticas y entender un poco sobre cómo funciona Computer Vision nos ayudará a comprender lo que puede ir mal y cómo corregirlo.
+
+### <a name="slide-tasks-xkcd-comic"></a>DIAPOSITIVA: Tareas (cómic XKCD)
+
+(Pausa de 10 segundos)
+
+No hace mucho tiempo, poder darle una fotografía a un equipo y que este pudiera darnos información útil sobre lo que se encuentra en la imagen era literalmente algo de ciencia ficción. Este XKCD se publicó en septiembre de 2014. Ahora, cinco años después, un equipo puede indicar fácilmente si una foto es de un pájaro, gracias a la llegada de los macrodatos, la computación de GPU y las redes neuronales convolucionales. Vamos a ver de qué modo.
+
+### <a name="slide-how-neural-networks-work-brandon-rohrer"></a>DIAPOSITIVA: Cómo funcionan las redes neuronales (Brandon Rohrer)
+
+Esta explicación es una adaptación realizada con el permiso de Brandon Rohrer, propietario de un excelente blog y de una serie de tutoriales en vídeo en los que se explican con detalle muchos aspectos de inteligencia artificial y aprendizaje automático. Para obtener más información, consulte el blog de Brandon, ya que aquí no podré analizarlo con detalle.
+
+### <a name="slide-computer-vision--convolutional-neural-network"></a>DIAPOSITIVA: Computer Vision / Red neuronal convolucional
+
+Probablemente ha oído que la inteligencia artificial se consigue gracias al aprendizaje profundo.
+El adjetivo "profundo" del término "aprendizaje profundo" no significa "intenso", sino simplemente que, durante el análisis de la imagen, esta pasa por una red neuronal formada por muchas capas. Eso es todo.
+
+En la pantalla se trata de una red neuronal muy sencilla. Esta solo tiene cinco capas; los sistemas de visión del mundo real tienen decenas de capas, quizás cientos de ellas. Esta está diseñada para tomar una imagen como entrada y después clasificarla como uno de cuatro objetos: perro, bicicleta, manzana y pelota de tenis. Y eso es todo. No es capaz de reconocer ningún otro objeto fuera de aquellos para los que se ha entrenado.
+
+### <a name="slide-trained-convolutional-nn"></a>DIAPOSITIVA: Red neuronal convolucional entrenada
+
+Cuando se ha entrenado una red neuronal, la imagen de entrada pasa a través de la red capa por capa, y en cada capa transforma la imagen en imágenes diferentes y más pequeñas. Cada capa recombina las imágenes generadas en la capa anterior. Las imágenes se hacen cada vez más pequeñas hasta que al final consisten en un solo píxel con un valor comprendido entre el 0 y el 1. Ese valor representa la confianza que tiene la red neuronal en que la imagen representa el objeto dado: cuanto mayor sea el número, mayor confianza tendrá.
+
+En este caso, hemos insertado una imagen de una bicicleta, y el nodo "bicicleta" del lado derecho es el que tiene el valor más alto. Así, parece que esta red neuronal está bien entrenada para detectar bicicletas (o por lo menos esta). Pero ¿cómo se "entrena" una red neuronal y cómo se transforma la imagen a lo largo del proceso?
+
+En cada nodo de la red, en cada círculo, se aplica un filtro a la imagen.
+Vendría a ser como un filtro de Snapshot o de Instagram, pero en vez de hacer algo útil, como mostrar la imagen en tono sepia o poner orejas de conejo a todas las caras, hace algo... distinto... que se ha decidido en el proceso de entrenamiento. Vamos a profundizar para ver en qué consiste.
+
+### <a name="slide-filters-1"></a>DIAPOSITIVA: Filtros (1)
+
+Vamos a tomar una imagen sencilla. Se trata de la imagen de una cruz. Tiene 9 por 9 píxeles, el blanco es "+ 1" y el negro es "-1". Vamos a aplicar un filtro a esta imagen, igual que sucede en cada uno de los nodos de la red neuronal.
+
+### <a name="slide-filters-2"></a>DIAPOSITIVA: Filtros (2)
+
+Para transformar esta imagen, aplicaremos una cuadrícula de pesos de 3x3. Las cuadrículas pequeñas, como esta, se acostumbran a usar en sistemas de visión de equipos: a veces 3x3, a veces 5x5, y con pesos determinados en el proceso de entrenamiento. Esta cuadrícula solo utiliza los pesos -1 y 1, pero acostumbra a haber más números aleatorios dentro de ese intervalo. [CLIC]
+
+Para aplicar los pesos a la imagen, se superpone la cuadrícula de pesos centrándola en un píxel determinado de la imagen. [CLIC] A continuación, se multiplica cada peso por cada valor de píxel y se obtiene el promedio. Ese promedio se convierte en el píxel que se corresponde a la imagen de salida, alineado con el píxel central de la cuadrícula de pesos.
+
+Probablemente haya observado que no se pueden usar los bordes de la imagen de entrada como píxeles centrales. Este es el motivo por el que la imagen de salida es dos filas y dos columnas más pequeña que la de entrada. Este (junto con otros tipos de transformaciones) es el motivo por el que la imagen se vuelve cada vez más pequeña a medida que disminuyen las capas, hasta que llega a tener un tamaño de un píxel.
+
+### <a name="slide-filters-3"></a>DIAPOSITIVA: Filtros (3)
+
+Vamos a desplazar la cuadrícula de pesos dos píxeles hacia abajo y hacia la derecha. Ahora, al multiplicar los pesos por los píxeles de origen y calcular el promedio, obtendremos un píxel de salida diferente (,55). La red neuronal barre los pesos en las filas y columnas de la imagen de origen para crear los píxeles en la imagen de salida.
+
+De hecho, ese proceso de barrido del filtro a través de la imagen tiene un nombre complejo para una operación matemática simple: convolución. Y por esto se denominan redes neuronales convolucionales.
+
+### <a name="slide-training-an-image-classifier"></a>DIAPOSITIVA: Entrenamiento de un clasificador de imágenes
+
+Ahora sabemos que cada nodo (círculo) de la red neuronal es una transformación de sus imágenes de entrada, que se determina mediante una cuadrícula de pesos. El truco para entrenar una red neuronal es elegir esas pesos de forma que al final se obtengan los números adecuados.
+
+[CLIC] Haremos esto con datos de entrenamiento: muchas imágenes de perros, bicicletas, manzanas y pelotas de tenis. Sabemos qué representa cada imagen (porque los seres humanos hemos observado estos referentes y los hemos etiquetado o "anotado"), así que lo único que hacemos es elegir pesos de forma que el nodo correcto obtenga el valor más grande en cada caso o, por lo menos, con la mayor frecuencia posible.
+
+Pero en las redes de visión reales, puede haber millones de pesos para elegir y millones de imágenes etiquetadas para contraponerlas. ¿Cómo se determinan los pesos?
+
+### <a name="slide-learning-backpropagation"></a>DIAPOSITIVA: Aprendizaje: Propagación hacia atrás
+
+Este es el punto en el que la mayoría de libros sobre aprendizaje automático se centran en las matemáticas y comienzan a hablar de aspectos como la "propagación inversa", la "velocidad de aprendizaje" y la "función de costo". Pero, a menos que sea un investigador de inteligencia artificial, puede omitir todo esto por dos motivos.
+
+En primer lugar, hay disponibles muchas herramientas excelentes que harán todas las matemáticas en su lugar, y aprovecharán recursos informáticos eficaces, como los almacenes de macrodatos y los procesadores de GPU. Probablemente haya oído hablar de herramientas como Tensorflow o Pytorch, que sirven para ello. Hablaremos más de ellas en las siguientes charlas de esta ruta de aprendizaje. 
+
+En segundo lugar, incluso después de conocer toda esa información, para usar esas herramientas necesitará una gran cantidad de datos de entrenamiento, recursos informáticos eficaces y un equipo de ingenieros de inteligencia artificial para utilizarlo todo. En cambio, puede usar simplemente los recursos de un proyecto o de una empresa que ya ha usado muchos datos, recursos informáticos y experiencia para entrenar una red neuronal y usarla en una API.
+
+### <a name="slide-pre-trained-convolutional-nn"></a>DIAPOSITIVA: Red neuronal convolucional previamente entrenada
+
+Por lo tanto, solo puede usar el modelo con los pesos predeterminados y, como solo necesita detectar las clasificaciones de objetos para las que se ha entrenado el modelo, lo tiene todo listo para empezar. Basta con proporcionar la imagen y usar las clasificaciones que genera el modelo previamente entrenado. 
+
+Algunos modelos no se limitan a clasificar: también pueden detectar la ubicación de los objetos en las imágenes o analizar la imagen de otras maneras.
+
+### <a name="slide-demo-cognitive-services-computer-vision"></a>DIAPOSITIVA: Demostración: Cognitive Services Computer Vision
+
+Ahora vamos a probar un modelo de inteligencia artificial entrenado previamente: Computer Vision de Cognitive Services. Este servicio analizará la imagen que proporcione y ofrecerá etiquetas (o clasificaciones) para los objetos que detecte. Estas son solo las etiquetas asociadas a las puntuaciones de confianza principales a la derecha de la red neuronal convolucional de antes, pero ahora está usando una red neuronal eficaz de Microsoft, capaz de identificar muchos miles de objetos.
+
+Hay una interfaz de usuario simple basada en web que puede usar para probarlo en aka.ms/try-computervision. Vamos a probarla. En un momento, también le mostraré cómo acceder a la API mediante programación.
+
+### <a name="video-computer-vision-via-web"></a>VÍDEO: Computer Vision por web
+
+[CLIC] Esta es la página de Cognitive Services Computer Vision. Si se desplaza hacia abajo un poco en esa página, encontrará un buen formulario basado en web que nos permite cargar una imagen para su análisis, ya sea desde la web o como un archivo local. Vamos a intentar cargar esta imagen de un hombre con un casco de obra. En tan solo unos segundos, el servicio Computer Vision devolverá el análisis de esa imagen. A la izquierda, se muestran los objetos detectados en la imagen, mientras que a la derecha, tenemos la salida JSON con el análisis detallado. Esto incluye los nombres y las ubicaciones de los objetos detectados en la imagen, una lista de etiquetas o etiquetas asociadas a la imagen, una descripción del lenguaje sin formato de la imagen (en este caso, “un hombre con un casco de obra”) y muchas otras informaciones útiles.
+
+### <a name="slide-cognitive-services-computer-vision"></a>DIAPOSITIVA: Cognitive Services Computer Vision
+
+Aquí podemos ver que en la sección Objetos se han detectado dos objetos en la imagen: un accesorio para la cabeza y una persona.
+
+Pero nos interesa más la sección "etiquetas", que proporciona clasificaciones para la imagen general junto con puntuaciones de confianza. En este caso, la clasificación que tiene una puntuación de confianza mayor, después de "hombre", es "tocado", que no es exactamente lo que necesitamos para la aplicación Comprar por foto. Estábamos buscando "casco de obra".
+Desafortunadamente, esta API no está entrenada para detectar cascos de obra, sino solo cascos, y este objeto solo se sitúa en el número 6 en la puntuación de confianza. En seguida aprenderemos a corregir esto.
+
+Pero si lo que quiere es incorporar funcionalidades de visión en una aplicación, en lugar de usar un formulario web, tendrá que acceder a la API de Computer Vision mediante programación.
+Vamos a ver de qué modo.
+
+### <a name="video-computer-vision-via-cli"></a>VÍDEO: Computer Vision por CLI
+
+Puede interactuar con las API de Cognitive Service usando cualquier lenguaje que se pueda conectar a un punto de conexión HTTP, pero lo que tengo aquí [CLIC] es un script de bash que usa la CLI de Azure para crear recursos y se conecta a la API de Computer Vision API mediante "curl". Puede instalar el CLI de Azure en el shell local, pero aquí utilizo la extensión "Azure Account" (Cuenta de Azure) en Visual Studio Code para iniciar un Cloud Shell, lo que significa que no tengo que instalar nada. Una vez que el shell esté listo, puedo ejecutar comandos directamente desde este script de Bash. 
+
+Este primer comando crea un grupo de recursos, que usaré para contener las claves que necesito para autenticar la API.
+
+El siguiente paso consiste en crear las claves. Aquí voy a crear una clave general de Cognitive Services que puedo usar con muchos servicios, como Computer Vision.
+
+A continuación, podemos mostrar la clave directamente en el terminal. [ESPERAR] Puede usar cualquiera de estas claves para interactuar con la API, por lo que guardaré la primera aquí, en una variable de entorno.
+
+Con esa clave, podemos conectarnos a la dirección URL del punto de conexión proporcionada por el servicio Computer Vision, así que vamos a guardar también esa dirección URL en una variable de entorno.
+
+A continuación, puede elegir una imagen para analizar. Aquí proporcionamos la dirección URL de una imagen, la misma imagen de un hombre con un casco que examinamos hace un momento.
+
+Ahora podemos pasar la clave y la dirección URL de la imagen en el punto de conexión pasando una entrada JSON mediante curl. Y en unos pocos milisegundos, se recupera el análisis de la imagen como JSON. Puede ver los mismos resultados que vimos en la interfaz web hace un momento.
+
+Por supuesto, podemos hacerlo con cualquier imagen que nos guste. Vamos a intentarlo de nuevo con una imagen diferente, en este caso, la imagen de un taladro. Una vez más, podemos pasarlo a la API mediante curl. [ESPERAR] Curiosamente, la etiqueta superior asociada a esta imagen es "camera" (cámara), lo que lamentablemente no nos ayudará a buscar la herramienta real, nosotros queremos "drill" (taladro).
+
+### <a name="slide-adapting-computer-vision-models-with-your-own-data"></a>DIAPOSITIVA: Adaptación de modelos de Computer Vision con sus propios datos
+
+Ahora puede ver por qué la API de Computer Vision puede no ser la mejor opción para la característica Comprar por foto de Tailwind Traders. En algunos casos, el modelo de visión que usa no está entrenado para identificar los productos específicos que Tailwind Traders vende. En otros casos, se ha entrenado para detectar *demasiados* tipos distintos de objetos y se ha encontrado uno incorrecto. Como acabamos de ver, ante la imagen de un taladro, nos ha devuelto la etiqueta de "cámara", un producto que Tailwind Traders no vende.
+
+Afortunadamente, podemos solucionar este problema. Vamos a profundizar en la teoría durante un momento.
+
+¿Y si le dijera que hay una forma de empezar con un modelo de visión entrenado previamente para identificar muchos miles de imágenes y adaptarlo para identificar solo los objetos que quiera, aunque estos no formasen parte de los datos de entrenamiento del modelo original? Suena raro, lo sé, pero veamos cómo funciona.
+
+### <a name="slide-transfer-learning"></a>DIAPOSITIVA: Transferencia de aprendizaje
+
+Aquí tenemos la red neuronal convolucional entrenada de antes con algo distinto: se ha eliminado la capa final con las clasificaciones de objetos. Lo que nos queda son las imágenes de la penúltima capa. Podemos omitir el hecho de que son imágenes (por ejemplo, imágenes de 3x3) y considerarlas simplemente datos. Ahora, cuando se proporciona una imagen en el lado izquierdo, en lugar de obtener puntuaciones de confianza, obtenemos una colección de matrices, o "características", con 9 puntos de datos cada una. En esta red inventada, se etiquetan como F1, F2... hasta F8.
+Cada imagen que se coloca en el lado izquierdo genera una colección distinta de características en el lado derecho.
+
+En realidad, no sabemos exactamente qué *son* esas características, pero sabemos que son útiles, porque lo fueron para clasificar todos los tipos de imágenes para las que se entrenó *originalmente* la red neuronal. Quizás una característica puede representar "verde" y fue útil para clasificar árboles y pelotas de tenis.
+Otra podría contar el número de regiones de la imagen en forma de círculo y fue útil para clasificar las bicicletas y las luces de tráfico. La cuestión es que esas características no se definieron de antemano, sino que _aprendieron_ a partir de los datos de entrenamiento y son útiles para clasificar las imágenes _en general_. 
+
+Y aquí está el truco: podemos usar esas características para clasificar objetos para los que la red original todavía no se ha entrenado.
+
+### <a name="slide-transfer-learning-training-1---with-the-hammer"></a>DIAPOSITIVA: Entrenamiento de transferencia de aprendizaje (1 - con el martillo)
+
+Supongamos que queremos un nuevo modelo para identificar martillos y cascos de obra. Podemos pasar una imagen de un martillo a la izquierda y recopilar las características a la derecha. En este caso, obtenemos 8 vectores de datos (uno para cada característica) y un indicador binario del tipo de objeto. Podemos repetir este proceso para diferentes imágenes de un martillo y recopilar los vectores de datos y el indicador binario cada vez.
+
+### <a name="slide-transfer-learning-training-2---with-the-white-hard-hat"></a>DIAPOSITIVA: Entrenamiento de transferencia de aprendizaje (2 - con el casco blanco)
+
+Ahora hagamos lo mismo con imágenes de cascos. Una vez más, recopilaremos en cada caso 8 vectores de datos y un indicador binario para cada imagen.
+
+Si lo unimos todo, ¿qué tenemos? Una colección de vectores de datos, cada uno con un resultado binario asociado. Si conoce algo sobre la ciencia de datos, podrá adivinar lo que ocurre a continuación: podríamos crear un modelo de predicción sencillo, como una regresión logística o una red neuronal de una capa, para predecir las nuevas clasificaciones de objetos a partir de las características.
+
+### <a name="slide-transfer-learning-trained-model"></a>DIAPOSITIVA: Modelo entrenado de aprendizaje de transferencia
+
+A menudo, esto funciona sorprendentemente bien. Ni siquiera necesita muchos datos: a menudo con unas decenas de imágenes es suficiente, siempre que las categorías que quiera predecir se diferencien lo suficiente las unas de las otras. Y no necesita una gran capacidad informática para predecir unos cien resultados binarios de una cantidad relativamente pequeña de datos.
+
+Por supuesto, este es un ejemplo inventado. Es probable que tenga que identificar más de dos objetos y seguro que la red neuronal subyacente generará muchas más que 8 características en el penúltimo nivel. Pero el principio sigue siendo el mismo: puede hacer esto con una capacidad de computación y unos datos nuevos modestos, y acostumbra a funcionar muy bien.
+
+### <a name="slide-microsoft-cognitive-services-custom-vision"></a>DIAPOSITIVA: Microsoft Cognitive Services Custom Vision
+
+Obviamente, no es necesario que entrene personalmente un modelo de aprendizaje de transferencia. Puede usar los modelos de visión avanzada de Computer Vision de Cognitive Services como base y proporcionar sus propias imágenes y clasificaciones al servicio denominado Custom Vision.
+
+Igual que con Computer Vision, puede entrenar modelos de aprendizaje de transferencia mediante programación con la API, pero Custom Vision también proporciona una cómoda interfaz de usuario web para los modelos de entrenamiento. Ahora lo utilizaremos para entrenar un modelo para la característica Compra por foto de Tailwind Traders.
+
+### <a name="slide-demo-customized-object-recognition"></a>DIAPOSITIVA: Demostración: Reconocimiento de objetos personalizados
+
+Instrucciones de demostración: https://github.com/microsoft/ignite-learning-paths-training-aiml/blob/master/aiml20/DEMO%20Custom%20Vision.md
+
+### <a name="video-customvisionai"></a>VÍDEO: customvision.ai
+
+[CLIC] Aquí estoy en la interfaz basada en web de Custom Vision. Nos proporciona una buena interfaz de usuario donde podemos proporcionar nuevas imágenes para el análisis de aprendizaje de transferencia. Y puede ver en este proyecto que ya he cargado varias imágenes. He cargado imágenes de destornilladores, tenazas, taladros y martillos, que voy a usar para entrenar el modelo personalizado. También nos gustaría detectar otro producto que Tailwind Traders vende: cascos. Vamos a hacer clic en "add images" (agregar imágenes), buscaremos una carpeta en el disco duro donde he recopilado algunas fotos de cascos, las seleccionaremos todas y las agregaremos al servicio, a la vez que proporcionamos la etiqueta "hard hat" (casco) para usarla en el entrenamiento.
+
+Los archivos tardarán unos minutos en cargarse, pero mientras la acción se lleva a cabo, observe que no hay tantas imágenes en este proyecto: aproximadamente 180, o unas pocas docenas para cada una de las cinco categorías. A veces incluso menos. A pesar de eso, dado que los cinco tipos de objeto son bastante distintos, el modelo debe funcionar bastante bien.
+
+Vamos a avanzar y hacer clic en el botón Train (Entrenar) para iniciar el aprendizaje de transferencia. Elegiremos la opción de entrenamiento rápido. Ahora se ejecutan todas esas imágenes a través de un modelo de visión complejo y se usa el aprendizaje de transferencia para crear un modelo predictivo para nuestras cinco categorías. Solo tarda unos segundos y nuestro modelo funciona bastante bien.
+El umbral de probabilidad establece un límite por debajo del cual no se predecirá ninguna clasificación. Si solo aceptamos clasificaciones con una confianza del 50 % o más, el 90,9 % de esas predicciones son correctas: esto es lo que llamamos "precisión". Y el modelo clasifica correctamente el 88,2 % de las imágenes en general: esto es lo que llamamos "recuperación". En sus aplicaciones, podrá elegir un umbral de acuerdo con la tolerancia en caso de realizar la llamada equivocada, frente a no hacer ninguna llamada. En el caso de Tailwind Traders, podemos establecer el umbral en el lado inferior, ya que no es un gran problema sugerir el producto equivocado a un cliente. Si se tratara de una aplicación de detección de cáncer, probablemente realizaríamos una llamada diferente.
+
+Ahora vamos a probar nuestro modelo en algunas imágenes nuevas que no ha encontrado antes. Para ello, hacemos clic en el botón de la opción de prueba rápida. Cargaremos un nuevo archivo desde la carpeta "test drive" (imágenes de prueba). Vamos a probar que pasa con nuestro hombre con un casco. Y puede ver que de hecho nuestra predicción de "hard hat" (casco) tiene una probabilidad del 99,9 %, por lo que haremos esa llamada con prácticamente cualquier umbral que elijamos.
+
+Vamos a probar una imagen diferente: el taladro. Nuestro modelo identifica la imagen como un taladro con una probabilidad del 94,5 %. Y, por último, vamos a probar la imagen de las tenazas, que identifica con una confianza del 99,9 %.
+
+Por lo tanto, el modelo funciona bien, aunque se ha entrenado en menos de 200 imágenes.
+Esto se debe a que hemos restringido las posibles etiquetas a los productos que vendemos en Tailwind Traders.
+
+Ahora que estamos satisfechos con nuestro modelo, podemos exportarlo e incorporarlo a nuestra aplicación. Si hace clic en el botón para exportar, puede exportar el modelo para iOS o Android, como un contenedor, o en nuestro caso en el formato ONNX universal. Ahora hemos descargado el modelo en el disco duro.
+
+### <a name="slide-portable-deep-learning-models"></a>DIAPOSITIVA: Modelos de aprendizaje profundo portátiles
+
+Hemos exportado nuestro modelo personalizado en el formato ONNX.
+
+ONNX (Open Neural Network Exchange), es un estándar abierto lanzado por Microsoft y Facebook para promocionar el intercambio gratuito y la implementación de modelos de inteligencia artificial, y es compatible con una amplia gama de aplicaciones y proveedores de tecnología.
+
+Ahora que hemos entrenado nuestro modelo de Custom Vision, vamos a integrarlo a la aplicación Tailwind Traders. Para ello, usaremos ONNX Runtime, un motor de inferencias de código abierto que proporciona funciones para generar predicciones a partir de modelos en formato ONNX.
+
+### <a name="slide-onnximagesearchtermpredictorcs"></a>DIAPOSITIVA: OnnxImageSearchTermPredictor.cs
+
+Ahora que hemos creado nuestro modelo personalizado, podemos llamarlo desde la aplicación usando su API. Aquí crearemos una nueva "sesión de inferencia" desde el archivo ONNX que hemos generado y después generaremos una etiqueta de clasificación a modo de cadena a partir de la imagen cargada.
+A continuación, lo pasaremos por la característica de búsqueda existente del sitio web Tailwind Traders y veremos los resultados.
 
 ```csharp 
 var session = new InferenceSession(filePath);
@@ -535,263 +291,133 @@ var prediction = output
     .First();
 ```
 
-### SLIDE: DEMO: ONNX
+### <a name="slide-demo-onnx"></a>DIAPOSITIVA: DEMOSTRACIÓN: ONNX
 
-DEMO: ONNX Deployment
+DEMOSTRACIÓN: Implementación de ONNX
 
-### VIDEO: Kudu
+### <a name="video-kudu"></a>VÍDEO: Kudu
 
-[CLICK] The model that we just exported from Custom Vision is actually a ZIP file,
-containing the actual ONNX file, model.onnx, which is the text representation of
-the neural network we just created, and also a manifest file. 
+[CLIC] El modelo que acabamos de exportar desde Custom Vision es, en realidad, un archivo ZIP que contiene el archivo ONNX real, model.onnx, que es la representación de texto de la red neuronal recién creada y también un archivo de manifiesto. 
 
-The existing Tailwind Traders website already uses a computer vision model
-represented as an ONNX file called products.onnx. The problem is, that model
-doesn't properly recognize many of the products we sell at Tailwind Traders. So
-we'll take the model.onnx file we just exported from Custom Vision, rename it as
-products.onnx, and replace it in our web app, so that Shop by Photo can
-recognize all five products we trained it on.
+El sitio web de Tailwind Traders existente ya usa un modelo de Computer Vision representado como archivo ONNX denominado products.onnx. El problema es que el modelo no reconoce correctamente muchos de los productos que vendemos en Tailwind Traders. Por lo tanto, tomaremos el archivo model.onnx que acabamos de exportar desde Custom Vision, le cambiaremos el nombre a products.onnx y lo reemplazaremos en nuestra aplicación web, de modo que Comprar por foto pueda reconocer los cinco productos en los que se ha entrenado.
 
-Here in the Azure Portal you can see the App Service resource which runs the
-Tailwind Traders website. What I can do now within this App Service is go to the
-Development Tools section and choose the Advanced Tools feature. This launches
-the Kudu interface. Now that's launched, I can browse through the website
-filesystem using the debug console. Let's browse to site, w-root, Standalone,
-OnnxModels, where the products.onnx file is located. Now we can replace it with
-the new version of the products.onnx file we created with Custom Vision.
+Aquí en Azure Portal puede ver el recurso App Service que ejecuta el sitio web de Tailwind Traders. Lo que puedo hacer ahora en este App Service es ir a la sección Development Tools (Herramientas de desarrollo) y elegir la característica Advanced Tools (Herramientas avanzadas). Esto inicia la interfaz de Kudu. Ahora que ya se ha iniciado, puedo examinar el sistema de archivos del sitio web mediante la consola de depuración. Vamos a examinar site, w-root, Standalone, OnnxModels, donde se encuentra el archivo products.onnx. Ahora podemos reemplazarlo por la nueva versión del archivo products.onnx, creada con Custom Vision.
 
-Now, returning to the App Service, we can go ahead and restart the web server,
-which will make it use the new ONNX model in the Shop by Photo Feature.
+Ahora, volviendo a App Service, podemos continuar y reiniciar el servidor web, lo que hará que use el nuevo modelo ONNX en la característica Comprar por foto.
 
-### VIDEO: Netron
+### <a name="video-netron"></a>VÍDEO: Netron
 
-[CLICK] While we're waiting for the website to restart, lets take a look inside the ONNX
-model we just installed. There's a nice little web app by Lutz Roeder called
-Netron, which allows us to inspect the neural networks in ONNX files. So let's
-go ahead and open that products.onnx file. Here you can see the actual layers of
-the neural network represented by the model. Let's zoom in a little bit and take
-a look at the input at the top. The input is an image. It's a 3-layer RGB image,
-of size 224x224 pixels. I actually had to crop and scale down the image provided
-by the user before providing it to ONNX runtime. It's a bit of a dirty secret
-that computer vision systems have rather poor vision -- they work with quite low
-image resolutions -- but nonetheless still work quite well.
+[CLIC] Mientras estamos esperando a que el sitio web se reinicie, eche un vistazo al modelo ONNX que acabamos de instalar. Existe una pequeña aplicación web de Lutz Roeder denominada Netron, que nos permite inspeccionar las redes neuronales en archivos ONNX. Vamos a continuar y abrir el archivo products.onnx. Aquí puede ver los niveles reales de la red neuronal representada por el modelo. Vamos a ampliarlo un poco y a echar un vistazo a la entrada en la parte superior. La entrada es una imagen. Se trata de una imagen RGB de tres niveles, de tamaño 224 x 224 píxeles. En realidad debía recortar y reducir verticalmente la imagen proporcionada por el usuario antes de proporcionarla al tiempo de ejecución de ONNX. Un pequeño secreto poco elegante es que los sistemas de visión de equipos tienen una visión bastante deficiente, funcionan con resoluciones de imagen muy bajas, pero aun así funcionan bien.
 
-Now let's zoom out and scroll through the network. You can see all of the layers
-in the neural network created by the custom vision, each layer transforming the
-input image, applying filters and recombining the output images, just as you
-learned earlier in this talk. But when you get down to the output layer at the
-very end, you can see that the output is a list of five values -- the five
-products we trained it on: hammer, hard hat, and so on -- along with this value
-labelled "loss" which is the confidence the model predicts for each category. In
-your app, you'll choose your own threshold for how high the confidence needs to
-be.
+Ahora vamos a reducir la visualización y a desplazarnos por la red. Puede ver todos los niveles de la red neuronal creada por la visión personalizada y como cada nivel transforma la imagen de entrada, aplicando filtros y recombinando las imágenes de salida, tal como aprendió anteriormente en esta conversación. Con todo, cuando se llega al nivel de salida al final, puede ver que la salida es una lista de cinco valores: los cinco productos en los que se ha entrenado: martillo, casco, etc., junto con este valor con la etiqueta "loss" (pérdida), que es la confianza que el modelo predice para cada categoría. En la aplicación, debe elegir su propio umbral en relación con lo alta que debe ser la confianza.
 
-Anyway, now that the Tailwind Traders website has restarted, let's go back to
-the homepage and see how our new vision model works. Let's go ahead and upload a
-photo, and try once again one of our test images, specifically our image of
-pliers that didn't work well before. We can see that indeed, rather than
-thinking it was a hammer, the website has searched for "pliers" and shown me all
-the products on offer.
+De todos modos, ahora que se ha reiniciado el sitio web de Tailwind Traders, volvamos a la página principal y veamos cómo funciona nuestro nuevo modelo de visión. Vamos a seguir y a cargar una foto, y volveremos a intentar una vez más una de nuestras imágenes de prueba, concretamente, nuestra imagen de unas tenazas que no ha funcionado bien antes. Podemos ver que, de hecho, en lugar de pensar que era un martillo, el sitio web ha buscado "pliers" (tenazas) y me ha mostrado todos los productos de la oferta.
 
-### SLIDE: Optimizing App UI with Cognitive Services Personalizer
+### <a name="slide-optimizing-app-ui-with-cognitive-services-personalizer"></a>DIAPOSITIVA: Optimizar la interfaz de usuario de la aplicación con Cognitive Services Personalizer
 
-We've got time for just one more quick example of pre-built AI, this time from
-the "Decision Category" of Cognitive Services. The "Personalizer" service allows
-us to customize the interface of apps in real-time, balancing on what the user
-is most likely to want to do, coupled with the things that *we would like* the
-user to be doing.
+Tenemos tiempo para un ejemplo más de inteligencia artificial pregenerada, esta vez de la "Categoría de decisión" de Cognitive Services. El servicio "Personalizer" nos permite personalizar la interfaz de las aplicaciones en tiempo real, buscando un equilibrio entre lo que es más probable que el usuario quiera hacer y lo que *nosotros queremos* que haga.
 
-### SLIDE: Recommended (screenshot)
+### <a name="slide-recommended-screenshot"></a>DIAPOSITIVA: Recommended (captura de pantalla)
 
-We can see how this might work with the "Recommended" section of the Tailwind
-Traders website. It shows a selection of the departments available in the store:
-one is a large "hero" image, coupled with a few smaller images.
+Podemos ver cómo funciona esta solución en la sección "Recomendaciones" del sitio web de Tailwind Traders, donde se muestra una selección de los departamentos de la tienda: uno consiste en una imagen grande acompañada por unas cuantas imágenes más pequeñas.
 
-The Personalizer service will choose for us how those sections appear, according
-to an AI technique called "reinforcement learning".
+El servicio Personalizer elegirá por nosotros cómo se muestran esas secciones siguiendo una técnica de inteligencia artificial denominada "aprendizaje de refuerzo".
 
-### SLIDE: Personalizer in Action
+### <a name="slide-personalizer-in-action"></a>DIAPOSITIVA: Personalizer en acción
 
-Personalizer has been in development at Microsoft for many years. It's used on
-Xbox devices, to determine what activities are featured on the home page, like
-playing an installed game, or purchasing a new game from the store, or watching
-others play on Mixer. Since the introduction of Personalizer, the Xbox team has
-seen a significant lift in key engagement metrics.
+Microsoft lleva muchos años desarrollando Personalizer. Se usa en dispositivos Xbox para determinar qué actividades se incluyen en la página principal, como la reproducción de un juego instalado, la compra de un juego nuevo de la tienda o la visualización de otros jugadores en el mezclador. Desde el lanzamiento de Personalizer, el equipo de Xbox ha experimentado un aumento significativo en las métricas clave de involucración.
 
-Personalizer is also used to optimize the placement of ads in Bing search, and
-the articles featured in MSN News, again with great results in improving
-engagement from users.
+Personalizer también se usa para optimizar la ubicación de los anuncios en la búsqueda de Bing y los artículos destacados en MSN News, de nuevo con excelentes resultados en la mejora de la interacción de los usuarios.
 
-Now you can use Personalizer in your own apps, as well.
+Ahora también puede usar Personalizer en sus propias aplicaciones.
 
-### SLIDE: Reinforcement Learning
+### <a name="slide-reinforcement-learning"></a>DIAPOSITIVA: Aprendizaje de refuerzo
 
-Personalizer implements an AI technique called Reinforcement Learning. Here's
-how it works.
+Personalizer implementa una técnica de inteligencia artificial denominada "aprendizaje de refuerzo". Aquí le mostramos cómo funciona:
 
-[CLICK] Suppose we want to display a "hero" action to the user. [CLICK] The user
-might not be sure what to do next, [CLICK] but we could display one of several
-suggestions. For a gaming app, [CLICK] that might be: "play a game", "watch a
-movie", or "join a clan". [CLICK] Based on that user's history and other
-contextual information -- say, their location, the time of day, and the day of
-the week -- the Personalizer service will [CLICK] rank the possible actions and
-[CLICK] suggest the best one to promote [CLICK]. 
+[CLIC] Supongamos que queremos mostrar una acción "hero" (modelo) al usuario. [CLIC] Es posible que el usuario no esté seguro de lo que debe hacer a continuación, [CLIC], pero podríamos mostrar una de varias sugerencias. En el caso de una aplicación de juegos, [CLIC] podría ser: "play a game" (jugar una partida), "watch a movie" (ver una película) o "join a clan" (unirse a un grupo). [CLIC] En función del historial del usuario y de otros datos contextuales (por ejemplo, su ubicación, la hora del día y el día de la semana), el servicio Personalizer [CLIC] clasifica las acciones posibles y [CLIC] busca la mejor sugerencia para promocionar [CLIC]. 
 
-Hopefully, the user will be happy [CLICK], but how can we be sure? That depends
-on what the user does next, and whether that was something we wanted them to do.
-According to our business logic [CLICK], we'll assign a "reward score" between 0
-and 1 to what happens next. For example, spending more time playing a game or
-reading an article, or spending more money in the store, might lead to higher
-reward scores. [CLICK] Personalizer feeds that info back into the ranking system
-for the next time we need to feature an activity.
+Esperamos que el usuario esté satisfecho [CLIC], pero ¿cómo podemos asegurarnos? Depende de lo que haga el usuario a continuación y de si eso era algo que queríamos que hiciera.
+Según nuestra lógica de negocios [CLIC], asignaremos una "puntuación de recompensa" entre 0 y 1 a lo que suceda a continuación. Por ejemplo, dedicar más tiempo a jugar una partida o a la lectura de un artículo, o gastar más dinero en la tienda, puede dar lugar a mayores puntuaciones de recompensa. [CLIC] Personalizer vuelve a suministrar la información al sistema de clasificación para la próxima vez que se necesite destacar una actividad.
 
-### SLIDE: Discovering Patterns and Causality
+### <a name="slide-discovering-patterns-and-causality"></a>DIAPOSITIVA: Detectar patrones y causalidad
 
-But this isn't just a recommender system, which has the danger of presenting the
-user with things they know they already like. What about the things they would
-like, but don't know about? Personalizer is usually in Exploit mode, where it
-recommends the best activity based on history and context, but sometimes it also
-enters Explore mode, and presents the user with new things they might not
-otherwise see. It's kind of like an automated A/B testing system, but with more
-than two branches, all tested in real time.
+Pero no se trata solamente de un sistema de recomendaciones, que tiene el peligro de mostrar al usuario las cosas que ya sabe que le gustan. Porque, ¿qué ocurre con las cosas que podrían gustarle pero que no conoce? Personalizer acostumbra a estar en el modo de explotación, en el que recomienda la mejor actividad según el historial y el contexto, pero en ocasiones también entra en el modo de exploración y presenta al usuario cosas nuevas que de otra forma no vería. Vendría a ser como un sistema de pruebas A/B automatizadas, pero con más de dos ramas, todas probadas en tiempo real.
 
-You control what percentage of the time Explore Mode is
-activated, to help the user discover new content or features.
+Puede controlar durante cuánto tiempo está activado el modo de exploración para ayudar al usuario a detectar nuevas características o nuevo contenido.
 
-### SLIDE: Personalizer for Tailwind Traders
+### <a name="slide-personalizer-for-tailwind-traders"></a>DIAPOSITIVA: Personalizer para Tailwind Traders
 
-In our Tailwind Traders app, for anonymous users, we will use the time of day,
-day of week, and browser OS as "context" to influence rankings. For the reward
-score, we will use whether or not the hero section was clicked. In this code, we
-provide a reward score of 1 if the featured category was clicked, and zero
-otherwise.
+Para los usuarios anónimos que usen nuestra aplicación Tailwind Traders, usaremos la hora, el día de la semana y el sistema operativo del explorador como "contexto" para influir en las clasificaciones. En cuanto a la puntuación de recompensa, nos fijaremos en si se ha hecho clic o no en la sección Hero. En este sentido, proporcionamos una puntuación de recompensa de 1 si se hace clic en la categoría destacada y cero en los demás casos.
 
-Over time, Personalizer will determine the best category to feature for
-anonymous users based on time of day, day of week, and OS. It will also
-"explore" 20% of the time, to surface categories that would otherwise not be
-presented.
+Con el tiempo, Personalizer determinará la mejor categoría para los usuarios anónimos según la hora del día, el día de la semana y el sistema operativo. También "explorará" el 20 % del tiempo para exponer categorías que, de lo contrario, no se presentarían.
 
-### SLIDE: DEMO: Personalizer
+### <a name="slide-demo-personalizer"></a>DIAPOSITIVA: DEMOSTRACIÓN: Personalizer
 
-[ClICK] Now, let's see Personalizer in action. Let's go back to the Tailwind
-Traders homepage. What I didn't mention before is that in this Recommended
-section, the ordering of the product departments is determined by Personalizer.
-In this case, it's presenting the Electrical department as the hero image. We
-can also see the "Explore" behavior if we refresh the website a few times.
-Apparently Personalizer currently thinks that the Garden Center gets the best
-engagement from anonymous users at this time of day using the browser and
-operating system that I am using here, but eventually it will try out different
-categories -- here, plumbing has popped up, and Personalizer will use that to
-measure engagement as well.
+[CLIC] Ahora, vamos a ver a Personalizer en acción. Vamos a volver a la página principal de Tailwind Traders. Lo que no mencioné antes es que, en esta sección Recommended, el orden de los departamentos del producto viene determinado por Personalizer.
+En este caso, se presenta el departamento eléctrico como imagen modelo. También podemos ver el comportamiento de "Explore" (Explorar) si actualizamos el sitio web varias veces.
+Aparentemente, Personalizer considera que el Centro de jardinería obtiene la mejor involucración de usuarios anónimos en esta hora del día con el explorador y el sistema operativo que estoy usando aquí, pero puede ser que pruebe categorías distintas. Aquí, se ha mostrado fontanería y Personalizer también lo usará para medir la involucración.
 
-### SLIDE: Pre-built AI in Production
+### <a name="slide-pre-built-ai-in-production"></a>DIAPOSITIVA: Inteligencia artificial pregenerada en producción
 
-We've seen a few ways that you can use pre-built AI to enhance your applications
-with humanlike capabilities. Let's wrap up with a few things you should keep in
-mind if you plan to deploy these applications in a production app, possibly with
-real-time capabilities for millions of users.
+Hemos visto varias formas en las que se puede usar inteligencia artificial pregenerada para mejorar sus aplicaciones con funcionalidad similar a la humana. Vamos a resumir con algunas cosas que debe tener presentes si quiere implementar estas aplicaciones en una aplicación de producción, posiblemente con capacidades en tiempo real para millones de usuarios.
 
-### SLIDE: Cost Considerations
+### <a name="slide-cost-considerations"></a>DIAPOSITIVA: Consideraciones sobre el costo
 
-Probably the first thing you want to think about is: how much is all this going to cost?
+Es probable que lo primero que le venga a la cabeza sea cuánto cuesta todo esto.
 
-[CLICK] If you are just trying things out like a "Developer would", that is small
-amounts of data, a few attempts here and there, that's generally FREE. 
+[CLIC] Si solo quiere probar cosas como haría un desarrollador, es decir, pequeñas cantidades de datos, unos cuantos intentos por aquí y por allí, es probable que le salga gratis. 
 
-[CLICK] For production volumes, you will be charged by volume and rate,
-according to the service you are using.
+[CLIC] Para volúmenes de producción, se le cobrará por volumen y tarifa, en función del servicio que esté utilizando.
 
-[CLICK] There are more details on pricing on this link. Check there for exact pricing
-for your service and region
+[CLIC] En este vínculo encontrará más información sobre los precios y las tarifas exactas para su servicio y región.
 
-If you are new to Azure and want to play around with these services, you can
-sign up using the link right here and get $200.
+Si está empezando con Azure y quiere probar estos servicios, puede registrarse usando el vínculo de la derecha para obtener 200 $.
 
-(This slide is intended to give a general overview of the "model" for pricing in
-cognitive services. Attendees should check the given link for exact pricing for
-the service they want to use.)
+(La finalidad de esta diapositiva es ofrecer una introducción general del "modelo" de precios para los servicios cognitivos. Los asistentes deberá consultar los precios exactos del servicio que quieran usar en el vínculo proporcionado).
 
-### SLIDE: Data Considerations
+### <a name="slide-data-considerations"></a>DIAPOSITIVA: Consideraciones de datos
 
-You also may want to think about where your data is going and how it will be
-used.
+También debe pensar en dónde se van a usar los datos y cómo se usarán.
 
-Your data, like images or text, will be uploaded to Azure for inference, but
-it's never stored by Cognitive Services. This link gives all the details about
-privacy and regulatory compliance. But if you work in a regulated industry, like
-medicine, where data cannot leave your firewall, there is another option:
-containers.
+Tus datos, como imágenes o texto, se cargaran en Azure para realizar la inferencia, pero en ningún caso serán almacenados por Cognitive Services. En este vínculo encontrará toda la información sobre privacidad y cumplimiento normativo. Pero si trabaja en un sector regulado, como el sector médico, en el que no se puede trabajar sin firewall, tiene otra opción: los contenedores.
 
-### SLIDE: Deployment with containers
+### <a name="slide-deployment-with-containers"></a>DIAPOSITIVA: Implementación con contenedores
 
-Some of Cognitive Services is available for use as an independent container. You
-can simply download the container image, deploy it behind your firewall, and
-then use the local endpoints it provides just like you do in Azure. The
-difference is that data never leaves your own network. The only reason the
-container connects to Azure is for billing -- usage is charged in exactly the
-same way as in Azure itself.
+Algunos Cognitive Services se pueden utilizar como contenedor independiente. Solo tiene que descargar la imagen de contenedor, implementarla detrás del firewall y usar los puntos de conexión locales que proporciona, igual que lo hace en Azure. La diferencia es que los datos no salen nunca de su red. El único motivo por el que el contenedor se conecta a Azure es para la facturación: el uso se cobra exactamente igual que en Azure.
 
-### SLIDE: Ethical Considerations
+### <a name="slide-ethical-considerations"></a>DIAPOSITIVA: Consideraciones éticas
 
-I've saved the most important slide today for last. You've seen how easy it is
-to integrate powerful AI capabilities into your applications. But with great
-power comes great responsibility, and it's critically important to understand
-the impact your application will have on people, and consider the ethical
-implications.
+He guardado la diapositiva más importante de hoy para el final. Ahora ha visto lo fácil que es integrar las eficaces capacidades de inteligencia artificial en sus aplicaciones. Con todo, las grandes capacidades implican una gran responsabilidad, y es muy importante entender el impacto que tendrá la aplicación en los usuarios y tener en cuenta sus implicaciones éticas.
 
-If you're working with AI technologies, you should be working within an ethical
-framework that:
+Si está trabajando con tecnologías de inteligencia artificial, debe regirse por un marco de trabajo ético que:
 
-* Focuses on *enabling* people to achieve more in what they already do, rather
-  than replacing humans with AI
+* Se centre en *permitir* que las personas obtengan más información sobre lo que ya hacen, y no que la inteligencia artificial reemplace a los seres humanos.
 
-* Is *inclusive* of all types of users, so that everyone can benefit equally
-  from your application, and
+* Sea *inclusivo* para todos los tipos de usuario, de modo que todo el mundo pueda beneficiarse igualmente de la aplicación.
 
-* Is fair and transparent, and in particular doesn't marginalize
-  underrepresented groups. Remember what we learned earlier: AI is only as good
-  as the data it was trained on, and you need to be sure that your application
-  works for all of your potential users, regardless of who they are or
-  what they look like.
+* Sea justo y transparente y, en concreto, no margine a los grupos con poca representación. Recuerde lo que hemos aprendido antes: La inteligencia artificial es tan buena como los sean los datos con los que se ha entrenado. Además, debe asegurarse de que la aplicación funciona para todos sus usuarios potenciales, independientemente de quiénes sean o de cuál sea su aspecto.
 
-If you don't have an ethical framework set up, a great place to start is
-Microsoft's own principles for artificial intelligence, and you can read more at
-this link.
+Si no tiene establecido un marco de trabajo ético, un buen punto de partida son los propios principios de Microsoft para la inteligencia artificial. Puede obtener más información en este vínculo.
 
-### SLIDE: Wrapping up
+### <a name="slide-wrapping-up"></a>DIAPOSITIVA: Resumen
 
-It's easy to add humanlike capabilities with pre-built AI. Pre-built models
-can't do everything, but they can get you a long way, quickly. We'll learn about
-custom models for the remaining 20% later in thus learning path.
+Resulta sencillo agregar funcionalidad similar a la humana con inteligencia artificial pregenerada. Los modelos pregenerados no pueden hacerlo todo, pero pueden solucionar una parte importante de cada caso concreto, de forma rápida. Más adelante en la ruta de aprendizaje veremos los modelos personalizados para el 20 % restante.
 
-AI is powerful, but it isn't magic. It's driven by data and, at its core, fairly
-simple math. Always keep the data in mind, and use it to help you understand
-what's going on. In particular, remember that even the best AI can make
-mistakes, especially about groups that aren’t well represented in the training
-data.
+La inteligencia artificial es eficaz, pero no es magia. Se rige por datos y, fundamentalmente, en matemáticas bastante sencillas. Siempre tenga en cuenta los datos y úselos para ayudarle a entender lo que está ocurriendo. En concreto, recuerde que incluso en la mejor inteligencia artificial puede haber errores, especialmente en grupos que no están bien representados en los datos de entrenamiento.
 
-Finally, try it out! You don't need a lot of expertise to get started, but
-everyone needs to thing about the ethical implications of AI and how it affects
-people, so make sure you've developed an ethical framework for using AI, and
-stick to it.
+Le recomiendo que lo pruebe. Aunque no se necesita una gran experiencia para empezar, hay que pensar en las implicaciones éticas de la inteligencia artificial y en cómo afecta a las personas, así que asegúrese de haber desarrollado un marco ético para usar la inteligencia artificial y adhiérase a él.
 
-### SLIDE: Docs Alert
+### <a name="slide-docs-alert"></a>DIAPOSITIVA: Alerta de Docs
 
-For all the details on Azure Cognitive Services, including getting started
-guides and references, check out Microsoft Docs.
+Para obtener todos los detalles de Azure Cognitive Services, incluidas las guías de introducción y las referencias, consulte Microsoft Docs.
 
-### SLIDE: MS Learn Alert
+### <a name="slide-ms-learn-alert"></a>DIAPOSITIVA: Alerta de MS Learn
 
-And if you'd like to learn how to use Cognitive Services, there are free courses
-on Microsoft Learn that will take you through using them step-by-step.
+Y si quiere obtener información sobre cómo usar Cognitive Services, encontrará cursos gratuitos en Microsoft Learn que le guiarán por su utilización, paso a paso.
 
-### SLIDE: Resources
+### <a name="slide-resources"></a>DIAPOSITIVA: Recursos
 
-To find links to Docs and Learn, and to all the resources I've mentioned in this
-talk, check out the Session Resources link on this slide. You can also run all of
-the demos I gave today yourself, using the code and scripts available in this
-github repository. And if you'd like to get a Microsoft Certification in AI or
-Data Science, theres a special offer for a free certificate for attendees today:
-check out this link for details.
+Para buscar vínculos a documentos y aprendizaje, y a todos los recursos que he mencionado en este artículo, consulte el vínculo de recursos de la sesión que encontrará en esta diapositiva. También puede reproducir todas las demostraciones que hemos visto hoy usando el código y los scripts disponibles en este repositorio de github. Y si quiere obtener una certificación de Microsoft en inteligencia artificial o ciencia de datos, los asistentes a la sesión de hoy pueden acceder a una oferta especial para obtener un certificado gratuito. Consulte este vínculo para obtener información.
 
-Thank you.
+¡Gracias!
