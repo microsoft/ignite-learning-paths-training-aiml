@@ -1,47 +1,47 @@
-# Using Postman
-There are three concepts needed to carry out the exercises in all of the demonstrations:
+# <a name="using-postman"></a>Postman 사용
+모든 데모에서 연습을 수행하는 데 필요한 세 가지 개념이 있습니다.
 
-1. Import a collection
-2. Set collection variables
-3. Use the pre-requests scripts to set variables
+1. 컬렉션 가져오기
+2. 컬렉션 변수 설정
+3. 사전 요청 스크립트를 사용하여 변수 설정
 
-## What you need
-There are three collections used throughout the demos:
-1. [Form Recognizer API Calls](src/Collections/Form_Recognizer.postman_collection.json)
-2. [Reader Skill API Calls](src/Collections/Reader_Skill.postman_collection.json)
-3. [Invoice Search API Calls](src/Collections/Invoice_Search.postman_collection.json)
+## <a name="what-you-need"></a>필요한 항목
+데모 전체에서 사용되는 세 가지 컬렉션이 있습니다.
+1. [Form Recognizer API](src/Collections/Form_Recognizer.postman_collection.json)
+2. [판독기 기술 API 호출](src/Collections/Reader_Skill.postman_collection.json)
+3. [청구서 검색 API 호출](src/Collections/Invoice_Search.postman_collection.json)
 
-## Importing a Collection
+## <a name="importing-a-collection"></a>컬렉션 가져오기
 
-1. Download the appropriate collection (see above).
-2. Open Postman
-3. Click on Import
+1. 적절한 컬렉션을 다운로드합니다(위 참조).
+2. Postman 열기
+3. 가져오기 클릭
 
-![Import Collection](images/import_collection.png "Import Collection")
+![컬렉션 가져오기](images/import_collection.png "컬렉션 가져오기")
 
-4. Select the appropriate collection
+4. 적절한 컬렉션을 선택합니다.
 
-![Import Collection](images/import_collection_file.png "Import Collection")
+![컬렉션 가져오기](images/import_collection_file.png "컬렉션 가져오기")
 
-## Modifying collection variables
+## <a name="modifying-collection-variables"></a>컬렉션 변수 수정
 
-Collection variables allow Postman to replace tokens such as `{variable}` with values set by the user. This allows requests to be more portable with changes to variables. For example, the `endpoint` variable in some of the exercises represents the endpoint to your particular Form Recognizer service. 
+컬렉션 변수를 사용하면 Postman이 `{variable}`과 같은 토큰을 사용자가 설정한 값으로 바꿀 수 있습니다. 이렇게 하면 변수에 대한 변경으로 요청의 이식성이 높아집니다. 예를 들어 일부 연습의 `endpoint` 변수는 특정 Form Recognizer 서비스에 대한 엔드포인트를 나타냅니다. 
 
-1. After a collection is loaded, click on the ellipsis to edit the collection variables
+1. 컬렉션이 로드된 후에는 줄임표를 클릭하여 컬렉션 변수를 편집합니다.
 
-![Edit Variables](images/edit_variables.png "Edit Variables")
+![변수 편집](images/edit_variables.png "변수 편집")
 
-2. To edit authorization variables use the authorization tab.
+2. 권한 부여 변수를 편집하려면 권한 부여 탭을 사용합니다.
 
-![Edit Authorization](images/edit_authorization.png "Edit Authorization")
+![권한 부여 편집](images/edit_authorization.png "권한 부여 편집")
 
-3. All other variables used in these exercises are found under the variables tab
+3. 이러한 연습에서 사용되는 다른 모든 변수는 변수 탭에 있습니다.
 
-![Edit Variables](images/variables_tab.png "Edit Variables")
+![변수 편집](images/variables_tab.png "변수 편집")
 
-## Using pre-request scripts
+## <a name="using-pre-request-scripts"></a>사전 요청 스크립트 사용
 
-Some of the exercises require changes made to the pre-request scripts. These are accessible in the Pre-request Script section of individual Requests as shown below.
+일부 연습에서는 사전 요청 스크립트를 변경해야 합니다. 이러한 스크립트는 아래와 같이 개별 요청의 사전 요청 스크립트 섹션에서 액세스할 수 있습니다.
 
-![Pre-Request Scripts](images/pre_request.png "Pre-Request Scripts")
+![사전 요청 스크립트](images/pre_request.png "사전 요청 스크립트")
 

@@ -1,211 +1,210 @@
-# Speaker Notes
+# <a name="speaker-notes"></a>발표자 노트
 
-## Slides
+## <a name="slides"></a>슬라이드
 
-* Slide: # 1
+* 슬라이드: #1
 
-* Slide: # 2
-  * Machine Learning and DevOps are two hot buzzwords at the moment. Machine Learning is becoming more accessible to more organisations, but with that increased accessibility comes the need to manage our ML projects the same way we do the rest of our software.
-  * MLOps, Machine Learning Operations, or DevOps for Machine Learning is the confluence of DevOps and Machine Learning, and that's what we're going to examine today.
+* 슬라이드: #2
+  * Machine Learning과 DevOps는 현재 가장 많이 사용되는 2개의 유행어입니다. Machine Learning은 점점 더 많은 조직에서 더 쉽게 액세스할 수 있지만, 액세스 가능성이 증가하면 나머지 소프트웨어를 수행하는 것과 동일한 방식으로 ML 프로젝트를 관리할 필요가 있습니다.
+  * MLOps, Machine Learning Operations 또는 DevOps for Machine Learning은 DevOps와 Machine Learning의 결합이며, 오늘 살펴볼 내용입니다.
 
-* Slide: # 3
-  * Before we get started, feel free to take a screenshot of this slide. You'll find this deck and all of the resources used in this presentation by visiting these links.
+* 슬라이드: #3
+  * 시작하기 전에 이 슬라이드의 스크린샷을 마음껏 찍으세요. 이 링크를 방문하여 프레젠테이션에 사용된 모든 리소스와 데크를 찾을 수 있습니다.
 
-* Slide: # 4
-  * When programming, we solve a problem by writing an algorithm
-  * We run data (or input) through that algorithm and get an answer
-  * Importantly, we know (or can work out) how to solve that problem
-  * What happens when we don’t know what that algorithm looks like? E.g. is there a bird in the photo, or what is the probability that an applicant will default on a loan?
+* 슬라이드: #4
+  * 프로그래밍하는 경우 알고리즘을 작성하여 문제를 해결합니다.
+  * 해당 알고리즘을 통해 데이터(또는 입력)를 실행하고 답변을 받습니다.
+  * 중요한 것은 해당 문제를 해결하는 방법을 알고 있거나 도출하는 것입니다.
+  * 알고리즘의 모습을 모르면 어떻게 되나요? 예: 사진에 새가 있나요? 또는 신청자가 대출 채무를 불이행할 확률은 어떻게 되나요?
 
-* Slide: # 5
-  * These are the problems machine learning is good at
-  * With machine learning, we solve these problems by flipping it around and providing a whole lot of examples of correct answers and corresponding input, and let the computer decide what that algorithm is
+* 슬라이드: #5
+  * 이러한 항목은 기계 학습이 잘 해결할 수 있는 문제입니다.
+  * 기계 학습을 사용하여 이 문제를 빠르게 파악하고 올바른 답변과 해당 입력에 대한 많은 예를 제공함으로써 이러한 문제를 해결하고, 컴퓨터에서 알고리즘을 결정하도록 합니다.
 
-* Slide: # 6
-  * What we’re doing is letting the computer build a “model” to describe that data
+* 슬라이드: #6
+  * 우리가 하는 작업은 컴퓨터가 해당 데이터를 설명하는 "모델"을 빌드하도록 하는 것입니다.
 
-* Slide: # 7
-  * What’s great about this, is we can use that model in place of the algorithm we would have written, had we known how.
+* 슬라이드: #7
+  * 이 작업의 장점은 알고 있는 작성한 알고리즘 대신에 해당 모델을 사용할 수 있다는 것입니다.
 
-* Slide: # 8
-  * By using the model, we can get predictions
-  * Note: these are predictions - not answers the way we’d think of it
-  * The quality and accuracy of those predictions depends on the techniques and algorithms we used to train the model, and importantly - the data we used to train the model
-  * If you’re using biased data to train the model, you’ll get a biased model
+* 슬라이드: #8
+  * 모델을 사용하여 예측을 얻을 수 있습니다.
+  * 참고: 예측은 사용자가 생각하는 방식으로 답변하지 않습니다.
+  * 이러한 예측의 품질 및 정확도는 모델을 학습하는 데 사용한 기술 및 알고리즘, 특히 모델 학습에 사용된 데이터에 따라 달라집니다.
+  * 바이어스 데이터를 사용하여 모델을 학습하는 경우 바이어스 모델을 얻게 됩니다.
 
-* Slide: # 9
-  * [See Demo #1](./demos/1-Show_Faulty_Prediction.md)
+* 슬라이드: #9
+  * [데모 #1 참조](./demos/1-Show_Faulty_Prediction.md)
 
-* Slide: # 10
-  * Let’s talk about the work that happens when creating a predictive model
-  * Usually, there’s some data discovery, transformation, and preparation… some building of a model and training using that data… then an evaluation of the suitability of that model
-  * This is a highly iterative, experimental process that might mean going back to the drawing board many times over, over a long period of time.
-  * When it’s time to actually deploy a model, it’s often similar to the way we used to do software – package it up, and let the developers or operations team deploy it somehow
+* 슬라이드: #10
+  * 예측 모델을 만들 때 발생하는 작업에 대해 알아보겠습니다.
+  * 일반적으로 몇 가지 데이터 검색, 변환 및 준비 등이 있습니다. 몇몇 모델을 빌드하고 해당 데이터를 사용하여 학습합니다. 그런 다음 해당 모델의 적합성을 평가합니다.
+  * 이는 오랜 기간에 걸쳐 제도판을 여러 번 다시 시작할 수도 있는 매우 반복적인 실험 프로세스입니다.
+  * 실제로 모델을 배포할 때는 소프트웨어를 사용하던 방식과 비슷한 경우가 많습니다. 즉, 패키징한 후 개발자 또는 운영 팀이 어떻게든 배포합니다.
 
-* Slide: # 11
-  * The creation process often happens on a data scientist’s machine, or shared hardware for intensive training
-  * And deployment quite often happens by passing USB drives around, or even by email.
+* 슬라이드: #11
+  * 생성 프로세스는 종종 데이터 과학자의 머신에서 수행되거나, 집중적인 학습을 위해 공유 하드웨어에서 이루어집니다.
+  * 배포는 대개 USB 드라이브를 전달하거나 메일을 통해서도 이루어집니다.
 
-* Slide: # 12
-  * Let’s contrast this to a good devops process where we plan, develop and test, release to test then production environments, then monitor what happens in production…
-  * But is DevOps just for software development? The algorithms we spoke about at the start?
+* 슬라이드: #12
+  * 이 프로세스를 프로덕션 환경에서 계획, 개발 및 테스트하고 릴리스하여 테스트한 후 프로덕션 환경에서 발생하는 상황을 모니터링하는 우수한 개발 프로세스와 비교해 보겠습니다.
+  * 그렇다면 DevOps는 소프트웨어 개발에만 사용되나요? 시작 부분에서 설명한 알고리즘은 무엇인가요?
 
-* Slide: # 13
-  * Let’s look at Microsoft’s definition of DevOps (read it).
-  * The most important word here is “value”. DevOps is not about code or bug fixes, it’s about continuously delivering value.
-  * If you have a predictive model, and you can make that model better – that is absolutely valuable.
-  * So this definition doesn’t exclude ML.
-  * Let’s look at a product that can help.
+* 슬라이드: #13
+  * Microsoft의 DevOps 정의를 살펴보겠습니다(읽어보기).
+  * 여기서 가장 중요한 단어는 "가치"입니다. DevOps는 코드 또는 버그 수정에 대한 것이 아니라 지속적인 가치 제공과 관련이 있습니다.
+  * 예측 모델이 있으면 해당 모델을 더욱 우수하게 만들 수 있습니다. 이는 분명히 유용한 점입니다.
+  * 따라서 이 정의는 ML을 제외하지 않습니다.
+  * 이제 도움이 될 수 있는 제품을 살펴보겠습니다.
 
-* Slide: # 14
+* 슬라이드: #14
 
-* Slide: # 15
-  * Azure Machine Learning Service is a set of services for helping your MLOps (or DevOps for ML) efforts.
-  * You can get to it by going to ml.azure.com
-  * Let’s drill into a few of the things it helps you manage
+* 슬라이드: #15
+  * Azure Machine Learning Service는 MLOps(또는 ML용 DevOps)를 지원하는 서비스 세트입니다.
+  * 이 서비스는 ml.azure.com에서 받을 수 있습니다.
+  * 관리하는 데 도움이 되는 몇 가지 사항을 자세히 살펴보겠습니다.
 
-* Slide: # 16
-  * Just list and describe as per the individual points
+* 슬라이드: #16
+  * 개별 항목에 따라 나열하고 설명합니다.
 
-* Slide: # 17
-  * We’re going to focus for the moment on Pipelines. Pipelines are workflows for training our models, and we want to build one so we can have a repeatable way to build our predictive model.
+* 슬라이드: #17
+  * 우선은 Pipelines에 중점을 두고 살펴보겠습니다. Pipelines는 모델을 학습하기 위한 워크플로이며, 예측 모델을 빌드하는 반복 가능한 방법을 확보할 수 있도록 빌드하려고 합니다.
 
-* Slide: # 18
-  * You may have heard of Azure Pipelines, but it’s important to note these are different products.
-  * We’ll talk about the differences in a minute, but at a high level, ML pipelines are good for training workflows, and Azure Pipelines are good for orchestration. They have different focuses.
+* 슬라이드: #18
+  * Azure Pipelines에 대해 들어보셨을 수 있지만 Pipelines와는 서로 다른 제품이라는 점에 유의해야 합니다.
+  * 잠시 후에 차이점에 대해 설명하겠지만 간단히 설명하면 ML Pipelines는 학습 워크플로에 적합하고 Azure Pipelines는 오케스트레이션에 유용합니다. 이 둘은 중점 분야가 각각 다릅니다.
 
-* Slide: # 19
-  * What’s the difference? Why use both?
+* 슬라이드: #19
+  * 차이점은 무엇인가요? 둘 다 사용해야 하는 이유는 무엇인가요?
 
-* Slide: # 20
-  * ML Pipelines are designed for ML-specific workflows.
-  * Unattended runs – ML training can be very long-running, and ML pipelines can handle that extremely well
-  * Reusability – individual steps in a workflow can be resource intensive, and may not need to be run every time. If your data prep step doesn’t need to be run again, you can just reuse the output from last time.
-  * Tracking… - Everything that’s stored is focused on ML, rather than building general software
+* 슬라이드: #20
+  * ML Pipelines는 ML 관련 워크플로에 맞게 설계되었습니다.
+  * 무인 실행 – ML 학습은 매우 오랜 기간 동안 실행될 수 있으며 ML Pipelines는 이를 매우 효율적으로 처리할 수 있습니다.
+  * 재사용성 – 워크플로의 개별 단계는 리소스를 많이 사용하므로 매번 실행할 필요는 없을 수 있습니다. 데이터 준비 단계를 다시 실행하지 않아도 되는 경우 가장 최근의 출력을 재사용할 수 있습니다.
+  * 추적 중... - 저장된 모든 항목은 일반 소프트웨어를 빌드하지 않고 ML에 집중됩니다.
 
-* Slide: # 21
-  * By contrast, Azure Pipelines are really designed for CI/CD
-  * Gates… - They’re a great place to build in quality and checks and balances
-  * Integration – with other applications, artifacts, and dependencies
-  * Triggers – You way want to trigger orchestration for any number of reasons
+* 슬라이드: #21
+  * 이와 달리 Azure Pipelines는 CI/CD 용으로 설계되었습니다.
+  * 게이트... - 품질 및 견제와 균형을 구축하기에 좋은 장소입니다.
+  * 통합 – 기타 애플리케이션, 아티팩트 및 종속성 사용
+  * 트리거 – 이유에 관계없이 오케스트레이션을 트리거하는 방법
 
-* Slide: # 22
-  * While we’re building a pipeline, we’re really using most of these services
+* 슬라이드: #22
+  * 실제로 파이프라인을 빌드하는 동안에 이러한 대부분의 서비스를 사용합니다.
 
-* Slide: # 23
-  * Using Datasets or Datastores for training data, running an Experiment to train using managed Compute, then ending up with a Model.
-  * We will deploy that model, but let’s come back to that.
+* 슬라이드: #23
+  * 데이터 세트 또는 데이터 저장소를 사용하여 데이터를 학습하고, 실험을 실행하여 관리형 컴퓨팅으로 학습한 후 모델을 마무리합니다.
+  * 해당 모델을 배포하겠지만 다시 한번 살펴보겠습니다.
 
-* Slide: # 24
-  * [See Demo #2](./demos/2-Build_a_Pipeline_With_Notebooks.md)
+* 슬라이드: #24
+  * [데모 #2 참조](./demos/2-Build_a_Pipeline_With_Notebooks.md)
 
-* Slide: # 25
-  * So here’s what we built – the AML pipeline
-  * Data prep
+* 슬라이드: #25
+  * 방금 빌드한 AML 파이프라인입니다.
+  * 데이터 준비
 
-* Slide: # 26
-  * Training step
+* 슬라이드: #26
+  * 학습 단계
 
-* Slide: # 27
-  * Registration of the model
+* 슬라이드: #27
+  * 모델 등록
 
-* Slide: # 28
-  * We also made use of a Dataset (or data source), and compute
+* 슬라이드: #28
+  * 또한 데이터 세트(또는 데이터 원본)와 컴퓨팅을 사용했습니다.
 
-* Slide: # 29
-  * But let’s talk about working on a team for the moment.
+* 슬라이드: #29
+  * 그러나 우선은 팀에서 작업하는 방법을 알아보겠습니다.
 
-* Slide: # 30
-  * Some of the good DevOps practices we use in software development can also apply for ML projects – let’s talk about them.
+* 슬라이드: #30
+  * 소프트웨어 개발에 사용하는 유용한 DevOps 방법 중 일부는 ML 프로젝트에도 적용할 수 있습니다. 자세히 살펴보겠습니다.
 
-* Slide: # 31
-  * Jupyter Notebook files contain not just the input, but also the output. This can be confusing and make files difficult to merge. So we only want the input cells – the code that gets run.
-  * We also want to define everything in our pipeline (which we are)
-  * As well as infrastructure – like the compute – and any dependencies – python dependencies, libraries, etc.
-  * And maybe some data – not the whole lot (because there can be many PB in ML projects), but maybe enough to try some proofs of concept
+* 슬라이드: #31
+  * Jupyter Notebook 파일에는 입력뿐만 아니라 출력도 포함됩니다. 그렇기 때문에 혼동되어 파일 병합이 어려울 수 있습니다. 따라서 실행되는 코드는 입력 셀만 필요합니다.
+  * 또한 파이프라인에서 모든 항목을 정의하려고 합니다.
+  * 컴퓨팅과 같은 인프라 및 종속성(Python 종속성, 라이브러리 등)
+  * 일부 데이터 - 전체가 아닌 데이터(ML 프로젝트에는 많은 PB가 있을 수 있기 때문)일 수 있지만 개념 증명을 시도하기에는 충분할 수 있습니다.
 
-* Slide: # 32
-  * A known shared data source means every data scientist is training against the same training data… and that training data is also being used to produce models
+* 슬라이드: #32
+  * 알려진 공유 데이터 원본은 모든 데이터 과학자가 동일한 학습 데이터를 학습하는 것을 의미합니다. 또한 학습 데이터는 모델을 생성하는 데 사용됩니다.
 
-* Slide: # 33
-  * Let’s talk about CI. We want to:
-  * Know when code changes in our source repository
-  * Refresh then execute our AML Pipeline if we’ve change the way we’re training
-  * We also want to check code quality – it’s code, so we want tests, linting, etc.
-  * We can also add PR processes to ensure code still compiles before merging into master (and kicking off a potentially expensive training job!)
-  * If you want to know more about Azure DevOps, go here.
+* 슬라이드: #33
+  * CI에 대해 알아보겠습니다. 다음 작업을 수행합니다.
+  * 소스 리포지토리의 코드가 변경되는 경우를 알아봅니다.
+  * 학습 방식을 변경하는 경우에는 AML 파이프라인을 새로 고칩니다.
+  * 또한 코드 품질을 확인하려고 합니다. 코드이므로 테스트, linting 등이 필요합니다.
+  * 마스터에 병합하기 전에 코드를 계속 컴파일하도록 PR 프로세스를 추가하고 잠재적으로 비용이 드는 학습 작업을 시작할 수 있습니다.
+  * Azure DevOps에 대해 자세히 알아보려면 여기로 이동하세요.
 
-* Slide: # 34
-  * The important point is – this is all code and software. The quality of your code matters even if it’s not what you’re used to writing!
+* 슬라이드: #34
+  * 중요한 점은 이것이 모두 코드와 소프트웨어라는 것입니다. 작성하는 데 익숙하지 않더라도 코드의 품질이 중요합니다!
 
-* Slide: # 35
-  * [See Demo #3](./demos/3-Show_The_Build_And_Release.md)
+* 슬라이드: #35
+  * [데모 #3 참조](./demos/3-Show_The_Build.md)
 
-* Slide: # 36
-  * But we still haven’t deployed anything – we have a newly trained model, so how do we deploy?
-  * AML Service has the ability to take a model and deploy it to ACI or AKS – we are going to make use of it, but not directly from the UI here.
+* 슬라이드: #36
+  * 아직 아무것도 배포하지 않았습니다. 새로 학습된 모델이 있는데, 어떻게 배포하나요?
+  * AML Service는 모델을 가져와서 ACI 또는 AKS에 배포할 수 있습니다. 여기서는 UI에서 직접 가져오지 않고 사용합니다.
 
-* Slide: # 37
-  * We could just add another step to the AML pipeline, but we don’t want to do that – we want a bit more control over our deployment.
+* 슬라이드: #37
+  * AML 파이프라인에 다른 단계를 추가할 수 있지만 이 작업을 수행하지 않습니다. 배포를 좀 더 강력하게 제어하고자 합니다.
 
-* Slide: # 38
-  * Continuous Delivery can absolutely be applied to ML.
-  * We’re going to use Azure Pipelines for our Continuous Delivery.
-  * When a new model is registered, we’ll kick off our deployment
-  * With Azure Pipelines, We can deploy to test and staging sites before putting our new model live
-  * We can run tests in pre-prod environments
-  * Importantly – what we’re doing is controlling our rollout using the same techniques we use for the rest of our software.
+* 슬라이드: #38
+  * 지속적인 업데이트는 ML에 적용될 수 있습니다.
+  * 지속적인 업데이트를 위해 Azure Pipelines를 사용할 것입니다.
+  * 새 모델이 등록되면 배포를 시작합니다.
+  * Azure Pipelines를 사용하면 새 모델을 배치하기 전에 사이트를 테스트 및 준비하도록 배포할 수 있습니다.
+  * 프로덕션 전 환경에서 테스트를 실행할 수 있습니다.
+  * 중요 – Microsoft는 나머지 소프트웨어에 사용하는 것과 동일한 기술을 사용하여 출시를 제어합니다.
 
-* Slide: # 39
-  * Don’t just put new models in production – you wouldn’t do it with the rest of your software, why do it with your ML?
+* 슬라이드: #39
+  * [데모 #4 참조](./demos/4-Show_The_Release.md)
 
-* Slide: # 40
-  * Here’s what we’ve created:
-  * A pipeline for training, which is an AML pipeline – specific to training our model
-  * When we get a new model, we kick off a deployment pipeline in Azure DevOps
-  * Deploy to ACI, run some tests, then if all is well, maybe deploy to AKS
+* 슬라이드: #40
+  * 새 모델을 프로덕션 환경에 배치하지 마세요. 여러분이라면 나머지 소프트웨어에서는 수행하지 않을 것입니다. ML에서 사용하는 이유는 무엇인가요?
 
-* Slide: # 41
-  * Just like the rest of our software, we don’t want to put our model in production and leave it there, assuming it will always work.
-  * So we need a retraining strategy.
-  * Either periodically, or when the data is different enough in production that we’re not getting the results we want.
-  * Azure ML Service has a solution for this
+* 슬라이드: #41
+  * 만든 내용은 다음과 같습니다.
+  * 학습용 파이프라인으로, 모델 학습에 맞는 AML 파이프라인입니다.
+  * 새 모델을 받으면 Azure DevOps에서 배포 파이프라인을 시작합니다.
+  * ACI에 배포하고 일부 테스트를 실행한 후 모든 상태가 양호하면 AKS에 배포할 수 있습니다.
 
-* Slide: # 42
-  * When we train, we can do so from a known training data set
-  * When we ultimately deploy a model to production, we can store the inputs into another dataset – our inference dataset
+* 슬라이드: #42
+  * 나머지 소프트웨어와 마찬가지로, 프로덕션 환경에 모델을 배치하지 않고 항상 작동한다고 가정하겠습니다.
+  * 따라서 재학습 전략이 필요합니다.
+  * 정기적으로 또는 프로덕션 단계에서 데이터가 다르면 원하는 결과를 얻지 못할 수 있습니다.
+  * Azure ML Service에는 이에 대한 솔루션이 있습니다.
 
-* Slide: # 43
-  * Periodically, AML Service will let us compare these two data sets looking for “data drift”. If what we’re seeing in production drifts too much from what we trained our model on, we can kick off a new training process to produce a new model.
-  * This can be done automatically
+* 슬라이드: #43
+  * 학습하는 경우 알려진 학습 데이터 세트에서 수행할 수 있습니다.
+  * 궁극적으로 프로덕션에 모델을 배포하는 경우 입력 항목을 다른 데이터 세트(유추 데이터 세트)에 저장할 수 있습니다.
 
-* Slide: # 44
-  * Of course, if we change our code, we also want to change our training pipeline, which is what we saw today.
+* 슬라이드: #44
+  * 정기적으로 AML Service는 이러한 두 데이터 세트를 비교하여 "데이터 드리프트"를 찾습니다. 프로덕션 드리프트에서 보는 내용이 모델을 학습한 내용보다 너무 많은 경우 새 모델을 생성하기 위해 새로운 학습 프로세스를 시작할 수 있습니다.
+  * 이 작업은 자동으로 수행될 수 있습니다.
 
-* Slide: # 45
-  * Importantly, this is just an example – we’re deploying our model to containers, but maybe we want to embed the models into our software
-  * Or maybe we’re not using AML at all – maybe we’re using different cognitive services – and they all have great APIs that Azure Pipelines can talk to.
-  * Ultimately, Azure Pipelines can orchestrate anything, so whatever set of tools you’re using, you can use it to manage your training.
+* 슬라이드: #45
+  * 물론, 코드를 변경하는 경우 지금까지 살펴본 학습 파이프라인도 변경하려고 합니다.
 
-* Slide: # 46
-  * In summary
+* 슬라이드: #46
+  * 중요한 점은 이것은 단지 예일 뿐입니다. 모델을 컨테이너에 배포하고 있지만 모델을 소프트웨어에 포함할 수도 있습니다.
+  * 또는 AML을 전혀 사용하지 않을 수도 있으며(다른 Cognitive Service를 사용할 수도 있음) Azure Pipelines와 통신할 수 있는 우수한 API를 가지고 있습니다.
+  * 궁극적으로는 Azure Pipelines가 어떤 항목이든 오케스트레이션할 수 있으므로 사용 중인 도구 세트 유형에 관계없이 학습을 관리하는 데 사용할 수 있습니다.
 
-* Slide: # 47
+* 슬라이드: #47
+  * 요약
 
-* Slide: # 48
+* 슬라이드: #48
 
-* Slide: # 49
+* 슬라이드: #49
+  * 이러한 링크에서 더 많은 리소스 및 소스 코드를 찾을 수 있습니다.
 
-* Slide: # 50
-  * You can find more resources and source code at these links
+* 슬라이드: #50
+  * 또한 인증을 확인하여 Microsoft Certified Azure Data Scientist Associate 및/또는 Microsoft Certified Azure AI Engineer Associate가 될 수 있습니다.
 
-* Slide: # 51
-  * You can also check our certification to become Microsoft Certified Azure Data Scientist Associate and/or Microsoft Certified Azure AI Engineer Associate
+* 슬라이드: #51
+  * Microsoft는 처음으로 모든 이벤트 참석자에게 무료 인증 시험을 제공하고 있습니다. 기본 또는 역할 기반 인증에 이 시험을 활용할 수 있습니다.
+  * 이 제품은 하나의 무료 시험을 위한 것이며 이벤트 후 최대 6개월 동안 유효합니다.
+  * 이벤트에 등록하는 데 사용한 것과 동일한 메일 주소를 사용하여 이벤트 행사장의 현장 테스트에서 이 제품을 활용할 수 있습니다. (공무원은 사용할 수 없음)
+  * Microsoft에서 홍보용 메일을 수신하도록 옵트인한 사용자에게는 행사 기간이 끝난 후 세부 정보가 포함된 메일이 발송됩니다.
 
-* Slide: # 52
-  * For the first time, Microsoft is offering FREE certification exams to all event attendees. You can take advantage of this for any Fundamentals or Role-based Certifications.
-  * The offer is for one free exam and it’s valid for up to 6 months post-event.
-  * You can utilize this at our onsite testing in the event expo hall or use it post-event using the same email address used to sign up for the event. (Gov. Officials are not eligible)
-  * Expect an email with details after the show for those of you who have opted-in to receive promotional email from Microsoft.
-
-* Slide: # 53
+* 슬라이드: #52

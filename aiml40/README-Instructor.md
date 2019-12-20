@@ -1,49 +1,48 @@
-# AIML40 - Taking Models to the Next Level with Azure Machine Learning Best Practices
+# <a name="aiml40---taking-models-to-the-next-level-with-azure-machine-learning-best-practices"></a>AIML40 - Azure Machine Learning 모범 사례를 사용하여 모델 개선
 
-## Session Abstract
+## <a name="session-abstract"></a>세션 요약
 
-Artificial Intelligence and Machine Learning can be used in many ways to increase productivity of business processes and gather meaningful insights, by analyzing images, texts and trends within unstructured flows of data. While many tasks can be solved using existing models, in some cases it is also required to train your own model for more specific tasks, or for increased accuracy. 
+인공 지능 및 기계 학습은 다양한 방식으로 비즈니스 프로세스의 생산성을 높이고, 구조화되지 않은 데이터 흐름 내에서 이미지, 텍스트 및 추세를 분석하여 의미 있는 인사이트를 수집할 수 있습니다. 기존 모델을 사용하여 많은 작업을 해결할 수 있지만 경우에 따라 더 구체적인 작업이나 정확도를 높이기 위해 고유한 모델을 학습시켜야 합니다. 
 
-In this session, we will explore the complete path of integrating text analysis intelligent services into the business processes of [Tailwind Traders](http://tailwindtraders.com), starting from pre-build models available as [cognitive services](https://azure.microsoft.com/services/cognitive-services/?WT.mc_id=msignitethetour2019-github-aiml40), up to training a third-party neural custom model for [Aspect-Based Sentiment Analysis](https://www.intel.ai/introducing-aspect-based-sentiment-analysis-in-nlp-architect/) availabe as part of [Intel NLP Architect](http://nlp_architect.nervanasys.com/) using [Azure Machine Learning Service](https://azure.microsoft.com/services/machine-learning-service/?wt.mc_id=msignitethetour2019-github-aiml40). We will talk about cases when one needs a custom model, and demonstrate quick ways to create such a model from scratch using [AutoML](https://docs.microsoft.com/azure/machine-learning/service/concept-automated-ml/?wt.mc_id=msignitethetour2019-github-aiml40), and show how to fine-tune model hyperparameters using [HyperDrive](https://docs.microsoft.com/en-us/azure/machine-learning/service/how-to-tune-hyperparameters/?wt.mc_id=msignitethetour2019-github-aiml40)
+이 세션에서는 텍스트 분석 지능형 서비스를 [Tailwind Traders](http://tailwindtraders.com)의 비즈니스 프로세스에 통합하는 전체 경로를 살펴보겠습니다. [Cognitive Services](https://azure.microsoft.com/services/cognitive-services/?WT.mc_id=msignitethetour2019-github-aiml40)로 제공되는 미리 빌드된 모델에서 시작하여 [Azure Machine Learning Service](https://azure.microsoft.com/services/machine-learning-service/?wt.mc_id=msignitethetour2019-github-aiml40)를 사용해 [Intel NLP Architect](http://nlp_architect.nervanasys.com/)의 일부로 제공되는 [측면 기반 감정 분석](https://www.intel.ai/introducing-aspect-based-sentiment-analysis-in-nlp-architect/)에 대한 타사 신경망 사용자 지정 모델까지 학습합니다. 사용자 지정 모델이 필요한 경우를 설명하고, [AutoML](https://docs.microsoft.com/azure/machine-learning/service/concept-automated-ml/?wt.mc_id=msignitethetour2019-github-aiml40)을 사용하여 이러한 모델을 처음부터 만드는 빠른 방법을 보여주며 [HyperDrive](https://docs.microsoft.com/en-us/azure/machine-learning/service/how-to-tune-hyperparameters/?wt.mc_id=msignitethetour2019-github-aiml40)를 사용하여 모델 하이퍼 매개 변수를 세밀하게 조정하는 방법을 알려드립니다.
 
-## How To Use
+## <a name="how-to-use"></a>사용 방법
 
-Welcome, Presenter! 
+환영합니다. 발표자 여러분! 
 
-We're glad you are here and look forward to your delivery of this amazing content. As an experienced presenter, we know you know *HOW* to present so this guide will focus on *WHAT* you need to present. It will provide you a full run-through of the presentation created by the presentation design team. 
+참여해 주셔서 감사드리며 이 놀라운 콘텐츠를 제공하게 되어 기쁘게 생각합니다. 숙련된 발표자로서 프레젠테이션하는 ‘방법’은 알고 계실 것이므로 이 가이드에서는 프레젠테이션해야 하는 ‘내용’에 초점을 맞추겠습니다.   프레젠테이션 디자인 팀에서 만든 전체 실행 프레젠테이션을 제공합니다. 
 
-Along with the video of the presentation, this document will link to all the assets you need to successfully present including PowerPoint slides and demo instructions &
-code.
+프레젠테이션 동영상과 함께 본 문서는 PowerPoint 슬라이드 및 데모 지침과 코드를 포함하여 성공적으로 프레젠테이션하는 데 필요한 모든 자산에 연결됩니다.
 
-1.  Read document in its entirety.
-2.  Watch the video presentation
-3.  Ask questions of the Lead Presenter
+1.  문서 전체를 읽습니다.
+2.  동영상 프레젠테이션을 시청합니다.
+3.  리드 발표자에 대해 질문합니다.
 
-## Assets in Train-The-Trainer kit
+## <a name="assets-in-train-the-trainer-kit"></a>강사 키트 학습의 자산
 
-- This guide
-- PowerPoint presentation including notes for each slide [here](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml40/aiml40.pptx) or [presentations.md](https://github.com/microsoft/ignite-learning-paths-training-aiml/blob/master/aiml40/presentations.md)
-- Full-length recording of presentation [here](https://youtu.be/If9IQm3gWVQ)
-- Individual recordings of stage-ready hands-on demos:
-    * Demo 1 - [Cognitive Services Text Analytics](https://youtu.be/QJxjm5BirOA)
-    * Demo 2 - [Automated Machine Learning](https://youtu.be/qrstXN6TLZk)
-    * Demo 3 - [Azure Machine Learning SDK and Hyperdrive](https://youtu.be/sccNTPO3PwU)
-- Demo Guide [here](Demo.md)
+- 이 가이드
+- 각 슬라이드에 대한 메모를 포함하는 PowerPoint 프레젠테이션은 [여기](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml40/aiml40.pptx) 또는 [presentations.md](https://github.com/microsoft/ignite-learning-paths-training-aiml/blob/master/aiml40/presentations.md)에 있습니다.
+- 프레젠테이션의 전체 녹화는 [여기](https://youtu.be/If9IQm3gWVQ)에서 제공됩니다.
+- 발표 준비가 완료된 실습 데모의 개별 녹화는 다음과 같습니다.
+    * 데모 1 - [Cognitive Services Text Analytics](https://youtu.be/QJxjm5BirOA)
+    * 데모 2 - [자동화된 Machine Learning](https://youtu.be/qrstXN6TLZk)
+    * 데모 3 - [Azure Machine Learning SDK 및 Hyperdrive](https://youtu.be/sccNTPO3PwU)
+- 데모 가이드 [여기](Demo.md)
 
-## Become a Trained Presenter
+## <a name="become-a-trained-presenter"></a>숙련된 발표자 되기
 
-To become a *Trained Presenter*, contact [scalablecontent@microsoft.com](mailto:scalablecontent@microsoft.com). In your email please include:
+*숙련된 발표자*가 되려면 [scalablecontent@microsoft.com](mailto:scalablecontent@microsoft.com)에 문의하세요. 메일에 다음을 포함해야 합니다.
 
-- Complete name:
-- The code of this presentation: \<Session Code (ex:aiml40)\>
-- Link (ex: unlisted YouTube video) to a video of you presenting (~10 minutes). 
+- 전체 이름:
+- 이 프레젠테이션의 코드: \<세션 코드(예: aiml40)\>
+- 프레젠테이션하는 동영상(10분) 링크(예: 목록에 없는 YouTube 동영상). 
 
-> It doesn't need to be this content, the importance is to show your presenter skills
+> 이 콘텐츠여야할 필요는 없습니다. 발표자의 발표 기술을 보여주는 것이 중요합니다.
 
 
-## Trained Presenters
+## <a name="trained-presenters"></a>숙련된 발표자
 
-Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+아래의 훌륭한 분들께 감사의 말씀을 전합니다([이모지 키](https://allcontributors.org/docs/en/emoji-key)).
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore -->
@@ -53,12 +52,17 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/aribornstein">
         <img src="https://avatars3.githubusercontent.com/u/3045407?s=460&v=4" width="100px;" alt="Ari Bornstein"/><br />
         <sub><b>Ari Bornstein</b></sub></a><br />
-            <a href="" title="talk">📢</a>
+            <a href="" title="발표">📢</a>
     </td>
     <td align="center"><a href="https://github.com/shwars">
         <img src="https://avatars0.githubusercontent.com/u/2892110?s=460&v=4" width="100px;" alt="Dmitri Soshnikov"/><br />
         <sub><b>Dmitri Soshnikov</b></sub></a><br />
-            <a href="https://github.com/microsoft/ignite-learning-paths-training-aiml/pull/4" title="documentation">📖</a> 
+            <a href="https://github.com/microsoft/ignite-learning-paths-training-aiml/pull/4" title="설명서">📖</a> 
+    </td>
+        <td align="center"><a href="https://github.com/amynic">
+        <img src="https://avatars3.githubusercontent.com/u/13828867?s=400&u=f6aca8528d65d6c191114d3a7328b46137eda162&v=4" width="100px;" alt="Amy Boyd"/><br />
+        <sub><b>Amy Boyd</b></sub></a><br />
+            <a href="https://github.com/microsoft/ignite-learning-paths-training-aiml/blob/master/aiml30/presentations.md" title="발표">📢</a>
     </td>
 </tr></table>
 

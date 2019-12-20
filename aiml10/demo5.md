@@ -1,9 +1,9 @@
-## Demo 5 - Knowledge Store
+## <a name="demo-5---knowledge-store"></a>데모 5 - 지식 저장소
 
-[![Demo 5](images/demo4.png)](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/videos/Demo5.mp4 "Demo 5")
+[![데모 5](images/demo4.png)](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/videos/Demo5.mp4 "데모 5")
 
-## Summary
-In this exercise we explore the data pushed into the Knowledge Store by the Skillset created in the [previous exercise](demo4.md). This projection was part of the `Skillset` definition in the `Create Skillset` PUT request executed in previously. The portion of what was submitted to the service is as follows:
+## <a name="summary"></a>요약
+이 연습에서는 [이전 연습](demo4.md)에서 만든 기술 세트를 통해 지식 저장소로 푸시된 데이터를 살펴봅니다. 이 프로젝션은 이전에 실행된 `Create Skillset` PUT 요청의 `Skillset` 정의에 포함되어 있습니다. 서비스에 제출된 부분은 다음과 같습니다.
 
 ```json
 "knowledgeStore": { 
@@ -18,9 +18,9 @@ In this exercise we explore the data pushed into the Knowledge Store by the Skil
     }]
 }
 ```
-This used the `storageConnectionString` as the target of the projections. In this case it uses the Azure Storage tables that are part of our storage service in order to save the data.
+프로젝션의 대상으로 `storageConnectionString`을 사용했습니다. 이 경우 데이터를 저장하기 위해 스토리지 서비스의 일부인 Azure Storage 테이블을 사용합니다.
 
-## What to do
-The only thing left to do is explore how the indexer used the skillset to project the data into our knowledge store. This can be done using the Microsoft [Azure Storage Explorer](https://docs.microsoft.com/en-us/azure/vs-azure-tools-storage-explorer-blobs?WT.mc_id=msignitethetour2019-github-aiml10):
+## <a name="what-to-do"></a>수행할 작업
+남은 작업은 인덱서가 기술 세트를 사용하여 데이터를 지식 저장소에 프로젝션하는 방법을 알아보는 것입니다. 이 작업은 Microsoft [Azure Storage Explorer](https://docs.microsoft.com/en-us/azure/vs-azure-tools-storage-explorer-blobs?WT.mc_id=msignitethetour2019-github-aiml10)를 사용하여 수행할 수 있습니다.
 
-![Knowledge Store](images/knowledge_store.png "Knowledge Store")
+![지식 저장소](images/knowledge_store.png "지식 저장소")

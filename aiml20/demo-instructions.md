@@ -1,66 +1,57 @@
-# Demo Instructions for Presenters
+# <a name="demo-instructions-for-presenters"></a>발표자를 위한 데모 지침
 
-Demo scripts are made available to everyone in this repo.
+데모 스크립트는 이 리포지토리의 모든 사용자가 사용할 수 있습니다.
 
-You should follow the same scripts for the presentations, but with the additional
-notes given below.
+프레젠테이션을 위한 동일한 스크립트를 따라야 하지만 아래에 추가 노트를 제공합니다.
 
-Recordings of demos are also available as videos in the [PPT
-Slides](presentations.md) (and also some additional videos linked below). You
-can use the embedded videos instead of a live demo in the case of lack of
-internet or other technical issues. (In this case, we recommend muting the audio
-and speaking to the video yourself.) [Speaker notes](speaker-notes.md) are timed
-to the events in the embedded videos.
+데모 기록은 [PPT 슬라이드](presentations.md)(및 아래에 링크된 몇 가지 추가 동영상)에서도 동영상으로 제공됩니다. 인터넷 문제나 기타 기술적인 문제가 발생한 경우 라이브 데모 대신 포함된 동영상을 사용할 수 있습니다. (이 경우 오디오를 음소거하고 동영상에 직접 말하는 것이 좋습니다.) [발표자 노트](speaker-notes.md)는 포함된 동영상의 이벤트에 시간이 맞춰집니다.
 
-## DEMO Setup
+## <a name="demo-setup"></a>데모 설정
 
-Before your presentation, run all of the instructions in the script below.
+프레젠테이션 전에 아래 스크립트의 모든 지침을 실행합니다.
 
-[Demo script](DEMO%20Setup.md)
+[데모 스크립트](DEMO%20Setup.md)
 
-## DEMO Computer Vision
+## <a name="demo-computer-vision"></a>DEMO Computer Vision
 
-[Demo script](DEMO%20Computer%20Vision.md)
+[데모 스크립트](DEMO%20Computer%20Vision.md)
 
-### SLIDE: DEMO / shop by photo
+### <a name="slide-demo--shop-by-photo"></a>슬라이드: 데모 / 사진 쇼핑
 
-Note the actual instructions for this demo are [here](DEMO%20ONNX%20deployment.md#defining-the-problem-shop-by-photo-doesnt-work-right).
+이 데모에 대한 실제 지침은 [여기](DEMO%20ONNX%20deployment.md#defining-the-problem-shop-by-photo-doesnt-work-right)에 있습니다.
 
-Additional demo video: https://www.dropbox.com/s/ylxjuifg9x0h4n3/ITT-aiml20-demo1.mp4?dl=0 
+추가 데모 동영상: https://www.dropbox.com/s/ylxjuifg9x0h4n3/ITT-aiml20-demo1.mp4?dl=0 
 
-### SLIDE: DEMO / cognitive services computer vision
+### <a name="slide-demo--cognitive-services-computer-vision"></a>슬라이드: DEMO / 인지 서비스 컴퓨터 비전
 
-[Demo script](DEMO%20Computer%20Vision.md#using-computer-vision-via-the-web-interface)
+[데모 스크립트](DEMO%20Computer%20Vision.md#using-computer-vision-via-the-web-interface)
 
-## DEMO Custom Vision
+## <a name="demo-custom-vision"></a>데모 Custom Vision
 
-[Demo script](DEMO%20Custom%20Vision.md)
+[데모 스크립트](DEMO%20Custom%20Vision.md)
 
-Do the first part of the demo ahead of time.
+데모의 첫 번째 부분을 미리 수행합니다.
 
-### SLIDE: DEMO / Customized object recognition
+### <a name="slide-demo--customized-object-recognition"></a>슬라이드: 데모 / 사용자 지정 개체 인식
 
-Start the live demo at "[Add images and train a model](DEMO%20Custom%20Vision.md#add-images-and-train-a-model)".
+"[이미지 추가 및 모델 학습](DEMO%20Custom%20Vision.md#add-images-and-train-a-model)"에서 라이브 데모를 시작합니다.
 
-## DEMO ONNX Deployment
+## <a name="demo-onnx-deployment"></a>데모 ONNX 배포
 
-[Demo Script](DEMO%20ONNX%20deployment.md)
+[데모 스크립트](DEMO%20ONNX%20deployment.md)
 
-Run the section "[Load the simple ONNX model](DEMO%20ONNX%20deployment.md#load-the-simple-onnx-model)" ahead of time.
+"[간단한 ONNX 모델 로드](DEMO%20ONNX%20deployment.md#load-the-simple-onnx-model)" 섹션을 미리 실행합니다.
 
-You did the section "[Defining the problem](DEMO%20ONNX%20deployment.md#defining-the-problem-shop-by-photo-doesnt-work-right)" at the beginning of the presentation, so skip that.
+프레젠테이션을 시작할 때 "[문제 정의](DEMO%20ONNX%20deployment.md#defining-the-problem-shop-by-photo-doesnt-work-right)" 섹션을 완료했으므로 건너뜁니다.
 
-### SLIDE: DEMO / ONNX
+### <a name="slide-demo--onnx"></a>슬라이드: 데모 / ONNX
 
-Start the live demo at "Update the ONNX model in the Tailwind Traders website".
+"Tailwind Traders 웹 사이트의 ONNX 모델 업데이트"에서 라이브 데모를 시작합니다.
 
-For viewing in Netron, you can view the file you exported from Custom Vision
-directly, or you can use the pre-prepared one from the repo at `ONNX/custom model/products.onnx`
+Netron에서 볼 경우 Custom Vision에서 직접 내보낸 파일을 보거나 리포지토리에서 사전 준비된 파일을 `ONNX/custom model/products.onnx`에서 사용할 수 있습니다.
 
-Note that when you deploy the file it **must** be called `products.onnx`, so
-it's easiest to take the pre-prepared file by that name from your desktop,
-rather than re-naming the exported file.
+이 파일을 배포할 때는 **반드시** 이름을 `products.onnx`로 지정해야 합니다. 내보낸 파일의 이름을 바꾸는 것보다 그 이름을 사용해 사전 준비된 파일을 데스크톱에서 가져오는 것이 가장 간편합니다.
 
-### SLIDE: DEMO / Personalizer
+### <a name="slide-demo--personalizer"></a>슬라이드: DEMO / Personalizer
 
-[Demo script](DEMO%20Personalizer.md)
+[데모 스크립트](DEMO%20Personalizer.md)

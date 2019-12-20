@@ -1,22 +1,23 @@
-# Show the Release Process
+# <a name="show-the-release-process"></a>릴리스 프로세스 표시
 
-## Automating the Manual Process
+> 💡 데모를 시작하기 전에 [설정](../DEMO.md)을 완료해야 합니다.
 
-Talking Points:
+## <a name="automating-the-manual-process"></a>수동 프로세스 자동화
 
-* So with those points in mind, let’s look at the build definition:
-* Rather than doing it in Jupyter Notebooks (like last demo), let’s make it just the code
+핵심 요지:
 
-Demo :
+* 이러한 점을 염두에 두고 빌드 정의를 살펴보겠습니다.
+* 마지막 데모처럼 Jupyter Notebooks에서 수행하지 않고 코드를 만들어 보겠습니다.
 
-* Let’s look at the Release:
-  * Show the Release Definition
-  * Show the extension for Azure DevOps and that it adds a new artifact type you can set CD on
-  * Show the important task – deploying to ACI (expand Deployment Options)
-  * Explain that if we wanted to (and we should), we can clone that stage, and maybe deploy to AKS or a different location. We can add gates or manual approvals or gradual rollouts.
-* Now we’ve deployed, let’s look at the results:
-  *Try uploading the same images again and see that the results are different. A little better, but not perfect – maybe we want to do some more training before releasing this into the wild.
+데모:
 
-## Example Demo
+* 릴리스를 살펴보겠습니다.
+  * 릴리스 정의를 표시합니다.
+  * Azure DevOps의 확장을 표시하고 CD에 설정할 수 있는 새 아티팩트 형식을 추가합니다.
+  * 중요한 작업 표시 – ACI에 배포(배포 옵션 펼치기)
+  * 원하는 경우(및 필요한 경우) 해당 단계를 복제하고 AKS 또는 다른 위치에 배포할 수 있음을 설명합니다. 게이트나 수동 승인 또는 점진적 출시를 추가할 수 있습니다.
+* 배포가 완료되어 결과를 살펴보겠습니다. *동일한 이미지를 다시 업로드해서 결과가 다른지 확인하세요. 약간 나아졌지만 완벽하지는 않습니다. 실전에서 릴리스하기 전에 좀 더 학습을 진행할 수도 있습니다.
 
-* [Dry run starting at 24:44](https://youtu.be/UgM8_4fAni8?t=1951)
+## <a name="example-demo"></a>예제 데모
+
+* [24:44분부터 예행 연습 시작](https://youtu.be/UgM8_4fAni8?t=1951)

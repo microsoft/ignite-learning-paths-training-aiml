@@ -1,80 +1,69 @@
-# DEMO: Custom Vision
+# <a name="demo-custom-vision"></a>데모: Custom Vision
 
-In this demo, we create a custom vision model using the service at
-customvision.ai.
+> 💡 데모를 시작하기 전에 [설정](https://github.com/microsoft/ignite-learning-paths-training-aiml/blob/master/aiml20/DEMO%20Setup.md)을 완료해야 합니다.
 
-## Create a custom model project with Custom Vision
+이 데모에서는 customvision.ai에서 서비스를 사용하여 Custom Vision 모델을 만듭니다.
 
-TIP: You can do this section ahead of time, to save time in a live demo.
+## <a name="create-a-custom-model-project-with-custom-vision"></a>Custom Vision을 사용하여 사용자 지정 모델 프로젝트 만들기
 
-1. Sign into [Custom Vision](https://customvision.ai) and create a new project.
-   [Follow the instructions
-   here](https://docs.microsoft.com/azure/cognitive-services/custom-vision-service/getting-started-build-a-classifier?WT.mc_id=msignitethetour2019-github-aiml20).
+팁: 라이브 데모에서 시간을 절약하기 위해 이 섹션을 미리 수행할 수 있습니다.
 
-1. Your new project should have the following settings:
+1. [Custom Vision](https://customvision.ai)에 로그인하고 새 프로젝트를 만듭니다.
+   [여기에 나와 있는 지침을 따르세요](https://docs.microsoft.com/azure/cognitive-services/custom-vision-service/getting-started-build-a-classifier?WT.mc_id=msignitethetour2019-github-aiml20).
 
-    - Name: Tools
-    - Description: Products sold by Tailwind   Traders
-    - Resource: aiml20-cs-resource
-    - Project Type: classification
-    - Classification Types: Multiclass
-    - Domains: Retail (compact)
-    - Export capabilities: Basic Platforms
+1. 새 프로젝트에는 다음 설정이 포함되어야 합니다.
 
-1. In the "Tags" tool in the left side, use the "+" button to add the following tags:
+    - 이름: 도구
+    - 설명: Tailwind Traders에서 판매하는 제품
+    - 리소스: aiml20-cs-resource
+    - 프로젝트 형식: 분류
+    - 분류 형식: 다중 클래스
+    - 도메인: 소매(압축)
+    - 기능 내보내기: 기본 플랫폼
 
-    - drill
-    - hammer
-    - pliers
-    - screwdriver
+1. 왼쪽의 “태그” 도구에서 “+” 단추를 사용하여 다음 태그를 추가합니다.
 
-1. We will now add images for each tag from the corresponding folder in "CV Training Images". Here's how to do it for "drill"
+    - 드릴
+    - 망치
+    - 플라이어
+    - 스크루드라이버
 
-    - Click "Add Images" in the top row
-    - Browse to CV Training Images / drills
-    - Select all files: click one file, then press Control-A
-    - Click Open
-    - In the "Image Upload" dialog that appears next, select "drill" in "My Tags" and then click "Upload 16 Files"
-    - repeat this process for the tags: hammer, pliers, screwdriver (we will do "hard hat" later)
+1. 이제 “CV 학습 이미지”의 해당 폴더에서 각 태그에 대한 이미지를 추가합니다. “드릴”의 경우 이 작업을 수행하는 방법은 다음과 같습니다.
 
-## Add images and train a model
+    - 상단 행에서 “이미지 추가”를 클릭합니다.
+    - CV 학습 이미지/드릴로 이동합니다.
+    - 모든 파일 선택: 한 파일을 클릭한 다음 Ctrl 키를 누릅니다.
+    - [열기]를 클릭합니다.
+    - 다음에 표시되는 “이미지 업로드” 대화 상자에서 “내 태그”의 “드릴”을 선택한 후 “16개 파일 업로드”를 클릭합니다.
+    - 망치, 플라이어, 스크루드라이버(“안전모”는 나중에 수행함) 태그에 대해 이 프로세스를 반복합니다.
 
-At Ignite Tour, the prior steps were all done ahead of time in preparation. Only
-the remaining steps were done live, to save time.
+## <a name="add-images-and-train-a-model"></a>이미지 추가 및 모델 학습
 
-1. If you haven't already, sign into customvision.ai and open your "tools" project.
+Ignite 둘러보기에서 이전 단계는 모두 준비된 후에 미리 수행되었습니다. 시간을 절약하기 위해 나머지 단계만 실시간으로 수행됩니다.
 
-1. This project has already been provided with images of drills, hammers, pliers, and screwdrivers. Let's add some images of hard hats as well.
+1. 아직 로그인하지 않은 경우 customvision.ai에 로그인하고 “도구” 프로젝트를 엽니다.
 
-- Click "Add Images" in the top row
-- Browse to CV Training Images / drills
-- Select all files: click one file, then press Control-A
-- Click Open
-- In the "Image Upload" dialog that appears next, select "hard hat" in "My Tags" and then click "Upload 16 Files"
+1. 이 프로젝트에는 이미 드릴, 망치, 플라이어 및 스크루드라이버 이미지가 함께 제공되어 있습니다. 안전모 이미지도 추가해봅시다.
 
-1. Click "Performance" in the top menu bar, and then click the green "Train" button. Choose "Quick Training" and then click "Train"
+- 상단 행에서 “이미지 추가”를 클릭합니다.
+- CV 학습 이미지/드릴로 이동합니다.
+- 모든 파일 선택: 한 파일을 클릭한 다음 Ctrl 키를 누릅니다.
+- [열기]를 클릭합니다.
+- 다음에 표시되는 “이미지 업로드” 대화 상자에서 “내 태그”의 “안전모”를 선택한 후 “16개 파일 업로드”를 클릭합니다.
 
-1. Click on the most recent iteration in the left pane to see the results. You
-   should have 90.9% Precision (how many of our training images does the model
-   predict correctly?), 88.2% Recall (when we generate a prediction, is it
-   correct?), and 98.7% AP (overall measure). Note that these depend on the
-   probability threshold -- make this low if you want to avoid false positives.
-   For our retail app, it's safe to make it high.
+1. 상단 메뉴 모음에서 “성능”을 클릭한 후 녹색 “학습” 단추를 클릭합니다. “빠른 학습”을 선택한 후 “학습”을 클릭합니다.
 
-1. Test out the model with a new picture. Click "Quick Test" and "Browse Local
-   Files", and then choose "test images / man in hardhat.jpg". See that it
-   identifies as a hard hat with 99.9% probability. Try the same with "test images / drill.jpg", which is also identified correctly.
+1. 왼쪽 창에서 가장 최근의 반복을 클릭하여 결과를 확인합니다. 90.9%의 정밀도(모델이 학습 이미지를 얼마나 정확하게 예측하는가), 88.2%의 회귀(예측을 생성할 때 정확한가) 및 98.7%의 AP(전체 측정 값)를 포함해야 합니다. 이는 확률 임계값에 따라 다릅니다. 가양성을 방지하려면 이 값을 낮게 설정합니다.
+   소매 앱의 경우에는 높게 설정하는 것이 안전합니다.
 
-Now we will save the model in the ONNX format for integration into the Tailwind
-Traders app.
+1. 새 사진으로 모델을 테스트합니다. “빠른 테스트” 및 “로컬 파일 찾아보기”를 클릭한 다음 “테스트 이미지/man in hardhat.jpg”를 선택합니다. 99.9%의 확률로 안전모가 식별되는지 확인합니다. “테스트 이미지/drill.jpg”로 동일하게 시도하여 올바르게 식별되는지 확인합니다.
 
-1. Click Export, and choose "ONNX". Note the other platform-specific formats
-   available as well.
+이제 Tailwind Traders 앱에 통합하기 위해 모델을 ONNX 형식으로 저장합니다.
 
-1. Select the version ONNX 1.2, and then click Export. The TWT app expects a
-   file called products.onnx, so we'll use the one that's already saved in the
-   repo.
+1. [내보내기]를 클릭하고 “ONNX”를 선택합니다. 다른 플랫폼 전용 형식도 사용할 수 있습니다.
 
-## Next Step
+1. 버전 ONNX 1.2를 선택하고 [내보내기]를 클릭합니다. TWT 앱에는 products.onnx라는 파일이 필요하므로 리포지토리에 이미 저장되어 있는 것을 사용하겠습니다.
 
-[ONNX Deployment](DEMO%20ONNX%20deployment.md)
+## <a name="next-step"></a>다음 단계
+
+[ONNX 배포](DEMO%20ONNX%20deployment.md)

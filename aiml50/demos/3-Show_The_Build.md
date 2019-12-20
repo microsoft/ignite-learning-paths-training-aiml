@@ -1,27 +1,29 @@
-# Show the Build in Progress
+# <a name="show-the-build-in-progress"></a>진행 중인 빌드 표시
 
-## Automating the Manual Process
+> 💡 데모를 시작하기 전에 [설정](../DEMO.md)을 완료해야 합니다.
 
-Talking Points:
+## <a name="automating-the-manual-process"></a>수동 프로세스 자동화
 
-* So with those points in mind, let’s look at the build definition:
-* Rather than doing it in Jupyter Notebooks (like last demo), let’s make it just the code
+핵심 요지:
 
-Demo :
+* 이러한 점을 염두에 두고 빌드 정의를 살펴보겠습니다.
+* 마지막 데모처럼 Jupyter Notebooks에서 수행하지 않고 코드를 만들어 보겠습니다.
 
-* Start in Azure DevOps in the browser and show build
-  * Start with the Pipeline
-  * Show last build with our change from the start
-  * Highlight the job summary
-  * look at the log for "Recreate and submit the pipeline"
-* Switch to VSCode and show the same code in a pure python file
-  * show the imports
-  * show the added arguments
-  * walk through the remainder and draw parallels to the notebook flow
-* Show the YAML build definition in VSCode if you like
-* Switch to the ML UI and show the AML Pipeline that ran, drill in and see the tasks that ran and show stats
-* Show the new model that got produced
+데모:
 
-## Example Demo
+* 브라우저에서 Azure DevOps를 시작하고 빌드 표시
+  * 파이프라인을 시작합니다.
+  * 처음부터 변경하여 마지막 빌드를 표시합니다.
+  * 작업 요약을 강조 표시합니다.
+  * “파이프라인 다시 만들기 및 제출”에 대한 로그를 확인합니다.
+* VSCode로 전환하고 일반 python 파일에 동일한 코드를 표시합니다.
+  * 가져온 항목을 표시합니다.
+  * 추가된 인수를 표시합니다.
+  * 나머지 부분을 살펴보고 Notebook 흐름에 맞춰 병렬 배치합니다.
+* 원하는 경우 VSCode에 YAML 빌드 정의를 표시합니다.
+* ML UI로 전환하고, 실행된 AML 파이프라인을 표시하며, 통계를 실행하고 보여주는 작업을 반복적으로 연습합니다.
+* 생성된 새 모델을 표시합니다.
 
-* [Dry run starting at 24:44](https://youtu.be/UgM8_4fAni8?t=1484)
+## <a name="example-demo"></a>예제 데모
+
+* [24:44분부터 예행 연습 시작](https://youtu.be/UgM8_4fAni8?t=1484)

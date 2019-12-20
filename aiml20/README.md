@@ -1,84 +1,79 @@
-# AIML20: Using Pre-Built AI to Solve Business Challenges
+# <a name="aiml20-using-pre-built-ai-to-solve-business-challenges"></a>AIML20: 미리 빌드된 AI를 사용하여 비즈니스 과제 해결
 
-This is the repository supporting the Microsoft Ignite 2019 and Microsoft Ignite
-the Tour 2019-2020 talk, "Using Pre-Built AI to Solve Business Challenges". Here
-you will find links to the resources mentioned in the talk, and the code and
-scripts you will need to recreate the demos given in the talk.
+Microsoft Ignite 2019 및 Microsoft Ignite Tour 2019-2020 대담인 “미리 빌드된 AI를 사용하여 비즈니스 과제 해결”을 지원하는 리포지토리입니다. 여기서는 설명에서 언급한 리소스 링크 및 제공된 데모를 다시 만드는 데 필요한 코드와 스크립트를 찾을 수 있습니다.
 
-[Download the slides for the AIML20 presentation here](presentations.md). (Use
-the first link for the latest version.) The slides are in PPT format and include
-detailed speaker notes and embedded demo videos.
+* [AIML20：使用预先构建的 AI 解决业务难题](https://github.com/microsoft/ignite-learning-paths-training-aiml/tree/master-SimplifiedChinese/aiml20)
+* [AIML20: Uso da IA pré-criada para resolver desafios de negócios](https://github.com/microsoft/ignite-learning-paths-training-aiml/tree/master-PortugueseBrazil/aiml20)
+* [AIML20:事前構築済み AI を使用してビジネスの課題を解決する](https://github.com/microsoft/ignite-learning-paths-training-aiml/tree/master-Japanese/aiml20)
 
-[Watch a recording of this
-presentation](https://myignite.techcommunity.microsoft.com/sessions/82987?source=sessions)
-from Microsoft Ignite Orlando, November 7 2019.
+## <a name="session-abstract"></a>세션 요약
 
-Short-link to these resources: [aka.ms/AIML20repo](https://aka.ms/AIML20repo). 
+**미리 빌드된 AI를 사용하여 비즈니스 과제 해결**
 
-[Resources for presenters of this talk](README-Presenters.md) are also provided.
+요약: 데이터 기반 회사인 Tailwind Traders에서는 비즈니스 프로세스 개선과 고객 만족을 위한 인공 지능 사용의 중요성을 잘 알고 있습니다. AI 팀에 투자하기 전에 Tailwind Traders의 기존 개발자들은 미리 빌드된 AI 기술을 사용하여 몇 가지 단기적 성공을 보여줄 수 있었습니다. 이 세션에서는 Azure Cognitive Services를 사용하여 소매 데이터에서 인사이트를 추출하는 방법을 살펴봅니다. Computer Vision 뒤에 있는 신경망으로 이동하여 사용자 지정 이미지 인식 애플리케이션을 위해 미리 빌드된 AI를 고유한 이미지로 보강할 수 있는 방법을 보여줍니다.
 
-## Session Abstract
+## <a name="table-of-content"></a>목차
+ 
 
-**Using Pre-Built AI to Solve Business Challenges**
+| 리소스          | 링크                            |
+|-------------------|----------------------------------|
+| PowerPoint        | - [프레젠테이션](presentations.md) |
+| 동영상            | - [예행 연습](https://youtu.be/jRO-5g-HYuU) <br/>- [Microsoft Ignite 올랜도 녹화](https://myignite.techcommunity.microsoft.com/sessions/82987?source=sessions) |
+| 데모             | - [데모 1 - 설정](https://github.com/microsoft/ignite-learning-paths-training-aiml/blob/master/aiml20/DEMO%20Setup.md) <br/>- [데모 2 - Computer Vision](https://github.com/microsoft/ignite-learning-paths-training-aiml/blob/master/aiml20/DEMO%20Computer%20Vision.md) <br/>- [데모 3 - Custom Vision](https://github.com/microsoft/ignite-learning-paths-training-aiml/blob/master/aiml20/DEMO%20Custom%20Vision.md)<br/>- [데모 4 - ONNX 배포](https://github.com/microsoft/ignite-learning-paths-training-aiml/blob/master/aiml20/DEMO%20ONNX%20deployment.md) <br/>- [ 5 - Personalizer](https://github.com/microsoft/ignite-learning-paths-training-aiml/blob/master/aiml20/DEMO%20Personalizer.md) | 
 
-Abstract: As a data-driven company, Tailwind Traders understands the importance of using Artificial Intelligence to improve business processes and delight customers. Before investing in an AI team, their existing developers were able to demonstrate some quick wins using pre-built AI technologies. In this session, we will show how you can use Azure Cognitive Services to extract insights from retail data. We’ll go into the neural networks behind computer vision, and show how you can augment the pre-built AI with your own images for custom image recognition applications.
+[여기에서 AIML20 프레젠테이션의 슬라이드를 다운로드합니다](presentations.md). (최신 버전의 첫 번째 링크를 사용합니다.) 슬라이드는 PPT 형식이며 자세한 발표자 노트와 포함된 데모 동영상이 있습니다.
 
-## Technologies used
+이 리소스에 대한 짧은 링크: [aka.ms/AIML20repo](https://aka.ms/AIML20repo) 
+
+[이 설명의 발표자 리소스](README-Presenters.md)도 제공됩니다.
+
+
+
+## <a name="technologies-used"></a>사용 기술
 
 * [Azure Cognitive Services](https://docs.microsoft.com/en-us/azure/cognitive-services/?WT.mc_id=msignitethetour2019-github-aiml20)
 * [Azure Cloud Shell](https://docs.microsoft.com/en-us/azure/cloud-shell/overview?WT.mc_id=msignitethetour2019-github-aiml20)
-* [Azure Command Line Interface (CLI)](https://docs.microsoft.com/en-us/cli/azure/?view=azure-cli-latest?WT.mc_id=msignitethetour2019-github-aiml20)
+* [Azure CLI(명령줄 인터페이스)](https://docs.microsoft.com/en-us/cli/azure/?view=azure-cli-latest?WT.mc_id=msignitethetour2019-github-aiml20)
 * [ONNX](https://github.com/onnx/onnx)
 * [Visual Studio Code](https://code.visualstudio.com/)
 
-## Other resources mentioned in talk
+## <a name="other-resources-mentioned-in-talk"></a>설명에 언급된 기타 리소스
 
-* How Neural Networks Work, by Brandon Rohrer: http://brohrer.github.io/blog.html
-* XKCD "Tasks": https://xkcd.com/1425
+* 신경망 작동 방식(Brandon Rohrer): http://brohrer.github.io/blog.html
+* XKCD “작업”: https://xkcd.com/1425
 
-### Azure Cognitive Services docs and apps
+### <a name="azure-cognitive-services-docs-and-apps"></a>Azure Cognitive Services 문서 및 앱
 
 * Cognitive Services Computer Vision: [https://aka.ms/try-computervision](https://azure.microsoft.com/en-us/services/cognitive-services/computer-vision/?WT.mc_id=ignitetour-talk-davidsmi)  
-* Cognitive Services Custom Vision: [Documentation](https://docs.microsoft.com/en-us/azure/cognitive-services/custom-vision-service/?WT.mc_id=ignitethetour-github-davidsmi) and application at [https://customvision.ai](https://www.customvision.ai/?WT.mc_id=ignitethetour-github-davidsmi)
-* ONNX Runtime: https://github.com/microsoft/onnxruntime
+* Cognitive Services Custom Vision: [설명서](https://docs.microsoft.com/en-us/azure/cognitive-services/custom-vision-service/?WT.mc_id=ignitethetour-github-davidsmi) 및 애플리케이션: [https://customvision.ai](https://www.customvision.ai/?WT.mc_id=ignitethetour-github-davidsmi)
+* ONNX 런타임: https://github.com/microsoft/onnxruntime
 * Cognitive Services Personalizer: [https://aka.ms/personalizer-intro](https://docs.microsoft.com/en-us/azure/cognitive-services/personalizer/?WT.mc_id=msignitethetour2019-github-aiml20)
-* Reinforcement Learning with Personalizer: https://aka.ms/personalizerdemo
-* Cognitive Services in containers: https://aka.ms/cs-containers
+* Personalizer를 사용하여 보충 학습: https://aka.ms/personalizerdemo
+* 컨테이너에서의 Cognitive Services: https://aka.ms/cs-containers
 
-### Cognitive Services information
+### <a name="cognitive-services-information"></a>Cognitive Services 정보
 
-* Cognitive Services pricing: https://aka.ms/cs-pricing 
-* Cognitive Services compliance and privacy: https://aka.ms/az-compliance
-* Microsoft's approach to ethical AI: [https://microsoft.com/AI/our-approach-to-ai](https://www.microsoft.com/AI/our-approach-to-ai?rtc=1&WT.mc_id=msignitethetour2019-github-aiml20)
-* Cognitive Services training courses in Microsoft Learn: https://aka.ms/AIML20MSLearnCollection
-* Microsoft Certified Azure Data Scientist Associate: https://aka.ms/DataScientistCert 
-* Microsoft Certified Azure AI Engineer Associate https://aka.ms/AIEngineerCert
+* Cognitive Services 가격: https://aka.ms/cs-pricing 
+* Cognitive Services 규정 준수 및 개인 정보: https://aka.ms/az-compliance
+* 윤리적 AI에 대한 Microsoft의 접근 방식: [https://microsoft.com/AI/our-approach-to-ai](https://www.microsoft.com/AI/our-approach-to-ai?rtc=1&WT.mc_id=msignitethetour2019-github-aiml20)
+* Microsoft Learn의 Cognitive Services 학습 과정: https://aka.ms/AIML20MSLearnCollection
+* Microsoft Certified Azure 데이터 과학자 협회: https://aka.ms/DataScientistCert 
+* Microsoft Certified Azure AI 엔지니어 협회 https://aka.ms/AIEngineerCert
 
-## Demonstrations
+## <a name="demonstrations"></a>데모
 
-Follow the links below for details on how to recreate the demos given in the
-talk. You will need an Azure Subscription to run these demos; if you don't have
-one yet, here is a link for [$200 Free Azure Credits for new
-subscribers](https://aka.ms/azure-free-credits).
+설명에 제공된 데모를 다시 만드는 방법에 관한 자세한 내용은 아래 링크를 참조하세요. 이러한 데모를 실행하려면 Azure Subscription이 필요합니다. 아직 계정이 없는 경우 [새 구독자를 위한 200 달러의 무료 Azure 크레딧](https://aka.ms/azure-free-credits) 링크가 있습니다.
 
-1. [Setup](DEMO%20Setup.md): Create accounts and deploy and configure resources
-   to support the demos below. Follow these instructions before attempting any
-   of the demos below.
+1. [설정](DEMO%20Setup.md): 계정을 만들고 아래 데모를 지원할 리소스를 배포 및 구성합니다. 아래 데모를 사용해보기 전에 다음 지침을 따르세요.
 
-1. [Computer Vision](DEMO%20Computer%20Vision.md): Use Cognitive Services
-   Computer Vision to analyze an image, via a web application and via the Azure
-   CLI.
+1. [Computer Vision](DEMO%20Computer%20Vision.md): Cognitive Services Computer Vision을 사용하여 웹 애플리케이션 및 Azure CLI를 통해 이미지를 분석할 수 있습니다.
 
-1. [Custom Vision](DEMO%20Custom%20Vision.md): Create a custom vision model to
-   detect only products sold by Tailwind Traders.
+1. [Custom Vision](DEMO%20Custom%20Vision.md): Tailwind Traders에서 판매되는 제품만 검색하는 Custom Vision 모델을 만듭니다.
 
-1. [ONNX Deployment](DEMO%20ONNX%20deployment.md): Deploy a custom vision model in
-   the ONNX format to the Tailwind Traders website "Shop by Photo feature
+1. [ONNX 배포](DEMO%20ONNX%20deployment.md): ONNX 형식의 Custom Vision 모델을 Tailwind Traders 웹 사이트의 “Shop by Phot” 기능에 배포
 
-1. [Personalizer](DEMO%20Personalizer.md): Dynamically reconfigure the layout of
-   the "Recommended" section of the Tailwind Traders website, to optimize
-   likelihood of an anonymous visitor clicking on the "featured" product.
+1. [Personalizer](DEMO%20Personalizer.md): Tailwind Traders 웹 사이트의 “권장” 섹션에서 레이아웃을 동적으로 다시 구성하여 익명 방문자가 “추천” 제품을 클릭할 가능성을 최적화합니다.
 
-## Feedback Loop
+## <a name="feedback-loop"></a>피드백 루프
 
-Do you have a comment, feedback, suggestion? The best feedback loop for content changes/suggestions/feedback is to create a new issue on this GitHub repository. To get all the details about how to create an issue please refer to the [Contributing docs](https://github.com/microsoft/ignite-learning-paths/blob/master/contributing.md)
+의견, 피드백, 제안이 있으신가요? 콘텐츠 변경/제안/피드백을 위한 최상의 피드백 루프는 이 GitHub 리포지토리에서 새로운 이슈를 생성하는 것입니다. 이슈 생성 방법에 대한 모든 세부 정보를 보려면 [기여](../CONTRIBUTING.md) 문서를 참조하세요.

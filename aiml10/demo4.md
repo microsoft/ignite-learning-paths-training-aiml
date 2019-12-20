@@ -1,100 +1,100 @@
-## Demo 4 - Tying it all together
+## <a name="demo-4---tying-it-all-together"></a>데모 4 - 모든 항목 요약
 
-[![Demo 4](images/demo4.png)](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/videos/Demo4.mp4 "Demo 4")
+[![데모 4](images/demo4.png)](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/videos/Demo4.mp4 "데모 4")
 
-## Summary
-In this exercise we tie together all of the resources to create an index, skillset, datasource, and indexer inside of Azure Cognitive Search to exctract Invoice data from our colleciton of pdf files. It is assumed that all of the resources and services from the previous exercises are created and set up properly.
-
-
-## What you need
-- [Invoice Data Set](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/data/invoices_1000.zip) (this is a smaller set of 1000 invoices to run the service and test the functionality)
+## <a name="summary"></a>요약
+이 연습에서는 모든 리소스를 요약하여 Azure Cognitive Search 내에서 인덱스, 기술 세트, 데이터 원본 및 인덱서를 만들어 PDF 파일 컬렉션에서 청구서 데이터를 추출합니다. 이전 연습에서 모든 리소스와 서비스를 올바르게 만들고 설정한 것으로 가정합니다.
 
 
-- [Postman](https://www.getpostman.com/) is used to send requests to the Form Recognizer service REST API. Refer to this [short primer](postman.md) to learn more.
-
-- Postman [Invoice Search Request collection](src/Collections/Invoice_Search.postman_collection.json).
-
-## What to do
-
-There are three main steps:
-1. Upload invoices to the storage account
-2. Prepare Azure Search Index, Skillset, Datasource, and Indexer
-3. Monitor and use Index
-
-### Upload Invoice Data
+## <a name="what-you-need"></a>필요한 항목
+- [청구서 데이터 세트](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/data/invoices_1000.zip)(서비스를 실행하고 기능을 테스트하기 위한 청구서 1,000개의 작은 집합임)
 
 
-1. Create a container called `invoices` in the storage account created in the first demo.
+- [Postman](https://www.getpostman.com/)은 Form Recognizer 서비스 REST API에 요청을 보내는 데 사용됩니다. 자세한 내용은 이 [간단한 입문서](postman.md)를 참조하세요.
 
-[![Create Container](images/create_container.png)](https://docs.microsoft.com/en-us/azure/storage/blobs/storage-quickstart-blobs-portal?WT.mc_id=msignitethetour2019-github-aiml10 "Create Container")
+- Postman [청구서 검색 요청 컬렉션](src/Collections/Invoice_Search.postman_collection.json).
 
-2. Download and unzip [invoice data set](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/data/invoices_1000.zip).
+## <a name="what-to-do"></a>수행할 작업
 
-3. Upload unzipped [invoice data set](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/data/invoices_1000.zip) to the `invoices` container. This can be done directly using the [portal](https://docs.microsoft.com/en-us/azure/storage/blobs/storage-quickstart-blobs-portal?WT.mc_id=msignitethetour2019-github-aiml10#upload-a-block-blob) or by using the [Azure Storage Explorer](https://docs.microsoft.com/en-us/azure/vs-azure-tools-storage-explorer-blobs?WT.mc_id=msignitethetour2019-github-aiml10).
+세 가지 주요 단계가 있습니다.
+1. 스토리지 계정에 청구서 업로드
+2. Azure Search Index, 기술 세트, 데이터 원본 및 인덱서 준비
+3. 인덱스 모니터링 및 사용
 
-### Prepare Azure Search
+### <a name="upload-invoice-data"></a>청구서 데이터 업로드
 
-This section uses Postman and assumes you know about loading collections, handling variables, and setting pre-request scripts. To learn how to do these specific things we have included some [instructions](postman.md).
 
-| Name                       | Type                            | Purpose                    |
+1. 첫 번째 데모에서 만든 스토리지 계정에 `invoices`라는 컨테이너를 만듭니다.
+
+[![컨테이너 만들기](images/create_container.png)](https://docs.microsoft.com/en-us/azure/storage/blobs/storage-quickstart-blobs-portal?WT.mc_id=msignitethetour2019-github-aiml10 "컨테이너 만들기")
+
+2. [청구서 데이터 세트](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/data/invoices_1000.zip)를 다운로드하고 압축을 풉니다.
+
+3. 압축을 푼 [청구서 데이터 세트](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/data/invoices_1000.zip)를 `invoices` 컨테이너에 업로드합니다. [포털](https://docs.microsoft.com/en-us/azure/storage/blobs/storage-quickstart-blobs-portal?WT.mc_id=msignitethetour2019-github-aiml10#upload-a-block-blob)을 사용하거나 [Azure Storage Explorer](https://docs.microsoft.com/en-us/azure/vs-azure-tools-storage-explorer-blobs?WT.mc_id=msignitethetour2019-github-aiml10)를 사용하여 직접 수행할 수 있습니다.
+
+### <a name="prepare-azure-search"></a>Azure Search 준비
+
+이 섹션에서는 Postman을 사용하며, 컬렉션을 로드하고 변수를 처리하고 사전 요청 스크립트를 설정하는 방법을 알고 있다고 가정합니다. 이러한 특정 작업을 수행하는 방법을 자세히 알아보기 위해 일부 [지침](postman.md)이 포함되어 있습니다.
+
+| 이름                       | 형식                            | 용도                    |
 | -------------------------- | ------------------------------- | ------------------------- |
-| `api-key`       | Authorization         | Key for Azure Search access  |
-| `search_service`       | Variable         | Search service url (without the protocol or slashes)  |
-| `index_name`       | Variable         | Name of desired index  |
-| `storageConnectionString`       | Variable         | Connection string to storage account containing invoices  |
-| `cog_svcs_key`       | Variable         | Key for All-In-One Cognitive Services used in [Demo 1](demo1.md)  |
+| `api-key`       | 권한 부여         | Azure Search 액세스용 키  |
+| `search_service`       | 변수         | 검색 서비스 URL(프로토콜 또는 슬래시 제외)  |
+| `index_name`       | 변수         | 원하는 인덱스의 이름  |
+| `storageConnectionString`       | 변수         | 청구서가 포함된 스토리지 계정에 대한 연결 문자열  |
+| `cog_svcs_key`       | 변수         | [데모 1](demo1.md)에서 사용되는 올인원 Cognitive Services용 키  |
 
-1. Load the [Invoice Search Request collection](src/Collections/Invoice_Search.postman_collection.json) into Postman.
+1. [청구서 검색 요청 컬렉션](src/Collections/Invoice_Search.postman_collection.json)을 Postman에 로드합니다.
 
-2. Set all of the variables as described in the table above. Each of these values (with the exception of the `index_name`) can be found in the respective service in the portal. You can choose any `index_name` you like.
+2. 위의 표에 설명된 대로 모든 변수를 설정합니다. 이러한 각 값(`index_name`의 예외 포함)은 포털의 각 서비스에서 찾을 수 있습니다. 원하는 `index_name`을 선택할 수 있습니다.
 
-3. Open and run the `Create Index` request (using the Send button). This creates the index where the invoice data is stored. After the request successfully completes you should see the changes reflected in the Azure Search service in the portal:
+3. 보내기 단추를 사용하여 `Create Index` 요청을 열고 실행합니다. 그러면 청구서 데이터가 저장되는 인덱스가 생성됩니다. 요청이 성공적으로 완료되면 포털에서 Azure Search 서비스에 반영된 변경 내용이 표시됩니다.
 
-![Index](images/index.png "Index")
+![인덱스](images/index.png "인덱스")
 
-4. Open and run the `Create Skillset` request (using the Send button). This creates our custom skillset the indexer will use to extract the invoice data. This particular skillset only has a single skill (our custom `InvoiceReaderSkill`). As above, if the request completes successfully you should see the new Skillset reflected in the portal.
+4. 보내기 단추를 사용하여 `Create Skillset` 요청을 열고 실행합니다. 그러면 인덱서가 청구서 데이터를 추출하는 데 사용할 사용자 지정 기술 세트가 생성됩니다. 이 특정 기술 세트에는 단일 기술(사용자 지정 `InvoiceReaderSkill`)만 있습니다. 위와 같이 요청이 성공적으로 완료되면 새 기술 세트가 포털에 반영된 것을 볼 수 있습니다.
 
-5. Open and run the `Create Datasource` request (using the Send button). This creates a reference to our storage account where the invoices are located. As above, if the request completes successfully you should see the new Skillset reflected in the portal.
+5. 보내기 단추를 사용하여 `Create Datasource` 요청을 열고 실행합니다. 그러면 청구서가 있는 스토리지 계정에 대한 참조가 생성됩니다. 위와 같이 요청이 성공적으로 완료되면 새 기술 세트가 포털에 반영된 것을 볼 수 있습니다.
 
-6. Open and run the `Create Indexer` request (using the Send button). This creates the indexer that pulls the invoices from the `Datasource`, uses the `Skillset` on each invoice, and stores the data in the actual `Index`. As above, if the request completes successfully you should see the new Skillset reflected in the portal.
+6. 보내기 단추를 사용하여 `Create Indexer` 요청을 열고 실행합니다. 그러면 `Datasource`에서 청구서를 가져오는 인덱서가 생성되고 각 청구서에 `Skillset`가 사용되며 데이터가 실제 `Index`에 저장됩니다. 위와 같이 요청이 성공적으로 완료되면 새 기술 세트가 포털에 반영된 것을 볼 수 있습니다.
 
 
-### Monitor and Use Index
-The indexer will take some time to go through all of the invoice documents. This can be monitored in the Search Service itself. You can also monitor the calls to the `InvoiceReaderSkill` by looking at the Live Metrics stream in the corresponding App Insights service attached to the Azure Function. Once there are some documents in the index you can run queries to verify it is working:
+### <a name="monitor-and-use-index"></a>인덱스 모니터링 및 사용
+인덱서가 모든 청구서 문서를 처리하는 데는 약간의 시간이 걸립니다. Search Service 자체에서 모니터링할 수 있습니다. 또한 Azure Function에 연결된 해당 App Insights 서비스에서 라이브 메트릭 스트림을 살펴보면 `InvoiceReaderSkill`에 대한 호출을 모니터링할 수 있습니다. 인덱스에 일부 문서가 있으면 쿼리를 실행하여 작동하는지 확인할 수 있습니다.
 
-![Azure Search Queries](images/queries.png "Azure Search Queries")
+![Azure Search 쿼리](images/queries.png "Azure Search 쿼리")
 
-**Some fun queries to run**:
+**실행할 몇 가지 흥미로운 쿼리**:
 
-Orders with ItemId 49
+ItemId 49로 주문
 ```
 *&$filter=invoice/lineItems/any(lineItems: lineItems/itemId eq 49)
 ```
 
-invoiceId is 12179
+invoiceId는 12179
 ```
 *&$filter=invoice/invoiceId eq 12179
 ```
 
-companies in Australia
+호주의 회사
 ```
 *&$filter=invoice/company/country eq 'Australia'
 ```
 
-companies in the UK (with a count)
+영국의 회사(개수 포함)
 ```
 *&$count=true&$filter=invoice/company/country eq 'United Kingdom'
 ```
 
-only retrieve invoices
+청구서만 검색
 ```
 *&$select=invoice&$count=true
 ```
 
-people in Germany
+독일에 있는 사람들
 ```
 *&$count=true&$select=invoice/person&$filter=invoice/person/country eq 'Germany'
 ```
 
-# Next Demo
-Learn how to explore the Knowledge Store by continuing on to  [Demo 5 - Knowledge Store](demo5.md)
+# <a name="next-demo"></a>다음 데모
+[데모 5 - 지식 저장소](demo5.md)로 계속 진행하여 기술 저장소를 탐색하는 방법을 알아보세요.
