@@ -1,9 +1,9 @@
-## Demo 5 - Knowledge Store
+## <a name="demo-5---knowledge-store"></a>Demostración 5: almacén de conocimiento
 
-[![Demo 5](images/demo4.png)](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/videos/Demo5.mp4 "Demo 5")
+[![Demostración 5](images/demo4.png)](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/videos/Demo5.mp4 "Demostración 5")
 
-## Summary
-In this exercise we explore the data pushed into the Knowledge Store by the Skillset created in the [previous exercise](demo4.md). This projection was part of the `Skillset` definition in the `Create Skillset` PUT request executed in previously. The portion of what was submitted to the service is as follows:
+## <a name="summary"></a>Resumen
+En este ejercicio exploraremos los datos insertados en el almacén de conocimiento por el conjunto de aptitudes creado en el [ejercicio anterior](demo4.md). Esta proyección formaba parte de la definición de `Skillset` en la solicitud de PUT de `Create Skillset` ejecutada anteriormente. La parte de lo que se envió al servicio es la siguiente:
 
 ```json
 "knowledgeStore": { 
@@ -18,9 +18,9 @@ In this exercise we explore the data pushed into the Knowledge Store by the Skil
     }]
 }
 ```
-This used the `storageConnectionString` as the target of the projections. In this case it uses the Azure Storage tables that are part of our storage service in order to save the data.
+Esta usaba `storageConnectionString` como destino de las proyecciones. En este caso, usa las tablas de Azure Storage que forman parte de nuestro servicio de almacenamiento para guardar los datos.
 
-## What to do
-The only thing left to do is explore how the indexer used the skillset to project the data into our knowledge store. This can be done using the Microsoft [Azure Storage Explorer](https://docs.microsoft.com/en-us/azure/vs-azure-tools-storage-explorer-blobs?WT.mc_id=msignitethetour2019-github-aiml10):
+## <a name="what-to-do"></a>Lo que debe hacer
+Lo único que queda por hacer es explorar de qué forma el indexador usó las habilidades para proyectar los datos en el almacén de información. Esto se puede hacer usando el [Explorador de Microsoft Azure Storage](https://docs.microsoft.com/en-us/azure/vs-azure-tools-storage-explorer-blobs?WT.mc_id=msignitethetour2019-github-aiml10):
 
-![Knowledge Store](images/knowledge_store.png "Knowledge Store")
+![Almacén de conocimiento](images/knowledge_store.png "Almacén de conocimiento")

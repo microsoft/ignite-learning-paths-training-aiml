@@ -1,33 +1,33 @@
-# Shared Access Signatures
+# <a name="shared-access-signatures"></a>Firmas de acceso compartido
 
-A couple of demonstrations require the use of [Shared Access Signatures](https://docs.microsoft.com/en-us/azure/storage/common/storage-sas-overview?WT.mc_id=msignitethetour2019-github-aiml10) for accessing blobs in an Azure Storage account. These are used to grant temporary access to the blobs that Azure Search will index. Here we describe tow ways of doing that.
+Un par de demostraciones requieren el uso de [firmas de acceso compartido](https://docs.microsoft.com/en-us/azure/storage/common/storage-sas-overview?WT.mc_id=msignitethetour2019-github-aiml10) para acceder a los blobs de una cuenta de Azure Storage. Se usan para conceder acceso temporal a los blobs que indexará Azure Search. Aquí se describen las formas de hacerlo.
 
-## Using the Portal
+## <a name="using-the-portal"></a>Mediante el portal
 
-1. Navigate to the storage blob containers and right click on the desired container and select `Get Shared Access Signature`
+1. Vaya a los contenedores de blobs de almacenamiento, haga clic con el botón derecho en el contenedor deseado y seleccione `Get Shared Access Signature`.
 
-![Get Shared Access Signature](images/sas_portal.png "Get Shared Access Signature")
+![Obtención de una firma de acceso compartido](images/sas_portal.png "Obtención de una firma de acceso compartido")
 
-2. Select the appropriate Start Time and Expiry time for the signature. For these exercises we need to select `Read` and `List` permissions (scroll down to finf the `List` checkbox)
+2. Seleccione la hora de inicio y la de expiración adecuadas para la firma. En estos ejercicios, se deben seleccionar los permisos `Read` y `List` (desplácese hacia abajo para encontrar la casilla `List`).
 
-![SAS Settings](images/sas_portal_step1.png "SAS Settings")
+![Configuración de SAS](images/sas_portal_step1.png "Configuración de SAS")
 
-3. Copy the Query string as shown below: 
+3. Copie la cadena de consulta como se muestra a continuación: 
 
-![SAS Signature](images/sas_portal_step2.png "SAS Signature")
+![Firma de SAS](images/sas_portal_step2.png "Firma de SAS")
 
-## Using Microsoft Azure Storage Explorer
+## <a name="using-microsoft-azure-storage-explorer"></a>Uso del Explorador de Microsoft Azure Storage
 
-1. Download the [Microsft Azure Storage Explorer](https://azure.microsoft.com/en-us/features/storage-explorer/?WT.mc_id=msignitethetour2019-github-aiml10) and install.
+1. Descargue el [Explorador de Microsoft Azure Storage](https://azure.microsoft.com/en-us/features/storage-explorer/?WT.mc_id=msignitethetour2019-github-aiml10) e instálelo.
 
-2. Navigate to the storage blob containers and right click on the desired container and select `Get Shared Access Signature`
+2. Vaya a los contenedores de blobs de almacenamiento, haga clic con el botón derecho en el contenedor deseado y seleccione `Get Shared Access Signature`.
 
-![Get Shared Access Signature](images/sas_explorer.png "Get Shared Access Signature")
+![Obtención de una firma de acceso compartido](images/sas_explorer.png "Obtención de una firma de acceso compartido")
 
-3. Select the appropriate Start Time and Expiry time for the signature. For these exercises we need to select `Read` and `List` permissions (scroll down to finf the `List` checkbox)
+3. Seleccione la hora de inicio y la de expiración adecuadas para la firma. En estos ejercicios, se deben seleccionar los permisos `Read` y `List` (desplácese hacia abajo para encontrar la casilla `List`).
 
-![SAS Settings](images/sas_explorer_step1.png "SAS Settings")
+![Configuración de SAS](images/sas_explorer_step1.png "Configuración de SAS")
 
-4. Copy the Query string as shown below: 
+4. Copie la cadena de consulta como se muestra a continuación: 
 
-![SAS Signature](images/sas_explorer_step2.png "SAS Signature")
+![Firma de SAS](images/sas_explorer_step2.png "Firma de SAS")

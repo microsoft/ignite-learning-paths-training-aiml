@@ -1,47 +1,47 @@
-# Using Postman
-There are three concepts needed to carry out the exercises in all of the demonstrations:
+# <a name="using-postman"></a>Uso de Postman
+Se necesitan tres conceptos para llevar a cabo los ejercicios de todas las demostraciones:
 
-1. Import a collection
-2. Set collection variables
-3. Use the pre-requests scripts to set variables
+1. Importación de una colección
+2. Configuración de las variables de una colección
+3. Uso de scripts previos a la solicitud para establecer variables
 
-## What you need
-There are three collections used throughout the demos:
-1. [Form Recognizer API Calls](src/Collections/Form_Recognizer.postman_collection.json)
-2. [Reader Skill API Calls](src/Collections/Reader_Skill.postman_collection.json)
-3. [Invoice Search API Calls](src/Collections/Invoice_Search.postman_collection.json)
+## <a name="what-you-need"></a>Qué se necesita
+En las demostraciones se usan tres colecciones:
+1. [Llamadas a la API de Form Recognizer](src/Collections/Form_Recognizer.postman_collection.json)
+2. [Llamadas a la API de aptitud de lector](src/Collections/Reader_Skill.postman_collection.json)
+3. [Llamadas de la API de búsqueda de facturas](src/Collections/Invoice_Search.postman_collection.json)
 
-## Importing a Collection
+## <a name="importing-a-collection"></a>Importación de una colección
 
-1. Download the appropriate collection (see above).
-2. Open Postman
-3. Click on Import
+1. Descargue la colección adecuada (consulte más arriba).
+2. Abra Postman.
+3. Haga clic en Importar.
 
-![Import Collection](images/import_collection.png "Import Collection")
+![Importación de una colección](images/import_collection.png "Importación de una colección")
 
-4. Select the appropriate collection
+4. Seleccione la colección adecuada.
 
-![Import Collection](images/import_collection_file.png "Import Collection")
+![Importación de una colección](images/import_collection_file.png "Importación de una colección")
 
-## Modifying collection variables
+## <a name="modifying-collection-variables"></a>Modificación de las variables de una colección
 
-Collection variables allow Postman to replace tokens such as `{variable}` with values set by the user. This allows requests to be more portable with changes to variables. For example, the `endpoint` variable in some of the exercises represents the endpoint to your particular Form Recognizer service. 
+Las variables de una colección permiten a Postman reemplazar los tokens como `{variable}` por los valores establecidos por el usuario. Esto permite que las solicitudes sean más portables con cambios en las variables. Por ejemplo, la variable `endpoint` en algunos de los ejercicios representa el punto de conexión del servicio de Form Recognizer determinado. 
 
-1. After a collection is loaded, click on the ellipsis to edit the collection variables
+1. Una vez cargada una colección, haga clic en los puntos suspensivos para editar las variables de la misma.
 
-![Edit Variables](images/edit_variables.png "Edit Variables")
+![Edición de las variables](images/edit_variables.png "Edición de las variables")
 
-2. To edit authorization variables use the authorization tab.
+2. Para editar las variables de autorización, use la pestaña de autorización.
 
-![Edit Authorization](images/edit_authorization.png "Edit Authorization")
+![Edición de una autorización](images/edit_authorization.png "Edición de una autorización")
 
-3. All other variables used in these exercises are found under the variables tab
+3. Las demás variables usadas en estos ejercicios se encuentran en la pestaña de variables.
 
-![Edit Variables](images/variables_tab.png "Edit Variables")
+![Edición de las variables](images/variables_tab.png "Edición de las variables")
 
-## Using pre-request scripts
+## <a name="using-pre-request-scripts"></a>Uso de scripts previos a la solicitud
 
-Some of the exercises require changes made to the pre-request scripts. These are accessible in the Pre-request Script section of individual Requests as shown below.
+Algunos de los ejercicios requieren que se realicen cambios en los scripts previos a la solicitud. Se puede acceder a ellos en la sección de scripts previos a la solicitud de cada una de ellas, como se muestra a continuación.
 
-![Pre-Request Scripts](images/pre_request.png "Pre-Request Scripts")
+![Scripts previos a la solicitud](images/pre_request.png "Scripts previos a la solicitud")
 

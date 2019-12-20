@@ -1,98 +1,98 @@
-# Demo 1 - Azure Cognitive Search
+# <a name="demo-1---azure-cognitive-search"></a>Demostración 1: Azure Cognitive Search
 
-[![Demo 1](images/demo1.png)](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/videos/Demo1.mp4 "Demo 1")
+[![Demostración 1](images/demo1.png)](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/videos/Demo1.mp4 "Demostración 1")
 
-## Summary
-In this exercise we demonstrate the basic functions of Azure Cognitive Search in conjunction with the built-in intelligent skillset. There are a number of ways to create the resources required for this demo:
-1. Follow along with the video above (each step is outlined), or
-2. Use the [Azure CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest&WT.mc_id=msignitethetour2019-github-aiml10)
-
-
-## What you need
-- [Invoice Test Set](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/data/test.zip)
-
-## Azure Resources
-These are the resources that we create in the first demonstration. While this table outlines the names of the resources as shown in the video, please use your own names for each of the resources.
+## <a name="summary"></a>Resumen
+En este ejercicio se muestran las funciones básicas de Azure Cognitive Search junto con el conjunto de aptitudes inteligente integrado. Hay varias formas de crear los recursos necesarios para esta demostración:
+1. Siga con el vídeo anterior (se describe cada paso).
+2. También puede usar la [CLI de Azure](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest&WT.mc_id=msignitethetour2019-github-aiml10).
 
 
-| Name                       | Type                            | Purpose                    |
+## <a name="what-you-need"></a>Qué se necesita
+- [Conjunto de prueba de facturas](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/data/test.zip)
+
+## <a name="azure-resources"></a>Recursos de Azure
+Estos son los recursos que se crearon en la primera demostración. Aunque en esta tabla se describen los nombres de los recursos tal como se muestran en el vídeo, use sus propios nombres para cada uno de los recursos.
+
+
+| Nombre                       | Tipo                            | Propósito                    |
 | -------------------------- | ------------------------------- | ------------------------- |
-| **ttcognitivesearch**     | Resource Group                  | Groups services together   |
-| **ttinvoicestorage**      | Storage Account                 | Used to store invoices     |
-| **ttinvoicesearch**       | Search Service                  | Featured service           |
-| **ttinvoiceintelligence** | Cognitive Services (All-In-One) | Used in the search service |
+| **ttcognitivesearch**     | Grupo de recursos                  | Agrupa los servicios   |
+| **ttinvoicestorage**      | Cuenta de almacenamiento                 | Se usa para almacenar las facturas     |
+| **ttinvoicesearch**       | Servicio Search                  | Servicio destacado           |
+| **ttinvoiceintelligence** | Cognitive Services (Todo en uno) | Se usa en el servicio Search |
 
 
-## What to do
+## <a name="what-to-do"></a>Qué debe hacer
 
-There are three main steps:
-1. Create a Resource Group
-2. Create and use Storage Account
-3. Create and use a Search Service resource
+Los pasos principales son tres:
+1. Creación de un grupo de recursos
+2. Creación y uso de una cuenta de almacenamiento
+3. Creación y uso de un recurso del servicio Search
 
 
 
-### Create a Resource Group
-All of our resources will live in this group.
+### <a name="create-a-resource-group"></a>Creación de un grupo de recursos
+Todos los recursos residirán en este grupo.
 
 ```
 az group create --location {LOCATION} --name {YOUR_RG_NAME}
 ```
 
-### Create and use Storage Account
-The storage account is used primarily for storing invoices.
+### <a name="create-and-use-storage-account"></a>Creación y uso de una cuenta de almacenamiento
+La cuenta de almacenamiento se usa principalmente para almacenar las facturas.
 
-1. Create storage account
+1. Cree una cuenta de almacenamiento.
 
 ```
 az storage account create --name {YOUR_STORAGE_NAME} --location {LOCATION} --resource-group {YOUR_RG_NAME} --sku Standard_LRS
 ```
 
-2. Create a container called `test`
+2. Cree un contenedor denominado `test`.
 
-[![Create Container](images/create_container.png)](https://docs.microsoft.com/en-us/azure/storage/blobs/storage-quickstart-blobs-portal?WT.mc_id=msignitethetour2019-github-aiml10 "Create Container")
+[![Creación de un contenedor](images/create_container.png)](https://docs.microsoft.com/en-us/azure/storage/blobs/storage-quickstart-blobs-portal?WT.mc_id=msignitethetour2019-github-aiml10 "Creación de un contenedor")
 
-3. Download and unzip [invoice test set](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/data/test.zip).
+3. Descargue y descomprima el [conjunto de prueba de facturas](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/data/test.zip).
 
-4. Upload unzipped [invoice test set](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/data/test.zip) to the `test` container. This can be done directly using the [portal](https://docs.microsoft.com/en-us/azure/storage/blobs/storage-quickstart-blobs-portal?WT.mc_id=msignitethetour2019-github-aiml10#upload-a-block-blob) or by using the [Azure Storage Explorer](https://docs.microsoft.com/en-us/azure/vs-azure-tools-storage-explorer-blobs?WT.mc_id=msignitethetour2019-github-aiml10) application (as shown in the [video](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/videos/Demo1.mp4 "Demo 1")).
+4. Cargue el [conjunto de prueba de facturas](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/data/test.zip) descomprimido en el contenedor `test`. Puede realizarlo directamente mediante el [portal](https://docs.microsoft.com/en-us/azure/storage/blobs/storage-quickstart-blobs-portal?WT.mc_id=msignitethetour2019-github-aiml10#upload-a-block-blob) o mediante la aplicación [Explorador de Azure Storage](https://docs.microsoft.com/en-us/azure/vs-azure-tools-storage-explorer-blobs?WT.mc_id=msignitethetour2019-github-aiml10) (como se muestra en el [vídeo](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/videos/Demo1.mp4 "Demostración 1")).
 
-### Create and use a Search Service resource
-Create a search service:
+### <a name="create-and-use-a-search-service-resource"></a>Creación y uso de un recurso del servicio Search
+Cree una instancia del servicio Search:
 
 [![Azure Search](images/azure_search.png)](https://docs.microsoft.com/en-us/azure/search/search-create-service-portal?WT.mc_id=msignitethetour2019-github-aiml10 "Azure Search")
 
 
-Use Search Service:
+Use el servicio Search:
 
-1. In the newly created service click on `Import Data`
+1. En el servicio recién creado, haga clic en `Import Data`.
 
-[![Import Data](images/import_data.png)](https://docs.microsoft.com/en-us/azure/search/cognitive-search-quickstart-blob?WT.mc_id=msignitethetour2019-github-aiml10#create-the-enrichment-pipeline "Import Data")
+[![Importación de datos](images/import_data.png)](https://docs.microsoft.com/en-us/azure/search/cognitive-search-quickstart-blob?WT.mc_id=msignitethetour2019-github-aiml10#create-the-enrichment-pipeline "Importación de datos")
 
-2.Use an existing connection to the `test` container we created in our storage account.
+2. Use una conexión existente al contenedor `test` que se creó en la cuenta de almacenamiento.
 
-[![Import Data](images/connect_data.png)](https://docs.microsoft.com/en-us/azure/search/cognitive-search-quickstart-blob?WT.mc_id=msignitethetour2019-github-aiml10#step-1-create-a-data-source "Import Data")
+[![Importación de datos](images/connect_data.png)](https://docs.microsoft.com/en-us/azure/search/cognitive-search-quickstart-blob?WT.mc_id=msignitethetour2019-github-aiml10#step-1-create-a-data-source "Importación de datos")
 
-3. Create a new Cognitive Services resource
+3. Cree un recurso de Cognitive Services.
 
-[![Create Cognitive Services](images/attach_cognitive_svcs.png)](https://docs.microsoft.com/en-us/azure/search/cognitive-search-quickstart-blob?WT.mc_id=msignitethetour2019-github-aiml10#step-2-add-cognitive-skills "Create Cognitive Services")
+[![Creación de Cognitive Services](images/attach_cognitive_svcs.png)](https://docs.microsoft.com/en-us/azure/search/cognitive-search-quickstart-blob?WT.mc_id=msignitethetour2019-github-aiml10#step-2-add-cognitive-skills "Creación de Cognitive Services")
 
-4. Go back to the wizard and hit refresh. You should see the newly created service. 
+4. Vuelva al asistente y haga clic en el botón pertinente para actualizar el contenido. Debería ver el servicio recién creado. 
 
-5. You can now add any enrichments you like!
+5. Ahora puede agregar los enriquecimientos que quiera.
 
-[![Add Enrichments](images/add_enrichments.png)](https://docs.microsoft.com/en-us/azure/search/cognitive-search-quickstart-blob?WT.mc_id=msignitethetour2019-github-aiml10#step-2-add-cognitive-skills "Add Enrichments")
+[![Incorporación de enriquecimientos](images/add_enrichments.png)](https://docs.microsoft.com/en-us/azure/search/cognitive-search-quickstart-blob?WT.mc_id=msignitethetour2019-github-aiml10#step-2-add-cognitive-skills "Incorporación de enriquecimientos")
 
-6. After clicking on `Customize Target Index` review the proposed index and click `Create and Indexer`.
+6. Después de hacer clic en `Customize Target Index`, revise el índice propuesto y haga clic en `Create and Indexer`.
 
-[![First Index](images/first_index.png)](https://docs.microsoft.com/en-us/azure/search/cognitive-search-quickstart-blob?WT.mc_id=msignitethetour2019-github-aiml10#step-3-configure-the-index "First Index")
+[![Primer índice](images/first_index.png)](https://docs.microsoft.com/en-us/azure/search/cognitive-search-quickstart-blob?WT.mc_id=msignitethetour2019-github-aiml10#step-3-configure-the-index "Primer índice")
 
-7. Give the new indexer a name and click `Submit`
+7. Asigne un nombre al nuevo indizador y haga clic en `Submit`.
 
-[![First Indexer](images/first_indexer.png)](https://docs.microsoft.com/en-us/azure/search/cognitive-search-quickstart-blob?WT.mc_id=msignitethetour2019-github-aiml10#step-4-configure-the-indexer "First Indexer")
+[![Primer indizador](images/first_indexer.png)](https://docs.microsoft.com/en-us/azure/search/cognitive-search-quickstart-blob?WT.mc_id=msignitethetour2019-github-aiml10#step-4-configure-the-indexer "Primer indizador")
 
-8. Once the indexing has taken place feel free to try some queries:
+8. Cuando se haya realizado la indexación, cree algunas consultas:
 
-[![First Search](images/first_search.png)](https://docs.microsoft.com/en-us/azure/search/cognitive-search-quickstart-blob?WT.mc_id=msignitethetour2019-github-aiml10#query-in-search-explorer "First Search")
+[![Primera búsqueda](images/first_search.png)](https://docs.microsoft.com/en-us/azure/search/cognitive-search-quickstart-blob?WT.mc_id=msignitethetour2019-github-aiml10#query-in-search-explorer "Primera búsqueda")
 
-# Next Demo
-Learn how to use the Form Recognizer Cognitive service by continuing on to [Demo 2 - Using Form Recognizer](demo2.md)
+# <a name="next-demo"></a>Siguiente demostración
+Prosiga con la [Demostración 2: Uso de Form Recognizer](demo2.md) para aprender a usar el servicio cognitivo Form Recognizer.

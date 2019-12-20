@@ -1,82 +1,92 @@
-# AIML10: Making Sense of your Unstructured Data with AI
+# <a name="aiml10-making-sense-of-your-unstructured-data-with-ai"></a>AIML10: Datos no estructurados con sentido gracias a la inteligencia artificial
 
-### Session Abstract
+## <a name="session-abstract"></a>Resumen de la sesión
 
-Tailwind Traders has a lot of legacy data that they’d like their developers to leverage in their apps – from various sources, both structured and unstructured, and including images, forms, pdf files, and several others. In this session, you'll learn how the team used Cognitive Search to make sense of this data in a short amount of time and with amazing success. We'll discuss tons of AI concepts, like the ingest-enrich-explore pattern, skillsets, cognitive skills, natural language processing, computer vision, and beyond.
+Tailwind Traders posee una enorme cantidad de datos heredados que les gustaría que sus desarrolladores usaran en sus aplicaciones. Estos datos proceden de diversos orígenes (tanto estructurados como no estructurados) y engloban imágenes, formularios, archivos PDF y otros muchos elementos. En esta sesión, veremos cómo el equipo usó Cognitive Search para dar sentido a estos datos en un breve período de tiempo y con un éxito asombroso. Abordaremos infinidad de conceptos de inteligencia artificial, como el patrón de ingesta, enriquecimiento y exploración, los conjuntos de aptitudes, las aptitudes cognitivas, el procesamiento de lenguaje natural, Computer Vision, etc.
 
-# Overview
-In this solution we develop a process whereby we take a set of unstructured pdf invoices and generate structured tabular output using Azure Cognitive Search with a customized Form Recognizer Skill. 
+## <a name="table-of-content"></a>Tabla de contenido
+ 
 
-When creating this solution there are a few Azure resources ([free trial here](https://azure.microsoft.com/en-gb/free/?WT.mc_id=msignitethetour2019-github-aiml10) if you need it) that are created. The following tables list each resource, its purpose, and any special instructions needed to implement the solution fully (I use the names as presented during the talk but they will need to be renamed for your particular solution):
+| Recursos          | Vínculos                            |
+|-------------------|----------------------------------|
+| PowerPoint        | - [Presentación](presentations.md) |
+| Vídeos            | - [Ensayo del simulacro](https://www.youtube.com/watch?v=dm0wDTSso0E) <br/>- [Grabación de Microsoft Ignite Orlando](https://myignite.techcommunity.microsoft.com/sessions/82986?source=sessions) |
+| Demostraciones             | - [Demostración 1: Azure Cognitive Search](https://github.com/microsoft/ignite-learning-paths-training-aiml/blob/master/aiml10/demo1.md) <br/>- [Demostración 2: Servicio Form Recognizer](https://github.com/microsoft/ignite-learning-paths-training-aiml/blob/master/aiml10/demo2.md) <br/>- [Demostración 3: Creación de una habilidad de lectura de facturas personalizada](https://github.com/microsoft/ignite-learning-paths-training-aiml/blob/master/aiml10/demo3.md)<br/>- [Demostración 4: Unión de todos los elementos](https://github.com/microsoft/ignite-learning-paths-training-aiml/blob/master/aiml10/demo4.md) <br/>- [Demostración 5: Almacén de conocimiento](https://github.com/microsoft/ignite-learning-paths-training-aiml/blob/master/aiml10/demo5.md) | 
 
-![Azure Resources](images/resources.png "Azure Resources")
 
-## Azure Resources
+# <a name="overview"></a>Información general
+En esta solución, desarrollamos un proceso en el que tomamos un conjunto de facturas en PDF no estructuradas y generamos un resultado tabular estructurado mediante Azure Cognitive Search con una habilidad de Form Recognizer personalizada. 
 
-| Name                       | Type                            | Purpose                    |
+Al crear esta solución, se crean algunos recursos de Azure ([la evaluación gratuita está disponible aquí](https://azure.microsoft.com/en-gb/free/?WT.mc_id=msignitethetour2019-github-aiml10), si la necesita). En las tablas siguientes se enumeran todos los recursos, su finalidad y las instrucciones especiales necesarias para implementar la solución completamente (se usan los mismos nombres que en la charla; estos se deberán cambiar para su solución particular):
+
+![Recursos de Azure](images/resources.png "Recursos de Azure")
+
+## <a name="azure-resources"></a>Recursos de Azure
+
+| Nombre                       | Tipo                            | Propósito                    |
 | -------------------------- | ------------------------------- | ------------------------- |
-| **ttcognitivesearch**     | Resource Group                  | Groups services together   |
-| **ttinvoicestorage**      | Storage Account                 | Used to store invoices     |
-| **ttinvoicesearch**       | Search Service                  | Featured service           |
-| **ttinvoiceintelligence** | Cognitive Services (All-In-One) | Used in the search service |
-| **ttinvoicereader**       | Form Recognizer Service         | This service will eventually end up in the All-In-One sevice. For right now it is in limited-access preview. To get access to the preview, fill out and submit the [Form Recognizer access request](https://aka.ms/FormRecognizerRequestAccess) form.  |
-| **readerskillstorage**   | Storage Account              | Storage used for Azure Function |
-| **readerskill**          | Function App                 | Cognitive Skill App |
-| **readerskill**          | App Insights                   | Adds insights to Function App |
-| **EastUS2LinuxDynamicPlan** | App Service Plan                   | Consumption based plan for running Function App |
+| **ttcognitivesearch**     | Grupo de recursos                  | Agrupa los servicios   |
+| **ttinvoicestorage**      | Cuenta de almacenamiento                 | Se usa para almacenar las facturas     |
+| **ttinvoicesearch**       | Servicio Search                  | Servicio destacado           |
+| **ttinvoiceintelligence** | Cognitive Services (Todo en uno) | Se usa en el servicio Search |
+| **ttinvoicereader**       | Servicio Form Recognizer         | Este servicio puede ser que termine en el servicio Todo en uno. Por el momento, ahora está en versión preliminar de acceso limitado. Para acceder a la versión preliminar, rellene y envíe el formulario [Solicitud de acceso de Form Recognizer](https://aka.ms/FormRecognizerRequestAccess).  |
+| **readerskillstorage**   | Cuenta de almacenamiento              | Almacenamiento usado para la función de Azure |
+| **readerskill**          | Function App                 | Aplicación Aptitud cognitiva |
+| **readerskill**          | Detalles de la aplicación                   | Agrega información a la aplicación de funciones. |
+| **EastUS2LinuxDynamicPlan** | Plan de App Service                   | Plan basado en el consumo para ejecutar la aplicación de funciones |
 
-# Presentation
+# <a name="presentation"></a>Presentación
 
-* [PowerPoint Download](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/aiml10.pptx)
-* [Microsoft Ignite Orlando Session Video](https://myignite.techcommunity.microsoft.com/sessions/82986?source=sessions)
-
-
-# Demonstrations
-This talk consisted of the 5 demonstrations listed below. 
-
-- **Demo 1**: [Azure Cognitive Search](demo1.md)
-- **Demo 2**: [Form Recognizer Service](demo2.md) - this demo requires access to the Form Recognizer Preview. To get access to the preview, fill out and submit the [Form Recognizer access request](https://aka.ms/FormRecognizerRequestAccess) form.
-- **Demo 3**: [Creating a Custom Invoice Reader Skill](demo3.md)
-- **Demo 4**: [Tying it all together](demo4.md)
-- **Demo 5**: [Knowledge Store](demo5.md)
+* [Descarga de PowerPoint](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/aiml10.pptx)
+* [Vídeo de la sesión de Microsoft Ignite Orlando](https://myignite.techcommunity.microsoft.com/sessions/82986?source=sessions)
 
 
-# Teardown Instructions
+# <a name="demonstrations"></a>Demostraciones
+Esta charla ha consistido en las siguientes cinco demostraciones. 
 
-### Full Teardown
+- **Demostración 1**: [Azure Cognitive Search](demo1.md)
+- **Demostración 2**: [Servicio Form Recognizer](demo2.md): esta demostración requiere acceso a la versión preliminar de Form Recognizer. Para acceder a la versión preliminar, rellene y envíe el formulario [Solicitud de acceso de Form Recognizer](https://aka.ms/FormRecognizerRequestAccess).
+- **Demostración 3**: [Creación de una habilidad de lectura de facturas personalizada](demo3.md)
+- **Demostración 4**: [Unión de todos los elementos](demo4.md)
+- **Demostración 5**: [Almacén de conocimiento](demo5.md)
 
-* Enter the Azure Portal and delete the **Azure Resource Group** you created to remove all resources for this project
+
+# <a name="teardown-instructions"></a>Instrucciones de desmontaje
+
+### <a name="full-teardown"></a>Desmontaje completo
+
+* Acceda a Azure Portal y elimine el **grupo de recursos de Azure** que creó para quitar todos los recursos de este proyecto.
 
 
-# Resources and Continued Learning
+# <a name="resources-and-continued-learning"></a>Recursos y aprendizaje continuo
 
 **Microsoft Learn:**
-* [Introduction to Azure Search](https://docs.microsoft.com/en-us/learn/modules/intro-to-azure-search/?WT.mc_id=msignitethetour2019-github-aiml10)
-* [Microsoft Azure Artificial Intelligence (AI) strategy and solutions](https://docs.microsoft.com/en-us/learn/modules/azure-artificial-intelligence/?WT.mc_id=msignitethetour2019-github-aiml10)
+* [Introducción a Azure Search](https://docs.microsoft.com/en-us/learn/modules/intro-to-azure-search/?WT.mc_id=msignitethetour2019-github-aiml10)
+* [Estrategia y soluciones de inteligencia artificial (IA) de Microsoft Azure](https://docs.microsoft.com/en-us/learn/modules/azure-artificial-intelligence/?WT.mc_id=msignitethetour2019-github-aiml10)
 
-**Azure Documentation**
-* [What is "cognitive search" in Azure Search?](https://docs.microsoft.com/en-us/azure/search/cognitive-search-concept-intro/?WT.mc_id=msignitethetour2019-github-aiml10)
-* [What is knowledge store in Azure Search?](https://docs.microsoft.com/en-us/azure/search/knowledge-store-concept-intro)
+**Documentación de Azure**
+* [¿Qué es la "búsqueda cognitiva" en Azure Search?](https://docs.microsoft.com/en-us/azure/search/cognitive-search-concept-intro/?WT.mc_id=msignitethetour2019-github-aiml10)
+* [¿Qué es el almacén de conocimiento en Azure Search?](https://docs.microsoft.com/en-us/azure/search/knowledge-store-concept-intro)
 
 
-# Feedback Loop
+# <a name="feedback-loop"></a>Bucle de comentarios
 
-Do you have a comment, feedback, suggestion? Currently, the best feedback loop for content changes/suggestions/feedback is to create a new issue on this GitHub repository. To get all the details about how to create an issue please refer to the [Contributing docs](https://github.com/microsoft/ignite-learning-paths/blob/master/contributing.md)
+¿Tiene algún comentario o sugerencia? Actualmente, el mejor bucle de comentarios para los cambios de contenido, sugerencias y comentarios es crear una incidencia en este repositorio de GitHub. Para obtener todos los detalles sobre cómo crear una incidencia, consulte los [documentos de contribución](../CONTRIBUTING.md).
 
-## Become a Trained Presenter
+## <a name="become-a-trained-presenter"></a>Convertirse en un presentador entrenado
 
-To become a trained presenter, contact [scalablecontent@microsoft.com](mailto:scalablecontent@microsoft.com). In your email please include:
+Para convertirse en un presentador entrenado, póngase en contacto con [scalablecontent@microsoft.com](mailto:scalablecontent@microsoft.com). En el correo electrónico, incluya lo siguiente:
 
-- Complete name
-- The code of this presentation: aiml10
-- Link to a video of you presenting (~10 minutes in length)(ex: unlisted YouTube video). 
-  > It doesn't need to be this content, the importance is to show your presenter skills
+- Nombre completo
+- Código de esta presentación: aiml10
+- Vínculo a un vídeo de usted presentando (10 minutos de duración aproximada; por ejemplo, vídeo de YouTube no publicado). 
+  > No es necesario que sea este contenido; lo importante es mostrar sus aptitudes como presentador.
 
-A mentor will get back to you with information on the process.
+Un asesor se pondrá en contacto con usted para informarle sobre el proceso.
 
-## Trained Presenters
+## <a name="trained-presenters"></a>Presentadores entrenados
 
-Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+Gracias a todas estas fantásticas personas ([clave de emoji](https://allcontributors.org/docs/en/emoji-key)):
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore -->
@@ -86,8 +96,8 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/sethjuarez">
         <img src="https://avatars2.githubusercontent.com/u/115409?s=460&v=4" width="100px;" alt="Seth Juarez"/><br />
         <sub><b>Seth Juarez</b></sub></a><br />
-            <a href="Add link to powerpoint here" title="Talk">📢</a>
-            <a href="Add link to pull request here" title="Documentation">📖</a> 
+            <a href="Add link to powerpoint here" title="Debate">📢</a>Documentación
+            <a href="Add link to pull request here" title="">📖</a> 
     </td>
 </tr></table>
 
