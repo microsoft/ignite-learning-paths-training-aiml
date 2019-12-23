@@ -4,7 +4,9 @@ This is a machine generated file, and should not be edited, as it will be overwr
 
 # <a name="aiml50-presentation-files"></a>Archivos de presentación de AIML50
 
-- [aiml50.es-es.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml50/aiml50.es-es.pptx) (Actualizado: 16 de noviembre de 2019)
+- [aiml50.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml50/aiml50.pptx) (Actualizado: 16 de noviembre de 2019)
+- [aiml50.es-es.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/aiml50.es-es.pptx) (Actualizado: 20 de diciembre de 2019)
+- [aiml50.ko-kr.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/aiml50.ko-kr.pptx) (Actualizado: 20 de diciembre de 2019)
 - [aiml50.pt-br.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml50/aiml50.pt-br.pptx) (Actualizado: 04 de diciembre de 2019)
 - [aiml50.zh-cn.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml50/aiml50.zh-cn.pptx) (Actualizado: 04 de diciembre de 2019)
 - [aiml50.ja-jp.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml50/aiml50.ja-jp.pptx) (Actualizado: 04 de diciembre de 2019)

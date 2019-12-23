@@ -4,7 +4,9 @@ This is a machine generated file, and should not be edited, as it will be overwr
 
 # <a name="aiml40-presentation-files"></a>Archivos de presentación de AIML40
 
-- [aiml40.es-es.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml40/aiml40.es-es.pptx) (Actualizado: 30 de noviembre de 2019)
+- [aiml40.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml40/aiml40.pptx) (Actualizado: 30 de noviembre de 2019)
+- [aiml40.es-es.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/aiml40.es-es.pptx) (Actualizado: 20 de diciembre de 2019)
+- [aiml40.ko-kr.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/aiml40.ko-kr.pptx) (Actualizado: 20 de diciembre de 2019)
 - [aiml40.ja-jp.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml40/aiml40.ja-jp.pptx) (Actualizado: 04 de diciembre de 2019)
 - [aiml40.zh-cn.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml40/aiml40.zh-cn.pptx) (Actualizado: 04 de diciembre de 2019)
 - [aiml40.pt-br.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml40/aiml40.pt-br.pptx) (Actualizado: 04 de diciembre de 2019)

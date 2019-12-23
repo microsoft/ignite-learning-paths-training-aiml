@@ -4,7 +4,9 @@ This is a machine generated file, and should not be edited, as it will be overwr
 
 # <a name="aiml30-presentation-files"></a>Archivos de presentación de AIML30
 
-- [aiml30.es-es.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml30/aiml30.es-es.pptx) (Actualizado: 04 de diciembre de 2019)
+- [aiml30.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml30/aiml30.pptx) (Actualizado: 04 de diciembre de 2019)
+- [aiml30.es-es.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/aiml30.es-es.pptx) (Actualizado: 20 de diciembre de 2019)
+- [aiml30.ko-kr.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/aiml30.ko-kr.pptx) (Actualizado: 20 de diciembre de 2019)
 - [aiml30.pt-br.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml30/aiml30.pt-br.pptx) (Actualizado: 04 de diciembre de 2019)
 - [aiml30.ja-jp.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml30/aiml30.ja-jp.pptx) (Actualizado: 04 de diciembre de 2019)
 - [aiml30.zh-cn.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml30/aiml30.zh-cn.pptx) (Actualizado: 04 de diciembre de 2019)
