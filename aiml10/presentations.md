@@ -4,7 +4,7 @@ This is a machine generated file, and should not be edited, as it will be overwr
 
 # <a name="aiml10-presentation-files"></a>Archivos de presentación de AIML10
 
-- [aiml10.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/aiml10.es-es.pptx) (Actualizado: 16 de noviembre de 2019)
+- [aiml10.es-es.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/aiml10.es-es.pptx) (Actualizado: 16 de noviembre de 2019)
 - [aiml10.ja-jp.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/aiml10.ja-jp.pptx) (Actualizado: 4 de diciembre de 2019)
 - [aiml10.zh-cn.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/aiml10.zh-cn.pptx) (Actualizado: 4 de diciembre de 2019)
 - [aiml10.pt-br.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/aiml10.pt-br.pptx) (Actualizado: 4 de diciembre de 2019)
