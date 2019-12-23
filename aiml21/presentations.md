@@ -5,6 +5,8 @@ This is a machine generated file, and should not be edited, as it will be overwr
 # <a name="aiml21-presentation-files"></a>AIML21 프레젠테이션 파일
 
 - [aiml21.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml21/aiml21.pptx)(업데이트 게시일: 2019년 11월 7일)
+- [aiml21.ko-kr.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml21/aiml21.ko-kr.pptx)(업데이트 게시일: 2019년 12월 20일)
+- [aiml21.es-es.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml21/aiml21.es-es.pptx)(업데이트 게시일: 2019년 12월 20일)
 - [aiml21.pt-br.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml21/aiml21.pt-br.pptx)(업데이트 게시일: 2019년 12월 4일)
 - [aiml21.zh-cn.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml21/aiml21.zh-cn.pptx)(업데이트 게시일: 2019년 12월 4일)
 - [aiml21.ja-jp.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml21/aiml21.ja-jp.pptx)(업데이트 게시일: 2019년 12월 4일)

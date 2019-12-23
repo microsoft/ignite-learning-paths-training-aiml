@@ -5,6 +5,8 @@ This is a machine generated file, and should not be edited, as it will be overwr
 # <a name="aiml40-presentation-files"></a>AIML40 프레젠테이션 파일
 
 - [aiml40.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml40/aiml40.pptx)(업데이트 게시일: 2019년 11월 30일)
+- [aiml40.ko-kr.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml40/aiml40.ko-kr.pptx)(업데이트 게시일: 2019년 12월 20일)
+- [aiml40.es-es.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml40/aiml40.es-es.pptx)(업데이트 게시일: 2019년 12월 20일)
 - [aiml40.ja-jp.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml40/aiml40.ja-jp.pptx)(업데이트 게시일: 2019년 12월 4일)
 - [aiml40.zh-cn.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml40/aiml40.zh-cn.pptx)(업데이트 게시일: 2019년 12월 4일)
 - [aiml40.pt-br.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml40/aiml40.pt-br.pptx)(업데이트 게시일: 2019년 12월 4일)
