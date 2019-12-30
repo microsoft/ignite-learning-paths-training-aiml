@@ -13,9 +13,21 @@ scripts you will need to recreate the demos given in the talk.
 
 **Using Pre-Built AI to Solve Business Challenges**
 
-Abstract: As a data-driven company, Tailwind Traders understands the importance of using Artificial Intelligence to improve business processes and delight customers. Before investing in an AI team, their existing developers were able to demonstrate some quick wins using pre-built AI technologies. In this session, we will show how you can use Azure Cognitive Services to extract insights from retail data. We’ll go into the neural networks behind computer vision, and show how you can augment the pre-built AI with your own images for custom image recognition applications.
+As a data-driven company, Tailwind Traders understands the importance of using
+artificial intelligence to improve business processes and delight customers.
+Before investing in an AI team, their existing developers were able to
+demonstrate some quick wins using pre-built AI technologies. 
 
-## Table of Content
+In this session, we show how you can use Azure Cognitive Services to implement
+the "Shop by Photo" feature in the Tailwind Traders website, and explain the
+workings of the neural networks behind computer vision. We will also show how
+the website layout automatically adapts to optimize engagement of anonymous
+users thanks to reinforcement learning and the Personalizer service.
+
+Finally, we'll review the cost, data regulation, and ethical concerns you should
+think about before putting AI into production.
+
+## Table of Contents
  
 
 | Resources          | Links                            |
