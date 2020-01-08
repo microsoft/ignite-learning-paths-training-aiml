@@ -69,7 +69,7 @@ pm.environment.set('SASValue', '<SAS>')
 
 ### Create Azure Function Resources
 
-It is assumed that the following commands are run in the same directory as the actual Function
+It is assumed that the following commands are run in the same directory as the actual Function and you have logged into the Azure CLI using ```az login```
 
 1. Run the following Azure CLI Commands to create the appropriate resources and publish the function:
 
