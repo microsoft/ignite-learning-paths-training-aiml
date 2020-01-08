@@ -68,7 +68,7 @@ Use Search Service:
 
 [![Import Data](images/import_data.png)](https://docs.microsoft.com/en-us/azure/search/cognitive-search-quickstart-blob?WT.mc_id=msignitethetour2019-github-aiml10#create-the-enrichment-pipeline "Import Data")
 
-2.Use an existing connection to the `test` container we created in our storage account.
+2.Use an existing connection to the `test` container we created in our storage account by select 'Azure Blob Storage' and selecting your storage account
 
 [![Import Data](images/connect_data.png)](https://docs.microsoft.com/en-us/azure/search/cognitive-search-quickstart-blob?WT.mc_id=msignitethetour2019-github-aiml10#step-1-create-a-data-source "Import Data")
 
