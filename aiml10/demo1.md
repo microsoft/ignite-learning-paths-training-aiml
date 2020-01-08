@@ -78,7 +78,7 @@ Use Search Service:
 
 4. Go back to the wizard and hit refresh. You should see the newly created service. 
 
-5. You can now add any enrichments you like!
+5. You can now add any enrichments you like! Select the 'Enable OCR ...' checkbox to have access to more enrichments based on a merged content field
 
 [![Add Enrichments](images/add_enrichments.png)](https://docs.microsoft.com/en-us/azure/search/cognitive-search-quickstart-blob?WT.mc_id=msignitethetour2019-github-aiml10#step-2-add-cognitive-skills "Add Enrichments")
 
