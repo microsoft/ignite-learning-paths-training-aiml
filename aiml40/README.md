@@ -94,19 +94,29 @@ You can execute demo code from any Jupyter Notebook Environment. We recommend us
 To use Jupyter Notebooks from within Azure ML Workspace:
     - Navigate to your [Azure ML Portal](https://ml.azure.com/)
     - Select **Notebooks** from left-hand-side menu
-    - Upload `absa.ipynb` file and select it
-    - You will be prompted to **Create a notebook VM**. Now you can use the notebook directly from the portal.
+    - Upload `absa.ipynb` file (click the button with the arrow) and select it in the file pane
+    - To be able to execute the notebook, select **+ New VM** from the top menu of the notebook, and create the new notebook VM.
+    - Now you can use the notebook directly from the portal
+    - To open the Jupyter Notebook in a full-screen browser (not inside the ML Portal), select **Jupyter** -> **Open in Jupyter** in the top menu (depending on the screen resolution it may be hidden under `...` button)
+
+In order to connect to your workspace from the Python code in `absa.ipynb`, you would need to provide workspace data. You can either:
+ * Insert your subscription id into the code in `absa.ipynb`, and uncomment the following code:
+```python
+subscription_id = 'd04ba089-....'
+resource_group  = 'absa'
+workspace_name  = 'absa_space'
+ws = Workspace(subscription_id = subscription_id, resource_group = resource_group, workspace_name = workspace_name)
+ws.write_config()
+```
+ * Or, you can download `config.json` file through the Azure Portal and upload it to the same folder as `absa.ipynb`, in which case the command `ws = Workspace.from_config()` will load this data and connect to the workspace automatically.
+
+> 💡 **Note**: Some code inside `absa.ipynb` file takes **really a long time** to run. In order to demonstrate it to the audience, you need to pre-run some cells in advance, and then only run some cells to show the results. There is a separate file called `absa-instructions.ipynb`, which contains the same code with additional comments on which cells need to be run during demo, and which need to be skipped. Please refer to this file during preparation, and make sure to run cells in `absa.ipynb` before the actual demo.
 
 #### Pre-creating Compute Cluster
 
-For the last two demos, you need a compute cluster. For demo purposes, we will create a cluster that consists of one node only. This can be done in one of three ways:
+For the last two demos, you need a compute cluster. For demo purposes, we will create a cluster that consists of one node only. This can be done in one of two ways:
 
-* Through [Azure ML Portal](http://ml.azure.com/?wt.mc_id=msignitethetour2019-github-aiml40) go to **Compute** section and manually create Azure ML Compute cluster with *Standard_DS3_v2* VMs, specifying number of nodes = 1. Name the cluster `absa-cluster`.
-* Run the provided `create_cluster.py` script, providing parameters as above:
-```shell
-pip install -r requirements.txt
-python create_cluster.py -s [subscription_id] -w absa_space -g absa
-```
+* **Recommended**: Through [Azure ML Portal](http://ml.azure.com/?wt.mc_id=msignitethetour2019-github-aiml40) go to **Compute** section and manually create Azure ML Compute cluster with *Standard_DS3_v2* VMs, specifying number of nodes = 1. Name the cluster `absa-cluster`. 
 * Run first few cells from `absa.ipynb` notebook which will create the cluster for you.
 
 #### Generate dataset profile
