@@ -63,7 +63,7 @@ az group create -n absa -l westus2
 az ml workspace create -w absa_space -g absa
 ```
 
-> 💡 *IMPORTANT NOTE: We are using `absa` as a workspace name, and *West US 2* as the datacenter. We will refer to those names several times during the preparation and demo, so it would be best not to change them. If you change them, however, you will need to pay attention and adjust some of the commands accordingly.*
+> 💡 *IMPORTANT NOTE: We are using `absa_space` as a workspace name, and `absa` as the Azure Resource Group name. We will refer to those names several times during the preparation and demo, so it would be best not to change them. If you change them, however, you will need to pay attention and adjust some of the commands accordingly. Also, we use *West US 2* as the datacenter location -- feel free to adjust it according to region where the demo will take place.*
 
 You would also need to know your subscription id, which can be obtained by running `az account list`.
 
@@ -86,6 +86,8 @@ To follow the Automated ML Demo, please upload the dataset to your workspace:
  * Click **Next** two times, on the final page select **Profile the dataset after creating** and click **Create**.  
 
 The Automated ML clothing dataset would be uploaded to the AML service datastore by the demo code.
+
+Also, in order to use Automated ML feature, you need to convert the workspace to the *Enterprise* level. This can be done by clicking on **Automated ML** tab, and choosing the option to upgrade the workspace. This operation only takes a few seconds.
 
 #### Using the Azure ML Demo Code
 
