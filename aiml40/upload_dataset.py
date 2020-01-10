@@ -25,7 +25,10 @@ ds.upload_files([os.path.join(lib_root,args.f)],relative_root=lib_root)
 print("File {} uploaded".format(args.f))
 
 datastore_paths = [(ds, args.f)]
-dset = Dataset.Tabular.from_delimited_files(path=datastore_paths)
+if args.f.endswith('.xls') or args.f.endswith('.xlsx'):
+ dset = Dataset.Tabular.from_excel_files(path=datastore_paths)
+else:
+ dset = Dataset.Tabular.from_delimited_files(path=datastore_paths)
 
 print("Dataset created")
 
