@@ -1,2 +1,0 @@
-azureml.core
-azureml.dataprep
