@@ -118,10 +118,11 @@ Tailwind Traders는 사용자 지정 기계 학습 모델을 사용하여 소프
 3. Jupyter 랩의 홈페이지에서 터미널을 클릭합니다.
 4. Jupyter 랩의 터미널에서 리포지토리를 복제합니다.
     * `git clone https://github.com/microsoft/ignite-learning-paths-training-aiml.git`
-5. `ignite-learning-paths-training-aiml` 복제된 폴더를 열고 `ignite-ailml30-get-prediction.ipynb` 파일로 이동한 후 클릭하여 엽니다.
+5. 터미널 `pip install holidays`에도 복제합니다.
+6. 복제된 폴더 `ignite-learning-paths-training-aiml`을 열고 파일 `ignite-ailml30-get-prediction.ipynb`로 이동한 후 클릭하여 엽니다.
     * 전체 경로는 다음과 같습니다. `ignite-learning-paths-training-aiml\aiml30\Python\ignite-ailml30-get-prediction.ipynb`
-6. csv 파일, 엔드포인트 및 키에 대한 경로를 업데이트합니다.
-7. `SHIFT + Enter` 또는 최상위 메뉴의 각 셀에서 [재생]을 클릭하여 각 셀 실행
+7. csv 파일, 엔드포인트 및 키에 대한 경로를 업데이트합니다.
+8. `SHIFT + Enter` 또는 최상위 메뉴의 각 셀에서 [재생]을 클릭하여 각 셀 실행
 
 ## <a name="powerpoint-deck-and-video-demo"></a>PowerPoint 데크 및 동영상 데모
 

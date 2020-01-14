@@ -37,7 +37,7 @@ Tailwind Traders에는 개발자가 앱에서 활용할 수 있는 이미지, �
 
 # <a name="presentation"></a>프레젠테이션
 
-* [PowerPoint 다운로드](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/aiml10.pptx)
+* [PowerPoint 다운로드]( https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/ja-JP/aiml10-translation.ko-KR.pptx)
 * [Microsoft Ignite 올랜도 세션 동영상](https://myignite.techcommunity.microsoft.com/sessions/82986?source=sessions)
 
 

@@ -10,16 +10,21 @@ Microsoft Ignite 2019 및 Microsoft Ignite Tour 2019-2020 대담인 “미리 �
 
 **미리 빌드된 AI를 사용하여 비즈니스 과제 해결**
 
-요약: 데이터 기반 회사인 Tailwind Traders에서는 비즈니스 프로세스 개선과 고객 만족을 위한 인공 지능 사용의 중요성을 잘 알고 있습니다. AI 팀에 투자하기 전에 Tailwind Traders의 기존 개발자들은 미리 빌드된 AI 기술을 사용하여 몇 가지 단기적 성공을 보여줄 수 있었습니다. 이 세션에서는 Azure Cognitive Services를 사용하여 소매 데이터에서 인사이트를 추출하는 방법을 살펴봅니다. Computer Vision 뒤에 있는 신경망으로 이동하여 사용자 지정 이미지 인식 애플리케이션을 위해 미리 빌드된 AI를 고유한 이미지로 보강할 수 있는 방법을 보여줍니다.
+데이터 기반 회사인 Tailwind Traders에서는 비즈니스 프로세스 개선과 고객 만족을 위한 인공 지능 사용의 중요성을 잘 알고 있습니다.
+AI 팀에 투자하기 전에 Tailwind Traders의 기존 개발자들은 미리 빌드된 AI 기술을 사용하여 몇 가지 단기적 성공을 보여줄 수 있었습니다. 
 
-## <a name="table-of-content"></a>목차
+이 세션에서는 Azure Cognitive Services를 사용하여 Tailwind Traders 웹 사이트의 "Shop by Photo" 기능을 구현하는 방법과 Computer Vision에서의 신경망 기능을 설명합니다. 또한 보충 학습 및 Personalizer 서비스를 통해 웹 사이트 레이아웃이 익명 사용자의 참여를 최적화하도록 자동으로 조정되는 방법을 보여 줍니다.
+
+마지막으로, AI를 프로덕션에 배치하기 전에 고려해야 하는 비용, 데이터 규정 및 윤리적 문제를 검토합니다.
+
+## <a name="table-of-contents"></a>목차
  
 
 | 리소스          | 링크                            |
 |-------------------|----------------------------------|
 | PowerPoint        | - [프레젠테이션](presentations.md) |
 | 동영상            | - [예행 연습](https://youtu.be/jRO-5g-HYuU) <br/>- [Microsoft Ignite 올랜도 녹화](https://myignite.techcommunity.microsoft.com/sessions/82987?source=sessions) |
-| 데모             | - [데모 1 - 설정](https://github.com/microsoft/ignite-learning-paths-training-aiml/blob/master/aiml20/DEMO%20Setup.md) <br/>- [데모 2 - Computer Vision](https://github.com/microsoft/ignite-learning-paths-training-aiml/blob/master/aiml20/DEMO%20Computer%20Vision.md) <br/>- [데모 3 - Custom Vision](https://github.com/microsoft/ignite-learning-paths-training-aiml/blob/master/aiml20/DEMO%20Custom%20Vision.md)<br/>- [데모 4 - ONNX 배포](https://github.com/microsoft/ignite-learning-paths-training-aiml/blob/master/aiml20/DEMO%20ONNX%20deployment.md) <br/>- [ 5 - Personalizer](https://github.com/microsoft/ignite-learning-paths-training-aiml/blob/master/aiml20/DEMO%20Personalizer.md) | 
+| 데모             | - [데모 1 - 설정 ](https://github.com/microsoft/ignite-learning-paths-training-aiml/blob/master/aiml20/DEMO%20Setup.md) <br/>- [데모 2 - Computer Vision](https://github.com/microsoft/ignite-learning-paths-training-aiml/blob/master/aiml20/DEMO%20Computer%20Vision.md) <br/>- [데모 3 - Custom Vision](https://github.com/microsoft/ignite-learning-paths-training-aiml/blob/master/aiml20/DEMO%20Custom%20Vision.md)<br/>- [데모 4 - ONNX 배포](https://github.com/microsoft/ignite-learning-paths-training-aiml/blob/master/aiml20/DEMO%20ONNX%20deployment.md) <br/>- [데모 5 - Personalizer](https://github.com/microsoft/ignite-learning-paths-training-aiml/blob/master/aiml20/DEMO%20Personalizer.md) | 
 
 [여기에서 AIML20 프레젠테이션의 슬라이드를 다운로드합니다](presentations.md). (최신 버전의 첫 번째 링크를 사용합니다.) 슬라이드는 PPT 형식이며 자세한 발표자 노트와 포함된 데모 동영상이 있습니다.
 

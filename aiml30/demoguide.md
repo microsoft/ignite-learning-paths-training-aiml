@@ -10,7 +10,8 @@
 
 > 💡 데모를 시작하기 전에 [배포](demosetup.md)를 완료해야 합니다.
 
-### <a name="1-open-the-igniteaimldataapp-app-i-personally-like-to-have-this-open-before-i-start-the-talk-so-i-can-just-flip-to-it"></a>1. `IgniteAimlDataApp` 앱을 엽니다. 화면을 간단하게 전환할 수 있기 때문에 개인적으로는 설명을 시작하기 전에 앱을 열어 두는 것을 선호합니다.
+### <a name="1-open-the-igniteaimldataapp-app-i-personally-like-to-have-this-open-before-i-start-the-talk-so-i-can-just-flip-to-it"></a>1. 
+          `IgniteAimlDataApp` 앱을 엽니다. 화면을 간단하게 전환할 수 있기 때문에 개인적으로는 설명을 시작하기 전에 앱을 열어 두는 것을 선호합니다.
 * `Program.cs` 파일을 엽니다.
 * 마우스 오른쪽 단추를 클릭하여 `GetProcessedDataForScore` 메서드로 이동하고, `Go To Definition`을 선택하거나 `F12` 키를 누릅니다.
     * 데이터 원본에서 데이터를 로드합니다. 이 예제에서는 솔루션의 로컬 excel 파일을 로드합니다.
@@ -77,7 +78,7 @@
 * 학습 데이터를 가져오려면 `Split Data` 모듈을 `Train Model`에 연결하고 보이지 않는 데이터로 예측 결과의 점수를 매기려면 `Score Model`에 연결합니다.
 * `Train Model`을 학습 알고리즘 `Boosted Decision Tree Regression` 모듈에 연결합니다.
 * `Evaluate` 모듈을 사용하여 `Score Model`을 연결합니다.
-* 이곳은 일반적으로 모델을 실행하는 _위치지만_ 데모에서 실행하는 데 시간이 너무 오래 걸립니다. 하단 탐색 창에서 `Run` 단추를 클릭하고 [컴퓨팅]을 선택하는 방법을 알아보세요. 이 방법은 AML에서 컴퓨팅 리소스를 만드는 방법에 관한 설명으로 이어집니다.
+* 이곳은 일반적으로 모델을 실행하는 _위치지만_ 데모에서 실행하는 데 시간이 너무 오래 걸립니다. 하단 탐색 창에서 `Run` 단추를 클릭하고 컴퓨팅을 선택하는 방법을 알아보세요. 이 방법은 AML에서 컴퓨팅 리소스를 만드는 방법에 관한 설명으로 이어집니다.
 
 * 만든 열 `Scored Labels`의 이름을 `Forecast`로 바꿉니다.
     * `Edit Metadata`를 작업 영역으로 끌어옵니다.

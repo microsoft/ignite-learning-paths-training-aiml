@@ -4,12 +4,10 @@ This is a machine generated file, and should not be edited, as it will be overwr
 
 # <a name="aiml30-presentation-files"></a>AIML30 프레젠테이션 파일
 
-- [aiml30.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml30/aiml30.pptx)(업데이트 게시일: 2019년 12월 4일)
-- [aiml30.ko-kr.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml30/aiml30.ko-kr.pptx)(업데이트 게시일: 2019년 12월 4일)
-- [aiml30.es-es.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml30/aiml30.es-es.pptx)(업데이트 게시일: 2019년 12월 4일)
-- [aiml30.pt-br.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml30/aiml30.pt-br.pptx)(업데이트 게시일: 2019년 12월 4일)
-- [aiml30.ja-jp.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml30/aiml30.ja-jp.pptx)(업데이트 게시일: 2019년 12월 4일)
-- [aiml30.zh-cn.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml30/aiml30.zh-cn.pptx)(업데이트 게시일: 2019년 12월 4일)
+- [aiml30.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml30/aiml30.ko-kr.pptx)(업데이트 게시일: 2019년 12월 4일)
+- [aiml30.pt-br.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml30/aiml30.pt-br.pptx)(업데이트 게시일: 2019년 12월 3일)
+- [aiml30.ja-jp.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml30/aiml30.ja-jp.pptx)(업데이트 게시일: 2019년 12월 3일)
+- [aiml30.zh-cn.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml30/aiml30.zh-cn.pptx)(업데이트 게시일: 2019년 12월 3일)
 ---
 ## <a name="historical-files"></a>이전 파일
 - [aiml30-2019-10_Oct-24.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml30/aiml30-2019-10_Oct-24.pptx)
