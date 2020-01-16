@@ -8,18 +8,23 @@ Este es el repositorio compatible con Microsoft Ignite 2019 y la presentación 
 
 ## <a name="session-abstract"></a>Resumen de la sesión
 
-**Uso de inteligencia artificial pregenerada para superar desafíos empresariales**
+**Uso de inteligencia artificial creada previamente para superar los desafíos empresariales**
 
-Descripción breve: Como compañía orientada a datos, Tailwind Traders entiende la importancia del uso de la inteligencia artificial para mejorar los procesos empresariales y satisfacer a los clientes. Antes de invertir en un equipo de inteligencia artificial, los desarrolladores existentes tuvieron la oportunidad de demostrar algunos beneficios inmediatos usando tecnologías de inteligencia artificial creadas previamente. En esta sesión, se explicará cómo se puede usar Azure Cognitive Services para obtener información de los datos comerciales. Nos adentraremos en las redes neuronales subyacentes a la visión informática y mostraremos cómo puede aumentar la IA pregenerada con imágenes propias para aplicaciones de reconocimiento de imágenes personalizadas.
+Como compañía orientada a datos, Tailwind Traders entiende la importancia del uso de la inteligencia artificial para mejorar los procesos empresariales y satisfacer a los clientes.
+Antes de invertir en un equipo de inteligencia artificial, los desarrolladores existentes tuvieron la oportunidad de demostrar algunos beneficios inmediatos usando tecnologías de inteligencia artificial creadas previamente. 
 
-## <a name="table-of-content"></a>Tabla de contenido
+En esta sesión, se muestra cómo puede usar Azure Cognitive Services para implementar la característica "Shop by Photo" (Comprar por foto) en el sitio web de Tailwind Traders y se explica el funcionamiento de las redes neuronales que subyacen a Computer Vision. Asimismo, se muestra cómo el diseño del sitio web se adapta automáticamente para optimizar la interacción de los usuarios anónimos gracias al aprendizaje de refuerzo y al servicio Personalizer.
+
+Por último, se revisará el costo, la regulación de datos y los aspectos éticos que es necesario tener en cuenta antes de llevar la inteligencia artificial a producción.
+
+## <a name="table-of-contents"></a>Tabla de contenido
  
 
 | Recursos          | Vínculos                            |
 |-------------------|----------------------------------|
 | PowerPoint        | - [Presentación](presentations.md) |
-| Vídeos            | - [Ensayo del simulacro](https://youtu.be/jRO-5g-HYuU) <br/>- [Grabación de Microsoft Ignite Orlando](https://myignite.techcommunity.microsoft.com/sessions/82987?source=sessions) |
-| Demostraciones             | - [Demostración 1: Configuración ](https://github.com/microsoft/ignite-learning-paths-training-aiml/blob/master/aiml20/DEMO%20Setup.md) <br/>- [Demostración 2: Computer Vision](https://github.com/microsoft/ignite-learning-paths-training-aiml/blob/master/aiml20/DEMO%20Computer%20Vision.md) <br/>- [Demostración 3: Custom Vision](https://github.com/microsoft/ignite-learning-paths-training-aiml/blob/master/aiml20/DEMO%20Custom%20Vision.md)<br/>- [Demostración 4: Implementación de ONNX](https://github.com/microsoft/ignite-learning-paths-training-aiml/blob/master/aiml20/DEMO%20ONNX%20deployment.md) <br/>- [Demostración 5: Personalizer](https://github.com/microsoft/ignite-learning-paths-training-aiml/blob/master/aiml20/DEMO%20Personalizer.md) | 
+| Vídeos            | - [Ensayo del simulacro](https://youtu.be/jRO-5g-HYuU) <br/>- [Microsoft Ignite Orlando Recording](https://myignite.techcommunity.microsoft.com/sessions/82987?source=sessions) |
+| Demostraciones             | - [Demostración 1: Configuración](https://github.com/microsoft/ignite-learning-paths-training-aiml/blob/master/aiml20/DEMO%20Setup.md) <br/>- [Demostración 2: Computer Vision](https://github.com/microsoft/ignite-learning-paths-training-aiml/blob/master/aiml20/DEMO%20Computer%20Vision.md) <br/>- [Demostración 3: Custom Vision](https://github.com/microsoft/ignite-learning-paths-training-aiml/blob/master/aiml20/DEMO%20Custom%20Vision.md)<br/>- [Demostración 4: Implementación de ONNX](https://github.com/microsoft/ignite-learning-paths-training-aiml/blob/master/aiml20/DEMO%20ONNX%20deployment.md) <br/>- [Demostración 5: Personalizer](https://github.com/microsoft/ignite-learning-paths-training-aiml/blob/master/aiml20/DEMO%20Personalizer.md) | 
 
 [Descargue las diapositivas de la presentación de AIML20 aquí](presentations.md). (Use el primer vínculo para obtener la versión más reciente). Las diapositivas están en formato PPT e incluyen notas del orador detalladas y vídeos de demostración insertados.
 
@@ -35,7 +40,7 @@ También se proporcionan [recursos para los presentadores de esta presentación]
 * [Azure Cloud Shell](https://docs.microsoft.com/en-us/azure/cloud-shell/overview?WT.mc_id=msignitethetour2019-github-aiml20)
 * [Interfaz de la línea de comandos (CLI) de Azure](https://docs.microsoft.com/en-us/cli/azure/?view=azure-cli-latest?WT.mc_id=msignitethetour2019-github-aiml20)
 * [ONNX](https://github.com/onnx/onnx)
-* [Visual Studio Code](https://code.visualstudio.com/)
+* [Visual Studio Code](https://code.visualstudio.com/)
 
 ## <a name="other-resources-mentioned-in-talk"></a>Otros recursos mencionados en la presentación
 

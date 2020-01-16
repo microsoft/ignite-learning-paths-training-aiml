@@ -53,7 +53,7 @@ Esto es Azure Cognitive Services.
 
 Azure Cognitive Services incluye más de dos docenas de API, pero, en un nivel más amplio, ofrecen funciones en estas categorías de funcionalidad humana:
 
-* Visión: descripción del contenido de fotografías, dibujos, texto y escritura a mano, y vídeo
+* Visión: descripción del contenido de fotografías, dibujos, texto y escritura a mano, y vídeo.
 
 * Voz: herramientas para comprender y reconocer voz, y generar voz natural y similar a la humana.
 
@@ -92,9 +92,9 @@ DEMOSTRACIÓN: "Definición del problema: Comprar por foto está dañado"
 
 Vamos al sitio web real de Tailwind Traders. [CLIC]
 
-Una de las características habilitadas para la inteligencia artificial se denomina "Comprar por foto". Esta característica permite al cliente cargar una foto de un producto que quizás quiere comprar y la idea es que la aplicación le indicará si el producto está disponible. Vamos a continuar y a probarlo ahora. Cargaremos esta imagen de un taladro que nos interese y la aplicación Tailwind Traders analizará la imagen, reconocerá que se trata de un taladro y mostrará el taladro que Tailwind Traders tiene a la venta, así como dónde encontrarlo en la tienda.
+Una de las características habilitadas para la inteligencia artificial se denomina "Comprar por foto". Esta característica permite al cliente cargar una foto de un producto que quizás quiere comprar y la idea es que la aplicación le indicará si el producto está disponible. Vamos a continuar y a probarlo ahora. Cargaremos la imagen de un taladro que nos interese y la aplicación Tailwind Traders la analizará, reconocerá que se trata de un taladro y mostrará el taladro que Tailwind Traders tiene a la venta, así como dónde encontrarlo en la tienda.
 
-Pero vamos a intentarlo con una imagen diferente. Voy a volver a la página principal, usaré la característica "Comprar por foto" una vez más y esta vez elegiré esta imagen de unas tenazas. Por desgracia, cuando la aplicación analiza esa imagen, considera que es un martillo. Obviamente, no funciona bien, por lo que ahora vamos a ver si podemos averiguar qué es lo que ha salido mal y encontrar una manera de corregirlo mediante Computer Vision. 
+Pero probemos con otra imagen. Voy a volver a la página principal, usaré la característica "Comprar por foto" una vez más y esta vez elegiré la imagen de unas tenazas. Por desgracia, cuando la aplicación analiza esa imagen, considera que es un martillo. Obviamente, no funciona bien, por lo que ahora veremos si podemos averiguar qué es lo que ha salido mal y encontrar una manera de corregirlo mediante Computer Vision. 
 
 ### <a name="slide-how-computer-vision-works"></a>DIAPOSITIVA: Funcionamiento de Computer Vision
 
@@ -115,11 +115,11 @@ Esta explicación es una adaptación realizada con el permiso de Brandon Rohrer,
 Probablemente ha oído que la inteligencia artificial se consigue gracias al aprendizaje profundo.
 El adjetivo "profundo" del término "aprendizaje profundo" no significa "intenso", sino simplemente que, durante el análisis de la imagen, esta pasa por una red neuronal formada por muchas capas. Eso es todo.
 
-En la pantalla se trata de una red neuronal muy sencilla. Esta solo tiene cinco capas; los sistemas de visión del mundo real tienen decenas de capas, quizás cientos de ellas. Esta está diseñada para tomar una imagen como entrada y después clasificarla como uno de cuatro objetos: perro, bicicleta, manzana y pelota de tenis. Y eso es todo. No es capaz de reconocer ningún otro objeto fuera de aquellos para los que se ha entrenado.
+En la pantalla se trata de una red neuronal muy sencilla. Esta solo tiene cinco capas; los sistemas de visión del mundo real tienen decenas de capas, quizás cientos de ellas. Está diseñada para tomar una imagen como entrada y después clasificarla como uno de cuatro objetos: perro, bicicleta, manzana y pelota de tenis. Y eso es todo. No es capaz de reconocer ningún otro objeto fuera de aquellos para los que se ha entrenado.
 
 ### <a name="slide-trained-convolutional-nn"></a>DIAPOSITIVA: Red neuronal convolucional entrenada
 
-Cuando se ha entrenado una red neuronal, la imagen de entrada pasa a través de la red capa por capa, y en cada capa transforma la imagen en imágenes diferentes y más pequeñas. Cada capa recombina las imágenes generadas en la capa anterior. Las imágenes se hacen cada vez más pequeñas hasta que al final consisten en un solo píxel con un valor comprendido entre el 0 y el 1. Ese valor representa la confianza que tiene la red neuronal en que la imagen representa el objeto dado: cuanto mayor sea el número, mayor confianza tendrá.
+Cuando se ha entrenado una red neuronal, la imagen de entrada pasa a través de la red capa por capa, y en cada capa transforma la imagen en imágenes diferentes y más pequeñas. Cada capa recombina las imágenes generadas en la capa anterior. Las imágenes se hacen cada vez más pequeñas hasta que al final consisten en un solo píxel con un valor comprendido entre el 0 y el 1. Ese valor representa la confianza que tiene la red neuronal en que la imagen representa el objeto dado: cuanto mayor sea el número, mayor confianza tendrá.
 
 En este caso, hemos insertado una imagen de una bicicleta, y el nodo "bicicleta" del lado derecho es el que tiene el valor más alto. Así, parece que esta red neuronal está bien entrenada para detectar bicicletas (o por lo menos esta). Pero ¿cómo se "entrena" una red neuronal y cómo se transforma la imagen a lo largo del proceso?
 
@@ -128,7 +128,7 @@ Vendría a ser como un filtro de Snapshot o de Instagram, pero en vez de hacer a
 
 ### <a name="slide-filters-1"></a>DIAPOSITIVA: Filtros (1)
 
-Vamos a tomar una imagen sencilla. Se trata de la imagen de una cruz. Tiene 9 por 9 píxeles, el blanco es "+ 1" y el negro es "-1". Vamos a aplicar un filtro a esta imagen, igual que sucede en cada uno de los nodos de la red neuronal.
+Vamos a tomar una imagen sencilla. Se trata de la imagen de una cruz. Tiene 9 por 9 píxeles, el blanco es "+ 1" y el negro es "-1". Vamos a aplicar un filtro a esta imagen, igual que sucede en cada uno de los nodos de la red neuronal.
 
 ### <a name="slide-filters-2"></a>DIAPOSITIVA: Filtros (2)
 
@@ -140,7 +140,7 @@ Probablemente haya observado que no se pueden usar los bordes de la imagen de en
 
 ### <a name="slide-filters-3"></a>DIAPOSITIVA: Filtros (3)
 
-Vamos a desplazar la cuadrícula de pesos dos píxeles hacia abajo y hacia la derecha. Ahora, al multiplicar los pesos por los píxeles de origen y calcular el promedio, obtendremos un píxel de salida diferente (,55). La red neuronal barre los pesos en las filas y columnas de la imagen de origen para crear los píxeles en la imagen de salida.
+Vamos a desplazar la cuadrícula de pesos dos píxeles hacia abajo y hacia la derecha. Ahora, al multiplicar las ponderaciones por los píxeles de origen y calcular el promedio, obtendremos un píxel de salida diferente (.55). La red neuronal realiza un barrido de las ponderaciones a través de las filas y columnas de la imagen de origen para crear los píxeles en la imagen de salida.
 
 De hecho, ese proceso de barrido del filtro a través de la imagen tiene un nombre complejo para una operación matemática simple: convolución. Y por esto se denominan redes neuronales convolucionales.
 
@@ -162,7 +162,7 @@ En segundo lugar, incluso después de conocer toda esa información, para usar e
 
 ### <a name="slide-pre-trained-convolutional-nn"></a>DIAPOSITIVA: Red neuronal convolucional previamente entrenada
 
-Por lo tanto, solo puede usar el modelo con los pesos predeterminados y, como solo necesita detectar las clasificaciones de objetos para las que se ha entrenado el modelo, lo tiene todo listo para empezar. Basta con proporcionar la imagen y usar las clasificaciones que genera el modelo previamente entrenado. 
+Por lo tanto, solo puede usar el modelo con los pesos predeterminados y, como solo necesita detectar las clasificaciones de objetos para las que se ha entrenado el modelo, lo tiene todo listo para empezar. Basta con proporcionar la imagen y usar las clasificaciones que genera el modelo entrenado previamente. 
 
 Algunos modelos no se limitan a clasificar: también pueden detectar la ubicación de los objetos en las imágenes o analizar la imagen de otras maneras.
 
@@ -174,7 +174,7 @@ Hay una interfaz de usuario simple basada en web que puede usar para probarlo en
 
 ### <a name="video-computer-vision-via-web"></a>VÍDEO: Computer Vision por web
 
-[CLIC] Esta es la página de Cognitive Services Computer Vision. Si se desplaza hacia abajo un poco en esa página, encontrará un buen formulario basado en web que nos permite cargar una imagen para su análisis, ya sea desde la web o como un archivo local. Vamos a intentar cargar esta imagen de un hombre con un casco de obra. En tan solo unos segundos, el servicio Computer Vision devolverá el análisis de esa imagen. A la izquierda, se muestran los objetos detectados en la imagen, mientras que a la derecha, tenemos la salida JSON con el análisis detallado. Esto incluye los nombres y las ubicaciones de los objetos detectados en la imagen, una lista de etiquetas o etiquetas asociadas a la imagen, una descripción del lenguaje sin formato de la imagen (en este caso, “un hombre con un casco de obra”) y muchas otras informaciones útiles.
+[CLIC] Esta es la página de Cognitive Services Computer Vision. Si se desplaza hacia abajo un poco en esa página, encontrará un buen formulario basado en web que nos permite cargar una imagen para su análisis, ya sea desde la web o como archivo local. Vamos a intentar cargar esta imagen de un hombre con casco de obra. En tan solo unos segundos, el servicio Computer Vision devolverá el análisis de esa imagen. A la izquierda, se muestran los objetos detectados en la imagen, mientras que a la derecha, tenemos la salida JSON con el análisis detallado. Esto incluye los nombres y las ubicaciones de los objetos detectados en la imagen, una lista de etiquetas o etiquetas asociadas a la imagen, una descripción del lenguaje sin formato de la imagen (en este caso, “un hombre con un casco de obra”) y muchas otras informaciones útiles.
 
 ### <a name="slide-cognitive-services-computer-vision"></a>DIAPOSITIVA: Cognitive Services Computer Vision
 
@@ -188,7 +188,7 @@ Vamos a ver de qué modo.
 
 ### <a name="video-computer-vision-via-cli"></a>VÍDEO: Computer Vision por CLI
 
-Puede interactuar con las API de Cognitive Service usando cualquier lenguaje que se pueda conectar a un punto de conexión HTTP, pero lo que tengo aquí [CLIC] es un script de bash que usa la CLI de Azure para crear recursos y se conecta a la API de Computer Vision API mediante "curl". Puede instalar el CLI de Azure en el shell local, pero aquí utilizo la extensión "Azure Account" (Cuenta de Azure) en Visual Studio Code para iniciar un Cloud Shell, lo que significa que no tengo que instalar nada. Una vez que el shell esté listo, puedo ejecutar comandos directamente desde este script de Bash. 
+Puede interactuar con las API de Cognitive Service usando cualquier lenguaje que se pueda conectar a un punto de conexión HTTP, pero lo que tengo aquí [CLIC] es un script de bash que usa la CLI de Azure para crear recursos y se conecta a la API de Computer Vision API mediante "curl". Puede instalar el CLI de Azure en el shell local, pero aquí utilizo la extensión "Azure Account" (Cuenta de Azure) en Visual Studio Code para iniciar un Cloud Shell, lo que significa que no tengo que instalar nada. Una vez que el shell esté listo, puedo ejecutar comandos directamente desde este script de bash. 
 
 Este primer comando crea un grupo de recursos, que usaré para contener las claves que necesito para autenticar la API.
 
@@ -234,9 +234,9 @@ Si lo unimos todo, ¿qué tenemos? Una colección de vectores de datos, cada uno
 
 ### <a name="slide-transfer-learning-trained-model"></a>DIAPOSITIVA: Modelo entrenado de aprendizaje de transferencia
 
-A menudo, esto funciona sorprendentemente bien. Ni siquiera necesita muchos datos: a menudo con unas decenas de imágenes es suficiente, siempre que las categorías que quiera predecir se diferencien lo suficiente las unas de las otras. Y no necesita una gran capacidad informática para predecir unos cien resultados binarios de una cantidad relativamente pequeña de datos.
+A menudo, esto funciona sorprendentemente bien. Ni siquiera se necesitan muchos datos: a menudo con unas decenas de imágenes es suficiente, siempre que las categorías que quiera predecir se diferencien lo suficiente las unas de las otras. Y no necesita una gran capacidad informática para predecir unos cien resultados binarios de una cantidad relativamente pequeña de datos.
 
-Por supuesto, este es un ejemplo inventado. Es probable que tenga que identificar más de dos objetos y seguro que la red neuronal subyacente generará muchas más que 8 características en el penúltimo nivel. Pero el principio sigue siendo el mismo: puede hacer esto con una capacidad de computación y unos datos nuevos modestos, y acostumbra a funcionar muy bien.
+Por supuesto, este es un ejemplo inventado. Es probable que tenga que identificar más de dos objetos y seguro que la red neuronal subyacente generará mucho más que 8 características en la penúltima capa. Pero el principio sigue siendo el mismo: puede hacer esto con una capacidad de computación y unos datos nuevos modestos, y acostumbra a funcionar muy bien.
 
 ### <a name="slide-microsoft-cognitive-services-custom-vision"></a>DIAPOSITIVA: Microsoft Cognitive Services Custom Vision
 
@@ -250,18 +250,18 @@ Instrucciones de demostración: https://github.com/microsoft/ignite-learning-pat
 
 ### <a name="video-customvisionai"></a>VÍDEO: customvision.ai
 
-[CLIC] Aquí estoy en la interfaz basada en web de Custom Vision. Nos proporciona una buena interfaz de usuario donde podemos proporcionar nuevas imágenes para el análisis de aprendizaje de transferencia. Y puede ver en este proyecto que ya he cargado varias imágenes. He cargado imágenes de destornilladores, tenazas, taladros y martillos, que voy a usar para entrenar el modelo personalizado. También nos gustaría detectar otro producto que Tailwind Traders vende: cascos. Vamos a hacer clic en "add images" (agregar imágenes), buscaremos una carpeta en el disco duro donde he recopilado algunas fotos de cascos, las seleccionaremos todas y las agregaremos al servicio, a la vez que proporcionamos la etiqueta "hard hat" (casco) para usarla en el entrenamiento.
+[CLIC] Aquí estoy en la interfaz basada en web de Custom Vision. Nos ofrece una buena interfaz de usuario donde podemos proporcionar nuevas imágenes para el análisis de aprendizaje de transferencia. Y puede ver en este proyecto que ya he cargado varias imágenes. He cargado imágenes de destornilladores, tenazas, taladros y martillos, que voy a usar para entrenar el modelo personalizado. También nos gustaría detectar otro producto que Tailwind Traders vende: cascos. Vamos a hacer clic en "agregar imágenes", buscaremos una carpeta en el disco duro donde he recopilado algunas fotos de cascos, las seleccionaremos todas y las agregaremos al servicio, a la vez que proporcionamos la etiqueta "hard hat" (casco) para usarla en el entrenamiento.
 
-Los archivos tardarán unos minutos en cargarse, pero mientras la acción se lleva a cabo, observe que no hay tantas imágenes en este proyecto: aproximadamente 180, o unas pocas docenas para cada una de las cinco categorías. A veces incluso menos. A pesar de eso, dado que los cinco tipos de objeto son bastante distintos, el modelo debe funcionar bastante bien.
+Los archivos tardarán unos minutos en cargarse, pero mientras la acción se lleva a cabo, observe que no hay tantas imágenes en este proyecto: aproximadamente 180, o unas pocas docenas para cada una de las cinco categorías. A veces incluso menos. A pesar de eso, dado que los cinco tipos de objetos son bastante distintos, el modelo debe funcionar bastante bien.
 
-Vamos a avanzar y hacer clic en el botón Train (Entrenar) para iniciar el aprendizaje de transferencia. Elegiremos la opción de entrenamiento rápido. Ahora se ejecutan todas esas imágenes a través de un modelo de visión complejo y se usa el aprendizaje de transferencia para crear un modelo predictivo para nuestras cinco categorías. Solo tarda unos segundos y nuestro modelo funciona bastante bien.
-El umbral de probabilidad establece un límite por debajo del cual no se predecirá ninguna clasificación. Si solo aceptamos clasificaciones con una confianza del 50 % o más, el 90,9 % de esas predicciones son correctas: esto es lo que llamamos "precisión". Y el modelo clasifica correctamente el 88,2 % de las imágenes en general: esto es lo que llamamos "recuperación". En sus aplicaciones, podrá elegir un umbral de acuerdo con la tolerancia en caso de realizar la llamada equivocada, frente a no hacer ninguna llamada. En el caso de Tailwind Traders, podemos establecer el umbral en el lado inferior, ya que no es un gran problema sugerir el producto equivocado a un cliente. Si se tratara de una aplicación de detección de cáncer, probablemente realizaríamos una llamada diferente.
+Avancemos y hagamos clic en el botón Entrenar para iniciar el aprendizaje de transferencia. Elegiremos la opción de entrenamiento rápido. Ahora se ejecutan todas esas imágenes a través de un modelo de visión complejo y se usa el aprendizaje de transferencia para crear un modelo predictivo para nuestras cinco categorías. Solo tarda unos segundos y nuestro modelo funciona bastante bien.
+El umbral de probabilidad establece un límite por debajo del cual no se predecirá ninguna clasificación. Si solo aceptamos clasificaciones con una confianza del 50 % o más, el 90,9 % de esas predicciones son correctas: esto es lo que llamamos "precisión". Y el modelo clasifica correctamente el 88,2 % de las imágenes en general: esto es lo que llamamos "recuperación". En sus aplicaciones, podrá elegir un umbral de acuerdo con la tolerancia en caso de realizar la llamada equivocada, frente a no hacer ninguna llamada. En el caso de Tailwind Traders, podemos establecer el umbral en el lado inferior, ya que no es un gran problema sugerir el producto equivocado a un cliente. Si se tratara de una aplicación de detección de cáncer, probablemente el enfoque sería diferente.
 
-Ahora vamos a probar nuestro modelo en algunas imágenes nuevas que no ha encontrado antes. Para ello, hacemos clic en el botón de la opción de prueba rápida. Cargaremos un nuevo archivo desde la carpeta "test drive" (imágenes de prueba). Vamos a probar que pasa con nuestro hombre con un casco. Y puede ver que de hecho nuestra predicción de "hard hat" (casco) tiene una probabilidad del 99,9 %, por lo que haremos esa llamada con prácticamente cualquier umbral que elijamos.
+Ahora vamos a probar nuestro modelo en algunas imágenes nuevas que no ha encontrado antes. Para ello, hacemos clic en el botón de la opción de prueba rápida. Cargaremos un nuevo archivo desde la carpeta "test images" (imágenes de prueba). Vamos a ver qué pasa con nuestro hombre del casco. Puede ver que, de hecho, nuestra predicción de "hard hat" (casco) tiene una probabilidad del 99,9 %, por lo que haremos esa llamada con prácticamente cualquier umbral que elijamos.
 
 Vamos a probar una imagen diferente: el taladro. Nuestro modelo identifica la imagen como un taladro con una probabilidad del 94,5 %. Y, por último, vamos a probar la imagen de las tenazas, que identifica con una confianza del 99,9 %.
 
-Por lo tanto, el modelo funciona bien, aunque se ha entrenado en menos de 200 imágenes.
+Por lo tanto, el modelo funciona bien, aunque se ha entrenado en menos de 200 imágenes.
 Esto se debe a que hemos restringido las posibles etiquetas a los productos que vendemos en Tailwind Traders.
 
 Ahora que estamos satisfechos con nuestro modelo, podemos exportarlo e incorporarlo a nuestra aplicación. Si hace clic en el botón para exportar, puede exportar el modelo para iOS o Android, como un contenedor, o en nuestro caso en el formato ONNX universal. Ahora hemos descargado el modelo en el disco duro.
@@ -307,11 +307,11 @@ Ahora, volviendo a App Service, podemos continuar y reiniciar el servidor web, l
 
 ### <a name="video-netron"></a>VÍDEO: Netron
 
-[CLIC] Mientras estamos esperando a que el sitio web se reinicie, eche un vistazo al modelo ONNX que acabamos de instalar. Existe una pequeña aplicación web de Lutz Roeder denominada Netron, que nos permite inspeccionar las redes neuronales en archivos ONNX. Vamos a continuar y abrir el archivo products.onnx. Aquí puede ver los niveles reales de la red neuronal representada por el modelo. Vamos a ampliarlo un poco y a echar un vistazo a la entrada en la parte superior. La entrada es una imagen. Se trata de una imagen RGB de tres niveles, de tamaño 224 x 224 píxeles. En realidad debía recortar y reducir verticalmente la imagen proporcionada por el usuario antes de proporcionarla al tiempo de ejecución de ONNX. Un pequeño secreto poco elegante es que los sistemas de visión de equipos tienen una visión bastante deficiente, funcionan con resoluciones de imagen muy bajas, pero aun así funcionan bien.
+[CLIC] Mientras estamos esperando a que el sitio web se reinicie, vamos a echar un vistazo al modelo ONNX que acabamos de instalar. Existe una pequeña aplicación web de Lutz Roeder denominada Netron, que nos permite inspeccionar las redes neuronales en archivos ONNX. Vamos a continuar y abrir el archivo products.onnx. Aquí puede ver los niveles reales de la red neuronal representada por el modelo. Vamos a ampliarlo un poco y a echar un vistazo a la entrada en la parte superior. La entrada es una imagen. Se trata de una imagen RGB de tres niveles, de tamaño 224 x 224 píxeles. En realidad debía recortar y reducir verticalmente la imagen proporcionada por el usuario antes de proporcionarla al tiempo de ejecución de ONNX. Un pequeño secreto poco confesable es que los sistemas de visión computacional tienen una visión bastante deficiente (funcionan con resoluciones de imagen muy bajas) pero, aun así, funcionan bastante bien.
 
-Ahora vamos a reducir la visualización y a desplazarnos por la red. Puede ver todos los niveles de la red neuronal creada por la visión personalizada y como cada nivel transforma la imagen de entrada, aplicando filtros y recombinando las imágenes de salida, tal como aprendió anteriormente en esta conversación. Con todo, cuando se llega al nivel de salida al final, puede ver que la salida es una lista de cinco valores: los cinco productos en los que se ha entrenado: martillo, casco, etc., junto con este valor con la etiqueta "loss" (pérdida), que es la confianza que el modelo predice para cada categoría. En la aplicación, debe elegir su propio umbral en relación con lo alta que debe ser la confianza.
+Ahora vamos a reducir la visualización y a desplazarnos por la red. Puede ver todos los niveles de la red neuronal creada por la visión personalizada y cómo cada nivel transforma la imagen de entrada, aplicando filtros y recombinando las imágenes de salida, tal como aprendió anteriormente en esta conversación. Pero cuando se llega al nivel de salida al final, puede ver que la salida es una lista de cinco valores: los cinco productos en los que se ha entrenado: martillo, casco, etc., junto con este valor con la etiqueta "loss" (pérdida), que es la confianza que el modelo predice para cada categoría. En la aplicación, debe elegir su propio umbral en relación con lo alta que debe ser la confianza.
 
-De todos modos, ahora que se ha reiniciado el sitio web de Tailwind Traders, volvamos a la página principal y veamos cómo funciona nuestro nuevo modelo de visión. Vamos a seguir y a cargar una foto, y volveremos a intentar una vez más una de nuestras imágenes de prueba, concretamente, nuestra imagen de unas tenazas que no ha funcionado bien antes. Podemos ver que, de hecho, en lugar de pensar que era un martillo, el sitio web ha buscado "pliers" (tenazas) y me ha mostrado todos los productos de la oferta.
+De todos modos, ahora que se ha reiniciado el sitio web de Tailwind Traders, volvamos a la página principal y veamos cómo funciona nuestro nuevo modelo de visión. Vamos a seguir y a cargar una foto, y volveremos a probar una vez más una de nuestras imágenes de prueba, concretamente, nuestra imagen de unas tenazas que no ha funcionado bien antes. Podemos ver que, de hecho, en lugar de pensar que era un martillo, el sitio web ha buscado "pliers" (tenazas) y me ha mostrado todos los productos en oferta.
 
 ### <a name="slide-optimizing-app-ui-with-cognitive-services-personalizer"></a>DIAPOSITIVA: Optimizar la interfaz de usuario de la aplicación con Cognitive Services Personalizer
 
@@ -333,7 +333,7 @@ Ahora también puede usar Personalizer en sus propias aplicaciones.
 
 ### <a name="slide-reinforcement-learning"></a>DIAPOSITIVA: Aprendizaje de refuerzo
 
-Personalizer implementa una técnica de inteligencia artificial denominada "aprendizaje de refuerzo". Aquí le mostramos cómo funciona:
+Personalizer implementa una técnica de inteligencia artificial denominada aprendizaje de refuerzo. Aquí le mostramos cómo funciona:
 
 [CLIC] Supongamos que queremos mostrar una acción "hero" (modelo) al usuario. [CLIC] Es posible que el usuario no esté seguro de lo que debe hacer a continuación, [CLIC], pero podríamos mostrar una de varias sugerencias. En el caso de una aplicación de juegos, [CLIC] podría ser: "play a game" (jugar una partida), "watch a movie" (ver una película) o "join a clan" (unirse a un grupo). [CLIC] En función del historial del usuario y de otros datos contextuales (por ejemplo, su ubicación, la hora del día y el día de la semana), el servicio Personalizer [CLIC] clasifica las acciones posibles y [CLIC] busca la mejor sugerencia para promocionar [CLIC]. 
 
@@ -354,7 +354,7 @@ Con el tiempo, Personalizer determinará la mejor categoría para los usuarios a
 
 ### <a name="slide-demo-personalizer"></a>DIAPOSITIVA: DEMOSTRACIÓN: Personalizer
 
-[CLIC] Ahora, vamos a ver a Personalizer en acción. Vamos a volver a la página principal de Tailwind Traders. Lo que no mencioné antes es que, en esta sección Recommended, el orden de los departamentos del producto viene determinado por Personalizer.
+[CLIC] Ahora, vamos a ver a Personalizer en acción. Vamos a volver a la página principal de Tailwind Traders. Lo que no mencioné antes es que, en esta sección Recommended (Recomendado), el orden de los departamentos del producto viene determinado por Personalizer.
 En este caso, se presenta el departamento eléctrico como imagen modelo. También podemos ver el comportamiento de "Explore" (Explorar) si actualizamos el sitio web varias veces.
 Aparentemente, Personalizer considera que el Centro de jardinería obtiene la mejor involucración de usuarios anónimos en esta hora del día con el explorador y el sistema operativo que estoy usando aquí, pero puede ser que pruebe categorías distintas. Aquí, se ha mostrado fontanería y Personalizer también lo usará para medir la involucración.
 
@@ -402,9 +402,9 @@ Si no tiene establecido un marco de trabajo ético, un buen punto de partida son
 
 ### <a name="slide-wrapping-up"></a>DIAPOSITIVA: Resumen
 
-Resulta sencillo agregar funcionalidad similar a la humana con inteligencia artificial pregenerada. Los modelos pregenerados no pueden hacerlo todo, pero pueden solucionar una parte importante de cada caso concreto, de forma rápida. Más adelante en la ruta de aprendizaje veremos los modelos personalizados para el 20 % restante.
+Resulta sencillo agregar funcionalidad similar a la humana con inteligencia artificial pregenerada. Los modelos pregenerados no pueden hacerlo todo, pero pueden llevarle muy lejos, de forma rápida. Más adelante en la ruta de aprendizaje veremos los modelos personalizados para el 20 % restante.
 
-La inteligencia artificial es eficaz, pero no es magia. Se rige por datos y, fundamentalmente, en matemáticas bastante sencillas. Siempre tenga en cuenta los datos y úselos para ayudarle a entender lo que está ocurriendo. En concreto, recuerde que incluso en la mejor inteligencia artificial puede haber errores, especialmente en grupos que no están bien representados en los datos de entrenamiento.
+La inteligencia artificial es eficaz, pero no es magia. Se rige por datos y, fundamentalmente, en matemáticas bastante sencillas. Tenga siempre en cuenta los datos y úselos para que le ayuden a entender lo que está ocurriendo. En concreto, recuerde que incluso en la mejor inteligencia artificial puede haber errores, especialmente en grupos que no están bien representados en los datos de entrenamiento.
 
 Le recomiendo que lo pruebe. Aunque no se necesita una gran experiencia para empezar, hay que pensar en las implicaciones éticas de la inteligencia artificial y en cómo afecta a las personas, así que asegúrese de haber desarrollado un marco ético para usar la inteligencia artificial y adhiérase a él.
 
@@ -412,9 +412,9 @@ Le recomiendo que lo pruebe. Aunque no se necesita una gran experiencia para emp
 
 Para obtener todos los detalles de Azure Cognitive Services, incluidas las guías de introducción y las referencias, consulte Microsoft Docs.
 
-### <a name="slide-ms-learn-alert"></a>DIAPOSITIVA: Alerta de MS Learn
+### <a name="slide-ms-learn-alert"></a>DIAPOSITIVA: Alerta de MS Learn
 
-Y si quiere obtener información sobre cómo usar Cognitive Services, encontrará cursos gratuitos en Microsoft Learn que le guiarán por su utilización, paso a paso.
+Si quiere obtener información sobre cómo usar Cognitive Services, encontrará cursos gratuitos en Microsoft Learn que le guiarán por su utilización, paso a paso.
 
 ### <a name="slide-resources"></a>DIAPOSITIVA: Recursos
 

@@ -118,10 +118,11 @@ Una vez que haya creado el área de trabajo del servicio Machine Learning base,
 3. Haga clic en el terminal en la página principal de Jupyter Lab.
 4. Clone el repositorio desde el terminal en Jupyter Lab.
     * `git clone https://github.com/microsoft/ignite-learning-paths-training-aiml.git`
-5. Abra la carpeta `ignite-learning-paths-training-aiml` clonada y vaya al archivo `ignite-ailml30-get-prediction.ipynb` y haga clic para abrirlo.
+5. También en el terminal, escriba `pip install holidays`.
+6. Abra la carpeta `ignite-learning-paths-training-aiml` clonada y vaya al archivo `ignite-ailml30-get-prediction.ipynb` y haga clic para abrirlo.
     * La ruta de acceso completa debe ser similar a la siguiente: `ignite-learning-paths-training-aiml\aiml30\Python\ignite-ailml30-get-prediction.ipynb`
-6. Actualice la ruta de acceso al archivo CSV, el punto de conexión y la clave.
-7. Pulse `SHIFT + Enter` o haga clic en Reproducir en cada celda del menú superior para ejecutar cada celda.
+7. Actualice la ruta de acceso al archivo CSV, el punto de conexión y la clave.
+8. Pulse `SHIFT + Enter` o haga clic en Reproducir en cada celda del menú superior para ejecutar cada celda.
 
 ## <a name="powerpoint-deck-and-video-demo"></a>Demostración en vídeo y presentación de PowerPoint
 

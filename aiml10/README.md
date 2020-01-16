@@ -37,7 +37,7 @@ Al crear esta solución, se crean algunos recursos de Azure ([la evaluación gra
 
 # <a name="presentation"></a>Presentación
 
-* [Descarga de PowerPoint](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/aiml10.pptx)
+* [Descarga de PowerPoint](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/es-ES/aiml10-translation.es-ES.pptx)
 * [Vídeo de la sesión de Microsoft Ignite Orlando](https://myignite.techcommunity.microsoft.com/sessions/82986?source=sessions)
 
 

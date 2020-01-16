@@ -1,5 +1,5 @@
 # <a name="demo-guide"></a>Guía de la demostración
-> 💡 Debe haber completado la [ implementación](demosetup.md) antes de intentar realizar la demostración.
+> 💡 Debe haber completado la [implementación](demosetup.md) antes de intentar realizar la demostración.
 
 # <a name="demo-1-data-prep-demo-with-app"></a>Demostración 1: Demostración de preparación de datos con la aplicación
 En la primera demostración, resalte la preparación de datos que se ha descrito en las diapositivas de los modelos de serie temporal. Revise paso a paso cómo hacerlo en la aplicación de demostración de C#. Asegúrese de resaltar que esto se puede realizar en cualquier lenguaje.
@@ -8,7 +8,7 @@ Para navegar por el código con los métodos abreviados de teclado `F12` y `CTRL
 
 ### <a name="data-prep-demo-video-herehttpsyoutubeu1ppyazunmot751"></a>Vídeo de la demostración de preparación de datos [aquí](https://youtu.be/u1ppYaZuNmo?t=751)
 
-> 💡 Debe haber completado la [ implementación](demosetup.md) antes de intentar realizar la demostración.
+> 💡 Debe haber completado la [implementación](demosetup.md) antes de intentar realizar la demostración.
 
 ### <a name="1-open-the-igniteaimldataapp-app-i-personally-like-to-have-this-open-before-i-start-the-talk-so-i-can-just-flip-to-it"></a>1. Abra la aplicación `IgniteAimlDataApp`. Personalmente prefiero tenerla abierta antes de comenzar la presentación, para pasar a ella directamente.
 * Abra el archivo `Program.cs`.
@@ -33,7 +33,7 @@ Para navegar por el código con los métodos abreviados de teclado `F12` y `CTRL
     * Comience en la diapositiva 21 y muestre el código de preparación de datos en pasos de diapositiva estáticos.
 
 # <a name="demo-2-build-model-with-azure-machine-learning-designer"></a>Demostración 2: Compilación del modelo con el diseñador de Azure Machine Learning
-💡 Debe haber completado la [ implementación](demosetup.md) antes de intentar realizar la demostración.
+💡 Debe haber completado la [implementación](demosetup.md) antes de intentar realizar la demostración.
 
 ### <a name="full-model-building-live-demo-video-herehttpsyoutubeu1ppyazunmot1278"></a>Vídeo completo de la demostración en directo de la compilación del modelo [aquí](https://youtu.be/u1ppYaZuNmo?t=1278)
 
@@ -77,9 +77,9 @@ Para navegar por el código con los métodos abreviados de teclado `F12` y `CTRL
 * Conecte el módulo `Split Data` a `Train Model` para los datos de entrenamiento y `Score Model` para puntuar los resultados previstos con datos no vistos.
 * Conecte `Train Model` al módulo `Boosted Decision Tree Regression` del algoritmo de entrenamiento.
 * Conecte `Score Model` al módulo `Evaluate`.
-* Normalmente, aquí se ejecutaría el modelo _pero_ en la demostración tarda demasiado en ejecutarse. Explique cómo haría clic en el botón `Run` de la navegación inferior y seleccionaría Proceso. De este modo, puede pasar con facilidad a describir cómo crear recursos de proceso en AML.
+* Normalmente, aquí se ejecutaría el modelo _pero_ en la demostración tarda demasiado en ejecutarse. Explique cómo haría clic en el botón `Run` del panel de navegación inferior y seleccionaría Proceso. Luego, puede pasar a describir con facilidad cómo crear recursos de proceso en AML.
 
-* Cambie el nombre de la columna creada `Scored Labels` por `Forecast`.
+* Cambie el nombre de la columna creada `Scored Labels` a `Forecast`.
     * Arrastre `Edit Metadata` hasta el área de trabajo.
     * Conecte `Score Model` con el módulo `Edit Metadata`.
     * En la sección `Parameters` del módulo `Edit Metadata`, haga clic en `Edit Columns`.
@@ -129,7 +129,7 @@ Normalmente, aquí es donde se crearía `Inference Pipeline` para implementarlo 
 
 # <a name="demo-3-testing-api-with-c-console-app-dotnet-core"></a>Demostración 3: Prueba de la API con la aplicación de consola de C# (dotnet core)
 
-> 💡 Debe haber completado la [ implementación](demosetup.md) antes de intentar realizar la demostración.
+> 💡 Debe haber completado la [implementación](demosetup.md) antes de intentar realizar la demostración.
 
 ### <a name="api-demo-test-video-herehttpsyoutubeu1ppyazunmot2136"></a>Vídeo de prueba de la demostración de la API [aquí](https://youtu.be/u1ppYaZuNmo?t=2136).
 
