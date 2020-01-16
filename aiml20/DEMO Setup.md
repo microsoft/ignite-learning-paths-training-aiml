@@ -116,7 +116,7 @@ Web サイトの URL は、[ソース管理を設定しています] ステッ�
 
 これらの画像を使って Computer Vision サービスをテストし、Custom Vision サービスでモデルを作成します。
 
-これらの画像は Wikimedia Commons から供給され、それぞれの Creative Commons ライセンスの下で使用されます。 詳しくは、ファイル [ATTRIBUTIONS.md](Attributions.md) を参照してください。
+これらの画像は Wikimedia Commons から供給され、それぞれの Creative Commons ライセンスの下で使用されます。 詳しくは、ファイル [ATTRIBUTIONS.md](https://github.com/microsoft/ignite-learning-paths-training-aiml/blob/master/aiml20/CV%20training%20images/ATTRIBUTIONS.md) を参照してください。
 
 また、"test images" フォルダーもダウンロードします。 これらの画像はトレーニングでは使われませんが、モデルが動作することをテストするために使われます。
 

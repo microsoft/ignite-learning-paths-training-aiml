@@ -7,7 +7,7 @@
 
 
 ## <a name="what-you-need"></a>必要なもの
-- [請求書トレーニング セット](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/data/train.zip)
+- [請求書トレーニング セット](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/data/training.zip)
 
 - アクセスが制限されたプレビューへのアクセス。 プレビューへのアクセスを取得するには、[Form Recognizer アクセス要求](https://aka.ms/FormRecognizerRequestAccess)フォームに記入して送信します。
 
@@ -38,9 +38,9 @@
 
 [![コンテナーを作成する](images/create_container.png)](https://docs.microsoft.com/en-us/azure/storage/blobs/storage-quickstart-blobs-portal?WT.mc_id=msignitethetour2019-github-aiml10 "コンテナーを作成する")
 
-2. [請求書トレーニング セット](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/data/train.zip)をダウンロードして解凍します。
+2. [請求書トレーニング セット](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/data/training.zip)をダウンロードして解凍します。
 
-3. 解凍された[請求書トレーニング セット](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/data/train.zip)を `train` コンテナーにアップロードします。 これは、[ポータル](https://docs.microsoft.com/en-us/azure/storage/blobs/storage-quickstart-blobs-portal?WT.mc_id=msignitethetour2019-github-aiml10#upload-a-block-blob)を使用して直接、または [Azure ストレージ エクスプローラー](https://docs.microsoft.com/en-us/azure/vs-azure-tools-storage-explorer-blobs?WT.mc_id=msignitethetour2019-github-aiml10)を使用して ([ビデオ](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/videos/Demo2.mp4 "デモ 1")を参照)、行うことができます。
+3. 解凍された[請求書トレーニング セット](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/data/training.zip)を `train` コンテナーにアップロードします。 これは、[ポータル](https://docs.microsoft.com/en-us/azure/storage/blobs/storage-quickstart-blobs-portal?WT.mc_id=msignitethetour2019-github-aiml10#upload-a-block-blob)を使用して直接、または [Azure ストレージ エクスプローラー](https://docs.microsoft.com/en-us/azure/vs-azure-tools-storage-explorer-blobs?WT.mc_id=msignitethetour2019-github-aiml10)を使用して ([ビデオ](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/videos/Demo2.mp4 "デモ 1")を参照)、行うことができます。
 
 ### <a name="create-form-recognizer-service"></a>Form Recognizer サービスを作成する
 

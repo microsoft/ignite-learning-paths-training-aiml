@@ -27,7 +27,7 @@ Tailwind Traders には大量のレガシ データが存在しており、そ�
 
 # <a name="presentation"></a>プレゼンテーション
 
-* [PowerPoint のダウンロード](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/aiml10.pptx)
+* [PowerPoint のダウンロード](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/ja-JP/aiml10-translation.ja-JP.pptx)
 * [Microsoft Ignite Orland セッション ビデオ](https://myignite.techcommunity.microsoft.com/sessions/82986?source=sessions)
 
 

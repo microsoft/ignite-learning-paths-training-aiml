@@ -1,12 +1,14 @@
 # <a name="demo-guide"></a>デモ ガイド
-[こちらのデモのセットアップ手順](demosetup.md)が完了済みであることをご確認ください
+> 💡 デモを実行する前に、[デプロイ](demosetup.md)を完了している必要があります。
 
 # <a name="demo-1-data-prep-demo-with-app"></a>デモ 1:アプリを使用したデータ準備のデモ
 最初のデモでは、タイム シリーズ モデル用のスライドで説明したデータ準備を強調します。 C# デモ アプリで、これを行う方法について順を追って説明します。 これはどの言語でも実行できることを必ず強調してください。
 
-`F12` と `CTRL-` のショートカットを使用してコード間を移動するには、[こちらで](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vs-keybindings) VS Code 用の Visual Studio ショートカット拡張機能をダウンロードしてください。 これは非常に便利で、何かを探してスクロールする必要がなくなります。
+`F12` と `CTRL-` のショートカットを使用してコード間を移動するには、[こちらで](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vs-keybindings) VS Code 用の Visual Studio ショートカット拡張機能をダウンロードしてください。 これは非常に便利で、何かを探してスクロールする必要がなくなります。 (この拡張機能は、Mac と Linux では機能しません)
 
 ### <a name="data-prep-demo-video-herehttpsyoutubeu1ppyazunmot751"></a>データ準備のデモ ビデオは[こちら](https://youtu.be/u1ppYaZuNmo?t=751)
+
+> 💡 デモを実行する前に、[デプロイ](demosetup.md)を完了している必要があります。
 
 ### <a name="1-open-the-igniteaimldataapp-app-i-personally-like-to-have-this-open-before-i-start-the-talk-so-i-can-just-flip-to-it"></a>1.`IgniteAimlDataApp` アプリを開きます。 個人的には、トークを開始する前にこれを開いておいて、すぐに移動できるようにしておくことをお勧めします。
 * `Program.cs` ファイルを開きます
@@ -30,20 +32,21 @@
     * 非表示スライド内の埋め込み mp4 ビデオを使用します。 音を消したこのビデオに沿ってトークを行います。
     * スライド 21 から開始し、静的なスライドの手順でデータ準備のコードを示します。
 
-# <a name="demo-2-build-model-with-azure-machine-learning-visual-designer"></a>デモ 2:Azure Machine Learning ビジュアル デザイナーでモデルを構築する
+# <a name="demo-2-build-model-with-azure-machine-learning-designer"></a>デモ 2:Azure Machine Learning デザイナーを使用したモデルのビルド
+💡 デモを実行する前に、[デプロイ](demosetup.md)を完了している必要があります。
 
 ### <a name="full-model-building-live-demo-video-herehttpsyoutubeu1ppyazunmot1278"></a>完全なモデル構築のライブ デモ ビデオは[こちら](https://youtu.be/u1ppYaZuNmo?t=1278)
 
-### <a name="1-create-resource-and-upload-dataset"></a>1.リソースの作成とデータセットのアップロード
+### <a name="1-create-resource-and-upload-dataset"></a>1.リソースを作成し、データセットをアップロードします
 
-* Azure Machine Learning ワークスペースのリソースを作成し、新しいワークスペースに移動します。
-    * スライドで説明されていた、さまざまなツールが存在する場所を大まかに確認します。
+* Azure Machine Learning Studio のリソースを作成し、新しいワークスペースに移動します。
+    * スライドで説明した各種ツールが存在する場所を確認します。
     * この手順のビデオ リソース:
         * この手順の音のないビデオは[こちら](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml30/CreateAMLNavToWorkspace.mp4)です。
         * リソースの作成方法に関する音声ありのビデオは[こちら](https://youtu.be/u1ppYaZuNmo?t=1278)です。
 * AML のデータセットにデータセットをアップロードします
-    * `Datasets` をクリックします
-    * `Create from datastore` をクリックします
+    * [`Datasets`] をクリックします
+    * [`Create from datastore`] または [ローカルから] のいずれかをクリックします
         * 注: デモのセットアップ手順で、データセットを既にデータストアにアップロードしている必要があります。
     * 必須フィールドに入力し、`workspaceblobstorage` オプションを選択します
     * `Create` をクリックします
@@ -59,49 +62,44 @@
 * データセットを実験ワークスペースにドラッグ アンド ドロップします
     * ワークスペースにデータを追加するためのオプションとしてファイルのアップロード モジュールに言及してください
 * `Select Columns in Dataset` をワークスペースにドラッグします
-    * 右側のプロパティ メニューにある `Edit columns` をクリックします。
-    * `All Columns` をクリックします
-    * `Exclude` をクリックします
-    * `column names` をクリックします
-    * `Time` 列を除外します
-    * `DatesInWeek` を除外します
-    * 注:必要に応じて、アップロード中のデータ準備手順でワークスペースにデータセットをアップロードするときに、データ編集機能でこれらの列を除外します。
+    * 右側のパラメーター メニューにある [`Edit columns`] をクリックします。
+    * [`By Name`] をクリックします
+    * [`Add All`] をクリックします
+    * [`Time`] 列の [`Minus`] アイコンをクリックして除外します
 * `Split Data` をワークスペースにドラッグします
-    * プロパティを編集し、データを 70/30 で分割します。 
-    * これはルールではなく、さまざまなモデルのニーズに基づいて変更可能であることを説明します。
+    * パラメーターを編集して、データを 70/30 に分割します。 
+    * この分割率は決まりではなく、モデルのニーズによってベースを変更できます。
 * `Train Model` をワークスペースにドラッグします
-    * 右側のプロパティからラベルの列名 `Value` を選択します
+    * 右側のパラメーターからラベルの列名 [`Value`] を選択します
 * `Boosted Decision Tree Regression` をワークスペースにドラッグします
 * `Score Model` をワークスペースにドラッグします
 * `Evaluate` をワークスペースにドラッグします
 * `Split Data` モジュールはトレーニング データ用として `Train Model` に接続し、未知のデータによる予測結果にスコアを付ける目的で `Score Model` に接続します。
 * `Train Model` をトレーニング アルゴリズム `Boosted Decision Tree Regression` モジュールに接続します。
 * `Score Model` を `Evaluate` モジュールと接続します。
-* このデモで実行するには時間がかかりすぎる "_としても_"、通常はここでモデルを実行します。 下部ナビゲーションにある `Run` ボタンをクリックし、コンピューティングを選択する方法について説明します。 これにより、AML でコンピューティング リソースを作成する方法の説明にスムーズに移行できます。
+* このデモで実行するには時間がかかりすぎる "_としても_"、通常はここでモデルを実行します。 下部ナビゲーションにある [`Run`] ボタンをクリックし、コンピューティングを選択する方法について説明します。 これにより、AML でコンピューティング リソースを作成する方法の説明にスムーズに移行できます。
 
-* 以下の手順は完成したモデルに含まれますが、トレーニングされないライブ デモ バージョンでこれらを実際に作成する必要はありません。
-    * `Execute Python Script` モジュールをワークスペースにドラッグし、それに `Score Model` モジュールを接続します。 
-    * 次のコードをコピーして貼り付けます。
-    
-    
-    ```python 
-    import pandas as pd
-    import numpy as np
+* 作成した列の名前を「`Scored Labels`」から「`Forecast`」に変更します
+    * `Edit Metadata` をワークスペースにドラッグします
+    * `Score Model` を `Edit Metadata` モジュールと接続します
+    * `Edit Metadata` モジュールの `Parameters` で、 [`Edit Columns`] をクリックします
+    * テキスト ボックスに「`Score Labels`」と入力します (既定値を変更する必要はありません)
+    * [`Save`] をクリックします
+    * 次に、[`Parameters`] の [`New Column Name`] フィールドを「`Forecast`」に更新します
+* 正規化された値を完全な項目数に変換します
+    * `Apply Math Operation` をワークスペースにドラッグします
+    * `Edit Metadata` を `Apply Math Operation` に接続します
+    * [`Basic math function`] を [`Exp`] に設定します
+    * [`Edit Columns`] をクリックし、「`Value`」と「`Forecast`」を入力します
+    * [`Save`] をクリックします
+    * [`Output mode`] を [`Inplace`] に設定します
+* `Select Columns in Dataset` モジュールをワークスペースにドラッグします
+* `Apply Math Operation` を `Select Columns in Dataset` に接続します
+* [`Edit Columns`] をクリックし、列名「`ID1,ID2,Value,Forecast`」を入力します
 
-    def azureml_main(dataframe1 = None, dataframe2 = None):
-      print(f'Input pandas.DataFrame #1: {dataframe1}')
-      df = dataframe1
-      df['Value'] = np.exp(df['Value'])
-      df['Forecast'] = np.exp(df['Scored Labels'])
-      return df
-    ```
-      
-    * `Select Columns in Dataset` をドラッグします
-        * 列 `ID1`、`ID2`、`Value`、`Forecast` を選択します
-        * これらは、ポストして完成したデプロイ済みモデルから結果を取得するときに、データ デモ アプリによって想定される列です。
-### <a name="4-discuss-compute-target-creation"></a>4.コンピューティング先の作成について説明する
-* AML に戻ります
-* `Compute` ナビゲーション項目をクリックします
+### <a name="4-discuss-compute-target-creation"></a>4.コンピューティング先の作成について説明します
+
+* [`Compute`] ナビゲーション項目をクリックします
 * `Add` をクリックします
 * さまざまなコンピューティングの種類とその用途について説明します。 このデモで使用されるコンピューティングは、トレーニング用の `Machine Learning Compute` と、API をデプロイするための `Kubernetes Service` です。
 
@@ -112,23 +110,27 @@
 * 列をクリックし、ツールによって右側のパネルに視覚化がどのように作成されるかを示します。
 * `Score Model` モジュールを視覚化し、モデルによって未知のデータに対するどのような予測が行われたかを示します
 * `Evaluate Model` モジュールを視覚化し、スコア付けに使用されるメトリックについて説明します。
-    * プロパティの右側のパネルで `More Help` をクリックします。
-    * すべてのモジュールのプロパティには、そのモジュールの機能を説明するドキュメントへのリンクが含まれていることを強調します。
+    * パラメーターの右側のパネルで [`More Help`] をクリックします。
+    * すべてのモジュールのパラメーターには、そのモジュールの機能を説明するドキュメントへのリンクが含まれていることを強調します。
     * 下にスクロールし、そのモデルのドキュメント内のメトリックに関する説明を示します。
-### <a name="6-create-predictive-experiment-and-deploy-the-model"></a>6.予測実験の作成とモデルのデプロイ
-以下の手順をあらかじめ実行していた "_としても_"、通常はここで `Predictive Experiment` を作成して Web サービスにデプロイします。 
+    
+### <a name="6-create-inference-pipeline-and-deploy-the-model"></a>6.推論パイプラインを作成してモデルをデプロイします
+通常、ここでは `Inference Pipeline` を作成して Web サービスにデプロイします。"_ただし_"、このデモでは、これらの手順は事前に実行済みです。 
 * 次の手順について説明します ("_ライブでは行わないでください_")
-    * `Create` 予測実験をクリックします。 `Predictive Experiment` モデルは、Web サービスにデプロイされる運用モデルとお考えください。 `Training Experiment` は開発モデルと考えます。
-    * 作成された予測実験に `Execute Python Script` モジュールと `Select Columns in Dataset` モジュールを追加します。
-    * 実験を実行します
-    * `Deploy Web Service` をクリックします
-* `Predictive Experiment` を作成する手順について説明した後、左側のナビゲーションからデプロイした Web サービスに移動します。
+    * [`Create inference pipeline`] をクリックして、[`Real-time inference pipeline`] を選択します
+    * `Web Service Output` が、最後のデータ処理手順モジュール `Select Columns in Dataset` に接続されるようにします
+    * [`Run`] をクリックします
+    * [`Deploy`] をクリックします
+* `Inference Pipeline` を作成する手順について説明した後、左側のナビゲーションからデプロイした Web サービスに移動します。
 * あらかじめ作成した Web サービスの名前をクリックします。
 * `Test` をクリックし、それがスコア付けされたデータ項目に対してどのように実行されるかを示します。
 * `Consume` をクリックし、Web サービスを統合するためのサンプル コードを示します。
 
 
-# <a name="demo-3-testing-api-with-c-console-app-dotnet-core"></a>デモ 3:C# コンソール アプリで API をテストする (dotnet core)
+# <a name="demo-3-testing-api-with-c-console-app-dotnet-core"></a>デモ 3:C# コンソール アプリを使用した API のテスト (dotnet core)
+
+> 💡 デモを実行する前に、[デプロイ](demosetup.md)を完了している必要があります。
+
 ### <a name="api-demo-test-video-herehttpsyoutubeu1ppyazunmot2136"></a>API デモ テストのビデオは[こちら](https://youtu.be/u1ppYaZuNmo?t=2136)
 
 * `Consume` タブから API キーをコピーします

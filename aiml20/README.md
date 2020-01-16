@@ -1,20 +1,38 @@
 # <a name="aiml20-using-pre-built-ai-to-solve-business-challenges"></a>AIML20:事前構築済み AI を使用してビジネスの課題を解決する
 
-これは、Microsoft Ignite 2019 および Microsoft Ignite the Tour 2019-2020 のトーク「事前構築済み AI を使用してビジネスの課題を解決する」をサポートするリポジトリです。 ここには、トークで言及されているリソースや、トーク内で行われたデモを再作成するために必要なコードとスクリプトへのリンクが記載されています。
+これは、Microsoft Ignite 2019 および Microsoft Ignite the Tour 2019-2020 のトーク「事前構築済み AI を使用してビジネスの課題を解決する」をサポートするリポジトリです。 ここには、トークで言及されているリソースや、トーク内で行われるデモを再作成するために必要なコードとスクリプトへのリンクが記載されています。
 
-[AIML20 プレゼンテーションのスライドをこちらでダウンロードしてください](presentations.md)。 (最新バージョン用の最初のリンクを使用してください。)スライドは PPT 形式で、話者用の詳細なメモと、埋め込みデモ ビデオが含まれています。
-
-Microsoft Ignite Orlando、November 7 2019 での[このプレゼンテーションの録画をご覧ください](https://myignite.techcommunity.microsoft.com/sessions/82987?source=sessions)。
-
-これらのリソースへのショートリンク: [aka.ms/AIML20repo](https://aka.ms/AIML20repo)。 
-
-[このトークの発表者向けリソース](README-Presenters.md)も提供されています。
+* [AIML20：使用预先构建的 AI 解决业务难题](https://github.com/microsoft/ignite-learning-paths-training-aiml/tree/master-SimplifiedChinese/aiml20)
+* [AIML20:Uso da IA pré-criada para resolver desafios de negócios](https://github.com/microsoft/ignite-learning-paths-training-aiml/tree/master-PortugueseBrazil/aiml20)
+* [AIML20:事前構築済み AI を使用してビジネスの課題を解決する](https://github.com/microsoft/ignite-learning-paths-training-aiml/tree/master-Japanese/aiml20)
 
 ## <a name="session-abstract"></a>セッションの要約
 
 **事前構築済み AI を使用してビジネスの課題を解決する**
 
-要約:データドリブン企業である Tailwind Traders は、人工知能を利用してビジネス プロセスを改善し、顧客満足を実現することの重要性を理解しています。 AI チームに投資する前に、既存の開発者は、事前構築された AI テクノロジを使用していくつかの成果を簡単にデモンストレーションできました。 このセッションでは、Azure Cognitive Services を使用して、小売データから分析情報を抽出する方法を示します。 コンピューター ビジョンの背後にあるニューラル ネットワークについて詳しく説明し、事前構築済みの AI を独自の画像で拡張してカスタム画像認識アプリケーションを作成する方法について説明します。
+データドリブン企業である Tailwind Traders は、人工知能を利用してビジネス プロセスを改善し、顧客満足を実現することの重要性を理解しています。
+AI チームに投資する前、既存の開発者は、事前構築された AI テクノロジを使用していくつかの成果を簡単にデモンストレーションできました。 
+
+このセッションでは、Azure Cognitive Services を使用して、Tailwind Traders の Web サイトの "Shop by Photo" 機能を実装する方法と、コンピューター ビジョンの背後にあるニューラル ネットワークのしくみについて説明します。 また、強化学習と Personalizer サービスの結果、Web サイトのレイアウトが、匿名ユーザーのエンゲージメントを最適化するように自動的に適合される方法についても説明します。
+
+最後に、AI を運用環境に配置する前に考慮する必要があるコスト、データ規則、および倫理的な問題について確認します。
+
+## <a name="table-of-contents"></a>目次
+ 
+
+| リソース          | リンク                            |
+|-------------------|----------------------------------|
+| PowerPoint        | - [プレゼンテーション](presentations.md) |
+| ビデオ            | - [ドライ ラン リハーサル](https://youtu.be/jRO-5g-HYuU) <br/>- [Microsoft Ignite Orland レコーディング](https://myignite.techcommunity.microsoft.com/sessions/82987?source=sessions) |
+| デモ             | - [デモ 1 - セットアップ ](https://github.com/microsoft/ignite-learning-paths-training-aiml/blob/master/aiml20/DEMO%20Setup.md) <br/>- [デモ 2 - Computer Vision](https://github.com/microsoft/ignite-learning-paths-training-aiml/blob/master/aiml20/DEMO%20Computer%20Vision.md) <br/>- [デモ 3 - Custom Vision](https://github.com/microsoft/ignite-learning-paths-training-aiml/blob/master/aiml20/DEMO%20Custom%20Vision.md)<br/>- [デモ 4 - ONNX のデプロイ](https://github.com/microsoft/ignite-learning-paths-training-aiml/blob/master/aiml20/DEMO%20ONNX%20deployment.md) <br/>- [デモ 5 - Personalizer](https://github.com/microsoft/ignite-learning-paths-training-aiml/blob/master/aiml20/DEMO%20Personalizer.md) | 
+
+[AIML20 プレゼンテーションのスライドをこちらでダウンロードしてください](presentations.md)。 (最新バージョン用の最初のリンクを使用してください。)スライドは PPT 形式で、詳細な発表者ノートと埋め込みデモ ビデオが含まれています。
+
+これらのリソースへのショートリンク: [aka.ms/AIML20repo](https://aka.ms/AIML20repo)。 
+
+[このトークの発表者向けリソース](README-Presenters.md)も提供されています。
+
+
 
 ## <a name="technologies-used"></a>使用されているテクノロジ
 
@@ -63,4 +81,4 @@ Microsoft Ignite Orlando、November 7 2019 での[このプレゼンテーショ
 
 ## <a name="feedback-loop"></a>フィードバック ループ
 
-コメント、フィードバック、ご提案はございますか。 コンテンツの変更/提案/フィードバックのための最良のフィードバック ループは、この GitHub リポジトリに新しいイシューを作成することです。 イシューの作成方法については、[共同作成に関するドキュメント](https://github.com/microsoft/ignite-learning-paths/blob/master/contributing.md)を参照してください
+コメント、フィードバック、ご提案はございますか。 コンテンツの変更/提案/フィードバックのための最良のフィードバック ループは、この GitHub リポジトリに新しいイシューを作成することです。 イシューの作成方法については、[共同作成に関するドキュメント](../CONTRIBUTING.md)を参照してください

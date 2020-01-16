@@ -1,13 +1,13 @@
 ## <a name="demo-3---creating-a-custom-invoice-reader-skill"></a>デモ 3 - カスタム請求書リーダー スキルを作成する
 
-[![デモ 3](images/demo3.png)](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/videos/Demo2.mp4 "デモ 3")
+[![デモ 3](images/demo3.png)](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/videos/Demo3.mp4 "デモ 3")
 
 ## <a name="summary"></a>概要
 この演習では、Azure Search からデータを取得し、pdf の請求書の内容を表す構造化された json ドキュメントを返す、Azure Search スキルを (Azure 関数の形式で) 作成します。 Azure 関数の作成方法に関するさらに詳しい情報については、こちらの[ドキュメント](https://docs.microsoft.com/en-us/azure/azure-functions/functions-create-first-azure-function-azure-cli?WT.mc_id=msignitethetour2019-github-aiml10)を参照してください。ストレージ アカウントが作成されていることを前提としています ([最初のデモ](demo1.md)で説明されているように、[2 番目のデモ](demo2.md)で作成された Form Recognizer サービスと同様に)
 
 
 ## <a name="what-you-need"></a>必要なもの
-- [請求書テスト セット](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/data/train.zip) (Azure 関数のテストに使用)
+- [請求書テスト セット](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/data/test.zip) (Azure 関数のテストに使用)
 
 
 - Form Recognizer サービス REST API に要求を送信するには、[Postman](https://www.getpostman.com/) を使用します。 詳細については、こちらの[簡単な概要](postman.md)を参照してください。

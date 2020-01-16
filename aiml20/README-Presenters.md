@@ -2,15 +2,15 @@
 
 発表者の皆様、ようこそ。 
 
-こちらをご覧いただきありがとうございます。この素晴らしいコンテンツを発表していただける日を心待ちにしております。 経験豊富な発表者として、プレゼンテーションの "方法" は既によくご存知でしょう。従ってこのガイドでは、プレゼンテーションを行うべき "内容" に焦点を絞ります。 プレゼンテーション デザイン チームが作成したプレゼンテーションを、全体にわたってリハーサルします。 
+こちらをご覧いただきありがとうございます。この素晴らしいコンテンツを発表していただける日を心待ちにしております。 経験豊富な発表者として、プレゼンテーションの "方法" は既によくご存知でしょう。従ってこのガイドでは、プレゼンテーションを行うべき "内容" に焦点を絞ります。 プレゼンテーション デザイン チームが作成したプレゼンテーションを全体にわたって見ていきます。 
 
-プレゼンテーションのビデオに加えて、このドキュメントは、PowerPoint のスライドやデモの手順とコードなど、プレゼンテーションを成功させるために必要なすべての資産にリンクしています。
+プレゼンテーションのビデオに加えて、このドキュメントは、PowerPoint のスライドやデモの手順とコードなど、プレゼンテーションを成功させるために必要なすべてのアセットにリンクしています。
 
 1.  ドキュメント全体を読む。
 2.  ビデオ プレゼンテーションを見る
 3.  リード発表者に質問する
 
-## <a name="assets-in-train-the-trainer-kit"></a>トレーナー トレーニング キットの資産
+## <a name="assets-in-train-the-trainer-kit"></a>トレーナー トレーニング キットのアセット
 
 - 本ガイド
 - [PowerPoint プレゼンテーション](presentations.md)。 メモには、組み込みのデモ ビデオと完全なトーク トラックが含まれています。
@@ -43,14 +43,14 @@
     <td align="center"><a href="">
         <img src="https://avatars0.githubusercontent.com/u/152948?s=460&v=4" width="100px;" alt="David Smith"/><br />
         <sub><b>David Smith</b></sub></a><br />
-            <a href="https://github.com/microsoft/ignite-learning-paths/commits?author=revodavid" title="トーク">📢</a>
-            <a href="https://github.com/microsoft/ignite-learning-paths-training-aiml/commits?author=revodavid" title="ドキュメント">📖</a> 
+            <a href="https://github.com/microsoft/ignite-learning-paths-training-aiml/commits/master?author=revodavid" title="トーク">📢</a>
+            <a href="https://github.com/microsoft/ignite-learning-paths-training-aiml/commits/master?author=revodavid" title="ドキュメント">📖</a> 
     </td>
     <td align="center"><a href="">
         <img src="https://avatars2.githubusercontent.com/u/4598064?s=460&v=4" width="100px;" alt="Chris Noring"/><br />
         <sub><b>Chris Noring</b></sub></a><br />
-            <a href="https://github.com/neilpeterson/ignite-tour-fy20/commits?author=neilpeterson" title="トーク">🎨</a>
-            <a href="https://github.com/neilpeterson/ignite-tour-fy20/commits?author=neilpeterson" title="デザイン">📖</a> 
+            <a href="https://github.com/microsoft/ignite-learning-paths-training-aiml/commits/master" title="トーク">🎨</a>
+            <a href="https://github.com/microsoft/ignite-learning-paths-training-aiml/commits/master" title="デザイン">📖</a> 
     </td>
 </tr></table>
 
@@ -58,4 +58,4 @@
 
 ## <a name="feedback-loop"></a>フィードバック ループ
 
-コメント、フィードバック、ご提案はございますか。 コンテンツ変更/提案/フィードバックの最良のフィードバック ループは、この GitHub リポジトリで新しいイシューを作成することです。 イシューの作成方法については、[共同作成に関するドキュメント](https://github.com/microsoft/ignite-learning-paths/blob/master/contributing.md)を参照してください
+コメント、フィードバック、ご提案はございますか。 コンテンツの変更/提案/フィードバックのための最良のフィードバック ループは、この GitHub リポジトリに新しいイシューを作成することです。 イシューの作成方法については、[共同作成に関するドキュメント](../CONTRIBUTING.md)を参照してください
