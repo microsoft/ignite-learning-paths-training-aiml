@@ -4,7 +4,7 @@
 
 Welcome!
 
-The content of this repository is available for you so you can reproduce any demo or learn how to present any session of the Learning Path presented at [Migrosoft Ignite](https://www.microsoft.com/en-us/ignite) and during [Microsoft Ignite The Tour](https://www.microsoft.com/en-ca/ignite-the-tour/), in your local field office, a community user group, or even as a lunch-and-learn event for your company.
+The content of this repository is available for you so you can reproduce any demo or learn how to present any session of the Learning Path presented at [Microsoft Ignite](https://www.microsoft.com/en-us/ignite) and during [Microsoft Ignite The Tour](https://www.microsoft.com/en-ca/ignite-the-tour/), in your local field office, a community user group, or even as a lunch-and-learn event for your company.
 
 ## Do the Demos
 
