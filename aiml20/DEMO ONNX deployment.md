@@ -65,7 +65,7 @@ First, view the exported model in Netron:
 
  - it's large
  - at the top, is a 224x224 image as input (dirty secret: computer vision models have pretty poor vision)
- - add the bottom, it outputs 5 values, these are the confidence scores for our class labels
+ - at the bottom, it outputs 5 values, these are the confidence scores for our class labels
 
 Next, drop the ONNX file we exported into TWT filesystem
 

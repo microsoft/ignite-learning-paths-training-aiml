@@ -236,13 +236,15 @@ Convolutional Neural Networks.
 
 ### SLIDE: Training an image classifier
 
-So, now we know: each node (circle) in the neural network is a transformation of
+So how do we train a neural network to do that? By choosing the right filters.
+
+Each [CLICK] node (circle) in the neural network is a transformation of
 its input images, which is determined by a grid of weights. The trick to
 training a neural network is to choose those weights in such a way that the
 right numbers come out at the end.
 
 [CLICK] We'll do that with training data: lots of images of dogs, bicycles,
-appes and tennis balls. We know what each image represents (because a human has
+apples and tennis balls. We know what each image represents (because a human has
 looked at them and labeled -- or "annotated" them), so all we do is pick weights
 in such a way that the correct node gets the largest value in each case, or at
 least as often as possible.
