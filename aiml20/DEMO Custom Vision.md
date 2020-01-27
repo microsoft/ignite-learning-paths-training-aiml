@@ -1,5 +1,7 @@
 # <a name="demo-custom-vision"></a>演示：自定义视觉
 
+> 💡 在尝试执行此演示之前，必须已完成[设置](https://github.com/microsoft/ignite-learning-paths-training-aiml/blob/master/aiml20/DEMO%20Setup.md)。
+
 在本演示中，我们将使用 customvision.ai 的服务创建自定义视觉模型。
 
 ## <a name="create-a-custom-model-project-with-custom-vision"></a>使用自定义视觉创建自定义模型项目

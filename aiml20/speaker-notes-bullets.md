@@ -1,8 +1,8 @@
 # <a name="aiml20-speaker-notes"></a>AIML20：演讲者备注
 
-如果你希望根据要点而不是脚本文本进行讲述，下面是 PPT 演示文稿的每张幻灯片中的要点： https://microsoft.sharepoint.com/:p:/t/CloudDevAdvocacy/EctuTXQCOdpGqc5lhQgUnMgBr-R6hlWR5MuLE3qCIFgoHA?e=r1szwF
+如果你希望根据要点而不是脚本文本进行讲述，下面是 PPT 演示文稿的每张幻灯片中的要点：[presentations.md](https://github.com/microsoft/ignite-learning-paths-training-aiml/blob/master/aiml20/presentations.md)
 
-相关的演示脚本可在以下位置找到： https://github.com/microsoft/ignite-learning-paths/tree/master/aiml/aiml20 。 从 `DEMO%20Setup.md` 开始。
+相关的演示脚本可在以下位置找到： https://github.com/microsoft/ignite-learning-paths-training-aiml/tree/master/aiml20 。 从 `DEMO%20Setup.md` 开始。
 
 ## <a name="slide-notes"></a>幻灯片备注
 
@@ -28,7 +28,7 @@
 
 最后会再次显示此幻灯片。
 
-### <a name="slide-adding-humanlike-capabilities-to-apps"></a>幻灯片：向应用添加类似于人的功能
+### <a name="slide-adding-humanlike-capabilities-to-apps"></a>幻灯片：向应用添加与人相似的功能
 
 我们将使用预构建的 AI 服务向应用程序添加类似于人的功能，但这是什么意思呢？ 下面是一些例子。
 
@@ -273,7 +273,7 @@ AI 基于“深度学习”，但“深度”并不意味着“深奥”。
 
 ### <a name="slide-demo-customized-object-recognition"></a>幻灯片：演示：自定义的对象识别
 
-演示说明： https://github.com/microsoft/ignite-learning-paths/blob/master/aiml/aiml20/DEMO%20Custom%20Vision.md
+演示说明： https://github.com/microsoft/ignite-learning-paths-training-aiml/blob/master/aiml20/DEMO%20Custom%20Vision.md
 
 ### <a name="video-customvisionai"></a>视频：customvision.ai
 

@@ -21,9 +21,8 @@
 ## <a name="assets-in-train-the-trainer-kit"></a>讲师培训工具包中的资产
 
 - 本指南
-- AIML40 讲座的公开材料在[此处](http://github.com/microsoft/ignite-learning-paths/aiml/aiml40/)提供 - 此文档包含大量相关的材料
-- PowerPoint 演示文稿，[此处](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml40/AIML40_Taking_Models_to_the_Next_Level_with_Azure_Machine_Learning_Best_Practices.pptx)提供了每张幻灯片的说明
-- [此处](https://youtu.be/If9IQm3gWVQ)提供完整的演示文稿记录
+- PowerPoint 演示文稿，包含[此处](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml40/aiml40.pptx)或 [presentations.md](https://github.com/microsoft/ignite-learning-paths-training-aiml/blob/master/aiml40/presentations.md) 中的的每个幻灯片的备注
+- 可在[此处](https://youtu.be/If9IQm3gWVQ)查看完整的演示记录
 - 可直接播放的实际操作演示独立录像：
     * 演示 1 - [认知服务文本分析](https://youtu.be/QJxjm5BirOA)
     * 演示 2 - [自动化机器学习](https://youtu.be/qrstXN6TLZk)
@@ -59,6 +58,11 @@
         <img src="https://avatars0.githubusercontent.com/u/2892110?s=460&v=4" width="100px;" alt="Dmitri Soshnikov"/><br />
         <sub><b>Dmitri Soshnikov</b></sub></a><br />
             <a href="https://github.com/microsoft/ignite-learning-paths-training-aiml/pull/4" title="文档">📖</a> 
+    </td>
+        <td align="center"><a href="https://github.com/amynic">
+        <img src="https://avatars3.githubusercontent.com/u/13828867?s=400&u=f6aca8528d65d6c191114d3a7328b46137eda162&v=4" width="100px;" alt="Amy Boyd"/><br />
+        <sub><b>Amy Boyd</b></sub></a><br />
+            <a href="https://github.com/microsoft/ignite-learning-paths-training-aiml/blob/master/aiml30/presentations.md" title="讲座">📢</a>
     </td>
 </tr></table>
 

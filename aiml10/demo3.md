@@ -1,13 +1,13 @@
 ## <a name="demo-3---creating-a-custom-invoice-reader-skill"></a>演示 3 - 创建自定义发票读取者技能
 
-[![演示 3](images/demo3.png)](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/videos/Demo2.mp4 "演示 3")
+[![演示 3](images/demo3.png)](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/videos/Demo3.mp4 "演示 3")
 
 ## <a name="summary"></a>摘要
 在此练习中，我们创建一项 Azure 搜索技能（采用 Azure 函数的形式）。该技能从 Azure 搜索获取数据，返回描述 pdf 发票内容的结构化 json 文档。 若要更深入地了解如何创建 Azure 函数，请参阅[文档](https://docs.microsoft.com/en-us/azure/azure-functions/functions-create-first-azure-function-azure-cli?WT.mc_id=msignitethetour2019-github-aiml10)。假定已创建存储帐户（如[第一个演示](demo1.md)中所述）并已创建表单识别器服务（如[第二个演示](demo2.md)中所述）
 
 
 ## <a name="what-you-need"></a>需要什么
-- [发票测试集](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/data/train.zip)（用于测试 Azure 函数）
+- [发票测试集](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/data/test.zip)（用于测试 Azure 函数）
 
 
 - [Postman](https://www.getpostman.com/) 用于将请求发送到表单识别器服务 REST API。 请参阅此[简要入门](postman.md)以了解详细信息。

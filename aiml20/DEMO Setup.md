@@ -10,11 +10,11 @@
 
 如果你没有 Azure 订阅，可以[在此处注册](https://azure.microsoft.com/free/?WT.mc_id=msignitethetour2019-github-aiml20)，并获取 200 美元的免费 Azure 额度。 
 
-## <a name="find-your-azure-subcription-id"></a>查找 Azure 订阅 ID
+## <a name="find-your-azure-subscription-id"></a>查找 Azure 订阅 ID
 
 在 [Azure 门户](https://portal.azure.com)中登录，然后在左侧菜单栏中单击“订阅”。 单击要使用的订阅名称，并复制此处显示的“订阅 ID”。 稍后在创建资源时会用到此 ID。
 
-或者，在 Azure CLI 中运行 `az account show` 并复制显示的“id”值。
+或者，在 Azure CLI 中运行 `az account show` 并复制显示的 `id` 值。
 
 ## <a name="start-fresh"></a>开始刷新。
 
@@ -99,14 +99,14 @@
 ## <a name="open-browser-pages-ready-to-demo"></a>打开随时可用于演示的浏览器页。
 
 * 已部署的 Tailwind Trader 应用 
-* https://portal.azure.com （浏览到资源）  
+* https://portal.azure.com/?feature.customportal=false#home （浏览到资源 - 注意此链接显示公共门户，而不是面向具有访问权限的用户的预览版）  
 * https://azure.microsoft.com/en-us/services/cognitive-services/computer-vision/
 * https://customvision.ai
 * https://lutzroeder.github.io/netron/
 
-## <a name="download-image-files-to-local-machine"></a>将图像文件下载到本地计算机
+## <a name="find-the-image-files-on-your-local-machine"></a>查找本地计算机上的图像文件
 
-将“CV Training Images.zip”下载到本地计算机，然后展开 zip 文件。 这会创建包含以下子文件夹的文件夹“CV Training Images”：
+克隆存储库后，可以在 `aiml20/CV Training Images` 文件夹中找到训练图像。 将使用这些图像来训练自定义视觉模型。 此文件夹包含以下子文件夹：
 
 * drills
 * hammers
@@ -116,9 +116,9 @@
 
 这些图像用于测试计算机视觉服务，并通过自定义视觉服务创建模型。
 
-这些图像源自 Wikimedia Commons，是根据相应的 Creative Commons 许可条款使用的。 有关详细信息，请参阅文件 [ATTRIBUTIONS.md](Attributions.md)。
+这些图像源自 Wikimedia Commons，是根据相应的 Creative Commons 许可条款使用的。 有关详细信息，请参阅文件 [ATTRIBUTIONS.md](https://github.com/microsoft/ignite-learning-paths-training-aiml/blob/master/aiml20/CV%20training%20images/ATTRIBUTIONS.md)。
 
-另请下载文件夹“test images”。 这些图像不会在训练中使用，而是用于测试模型的工作状况。
+在 `test images` 文件夹中可以找到其他测试图像。 这些图像不会在训练中使用，而是用于测试模型的工作状况。
 
 ## <a name="next-step"></a>后续步骤
 

@@ -7,7 +7,7 @@
 
 
 ## <a name="what-you-need"></a>需要什么
-- [发票训练集](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/data/train.zip)
+- [发票训练集](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/data/training.zip)
 
 - 对访问受限的预览版的访问权限。 若要访问预览版，请填写并提交[表单识别器访问请求](https://aka.ms/FormRecognizerRequestAccess)表单。
 
@@ -38,9 +38,9 @@
 
 [![创建容器](images/create_container.png)](https://docs.microsoft.com/en-us/azure/storage/blobs/storage-quickstart-blobs-portal?WT.mc_id=msignitethetour2019-github-aiml10 "创建容器")
 
-2. 下载并解压缩[发票训练集](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/data/train.zip)。
+2. 下载并解压缩[发票训练集](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/data/training.zip)。
 
-3. 将解压缩的[发票训练集](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/data/train.zip)上传到 `train` 容器。 可以直接通过[门户](https://docs.microsoft.com/en-us/azure/storage/blobs/storage-quickstart-blobs-portal?WT.mc_id=msignitethetour2019-github-aiml10#upload-a-block-blob)这样做，也可以通过 [Azure 存储资源管理器](https://docs.microsoft.com/en-us/azure/vs-azure-tools-storage-explorer-blobs?WT.mc_id=msignitethetour2019-github-aiml10)这样做（详见[视频](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/videos/Demo2.mp4 "演示 1")）。
+3. 将解压缩的[发票训练集](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/data/training.zip)上传到 `train` 容器。 可以直接通过[门户](https://docs.microsoft.com/en-us/azure/storage/blobs/storage-quickstart-blobs-portal?WT.mc_id=msignitethetour2019-github-aiml10#upload-a-block-blob)这样做，也可以通过 [Azure 存储资源管理器](https://docs.microsoft.com/en-us/azure/vs-azure-tools-storage-explorer-blobs?WT.mc_id=msignitethetour2019-github-aiml10)这样做（详见[视频](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/videos/Demo2.mp4 "演示 1")）。
 
 ### <a name="create-form-recognizer-service"></a>创建表单识别器服务
 

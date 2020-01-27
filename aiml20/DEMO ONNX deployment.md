@@ -1,5 +1,7 @@
 # <a name="demo-onnx-deployment"></a>演示：ONNX 部署
 
+> 💡 在尝试执行此演示之前，必须已完成[设置](https://github.com/microsoft/ignite-learning-paths-training-aiml/blob/master/aiml20/DEMO%20Setup.md)。
+
 本演示将提取[自定义视觉](DEMO%20Custom%20Vision.md)演示中导出的 ONNX 文件，并将其部署到 Tailwind Traders 网站。
 
 该网站对“按图购物”应用使用 `products.onnx` 中的模型。 上传的图像将由模型处理，它会生成五个标签之一：“锤子”、“电钻”、“钳子”、“螺丝刀”或“安全帽”。 该网站在产品列表中搜索生成的标签，并返回搜索结果。

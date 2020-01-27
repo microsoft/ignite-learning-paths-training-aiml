@@ -18,6 +18,8 @@
 
 除上述步骤外，为确保快速完成演示，还需要执行以下操作：
 
+> 💡 在尝试执行此演示之前，必须已完成[环境设置](https://github.com/microsoft/ignite-learning-paths-training-aiml/blob/master/aiml40/Demo.md#demo-preparation)。
+
 1. **对于演示 1：** 在浏览器中打开[文本分析页](https://azure.microsoft.com/services/cognitive-services/text-analytics/?WT.mc_id=msignitethetour2019-github-aiml40)，在下面的文本框中输入以下文本，然后按“分析”：  
 > I loved the polka dot pants that I bought in the london store
 

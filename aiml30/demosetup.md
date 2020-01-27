@@ -53,14 +53,15 @@
 第一个演示是使用 VS Code 和 C# IgniteAimlDataApp。 这是为了演示如何进行数据处理，并突出显示它可以使用任何语言来完成。
 
 1. [在此处下载 VS Code](https://code.visualstudio.com/download)
-2. 使用以下命令克隆应用
+2. 确保在本地安装了 [.NET Core SDK 2.1.0](https://dotnet.microsoft.com/download/dotnet-core/2.1)
+3. 使用以下命令克隆应用
     * `git clone https://github.com/microsoft/ignite-learning-paths-training-aiml.git`
-3. 导航到项目路径
+4. 导航到项目路径
     * `cd ignite-learning-paths-training-aiml/aiml30/C#/IgniteAimlDataApp/IgniteAimlDataApp`
-4. 在 VS Code 中打开项目
+5. 在 VS Code 中打开项目
     * `code .`
-5. 在 `IgniteAimlDataApp/Datasets` 文件夹中将本地数据集替换为在上面的步骤中下载的数据集。
-6. 若要运行应用，请执行以下步骤
+6. 在 `IgniteAimlDataApp/Datasets` 文件夹中将本地数据集替换为在上面的步骤中下载的数据集。
+7. 若要运行应用，请执行以下步骤
     * 右键单击 `Program.cs`，选择`Open in Terminal`
     * 运行 `dotnet run` 命令
     * 它会提示你回答问题：`Would you like to run the default params`，请键入 `y`

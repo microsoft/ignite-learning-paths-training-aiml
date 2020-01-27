@@ -1,5 +1,7 @@
 # <a name="personalizer-demo"></a>个性化体验创建服务演示
 
+> 💡 在尝试执行此演示之前，必须已完成[设置](https://github.com/microsoft/ignite-learning-paths-training-aiml/blob/master/aiml20/DEMO%20Setup.md)。
+
 在此演示中，观察网站的布局如何通过强化学习和[认知服务个性化体验创建服务](https://docs.microsoft.com/en-us/azure/cognitive-services/personalizer/?WT.mc_id=msignitethetour2019-github-aiml20)来适应访问者的操作。
 
 个性化体验创建服务会以动态方式重新配置界面，尽量提高匿名访问者在“推荐”部分单击“特色”类别的可能性。

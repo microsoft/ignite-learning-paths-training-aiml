@@ -1,5 +1,7 @@
 # <a name="build-a-pipeline-with-jupyter-notebooks"></a>使用 Jupyter Notebook 生成管道
 
+> 💡 在尝试执行此演示之前，必须已完成[设置](../DEMO.md)。
+
 ## <a name="talking-points"></a>讲座要点
 
 * 展示与工作区、数据源和计算的轻松连接

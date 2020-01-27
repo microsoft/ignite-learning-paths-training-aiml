@@ -21,14 +21,14 @@
 # <a name="assets-in-train-the-trainer-kit"></a>培训讲师工具包中的资产
 
 * 本指南
-* [PowerPoint 演示文稿](https://globaleventcdn.blob.core.windows.net/assets/aiml/AIML21_DevelopersGuidetoAI_ADataStory.pptx)
+* [PowerPoint 演示文稿](https://github.com/microsoft/ignite-learning-paths-training-aiml/blob/master/aiml21/presentations.md)
 * [完整的演示文稿记录](https://youtu.be/K8upKkvtEI0)
-* [使用的数据集](aiml21/data)
-* [要运行的代码文件](aiml21/code)
+* [使用的数据集](https://github.com/microsoft/ignite-learning-paths-training-aiml/tree/master/aiml21/data)
+* [要运行的代码文件](https://github.com/microsoft/ignite-learning-paths-training-aiml/tree/master/aiml21/code)
 * 单独的演示视频： 
-    * 演示 1 - [探索](https://youtu.be/1Xtmrsfkzfs)
-    * 演示 2 - [试验](https://youtu.be/sUKuRBRvo7U)
-    * 演示 3 - [部署](https://youtu.be/IgSaMKsyexg)
+    * 演示 1 - [探索](https://youtu.be/-z6nfyq-WrI)
+    * 演示 2 - [试验](https://youtu.be/c7p_4CRYT8k)
+    * 演示 3 - [部署](https://youtu.be/7bkBO7NQd4Q)
     * 演示 4 - [呈现](https://youtu.be/g7aBaC9s9qQ)
 * 演示说明
 
@@ -109,7 +109,9 @@
 
 ## <a name="demo-1---explore"></a>演示 1 - 探索
 
-### <a name="video-demo-with-voice-over-aiml21---demo-1---explorehttpsyoutube1xtmrsfkzfs"></a>带语音的视频演示：[AIML21 - 演示 1 - 演示](https://youtu.be/1Xtmrsfkzfs)
+> 💡 在尝试执行此演示之前，必须已完成[设置](https://github.com/microsoft/ignite-learning-paths-training-aiml/blob/master/aiml21/README-presenter.md#demo-instructions)。
+
+### <a name="video-demo-with-voice-over-aiml21---demo-1---explorehttpsyoutube-z6nfyq-wri"></a>带语音的视频演示：[AIML21 - 演示 1 - 演示](https://youtu.be/-z6nfyq-WrI)
 
 * 登录到 [Azure 门户](https://azure.microsoft.com/en-gb/?WT.mc_id=msignitethetour2019-github-aiml21)，并打开前面使用模板创建的“Azure 机器学习”试验 
 * 单击“立即启动预览版”以启动预览版体验 
@@ -124,7 +126,9 @@
 
 ## <a name="demo-2---experiment"></a>演示 2 - 试验
 
-### <a name="video-demo-with-voice-over-aiml21---demo-2---experimenthttpsyoutubesukurbrvo7u"></a>带语音的视频演示：[AIML21 - 演示 2 - 试验](https://youtu.be/sUKuRBRvo7U)
+> 💡 在尝试执行此演示之前，必须已完成[设置](https://github.com/microsoft/ignite-learning-paths-training-aiml/blob/master/aiml21/README-presenter.md#demo-instructions)。
+
+### <a name="video-demo-with-voice-over-aiml21---demo-2---experimenthttpsyoutubec7p_4cryt8k"></a>带语音的视频演示：[AIML21 - 演示 2 - 试验](https://youtu.be/c7p_4CRYT8k)
 
 * 在 Azure 机器学习工作室中转到 [ml.azure.com](https://ml.azure.com/?WT.mc_id=msignitethetour2019-github-aiml21)。 可以通过 URL 直接访问此网站，然后登录并选择为此次讲座创建的适当工作区。 或者在 Azure 门户上的“Azure 机器学习服务”中选择“立即启动预览版”按钮 
 * 在左窗格中选择“自动化机器学习” 
@@ -152,7 +156,9 @@
 
 ## <a name="demo-3---deploy"></a>演示 3 - 部署
 
-### <a name="video-demo-with-voice-over-aiml21---demo-3---deployhttpsyoutubeigsamksyexg"></a>带语音的视频演示：[AIML21 - 演示 3 - 部署](https://youtu.be/IgSaMKsyexg)
+> 💡 在尝试执行此演示之前，必须已完成[设置](https://github.com/microsoft/ignite-learning-paths-training-aiml/blob/master/aiml21/README-presenter.md#demo-instructions)。
+
+### <a name="video-demo-with-voice-over-aiml21---demo-3---deployhttpsyoutube7bkbo7nqd4q"></a>带语音的视频演示：[AIML21 - 演示 3 - 部署](https://youtu.be/7bkBO7NQd4Q)
 
 > 将使用前面已运行的且已检查过的试验进行部署
 
@@ -178,6 +184,8 @@
 * 运行笔记本中的所有单元并解释代码 - **观看每个演示中所有论题的视频**
 
 ## <a name="demo-4---present"></a>演示 4 - 呈现
+
+> 💡 在尝试执行此演示之前，必须已完成[设置](https://github.com/microsoft/ignite-learning-paths-training-aiml/blob/master/aiml21/README-presenter.md#demo-instructions)。
 
 ### <a name="video-demo-with-voice-over-aiml21---demo-4---presenthttpsyoutubeg7abac9s9qq"></a>带语音的视频演示：[AIML21 - 演示 4 - 呈现](https://youtu.be/g7aBaC9s9qQ)
 
@@ -209,11 +217,11 @@
 * [通过 Power BI 创建和使用分析报表](https://docs.microsoft.com/en-us/learn/paths/create-use-analytics-reports-power-bi/?WT.mc_id=msignitethetour2019-github-aiml21)
 
 
-# <a name="feedback-loop"></a>反馈循环
+# <a name="feedback-loop"></a>反馈和建议
 
 所有发言人都有机会参加每月举行的**培训讲师问答讲座**（两个讲座，涵盖所有时区）。当你在讲台上讲述相关内容以后，我们希望你能参加我们组织的**反馈讲座**，与我们共享你对相关内容的体验，并且可以针对任何内容提供反馈或建议。 
 
-想要提供意见、反馈、建议？ 目前，针对内容更改/建议/反馈的最佳反馈循环是在此 GitHub 存储库中创建新问题。 若要获取有关如何创建问题的所有详细信息，请参阅[贡献文档](https://github.com/microsoft/ignite-learning-paths/blob/master/contributing.md)
+想要提供意见、反馈、建议？ 目前，针对内容更改/建议/反馈的最佳方法是在此 GitHub 存储库中创建新的 Issue。 若要获取有关如何创建 Issue 的所有详细信息，请参阅[贡献文档](../CONTRIBUTING.md)
 
 ## <a name="become-a-trained-presenter"></a>成为训练有素的演示者
 
@@ -238,8 +246,8 @@
     <td align="center"><a href="https://github.com/amynic">
         <img src="https://avatars3.githubusercontent.com/u/13828867?s=400&u=f6aca8528d65d6c191114d3a7328b46137eda162&v=4" width="100px;" alt="Amy Boyd"/><br />
         <sub><b>Amy Boyd</b></sub></a><br />
-            <a href="https://globaleventcdn.blob.core.windows.net/assets/aiml/AIML21_DevelopersGuidetoAI_ADataStory.pptx" title="讲座">📢</a>
-            <a href="https://github.com/microsoft/ignite-learning-paths-training/pulls?q=is%3Apr+author%3Aamynic+is%3Aclosed" title="文档">📖</a> 
+            <a href="https://github.com/microsoft/ignite-learning-paths-training-aiml/commits?author=amynic" title="讲座">📢</a>
+            <a href="https://github.com/microsoft/ignite-learning-paths-training-aiml/commits?author=amynic" title="文档">📖</a> 
     </td>
 </tr></table>
 

@@ -1,4 +1,4 @@
-## <a name="demo-5"></a>演示 5
+## <a name="demo-5---knowledge-store"></a>演示 5 - 知识存储
 
 [![演示 5](images/demo4.png)](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/videos/Demo5.mp4 "演示 5")
 

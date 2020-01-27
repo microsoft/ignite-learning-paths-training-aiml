@@ -1,5 +1,7 @@
 # <a name="show-faulty-prediction-and-make-a-change"></a>展示错误的预测并进行更改
 
+> 💡 在尝试执行此演示之前，必须已完成[设置](../DEMO.md)。
+
 ## <a name="show-the-faulty-prediction"></a>显示错误的预测
 
 * 导航到 Tailwind Traders 网站

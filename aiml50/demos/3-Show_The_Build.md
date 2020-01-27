@@ -1,5 +1,7 @@
 # <a name="show-the-build-in-progress"></a>展示进行中的生成
 
+> 💡 在尝试执行此演示之前，必须已完成[设置](../DEMO.md)。
+
 ## <a name="automating-the-manual-process"></a>自动执行手动过程
 
 讲课要点：

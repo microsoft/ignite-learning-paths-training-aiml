@@ -6,6 +6,17 @@
 
 在本节中，你将了解如何使用 Azure DevOps 和 Azure 机器学习服务将 DevOps 做法应用于机器学习项目。 我们将设置对版本控制模型的自动化训练、评分和存储，并将模型打包在 Docker 容器中，然后将其部署到 Azure 容器实例和 Azure Kubernetes 服务。 我们甚至会收集有关模型行为的持续反馈，以便了解何时重新训练。
 
+* [机器学习操作 - 将 DevOps 应用到数据科学](https://github.com/microsoft/ignite-learning-paths-training-aiml/tree/master-SimplifiedChinese/aiml50)
+
+## <a name="table-of-content"></a>目录
+ 
+
+| 资源          | 链接                            |
+|-------------------|----------------------------------|
+| PowerPoint        | - [演示文稿](presentations.md) |
+| 视频            | - [进行排练](https://youtu.be/UgM8_4fAni8) <br/>- [Microsoft Ignite 奥兰多录制内容](https://myignite.techcommunity.microsoft.com/sessions/83003) |
+| 演示             | - [演示 1 - 展示错误的预测并进行更改](https://github.com/microsoft/ignite-learning-paths-training-aiml/blob/master/aiml50/demos/1-Show_Faulty_Prediction.md) <br/>- [演示 2 - 使用 Jupyter Notebook 生成管道](https://github.com/microsoft/ignite-learning-paths-training-aiml/blob/master/aiml50/demos/2-Build_a_Pipeline_With_Notebooks.md) <br/>- [演示 3 - 展示进行中的生成](https://github.com/microsoft/ignite-learning-paths-training-aiml/blob/master/aiml50/demos/3-Show_The_Build.md) <br/>- [演示 4 - 展示发布过程](https://github.com/microsoft/ignite-learning-paths-training-aiml/blob/master/aiml50/demos/4-Show_The_Release.md)|
+
 ## <a name="how-to-use"></a>使用方式
 
 欢迎你，讲师！
@@ -21,7 +32,7 @@
 ## <a name="assets-in-train-the-trainer-kit"></a>讲师培训工具包中的资产
 
 - 本指南
-- PowerPoint 演示文稿，[此处](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml50/AIML50_MachineLearningOperations–ApplyingDevOpstoDataScience.pptx)提供了每张幻灯片的说明
+- PowerPoint 演示文稿，包含[此处](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml50/aiml50.pptx)或 [presentations.md](https://github.com/microsoft/ignite-learning-paths-training-aiml/blob/master/aiml50/presentations.md) 中的的每个幻灯片的备注
   - [导出的演讲者备注](./SpeakerNotes.md)
 - 可在[此处](https://myignite.techcommunity.microsoft.com/sessions/83003)查看 Microsoft Ignite 2019 年奥兰多大会上的研讨会
 - 可在[此处](https://youtu.be/UgM8_4fAni8)查看完整的演示记录
@@ -39,7 +50,7 @@
 
 ## <a name="become-a-trained-presenter"></a>成为经培训的讲师
 
-若要成为经培训的讲师，请联系 [scalablecontent@microsoft.com](mailto:scalablecontent@microsoft.com)  。 在电子邮件中，请提供：
+若要成为经培训的讲师，请联系 [scalablecontent@microsoft.com](mailto:scalablecontent@microsoft.com)。 在电子邮件中，请提供：
 
 - 你的全名：
 - 此演示文稿的代码：AIML50
@@ -65,6 +76,11 @@
         <img src="https://avatars1.githubusercontent.com/u/4006985?s=460&v=4" width="100px;" alt="Steven Murawski"/><br />
         <sub><b>Steven Murawski</b></sub></a><br />
             <a href="https://github.com/microsoft/ignite-learning-paths-training-aiml/pull/9" title="文档">📖</a>
+    </td>
+    <td align="center"><a href="https://github.com/sethjuarez">
+        <img src="https://avatars2.githubusercontent.com/u/115409?s=460&v=4" width="100px;" alt="Seth Juarez"/><br />
+        <sub><b>Seth Juarez</b></sub></a><br />
+            <a href="Add link to powerpoint here" title="讲座">📢</a>
     </td>
 </tr></table>
 

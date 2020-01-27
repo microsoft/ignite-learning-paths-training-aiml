@@ -47,7 +47,7 @@
   * 包含 ML 工作区的资源组名称
   * 工作区名称
 
-示例：
+示例:
 
 ```
 {
@@ -57,8 +57,25 @@
 }
 ```
 
+
+* 另外，如有必要，请将 `location` 参数添加到 `deploymentconfig.json` 文件中的你的区域。 默认 ACI 区域为 westus。
+
+示例:
+```
+{
+   "containerResourceRequirements": {
+       "cpu":        2,
+       "memoryInGB": 4
+    },
+    "computeType":       "ACI",
+    "enableAppInsights": "True",
+    "location":          "westus"
+}
+```
+参考： https://docs.microsoft.com/en-us/azure/container-instances/container-instances-region-availability
+
 * 单击（将在新选项卡中打开）
-  * `setup_pipeline.ipynb`
+  * `seer_pipeline.ipynb`
 
 #### <a name="seer_pipelineipynb"></a>seer_pipeline.ipynb
 
@@ -73,7 +90,7 @@
 
 #### <a name="create-the-service-connections"></a>创建服务连接
 
-从“项目”页，导航到项目设置。
+从“项目”页，导航到 `project settings`。
 
 ![0-azure_devops_org](./images/0-azure_devops_org.png)
 ![1-azure_devops_project](./images/1-azure_devops_project.png)
@@ -132,13 +149,19 @@
 
 * 导航到 `Pipelines`（位于“管道”下）。
 * 选择 `New Pipeline`
-* 连接到 GitHub 项目 [Ignite 学习路径训练 AI/ML](https://github.com/microsoft/ignite-learning-paths-training-aiml) 的相应分支
-* 选择使用存储库中的生成定义 (`aiml50/azure-pipelines.yml`)
 
 ![9-azure_devops_pipeline_new](./images/9-azure_devops_pipeline_new.png)
 ![10-azure_devops_pipeline_new_source](./images/10-azure_devops_pipeline_new_source.png)
+
+
+* 连接到 GitHub 项目 [Ignite 学习路径训练 AI/ML](https://github.com/microsoft/ignite-learning-paths-training-aiml) 的相应分支
+
 ![11-azure_devops_pipeline_select_repo](./images/11-azure_devops_pipeline_select_repo.png)
+
 ![12-azure_devops_pipeline_select_build_definition](./images/12-azure_devops_pipeline_select_build_definition.png)
+
+* 选择使用存储库中的生成定义 (`aiml50/azure-pipelines.yml`)
+
 ![13-azure_devops_pipeline_select_build_definition_location](./images/13-azure_devops_pipeline_select_build_definition_location.png)
 
 #### <a name="run-the-build"></a>运行生成
@@ -155,37 +178,57 @@
 机器学习管道完成后，我们就可以更新发布管道。
 
 * 导航到 `Releases`（位于“管道”下）。
+
+![16-azure_devops_release_new](./images/16-azure_devops_release_new.png)
+
 * 选择 `Release Seer` 并选择 `Edit`
+
+![17-azure_devops_release_edit](./images/17-azure_devops_release_edit.png)
+
   * 选择 `Add an artifact`
+![18-azure_devops_release_artifact](./images/18-azure_devops_release_artifact.png)
+
+
   * 设置 `AzureML` 的 `Source type`
   * 将服务终结点设置为 `aiml50-workspace`
   * 将模型名称设置为 `seer`。  只有第一个 ML 管道完成后，你才能执行此操作。
   * 单击 `Add`
   * 单击新项目中的闪电图标，然后启用 `Continuous deployment trigger`
+
+![19-azure_devops_release_artifact_set](./images/19-azure_devops_release_artifact_set.png)
+
+
 * 接下来，打开 `Deploy to ACI` 环境。
+
+![20-azure_devops_release_edit_2](./images/20-azure_devops_release_edit_2.png)
+
 * 单击 `Agent Job`
   * 将 `Agent Pool` 设置为 `Azure Pipelines`
   * 将 `Agent Specification` 设置为 `ubuntu-18.04`
+
+![21-azure_devops_release_task_agent](./images/21-azure_devops_release_task_agent.png)
+
 * 单击 `Download deployment and inferencing code`
   * 将 `Package name` 设置为 `seer_deployment`
+
+![22-azure_devops_release_task_edit](./images/22-azure_devops_release_task_edit.png)
+
 * 单击 `Azure ML Model Deploy`
   * 验证是否已将 Azure ML 工作区设置为 `$(subscription_workspace)` 或 `aiml-workspace`。
+
+![23-azure_devops_release_task_verify](./images/23-azure_devops_release_task_verify.png)
+
 * 保存管道并创建新发布。
 
-![16-azure_devops_release_new](./images/16-azure_devops_release_new.png)
-![17-azure_devops_release_edit](./images/17-azure_devops_release_edit.png)
-![18-azure_devops_release_artifact](./images/18-azure_devops_release_artifact.png)
-![19-azure_devops_release_artifact_set](./images/19-azure_devops_release_artifact_set.png)
-![20-azure_devops_release_edit_2](./images/20-azure_devops_release_edit_2.png)
-![21-azure_devops_release_task_agent](./images/21-azure_devops_release_task_agent.png)
-![22-azure_devops_release_task_edit](./images/22-azure_devops_release_task_edit.png)
-![23-azure_devops_release_task_verify](./images/23-azure_devops_release_task_verify.png)
+
 
 ## <a name="troubleshooting-and-reference"></a>疑难解答和参考
 
 ### <a name="checking-the-container-deployment-log"></a>检查容器部署日志
 
 在已预配的资源组中，导航到 `bootstrap-container` 容器实例。 你可以在此处检查容器的日志，其中将显示所执行的步骤和遇到的所有错误。
+
+将模型部署到 ACI 后，请检查所有 3 个容器运行  。 如果已终止，请重启 ACI 实例  。
 
 ### <a name="provider-registration"></a>提供程序注册
 

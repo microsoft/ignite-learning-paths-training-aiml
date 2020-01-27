@@ -43,19 +43,19 @@
     <td align="center"><a href="">
         <img src="https://avatars0.githubusercontent.com/u/152948?s=460&v=4" width="100px;" alt="David Smith"/><br />
         <sub><b>David Smith</b></sub></a><br />
-            <a href="https://github.com/microsoft/ignite-learning-paths/commits?author=revodavid" title="讲座">📢</a>
-            <a href="https://github.com/microsoft/ignite-learning-paths-training-aiml/commits?author=revodavid" title="文档">📖</a> 
+            <a href="https://github.com/microsoft/ignite-learning-paths-training-aiml/commits/master?author=revodavid" title="讲座">📢</a>
+            <a href="https://github.com/microsoft/ignite-learning-paths-training-aiml/commits/master?author=revodavid" title="文档">📖</a> 
     </td>
     <td align="center"><a href="">
         <img src="https://avatars2.githubusercontent.com/u/4598064?s=460&v=4" width="100px;" alt="Chris Noring"/><br />
         <sub><b>Chris Noring</b></sub></a><br />
-            <a href="https://github.com/neilpeterson/ignite-tour-fy20/commits?author=neilpeterson" title="讲座">🎨</a>
-            <a href="https://github.com/neilpeterson/ignite-tour-fy20/commits?author=neilpeterson" title="设计">📖</a> 
+            <a href="https://github.com/microsoft/ignite-learning-paths-training-aiml/commits/master" title="讲座">🎨</a>
+            <a href="https://github.com/microsoft/ignite-learning-paths-training-aiml/commits/master" title="设计">📖</a> 
     </td>
 </tr></table>
 
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
-## <a name="feedback-loop"></a>反馈循环
+## <a name="feedback-loop"></a>反馈和建议
 
-想要提供意见、反馈、建议？ 针对内容更改/建议/反馈的最佳反馈循环是在此 GitHub 存储库中创建新问题。 若要获取有关如何创建问题的所有详细信息，请参阅[贡献文档](https://github.com/microsoft/ignite-learning-paths/blob/master/contributing.md)
+想要提供意见、反馈、建议？ 针对内容更改/建议/反馈的最佳反馈循环是在此 GitHub 存储库中创建新问题。 若要获取有关如何创建 Issue 的所有详细信息，请参阅[贡献文档](../CONTRIBUTING.md)

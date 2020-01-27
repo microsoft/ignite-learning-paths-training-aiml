@@ -4,9 +4,9 @@
 
 ## <a name="session-abstract"></a>讲座摘要
 
-Tailwind Traders 使用自定义机器学习模型来解决其库存问题，而不更改其软件开发生命周期！ 怎么做到的？ Azure 机器学习的可视化界面。
+Tailwind Traders 使用自定义机器学习模型来解决其库存问题，而不更改其软件开发生命周期！ 怎么做到的？ Azure 机器学习设计器。
  
-在本讲座中，你将了解 Tailwind Traders 使用的数据科学过程，并获取 Azure 机器学习可视化界面的简介。 你将了解如何查找、导入和准备数据，如何选择机器学习算法，如何训练和测试模型，以及如何将完整模型部署到 API。 获取你和你的开发团队所需的相关提示、最佳做法和资源，以便继续机器学习之旅、构建第一个模型以及执行其他操作。
+在本讲座中，你将了解 Tailwind Traders 使用的数据科学过程，并获取 Azure 机器学习设计器的简介。 你将了解如何查找、导入和准备数据，如何选择机器学习算法，如何训练和测试模型，以及如何将完整模型部署到 API。 获取你和你的开发团队所需的相关提示、最佳做法和资源，以便继续机器学习之旅、构建第一个模型以及执行其他操作。
 
 欢迎使用，演示者！ 
 
@@ -22,8 +22,8 @@ Tailwind Traders 使用自定义机器学习模型来解决其库存问题，而
 ## <a name="assets-in-train-the-trainer-kit"></a>讲师培训工具包中的资产
 
 - 本指南
-- PowerPoint 演示文稿，[此处](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml30/AIML30_How%20to%20Build%20Machine%20Learning%20Models.pptx)提供了每张幻灯片的说明
-- [此处](https://www.youtube.com/watch?v=u1ppYaZuNmo&amp=&feature=youtu.be)提供完整的演示文稿记录
+- PowerPoint 演示文稿，包含 [presentations.md](https://github.com/microsoft/ignite-learning-paths-training-aiml/blob/master/aiml30/presentations.md) 处的每个幻灯片的备注
+- 可在[此处](https://www.youtube.com/watch?v=u1ppYaZuNmo&amp=&feature=youtu.be)查看完整的演示记录
 - 可直接播放的实际操作演示独立录像[在此](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml30/FullIgniteModelBuildDemo.mp4)。 它还包含在幻灯片集的隐藏幻灯片中。
 - 演示资源指南
     1. [演示设置](demosetup.md)
@@ -50,7 +50,7 @@ Tailwind Traders 使用自定义机器学习模型来解决其库存问题，而
 <table>
 <tr>
     <td align="center">
-        <img src="https://media.licdn.com/dms/image/C4E03AQFV-bjxXWxeIw/profile-displayphoto-shrink_200_200/0?e=1575504000&v=beta&t=i0CssIxPnjai9cTjruIvKVrACO0J2qCCJRm-PLEI1q0" width="100px;" alt="Cassie Breviu"/><br />
+        <img src="https://raw.githubusercontent.com/cassieview/bio/d2c9c83169d5c88f2ffc5e89e4dc16a6658438b8/cassieb.png" width="100px;" alt="Cassie Breviu"/><br />
         <sub><b>Cassie Breviu</b></sub><br />
             <a href="https://github.com/microsoft/ignite-learning-paths-training-aiml/aiml30/" title="讲座">📢</a>
             <a href="https://github.com/microsoft/ignite-learning-paths-training-aiml/aiml30/" title="文档">📖</a>
@@ -60,6 +60,11 @@ Tailwind Traders 使用自定义机器学习模型来解决其库存问题，而
         <sub><b>Francesca Lazzeri</b></sub><br />
             <a href="https://github.com/microsoft/ignite-learning-paths-training-aiml/aiml30/" title="讲座">📢</a>
             <a href="https://github.com/microsoft/ignite-learning-paths-training-aiml/aiml30/" title="文档">📖</a>
+    </td>
+        <td align="center"><a href="https://github.com/amynic">
+        <img src="https://avatars3.githubusercontent.com/u/13828867?s=400&u=f6aca8528d65d6c191114d3a7328b46137eda162&v=4" width="100px;" alt="Amy Boyd"/><br />
+        <sub><b>Amy Boyd</b></sub></a><br />
+            <a href="https://github.com/microsoft/ignite-learning-paths-training-aiml/blob/master/aiml30/presentations.md" title="讲座">📢</a>
     </td>
 </tr></table>
 
