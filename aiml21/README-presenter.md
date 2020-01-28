@@ -183,6 +183,8 @@ Please download all the code and data files in this repository to get started. T
 * Edit the 2nd cell to include the name of your deployed web service
 * Run all cells in notebook and explain the code - **Review the video for all talking points for each demo**
 
+> NOTE: If you have an error accessing the ACI endpoint keys in code. Go to the Azure Machine Learning Studio, choose Endpoints, select your endpoint and select the consume tab. There you have access to the Primary Key - copy this value and set the primary variable in the deploy code to your key
+
 ## Demo 4 - Present
 
 > 💡 You must have completed the [setup](https://github.com/microsoft/ignite-learning-paths-training-aiml/blob/master/aiml21/README-presenter.md#demo-instructions) before attempting to do the demo.
