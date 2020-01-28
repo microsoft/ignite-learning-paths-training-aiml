@@ -1,24 +1,24 @@
 
-# AIML30 -Start Building Machine Learning Models Faster than You Think -Train the trainer
+# <a name="aiml30--start-building-machine-learning-models-faster-than-you-think--train-the-trainer"></a>AIML30 - 開始建立機器學習模型比您想得更快 - 訓練人員培訓
 
 
-## Session Abstract
+## <a name="session-abstract"></a>課程摘要
 
-Tailwind Traders uses custom machine learning models to fix their inventory issues – without changing their Software Development Life Cycle! How? Azure Machine Learning Designer.
+Tailwind Traders 使用自訂機器學習模型來修正其庫存問題，而無需變更軟體開發生命週期！ 怎麼做？ Azure Machine Learning 設計工具。
  
-In this session, you’ll learn the data science process that Tailwind Traders’ uses and get an introduction to Azure Machine Learning Designer. You’ll see how to find, import, and prepare data, select a machine learning algorithm, train and test the model, and deploy a complete model to an API. Get the tips, best practices, and resources you and your development team need to continue your machine learning journey, build your first model, and more.
+在本課程中，您將了解 Tailwind Traders 使用的資料科學程序，並取得 Azure Machine Learning 設計工具的簡介。 您將了解如何尋找、匯入和準備資料；選取機器學習演算法；定型和測試模型；以及將完整模型部署至 API。 取得您和開發小組所需的祕訣、最佳做法和資源，以繼續進行機器學習旅程、建立第一個模型等。
 
-## Table of Content
+## <a name="table-of-content"></a>目錄
  
 
-| Resources          | Links                            |
+| 資源          | 連結                            |
 |-------------------|----------------------------------|
-| PowerPoint        | - [Presentation](presentations.md) |
-| Videos            | - [Dry Run Rehearsal](https://www.youtube.com/watch?v=u1ppYaZuNmo&amp=&feature=youtu.be) <br/>- [Microsoft Ignite Orlando Recording](https://myignite.techcommunity.microsoft.com/sessions/82993?source=sessions) |
-| Demos             | - [Demo 1 - Data Prep with App ](https://github.com/microsoft/ignite-learning-paths-training-aiml/blob/master/aiml30/demoguide.md#demo-1-data-prep-demo-with-app) <br/>- [Demo 2 - Build Model with Azure Machine Learning designer](https://github.com/microsoft/ignite-learning-paths-training-aiml/blob/master/aiml30/demoguide.md#demo-2-build-model-with-azure-machine-learning-visual-designer) <br/>- [Demo 3 - Testing API with C# Console App](https://github.com/microsoft/ignite-learning-paths-training-aiml/blob/master/aiml30/demoguide.md#demo-3-testing-api-with-c-console-app-dotnet-core) | 
+| PowerPoint        | - [簡報](presentations.md) |
+| 影片            | - [嘗試執行練習](https://www.youtube.com/watch?v=u1ppYaZuNmo&amp=&feature=youtu.be) <br/>- [Microsoft Ignite 奧蘭多錄影](https://myignite.techcommunity.microsoft.com/sessions/82993?source=sessions) |
+| 示範             | - [Demo 1 - Data Prep with App](https://github.com/microsoft/ignite-learning-paths-training-aiml/blob/master/aiml30/demoguide.md#demo-1-data-prep-demo-with-app) (示範 1 - 使用應用程式準備資料 ) <br/>- [Demo 2 - Build Model with Azure Machine Learning designer](https://github.com/microsoft/ignite-learning-paths-training-aiml/blob/master/aiml30/demoguide.md#demo-2-build-model-with-azure-machine-learning-visual-designer) (示範 2 - 使用 Azure Machine Learning 設計工具建立模型) <br/>- [Demo 3 - Testing API with C# Console App](https://github.com/microsoft/ignite-learning-paths-training-aiml/blob/master/aiml30/demoguide.md#demo-3-testing-api-with-c-console-app-dotnet-core) (示範 3 - 使用 C# 主控台應用程式測試 API) | 
 
 
 
-# I want to...
-## [Learn to present this content](README-Presenter.md)
-## [Continue learning after attending this session](README-Attendee.md)
+# <a name="i-want-to"></a>我想要...
+## <a name="learn-to-present-this-contentreadme-presentermd"></a>[了解如何針對此內容進行簡報](README-Presenter.md)
+## <a name="continue-learning-after-attending-this-sessionreadme-attendeemd"></a>[在參加本課程之後繼續學習](README-Attendee.md)

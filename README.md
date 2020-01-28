@@ -1,88 +1,88 @@
-# Ignite Learning Paths - Developers Guide to AI
+# <a name="ignite-learning-paths---developers-guide-to-ai"></a>Ignite 學習路徑 - AI 開發人員指南
 
-![Learning Path](https://img.shields.io/badge/Learning%20Path-AIML-fe5e00?logo=microsoft)  ![Session](https://img.shields.io/badge/🗣️Sessions-6-31c754)
+![學習路徑](https://img.shields.io/badge/Learning%20Path-AIML-fe5e00?logo=microsoft)  ![課程](https://img.shields.io/badge/🗣️Sessions-6-31c754)
 
-Welcome!
+歡迎使用！
 
-The content of this repository is available for you so you can reproduce any demo or learn how to present any session of the Learning Path presented at [Migrosoft Ignite](https://www.microsoft.com/en-us/ignite) and during [Microsoft Ignite The Tour](https://www.microsoft.com/en-ca/ignite-the-tour/), in your local field office, a community user group, or even as a lunch-and-learn event for your company.
+您可以使用此存放庫的內容重現任何示範，或在 [Migrosoft Ignite](https://www.microsoft.com/en-us/ignite) 了解如何進行學習路徑的任何課程簡報，以及在 [Microsoft Ignite The Tour](https://www.microsoft.com/en-ca/ignite-the-tour/) 期間、當地現場辦公室、社群使用者群組，甚至是您公司的午餐學習活動。
 
-## Do the Demos
+## <a name="do-the-demos"></a>執行示範
 
-If you are here to reproduce a demo in the comfort of your home/office, go in in the section [Sessions](#sessions). In each session you will find deployment instructions, to create the environment you need, and a tutorial to do the demo step by step.
+如果您想要在家裡/辦公室輕鬆重現示範，請進入＜[課程](#sessions)＞一節。 在每個課程中，您會找到部署指示建立所需的環境，以及逐步執行示範的教學課程。
 
-## Presenting the content
+## <a name="presenting-the-content"></a>內容簡報
 
-We're glad you are here and look forward to your delivery of this amazing content. As an experienced presenter, we know you know HOW to present so this guide will focus on WHAT you need to present. It will provide you a full run-through of the presentation created by the presentation design team.
+很高興您的到來，我們期待您傳遞這份精彩的內容。 身為有經驗的簡報者，您知道「如何」做簡報，因此本指南將著重於您需要簡報的內容。 它會為您提供由簡報設計小組建立的完整簡報流程。
 
-Along with the video of the presentation, this repository will link to all the assets you need to successfully present including PowerPoint slides and demo instructions & code.
+除了簡報的影片，此存放庫也連結到您完成簡報所需的所有資產，包括 PowerPoint 投影片和示範指示與程式碼。
 
-We are looking forward to working with all speakers who will deliver the content built below - we welcome your feedback and help to keep the content up-to-date. 
+我們期待與所有將提供以下建置內容的演講者合作 - 我們歡迎您提出意見反應，且會協助保持最新的內容。 
 
-## Learning Path Description
+## <a name="learning-path-description"></a>學習路徑描述
 
-Artificial Intelligence (AI) is driving innovative solutions across all industries but with machine learning (ML) applying a paradigm change to how we approach building products we are all exploring how to expand our skill-sets  
+人工智慧 (AI) 正在推動所有產業的創新解決方案，但使用機器學習 (ML)，讓我們建立產品的方式產生了範例變更，我們將探索如何擴充技能集  
 
-Tailwind Traders is a retail company looking for support on how to benefit from applying AI across their business. In 'Developers Guide to AI’ we’ll show how Tailwind Traders has achieved this 
+Tailwind Traders 是一家零售公司，想要了解在其業務套用 AI 能帶來什麼益處。 在《AI 開發人員指南》中，我們將示範 Tailwind Traders 如何達成此目的 
 
-There is something for every stage of the AI learning curve; whether you want to consume ML technologies, increase technical knowledge of ML theory, or build your own custom ML models. The model is not the end of the data science story, we will conclude with applying DevOps practices to ML projects to build an end-to-end pipeline 
+AI 學習曲線的每個階段都有一些內容；無論您是想要取用 ML 技術、加強 ML 理論的技術知識，還是建立自己的自訂 ML 模型。 模型並不是資料科學的最後結尾，我們結論時會將 DevOps 做法套用至 ML 專案，以建立端對端管線 
 
-## Sessions
+## <a name="sessions"></a>課程
 
-* There are **x5 45 minute sessions** ([AIML10](aiml10/README.md), [AIML20](aiml20/README.md), [AIML30](aiml30/README.md), [AIML40](aiml40/README.md) and [AIML50](aiml50/README.md))
-* And **x1 20 min theatre session** ([AIML21](aiml21/README.md))
+* 有 **5 個 45 分鐘的課程** ([AIML10](aiml10/README.md)、[AIML20](aiml20/README.md)、[AIML30](aiml30/README.md)、[AIML40](aiml40/README.md) 和 [AIML50](aiml50/README.md))
+* 和 **1 個 20 分鐘的講堂式課程** ([AIML21](aiml21/README.md))
 
-Here all the sessions available in the learning path **Developers Guide to AI** (aka: **AIML**)
+這裡的所有課程都提供於學習路徑《AI 開發人員指南》(也稱為：**AIML**) 中
 
-### [AIML10: Making Sense of your Unstructured Data with AI](aiml10/README.md)
+### <a name="aiml10-making-sense-of-your-unstructured-data-with-aiaiml10readmemd"></a>[AIML10：使用 AI 讓您的非結構化資料發揮意義](aiml10/README.md)
 
-Tailwind Traders has a lot of legacy data that they’d like their developers to leverage in their apps – from various sources, both structured and unstructured, and including images, forms, pdf files, and several others. In this session, you'll learn how the team used Cognitive Search to make sense of this data in a short amount of time and with amazing success. We'll discuss tons of AI concepts, like the ingest-enrich-explore pattern, skillsets, cognitive skills, natural language processing, computer vision, and beyond.
+Tailwind Traders 擁有許多舊式資料，他們希望開發人員能在應用程式中運用 – 來自各種結構化和非結構化的來源，且包含影像、表單、PDF 檔案和其他數種格式。 在此課程中，您將了解小組如何使用認知搜尋，在短時間內讓此資料發揮意義，並獲得驚人的成功。 我們將討論許多 AI 概念，例如內嵌-擴充-探索模式、技能集、認知技能、自然語言處理、電腦視覺等。
 
-### [AIML20: Using Pre-Built AI to Solve Business Challenges](aiml20/README.md)
+### <a name="aiml20-using-pre-built-ai-to-solve-business-challengesaiml20readmemd"></a>[AIML20：使用預先建立的 AI 解決商務問題](aiml20/README.md)
 
-As a data-driven company, Tailwind Traders understands the importance of using Artificial Intelligence to improve business processes and delight customers. Before investing in an AI team, their existing developers were able to demonstrate some quick wins using pre-built AI technologies. In this session, we will show how you can use Azure Cognitive Services to extract insights from retail data and go into the neural networks behind computer vision. You’ll learn how it works and how to augment the pre-built AI with your own images for custom image recognition applications.
+Tailwind Traders 是以資料為導向的公司，了解使用人工智慧來改善商務流程和取悅客戶的重要性。 在投資 AI 小組之前，他們現有開發人員可以使用預先建立的 AI 技術來達到一些快速致勝的成果。 在此課程中，我們將示範如何使用 Azure 認知服務從零售資料擷取見解，並進入電腦視覺背後的類神經網路。 您將了解其運作方式，以及如何使用自有影像來增強自訂影像辨識應用程式的預先建立 AI。
 
-### [AIML30: Start Building Machine Learning Models Faster than You Think](aiml30/README.md)
+### <a name="aiml30-start-building-machine-learning-models-faster-than-you-thinkaiml30readmemd"></a>[AIML30：比預期更快開始建置機器學習模型](aiml30/README.md)
 
-Tailwind Traders uses custom machine learning models to fix their inventory issues – without changing their Software Development Life Cycle! How? Azure Machine Learning Visual Interface. In this session, you’ll learn the data science process that Tailwind Traders’ uses and get an introduction to Azure Machine Learning Visual Interface. You’ll see how to find, import, and prepare data, select a machine learning algorithm, train and test the model, and deploy a complete model to an API. Get the tips, best practices, and resources you and your development team need to continue your machine learning journey, build your first model, and more.
+Tailwind Traders 使用自訂機器學習模型來修正其清查問題，而不需要變更軟體開發生命週期！ 怎麼做？ Azure Machine Learning 視覺化介面。 在此課程中，您將了解 Tailwind Traders 使用的資料科學程序，並取得 Azure Machine Learning 視覺化介面的簡介。 您將了解如何尋找、匯入和準備資料、選取機器學習演算法、定型和測試模型，以及將完整模型部署至 API。 取得您和開發小組所需的祕訣、最佳做法和資源，以繼續機器學習旅程和建立第一個模型等。
 
-### [AIML40: Taking Models to the Next Level with Azure Machine Learning Best Practices](aiml40/README.md)
+### <a name="aiml40-taking-models-to-the-next-level-with-azure-machine-learning-best-practicesaiml40readmemd"></a>[AIML40：使用 Azure Machine Learning 最佳做法將模型推進至下個階段](aiml40/README.md)
 
-Tailwind Traders’ data science team uses natural language processing (NLP), and recently discovered how to fine-tune and build a baseline models with Automated ML. 
+Tailwind Traders 的資料科學小組使用自然語言處理 (NLP)，且於最近探索如何使用自動化 ML 微調和建立基準模型。 
 
-In this session, you’ll learn what Automated ML is and why it’s so powerful, then dive into how to improve upon baseline models, using examples from the NLP best practices repository. We’ll highlight Azure Machine Learning key features and how you can apply them to your organization, including low priority compute instances, distributed training with auto scale, hyperparameter optimization, collaboration, logging, and deployment. 
+在此課程中，您將了解什麼是自動化 ML，以及它強大的原因，然後利用 NLP 最佳做法存放庫中的範例來深入探討如何在基準模型上進行改善。 我們將強調 Azure Machine Learning 主要功能，以及如何將它們套用到您的組織，包括低優先順序的計算執行個體、具有自動調整的分散式定型、超參數最佳化、共同作業、記錄和部署。 
 
-### [AIML50: Machine Learning Operations – Applying DevOps to Data Science](aiml50/README.md) 
+### <a name="aiml50-machine-learning-operations-applying-devops-to-data-scienceaiml50readmemd"></a>[AIML50：Machine Learning 作業 – 將 DevOps 套用至資料科學](aiml50/README.md) 
 
-While many companies have adopted DevOps practices to improve their software delivery, these same techniques are rarely applied to machine learning projects. Collaboration between developers and data scientists can be limited and deploying models to production in a consistent and trustworthy way is often a pipedream. 
+雖然許多公司已採用 DevOps 做法來改善軟體交付，但這些相同的技術很少套用於機器學習專案。 開發人員與資料科學家之間的共同作業可能會受到限制，而以一致且值得信任的方式將模型部署到生產環境通常為白日夢。 
 
-In this session, you’ll learn how to apply DevOps practices to your machine learning projects 	using Azure DevOps and Azure Machine Learning Service. We’ll set up automated training, scoring, and storage of versioned models and wrap the models in docker containers and deploy them to Azure Container Instances and Azure Kubernetes Service. We’ll even collect continuous feedback on model behavior so we know when to retrain. 
+在此課程中，您將了解如何使用 Azure DevOps 和 Azure Machine Learning 服務，將 DevOps 做法套用到機器學習專案。 我們會為建立版本的模型設定自動定型、評分和儲存，並將模型包裝在 Docker 容器中，然後將其部署至 Azure 容器執行個體和 Azure Kubernetes Service。 我們甚至會針對模型行為收集持續的意見反應，以便知道何時要重新定型。 
 
-### [AIML21: Developers Guide to AI: A Data Story](aiml21/README.md)
+### <a name="aiml21-developers-guide-to-ai-a-data-storyaiml21readmemd"></a>[AIML21：AI 開發人員指南：資料故事](aiml21/README.md)
 
-In this theatre session we will show the data science process and how to apply it. From exploration of datasets to deployment of services - all applied to an interesting data story. This will also take you on a very brief tour of the Azure AI Platform.
+在這個講堂式課程中，我們將示範資料科學程序，以及如何加以套用。 從探索資料集到部署服務 - 全都套用到一個有趣的資料故事。 這也會讓您很快了解 Azure AI 平台。
 
-## Contributing
+## <a name="contributing"></a>參與
 
-To know more about about to contribute to this project please refer to the [Code of Conduct](CODE_OF_CONDUCT.md) and [Contributing](CONTRIBUTING.md) page.
+若要深入了解如何參與此專案，請參閱[管理辦法](CODE_OF_CONDUCT.md)和[參與](CONTRIBUTING.md)頁面。
 
 
-## Become a Trained Presenter
+## <a name="become-a-trained-presenter"></a>成為經訓練的簡報者
 
-You don't need anything to present this content, it's all there to be used. However, by becoming a *Trained Presenter* the scalable content team will recognize you as well. *Trained Presenter* see their contact information (name, picture, website) in the bottom of each session.  
+您不需要任何東西即可進行此內容的簡報，要用的一切都已具備。 不過，藉由成為「經訓練的簡報者」，可調整的內容小組也會認可您。 「經訓練的簡報者」會在每個課程底部看到其連絡資訊 (名字、相片、網站)。  
  
-To become a *Trained Presenter*, contact [scalablecontent@microsoft.com](mailto:scalablecontent@microsoft.com). In your email please include:
+若要成為「經訓練的簡報者」，請連絡 [scalablecontent@microsoft.com](mailto:scalablecontent@microsoft.com)。 請在您的電子郵件中加入以下內容：
 
-- Complete name:
-- The code of this presentation: \<Session Code (ex:APPS10)\>
-- Link to an unlisted YouTube video of you presenting around 10 minutes of the content for this specific session.
+- 完整名稱：
+- 這份簡報的代碼：\<課程代碼 (例如：APPS10)\>
+- 您針對這個特定課程所簡報的未列出 YouTube 影片連結，內容長度大約 10 分鐘。
 
 
-## Legal Notices
+## <a name="legal-notices"></a>法律注意事項
 
-Microsoft and any contributors grant you a license to the Microsoft documentation and other content in this repository under the [Creative Commons Attribution 4.0 International Public License](https://creativecommons.org/licenses/by/4.0/legalcode), see the [LICENSE](LICENSE) file, and grant you a license to any code in the repository under the [MIT License](https://opensource.org/licenses/MIT), see the [LICENSE-CODE](LICENSE-CODE)
+Microsoft 和任何參與者依照 [Creative Commons Attribution 4.0 International Public License](https://creativecommons.org/licenses/by/4.0/legalcode) (Creative Commons Attribution 4.0 國際公眾授權條款)，授與您對於 Microsoft 文件以及此存放庫中其他內容的授權 (請參閱 [LICENSE](LICENSE) 檔案)，並依照 [MIT License](https://opensource.org/licenses/MIT) (MIT 授權)，授與您對於存放庫中任何程式碼的授權 (請參閱 [LICENSE-CODE](LICENSE-CODE))
 
-Microsoft, Windows, Microsoft Azure and/or other Microsoft products and services referenced in the documentation may be either trademarks or registered trademarks of Microsoft in the United States and/or other countries. The licenses for this project do not grant you rights to use any Microsoft names, logos, or trademarks. Microsoft's general trademark guidelines can be found at http://go.microsoft.com/fwlink/?LinkID=254653.
+文件中所參考的 Microsoft、Windows、Microsoft Azure 及 (或) 其他 Microsoft 產品和服務可能是 Microsoft 在美國及 (或) 其他國家/地區的商標或註冊商標。 此專案授權並未授與您使用任何 Microsoft 名稱、標誌或商標的權利。 如需 Microsoft 的一般商標指導方針，請參閱 http://go.microsoft.com/fwlink/?LinkID=254653。
 
-Privacy information can be found at https://privacy.microsoft.com/en-us/
+如需隱私權資訊，請參閱 https://privacy.microsoft.com/en-us/
 
-Microsoft and any contributors reserve all other rights, whether under their respective copyrights, patents, or trademarks, whether by implication, estoppel or otherwise.
+Microsoft 和任何參與者皆保留所有其他權利，不論其各自的著作權、專利或商標，且不論是以默示、禁止反悔或其他方式。

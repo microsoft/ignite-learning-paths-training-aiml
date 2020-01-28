@@ -1,3 +1,3 @@
-# About the Dataset
+# <a name="about-the-dataset"></a>關於資料集
 
-Review data for this demo is sourced from the text reviews of [Women's E-Commerce Clothing Review](https://www.kaggle.com/nicapotato/womens-ecommerce-clothing-reviews/) dataset. The dataset has a CC0: Public Domain License and has been reformatted to build validation and training sets for both standard sentiment analysis and ABSA models.  
+此示範評論資料源自於 [Women's E-Commerce Clothing Review](https://www.kaggle.com/nicapotato/womens-ecommerce-clothing-reviews/) (女性的電子商務服裝評論) 資料集的文字評論。 此資料集具有 CC0：公用領域授權且已重新格式化，以建立標準情感分析和 ABSA 模型的驗證和定型集。  

@@ -1,29 +1,29 @@
-# Show the Build in Progress
+# <a name="show-the-build-in-progress"></a>顯示正在進行的組建
 
-> 💡 You must have completed the [setup](../DEMO.md) before attempting to do the demo.
+> 💡 您必須先完成[設定](../DEMO.md)，才能嘗試執行示範。
 
-## Automating the Manual Process
+## <a name="automating-the-manual-process"></a>自動化手動程序
 
-Talking Points:
+報告要點：
 
-* So with those points in mind, let’s look at the build definition:
-* Rather than doing it in Jupyter Notebooks (like last demo), let’s make it just the code
+* 請將這些要點牢記在心，再來看看組建定義：
+* 與其在 Jupyter Notebook 中執行 (如上一個示範)，不如讓組建變成程式碼
 
-Demo :
+示範：
 
-* Start in Azure DevOps in the browser and show build
-  * Start with the Pipeline
-  * Show last build with our change from the start
-  * Highlight the job summary
-  * look at the log for "Recreate and submit the pipeline"
-* Switch to VSCode and show the same code in a pure python file
-  * show the imports
-  * show the added arguments
-  * walk through the remainder and draw parallels to the notebook flow
-* Show the YAML build definition in VSCode if you like
-* Switch to the ML UI and show the AML Pipeline that ran, drill in and see the tasks that ran and show stats
-* Show the new model that got produced
+* 從瀏覽器中的 Azure DevOps 開始，並顯示組建
+  * 從管線開始
+  * 從開始顯示變更完成後的組建
+  * 醒目提示工作摘要
+  * 查看記錄檔中的「重新建立和提交管線」
+* 切換至 VSCode，並在純 Python 檔案中顯示相同的程式碼
+  * 顯示匯入
+  * 顯示新增的引數
+  * 逐步完成剩餘部分，並與筆記本流程相比較
+* 可視需要在 VSCode 中顯示 YAML 組建定義
+* 切換至 ML UI 並顯示執行的 AML 管線，深入探索並查看執行的工作並顯示統計資料
+* 顯示產生的新模型
 
-## Example Demo
+## <a name="example-demo"></a>範例示範
 
-* [Dry run starting at 24:44](https://youtu.be/UgM8_4fAni8?t=1484)
+* [嘗試從 24:44 開始執行](https://youtu.be/UgM8_4fAni8?t=1484)

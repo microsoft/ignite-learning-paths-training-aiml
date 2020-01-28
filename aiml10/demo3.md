@@ -1,43 +1,43 @@
-## Demo 3 - Creating a Custom Invoice Reader Skill
+## <a name="demo-3---creating-a-custom-invoice-reader-skill"></a>示範 3 - 建立自訂的發票讀取器技能
 
-[![Demo 3](images/demo3.png)](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/videos/Demo3.mp4 "Demo 3")
+[![示範 3](images/demo3.png)](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/videos/Demo3.mp4 "示範 3")
 
-## Summary
-In this exercise we create an Azure Search Skill (in the form of an Azure Function) that takes data from Azure Search and returns a structured json document representing the contents of the pdf Invoice. To get a more in depth treatment of creating an Azure Function please refer to the [docs](https://docs.microsoft.com/en-us/azure/azure-functions/functions-create-first-azure-function-azure-cli?WT.mc_id=msignitethetour2019-github-aiml10). It is assumed that a storage account has been created (as described in the [first demo](demo1.md) as well as the Form Recognizer service created in the [second demo](demo2.md))
-
-
-## What you need
-- [Invoice Test Set](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/data/test.zip) (used to test the Azure Function)
+## <a name="summary"></a>摘要
+在本練習中，我們會建立 Azure 函式形式的 Azure 搜尋服務技能，其會從 Azure 搜尋服務取得資料，並傳回代表 PDF 發票內容的結構化 JSON 文件。 若要深入了解如何建立 Azure 函式，請參閱[文件](https://docs.microsoft.com/en-us/azure/azure-functions/functions-create-first-azure-function-azure-cli?WT.mc_id=msignitethetour2019-github-aiml10)。假設已建立儲存體帳戶 (如[第一個示範](demo1.md)以及[第二個示範](demo2.md)所建立的表單辨識器服務中所述)
 
 
-- [Postman](https://www.getpostman.com/) is used to send requests to the Form Recognizer service REST API. Refer to this [short primer](postman.md) to learn more.
+## <a name="what-you-need"></a>必要條件
+- [發票測試集](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/data/test.zip) (用於測試 Azure 函式)
 
-- Postman Reader Skill Request [collection](src/Collections/Reader_Skill.postman_collection.json).
+
+- [Postman](https://www.getpostman.com/) 用於將要求傳送至表單識別器服務 REST API。 若要深入了解，請參閱此[簡短入門](postman.md)。
+
+- Postman 讀取器技能要求[集合](src/Collections/Reader_Skill.postman_collection.json)。
 
 - [Azure Functions Core Tools](https://docs.microsoft.com/en-us/azure/azure-functions/functions-run-local?WT.mc_id=msignitethetour2019-github-aiml10#v2)
 
-## Azure Resources
-The table below describes the resources created throughout this exercise.
+## <a name="azure-resources"></a>Azure 資源
+下表描述在此練習中建立的所有資源。
 
-| Name                       | Type                            | Purpose                    |
+| 名稱                       | 類型                            | 目的                    |
 | -------------------------- | ------------------------------- | ------------------------- |
-| **readerskillstorage**   | Storage Account              | Storage used for Azure Function |
-| **readerskill**          | Function App                 | Cognitive Skill App |
-| **readerskill**          | App Insights                   | Adds insights to Function App |
-| **EastUS2LinuxDynamicPlan** | App Service Plan                   | Consumption based plan for running Function App (this is created implicitly) |
+| **readerskillstorage**   | 儲存體帳戶              | 用於 Azure 函式的儲存體 |
+| **readerskill**          | 函數應用程式                 | 認知技能應用程式 |
+| **readerskill**          | App Insights                   | 將見解新增至函數應用程式 |
+| **EastUS2LinuxDynamicPlan** | App Service 方案                   | 以耗用量為基礎的函數應用程式執行計畫 (這是以隱含方式建立) |
 
-## What to do
+## <a name="what-to-do"></a>應採取的動作
 
-There are three main steps:
-1. Run the `InvoiceReaderSkill` Azure Function locally
-2. Create resources to support the `InvoiceReaderSkill` Azure Function
-3. Run the `InvoiceReaderSkill` on Azure
+有三個主要步驟：
+1. 在本機執行 `InvoiceReaderSkill` Azure 函式
+2. 建立支援 `InvoiceReaderSkill` Azure 函式的資源
+3. 在 Azure 上執行 `InvoiceReaderSkill`
 
-### Run the Azure Function Locally
+### <a name="run-the-azure-function-locally"></a>在本機執行 Azure 函式
 
-1. Download the [InvoiceReaderSkill](src/InvoiceReaderSkill) code found in this repo in [Visual Studio Code](https://code.visualstudio.com/) (make sure the [Azure Tools](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-node-azure-pack) are installed).
+1. 在 [Visual Studio Code](https://code.visualstudio.com/) 中下載於此存放庫中找到的 [InvoiceReaderSkill](src/InvoiceReaderSkill) 程式碼 (請確定已安裝 [Azure Tools](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-node-azure-pack))。
 
-2. Add a `local.settings.json` file to the folder with the following contents:
+2. 將 `local.settings.json` 檔案新增至具有下列內容的資料夾：
 
 ```json
 {
@@ -51,11 +51,11 @@ There are three main steps:
   }
 }
 ```
-3. Run the `func host start` command to start the function.
+3. 執行 `func host start` 命令以啟動函式。
 
-4. Import the Postman Reader Skill Request [collection](src/Collections/Reader_Skill.postman_collection.json) to Postman
+4. 將 Postman 讀取器技能要求[集合](src/Collections/Reader_Skill.postman_collection.json)匯入 Postman
 
-5. Open the `Local Forms Skills` Request and change the Pre-request script to set the `storageAccount` variable to your storage account (in the video the variable is `ttinvoicestorage`) and the `SASValue` to the appropriate Secure Access Signature to the `train` container. To learn how to get a Secure Access Signature, refer to our [brief explanation](sas.md).
+5. 開啟 `Local Forms Skills` 要求，然後變更預先要求指令碼，將 `storageAccount` 變數設成您的儲存體帳戶 (影片中的變數是 `ttinvoicestorage`)，並將 `SASValue` 設成適用於 `train` 容器的適當安全存取簽章。 若要了解如何取得安全存取簽章，請參閱我們的[簡短說明](sas.md)。
 
 ```javascript
 pm.environment.set('storageAccount', '<YOUR STORAGE ACCOUNT>')
@@ -63,42 +63,42 @@ pm.environment.set('container', 'test')
 pm.environment.set('SASValue', '<SAS>')
 ```
 
-6. Verify that the `POST` uri matches the one for the Azure Function (in our running of it we use `http://localhost:7071/api/AnalyzeInvoice`) and click on Send. You should get a response similar to that below:
+6. 驗證 `POST` URI 是否符合 Azure 函式的 URI (我們執行時用的是 `http://localhost:7071/api/AnalyzeInvoice`)，然後按一下 [傳送]。 您應該會看到如下所示的回應：
 
-![Local Skill](images/local_skill.png "Local Skill")
+![本機技能](images/local_skill.png "本機技能")
 
-### Create Azure Function Resources
+### <a name="create-azure-function-resources"></a>建立 Azure 函式資源
 
-It is assumed that the following commands are run in the same directory as the actual Function and you have logged into the Azure CLI using ```az login```
+假設下列命令在與實際函式相同的目錄中執行
 
-1. Run the following Azure CLI Commands to create the appropriate resources and publish the function:
+1. 執行下列 Azure CLI 命令建立適當的資源，並發佈函式：
 
-Create Function Storage
+建立函式儲存體
 
 ```
 az storage account create --name {FUNCTION_STORAGE} --location {LOCATION} --resource-group {YOUR_RG} --sku Standard_LRS
 ```
 
-Create Function App
+建立函數應用程式
 ```
 az functionapp create --resource-group {YOUR_RG} --consumption-plan-location {LOCATION} --name {FUNCTION_NAME} --storage-account {FUNCTION_STORAGE} --runtime python --os-type linux
 ```
-Publish Function
+發佈函式
 ```
 func azure functionapp publish {FUNCTION_NAME} --build remote
 ```
 
-2. Use Visual Studio Code to sync the local settings to the Azure Function by selecting the Azure button, navigating to the newly created function, right clicking on `Application Settings` and selecting `Upload Local Settings` (NOTE: Do not overwrite the existing variables).
+2. 藉由選取 [Azure] 按鈕，巡覽至新建立的函式，以滑鼠右鍵按一下 `Application Settings` 並選取 `Upload Local Settings`，以使用 Visual Studio Code 同步處理本機設定與 Azure 函式 (注意：請勿覆寫現有的變數)。
 
-![Local Skill](images/upload_settings.png "Local Skill")
+![本機技能](images/upload_settings.png "本機技能")
 
-3. Browse to the newly created Function App in the portal to add Application Insights to the service.
+3. 瀏覽至入口網站中新建立的函數應用程式，將 Application Insights 新增至服務。
 
-![Add App Insights](images/app_insights.png "Add App Insights")
+![新增 App Insights](images/app_insights.png "新增 App Insights")
 
-### Run the Azure Function in the Cloud
+### <a name="run-the-azure-function-in-the-cloud"></a>在雲端執行 Azure 函式
 
-1. Open the `Cloud Forms Skills` Request and change the Pre-request script to set the `storageAccount` variable to your storage account (in the video the variable is `ttinvoicestorage`) and the `SASValue` to the appropriate Secure Access Signature to the `train` container. To learn how to get a Secure Access Signature, refer to our [brief explanation](sas.md).
+1. 開啟 `Cloud Forms Skills` 要求，然後變更預先要求指令碼，將 `storageAccount` 變數設成您的儲存體帳戶 (影片中的變數是 `ttinvoicestorage`)，並將 `SASValue` 設成適用於 `train` 容器的適當安全存取簽章。 若要了解如何取得安全存取簽章，請參閱我們的[簡短說明](sas.md)。
 
 ```javascript
 pm.environment.set('storageAccount', '<YOUR STORAGE ACCOUNT>')
@@ -106,9 +106,9 @@ pm.environment.set('container', 'test')
 pm.environment.set('SASValue', '<SAS>')
 ```
 
-2. Verify that the `POST` uri matches the one for the Azure Function (should look something like `https://<YOUR_ENDPOINT>.azurewebsites.net/api/AnalyzeInvoice`) and click on Send. You should get a response similar to that below:
+2. 驗證 `POST` URI 是否符合 Azure 函式的 URI (看起來應像 `https://<YOUR_ENDPOINT>.azurewebsites.net/api/AnalyzeInvoice`)，然後按一下 [傳送]。 您應該會看到如下所示的回應：
 
-![Cloud Skill](images/local_skill.png "Cloud Skill")
+![雲端技能](images/local_skill.png "雲端技能")
 
-# Next Demo
-Learn how to tie everything together and finally build the end to end solution by continuing on to [Demo 4 - Tying it all together](demo4.md)
+# <a name="next-demo"></a>下一個示範
+繼續[示範 4 - 全部整合](demo4.md)，了解如何結合所有項目，最後建置端對端解決方案

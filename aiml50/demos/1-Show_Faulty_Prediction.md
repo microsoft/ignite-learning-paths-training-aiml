@@ -1,24 +1,24 @@
-# Show Faulty Prediction and Make a Change
+# <a name="show-faulty-prediction-and-make-a-change"></a>顯示錯誤的預測並予以變更
 
-> 💡 You must have completed the [setup](../DEMO.md) before attempting to do the demo.
+> 💡 您必須先完成[設定](../DEMO.md)，才能嘗試執行示範。
 
-## Show the Faulty Prediction
+## <a name="show-the-faulty-prediction"></a>顯示錯誤的預測
 
-* Navigate to the Tailwind Traders website
-    * https://aiml50{eventname}.azurewebsites.net (replace {eventname} with the event name parameter you used to create the demo environment)
+* 巡覽至 Tailwind Traders 網站
+    * https://aiml50{eventname}.azurewebsites.net (以您用來建立示範環境的活動名稱參數取代 {活動名稱})
 
-* Click on `start smart shopping by uploading a photo`
-* Upload an image from the [test images folder](../source/test-images)
-* The model provides an incorrect prediction.
+* 按一下 `start smart shopping by uploading a photo`
+* 從 [test images 資料夾](../source/test-images)上傳影像
+* 此模型提供的預測不正確。
 
-## Start the Change
+## <a name="start-the-change"></a>開始變更
 
-* Adjust the model by changing `setup_pipeline.py`
-  * Lines 162 - Change `epochs` to 20
-  * Lines 163 - Change `batch` to 10
-* Commit the change and push to master.  This will trigger a build and deployment of the model.  This process will take about 25 or 30 minutes, which should finish up towards the end of the talk.
-* We'll come back and check the results of this towards the end of talk
+* 變更 `setup_pipeline.py` 以調整模型
+  * 162 行 - 將 `epochs` 變更為 20
+  * 163 行 - 將 `batch` 變更為 10
+* 認可變更並推送至主機。  這會觸發建置和部署模型。  此程序約需 25 或 30 分鐘，報告結束時應該會完成。
+* 我們會在報告結束時，回頭檢查這項結果
 
-## Example Demo
+## <a name="example-demo"></a>範例示範
 
-* [Dry run starting at 2:36](https://youtu.be/UgM8_4fAni8?t=158)
+* [嘗試從 2:36 開始執行](https://youtu.be/UgM8_4fAni8?t=158)

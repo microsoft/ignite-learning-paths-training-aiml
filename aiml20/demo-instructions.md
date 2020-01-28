@@ -1,66 +1,57 @@
-# Demo Instructions for Presenters
+# <a name="demo-instructions-for-presenters"></a>簡報者的示範指示
 
-Demo scripts are made available to everyone in this repo.
+此存放庫中的每個人皆可使用示範腳本。
 
-You should follow the same scripts for the presentations, but with the additional
-notes given below.
+您的簡報應該遵循相同腳本，但有以下提供的其他注意事項。
 
-Recordings of demos are also available as videos in the [PPT
-Slides](presentations.md) (and also some additional videos linked below). You
-can use the embedded videos instead of a live demo in the case of lack of
-internet or other technical issues. (In this case, we recommend muting the audio
-and speaking to the video yourself.) [Speaker notes](speaker-notes.md) are timed
-to the events in the embedded videos.
+示範的錄影也提供為 [PPT 投影片](presentations.md)格式的影片 (以下也有一些其他影片的連結)。 在缺少網際網路或有其他技術問題的情況下，您可以使用內嵌的影片，而非實況示範。 (在此情況下，我們建議您自行將音訊靜音，並對著影片演講。)[演講者附註](speaker-notes.md)是針對內嵌影片中的事件計時。
 
-## DEMO Setup
+## <a name="demo-setup"></a>示範設定
 
-Before your presentation, run all of the instructions in the script below.
+在簡報之前，請執行以下腳本中的所有指示。
 
-[Demo script](DEMO%20Setup.md)
+[示範腳本](DEMO%20Setup.md)
 
-## DEMO Computer Vision
+## <a name="demo-computer-vision"></a>示範電腦視覺
 
-[Demo script](DEMO%20Computer%20Vision.md)
+[示範腳本](DEMO%20Computer%20Vision.md)
 
-### SLIDE: DEMO / shop by photo
+### <a name="slide-demo--shop-by-photo"></a>投影片：示範/依相片購物
 
-Note the actual instructions for this demo are [here](DEMO%20ONNX%20deployment.md#defining-the-problem-shop-by-photo-doesnt-work-right).
+請注意，此示範的實際指示在[這裡](DEMO%20ONNX%20deployment.md#defining-the-problem-shop-by-photo-doesnt-work-right)。
 
-Additional demo video: https://www.dropbox.com/s/ylxjuifg9x0h4n3/ITT-aiml20-demo1.mp4?dl=0 
+其他示範影片： https://www.dropbox.com/s/ylxjuifg9x0h4n3/ITT-aiml20-demo1.mp4?dl=0 
 
-### SLIDE: DEMO / cognitive services computer vision
+### <a name="slide-demo--cognitive-services-computer-vision"></a>投影片：示範/認知服務電腦視覺
 
-[Demo script](DEMO%20Computer%20Vision.md#using-computer-vision-via-the-web-interface)
+[示範腳本](DEMO%20Computer%20Vision.md#using-computer-vision-via-the-web-interface)
 
-## DEMO Custom Vision
+## <a name="demo-custom-vision"></a>示範自訂視覺
 
-[Demo script](DEMO%20Custom%20Vision.md)
+[示範腳本](DEMO%20Custom%20Vision.md)
 
-Do the first part of the demo ahead of time.
+請事先進行示範的第一個部分。
 
-### SLIDE: DEMO / Customized object recognition
+### <a name="slide-demo--customized-object-recognition"></a>投影片：示範/自訂物件辨識
 
-Start the live demo at "[Add images and train a model](DEMO%20Custom%20Vision.md#add-images-and-train-a-model)".
+在[新增影像並將模型定型](DEMO%20Custom%20Vision.md#add-images-and-train-a-model)處開始即時示範。
 
-## DEMO ONNX Deployment
+## <a name="demo-onnx-deployment"></a>示範 ONNX 部署
 
-[Demo Script](DEMO%20ONNX%20deployment.md)
+[示範腳本](DEMO%20ONNX%20deployment.md)
 
-Run the section "[Load the simple ONNX model](DEMO%20ONNX%20deployment.md#load-the-simple-onnx-model)" ahead of time.
+事先執行＜[載入簡單的 ONNX 模型](DEMO%20ONNX%20deployment.md#load-the-simple-onnx-model)＞一節。
 
-You did the section "[Defining the problem](DEMO%20ONNX%20deployment.md#defining-the-problem-shop-by-photo-doesnt-work-right)" at the beginning of the presentation, so skip that.
+您已在簡報開始時進行了＜[定義問題](DEMO%20ONNX%20deployment.md#defining-the-problem-shop-by-photo-doesnt-work-right)＞一節，因此請略過。
 
-### SLIDE: DEMO / ONNX
+### <a name="slide-demo--onnx"></a>投影片：示範/ONNX
 
-Start the live demo at "Update the ONNX model in the Tailwind Traders website".
+在「更新 Tailwind Traders 網站中的 ONNX 模型」開始實況示範。
 
-For viewing in Netron, you can view the file you exported from Custom Vision
-directly, or you can use the pre-prepared one from the repo at `ONNX/custom model/products.onnx`
+若要在 Netron 中進行檢視，您可以檢視直接從自訂視覺匯出的檔案，也可以使用存放庫中預先準備的檔案，其位置在 `ONNX/custom model/products.onnx`
 
-Note that when you deploy the file it **must** be called `products.onnx`, so
-it's easiest to take the pre-prepared file by that name from your desktop,
-rather than re-naming the exported file.
+請注意，當您部署檔案時，它**必須**稱為 `products.onnx`，因此最好是從桌面取得該名稱的預先準備檔案，而不要重新命名已匯出的檔案。
 
-### SLIDE: DEMO / Personalizer
+### <a name="slide-demo--personalizer"></a>投影片：示範/個人化工具
 
-[Demo script](DEMO%20Personalizer.md)
+[示範腳本](DEMO%20Personalizer.md)

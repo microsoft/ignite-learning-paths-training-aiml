@@ -1,45 +1,39 @@
-# AIML20: Notes for Presenters
+# <a name="aiml20-notes-for-presenters"></a>AIML20：簡報者的備忘稿
 
-Welcome, Presenter! 
+歡迎，簡報者！ 
 
-We're glad you are here and look forward to your delivery of this amazing
-content. As an experienced presenter, we know you know HOW to present so this
-guide will focus on WHAT you need to present. It will provide you a full
-run-through of the presentation created by the presentation design team. 
+很高興您的到來，我們期待您傳遞這份精彩的內容。 身為有經驗的簡報者，我們知道您清楚「如何」進行簡報，因此本指南將著重於您需要簡報的「內容」。 為您提供由簡報設計小組建立的完整簡報流程。 
 
-Along with the video of the presentation, this document will link to all the
-assets you need to successfully present including PowerPoint slides and demo
-instructions & code.
+除了簡報的影片，這份文件也連結到您完成簡報所需的所有資產，包括 PowerPoint 投影片和示範指示與程式碼。
 
-1.  Read document in its entirety.
-2.  Watch the video presentation
-3.  Ask questions of the Lead Presenter
+1.  請完整閱讀整份文件。
+2.  觀看影片簡報
+3.  向簡報者提出問題
 
-## Assets in Train-The-Trainer kit
+## <a name="assets-in-train-the-trainer-kit"></a>訓練人員套件中的資產
 
-- This guide
-- [PowerPoint presentation](presentations.md). Includes embedded demo videos and complete talk track in notes.
-- [Speaker script](speaker-notes.md) as a single file (also in PPT notes)
-- [Speaker bullet points](speaker-notes-bullets.md), for those that prefer to ad-lib to bullet points
-- [Demo Instructions](README.md#Demonstrations) and [Demo notes for presenters](demo-instructions.md)
-- [Recording of this presentation](https://myignite.techcommunity.microsoft.com/sessions/82987?source=sessions)
-from Microsoft Ignite Orlando, November 7 2019.
-- [Full-length rehearsal of presentation](https://youtu.be/jRO-5g-HYuU) 
+- 本指南
+- [PowerPoint 簡報](presentations.md)。 包含備忘稿中的內嵌示範影片和完整談話音軌。
+- 單一檔案形式的[演講者底稿](speaker-notes.md) (也位於 PPT 備忘稿中)
+- [演講者項目符號要點](speaker-notes-bullets.md)適用於偏好使用項目符號要點來進行即興演說的演講者
+- [示範指示](README.md#Demonstrations)和[簡報者的示範備忘稿](demo-instructions.md)
+- 2019 年 11 月 7 日 Microsoft Ignite 奧蘭多的[此簡報記錄](https://myignite.techcommunity.microsoft.com/sessions/82987?source=sessions)。
+- [簡報的完整長度排練](https://youtu.be/jRO-5g-HYuU) 
 
-## Become a Trained Presenter
+## <a name="become-a-trained-presenter"></a>成為經訓練的簡報者
 
-To become a trained presenter, contact [scalablecontent@microsoft.com](mailto:scalablecontent@microsoft.com). In your email please include:
+若要成為經訓練的簡報者，請連絡 [scalablecontent@microsoft.com](mailto:scalablecontent@microsoft.com)。 請在您的電子郵件中加入以下內容：
 
-- Complete name:
-- The code of this presentation: AIML20
-- Link (ex: unlisted YouTube video) to a video of you presenting (~10 minutes). 
-  > It doesn't need to be this content, the important is to show your presenter skills
+- 完整名稱：
+- 這份簡報的代碼：AIML20
+- 您的簡報影片 (長度在 10 分鐘以內) 連結 (例如：未列出的 YouTube 影片)。 
+  > 不一定要用此內容的影片，重點是展現您的簡報者技能
 
-A mentor will get back to you with the information on the process.
+顧問會帶您了解流程的相關資訊。
 
-## Trained Presenters
+## <a name="trained-presenters"></a>經訓練的簡報者
 
-Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+感謝這些很棒的人員 ([表情符號](https://allcontributors.org/docs/en/emoji-key))：
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore -->
@@ -49,19 +43,19 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="">
         <img src="https://avatars0.githubusercontent.com/u/152948?s=460&v=4" width="100px;" alt="David Smith"/><br />
         <sub><b>David Smith</b></sub></a><br />
-            <a href="https://github.com/microsoft/ignite-learning-paths-training-aiml/commits/master?author=revodavid" title="talk">📢</a>
-            <a href="https://github.com/microsoft/ignite-learning-paths-training-aiml/commits/master?author=revodavid" title="Documentation">📖</a> 
+            <a href="https://github.com/microsoft/ignite-learning-paths-training-aiml/commits/master?author=revodavid" title="討論">📢</a>
+            <a href="https://github.com/microsoft/ignite-learning-paths-training-aiml/commits/master?author=revodavid" title="文件">📖</a> 
     </td>
     <td align="center"><a href="">
         <img src="https://avatars2.githubusercontent.com/u/4598064?s=460&v=4" width="100px;" alt="Chris Noring"/><br />
         <sub><b>Chris Noring</b></sub></a><br />
-            <a href="https://github.com/microsoft/ignite-learning-paths-training-aiml/commits/master" title="talk">🎨</a>
-            <a href="https://github.com/microsoft/ignite-learning-paths-training-aiml/commits/master" title="design">📖</a> 
+            <a href="https://github.com/microsoft/ignite-learning-paths-training-aiml/commits/master" title="討論">🎨</a>
+            <a href="https://github.com/microsoft/ignite-learning-paths-training-aiml/commits/master" title="設計">📖</a> 
     </td>
 </tr></table>
 
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
-## Feedback Loop
+## <a name="feedback-loop"></a>意見反應迴圈
 
-Do you have a comment, feedback, suggestion? The best feedback loop for content changes/suggestions/feedback is to create a new issue on this GitHub repository. To get all the details about how to create an issue please refer to the [Contributing docs](../CONTRIBUTING.md)
+您是否有註解、意見反應或建議？ 內容變更、建議、意見反應的最佳意見反應迴圈，是在此 GitHub 存放庫上建立新的問題。 若要取得如何建立問題的所有詳細資料，請參閱[參與文件](../CONTRIBUTING.md)

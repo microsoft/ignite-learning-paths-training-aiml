@@ -1,33 +1,31 @@
-Bulk Bing Image Downloader
+<a name="bulk-bing-image-downloader"></a>大量 Bing 影像下載程式
 ==========================
-*Bulk Bing Image Downloader (BBID)* is downloader which:
-- downloads full-size images from bing image search results
-- is asynchronous -> downloads images super fast
-- is crossplatform
-- bypasses bing API
-- has option to disable adult content filtering
-- is written in python 3.
-- uses SSL connection
+*大量 Bing 影像下載程式 (BBID)* 這個下載程式會：
+- 從 Bing 影像搜尋結果下載完整大小的影像
+- 非同步 -> 下載影像非常快速
+- 跨平台
+- 略過 Bing API
+- 有停用成人內容篩選的選項
+- 以 python 3 撰寫。
+- 使用 SSL 連線
 
-### Usage
+### <a name="usage"></a>使用狀況
 ```
 bbid.py [-h] [-s SEARCH_STRING] [-f SEARCH_FILE] [-o OUTPUT]
                [--adult-filter-on] [--adult-filter-off] [--filters FILTERS]
                [--limit LIMIT]
 
 ```
-### Example
+### <a name="example"></a>範例
 `./bbid.py -s "hello world"`
 
-### Advanced filtering
-You might want to apply some of Bing's filters, such as filter by license, image size, etc.
-BBID doesn't expose to you nice, human readable variants of those, but allows you to utilize all filters exposed by Bing website.
-All you need to do is apply filters you want via Bing website and copy them from URL. They are located after `&qft=` and before `&`.
+### <a name="advanced-filtering"></a>進階篩選
+您可能想要套用一些 Bing 的篩選條件，例如依授權、影像大小等篩選。BBID 並不會向您呈現人類看得懂的不錯變化，但可讓您利用 Bing 網站所公開的所有篩選條件。
+您只需要透過 Bing 網站套用想要的篩選條件，然後從 URL 複製即可。 它們位於 `&qft=` 之後和 `&` 之前。
 
-For example, when you search for `code` and apply filters `past week` and image size `large`, URL you will see will be
-`http://www.bing.com/images/search?sp=-1&pq=code&sc=0-0&sk=&cvid=39A810C4AF314AB6A5A923F4FB6E5282&q=code&qft=+filterui:age-lt10080+filterui:imagesize-large&FORM=IRFLTR`
+例如，當您搜尋 `code` 並套用篩選條件 `past week` 和影像大小 `large` 時，您看到的 URL 會是 `http://www.bing.com/images/search?sp=-1&pq=code&sc=0-0&sk=&cvid=39A810C4AF314AB6A5A923F4FB6E5282&q=code&qft=+filterui:age-lt10080+filterui:imagesize-large&FORM=IRFLTR`
 
-Filters string you want to extract from this URL is `+filterui:age-lt10080+filterui:imagesize-large`. You can then apply them in BBID with --filters, e.g.
+您想要從這個 URL 擷取的篩選條件字串是 `+filterui:age-lt10080+filterui:imagesize-large`。 然後，您可以使用例如 --filters，在 BBID 中套用。
 ```
 ./bbid.py -s code --filters +filterui:age-lt10080+filterui:imagesize-large
 ```

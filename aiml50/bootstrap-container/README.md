@@ -1,38 +1,38 @@
-# Bootstrap Container
+# <a name="bootstrap-container"></a>啟動容器
 
-This container image helps fill gaps in the provisioning process.
+此容器映像可協助填滿佈建流程中的間隙。
 
-## Contents
+## <a name="contents"></a>內容
 
-Based on the PowerShell Core container
+以 PowerShell Core 容器為基礎
 
-Software:
+軟體：
 
 * Curl
 * Wget
 * Azure CLI
-* Azure DevOps extension to the Az CLI
+* Az CLI 的 Azure DevOps 延伸模組
 * AzCopy
-* VSTeam PowerShell module (and supporting modules)
+* VSTeam PowerShell 模組 (即其支援模組)
 
-Content files:
+內容檔案：
 
-* ReleaseSeer.json - Azure DevOps Release template
-* Images - training images and product images for the website (pulled from the event CDN at container build time)
+* ReleaseSeer.json - Azure DevOps 發行範本
+* 影像 - 網站的訓練影像和產品影像 (在容器建置時從活動 CDN 提取)
 
-## Bootstrap process
+## <a name="bootstrap-process"></a>啟動流程
 
-The container starts a PowerShell script that (in this order):
+容器會啟動 PowerShell 指令碼。該指令碼會按照以下順序執行操作：
 
-* Verifies or creates a project named `AIML50` in the targeted Azure DevOps organization.
-* Verifies or adds the `ms-air-aiagility/vss-services-azureml` extension to the organization
-* Verifies or creates an artifact feed called `SeerPackages`
-* Verifies or creates a variable group called `aiml50-demo`
-* Verifies or imports the ReleaseSeer release definition
-* Copies the image files out to the Azure storage created by the deployment template
-* Begins to poll for the Tailwind Traders site to be up and running. (Polls every 10 seconds.)
-  * This polling will, once the site is running, trigger the scaffolding of the database project, allowing the next step to proceed.
-* Connect to the Azure SQL Database to insert a record for a wrench (Attempts up to 5 times with 120 sleep in between attempts)
-  * Checks for an existing ID number and inserts if missing.
+* 在目標 Azure DevOps 組織中驗證或建立名為 `AIML50` 的專案。
+* 驗證或將 `ms-air-aiagility/vss-services-azureml` 延伸模組新增至組織
+* 驗證或建立稱為 `SeerPackages` 的成品摘要
+* 驗證或建立稱為 `aiml50-demo` 的變數群組
+* 驗證或匯入 ReleaseSeer 版本定義
+* 將影像檔案複製到部署範本所建立的 Azure 儲存體
+* 開始輪詢 Tailwind Traders 網站，使其上線及執行。 (每 10 秒輪詢一次。)
+  * 一旦網站開始執行，此輪詢會觸發資料庫專案的 Scaffolding，允許繼續進行下一個步驟。
+* 連線到 Azure SQL Database，以插入扳手的記錄 (嘗試最多 5 次，每一次嘗試間隔 120 次睡眠)
+  * 檢查現有的識別碼，並在缺少時插入。
 
-If the bootstrap container fails to run, it should be able to re-run without affecting already configured parts.
+如果啟動容器無法執行，啟動容器應該能重新執行，而不會影響已設定的部分。

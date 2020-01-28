@@ -2,14 +2,14 @@
 This is a machine generated file, and should not be edited, as it will be overwritten with future updates.
 -->
 
-# AIML10 Presentation Files
+# <a name="aiml10-presentation-files"></a>AIML10 簡報檔案
 
-- [aiml10.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/aiml10.pptx) (Updated: Nov 15, 2019)
-- [aiml10.ja-jp.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/aiml10.ja-jp.pptx) (Updated: Dec 09, 2019)
-- [aiml10.zh-cn.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/aiml10.zh-cn.pptx) (Updated: Dec 03, 2019)
-- [aiml10.pt-br.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/aiml10.pt-br.pptx) (Updated: Dec 03, 2019)
+- [aiml10.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/aiml10.pptx) (更新日期：2019 年 11 月 15 日)
+- [aiml10.ja-jp.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/aiml10.ja-jp.pptx) (更新日期：2019 年 12 月 09 日)
+- [aiml10.zh-cn.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/aiml10.zh-cn.pptx) (更新日期：2019 年 12 月 03 日)
+- [aiml10.pt-br.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/aiml10.pt-br.pptx) (更新日期：2019 年 12 月 03 日)
 ---
-## Historical Files
+## <a name="historical-files"></a>歷程記錄檔
 - [aiml10-2019-10_Oct-24.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/aiml10-2019-10_Oct-24.pptx)
 - [aiml10-2019-11_Nov-04.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/aiml10-2019-11_Nov-04.pptx)
 - [aiml10-2019-11_Nov-13.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/aiml10-2019-11_Nov-13.pptx)

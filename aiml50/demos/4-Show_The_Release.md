@@ -1,24 +1,23 @@
-# Show the Release Process
+# <a name="show-the-release-process"></a>顯示版本發行流程
 
-> 💡 You must have completed the [setup](../DEMO.md) before attempting to do the demo.
+> 💡 您必須先完成[設定](../DEMO.md)，才能嘗試執行示範。
 
-## Automating the Manual Process
+## <a name="automating-the-manual-process"></a>自動化手動程序
 
-Talking Points:
+報告要點：
 
-* So with those points in mind, let’s look at the build definition:
-* Rather than doing it in Jupyter Notebooks (like last demo), let’s make it just the code
+* 請將這些要點牢記在心，再來看看組建定義：
+* 與其在 Jupyter Notebook 中執行 (如上一個示範)，不如讓組建變成程式碼
 
-Demo :
+示範：
 
-* Let’s look at the Release:
-  * Show the Release Definition
-  * Show the extension for Azure DevOps and that it adds a new artifact type you can set CD on
-  * Show the important task – deploying to ACI (expand Deployment Options)
-  * Explain that if we wanted to (and we should), we can clone that stage, and maybe deploy to AKS or a different location. We can add gates or manual approvals or gradual rollouts.
-* Now we’ve deployed, let’s look at the results:
-  *Try uploading the same images again and see that the results are different. A little better, but not perfect – maybe we want to do some more training before releasing this into the wild.
+* 我們來看看這個發行版本：
+  * 顯示版本發行定義
+  * 顯示 Azure DevOps 的延伸模組，以及其所新增讓您可以設定 CD 的新成品類型
+  * 顯示重要工作 – 部署至 ACI (展開部署選項)
+  * 說明如果我們想要 (且應該如此做)，就可以複製該階段，且可能會部署到 AKS 或不同位置。 我們可以新增閘道，或是手動核准或逐步推出。
+* 部署完成後，讓我們看看結果：*嘗試再次上傳相同的影像，並查看結果是否不同。 結果稍微好一點，但不夠完美 – 或許可以多做一些訓練，再對外發行。
 
-## Example Demo
+## <a name="example-demo"></a>範例示範
 
-* [Dry run starting at 24:44](https://youtu.be/UgM8_4fAni8?t=1951)
+* [嘗試從 24:44 開始執行](https://youtu.be/UgM8_4fAni8?t=1951)

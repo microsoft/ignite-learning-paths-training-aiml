@@ -1,36 +1,36 @@
-# InvoiceReaderSkill
-How to publish:
+# <a name="invoicereaderskill"></a>InvoiceReaderSkill
+如何發佈：
 ```
 func azure functionapp publish <FUNCAPP> --build remote
 ```
 
-# Some fun search filters
-Orders with ItemId 49
+# <a name="some-fun-search-filters"></a>一些有趣的搜尋篩選條件
+ItemId 為 49 的訂單
 ```
 *&$filter=invoice/lineItems/any(lineItems: lineItems/itemId eq 49)
 ```
 
-invoiceId is 12179
+invoiceId 為 12179
 ```
 *&$filter=invoice/invoiceId eq 12179
 ```
 
-companies in Australia
+澳洲的公司
 ```
 *&$filter=invoice/company/country eq 'Australia'
 ```
 
-companies in the UK (with a count)
+英國的公司 (包含計數)
 ```
 *&$count=true&$filter=invoice/company/country eq 'United Kingdom'
 ```
 
-only retrieve invoices
+只擷取發票
 ```
 *&$select=invoice&$count=true
 ```
 
-people in Germany
+位於德國的人員
 ```
 *&$count=true&$select=invoice/person&$filter=invoice/person/country eq 'Germany'
 ```

@@ -1,9 +1,9 @@
-# Microsoft Open Source Code of Conduct
+# <a name="microsoft-open-source-code-of-conduct"></a>Microsoft Open Source Code of Conduct (Microsoft 開放原始碼管理辦法)
 
-This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/).
+此專案已採用 [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/) (Microsoft 開放原始碼管理辦法)。
 
-Resources:
+資源：
 
-- [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/)
-- [Microsoft Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/)
-- Contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with questions or concerns
+- [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/) (Microsoft 開放原始碼管理辦法)
+- [Microsoft Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) (Microsoft 管理辦法常見問題集)
+- 如有問題或疑慮，請連絡 [opencode@microsoft.com](mailto:opencode@microsoft.com)

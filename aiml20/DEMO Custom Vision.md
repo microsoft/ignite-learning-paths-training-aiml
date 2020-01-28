@@ -1,82 +1,69 @@
-# DEMO: Custom Vision
+# <a name="demo-custom-vision"></a>示範：自訂視覺
 
-> 💡 You must have completed the [setup](https://github.com/microsoft/ignite-learning-paths-training-aiml/blob/master/aiml20/DEMO%20Setup.md) before attempting to do the demo.
+> 💡 您必須先完成[設定](https://github.com/microsoft/ignite-learning-paths-training-aiml/blob/master/aiml20/DEMO%20Setup.md)，才能嘗試進行此示範。
 
-In this demo, we create a custom vision model using the service at
-customvision.ai.
+在此示範中，我們會使用 customvision.ai 的服務來建立自訂視覺模型。
 
-## Create a custom model project with Custom Vision
+## <a name="create-a-custom-model-project-with-custom-vision"></a>建立具有自訂視覺的自訂模型專案
 
-TIP: You can do this section ahead of time, to save time in a live demo.
+提示：您可以提前執行本節來節省即時示範的時間。
 
-1. Sign into [Custom Vision](https://customvision.ai) and create a new project.
-   [Follow the instructions
-   here](https://docs.microsoft.com/azure/cognitive-services/custom-vision-service/getting-started-build-a-classifier?WT.mc_id=msignitethetour2019-github-aiml20).
+1. 登入[自訂視覺](https://customvision.ai)並建立新的專案。
+   [遵循這裡的指示進行](https://docs.microsoft.com/azure/cognitive-services/custom-vision-service/getting-started-build-a-classifier?WT.mc_id=msignitethetour2019-github-aiml20)。
 
-1. Your new project should have the following settings:
+1. 新專案應具有下列設定：
 
-    - Name: Tools
-    - Description: Products sold by Tailwind   Traders
-    - Resource: aiml20-cs-resource
-    - Project Type: classification
-    - Classification Types: Multiclass
-    - Domains: Retail (compact)
-    - Export capabilities: Basic Platforms
+    - 名稱：工具
+    - 描述：Tailwind Traders 銷售的產品
+    - 資源：aiml20-cs-resource
+    - 專案類型：分類
+    - 分類類型：多元分類
+    - 領域：零售 (精簡)
+    - 匯出功能：基本平台
 
-1. In the "Tags" tool in the left side, use the "+" button to add the following tags:
+1. 在左側的 [標記] 工具中，使用 [+] 按鈕來新增下列標記：
 
-    - drill
-    - hammer
-    - pliers
-    - screwdriver
+    - 電鑽
+    - 鐵鎚
+    - 鉗子
+    - 螺絲起子
 
-1. We will now add images for each tag from the corresponding folder in "CV Training Images". Here's how to do it for "drill"
+1. 我們現在會從 [CV Training Images] 的對應資料夾，新增每個標記的影像。 以下說明如何針對「電鑽」執行此作業
 
-    - Click "Add Images" in the top row
-    - Browse to CV Training Images / drills
-    - Select all files: click one file, then press Control-A
-    - Click Open
-    - In the "Image Upload" dialog that appears next, select "drill" in "My Tags" and then click "Upload 16 Files"
-    - repeat this process for the tags: hammer, pliers, screwdriver (we will do "hard hat" later)
+    - 按一下頂端列中的 [新增影像]
+    - 瀏覽至 CV Training Images/drills
+    - 選取所有檔案：按一下一個檔案，然後按 Control-A
+    - 按一下 [開啟]
+    - 在接下來出現的 [影像上傳] 對話方塊中，選取 [我的標記] 中的 [電鑽]，然後按一下 [上傳 16 個檔案]
+    - 針對下列標記重複此程序：鐵鎚、鉗子、螺絲起子 (稍後會處理 [安全帽])
 
-## Add images and train a model
+## <a name="add-images-and-train-a-model"></a>新增影像並定型模型
 
-At Ignite Tour, the prior steps were all done ahead of time in preparation. Only
-the remaining steps were done live, to save time.
+在 Ignite Tour，先前的步驟全部都會在準備時提前完成。 只有其餘步驟會即時執行，以節省時間。
 
-1. If you haven't already, sign into customvision.ai and open your "tools" project.
+1. 如果您還沒有這麼做，請登入 customvision.ai 並開啟「工具」專案。
 
-1. This project has already been provided with images of drills, hammers, pliers, and screwdrivers. Let's add some images of hard hats as well.
+1. 已為此專案提供電鑽、鐵鎚、鉗子和螺絲起子的影像。 讓我們也新增一些安全帽的影像。
 
-- Click "Add Images" in the top row
-- Browse to CV Training Images / drills
-- Select all files: click one file, then press Control-A
-- Click Open
-- In the "Image Upload" dialog that appears next, select "hard hat" in "My Tags" and then click "Upload 16 Files"
+- 按一下頂端列中的 [新增影像]
+- 瀏覽至 CV Training Images/drills
+- 選取所有檔案：按一下一個檔案，然後按 Control-A
+- 按一下 [開啟]
+- 在接下來出現的 [影像上傳] 對話方塊中，選取 [我的標記] 中的 [安全帽]，然後按一下 [上傳 16 個檔案]
 
-1. Click "Performance" in the top menu bar, and then click the green "Train" button. Choose "Quick Training" and then click "Train"
+1. 按一下頂端功能表列中的 [效能]，然後按一下綠色的 [定型] 按鈕。 選擇 [Quick Training] \(快速定型\)，然後按一下 [定型]
 
-1. Click on the most recent iteration in the left pane to see the results. You
-   should have 90.9% Precision (how many of our training images does the model
-   predict correctly?), 88.2% Recall (when we generate a prediction, is it
-   correct?), and 98.7% AP (overall measure). Note that these depend on the
-   probability threshold -- make this low if you want to avoid false positives.
-   For our retail app, it's safe to make it high.
+1. 按一下左窗格中的最近反覆項目，以查看結果。 您應該有 90.9% 精確度 (模型正確預測多少定型影像)、88.2% 重新叫用 (當我們產生預測時是否正確)，以及 98.7% AP (整體量值)。 請注意，這取決於機率閾值 -- 如果您想要避免誤判，請將此值設低。
+   針對我們的零售應用程式，您可以放心地將其設高。
 
-1. Test out the model with a new picture. Click "Quick Test" and "Browse Local
-   Files", and then choose "test images / man in hardhat.jpg". See that it
-   identifies as a hard hat with 99.9% probability. Try the same with "test images / drill.jpg", which is also identified correctly.
+1. 使用新圖片測試模型。 按一下 [快速測試] 和 [瀏覽本機檔案]，然後選擇 [test images/man in hardhat.jpg]。 發現識別為安全帽的機率有 99.9%。 使用 [test images/drill.jpg] 嘗試相同作業，也會正確識別。
 
-Now we will save the model in the ONNX format for integration into the Tailwind
-Traders app.
+現在，我們會以 ONNX 格式儲存模型，以便整合到 Tailwind Traders 應用程式中。
 
-1. Click Export, and choose "ONNX". Note the other platform-specific formats
-   available as well.
+1. 按一下 [匯出]，然後選擇 [ONNX]。 請注意，還有其他平台特定的格式可供使用。
 
-1. Select the version ONNX 1.2, and then click Export. The TWT app expects a
-   file called products.onnx, so we'll use the one that's already saved in the
-   repo.
+1. 選取版本 ONNX 1.2，然後按一下 [匯出]。 TWT 應用程式需要稱為 products.onnx 的檔案，因此我們將使用已儲存在存放庫中的檔案。
 
-## Next Step
+## <a name="next-step"></a>後續步驟
 
-[ONNX Deployment](DEMO%20ONNX%20deployment.md)
+[ONNX 部署](DEMO%20ONNX%20deployment.md)

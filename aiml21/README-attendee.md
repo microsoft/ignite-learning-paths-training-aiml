@@ -1,181 +1,181 @@
-# Developers Guide to AI: A Data Story
+# <a name="developers-guide-to-ai-a-data-story"></a>AI 開發人員指南：資料案例
 
-In this theatre session we will show the data science process and how to apply it. From exploration of datasets to deployment of services - all applied to an interesting data story. This will also take you on a very brief tour of the Azure AI Platform.
+在這個講堂式課程中，我們將示範資料科學程序，以及如何加以套用。 從探索資料集到部署服務 - 全都適用於一個有趣的資料案例。 這也會帶您簡單地導覽 Azure AI 平台。
 
-# Demo Environment Deployment
+# <a name="demo-environment-deployment"></a>示範環境部署
 
-Please download all the code and data files in this repository to get started. There is a code and data folder which will contain all information you need to run all demos
+請下載此存放庫中的所有程式碼和資料檔案，以便開始使用。 有一個程式碼和資料的資料夾，其中包含執行所有示範需要的全部資訊
 
-**You will need:**
-* Azure Subscription - get a [free trial here](https://azure.microsoft.com/en-gb/free/?WT.mc_id=msignitethetour2019-github-aiml21) if you need it
-* [Power BI Desktop (Windows Only)](https://powerbi.microsoft.com/en-us/desktop/?WT.mc_id=msignitethetour2019-github-aiml21) - if you are running on MacOS/Linux you can still demo the functionality from any modern web browser
+**您將需要：**
+* Azure 訂用帳戶 - 視需要在[這裡取得免費試用](https://azure.microsoft.com/en-gb/free/?WT.mc_id=msignitethetour2019-github-aiml21)
+* [Power BI Desktop (僅限 Windows)](https://powerbi.microsoft.com/en-us/desktop/?WT.mc_id=msignitethetour2019-github-aiml21) - 如果您在 MacOS/Linux 上執行，則仍然可以從任何新式網頁瀏覽器示範功能
 
-**Setup Instructions:**
-* Use the **Deploy to Azure button** below to create your Azure Machine Learning workspace
+**設定指示：**
+* 使用下面的 [部署至 Azure]  按鈕來建立 Azure Machine Learning 工作區
 
-[![Deploy to Azure](https://azuredeploy.net/deploybutton.png)](https://azuredeploy.net/)
+[![部署至 Azure](https://azuredeploy.net/deploybutton.png)](https://azuredeploy.net/)
 
-* Log into the Azure Portal and your Azure Machine Learning Service
-* Choose to Upgrade the workspace to the **Enterprise edition (Preview)** [see more information on current pricing here](https://azure.microsoft.com/en-us/pricing/details/machine-learning/) - you will need enterprise edition to complete the experiment demo (demo 2)
-* Launch the **Preview UI**
-* Create a **Notebook VM**
-    * Select 'Compute' from left pane
-    * Select 'New' under 'Notebook VMs'
-    * Provide a 'Notebook VM Name' (all lowercase)
-    * Keep the default size VM provided
-    * Once created select 'Jupyter Link'
-    * Enter the user folder by double clicking
-    * Select the upload button and upload the files listed below:
+* 登入 Azure 入口網站及 Azure Machine Learning 服務
+* 選擇將工作區升級為 **Enterprise 版本 (預覽)** 。[如需目前定價的詳細資訊，請參閱這裡](https://azure.microsoft.com/en-us/pricing/details/machine-learning/) - 您將需要 Enterprise 版本才能完成此實驗示範 (示範 2)
+* 啟動**預覽 UI**
+* 建立**筆記本 VM**
+    * 從左窗格選取 [計算]
+    * 在 [筆記本 VM] 下選取 [新增]
+    * 提供 [筆記本 VM 名稱] (全部小寫)
+    * 保留提供的預設 VM 大小
+    * 建立後，選取 [Jupyter 連結]
+    * 按兩下以進入使用者資料夾
+    * 選取 [上傳] 按鈕，並上傳以下檔案：
         * [data/data_train.csv](data/data_train.csv)
         * [code/explore.ipynb](code/explore.ipynb)
         * [code/deploy.ipynb](code/deploy.ipynb)
         * [code/config.json](code/config.json)
-    * Open [config.json](code/config.json) and enter your subscription key, resource group and Azure ML Workspace name and save the file
+    * 開啟 [config.xml](code/config.json)，並輸入您的訂用帳戶金鑰、資源群組和 Azure ML 工作區名稱，然後儲存檔案
 
->Learn more about [Notebook VMs here](https://azure.microsoft.com/en-us/blog/three-things-to-know-about-azure-machine-learning-notebook-vm/?WT.mc_id=msignitethetour2019-github-aiml21)
+>[在這裡深入了解筆記本 VM](https://azure.microsoft.com/en-us/blog/three-things-to-know-about-azure-machine-learning-notebook-vm/?WT.mc_id=msignitethetour2019-github-aiml21)
 
-* Create a **Compute Instance**
-    * Select 'Compute' from left pane
-    * Select 'New' under the 'Training Clusters' tab
-    * Provide a 'Compute Name' (all lowercase)
-    * Choose a VM size
-        * For standard compute select something like 'Standard_DS2_v2'
-        * For GPU compute select 'Standard_NC6'
-    * Select 'Low Priority' for Virtual machine priority
-    * Minimum number of nodes set to 0 (then it will scale down completely and reduce costs)
-    * Set maximum nodes from 3-6
-    * Click 'Create'
+* 建立**計算執行個體**
+    * 從左窗格選取 [計算]
+    * 在 [Training Clusters] \(定型叢集\) 下選取 [新增]
+    * 提供 [計算名稱] (全部小寫)
+    * 選擇 VM 大小
+        * 針對標準計算，選取 [Standard_DS2_v2] 之類的選項
+        * 針對 GPU 計算，選取 [Standard_NC6]
+    * 針對虛擬機器優先順序，選取 [低優先順序]
+    * 將最小節點數設定為 0 (如此會縮小到最小以降低成本)
+    * 將最大節點數設定為 3-6
+    * 按一下 [建立]
 
->Learn more about [Azure Machine Learning Compute here](https://docs.microsoft.com/en-us/azure/machine-learning/service/how-to-set-up-training-targets#amlcompute/?WT.mc_id=msignitethetour2019-github-aiml21)
+>[在這裡深入了解 Azure Machine Learning Compute](https://docs.microsoft.com/en-us/azure/machine-learning/service/how-to-set-up-training-targets#amlcompute/?WT.mc_id=msignitethetour2019-github-aiml21)
 
-* Upload the **Dataset**
-    * Select 'Datasets' from left pane
-    * Select 'Create dataset' and then 'from local files'
-    * Select the 'Browse' button and find the data_train_experiment.csv file
-    * Select 'Next'
-    * Review the data and select 'Next' and 'Next' again
-    * Finally review the dataset settings and select 'Create'
+* 上傳**資料集**
+    * 從左窗格選取 [資料集]
+    * 選取 [建立資料集]，然後選取 [從本機檔案]
+    * 選取 [瀏覽] 按鈕，然後尋找 data_train_experiment.csv 檔案
+    * 選取 [下一步]
+    * 檢閱資料並選取 [下一步]，然後選取 [下一步]
+    * 最後檢閱資料集設定，並選取 [建立]
 
->Learn more about [creating datasets here](https://docs.microsoft.com/en-us/azure/machine-learning/service/how-to-create-register-datasets/?WT.mc_id=msignitethetour2019-github-aiml21)
+>[在這裡深入了解如何建立資料集](https://docs.microsoft.com/en-us/azure/machine-learning/service/how-to-create-register-datasets/?WT.mc_id=msignitethetour2019-github-aiml21)
 
-# Delivery of Assets
+# <a name="delivery-of-assets"></a>傳遞資產
 
-* [PowerPoint presentation](https://github.com/microsoft/ignite-learning-paths-training-aiml/blob/master/aiml21/presentations.md)
-* [Datasets used](https://github.com/microsoft/ignite-learning-paths-training-aiml/tree/master/aiml21/data)
-* [Code files to run](https://github.com/microsoft/ignite-learning-paths-training-aiml/tree/master/aiml21/code)
-* Separate Demo Videos: 
-    * Demo 1 - [Explore](https://youtu.be/-z6nfyq-WrI)
-    * Demo 2 - [Experiment](https://youtu.be/c7p_4CRYT8k)
-    * Demo 3 - [Deploy](https://youtu.be/7bkBO7NQd4Q)
-    * Demo 4 - [Present](https://youtu.be/g7aBaC9s9qQ)
+* [PowerPoint 簡報](https://github.com/microsoft/ignite-learning-paths-training-aiml/blob/master/aiml21/presentations.md)
+* [使用的資料集](https://github.com/microsoft/ignite-learning-paths-training-aiml/tree/master/aiml21/data)
+* [要執行的程式碼檔案](https://github.com/microsoft/ignite-learning-paths-training-aiml/tree/master/aiml21/code)
+* 個別示範影片： 
+    * 示範 1 - [探索](https://youtu.be/-z6nfyq-WrI)
+    * 示範 2 - [實驗](https://youtu.be/c7p_4CRYT8k)
+    * 示範 3 - [部署](https://youtu.be/7bkBO7NQd4Q)
+    * 示範 4 - [展示](https://youtu.be/g7aBaC9s9qQ)
 
-# Demo 1 - Explore
+# <a name="demo-1---explore"></a>示範 1 - 探索
 
-> 💡 You must have completed the [setup](https://github.com/microsoft/ignite-learning-paths-training-aiml/blob/master/aiml21/README-attendee.md#demo-environment-deployment) before attempting to do the demo.
+> 💡 您必須先完成[設定](https://github.com/microsoft/ignite-learning-paths-training-aiml/blob/master/aiml21/README-attendee.md#demo-environment-deployment)，才能嘗試進行此示範。
 
-### Video Demo with Voice Over: [AIML21 - Demo 1 - Explore](https://youtu.be/-z6nfyq-WrI)
+### <a name="video-demo-with-voice-over-aiml21---demo-1---explorehttpsyoutube-z6nfyq-wri"></a>有聲影片示範：[AIML21 - 示範 1 - 探索](https://youtu.be/-z6nfyq-WrI)
 
-* Sign into your [Azure Portal](https://azure.microsoft.com/en-gb/?WT.mc_id=msignitethetour2019-github-aiml21) and open **Azure Machine Learning** you created with the template above
-* Launch the Preview experience by clicking **'Launch Preview Now'**
-* Open **'Compute'** from the left pane
-* Select the **'Jupyter'** Link on your Notebook VM
-* *Log in if needed with your Azure Credentials*
-* Open [**Explore.ipynb**](code/explore.ipynb)
-* Run through all code cells using SHIFT + ENTER
+* 登入 [Azure 入口網站](https://azure.microsoft.com/en-gb/?WT.mc_id=msignitethetour2019-github-aiml21)，並開啟您使用上述範本所建立的 **Azure Machine Learning**
+* 按一下 [立即啟動預覽]  以啟動預覽體驗
+* 從左窗格開啟 [計算] 
+* 在您的筆記本 VM 上選取 [Jupyter]  連結
+* 如有需要，請使用您的 Azure 認證登入 
+* 開啟 [**Explore.ipynb**](code/explore.ipynb)
+* 使用 SHIFT + ENTER 執行所有程式碼資料格
 
-# Demo 2 - Experiment
+# <a name="demo-2---experiment"></a>示範 2 - 實驗
 
-> 💡 You must have completed the [setup](https://github.com/microsoft/ignite-learning-paths-training-aiml/blob/master/aiml21/README-attendee.md#demo-environment-deployment) before attempting to do the demo.
+> 💡 您必須先完成[設定](https://github.com/microsoft/ignite-learning-paths-training-aiml/blob/master/aiml21/README-attendee.md#demo-environment-deployment)，才能嘗試進行此示範。
 
-### Video Demo with Voice Over: [AIML21 - Demo 2 - Experiment](https://youtu.be/c7p_4CRYT8k)
+### <a name="video-demo-with-voice-over-aiml21---demo-2---experimenthttpsyoutubec7p_4cryt8k"></a>有聲影片示範：[AIML21 - 示範 2 - 實驗](https://youtu.be/c7p_4CRYT8k)
 
-* Go to [ml.azure.com](https://ml.azure.com/?WT.mc_id=msignitethetour2019-github-aiml21) Azure Machine Learning studio. You can access this via the URL directly and then sign in and select the correct workspace you created for this talk. Or from the Azure Machine Learning Service in the Azure portal selecting the **'Launch Preview now'** button
-* Select **Automated ML** on the left pane
-* **Review the video for all talking points for each demo**
-* Click **'New automated ML run'**
-* Select the training data dataset (data_train_experiment-XXXXXX)
-* Provide an experiment name, example/ aiml21-regression-duration
-* Select **Duration** for Target column
-* Select the 'Training Cluster' of compute you setup above
-* Select **Next**
-* Select **Regression** for Prediction Task
-* Select **'View additional configuration settings'** and set Primary metric to **'normalized_root_mean_squared_error'**
-* Set Concurrency, Max concurrent iterations to 3
-* Set Exit criterion, Training job time (hours) to 1
-* Select **'Save'**
-* Select **Finish**
+* 前往 [ml.azure.com](https://ml.azure.com/?WT.mc_id=msignitethetour2019-github-aiml21)：Azure Machine Learning Studio。 您可以直接透過 URL 進行存取，然後登入並選取您為此討論所建立的正確工作區。 或者，從 Azure 入口網站中的 Azure Machine Learning 服務，選取 [立即啟動預覽]  按鈕
+* 選取左窗格中的 [自動化 ML] 
+* **觀看影片以了解每個示範的所有談話重點**
+* 按一下 [新增自動化 ML 回合] 
+* 選取定型資料集 (data_train_experiment-XXXXXX)
+* 提供實驗名稱 example/ aiml21-regression-duration
+* 選取目標資料行的 [持續時間] 
+* 選取您在上方為計算所設定的「定型叢集」
+* 選取 [下一步] 
+* 針對預測工作，選取 [迴歸] 
+* 選取 [檢視其他組態設定]  ，並將 [主要計量] 設定為 **'normalized_root_mean_squared_error'**
+* 將 [並行] 的 [最大並行反覆運算次數] 設定為 3
+* 將 [結束準則] 的 [定型工作時間 (小時)] 設定為 1
+* 選取 [儲存] 
+* 選取 [完成] 
 
-> This will take a while to run - ~15 - 20 mins 
+> 這需要一些時間來執行 - ~15 - 20 分鐘 
 
-* Once completed review the output of the models run and find the best model
+* 完成後，檢閱模型執行的輸出，並找出最佳模型
 
-# Demo 3 - Deploy
+# <a name="demo-3---deploy"></a>示範 3 - 部署
 
-> 💡 You must have completed the [setup](https://github.com/microsoft/ignite-learning-paths-training-aiml/blob/master/aiml21/README-attendee.md#demo-environment-deployment) before attempting to do the demo.
+> 💡 您必須先完成[設定](https://github.com/microsoft/ignite-learning-paths-training-aiml/blob/master/aiml21/README-attendee.md#demo-environment-deployment)，才能嘗試進行此示範。
 
-### Video Demo with Voice Over: [AIML21 - Demo 3 - Deploy](https://youtu.be/7bkBO7NQd4Q)
+### <a name="video-demo-with-voice-over-aiml21---demo-3---deployhttpsyoutube7bkbo7nqd4q"></a>有聲影片示範：[AIML21 - 示範 3 - 部署](https://youtu.be/7bkBO7NQd4Q)
 
-* From the end of demo 2
-* Start on the screen with the run **Automated ML experiment**
-* Select the **'Deploy Best Model'** button
-* Create a deployment name, example/ aiml21-v1
-* Add a deployment description if you wish
-* Compute Type set to ACI (Azure Container Instance)
-* Keep Authentication Enabled
-* Choose **Deploy** button
+* 示範 2 結束後
+* 在畫面上開始執行**自動化 ML 實驗**
+* 選取 [Deploy Best Model] \(部署最佳模型\)  按鈕
+* 建立部署名稱 example/ aiml21-v1
+* 如有需要，請新增部署描述
+* 將 [計算類型] 設定為 [ACI (Azure 容器執行個體)]
+* 保持啟用驗證
+* 選擇 [部署]  按鈕
 
->This will take a while to run - ~20-30 mins
+>這需要一些時間來執行 - ~20-30 分鐘
 
-* Once complete select **Endpoints** on the left pane
-* Select your Azure Container Instance model and review the details
-* Select the browser tab with Jupyter open
-* Open [**Deploy.ipynb**](code/deploy.ipynb)
-* Confirm the [config.json](code/config.json) file is completed with the correct information from the setup stages
-* Edit the 2nd cell to include the name of your deployed web service
-* Run all cells in notebook and review output
+* 完成後，選取左窗格中的 [端點] 
+* 選取 Azure 容器執行個體模型並檢閱詳細資料
+* 選取已開啟 Jupyter 的瀏覽器索引標籤
+* 開啟 [**Deploy.ipynb**](code/deploy.ipynb)
+* 確認 [config.json](code/config.json) 檔案已完成，並包含設定階段中的正確資訊
+* 編輯第 2 個資料格，以包含已部署的 Web 服務名稱
+* 執行筆記本中的所有資料格，並檢閱輸出
 
-# Demo 4 - Present
+# <a name="demo-4---present"></a>示範 4 - 展示
 
-> 💡 You must have completed the [setup](https://github.com/microsoft/ignite-learning-paths-training-aiml/blob/master/aiml21/README-attendee.md#demo-environment-deployment) before attempting to do the demo.
+> 💡 您必須先完成[設定](https://github.com/microsoft/ignite-learning-paths-training-aiml/blob/master/aiml21/README-attendee.md#demo-environment-deployment)，才能嘗試進行此示範。
 
-### Video Demo with Voice Over: [AIML21 - Demo 4 - Present](https://youtu.be/g7aBaC9s9qQ)
+### <a name="video-demo-with-voice-over-aiml21---demo-4---presenthttpsyoutubeg7abac9s9qq"></a>有聲影片示範：[AIML21 - 示範 4 - 展示](https://youtu.be/g7aBaC9s9qQ)
 
-* Open [powerbi.microsoft.com](http://powerbi.microsoft.com/?WT.mc_id=msignitethetour2019-github-aiml21)
-* Log in with your workplace credentials
-* Click on Workspaces on the left pane
-* Click Create a workspace
-* Enter a workspace name
-* Enter a description for the workspace
-* Click Save
-* Open Power BI Desktop with Present.pbix
-* Interact with the data and visuals
-* Click the Publish button
-* Select the workspace name you just created
-* Wait for the report to publish
-* Go back to [powerbi.microsoft.com](http://powerbi.microsoft.com/?WT.mc_id=msignitethetour2019-github-aiml21) 
-* Refresh the browser if needed
-* See the report on the left pane in the web browser
-* Click on the report and it will load
+* 開啟 [powerbi.microsoft.com](http://powerbi.microsoft.com/?WT.mc_id=msignitethetour2019-github-aiml21)
+* 使用您的工作區認證登入
+* 按一下左窗格中的 [工作區]
+* 按一下 [建立工作區]
+* 輸入工作區名稱
+* 輸入工作區的描述
+* 按一下 [儲存]
+* 使用 Present.pbix 開啟 Power BI Desktop
+* 與資料和視覺效果互動
+* 按一下 [發佈] 按鈕
+* 選取您剛才建立的工作區名稱
+* 等候報表發佈
+* 返回 [powerbi.microsoft.com](http://powerbi.microsoft.com/?WT.mc_id=msignitethetour2019-github-aiml21) 
+* 如有需要，請重新整理瀏覽器
+* 在網頁瀏覽器中，查看左窗格中的報表
+* 按一下報表，這會隨即載入
 
-# Teardown Instructions
+# <a name="teardown-instructions"></a>終止指示
 
-### Full Teardown
+### <a name="full-teardown"></a>完整終止
 
-* Enter the Azure Portal and delete the Azure resource group to remove all resources for this project
+* 進入 Azure 入口網站，並刪除 Azure 資源群組來移除此專案的所有資源
 
-### To Save Costs
+### <a name="to-save-costs"></a>節省成本
 
-* Make sure you select **shutdown** on your Notebook VM whenever not in use
-* When not in use **delete** the Azure Container Instance in endpoints
+* 確定在未使用的筆記本 VM 上選取 [關機] 
+* 未使用時，**刪除**端點中的 Azure 容器執行個體
 
-# Resources and Continued Learning
+# <a name="resources-and-continued-learning"></a>資源與繼續學習
 
-**Microsoft Learn:**
-* [Explore Data Science Tools in Azure](https://docs.microsoft.com/en-us/learn/paths/explore-data-science-tools-in-azure/?WT.mc_id=msignitethetour2019-github-aiml21)
-* [Introduction to Python](https://docs.microsoft.com/en-us/learn/modules/intro-to-python/?WT.mc_id=msignitethetour2019-github-aiml21)
-* [Automate the ML model selection with Azure Machine Learning service](https://docs.microsoft.com/en-us/learn/modules/automate-model-selection-with-azure-automl/?WT.mc_id=msignitethetour2019-github-aiml21)
-* [Create and use analytics reports with Power BI](https://docs.microsoft.com/en-us/learn/paths/create-use-analytics-reports-power-bi/?WT.mc_id=msignitethetour2019-github-aiml21)
+**Microsoft Learn：**
+* [在 Azure 中探索資料科學工具](https://docs.microsoft.com/en-us/learn/paths/explore-data-science-tools-in-azure/?WT.mc_id=msignitethetour2019-github-aiml21)
+* [Python 簡介](https://docs.microsoft.com/en-us/learn/modules/intro-to-python/?WT.mc_id=msignitethetour2019-github-aiml21)
+* [使用 Azure Machine Learning 服務自動選取 ML 模型](https://docs.microsoft.com/en-us/learn/modules/automate-model-selection-with-azure-automl/?WT.mc_id=msignitethetour2019-github-aiml21)
+* [透過 Power BI 建立及使用分析報表](https://docs.microsoft.com/en-us/learn/paths/create-use-analytics-reports-power-bi/?WT.mc_id=msignitethetour2019-github-aiml21)
 
-# Feedback Loop
+# <a name="feedback-loop"></a>意見反應迴圈
 
-Do you have a comment, feedback, suggestion? Currently, the best feedback loop for content changes/suggestions/feedback is to create a new issue on this GitHub repository. To get all the details about how to create an issue please refer to the [Contributing docs](../CONTRIBUTING.md)
+您是否有註解、意見反應或建議？ 目前，內容變更/建議/意見反應的最佳意見反應迴圈，是在此 GitHub 存放庫上建立新的問題。 若要取得如何建立問題的所有詳細資料，請參閱[參與文件](../CONTRIBUTING.md)

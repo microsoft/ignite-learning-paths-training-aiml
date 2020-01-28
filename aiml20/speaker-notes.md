@@ -1,527 +1,283 @@
-# AIML20: Speaker Notes
+# <a name="aiml20-speaker-notes"></a>AIML20：演講者備忘稿
 
-These are the notes for the PPT presentation at: [presentations.md](https://github.com/microsoft/ignite-learning-paths-training-aiml/blob/master/aiml20/presentations.md)
+這些是位於 [presentations.md](https://github.com/microsoft/ignite-learning-paths-training-aiml/blob/master/aiml20/presentations.md) 的 PPT 簡報備忘稿
 
-Associated demo scripts are found at: https://github.com/microsoft/ignite-learning-paths-training-aiml/tree/master/aiml20. Start with `DEMO%20Setup.md`.
+您可以在 https://github.com/microsoft/ignite-learning-paths-training-aiml/tree/master/aiml20 找到相關聯的示範指令碼。 請從 `DEMO%20Setup.md` 開始。
 
-## Slide notes
+## <a name="slide-notes"></a>投影片備忘稿
 
-Slides are identified by titles only.
+投影片只會以標題識別。
 
-### SLIDE: Microsft Ignite the Tour
+### <a name="slide-microsft-ignite-the-tour"></a>投影片：Microsft Ignite the Tour
 
-Pre-presentation walk-in slide
+簡報前的簡介投影片
 
-### SLIDE: Using pre-built AI to solve business problems
+### <a name="slide-using-pre-built-ai-to-solve-business-problems"></a>投影片：使用預先建立的 AI 解決商務問題
 
-Welcome everyone, I’m \<name and affiliation\>. Today I’m going to talk about
-how you can add artificial intelligence capabilities to your applications,
-without the need for massive amounts of computing power or even AI expertise.
-We’ll do that by using pre-built AI services that are available in the cloud,
-and even customize them for our specific needs.
+大家好，我是 \<姓名及隸屬單位\>。 今天要向大家報告如何將人工智慧功能新增至應用程式，不需要大量的運算能力，也不需要 AI 專業知識。
+我們會使用雲端提供的預先建立 AI 服務完成此項工作，甚至還可以針對特定需求自訂這些服務。
 
-(Replace your contact details on this slide.)
+(請在此投影片中換上您的詳細連絡資料。)
 
-### SLIDE: Resources
+### <a name="slide-resources"></a>投影片：資源
 
-In the talk today, I’ll include lots of links to information and resources, but
-don’t worry if you don’t catch them during the presentation, because all of the
-details are included on the Session Resources Hub shown here. There will also be
-several demos, and you’ll be able to try them all out yourself because complete
-source code, including a one-click button to deploy everything to Azure, is
-available in this Github repository. I’ll show this slide at again at the end
-of the presentation, too, so you might want to have your camera ready then.
+在今天的討論中，我提出了許多資訊和資源連結，如果您來不及在簡報中記下也沒關係，因為這裡顯示的課程資源中樞會列出所有詳細資料。 還有幾個示範，您可以自行嘗試，因為這個 Github 存放庫提供完整的原始程式碼，包括按一下即可將一切部署至 Azure 的按鈕。 我也會在簡報結尾再次顯示這張投影片，所以，請準備好各位的相機。
 
-### SLIDE: Adding humanlike capabilities to apps
+### <a name="slide-adding-humanlike-capabilities-to-apps"></a>投影片：將擬人化功能新增至應用程式
 
-We'll be using pre-built AI services to add humanlike capabilities to
-applications, but what does that mean? Well, here are some examples.
+我們將使用預先建立的 AI 服務，將擬人化功能新增至應用程式，但這是什麼意思？ 請看這些範例。
 
-### SLIDE: Enhance apps with humanlike capabilities
+### <a name="slide-enhance-apps-with-humanlike-capabilities"></a>投影片：增強具有擬人化功能的應用程式
 
-[CLICK] You could give your app the power of speech, say by adding a chat interface.
+[按一下] 您可以新增一個聊天介面，讓應用程式具有語音功能。
  
-[CLICK] You could give your app the ability to see, and understand the content of images.
+[按一下] 您可以讓應用程式能夠看到並了解影像的內容。
 
-[CLICK] You could give your app the intuition to understand what your users are most
-likely to want to do, and optimize your user interface automatically.
+[按一下] 您可以讓應用程式敏銳了解到使用者最可能想要做的事，並自動將使用者介面最佳化。
 
-[CLICK] You could give your app the power of comprehension, and communicate with your
-users whatever their spoken language.
+[按一下] 您可以讓應用程式理解使用者的意思，與使用者以任何口語語言溝通。
 
-[CLICK] Or, you could automate the human process of scanning streams of data for anomalies, and react accordingly.
+[按一下] 或者，您可以自動化掃描異常資料流的人工程序，並據以回應。
 
-These are just a few examples.
+這只是一部分的範例。
 
-### SLIDE: Overview of Azure Cognitive Services
+### <a name="slide-overview-of-azure-cognitive-services"></a>投影片：Azure 認知服務概觀
 
-We've talked a lot about how AI techniques can help. But doesn't it take a lot
-of data, and a lot of technical expertise, to implement?
+我們已討論過 AI 技術如何提供協助的事例。 但這不是需要很多資料和很多技術專業知識才能實施嗎？
 
-No. You can draw on the expertise of Microsoft Research, which has used its
-extensive data repositories and AI experts to create off-the-shelf AI services
-in Azure for you to use via simple REST API calls. 
+否。 您可以利用 Microsoft Research 的專業知識，其已使用大量資料存放庫和 AI 專家在 Azure 建立現成的 AI 服務，您只要透過簡單的 REST API 呼叫即可運用。 
 
-That's Azure Cognitive Services.
+亦即 Azure 認知服務。
 
-### SLIDE: Azure Cognitive Services
+### <a name="slide-azure-cognitive-services"></a>投影片：Azure 認知服務
 
-Azure Cognitive Services includes more than two dozen APIs, but at the broadest
-level they offer capabilities within these cateegories of human capability:
+Azure 認知服務包含數十個 API，但總體而言，其提供的功能不出這些人類功能類別：
 
-* Vision: Understanding the content of photographs, drawings, text and
-  handwriting, and video
+* 視覺：了解相片、圖畫、文字和手寫以及影片的內容
 
-* Speech: Tools to understand and recognize speech, and generate natural, humanlike
-  spoken voice.
+* 語音：了解和辨識語音，並產生自然擬人化語音的工具。
 
-* Language: Understand the content of written documents and text, and translate
-  between human languages.
+* 語言：了解書面文件和文字的內容，並在人類語言之間互譯。
 
-* Decision: this is an entirely new category for Azure Cognitive Services, which
-  is all about makinghumanlike choices about data, content, and application user
-  interfaces.
+* 決策：這是 Azure 認知服務的全新類別，就資料、內容和應用程式使用者介面做出擬人化選擇。
 
-* Search: answer natural language questions about the content of large,
-  unstructured repositories. 
+* 搜尋：回答以自然語言詢問的大型、非結構化存放庫內容相關問題。 
 
-### SLIDE: Azure Cognitive Services (with service names)
+### <a name="slide-azure-cognitive-services-with-service-names"></a>投影片：Azure 認知服務 (具有服務名稱)
 
-The "Search" category was covered in the previous talk in this learning path,
-AIML10. In this talk, we're going to touch on just a few of the other available
-services, and use them to enhance the website of a retailer: [CLICK]
+「搜尋」類別已在本學習路徑前面的討論 AIML10 中探討過。 在此討論中，我們只討論少數幾項其他可用的服務，並使用這些服務強化零售商的網站：[按一下]
 
-Computer Vision: which we'll use to analyze the content of product photographs.
+電腦視覺：用於分析產品相片的內容。
 
-Custom Vision: which we'll use to identify the specific products that our retailer sells.
+自訂視覺：用於找出零售商銷售的特定產品。
 
-and Personalizer: which will automatically adapt the layout of our website by
-observing customer preferences and present the best product categories first,
-even for anonymous users.
+以及個人化工具：透過觀察客戶偏好 (包括匿名使用者)，自動調整網站的版面配置並先呈現最合適的產品類別。
 
-But the principles of setting up and using Cognitive Services are the same for all the APIs, so what you learn here today applies to any of the AI services you want to use.
+但對所有 API 而言，設定和使用認知服務的原則都相同；因此，您今天在這裡所學到內容一體適用於您想要使用的任何 AI 服務。
 
-### SLIDE: Computer Vision
+### <a name="slide-computer-vision"></a>投影片：電腦視覺
 
-First, let's look at pre-built AI for Computer Vision, and how we can use to
-give an application the ability to see, and then customize it to our particular
-needs.
+首先，讓我們看看為電腦視覺預先建立的 AI，以及要如何使用才能讓應用程式看見，然後根據我們的特定需求來自訂。
 
-### SLIDE: Shop By Photo
+### <a name="slide-shop-by-photo"></a>投影片：依相片購物
 
-This is the website for Tailwind Traders, a hardware retailer. The Tailwind
-Traders website has many of the usual e-commerce features: the ability to browse
-the product catalog, order products online, and find products in retail stores.
-But it has a few AI-enabled features too, as we'll see.
+這是硬體零售商 Tailwind Traders 的網站。 Tailwind Traders 網站有許多常見電子商務功能：瀏覽產品目錄、線上訂購產品，以及在零售店面尋找產品。
+但我們也可以看到，這個網站啟用了一些 AI 功能。
 
-As you might have guessed, Tailwind Traders is a fictitious company, but that
-means I can give you all of the source code to deploy this app yourself. You can
-find it at the link at the bottom of this slide.
+您可能已經猜到，Tailwind Traders 是一家虛構的公司，這表示我可以提供所有的原始程式碼，以讓您自行部署此應用程式。 您可以在這張投影片底部的連結找到。
 
-### SLIDE: Demo: Shop by Photo
+### <a name="slide-demo-shop-by-photo"></a>投影片：示範：依相片購物
 
-DEMO: "Defining the problem: Shop by Photo is broken"
+示範：「定義問題：依相片購物已中斷」
 
-Let's go to the live Tailwind Traders website. [CLICK]
+讓我們移至實際的 Tailwind Traders 網站。 [按一下]
 
-One of the AI-enabled features is called "Shop by Photo". This feature that
-allows the customer to upload a photo of a product they might want to purchase,
-and the idea is that the app will tell them if the product is available. Let's
-go ahead and try it now. We'll upload this picture of a drill that we're
-interested in, and the Tailwind Traders app analyzes the picture, recognizes
-that it's a drill, and shows me the drill that Tailwind Traders has for sale,
-and where to find it in the store.
+其中一項啟用 AI 的功能稱為「依相片購物」。 這項功能可讓客戶上傳想要購買的產品相片，而應用程式會告訴客戶有沒有這項產品。 立刻試試。 我們將上傳這張感興趣的電鑽圖片，然後 Tailwind Traders 應用程式分析圖片且辨識出這是電鑽，並向我顯示 Tailwind Traders 有這項產品待售，且告訴我其位在店裡的哪個位置。
 
-But let's try that with a different picture. Let me return to the homepage, use
-the "Shop by Photo" feature once again, and this time choose this picture of a
-pair of pliers. Unfortunately, when the app analyzes that picture, it thinks
-it's a hammer. It's obviously not working very well, so now let's see if we can
-figure out what went wrong, find a way to fix it using computer vision. 
+但讓我們試試另一張圖片。 我回到首頁，再次使用「依相片購物」功能，這次選擇這張鉗子的圖片。 很不幸，應用程式分析圖片時，以為這是把鐵錘。 顯然效能不彰，所以我們來看看能不能找出問題，使用電腦視覺找到修正的方法。 
 
-### SLIDE: How Computer Vision Works
+### <a name="slide-how-computer-vision-works"></a>投影片：電腦視覺如何運作
 
-But before we do that, it's going to be helpful to dive into a bit of theory to
-understand how computer vision works. Don't worry though: there will be very
-little math, and understanding a bit about how computer vision works will help
-us understand what can go wrong, and how to fix it.
-
-### SLIDE: Tasks (XKCD comic)
-
-(Pause 10 seconds)
-
-Not long ago, being able to give a computer a photograph and it being able to
-give us useful information about what’s in the picture was literally the stuff of science
-fiction. This XKCD was published in September, 2014. Now, five years later, a
-computer can easily tell whether a photo is of a bird, thanks to the advent of
-big data, GPU computing, and convolutional neural networks. Let's see how.
-
-### SLIDE: How Neural Networks Work (Brandon Rohrer)
-
-This explanation is adapted with permission from Brandon Rohrer, who maintains
-an excellent blog and video tutorial series with in-depth explanations of many
-aspects of AI and machine learning. Check out Brandon's blog for more details;
-I'll only have time for a sketch here.
-
-### SLIDE: Computer Vision / Convolutional Neural Network
-
-You've probably heard that AI is powered by something called "Deep Learning".
-The "Deep" in "Deep Learning" doesn't mean "profound", it simply means that
-the image passes through a neural network with many layers when
-it's being analyzed. That's it.
-
-On your screen is a very simple Neural Network. This one only has five layers;
-real-world vision systems have many dozens of layers, perhaps hundreds. This one
-is designed to take an image as input, and then classify that image as one of
-exactly four objects: dog, bicycle, apple, and tennis ball. That's it: it is not
-capable of detecting any other kind of object except those it's been trained to
-recognize.
-
-### SLIDE: Trained Convolutional NN
-
-When a Neural Network has been trained, it passes the input image through the
-network layer by layer, at each layer transforming the image into different,
-smaller images. Each layer recombines the images genrated in the prior layer,
-and the images get smaller and smaller until at the very end they are just a
-single pixel with a value between 0 and 1. That value represents the confidence
-the Neural Network has that the image represents the given object: they higher
-the number, the more confident it is.
-
-In this case, we've inputted an image of a bicycle and the "bicycle" node at the
-right side is the one with the highest value. So it looks like this neural
-network has been well-trained to detect bicycles (or at least this one). But how
-do you "train" a neural network, and how is the image being transformed along
-the way?
-
-At each node of the network -- each circle -- a filter is applied to the image.
-It's much the same idea as a Snapshot filter or an Instagram filter, but instead
-of doing something useful like making the image sepia toned or adding bunny ears
-to all the faces, it's doing something ... different ... that was decided in the
-training process. Let's dive in to see what that is.
-
-### SLIDE: Filters (1)
-
-Let's consider a simple image. This is an image of a cross. It's 9 pixels by 9
-pixels, and white is "+1" and black is "-1". We're going to apply a filter to
-this image, like what happens at each of the nodes in the neural network.
-
-### SLIDE: Filters (2)
-
-To transform this image, we'll apply a 3x3 grid of weights. Small grids like
-this are commonly used in computer vision systems: sometimes 3x3, sometimes 5x5,
-and with weights determined in the training process. This grid only uses the
-weights -1 and 1, but typically they will look more like random numbers in that
-range. [CLICK]
-
-To apply the weights to the image, we overlay the grid of weights, centered on a
-particular pixel in the image. [CLICK] Then, we multiply each weight by each
-pixel value, and take the average. That average becomes the corresponding pixel
-in the output image, aligned to the center pixel of the weights grid.
-
-You've probably noticed we can't use the edges of the input image as center
-pixels, which is why the output image is smaller than the input by two rows and
-two columns. This (along with other types of transformations) is why the image
-gets smaller and smaller as we go down the layers, until it's only one pixel in
-size.
-
-### SLIDE: Filters (3)
-
-Let's shift the weights grid two pixels down and to the right. Now when we
-multiply the weights by the source pixels and take the average, we get a
-different output pixel (.55). The Neural Network sweeps the weights across the
-rows and columns of the source image to create the pixels in the output image.
-
-By the way, that process of sweeping the filter across the image has a complex
-name for a simple mathematical operation: convolution. That's why they call them
-Convolutional Neural Networks.
-
-### SLIDE: Training an image classifier
-
-So, now we know: each node (circle) in the neural network is a transformation of
-its input images, which is determined by a grid of weights. The trick to
-training a neural network is to choose those weights in such a way that the
-right numbers come out at the end.
-
-[CLICK] We'll do that with training data: lots of images of dogs, bicycles,
-apples and tennis balls. We know what each image represents (because a human has
-looked at them and labeled -- or "annotated" them), so all we do is pick weights
-in such a way that the correct node gets the largest value in each case, or at
-least as often as possible.
-
-But in real vision networks, there may be millions of weights to choose, and
-millions of labelled images to compute against. How will we determine the
-weights?
-
-### SLIDE: Learning: Backpropagation
-
-This is the point where most books on machine learning dive into the math, and
-start talking about things like "backpropagation" and "learning rate" and "cost
-function". But unless you're an AI researcher, you can ignore all that, for two
-reasons.
-
-First, there are lots of great tools available that will do all that math for
-you, while taking advantage of powerful computing resources like big data stores
-and GPU processors. You've probably heard of tools like Tensorflow or Pytorch
-that do this, and you'll hear more about them in the later talks in this
-learning path. 
-
-Secondly, even then, to make use of those tools you'll need: lots of training
-data, those powerful computing resources, and a team of AI engineers to make use
-of it all. Instead, you can just use the resources of a project or company that
-has already used lots of data and computing and expertise to train a neural
-network, and use that through an API.
-
-### SLIDE: Pre-Trained Convolutional NN
-
-So, you can just use the model with the pre-determined weights, and as long as
-you only need to detect the object classifications the model is trained for,
-you're all set to go. Just provide your image, and use the classifications that
-the pre-trained model generates. 
-
-Some models do more than just classify, too: they can also detect the location
-of objects within images, or analyze the image in other ways.
-
-### SLIDE: Demo: Cognitive Services Computer Vision
-
-Now let's try a pre-trained AI model: Cognitive Service Computer Vision. This
-service will analyze an image you provide, and provide tags (or classifications)
-for the objects it detects. These are just the labels associated with the top
-confidence scores at the right of the convolutional neural network from before,
-but now you're using a powerful neural network from Microsoft, capable of
-identifying many thousands of objects.
-
-There's a simple web-based UI you can use to try it out at
-aka.ms/try-computervision, so let's try it out now. In a moment, I'll also show
-you how to access the API programatically as well.
-
-### VIDEO: Computer Vision via web
-
-[CLICK] This is the Cognitive Services Computer Vision page. If you scroll down
-a little bit on that page, you’ll find a nice web-based form that allows us to
-upload an image for analysis, either from the web or as a local file. So let’s
-try uploading this picture of a man in a hard hat. In just a few seconds we’ll
-get back the analysis of that picture by the Computer Vision service. On the
-left, it shows us the objects detected in the image, and on the right we have
-the JSON output with the detailed analysis. That includes the names and
-locations of the objects detected in the image, a list of tags or labels
-associated with the image, a plain-language description of the image (in this
-case, “a man wearing a helmet”), and lots of other useful information.
-
-### SLIDE: Cognitive Services Computer Vision
-
-We can see here in the Objects section of the output that two objects have been
-detected in the image: and some headwear, and a person.
-
-We're more interested in the "tags" section, which provides classifications for
-the overall image along with confidence scores. In this case, the classification
-with the highest confidence, after "man", is "headdress" which isn't exactly
-what we need for the Shop by Photo app: we were looking for "hard hat".
-Unfortunately, this API isn't trained to detect hard hats, only helmets, and
-that's only the 6th most confident classification here. We'll learn how to fix
-that in just a moment.
-
-But if you want to incorporate vision capabilities into an app, rather than
-using a web form, you'll want to access the Computer Vision API programatically.
-Let's see how.
-
-### VIDEO: Computer Vision via CLI
-
-You can interface to the Cognitive Service APIs using any language that can
-connect to an HTTP endpoint, but what I have here [CLICK] is a bash script that
-uses the Azure CLI to create resources, and connects to the Computer Vision API
-using "curl". You can install the Azure CLI in your local shell, but here I am
-using the "Azure Account" extension in Visual Studio Code to launch a Cloud
-Shell, which means I don't have to install anything. Once that shell is ready, I
-can execute commands directly from this bash script. 
-
-This first command creates a resource group, which I'll use to hold the keys I
-need to authenticate the API.
-
-The next step is to create the keys. Here I'm creating an omnibus Cognitive
-Services key which I can use with many services including Computer Vision.
-
-Then, we can display the key directly in the terminal. [WAIT] You can use either
-of these keys to interface with the API, so I will save the first one here in an
-environment variable.
-
-With that key, we can connect to the endpoint URL provided by the Computer
-Vision service, so let's save that URL in an environment variable as well.
-
-And then you can choose an image to analyze. Here we provide the URL of an
-image, the same image of a man in a hard hat that we looked at a moment ago.
-
-Now we can pass the key and the image url into the endpoint by passing in a JSON
-input using curl. And in just a few milliseconds we get back the analysis of the
-image as JSON. You can see the same outputs we saw in the web interface a moment
-ago.
-
-We can do that with any image we like, of course. Let's try that again with a
-different image, in this case the picture of a drill. Once again, we can pass
-that to the API using curl. [WAIT] Interestingly the top tag associated with
-this image is "camera", which sadly wouldn't help us search for the actual tool
--- we would want "drill".
-
-### SLIDE: Adapting Computer Vision models with your own data
-
-So, now you can see why the Computer Vision API might not be the best choice for
-the Shop by Photo feature at Tailwind Traders. In some cases, the vision model
-it's using isn't trained to identify the specific products that Tailwind Traders
-sells. In other cases, it's been trained to detect *too many* different kinds of
-objects, and the wrong one is being found. As you just saw, given a picture of a
-drill, it gave us back the tag of "camera", a product that Tailwind Traders
-doesn't sell.
-
-Fortunately, we can fix that problem. Let's dive back into the theory for a moment.
-
-What if I told you there's a way to start with a vision model that's been
-pre-trained to identify many thousands of images, and adapt it to identify just
-the objects you're interested in -- even if those objects weren't part of the
-training data for the original model! That sounds strange, I know, but let's see
-how it might work.
-
-### SLIDE: Transfer Learning
-
-Here we have the trained convolutional neural network from before, but
-something's different: the final layer with the object classifications has been
-stripped off. What we're left with is the images from the second-last layer. We
-can ignore the fact that they are images -- say, 3x3 images -- and just think of
-them as data. Now, when we feed an image to the left hand side, instead of
-getting confidence scores, we get a collection of arrays, or "features", each
-with 9 data points. In this toy network, they are labelled F1, F2, ... up to F8.
-Each image you put in on the left side generates a different collection of
-features on the right side.
-
-We don't really know what those features *are*, but what we do know is that they
-are useful, because they were useful to classify all of the image types the
-neural network was *originally* trained for. Who knows: one feature might
-represent "greenness", and was useful to classify trees and tennis balls.
-Another might count the number of circle-shaped regions in the image, and was
-useful in classifying bicycles and traffic lights. The point is: those features
-weren't defined in advance: they were _learned_ from the training data, and are
-useful for classifying images _in general_. 
-
-And here's the trick: we can use those features to classify objects that the
-original network wasn't even trained on.
-
-### SLIDE: Transfer Learning Training (1 - with the hammer)
-
-Let's suppose we want a new model to identify hammers and hard hats. We can pass
-an images of a hammer on the left, and collect the features on the right. In
-this case, we get 8 data vectors (one for each feature), and a binary indicator
-of the object type. We can repeat that for several different pictures of a
-hammer, and collect the data vectors and the binary indicator each time.
-
-### SLIDE: Transfer Learning Training (2 - with the white hard hat)
-
-Now let's do the same with pictures of hard hats. Again, in each case, we
-collect 8 data vectors and a binary indicator for each image.
-
-Put it all together, and what do you have? A collection of data vectors, each
-with an associated a binary outcome. If you've done any data science, you can
-guess what happens next: we could build a simple predictive model, like a
-logistic regression or a one-layer neural network, to predict the new object
-classifications from the features.
-
-### SLIDE: Transfer Learning Trained Model
-
-It turns out, this often works surprisingly well. You don't even need a lot of
-data -- a few dozen images will often do the trick, as long as the categories
-you want to predict are fairly distinct. And you don't need a lot of computing
-power to predict a hundred or so binary outcomes from a relatively small amount
-of data.
-
-Of course, this is a toy example: you will likely want to identify more than two
-objects, and the underlying neural network will certainly generate many more
-than 8 features at its second-to-last-layer. But the principle remains: you can
-do this with modest new data and computing power, and it often works really
-well.
-
-### SLIDE: Microsoft Cognitive Services Custom Vision
-
-Of course, you don't have to train a transfer learning model by yourself. You
-can use the advanced vision models from Cognitive Services Computer Vision as
-the base, and provide your own images and classifications to the service called
-Custom Vision.
-
-Just like with Computer Vision, you can train transfer learning models
-programatically using the API, but Custom Vision also provides a convenient Web
-UI for training models. Let's use that now to train a model for the Shop by
-Photo feature of Tailwind Traders.
-
-### SLIDE: Demo: Customized object recognition
-
-Demo instructions: https://github.com/microsoft/ignite-learning-paths-training-aiml/blob/master/aiml20/DEMO%20Custom%20Vision.md
-
-### VIDEO: customvision.ai
-
-[CLICK] So here I am in the Custom Vision web-based interface. It provides us with a
-nice UI where we can provide new images for the transfer learning analysis. And
-you can see in this project I've already uploaded a number of pictures. I've
-uploaded pictures of screwdrivers, pliers, drills, and hammers, which I'm going
-to use to train my custom model. We'd also like to detect one other product that
-Tailwind Traders sells: hard hats. So let's click "add images", browse to a
-folder on my hard drive where I've collected a few photos of hard hats, select
-them all, and add them to the service while providing the label "hard hat" to
-use in training.
-
-It will take a few moments to upload those files, but while it's doing that,
-notice that there aren't that many images in this project: about 180, or a few
-dozen for each of the five categories. Sometimes even less. Despite that,
-because my five object types are fairly distinct, the model should work fairly
-well.
-
-So let's go ahead and click the Train button to start transfer learning. We'll
-choose Quick Training. Now it's running all those images through a complex
-vision model, and using transfer learning to create a predictive model for our
-five categories. It only takes a few seconds, and our model does fairly well!
-The probability threshold sets a limit below which we will predict no
-classification at all. If we only accept classifications with 50% confidence or
-more, 90.9% of those predictions are correct: that's "Precision". And the model
-correctly classifies 88.2% of our images overall: that's "Recall". In your apps,
-you will choose a threshold according to your tolerance for making the wrong
-call, versus making no call at all. For Tailwind Traders we can set the
-threshold on the low side, because it's not so big a deal to suggest the wrong
-product to a customer. If this were a cancer detection app, you'd likely make a
-different call.
-
-Now let's try out our model on some new images it hasn't seen before. We do that
-by clicking on the “Quick Test” button. We will upload a new file from our "test
-images" folder. Let's try our man in the hard hat. And you can see that our
-prediction is indeed of a "hard hat" with probability 99.9%, so we'd make that
-call with pretty much any threshold we choose.
-
-Let's try a different image: the drill. Our model identifies the image as a
-drill with probability 94.5%. And lastly, let's try the picture of the pliers,
-which it identifies with 99.9% confidence.
-
-So our model works well, even though it's been trained on less than 200 images.
-That's because we've constrained the potential labels to only those products we
-sell at Tailwind Traders.
-
-Now that we're happy with our model, we can export it and incorporate it into
-our app. If you click on the Export button, you can export the model for iOS or
-Android, as a container, or in our case in the universal ONNX format. So now we
-have downloaded the model to the hard drive.
-
-### SLIDE: Portable Deep Learning Models
-
-We exported our custom model in the ONNX format.
-
-ONNX, or Open Neural Network Exchange, is an open standard launched by Microsoft
-and Facebook to promote the free exchange and deployment of AI models, and
-supported by a wide range of applications and technology vendors.
-
-Now that we've trained our custom vision model, let's integrate it into the
-Tailwind Traders app. For that we'll use ONNX Runtime, an open-source inference
-engine that provides functions to generate predictions from models in the ONNX
-format.
-
-### SLIDE: OnnxImageSearchTermPredictor.cs
-
-Now that we've created our custom model, we can call it in the app using its
-API. Here we create a new "Inference Session" from the ONNX file we generated,
-and then generate a classification label from the uploaded image as a string.
-Then we just pass that into the existing search feature of the Tailwind Traders
-website and display the results.
+但在找問題之前，稍微深入了解一下電腦視覺如何運作的理論，會很有幫助。 不要擔心：只有一點點數學，了解一點電腦視覺如何運作能幫助我們了解哪些地方可能出錯，以及如何修正問題。
+
+### <a name="slide-tasks-xkcd-comic"></a>投影片：工作 (XKCD 漫畫)
+
+(暫停 10 秒鐘)
+
+不久前，給電腦一張相片，讓它提供相片中有些什麼有用資訊還只是科幻小說的劇情。 這部 XKCD 漫畫發佈於 2014 年 9 月。 而五年後的現在，電腦可以輕鬆分辨相片中是不是一隻鳥，這歸功於巨量資料、GPU 計算和卷積神經網路的問世。 讓我們看看怎麼做。
+
+### <a name="slide-how-neural-networks-work-brandon-rohrer"></a>投影片：神經網路的運作方式 (Brandon Rohrer)
+
+此說明經 Brandon Rohrer 授權同意修改，其部落格中有許多文章和教學影片，從各方面深入解說 AI 及機器學習。 如需詳細資料，請參閱 Brandon 的部落格，這裡只會簡單帶過。
+
+### <a name="slide-computer-vision--convolutional-neural-network"></a>投影片：電腦視覺/卷積神經網路
+
+大家可能聽說過 AI 是由稱作「深度學習」的東西所支援。
+「深度學習」的「深度」非指「深奧」，僅表示影像在分析時穿過很多層的神經網路。 就這麼簡單。
+
+畫面上是一個非常簡單的神經網路。 這個網路只有五層，真實世界的視覺系統則有數十層，甚至數百層。 這個網路的設計旨在接受影像輸入，然後將影像分類至確切的四個物件之一：狗、自行車、蘋果和網球。 僅此而已：這個網路只能偵測這些經過定型辨識的物件，不能偵測任何其他種類的物件。
+
+### <a name="slide-trained-convolutional-nn"></a>投影片：定型的卷積神經網路
+
+當神經網路經過定型後，會將輸入影像穿過一層又一層的網路，在每一層轉換成不同的更小影像。 每一層重新合併前一層產生的影像，然後影像就越來越小，直到最後僅剩介於 0 和 1 值的單一像素。 該值代表神經網路對該影像代表指定物件的信賴度：數值越高，影像就越值得信賴。
+
+在此案例中，我們已輸入自行車的影像，而右側「自行車」節點的值最高。 所以，看來這個神經網路在偵測自行車方面受過很好的定型 (或至少這一輛)。 但是，您如何「定型」神經網路？影像又是如何一路轉換？
+
+在網路的每個節點 (每個圈圈)，影像都會套用一個篩選。
+很像快照集篩選器或 Instagram 篩選，但不是執行以棕褐色調色處理影像或幫所有人臉加上兔耳朵這樣有用的功能，而是執行一些定型程序中早已決定的不同作業。 讓我們看看是什麼作業。
+
+### <a name="slide-filters-1"></a>投影片：篩選 (1)
+
+讓我們來看一個簡單的影像。 這是一張打叉的影像。 大小為 9 像素乘以 9 像素，空白為 "+1"，而黑色為 "-1"。 我們將對此影像套用一個篩選，例如神經網路中每個節點上所發生的狀況。
+
+### <a name="slide-filters-2"></a>投影片：篩選 (2 個)
+
+為了轉換此影像，我們將套用 3x3 方格的權數。 像這樣的小型方格通常會用於電腦視覺系統中：有時是 3x3，有時是 5x5，並在定型程序中判斷權數。 此方格只會使用權數 -1 和 1，但通常會看起來更像該範圍內的亂數。 [按一下]
+
+若要將權數套用至影像，我們會重疊權數方格，並以影像中特定像素為中心。 [按一下] 然後，我們會將每個權數乘以每個像素值，並取平均值。 該平均值會成為輸出影像中的對應像素，並對齊權數方格的中心像素。
+
+您可能已經注意到，我們無法使用輸入影像的邊緣作為中心像素，這就是為什麼輸出影像會比輸入小兩個資料列和兩個資料行。 這種轉換 (及其他種轉換類型) 會導致層級越往下，影像越小，大小最後會只有一個像素。
+
+### <a name="slide-filters-3"></a>投影片：篩選 (3)
+
+讓我們將權數方格向下和向右移動兩個像素。 現在，當我們將權數乘以來源像素，然後取平均值時，我們會得到不同的輸出像素 (.55)。 神經網路會掃掠來源影像資料列和資料行中的權數，以建立輸出影像中的像素。
+
+順便一提，在影像中掃掠篩選程序有一個對於簡單數學運算而言很複雜的名稱：卷積。 因此稱為卷積神經網路。
+
+### <a name="slide-training-an-image-classifier"></a>投影片：定型影像分類器
+
+現在我們知道：神經網路中的每個節點 (圓圈) 都是由權數方格決定的輸入影像轉換。 定型神經網路的訣竅是要以某種方式選擇權數，讓最後能夠顯示正確數字。
+
+[按一下] 我們也會這樣處理定型資料：狗、自行車、蘋果和網球的許多影像。 我們知道每個影像代表的內容 (因為人類看過這些影像並加上標籤，或「標注過」這些影像)，所以我們只要以某種方式選擇權數，讓正確的節點在每種情況下都得到最大值，或至少盡可能常常得到最大值。
+
+但是在真正的視覺網路中，可能有數百萬個權數要選擇，且要計算的已標示影像有數百萬個。 如何判斷權數？
+
+### <a name="slide-learning-backpropagation"></a>投影片：學習：反向傳播
+
+這就是大部分機器學習相關書籍之所以深入探討數學，並開始討論「反向傳播」、「學習速度」和「成本函式」等項目的原因。 但除非您是 AI 研究員，否則可以全部忽略，原因有二。
+
+首先，您有許多很棒的工具可以替您完成所有數學工作，同時利用巨量資料存放區和 GPU 處理器等強大的運算資源。 您可能聽說過可執行此類工作的工具，例如 Tensorflow 或 Pytorch，而您在本學習路徑稍後的討論中還會聽到更多。 
+
+其次，為使用這些工具，您還需要：許多定型資料、這些強大的運算資源，以及運用所有一切的 AI 工程師小組。 相反地，您可以只使用已使用大量資料、計算和專業知識來定型神經網路的專案或公司資源，並透過 API 來使用。
+
+### <a name="slide-pre-trained-convolutional-nn"></a>投影片：定型前的卷積神經網路
+
+所以，您可以只使用具有預先決定權數的模型即可，且如果您只需要偵測模型已完成定型的物件分類，就萬事俱備。 接著只要提供您的影像，並使用預先定型模型所產生的分類即可。 
+
+有些模型不僅執行分類，也會偵測物件在影像中的位置，或以其他方式分析影像。
+
+### <a name="slide-demo-cognitive-services-computer-vision"></a>投影片：示範：認知服務電腦視覺
+
+現在讓我們試試預先定型的 AI 模型：認知服務電腦視覺。 這項服務會分析您提供的影像，並提供所偵測到的物件標記 (或分類)。 過去，這些只是與右側卷積神經網路信賴分數前幾名建立關聯的標籤，但您現在使用的是 Microsoft 提供的強大神經網路，能夠識別數以千計的物件。
+
+您可以在 aka.ms/try-computervision 試用一個簡單的 Web UI，請立即試試看。 我等一下也會示範如何以程式設計方式存取 API。
+
+### <a name="video-computer-vision-via-web"></a>影片：透過 Web 的電腦視覺
+
+[按一下] 這是認知服務的電腦視覺頁面。 將該頁面稍微向下捲動一點，您會看到一份不錯的 Web 表單，讓我們可以從 Web 或本機檔案上傳影像以供分析。 所以，讓我們試試上傳這張戴著安全帽的男人圖片。 只要幾秒，我們就會收到電腦視覺服務對該圖片的分析。 左邊是在影像中偵測到的物件，右邊則是附詳細分析的 JSON 輸出。 其中包括在影像中偵測到的物件名稱和位置、與影像建立關聯的標記或標籤清單、對影像的一般語言描述 (在此案例中為「戴著頭盔的男人」)，以及其他許多有用的資訊。
+
+### <a name="slide-cognitive-services-computer-vision"></a>投影片：認知服務電腦視覺
+
+在這裡可以看到，在輸出的 [物件] 區段中偵測到影像有兩個物件：某種帽子和人。
+
+我們對 [標記] 區段比較感興趣，其提供整體影像的分類和信賴分數。 在此案例中，「男人」之後信賴度最高的分類是「頭飾」，這不完全符合我們對「依相片購物」應用程式的需求：我們要找的是「安全帽」。
+可惜，此 API 並未定型為偵測安全帽，只會偵測頭盔，而該項目在這裡僅達信賴度最高分類的第 6 位。 我們等一下會了解如何修正此問題。
+
+但如果想要將視覺功能納入應用程式，而不是使用 Web 表單，您就要以程式設計方式存取電腦視覺 API。
+讓我們看看怎麼做。
+
+### <a name="video-computer-vision-via-cli"></a>影片：透過 CLI 的電腦視覺
+
+您可以使用能夠連線到 HTTP 端點的任何語言來連接到認知服務 API，而我在這裡用的 [按一下] 是 bash 指令碼，這種指令碼使用 Azure CLI 建立資源，並使用 "curl" 連線到電腦視覺 API。 您可以在本機殼層中安裝 Azure CLI，但我在這裡使用 Visual Studio Code 的「Azure 帳戶」延伸模組啟動 Cloud Shell，這表示我不用進行任何安裝。 一旦該殼層就緒，我就可以從這個 bash 指令碼直接執行命令。 
+
+第一個命令會建立一個資源群組，用來保存驗證 API 所需的金鑰。
+
+下一步是建立金鑰。 我在這裡建立可用於許多服務的綜合性認知服務金鑰，包括電腦視覺。
+
+然後，我們可以直接在終端中顯示金鑰。 [等待] 您可以使用這兩個金鑰的其中一個來連接 API，在此，我會將第一個金鑰儲存在環境變數中。
+
+我們可用該金鑰連線到電腦視覺服務提供的端點 URL，所以，我們也將該 URL 儲存在環境變數中。
+
+然後您可以選擇一張影像來加以分析。 我們在此提供一個影像的 URL，即剛才所看到戴著安全帽男人的同一影像。
+
+現在，我們可以使用 curl 藉由傳入 JSON 輸入將金鑰和影像 URL 傳入端點。 只要幾毫秒，我們就會收到該影像的 JSON 分析。 您會看到剛才我們在 Web 介面中看到的相同輸出。
+
+當然，我們可以對任何影像執行這項工作。 讓我們對另一張影像再執行一次這項作業，這次用電鑽的圖片。 同樣地，我們可以使用 curl 將圖片傳到 API。 [等待] 有趣的是，與此影像建立關聯的最上層標記是「相機」，這當然沒辦法幫助我們搜尋真正的工具 -- 我們想要「電鑽」。
+
+### <a name="slide-adapting-computer-vision-models-with-your-own-data"></a>投影片：使用您自己的資料調整電腦視覺模型
+
+現在您可以了解為什麼電腦視覺 API 可能不是 Tailwind Traders「依相片購物」功能的最佳選擇。 在某些情況下，Tailwind Traders 使用的視覺模型未經定型，無法找出 Tailwind Traders 銷售的特定產品。 有時候，模型已定型為偵測到「太多」  不同種類的物件，找到的卻是錯誤的物件。 如您剛才所見，提供電鑽的圖片，卻收到「相機」標記，Tailwind Traders 未販售此項產品。
+
+所幸，我們可以修正該問題。 讓我們回顧一下此理論。
+
+如果我告訴您，有一種方法，從識別數千張影像的預先定型視覺模型開始，再調整為只識別您感興趣的物件，即使這些物件不屬於原始模型的定型資料也沒問題！ 我知道這聽起來很奇怪，但讓我們一起看看此方法如何可行。
+
+### <a name="slide-transfer-learning"></a>投影片：轉移學習
+
+這裡是過去已定型的卷積神經網路，但略有不同：物件分類的最後一層已去除。 只留下倒數第二層的影像。 我們可以忽略其為影像的事實 (例如 3x3 的影像)，只將其視為資料。 現在，當我們在左側送入影像時，得到的不是信賴分數，而是獲得各有 9 個資料點的陣列或「特徵」集合。 在這個實驗性網路中，這些集合標示為 F1、F2、... 直到 F8。
+您在左側放入的每個影像都會在右側產生不同特徵集合。
+
+我們不知道有「哪些」  特徵，但我們知道這些特徵很有用，因為這些特徵對「最初」  用於定型神經網路所有影像類型分類會很有用。 誰知道呢：也許其中一項特徵代表「綠色」，正適合分類樹木和網球。
+而另一項特徵可能會計算影像中的圓形區域數目，正好用來分類自行車和交通號誌燈。 重點是：這些特徵並非事先定義：而是從定型資料中「學習」  而來，並對影像的「一般」  分類很有用。 
+
+訣竅就是：我們可以使用這些特徵來分類甚至未定型原始網路的物件。
+
+### <a name="slide-transfer-learning-training-1---with-the-hammer"></a>投影片：轉移學習定型 (1 - 使用鐵錘)
+
+假設我們希望新模型能夠識別鐵錘和安全帽。 我們可以在左側傳送鐵錘的影像，並在右側收集特徵。 在此案例中，我們取得 8 個資料向量 (每個特徵一個)，以及物件類型的二元指標。 我們可以對數張不同的鐵錘圖片重複這項作業，每次都收集資料向量和二元指標。
+
+### <a name="slide-transfer-learning-training-2---with-the-white-hard-hat"></a>投影片：轉移學習定型 (2 - 使用白色安全帽)
+
+現在，對安全帽的圖片執行相同工作。 同樣在每個案例中，收集每個影像的 8 個資料向量和二元指標。
+
+當這些全部整合在一起後，您得到什麼？ 一個資料向量集合，每個向量都有相關聯的二元結果。 如果曾經做過任何資料科學，您就會猜到接下來的情況：我們可以建立簡單的預測模型 (例如羅吉斯廻歸或單層神經網路)，從特徵預測新的物件分類。
+
+### <a name="slide-transfer-learning-trained-model"></a>投影片：轉移學習的定型模型
+
+結果通常是出乎意料的好。 您甚至不需要大量資料，如要您想預測的類別為完全相異，則通常只要幾十個影像就可以搞定。 而且您不需要大量的運算能力，就能從相當少量資料預測一百上下的二元結果。
+
+當然，這只是實驗性範例：您可能想要識別兩個以上的物件，而基礎神經網路當然會在其倒數第二層產生 8 個以上的特徵。 但原則不變：您可以使用少量的新資料和運算能力來執行此作業，且其效果通常很好。
+
+### <a name="slide-microsoft-cognitive-services-custom-vision"></a>投影片：Microsoft 認知服務自訂視覺
+
+當然，您不必自行定型轉移學習模型。 您可以使用認知服務電腦視覺的進階視覺模型為基礎，將自有影像和分類提供給稱為自訂視覺的服務。
+
+如同使用電腦視覺，您可以使用 API 以程式設計方式來定型轉移學習模型，但自訂視覺也提供便利的 Web UI 用於定型模型。 現在就讓我們來定型 Tailwind Traders「依相片購物」功能的模型。
+
+### <a name="slide-demo-customized-object-recognition"></a>投影片：示範：自訂物件辨識
+
+示範指示： https://github.com/microsoft/ignite-learning-paths-training-aiml/blob/master/aiml20/DEMO%20Custom%20Vision.md
+
+### <a name="video-customvisionai"></a>影片：customvision.ai
+
+[按一下] 我現在位於自訂視覺 Web 介面。 此介面提供很棒的 UI，我們可在此提供新的影像，供轉移學習分析之用。 而且您可以在這個專案中看到，我已經上傳了一些圖片。 我上傳了螺絲起子、鉗子、電鑽和鐵槌的圖片，我要用這些圖片定型我的自訂模型。 我們也想偵測 Tailwind Traders 銷售的另一項產品：安全帽。 所以，我們按一下 [新增影像]，瀏覽到硬碟資料夾，我在這裡收集了一些安全帽圖片，全部選取後將這些圖片新增至服務，同時提供「安全帽」標籤用於定型。
+
+上傳這些檔案需要一點時間，但在執行這項作業時請注意，這個專案沒有那麼多的影像：共約 180 張，或五個類別的每一個有數十張。 有時還更少。 儘管如此，因為我的五個物件類型為完全相異，所以模型的效果應該相當不錯。
+
+那麼，繼續作業，按一下 [定型] 按鈕開始轉移學習。 我們會選擇 [Quick Training] \(快速定型\)。 現在，所有影像都在通過複雜的視覺模型，並使用轉移學習建立五個類別的預測模型。 只要幾秒鐘，我們就有相當不錯的模型！
+機率閾值會設定一個限制，低於此限制就完全預測不出任何分類。 如果我們只接受信賴度為 50% 或以上的分類，則這些預測 90.9% 為正確：這是「精確度」。 而模型正確分類全部影像的 88.2%：這是「重新叫用」。 在應用程式中，您將根據建立錯誤呼叫與完全不建立呼叫的容錯來選擇閾值。 我們可以為 Tailwind Traders 設定偏低的閾值，因為向客戶建議錯誤的產品沒什麼大不了。 但如果這是癌症偵測應用程式，您可能要建立不同的呼叫。
+
+現在，我們用一些模型沒有見過的新影像試試。 按一下 [快速測試] 按鈕即可。 我們會從 [test images] 資料夾上傳新的檔案。 讓我們試試戴著安全帽的男人。 您可以看到，我們的預測確實是「安全帽」，且機率為 99.9%，所以選擇任何閾值應該都能叫出這個結果。
+
+再試試不同的影像：電鑽。 模型將此影像識別為電鑽的機率為 94.5%。 最後，試試鉗子的圖片，識別的信賴度為 99.9%。
+
+雖然定型的影像不到 200 張，但我們的模型運作效能良好。
+這是因為我們將可能標籤限制於僅在 Tailwind Traders 銷售的產品。
+
+現在模型沒問題了，我們就可以匯出模型並將其併入應用程式。 如果您按一下 [匯出] 按鈕，就可以容器形式或此案例中的通用 ONNX 格式，匯出適用於 iOS 或 Android 的模型。 現在已將此模型下載到硬碟。
+
+### <a name="slide-portable-deep-learning-models"></a>投影片：可攜式深度學習模型
+
+我們以 ONNX 格式匯出自訂模型。
+
+ONNX (或 Open Neural Network Exchange) 是 Microsoft 和 Facebook 所推出的開放式標準，旨在推廣免費交換和部署 AI 模型，受到眾多應用程式和技術廠商的支援。
+
+自訂視覺模型定型後，讓我們將此模型整合到 Tailwind Traders 應用程式。 我們會使用 ONNX Runtime 執行此作業，這是開放原始碼推斷引擎，其所提供函式可從使用 ONNX 格式的模型產生預測。
+
+### <a name="slide-onnximagesearchtermpredictorcs"></a>投影片：OnnxImageSearchTermPredictor.cs
+
+建立了自訂模型後，我們就可以在應用程式中使用其 API 來呼叫。 在這裡，我們從所產生 ONNX 檔案建立新的「推斷工作階段」，然後從上傳的影像產生分類標籤作為字串。
+接著，只要將此字串傳遞至 Tailwind Traders 網站的現有搜尋功能，就會顯示結果。
 
 ```csharp 
 var session = new InferenceSession(filePath);
@@ -535,263 +291,133 @@ var prediction = output
     .First();
 ```
 
-### SLIDE: DEMO: ONNX
+### <a name="slide-demo-onnx"></a>投影片：示範：ONNX
 
-DEMO: ONNX Deployment
+示範：ONNX 部署
 
-### VIDEO: Kudu
+### <a name="video-kudu"></a>影片：Kudu
 
-[CLICK] The model that we just exported from Custom Vision is actually a ZIP file,
-containing the actual ONNX file, model.onnx, which is the text representation of
-the neural network we just created, and also a manifest file. 
+[按一下] 我們剛才從自訂視覺匯出的模型其實是一個 ZIP 檔案，包含實際的 ONNX 檔案 model.onnx，這是剛才所建立神經網路的文字表示，也是資訊清單檔。 
 
-The existing Tailwind Traders website already uses a computer vision model
-represented as an ONNX file called products.onnx. The problem is, that model
-doesn't properly recognize many of the products we sell at Tailwind Traders. So
-we'll take the model.onnx file we just exported from Custom Vision, rename it as
-products.onnx, and replace it in our web app, so that Shop by Photo can
-recognize all five products we trained it on.
+現有的 Tailwind Traders 網站已使用電腦視覺模型，這會以稱為 products.onnx 的 ONNX 檔案表示。 問題是，該模型不能正確識別在 Tailwind Traders 銷售的許多產品。 因此，我們將剛才從自訂視覺匯出的 model.onnx 檔案重新命名為 products.onnx，並以此取代 Web 應用程式中的檔案，讓「依相片購物」可以識別定型模型所用的所有五項產品。
 
-Here in the Azure Portal you can see the App Service resource which runs the
-Tailwind Traders website. What I can do now within this App Service is go to the
-Development Tools section and choose the Advanced Tools feature. This launches
-the Kudu interface. Now that's launched, I can browse through the website
-filesystem using the debug console. Let's browse to site, w-root, Standalone,
-OnnxModels, where the products.onnx file is located. Now we can replace it with
-the new version of the products.onnx file we created with Custom Vision.
+在這個 Azure 入口網站中，您可以看到執行 Tailwind Traders 網站的 App Service 資源。 我現在可以在 App Service 中，移到 [開發工具] 區段並選擇 [進階工具] 功能。 這會啟動 Kudu 介面。 介面啟動後，我就可以使用偵錯主控台瀏覽網站的檔案系統。 讓我們瀏覽至 site、w-root、Standalone、OnnxModels，這是 products.onnx 檔案所在的位置。 現在我們可以用以自訂視覺建立的新版 products.onnx 檔案取代這個檔案。
 
-Now, returning to the App Service, we can go ahead and restart the web server,
-which will make it use the new ONNX model in the Shop by Photo Feature.
+現在我們可以回到 App Service 繼續作業，重新啟動網頁伺服器，讓伺服器在「依相片購物」功能中使用新的 ONNX 模型。
 
-### VIDEO: Netron
+### <a name="video-netron"></a>影片：Netron
 
-[CLICK] While we're waiting for the website to restart, lets take a look inside the ONNX
-model we just installed. There's a nice little web app by Lutz Roeder called
-Netron, which allows us to inspect the neural networks in ONNX files. So let's
-go ahead and open that products.onnx file. Here you can see the actual layers of
-the neural network represented by the model. Let's zoom in a little bit and take
-a look at the input at the top. The input is an image. It's a 3-layer RGB image,
-of size 224x224 pixels. I actually had to crop and scale down the image provided
-by the user before providing it to ONNX runtime. It's a bit of a dirty secret
-that computer vision systems have rather poor vision -- they work with quite low
-image resolutions -- but nonetheless still work quite well.
+[按一下] 在等待網站重新啟動時，我們先來看看剛才安裝的 ONNX 模型內部。 有一個 Lutz Roeder 製作的小型 Web 應用程式很好用，稱為 Netron，能讓我們檢查 ONNX 檔案中的神經網路。 接著繼續開啟這個 products.onnx 檔案。 在此您可以看到模型呈現的實際神經網路層。 放大一點，看一下最上層的輸入。 該輸入是一張影像。 這是 3 層的 RGB 影像，大小為 224x224 像素。 我必須實際裁剪縮小使用者提供的影像，才能將影像提供給 ONNX Runtime。 說出來有點不好意思，電腦視覺系統的視力其實很糟糕，其使用的影像解析度相當低，不過工作能力還是很好的。
 
-Now let's zoom out and scroll through the network. You can see all of the layers
-in the neural network created by the custom vision, each layer transforming the
-input image, applying filters and recombining the output images, just as you
-learned earlier in this talk. But when you get down to the output layer at the
-very end, you can see that the output is a list of five values -- the five
-products we trained it on: hammer, hard hat, and so on -- along with this value
-labelled "loss" which is the confidence the model predicts for each category. In
-your app, you'll choose your own threshold for how high the confidence needs to
-be.
+現在放大，然後向下捲動網路。 您可以看到自訂視覺所建立神經網路中的所有層，每一層都會轉換輸入影像、套用篩選並重新合併輸出影像，正如您在此討論稍早所了解。 但到達最後一層的輸出層時，您會看到輸出為五個值的清單，即我們定型模型所用的五項產品：鐵槌、安全帽等，以及標示為 "loss" 的這個值，這是模型預測每個類別的信賴度。 在應用程式中，您要選擇自己的閾值以決定信賴度高低。
 
-Anyway, now that the Tailwind Traders website has restarted, let's go back to
-the homepage and see how our new vision model works. Let's go ahead and upload a
-photo, and try once again one of our test images, specifically our image of
-pliers that didn't work well before. We can see that indeed, rather than
-thinking it was a hammer, the website has searched for "pliers" and shown me all
-the products on offer.
+不管怎樣，現在 Tailwind Traders 網站已重新啟動，讓我們回到首頁看看新的視覺模型工作得如何。 好，繼續上傳相片，再試一次其中一張測試影像，特別是之前不成功的鉗子影像。 我們可以看到網站不認為這是鐵槌，而是搜尋「鉗子」並顯示所有提供的產品。
 
-### SLIDE: Optimizing App UI with Cognitive Services Personalizer
+### <a name="slide-optimizing-app-ui-with-cognitive-services-personalizer"></a>投影片：使用認知服務個人化工具將應用程式 UI 最佳化
 
-We've got time for just one more quick example of pre-built AI, this time from
-the "Decision Category" of Cognitive Services. The "Personalizer" service allows
-us to customize the interface of apps in real-time, balancing on what the user
-is most likely to want to do, coupled with the things that *we would like* the
-user to be doing.
+還有時間可以再快速瀏覽一個預先建立的 AI 範例，這次是認知服務的「決策類別」。 「個人化工具」服務可讓我們即時自訂應用程式介面，並在使用者最可能想做的事，與「我們希望」  使用者會做的事之間取得平衡。
 
-### SLIDE: Recommended (screenshot)
+### <a name="slide-recommended-screenshot"></a>投影片：建議 (螢幕擷取畫面)
 
-We can see how this might work with the "Recommended" section of the Tailwind
-Traders website. It shows a selection of the departments available in the store:
-one is a large "hero" image, coupled with a few smaller images.
+我們可以透過 Tailwind Traders 網站的 [建議] 區段了解其運作方式。 其中顯示商店提供的部門選擇：一張大型「主要」影像，加上幾張較小的影像。
 
-The Personalizer service will choose for us how those sections appear, according
-to an AI technique called "reinforcement learning".
+個人化工具服務會根據一項稱為「增強式學習」的 AI 技術，為我們選擇這些區段的顯示方式。
 
-### SLIDE: Personalizer in Action
+### <a name="slide-personalizer-in-action"></a>投影片：作用中的個人化工具
 
-Personalizer has been in development at Microsoft for many years. It's used on
-Xbox devices, to determine what activities are featured on the home page, like
-playing an installed game, or purchasing a new game from the store, or watching
-others play on Mixer. Since the introduction of Personalizer, the Xbox team has
-seen a significant lift in key engagement metrics.
+Microsoft 花了數年時間開發個人化工具。 其用於 Xbox 裝置，決定首頁的精選活動，例如玩已安裝的遊戲、從商店購買新遊戲，或觀看其他人在 Mixer 玩遊戲。 自個人化工具推出以來，Xbox 小組的幾項關鍵參與指標可見顯著提升。
 
-Personalizer is also used to optimize the placement of ads in Bing search, and
-the articles featured in MSN News, again with great results in improving
-engagement from users.
+個人化工具也可用來將 Bing 搜尋廣告以及 MSN 新聞專題報導的排版位置最佳化，同樣也在促進使用者參與方面取得豐碩的成果。
 
-Now you can use Personalizer in your own apps, as well.
+現在您也可以在自己的應用程式中使用個人化工具。
 
-### SLIDE: Reinforcement Learning
+### <a name="slide-reinforcement-learning"></a>投影片：增強式學習
 
-Personalizer implements an AI technique called Reinforcement Learning. Here's
-how it works.
+個人化工具實作一項稱為增強式學習的 AI 技術。 運作方式如下。
 
-[CLICK] Suppose we want to display a "hero" action to the user. [CLICK] The user
-might not be sure what to do next, [CLICK] but we could display one of several
-suggestions. For a gaming app, [CLICK] that might be: "play a game", "watch a
-movie", or "join a clan". [CLICK] Based on that user's history and other
-contextual information -- say, their location, the time of day, and the day of
-the week -- the Personalizer service will [CLICK] rank the possible actions and
-[CLICK] suggest the best one to promote [CLICK]. 
+[按一下] 假設我們想要向使用者顯示「主要」動作。 [按一下] 使用者可能不確定接下來該做什麼，[按一下] 但我們可以顯示數項建議的其中之一。 在遊戲應用程式中，[按一下] 可能是：「玩遊戲」、「看電影」或「加入公會」。 [按一下] 根據使用者的歷程記錄和其他內容資訊 (例如其位置、一天的時段、星期幾)，個人化工具服務會 [按一下] 列出可能動作的排位，[按一下] 建議最應該升階的動作 [按一下]。 
 
-Hopefully, the user will be happy [CLICK], but how can we be sure? That depends
-on what the user does next, and whether that was something we wanted them to do.
-According to our business logic [CLICK], we'll assign a "reward score" between 0
-and 1 to what happens next. For example, spending more time playing a game or
-reading an article, or spending more money in the store, might lead to higher
-reward scores. [CLICK] Personalizer feeds that info back into the ranking system
-for the next time we need to feature an activity.
+我們當然希望使用者滿意 [按一下]，可是怎麼確定呢？ 這取決於使用者接下來會做什麼，以及這是不是我們希望使用者會做的事。
+根據我們的商務邏輯 [按一下]，我們會為接下來發生的事指派 0 到 1 的「獎勵分數」。 例如，花更多時間玩遊戲或讀一篇文章，或在商店花更多錢，可能得到更高的獎勵分數。 [按一下] 當我們下次需要主打某項活動時，個人化工具會將此資訊饋送回排名系統。
 
-### SLIDE: Discovering Patterns and Causality
+### <a name="slide-discovering-patterns-and-causality"></a>投影片：發現模式與因果關係
 
-But this isn't just a recommender system, which has the danger of presenting the
-user with things they know they already like. What about the things they would
-like, but don't know about? Personalizer is usually in Exploit mode, where it
-recommends the best activity based on history and context, but sometimes it also
-enters Explore mode, and presents the user with new things they might not
-otherwise see. It's kind of like an automated A/B testing system, but with more
-than two branches, all tested in real time.
+但這不只是提出建議的系統，還有向使用者顯示已知喜愛事物的危險。 使用者有可能喜歡卻不知其存在的事物怎麼辦？ 個人化工具通常為「利用」模式，此時會根據歷程記錄和內容建議最佳活動，但有時也會進入「探索」模式，向使用者顯示其他情況下可能見不到的新事物。 這有點像自動化的 A/B 測試系統，但不只兩個分支，且全是即時測試。
 
-You control what percentage of the time Explore Mode is
-activated, to help the user discover new content or features.
+您可以控制探索模式的啟用時間百分比，協助使用者發現新的內容或功能。
 
-### SLIDE: Personalizer for Tailwind Traders
+### <a name="slide-personalizer-for-tailwind-traders"></a>投影片：Tailwind Traders 的個人化工具
 
-In our Tailwind Traders app, for anonymous users, we will use the time of day,
-day of week, and browser OS as "context" to influence rankings. For the reward
-score, we will use whether or not the hero section was clicked. In this code, we
-provide a reward score of 1 if the featured category was clicked, and zero
-otherwise.
+在 Tailwind Traders 應用程式中，我們對匿名使用者使用一天中的時段、星期幾和瀏覽器作業系統作為影響排名的「內容」。 至於獎勵分數，我們會使用是否按下主要區段來判定。 在此程式碼中，如果按下精選分類，則獎勵分數為 1；否則為零。
 
-Over time, Personalizer will determine the best category to feature for
-anonymous users based on time of day, day of week, and OS. It will also
-"explore" 20% of the time, to surface categories that would otherwise not be
-presented.
+一段時間之後，個人化工具將會根據一天的時段、星期幾和作業系統來決定最適合匿名使用者的精選類別。 它也會花 20% 的時間「探索」，以呈現在其他情況下不會顯示的類別。
 
-### SLIDE: DEMO: Personalizer
+### <a name="slide-demo-personalizer"></a>投影片：示範：個人化工具
 
-[ClICK] Now, let's see Personalizer in action. Let's go back to the Tailwind
-Traders homepage. What I didn't mention before is that in this Recommended
-section, the ordering of the product departments is determined by Personalizer.
-In this case, it's presenting the Electrical department as the hero image. We
-can also see the "Explore" behavior if we refresh the website a few times.
-Apparently Personalizer currently thinks that the Garden Center gets the best
-engagement from anonymous users at this time of day using the browser and
-operating system that I am using here, but eventually it will try out different
-categories -- here, plumbing has popped up, and Personalizer will use that to
-measure engagement as well.
+[按一下] 現在，讓我們來看看作用中的個人化工具。 回到 Tailwind Traders 首頁。 之前沒有提到，在這個 [建議] 區段中，產品部門的排序是由個人化工具決定。
+在此案例中，顯示的主要影像是電器部門。 如果重新整理網站幾次，也會看到「探索」行為。
+顯然，使用我在這裡所用的瀏覽器和作業系統，個人化工具認為在一天的這個時段中，園藝中心會取得最好的匿名使用者參與表現，但最後還是會嘗試不同的類別，這裡會跳出連接，而個人化工具也會用此來評量參與程度。
 
-### SLIDE: Pre-built AI in Production
+### <a name="slide-pre-built-ai-in-production"></a>投影片：生產環境中預先建立的 AI
 
-We've seen a few ways that you can use pre-built AI to enhance your applications
-with humanlike capabilities. Let's wrap up with a few things you should keep in
-mind if you plan to deploy these applications in a production app, possibly with
-real-time capabilities for millions of users.
+我們已看過幾個您可以使用預先建立的 AI，利用擬人化功能增強應用程式的方法。 如果您打算將這些應用程式部署到可能有數百萬使用者參與的即時功能生產環境應用程式，有幾件事請務必牢記在心。
 
-### SLIDE: Cost Considerations
+### <a name="slide-cost-considerations"></a>投影片：成本考量
 
-Probably the first thing you want to think about is: how much is all this going to cost?
+您想到的第一件事可能是：這全部會花多少錢？
 
-[CLICK] If you are just trying things out like a "Developer would", that is small
-amounts of data, a few attempts here and there, that's generally FREE. 
+[按一下] 如果只想試試像「開發人員可能」會做的事，只需要少量資料，這裡試試那裡試試的，一般為免費。 
 
-[CLICK] For production volumes, you will be charged by volume and rate,
-according to the service you are using.
+[按一下] 針對生產數量，您就需要按所用服務的用量及費率支付費用。
 
-[CLICK] There are more details on pricing on this link. Check there for exact pricing
-for your service and region
+[按一下] 此連結提供有關定價的更多詳細資料。 請參閱該處以了解您服務和區域的實際定價
 
-If you are new to Azure and want to play around with these services, you can
-sign up using the link right here and get $200.
+如果您是 Azure 新手，想要試試看這些服務，您可以使用這裡的連結進行註冊並獲得美金 $200 元。
 
-(This slide is intended to give a general overview of the "model" for pricing in
-cognitive services. Attendees should check the given link for exact pricing for
-the service they want to use.)
+(此投影片僅提供認知服務定價「模型」的一般概觀。 出席者應查看指定連結以了解其所用服務的實際定價。)
 
-### SLIDE: Data Considerations
+### <a name="slide-data-considerations"></a>投影片：資料考量
 
-You also may want to think about where your data is going and how it will be
-used.
+您可能也想知道自己的資料去了哪裡和怎麼使用。
 
-Your data, like images or text, will be uploaded to Azure for inference, but
-it's never stored by Cognitive Services. This link gives all the details about
-privacy and regulatory compliance. But if you work in a regulated industry, like
-medicine, where data cannot leave your firewall, there is another option:
-containers.
+您的資料和影像或文字一樣，會上傳到 Azure 供推斷之用，但認知服務絕不會儲存此資料。 此連結提供隱私權和法規合規性的所有詳細資料。 但若任職於資料不能離開防火牆的受管制產業，例如醫藥業，則您有另一個選項：容器。
 
-### SLIDE: Deployment with containers
+### <a name="slide-deployment-with-containers"></a>投影片：使用容器的部署
 
-Some of Cognitive Services is available for use as an independent container. You
-can simply download the container image, deploy it behind your firewall, and
-then use the local endpoints it provides just like you do in Azure. The
-difference is that data never leaves your own network. The only reason the
-container connects to Azure is for billing -- usage is charged in exactly the
-same way as in Azure itself.
+有些認知服務可作為獨立容器使用。 您只要下載容器映像，將映像部署在防火牆後面，然後使用其提供的本機端點即可，就和在 Azure 中執行一樣。 差別是資料絕不會離開您自己的網路。 容器連線到 Azure 的唯一原因是用於計費，用量計費和在 Azure 本身中一模一樣。
 
-### SLIDE: Ethical Considerations
+### <a name="slide-ethical-considerations"></a>投影片：倫理考量
 
-I've saved the most important slide today for last. You've seen how easy it is
-to integrate powerful AI capabilities into your applications. But with great
-power comes great responsibility, and it's critically important to understand
-the impact your application will have on people, and consider the ethical
-implications.
+我把今天最重要的投影片留在最後。 您已經看到將強大的 AI 功能整合到應用程式有多容易。 但是，能力越大責任越大，因此請務必了解您的應用程式會對人們產生什麼影響，並考量相關倫理意涵。
 
-If you're working with AI technologies, you should be working within an ethical
-framework that:
+使用 AI 技術，您就必須堅持倫理規則架構：
 
-* Focuses on *enabling* people to achieve more in what they already do, rather
-  than replacing humans with AI
+* 專注於「賦予能力」  ，讓人們在已有的基礎上獲得更多成就，而不是用 AI 取代人力
 
-* Is *inclusive* of all types of users, so that everyone can benefit equally
-  from your application, and
+* 能「包容」  所有類型的使用者，讓所有人都能公平得益於您的應用程式；以及
 
-* Is fair and transparent, and in particular doesn't marginalize
-  underrepresented groups. Remember what we learned earlier: AI is only as good
-  as the data it was trained on, and you need to be sure that your application
-  works for all of your potential users, regardless of who they are or
-  what they look like.
+* 公平和透明，特別是不將未獲得充分代表的群體邊緣化。 請記住我們前面學到的：AI 只會和所定型的資料一樣好，所以您需要確定應用程式能對所有的潛在使用者發揮作用，無論他們是誰或長得什麼樣。
 
-If you don't have an ethical framework set up, a great place to start is
-Microsoft's own principles for artificial intelligence, and you can read more at
-this link.
+如果您尚未設定倫理規則架構，請借鑑 Microsoft 的人工智慧原則，更多資訊請參閱此連結。
 
-### SLIDE: Wrapping up
+### <a name="slide-wrapping-up"></a>投影片：結語
 
-It's easy to add humanlike capabilities with pre-built AI. Pre-built models
-can't do everything, but they can get you a long way, quickly. We'll learn about
-custom models for the remaining 20% later in thus learning path.
+使用預先建立的 AI 可以輕鬆新增擬人化功能。 預先建立的模型非為萬能，但卻可以讓您快速取得進展。 在本學習路徑剩餘的 20% 時間裡，我們將了解自訂模型。
 
-AI is powerful, but it isn't magic. It's driven by data and, at its core, fairly
-simple math. Always keep the data in mind, and use it to help you understand
-what's going on. In particular, remember that even the best AI can make
-mistakes, especially about groups that aren’t well represented in the training
-data.
+AI 很強大，但不是魔法。 由資料和分數驅動，只是簡單的數學。 一律將資料牢記在心，並使用資料來協助您了解發生了什麼。 請務必謹記，即使最好的 AI 也會犯錯，特別是面對定型資料未能充分代表的群體。
 
-Finally, try it out! You don't need a lot of expertise to get started, but
-everyone needs to thing about the ethical implications of AI and how it affects
-people, so make sure you've developed an ethical framework for using AI, and
-stick to it.
+最後，放手一試！ 您不需要有大量的專業知識也能開始，但所有人都需要思考 AI 倫理意涵以及其對人們的影響；所以，請務必開發使用 AI 的倫理規則架構並確實遵循。
 
-### SLIDE: Docs Alert
+### <a name="slide-docs-alert"></a>投影片：Docs 提醒
 
-For all the details on Azure Cognitive Services, including getting started
-guides and references, check out Microsoft Docs.
+如需 Azure 認知服務的所有詳細資料，包括快速入門指南和參考，請參閱 Microsoft Docs。
 
-### SLIDE: MS Learn Alert
+### <a name="slide-ms-learn-alert"></a>投影片：MS Learn 提醒
 
-And if you'd like to learn how to use Cognitive Services, there are free courses
-on Microsoft Learn that will take you through using them step-by-step.
+如果想要了解如何使用認知服務，Microsoft Learn 有免費課程可逐步引導您使用該服務。
 
-### SLIDE: Resources
+### <a name="slide-resources"></a>投影片：資源
 
-To find links to Docs and Learn, and to all the resources I've mentioned in this
-talk, check out the Session Resources link on this slide. You can also run all of
-the demos I gave today yourself, using the code and scripts available in this
-github repository. And if you'd like to get a Microsoft Certification in AI or
-Data Science, theres a special offer for a free certificate for attendees today:
-check out this link for details.
+如需 Docs 和 Learn 的連結，以及我在此討論中提到的所有資源連結，請參閱此投影片的課程資源連結。 您也可以使用此 Gthub 存放庫提供的所有程式碼和指令碼，親自執行我今天提供的示範。 如果想要取得 AI 或資料科學的 Microsoft 認證，出席者今天有免費認證的特殊優惠：如需詳細資料，請參閱此連結。
 
-Thank you.
+感謝您。

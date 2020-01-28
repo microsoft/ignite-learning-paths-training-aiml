@@ -1,82 +1,82 @@
-# AIML40 - Demo Instructions
+# <a name="aiml40---demo-instructions"></a>AIML40 - 示範指示
 
-Instructions for the demos in AIML40, including the preparation needed, is described in detail in [AIML40 Public Materials](http://github.com/microsoft/ignite-learning-paths/aiml/aiml40/). We will not duplicate the steps described there, but highlight some important tricks that make the demo better (and fit within 45 mins). Please read the public material first to familiarize yourself with the demo scenario.
+[AIML40 公開材料](http://github.com/microsoft/ignite-learning-paths/aiml/aiml40/)會詳細描述 AIML40 中的示範指示，包括所需的準備工作。 我們不會複製此處所述的步驟，但會醒目提示一些重要技巧，讓示範更出眾 (不超過 45 分鐘)。 請先閱讀公開材料以熟悉示範案例。
 
-## Demo Preparation
+## <a name="demo-preparation"></a>示範準備
 
-As described in [AIML40 Public Readme](http://github.com/microsoft/ignite-learning-paths/aiml/aiml40/README.md), there are the following preparation steps:
+如 [AIML40 公開讀我檔案](http://github.com/microsoft/ignite-learning-paths/aiml/aiml40/README.md)中所述，準備步驟如下：
 
-1. Create Azure ML Workspace (using Azure Template or CLI Commands)
-2. Upload the dataset for the Automated ML demo to the workspace
-3. Create a compute cluster to speed up the demo
-4. Setup the Jupyter notebook environment and open `asba.ipynb` file in it, getting ready to execute.
+1. 建立 Azure ML 工作區 (使用 Azure 範本或 CLI 命令)
+2. 將適用於自動化 ML 示範的資料集上傳至工作區
+3. 建立計算叢集以加速示範
+4. 設定 Jupyter Notebook 環境並於其中開啟 `asba.ipynb` 檔案，準備開始執行。
 
-So, before the demo, you would have a browser with the following 3 pages open:
- - [Text Analytics Page](https://azure.microsoft.com/services/cognitive-services/text-analytics/?WT.mc_id=msignitethetour2019-github-aiml40)
- - [Azure ML Workspace](http://ml.azure.com)
- - Jupyter Notebook with `asba.ipynb`
+因此，在示範之前，您應該在瀏覽器開啟下列 3 頁：
+ - [文字分析頁面](https://azure.microsoft.com/services/cognitive-services/text-analytics/?WT.mc_id=msignitethetour2019-github-aiml40)
+ - [Azure ML 工作區](http://ml.azure.com)
+ - 具有 `asba.ipynb` 的 Jupyter Notebook
 
-In addition to those steps, to ensure speedy demo you need to do the following:
+除這些步驟之外，您還需要執行下列動作，以確保快速示範：
 
-> 💡 You must have completed the [environment setup](https://github.com/microsoft/ignite-learning-paths-training-aiml/blob/master/aiml40/Demo.md#demo-preparation) before attempting to do the demo.
+> 💡 您必須先完成[環境設定](https://github.com/microsoft/ignite-learning-paths-training-aiml/blob/master/aiml40/Demo.md#demo-preparation)，才能嘗試執行此示範。
 
-1. **For Demo 1:** Open the browser to [Text Analytics Page](https://azure.microsoft.com/services/cognitive-services/text-analytics/?WT.mc_id=msignitethetour2019-github-aiml40) and in the text box below enter the following text and press **Analyze**: 
+1. **示範 1：** 在瀏覽器開啟[文字分析頁面](https://azure.microsoft.com/services/cognitive-services/text-analytics/?WT.mc_id=msignitethetour2019-github-aiml40)，並在下方的文字方塊中輸入下列文字，然後按 [分析]  ： 
 > I loved the polka dot pants that I bought in the london store
 
-[Video Link to Demo 1: Cognitive Services Text Analytics](https://youtu.be/QJxjm5BirOA)
+[示範 1 的影片連結：Cognitive Services Text Analytics](https://youtu.be/QJxjm5BirOA) (認知服務文字分析)
 
-2. **For Demo 2:**
-   - Open the page with your [Azure ML Workspace](http://ml.azure.com). If required -- select the correct workspace.
-   - Make sure the dataset is uploaded
-   - Go to **Automated ML** tab in Azure Machine Learning workspace and perform the Automated ML experiment as described in the [AIML40 Public Readme](http://github.com/microsoft/ignite-learning-paths/aiml/aiml40/README.md). It will take quite a lot of time to run, so do it in advance.
-   - Make sure that you refresh the page shortly before the presentation, so that you do not have to login again when doing the demo
+2. **示範 2：**
+   - 使用 [Azure ML 工作區](http://ml.azure.com)開啟頁面。 如有必要 -- 選取正確的工作區。
+   - 確定資料集已上傳
+   - 移至 Azure Machine Learning 工作區的 [自動化 ML]  索引標籤，然後執行自動化 ML 實驗，如 [AIML40 公開讀我檔案](http://github.com/microsoft/ignite-learning-paths/aiml/aiml40/README.md)中所述。 因為執行需要相當長的時間，所以請先完成。
+   - 請務必在即將開始簡報前重新整理頁面，如此在執行示範時即不必再次登入
 
-[Video Link to Demo 2: Automated Machine Learning](https://youtu.be/qrstXN6TLZk)
+[示範 2 的影片連結：Automated Machine Learning](https://youtu.be/qrstXN6TLZk) (自動化機器學習)
 
-3. **For Demo 3:**
-   - Open `asba.ipynb` in the Jupyter Environment
-   - Make sure you have correct Subscription ID pasted in the code (and also Cluster name / Resource Group name, in case you have changed the defaults)
-   - Run all cells in the notebook making sure all steps run correctly. Some of the steps will take quite a lot of time to run, so prepare in advance. (the experiment takes ~3.5 hrs to run - this is why its important to have your compute cluster as low priority to save money)
-   - Make sure you finish working with the notebook just before the demo, so that you do not have to enter credentials again.
+3. **示範 3：**
+   - 在 Jupyter 環境中開啟 `asba.ipynb`
+   - 請確定在程式碼中貼上正確的訂閱識別碼 (以及叢集名稱/資源群組名稱，如已變更預設值)
+   - 執行筆記本中的所有儲存格，以確保所有步驟都正確執行。 某些步驟需要花較長的時間執行，因此請事先準備好。 (實驗執行時間約需 ~3.5 小時，所以讓計算叢集成為低優先順序以節省成本很重要)
+   - 請確定在示範開始前完成使用筆記本，如此就不需要再次輸入認證。
 
-[Video Link to Demo 3: Azure Machine Learning SDK and Hyperdrive](https://youtu.be/sccNTPO3PwU)
+[示範 3 的影片連結：Azure Machine Learning SDK and Hyperdrive](https://youtu.be/sccNTPO3PwU) (Azure Machine Learning SDK 和 Hyperdrive)
 
 
-## Demo Time!
+## <a name="demo-time"></a>示範開始！
 
-During the demo, we recommend to show the following:
+在示範期間，建議您顯示下列各項：
 
-1. **Demo 1.1**: Just open the browser with [Text Analytics Page](https://azure.microsoft.com/services/cognitive-services/text-analytics/?WT.mc_id=msignitethetour2019-github-aiml40) and click **Analyze**. Page should be pre-loaded.
-2. **Demo 1.2**: 
-  - On the same page, click **Example-English-Positive** to switch to default phrase *I had a wonderful trip to Seattle last week and even visited the Space Needle two times*, and then click **Analyze**
-  - Observe good positive score
-  - Remove the word **wonderful**
-  - Click **Analyze** and observe the score drop significantly
-3. **Demo 2:** Azure ML Workspace and Automated ML
-  - Open the browser with [Azure ML Workspace](http://ml.azure.com) -- page should be pre-loaded
-  - Navigate to **Datasets**
-  - Open the dateset
-  - Expand **Sample Usage** on **Overview** tab to show the code
-  - Switch to **Explore** to show the data
-  - Switch to **Automated ML**
-  - Put in experiment name, select compute, select dataset (clothing_automl.xlsx)
-  - Choose **Classification** task and **Rating** as target column
-  - Expand **Advanced settings** and demonstrate available options, including the selection of algorithms
-  - Click *Start* (but make sure you have a previously run experiment ready), as it will take a lot of time!
-  - Click on the **Automated ML** tab again, and bring up the previous experiment you have performed before during preparation phase
-  - Explain the graph showing different model runs, and what the best run is
-  - Click on the best model to explore the **ROC**, **Precision-Recall** and other metrics graphs in more detail
-  - Demonstrate the **Deploy model** button to show how simple it is to deploy a model
-4. **Demo 3:** Using Azure ML Service with Python SDK
-  - During this demo, you should follow and explain the cells of `absa.ipynb` notebook
-  - To be completely on the safe side, you can just show the code without running it at all - this would be safe, but will not create an impression of code being executed in live demo mode
-  - To make more live demo, please refer to [absa-instuctions.ipynb](absa-instuctions.ipynb) notebook, which explains which cells should *not* be run during the demo, and which can be safely run
-  - In general, what we want to avoid is long-running tasks
+1. **示範 1.1**：只要在瀏覽器開啟[文字分析頁面](https://azure.microsoft.com/services/cognitive-services/text-analytics/?WT.mc_id=msignitethetour2019-github-aiml40)，然後按一下 [分析]  即可。 頁面應預先載入。
+2. **示範 1.2**： 
+  - 在同一頁面中，按一下 [Example-English-Positive] \(範例-英文-正向\)  切換至預設片語 *I had a wonderful trip to Seattle last week and even visited the Space Needle two times*，然後按一下 [分析] 
+  - 觀察良好的正面分數
+  - 移除 **wonderful** 一詞
+  - 按一下 [分析]  ，然後觀察明顯下降的分數
+3. **示範 2：** Azure ML 工作區和自動化 ML
+  - 開啟瀏覽器，且 [Azure ML 工作區](http://ml.azure.com) 頁面應預先載入
+  - 巡覽至 [資料集] 
+  - 開啟 [資料集]
+  - 展開 [概觀]  索引標籤上的 [範例使用方式]  以顯示程式碼
+  - 切換至 [探索]  以顯示資料
+  - 切換至 [自動化 ML] 
+  - 填入實驗名稱，選取 [計算]，然後選取資料集 (clothing_automl.xlsx)
+  - 選擇 [分類]  工作和 [評分]  作為目標資料行
+  - 展開 [進階設定]  並示範可用的選項，包括演算法選項
+  - 按一下 [開始]  (但請務必準備好先前執行的實驗，因為這需要很多時間！)
+  - 按一下 [自動化 ML]  索引標籤，帶出之前在準備階段期間即執行過的實驗
+  - 說明顯示執行不同模型及最佳執行的圖表
+  - 按一下最佳模型以探索 **ROC**、**精確度重新叫用** 和其他計量圖形的詳細資訊
+  - 示範 [部署模型]  按鈕，顯示部署模型有多麼簡單
+4. **示範 3：** 使用 Azure ML 服務和 Python SDK
+  - 在此示範中，您應該遵循並說明 `absa.ipynb` 筆記本的儲存格
+  - 為確保百分百安全，您可以只顯示但完全不執行程式碼，這絕對安全，但就不會予人真正在示範模式中執行程式碼的印象
+  - 若要製作更生動的示範，請參閱 [absa-instuctions.ipynb](absa-instuctions.ipynb) 筆記本，其會說明示範期間「不」  該執行哪些儲存格，而哪些可以安全執行
+  - 一般而言，我們希望能避免長時間執行的工作
 
-## Tear Down
+## <a name="tear-down"></a>拆除
 
-Because the demo is resource-intensive, please do not forget to:
-* Delete the compute cluster (especially because auto-scale is turned off in our demo to save on cluster preparation time)
-* If you are running with Azure Machine Learning compute - make sure the minimum nodes are edited to 0 during down time and 1 during demo time - this will save cost
-* You may also delete the Azure ML Workspace and Resource group -- instructions are provided in the [Public Readme](http://github.com/microsoft/ignite-learning-paths/aiml/aiml40/README.md)
+因為示範需要大量資源，所以請別忘了：
+* 刪除計算叢集 (尤其為節省叢集準備時間，我們的示範關閉了自動調整功能)
+* 如果搭配 Azure Machine Learning 計算執行，請確定停機期間的節點下限設為 0、示範期間設為 1 以節省成本
+* 您也可以刪除 Azure ML 工作區和資源群組 -- 指示請參閱[公開讀我檔案](http://github.com/microsoft/ignite-learning-paths/aiml/aiml40/README.md)
 
