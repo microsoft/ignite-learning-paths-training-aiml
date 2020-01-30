@@ -1,14 +1,19 @@
 <!--
-This is a machine generated file, and should not be edited, as it will be overwritten with future updates.
+This is a machine generated file,
+and should not be edited,
+as it will be overwritten with future updates.
+
+If you have questions around this process
+please contact Scott Cate
 -->
 
 # AIML20 Presentation Files
 
-- [aiml20.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml20/aiml20.pptx) (Updated: Dec 14, 2019)
-- [aiml20.ko-kr.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml20/aiml20.ko-kr.pptx) (Updated: Jan 17, 2020)
+- [aiml20.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml20/aiml20.pptx) (Updated: Dec 13, 2019)
+- [aiml20.ko-kr.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml20/aiml20.ko-kr.pptx) (Updated: Jan 16, 2020)
 - [aiml20.zh-cn.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml20/aiml20.zh-cn.pptx) (Updated: Jan 09, 2020)
-- [aiml20.ja-jp.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml20/aiml20.ja-jp.pptx) (Updated: Dec 04, 2019)
-- [aiml20.pt-br.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml20/aiml20.pt-br.pptx) (Updated: Dec 04, 2019)
+- [aiml20.ja-jp.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml20/aiml20.ja-jp.pptx) (Updated: Dec 03, 2019)
+- [aiml20.pt-br.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml20/aiml20.pt-br.pptx) (Updated: Dec 03, 2019)
 ---
 ## Historical Files
 - [aiml20-2019-10_Oct-24.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml20/aiml20-2019-10_Oct-24.pptx)

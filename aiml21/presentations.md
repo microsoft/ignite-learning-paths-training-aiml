@@ -1,14 +1,19 @@
 <!--
-This is a machine generated file, and should not be edited, as it will be overwritten with future updates.
+This is a machine generated file,
+and should not be edited,
+as it will be overwritten with future updates.
+
+If you have questions around this process
+please contact Scott Cate
 -->
 
 # AIML21 Presentation Files
 
 - [aiml21.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml21/aiml21.pptx) (Updated: Jan 07, 2020)
-- [aiml21.pt-br.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml21/aiml21.pt-br.pptx) (Updated: Dec 04, 2019)
-- [aiml21.ko-kr.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml21/aiml21.ko-kr.pptx) (Updated: Jan 17, 2020)
-- [aiml21.zh-cn.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml21/aiml21.zh-cn.pptx) (Updated: Dec 04, 2019)
-- [aiml21.ja-jp.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml21/aiml21.ja-jp.pptx) (Updated: Dec 04, 2019)
+- [aiml21.pt-br.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml21/aiml21.pt-br.pptx) (Updated: Dec 03, 2019)
+- [aiml21.ko-kr.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml21/aiml21.ko-kr.pptx) (Updated: Jan 16, 2020)
+- [aiml21.zh-cn.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml21/aiml21.zh-cn.pptx) (Updated: Dec 03, 2019)
+- [aiml21.ja-jp.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml21/aiml21.ja-jp.pptx) (Updated: Dec 03, 2019)
 ---
 ## Historical Files
 - [aiml21-2019-10_Oct-24.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml21/aiml21-2019-10_Oct-24.pptx)

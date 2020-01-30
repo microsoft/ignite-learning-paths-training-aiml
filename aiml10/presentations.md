@@ -1,14 +1,19 @@
 <!--
-This is a machine generated file, and should not be edited, as it will be overwritten with future updates.
+This is a machine generated file,
+and should not be edited,
+as it will be overwritten with future updates.
+
+If you have questions around this process
+please contact Scott Cate
 -->
 
 # AIML10 Presentation Files
 
-- [aiml10.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/aiml10.pptx) (Updated: Nov 16, 2019)
-- [aiml10.ja-jp.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/aiml10.ja-jp.pptx) (Updated: Jan 22, 2020)
-- [aiml10.zh-cn.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/aiml10.zh-cn.pptx) (Updated: Dec 04, 2019)
-- [aiml10.ko-kr.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/aiml10.ko-kr.pptx) (Updated: Jan 17, 2020)
-- [aiml10.pt-br.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/aiml10.pt-br.pptx) (Updated: Dec 04, 2019)
+- [aiml10.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/aiml10.pptx) (Updated: Nov 15, 2019)
+- [aiml10.ja-jp.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/aiml10.ja-jp.pptx) (Updated: Jan 21, 2020)
+- [aiml10.zh-cn.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/aiml10.zh-cn.pptx) (Updated: Dec 03, 2019)
+- [aiml10.ko-kr.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/aiml10.ko-kr.pptx) (Updated: Jan 16, 2020)
+- [aiml10.pt-br.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/aiml10.pt-br.pptx) (Updated: Dec 03, 2019)
 ---
 ## Historical Files
 - [aiml10-2019-10_Oct-24.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/aiml10-2019-10_Oct-24.pptx)
