@@ -7,7 +7,7 @@ If you have questions around this process
 please contact Scott Cate
 -->
 
-# AIML20 Presentation Files
+# AIML20 Current Presentation Files
 
 - [aiml20.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml20/aiml20.pptx) (Updated: Dec 13, 2019)
 - [aiml20.ko-kr.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml20/aiml20.ko-kr.pptx) (Updated: Jan 16, 2020)
