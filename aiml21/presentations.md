@@ -9,11 +9,11 @@ please contact Scott Cate
 
 # AIML21 Current Presentation Files
 
-- [aiml21.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml21/aiml21.pptx) (Updated: Jan 07, 2020)
-- [aiml21.pt-br.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml21/aiml21.pt-br.pptx) (Updated: Dec 03, 2019)
-- [aiml21.ko-kr.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml21/aiml21.ko-kr.pptx) (Updated: Jan 16, 2020)
-- [aiml21.zh-cn.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml21/aiml21.zh-cn.pptx) (Updated: Dec 03, 2019)
-- [aiml21.ja-jp.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml21/aiml21.ja-jp.pptx) (Updated: Dec 03, 2019)
+- [aiml21.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml21/aiml21.pptx)
+- [aiml21.pt-br.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml21/aiml21.pt-br.pptx)
+- [aiml21.ko-kr.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml21/aiml21.ko-kr.pptx)
+- [aiml21.zh-cn.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml21/aiml21.zh-cn.pptx)
+- [aiml21.ja-jp.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml21/aiml21.ja-jp.pptx)
 ---
 ## Historical Files
 - [aiml21-2019-10_Oct-24.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml21/aiml21-2019-10_Oct-24.pptx)

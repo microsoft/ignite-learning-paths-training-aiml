@@ -9,11 +9,11 @@ please contact Scott Cate
 
 # AIML50 Current Presentation Files
 
-- [aiml50.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml50/aiml50.pptx) (Updated: Nov 15, 2019)
-- [aiml50.pt-br.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml50/aiml50.pt-br.pptx) (Updated: Dec 03, 2019)
-- [aiml50.zh-cn.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml50/aiml50.zh-cn.pptx) (Updated: Jan 09, 2020)
-- [aiml50.ja-jp.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml50/aiml50.ja-jp.pptx) (Updated: Jan 21, 2020)
-- [aiml50.ko-kr.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml50/aiml50.ko-kr.pptx) (Updated: Jan 16, 2020)
+- [aiml50.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml50/aiml50.pptx)
+- [aiml50.pt-br.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml50/aiml50.pt-br.pptx)
+- [aiml50.zh-cn.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml50/aiml50.zh-cn.pptx)
+- [aiml50.ja-jp.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml50/aiml50.ja-jp.pptx)
+- [aiml50.ko-kr.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml50/aiml50.ko-kr.pptx)
 ---
 ## Historical Files
 - [aiml50-2019-10_Oct-24.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml50/aiml50-2019-10_Oct-24.pptx)
