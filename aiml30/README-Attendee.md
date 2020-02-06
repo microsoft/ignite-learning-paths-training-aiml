@@ -35,6 +35,7 @@ Once you have created the base Azure Machine Learning Service Workspace we need 
 ## Build Model with Azure Machine Learning Visual Designer
 
 ### 1. Upload the dataset to the Datasets in AML
+
 * Download dataset to local from [here](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml30/datasets/ForecastingData.csv)
 * Click `Datasets`
 * Click `Create from local`
@@ -64,11 +65,13 @@ Once you have created the base Azure Machine Learning Service Workspace we need 
 * Connect `Score Model` with the `Evaluate` module.
 * Click the `Run` button in the bottom nav and select compute. 
 
+### 3. Edit Metadata
+
 * Rename the created column `Scored Labels` to `Forecast`
     * Drag the `Edit Metadata` onto the workspace
     * Connect `Score Model` with the `Edit Metadata` module
-    * In the `Parameters` of the `Edit Metadata` module. Click `Edit Columns`
-    * Type `Score Labels` into the text box (no need to change any of the defaults)
+    * In the `Parameters` of the `Edit Metadata` module. Click `Edit column`
+    * Type `Scored Labels` into the text box (no need to change any of the defaults)
     * Click `Save`
     * Next update the `New Column Name` field on the `Parameters` to `Forecast`
 * Transform the normalized value back to full item counts
@@ -85,11 +88,13 @@ Once you have created the base Azure Machine Learning Service Workspace we need 
 * Run the training
 
 ### 4. Create Inference Pipeline and Deploy the Model
+
+* Click `Pipelines` from the left nav
 * Click `Create inference pipeline` then select `Real-time inference pipeline`
 * Ensure the `Web Service Output` is connected to the last data processing step module `Select Columns in Dataset`
 * Click `Run`
 * Click `Deploy`
-* Navigate to the deployed web service from the left nav.
+* Navigate to the deployed web service (under `Endpoints`) in the left nav.
 * Click on the name of the web service created in advance.
 * Click `Test` and to see how it performs on a scored data item.
 * Click `Consume` and to see the sample code provided for integrating the web service.
