@@ -35,6 +35,7 @@ Once you have created the base Azure Machine Learning Service Workspace we need 
 ## Build Model with Azure Machine Learning Visual Designer
 
 ### 1. Upload the dataset to the Datasets in AML
+
 * Download dataset to local from [here](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml30/datasets/ForecastingData.csv)
 * Click `Datasets`
 * Click `Create from local`
@@ -64,11 +65,13 @@ Once you have created the base Azure Machine Learning Service Workspace we need 
 * Connect `Score Model` with the `Evaluate` module.
 * Click the `Run` button in the bottom nav and select compute. 
 
+### 3. Edit Metadata
+
 * Rename the created column `Scored Labels` to `Forecast`
     * Drag the `Edit Metadata` onto the workspace
     * Connect `Score Model` with the `Edit Metadata` module
-    * In the `Parameters` of the `Edit Metadata` module. Click `Edit Columns`
-    * Type `Score Labels` into the text box (no need to change any of the defaults)
+    * In the `Parameters` of the `Edit Metadata` module. Click `Edit column`
+    * Type `Scored Labels` into the text box (no need to change any of the defaults)
     * Click `Save`
     * Next update the `New Column Name` field on the `Parameters` to `Forecast`
 * Transform the normalized value back to full item counts
@@ -85,16 +88,18 @@ Once you have created the base Azure Machine Learning Service Workspace we need 
 * Run the training
 
 ### 4. Create Inference Pipeline and Deploy the Model
+
+* Click `Pipelines` from the left nav
 * Click `Create inference pipeline` then select `Real-time inference pipeline`
 * Ensure the `Web Service Output` is connected to the last data processing step module `Select Columns in Dataset`
 * Click `Run`
 * Click `Deploy`
-* Navigate to the deployed web service from the left nav.
+* Navigate to the deployed web service (under `Endpoints`) in the left nav.
 * Click on the name of the web service created in advance.
 * Click `Test` and to see how it performs on a scored data item.
 * Click `Consume` and to see the sample code provided for integrating the web service.
 
-### 5. Testing API with C# console app (dotnet core)
+### 5. Test API with C# console app (dotnet core)
 
 1. [Download VS Code here](https://code.visualstudio.com/download)
 2. Clone the app with the following command
@@ -114,9 +119,24 @@ Once you have created the base Azure Machine Learning Service Workspace we need 
     * To use the default values of StoreID (ID1) of 2 and ItemID    (ID2) of 1 and the number of weeks to predict. Just type `y`
     * This will run and should return the predicted values for the  next 4 weeks.
 
+
+### 6. Optional: Additionally Test API with Python in Notebook VMs using Jupyter Notebooks
+1. Navigate to `Compute` and create a new Notebook VM
+![Create Compute](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml30/CreateNotebookVM.gif)
+2. Once created under column `Application URI`click the `Jupyter Lab` option. (This will not display until the VM is in a `running` state.)
+3. Click the terminal from the home page of Jupyter lab
+4. Clone the repo from the terminal in Jupyter lab
+    * `git clone https://github.com/microsoft/ignite-learning-paths-training-aiml.git`
+5. Also in the terminal `pip install holidays`
+6. Open the `ignite-learning-paths-training-aiml` cloned folder and navigate to the `ignite-ailml30-get-prediction.ipynb` file and click to open it.
+    * The full path should be something like this: `ignite-learning-paths-training-aiml\aiml30\Python\ignite-ailml30-get-prediction.ipynb`
+7. Update the path to the csv file, the endpoint and the key.
+8. `SHIFT + Enter` or click play on each cell from the top menu to run each cell
+
 ## PowerPoint Deck and Video Demo
 
-- [PowerPoint deck](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml30/AIML30_How%20to%20Build%20Machine%20Learning%20Models.pptx)
+- [PowerPoint deck](presentations.md)
+
 - [Demonstration videos](https://www.youtube.com/watch?v=u1ppYaZuNmo&feature=youtu.be)
 
 ## Resources and Continue Learning

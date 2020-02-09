@@ -1,0 +1,137 @@
+<Objs Version="1.1.0.1" xmlns="http://schemas.microsoft.com/powershell/2004/04">
+  <Obj RefId="0">
+    <TN RefId="0">
+      <T>Microsoft.PowerShell.Commands.PSRepositoryItemInfo</T>
+      <T>System.Management.Automation.PSCustomObject</T>
+      <T>System.Object</T>
+    </TN>
+    <MS>
+      <S N="Name">SHiPS</S>
+      <Version N="Version">0.8.1</Version>
+      <S N="Type">Module</S>
+      <S N="Description">SHiPS is a PowerShell provider. More accurately it is a provider platform that simplifies developing PowerShell providers.</S>
+      <S N="Author">Microsoft Corporation</S>
+      <Obj N="CompanyName" RefId="1">
+        <TN RefId="1">
+          <T>System.Object[]</T>
+          <T>System.Array</T>
+          <T>System.Object</T>
+        </TN>
+        <LST>
+          <S>PowerShellTeam</S>
+          <S>Jianyunt</S>
+          <S>jen</S>
+        </LST>
+      </Obj>
+      <S N="Copyright">© Microsoft Corporation. All rights reserved.</S>
+      <DT N="PublishedDate">2018-09-21T19:08:52-05:00</DT>
+      <Obj N="InstalledDate" RefId="2">
+        <DT>2019-04-16T16:55:32.3315006-05:00</DT>
+        <MS>
+          <Obj N="DisplayHint" RefId="3">
+            <TN RefId="2">
+              <T>Microsoft.PowerShell.Commands.DisplayHintType</T>
+              <T>System.Enum</T>
+              <T>System.ValueType</T>
+              <T>System.Object</T>
+            </TN>
+            <ToString>DateTime</ToString>
+            <I32>2</I32>
+          </Obj>
+        </MS>
+      </Obj>
+      <Nil N="UpdatedDate" />
+      <Nil N="LicenseUri" />
+      <URI N="ProjectUri">https://github.com/PowerShell/SHiPS</URI>
+      <Nil N="IconUri" />
+      <Obj N="Tags" RefId="4">
+        <TNRef RefId="1" />
+        <LST>
+          <S>SHiPS</S>
+          <S>PSEdition_Core</S>
+          <S>PSEdition_Desktop</S>
+          <S>Linux</S>
+          <S>Mac</S>
+          <S>PSModule</S>
+        </LST>
+      </Obj>
+      <Obj N="Includes" RefId="5">
+        <TN RefId="3">
+          <T>System.Collections.Hashtable</T>
+          <T>System.Object</T>
+        </TN>
+        <DCT>
+          <En>
+            <S N="Key">Command</S>
+            <Obj N="Value" RefId="6">
+              <TNRef RefId="1" />
+              <LST />
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">Workflow</S>
+            <Ref N="Value" RefId="6" />
+          </En>
+          <En>
+            <S N="Key">Cmdlet</S>
+            <Ref N="Value" RefId="6" />
+          </En>
+          <En>
+            <S N="Key">Function</S>
+            <Ref N="Value" RefId="6" />
+          </En>
+          <En>
+            <S N="Key">RoleCapability</S>
+            <Ref N="Value" RefId="6" />
+          </En>
+          <En>
+            <S N="Key">DscResource</S>
+            <Ref N="Value" RefId="6" />
+          </En>
+        </DCT>
+      </Obj>
+      <Nil N="PowerShellGetFormatVersion" />
+      <S N="ReleaseNotes">## 0.8.1_x000D__x000A_* Added Get-Content and Set-Content._x000D__x000A_## 0.8.0_x000D__x000A_* Changed to single .NET Standard 2.0 assembly_x000D__x000A_* Added error handling for unspported provider cmdlets._x000D__x000A_## 0.7.2_x000D__x000A_* Bug fix for 'dir -force' case._x000D__x000A_## 0.7.1_x000D__x000A_* Perf improvement. For providers using cached data, [SHiPSProvider(UseCache=$true)], 'dir -force' will only refresh the last node in the path._x000D__x000A_* Allowed to navigate home directory, e.g., 'dir ~' or 'cd ~' under SHiPS based provider drive._x000D__x000A_## 0.7.0_x000D__x000A_* Fixed forward slash issue on Linux._x000D__x000A_* Fixed Set-Location drive: path issue on Linux._x000D__x000A_## 0.6.0_x000D__x000A_* Fixed Test-Path cmdlet._x000D__x000A_* Updated SHiPS to build with .NET Core 2.0.5 to be in sync with pwsh._x000D__x000A_* Fixed SHiPS formats.ps1xml.</S>
+      <Obj N="Dependencies" RefId="7">
+        <TNRef RefId="1" />
+        <LST />
+      </Obj>
+      <S N="RepositorySourceLocation">https://www.powershellgallery.com/api/v2/</S>
+      <S N="Repository">PSGallery</S>
+      <S N="PackageManagementProvider">NuGet</S>
+      <Obj N="AdditionalMetadata" RefId="8">
+        <TN RefId="4">
+          <T>System.Management.Automation.PSCustomObject</T>
+          <T>System.Object</T>
+        </TN>
+        <MS>
+          <S N="copyright">© Microsoft Corporation. All rights reserved.</S>
+          <S N="description">SHiPS is a PowerShell provider. More accurately it is a provider platform that simplifies developing PowerShell providers.</S>
+          <S N="requireLicenseAcceptance">False</S>
+          <S N="releaseNotes">## 0.8.1_x000D__x000A_* Added Get-Content and Set-Content._x000D__x000A_## 0.8.0_x000D__x000A_* Changed to single .NET Standard 2.0 assembly_x000D__x000A_* Added error handling for unspported provider cmdlets._x000D__x000A_## 0.7.2_x000D__x000A_* Bug fix for 'dir -force' case._x000D__x000A_## 0.7.1_x000D__x000A_* Perf improvement. For providers using cached data, [SHiPSProvider(UseCache=$true)], 'dir -force' will only refresh the last node in the path._x000D__x000A_* Allowed to navigate home directory, e.g., 'dir ~' or 'cd ~' under SHiPS based provider drive._x000D__x000A_## 0.7.0_x000D__x000A_* Fixed forward slash issue on Linux._x000D__x000A_* Fixed Set-Location drive: path issue on Linux._x000D__x000A_## 0.6.0_x000D__x000A_* Fixed Test-Path cmdlet._x000D__x000A_* Updated SHiPS to build with .NET Core 2.0.5 to be in sync with pwsh._x000D__x000A_* Fixed SHiPS formats.ps1xml.</S>
+          <S N="isLatestVersion">True</S>
+          <S N="isAbsoluteLatestVersion">True</S>
+          <S N="versionDownloadCount">184251</S>
+          <S N="downloadCount">298164</S>
+          <S N="packageSize">104582</S>
+          <S N="published">9/21/2018 7:08:52 PM -05:00</S>
+          <S N="created">9/21/2018 7:08:52 PM -05:00</S>
+          <S N="lastUpdated">4/16/2019 9:51:32 PM -05:00</S>
+          <S N="tags">SHiPS PSEdition_Core PSEdition_Desktop Linux Mac PSModule</S>
+          <S N="developmentDependency">False</S>
+          <S N="updated">2019-04-16T21:51:32Z</S>
+          <S N="NormalizedVersion">0.8.1</S>
+          <S N="Authors">Microsoft Corporation</S>
+          <S N="IsPrerelease">false</S>
+          <S N="ItemType">Module</S>
+          <S N="FileList">SHiPS.nuspec|CodeOwls.PowerShell.Paths.dll|CodeOwls.PowerShell.Paths.pdb|CodeOwls.PowerShell.Provider.dll|CodeOwls.PowerShell.Provider.pdb|Microsoft.PowerShell.SHiPS.dll|Microsoft.PowerShell.SHiPS.pdb|SHiPS.formats.ps1xml|SHiPS.psd1</S>
+          <S N="GUID">A5FE6B04-385F-470F-9347-66EB3645B422</S>
+          <S N="PowerShellVersion">5.0</S>
+          <S N="DotNetFrameworkVersion">4.7.1</S>
+          <S N="CompanyName">Microsoft Corporation</S>
+        </MS>
+      </Obj>
+      <S N="InstalledLocation">C:\Users\steve\OneDrive\Documents\PowerShell\Modules\SHiPS\0.8.1</S>
+    </MS>
+  </Obj>
+</Objs>

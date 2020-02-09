@@ -49,7 +49,7 @@ the remaining steps were done live, to save time.
 1. This project has already been provided with images of drills, hammers, pliers, and screwdrivers. Let's add some images of hard hats as well.
 
 - Click "Add Images" in the top row
-- Browse to CV Training Images / drills
+- Browse to CV Training Images / hardhats
 - Select all files: click one file, then press Control-A
 - Click Open
 - In the "Image Upload" dialog that appears next, select "hard hat" in "My Tags" and then click "Upload 16 Files"

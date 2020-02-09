@@ -23,7 +23,7 @@ code.
 ## Assets in Train-The-Trainer kit
 
 - This guide
-- PowerPoint presentation including notes for each slide [here](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml30/aiml30.pptx) or [presentations.md](https://github.com/microsoft/ignite-learning-paths-training-aiml/blob/master/aiml30/presentations.md)
+- PowerPoint presentation including notes for each slide at [presentations.md](https://github.com/microsoft/ignite-learning-paths-training-aiml/blob/master/aiml30/presentations.md)
 - Full-length recording of presentation [here](https://www.youtube.com/watch?v=u1ppYaZuNmo&amp=&feature=youtu.be)
 - Individual recording of stage-ready hands-on demo [here](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml30/FullIgniteModelBuildDemo.mp4). This is also included in a hidden slide in the slide deck.
 - Demo Resource Guides
@@ -51,7 +51,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <table>
 <tr>
     <td align="center">
-        <img src="https://media.licdn.com/dms/image/C4E03AQFV-bjxXWxeIw/profile-displayphoto-shrink_200_200/0?e=1575504000&v=beta&t=i0CssIxPnjai9cTjruIvKVrACO0J2qCCJRm-PLEI1q0" width="100px;" alt="Cassie Breviu"/><br />
+        <img src="https://raw.githubusercontent.com/cassieview/bio/d2c9c83169d5c88f2ffc5e89e4dc16a6658438b8/cassieb.png" width="100px;" alt="Cassie Breviu"/><br />
         <sub><b>Cassie Breviu</b></sub><br />
             <a href="https://github.com/microsoft/ignite-learning-paths-training-aiml/aiml30/" title="talk">📢</a>
             <a href="https://github.com/microsoft/ignite-learning-paths-training-aiml/aiml30/" title="Documentation">📖</a>

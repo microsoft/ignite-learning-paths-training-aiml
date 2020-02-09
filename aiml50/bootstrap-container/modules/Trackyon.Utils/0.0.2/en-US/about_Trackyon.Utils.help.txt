@@ -1,0 +1,17 @@
+﻿TOPIC
+    about_trackyon.utils
+
+SHORT DESCRIPTION
+    Trackyon Utils is a collection of functions to make using PowerShell more
+    pleasant.
+
+LONG DESCRIPTION
+    Trackyon Utils is a collection of functions to make using PowerShell more
+    pleasant.
+
+EXAMPLES
+    PS C:\Users\user\\Documents\PowerShell\Modules> bu 4
+    PS C:\Users>
+
+    Moves the user back 4 levels.
+

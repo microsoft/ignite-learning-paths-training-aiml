@@ -1,0 +1,412 @@
+<Objs Version="1.1.0.1" xmlns="http://schemas.microsoft.com/powershell/2004/04">
+  <Obj RefId="0">
+    <TN RefId="0">
+      <T>Microsoft.PowerShell.Commands.PSRepositoryItemInfo</T>
+      <T>System.Management.Automation.PSCustomObject</T>
+      <T>System.Object</T>
+    </TN>
+    <MS>
+      <S N="Name">VSTeam</S>
+      <S N="Version">6.3.5</S>
+      <S N="Type">Module</S>
+      <S N="Description">Adds functionality for working with Azure DevOps and Team Foundation Server.</S>
+      <S N="Author">@DonovanBrown</S>
+      <S N="CompanyName">darquewarrior</S>
+      <S N="Copyright">(c) 2019 Donovan Brown. All rights reserved.</S>
+      <DT N="PublishedDate">2019-09-22T14:36:02-05:00</DT>
+      <Nil N="InstalledDate" />
+      <Nil N="UpdatedDate" />
+      <URI N="LicenseUri">https://github.com/DarqueWarrior/vsteam/blob/master/LICENSE</URI>
+      <URI N="ProjectUri">https://github.com/DarqueWarrior/vsteam</URI>
+      <Nil N="IconUri" />
+      <Obj N="Tags" RefId="1">
+        <TN RefId="1">
+          <T>System.Object[]</T>
+          <T>System.Array</T>
+          <T>System.Object</T>
+        </TN>
+        <LST>
+          <S>VSTS</S>
+          <S>TFS</S>
+          <S>DevOps</S>
+          <S>VisualStudio</S>
+          <S>TeamServices</S>
+          <S>Team</S>
+          <S>AzureDevOps</S>
+          <S>Pipelines</S>
+          <S>Boards</S>
+          <S>Artifacts</S>
+          <S>TestPlans</S>
+          <S>Repos</S>
+          <S>AzD</S>
+          <S>ADO</S>
+          <S>AzDO</S>
+        </LST>
+      </Obj>
+      <Obj N="Includes" RefId="2">
+        <TN RefId="2">
+          <T>System.Collections.Hashtable</T>
+          <T>System.Object</T>
+        </TN>
+        <DCT>
+          <En>
+            <S N="Key">RoleCapability</S>
+            <Obj N="Value" RefId="3">
+              <TNRef RefId="1" />
+              <LST />
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">Workflow</S>
+            <Ref N="Value" RefId="3" />
+          </En>
+          <En>
+            <S N="Key">Command</S>
+            <Obj N="Value" RefId="4">
+              <TNRef RefId="1" />
+              <LST>
+                <S>Add-VSTeam</S>
+                <S>Add-VSTeamAccessControlEntry</S>
+                <S>Add-VSTeamAzureRMServiceEndpoint</S>
+                <S>Add-VSTeamBuild</S>
+                <S>Add-VSTeamBuildDefinition</S>
+                <S>Add-VSTeamBuildTag</S>
+                <S>Add-VSTeamExtension</S>
+                <S>Add-VSTeamFeed</S>
+                <S>Add-VSTeamGitRepository</S>
+                <S>Add-VSTeamGitRepositoryPermission</S>
+                <S>Add-VSTeamKubernetesEndpoint</S>
+                <S>Add-VSTeamMembership</S>
+                <S>Add-VSTeamNuGetEndpoint</S>
+                <S>Add-VSTeamPolicy</S>
+                <S>Add-VSTeamProfile</S>
+                <S>Add-VSTeamProject</S>
+                <S>Add-VSTeamProjectPermission</S>
+                <S>Add-VSTeamRelease</S>
+                <S>Add-VSTeamReleaseDefinition</S>
+                <S>Add-VSTeamServiceEndpoint</S>
+                <S>Add-VSTeamServiceFabricEndpoint</S>
+                <S>Add-VSTeamSonarQubeEndpoint</S>
+                <S>Add-VSTeamUserEntitlement</S>
+                <S>Add-VSTeamVariableGroup</S>
+                <S>Add-VSTeamWorkItem</S>
+                <S>Add-VSTeamWorkItemAreaPermission</S>
+                <S>Add-VSTeamWorkItemIterationPermission</S>
+                <S>Clear-VSTeamDefaultProject</S>
+                <S>Disable-VSTeamAgent</S>
+                <S>Enable-VSTeamAgent</S>
+                <S>Get-VSTeam</S>
+                <S>Get-VSTeamAccessControlList</S>
+                <S>Get-VSTeamAgent</S>
+                <S>Get-VSTeamAPIVersion</S>
+                <S>Get-VSTeamApproval</S>
+                <S>Get-VSTeamBuild</S>
+                <S>Get-VSTeamBuildArtifact</S>
+                <S>Get-VSTeamBuildDefinition</S>
+                <S>Get-VSTeamBuildLog</S>
+                <S>Get-VSTeamBuildTag</S>
+                <S>Get-VSTeamClassificationNode</S>
+                <S>Get-VSTeamCloudSubscription</S>
+                <S>Get-VSTeamDescriptor</S>
+                <S>Get-VSTeamExtension</S>
+                <S>Get-VSTeamFeed</S>
+                <S>Get-VSTeamGitRef</S>
+                <S>Get-VSTeamGitRepository</S>
+                <S>Get-VSTeamGroup</S>
+                <S>Get-VSTeamInfo</S>
+                <S>Get-VSTeamJobRequest</S>
+                <S>Get-VSTeamMember</S>
+                <S>Get-VSTeamMembership</S>
+                <S>Get-VSTeamOption</S>
+                <S>Get-VSTeamPolicy</S>
+                <S>Get-VSTeamPolicyType</S>
+                <S>Get-VSTeamPool</S>
+                <S>Get-VSTeamProcess</S>
+                <S>Get-VSTeamProfile</S>
+                <S>Get-VSTeamProject</S>
+                <S>Get-VSTeamPullRequest</S>
+                <S>Get-VSTeamQueue</S>
+                <S>Get-VSTeamRelease</S>
+                <S>Get-VSTeamReleaseDefinition</S>
+                <S>Get-VSTeamResourceArea</S>
+                <S>Get-VSTeamSecurityNamespace</S>
+                <S>Get-VSTeamServiceEndpoint</S>
+                <S>Get-VSTeamServiceEndpointType</S>
+                <S>Get-VSTeamTfvcBranch</S>
+                <S>Get-VSTeamTfvcRootBranch</S>
+                <S>Get-VSTeamUser</S>
+                <S>Get-VSTeamUserEntitlement</S>
+                <S>Get-VSTeamVariableGroup</S>
+                <S>Get-VSTeamWorkItem</S>
+                <S>Get-VSTeamWorkItemType</S>
+                <S>Invoke-VSTeamRequest</S>
+                <S>Remove-VSTeam</S>
+                <S>Remove-VSTeamAccessControlList</S>
+                <S>Remove-VSTeamAccount</S>
+                <S>Remove-VSTeamAgent</S>
+                <S>Remove-VSTeamBuild</S>
+                <S>Remove-VSTeamBuildDefinition</S>
+                <S>Remove-VSTeamBuildTag</S>
+                <S>Remove-VSTeamExtension</S>
+                <S>Remove-VSTeamFeed</S>
+                <S>Remove-VSTeamGitRepository</S>
+                <S>Remove-VSTeamMembership</S>
+                <S>Remove-VSTeamPolicy</S>
+                <S>Remove-VSTeamProfile</S>
+                <S>Remove-VSTeamProject</S>
+                <S>Remove-VSTeamRelease</S>
+                <S>Remove-VSTeamReleaseDefinition</S>
+                <S>Remove-VSTeamServiceEndpoint</S>
+                <S>Remove-VSTeamUserEntitlement</S>
+                <S>Remove-VSTeamVariableGroup</S>
+                <S>Set-VSTeamAccount</S>
+                <S>Set-VSTeamAlias</S>
+                <S>Set-VSTeamAPIVersion</S>
+                <S>Set-VSTeamApproval</S>
+                <S>Set-VSTeamDefaultProject</S>
+                <S>Set-VSTeamEnvironmentStatus</S>
+                <S>Set-VSTeamReleaseStatus</S>
+                <S>Show-VSTeam</S>
+                <S>Show-VSTeamApproval</S>
+                <S>Show-VSTeamBuild</S>
+                <S>Show-VSTeamBuildDefinition</S>
+                <S>Show-VSTeamFeed</S>
+                <S>Show-VSTeamGitRepository</S>
+                <S>Show-VSTeamProject</S>
+                <S>Show-VSTeamPullRequest</S>
+                <S>Show-VSTeamRelease</S>
+                <S>Show-VSTeamReleaseDefinition</S>
+                <S>Show-VSTeamWorkItem</S>
+                <S>Test-VSTeamMembership</S>
+                <S>Update-VSTeam</S>
+                <S>Update-VSTeamBuild</S>
+                <S>Update-VSTeamBuildDefinition</S>
+                <S>Update-VSTeamExtension</S>
+                <S>Update-VSTeamPolicy</S>
+                <S>Update-VSTeamProfile</S>
+                <S>Update-VSTeamProject</S>
+                <S>Update-VSTeamRelease</S>
+                <S>Update-VSTeamReleaseDefinition</S>
+                <S>Update-VSTeamServiceEndpoint</S>
+                <S>Update-VSTeamUserEntitlement</S>
+                <S>Update-VSTeamVariableGroup</S>
+                <S>Update-VSTeamWorkItem</S>
+              </LST>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">Cmdlet</S>
+            <Ref N="Value" RefId="3" />
+          </En>
+          <En>
+            <S N="Key">DscResource</S>
+            <Ref N="Value" RefId="3" />
+          </En>
+          <En>
+            <S N="Key">Function</S>
+            <Obj N="Value" RefId="5">
+              <TNRef RefId="1" />
+              <LST>
+                <S>Add-VSTeam</S>
+                <S>Add-VSTeamAccessControlEntry</S>
+                <S>Add-VSTeamAzureRMServiceEndpoint</S>
+                <S>Add-VSTeamBuild</S>
+                <S>Add-VSTeamBuildDefinition</S>
+                <S>Add-VSTeamBuildTag</S>
+                <S>Add-VSTeamExtension</S>
+                <S>Add-VSTeamFeed</S>
+                <S>Add-VSTeamGitRepository</S>
+                <S>Add-VSTeamGitRepositoryPermission</S>
+                <S>Add-VSTeamKubernetesEndpoint</S>
+                <S>Add-VSTeamMembership</S>
+                <S>Add-VSTeamNuGetEndpoint</S>
+                <S>Add-VSTeamPolicy</S>
+                <S>Add-VSTeamProfile</S>
+                <S>Add-VSTeamProject</S>
+                <S>Add-VSTeamProjectPermission</S>
+                <S>Add-VSTeamRelease</S>
+                <S>Add-VSTeamReleaseDefinition</S>
+                <S>Add-VSTeamServiceEndpoint</S>
+                <S>Add-VSTeamServiceFabricEndpoint</S>
+                <S>Add-VSTeamSonarQubeEndpoint</S>
+                <S>Add-VSTeamUserEntitlement</S>
+                <S>Add-VSTeamVariableGroup</S>
+                <S>Add-VSTeamWorkItem</S>
+                <S>Add-VSTeamWorkItemAreaPermission</S>
+                <S>Add-VSTeamWorkItemIterationPermission</S>
+                <S>Clear-VSTeamDefaultProject</S>
+                <S>Disable-VSTeamAgent</S>
+                <S>Enable-VSTeamAgent</S>
+                <S>Get-VSTeam</S>
+                <S>Get-VSTeamAccessControlList</S>
+                <S>Get-VSTeamAgent</S>
+                <S>Get-VSTeamAPIVersion</S>
+                <S>Get-VSTeamApproval</S>
+                <S>Get-VSTeamBuild</S>
+                <S>Get-VSTeamBuildArtifact</S>
+                <S>Get-VSTeamBuildDefinition</S>
+                <S>Get-VSTeamBuildLog</S>
+                <S>Get-VSTeamBuildTag</S>
+                <S>Get-VSTeamClassificationNode</S>
+                <S>Get-VSTeamCloudSubscription</S>
+                <S>Get-VSTeamDescriptor</S>
+                <S>Get-VSTeamExtension</S>
+                <S>Get-VSTeamFeed</S>
+                <S>Get-VSTeamGitRef</S>
+                <S>Get-VSTeamGitRepository</S>
+                <S>Get-VSTeamGroup</S>
+                <S>Get-VSTeamInfo</S>
+                <S>Get-VSTeamJobRequest</S>
+                <S>Get-VSTeamMember</S>
+                <S>Get-VSTeamMembership</S>
+                <S>Get-VSTeamOption</S>
+                <S>Get-VSTeamPolicy</S>
+                <S>Get-VSTeamPolicyType</S>
+                <S>Get-VSTeamPool</S>
+                <S>Get-VSTeamProcess</S>
+                <S>Get-VSTeamProfile</S>
+                <S>Get-VSTeamProject</S>
+                <S>Get-VSTeamPullRequest</S>
+                <S>Get-VSTeamQueue</S>
+                <S>Get-VSTeamRelease</S>
+                <S>Get-VSTeamReleaseDefinition</S>
+                <S>Get-VSTeamResourceArea</S>
+                <S>Get-VSTeamSecurityNamespace</S>
+                <S>Get-VSTeamServiceEndpoint</S>
+                <S>Get-VSTeamServiceEndpointType</S>
+                <S>Get-VSTeamTfvcBranch</S>
+                <S>Get-VSTeamTfvcRootBranch</S>
+                <S>Get-VSTeamUser</S>
+                <S>Get-VSTeamUserEntitlement</S>
+                <S>Get-VSTeamVariableGroup</S>
+                <S>Get-VSTeamWorkItem</S>
+                <S>Get-VSTeamWorkItemType</S>
+                <S>Invoke-VSTeamRequest</S>
+                <S>Remove-VSTeam</S>
+                <S>Remove-VSTeamAccessControlList</S>
+                <S>Remove-VSTeamAccount</S>
+                <S>Remove-VSTeamAgent</S>
+                <S>Remove-VSTeamBuild</S>
+                <S>Remove-VSTeamBuildDefinition</S>
+                <S>Remove-VSTeamBuildTag</S>
+                <S>Remove-VSTeamExtension</S>
+                <S>Remove-VSTeamFeed</S>
+                <S>Remove-VSTeamGitRepository</S>
+                <S>Remove-VSTeamMembership</S>
+                <S>Remove-VSTeamPolicy</S>
+                <S>Remove-VSTeamProfile</S>
+                <S>Remove-VSTeamProject</S>
+                <S>Remove-VSTeamRelease</S>
+                <S>Remove-VSTeamReleaseDefinition</S>
+                <S>Remove-VSTeamServiceEndpoint</S>
+                <S>Remove-VSTeamUserEntitlement</S>
+                <S>Remove-VSTeamVariableGroup</S>
+                <S>Set-VSTeamAccount</S>
+                <S>Set-VSTeamAlias</S>
+                <S>Set-VSTeamAPIVersion</S>
+                <S>Set-VSTeamApproval</S>
+                <S>Set-VSTeamDefaultProject</S>
+                <S>Set-VSTeamEnvironmentStatus</S>
+                <S>Set-VSTeamReleaseStatus</S>
+                <S>Show-VSTeam</S>
+                <S>Show-VSTeamApproval</S>
+                <S>Show-VSTeamBuild</S>
+                <S>Show-VSTeamBuildDefinition</S>
+                <S>Show-VSTeamFeed</S>
+                <S>Show-VSTeamGitRepository</S>
+                <S>Show-VSTeamProject</S>
+                <S>Show-VSTeamPullRequest</S>
+                <S>Show-VSTeamRelease</S>
+                <S>Show-VSTeamReleaseDefinition</S>
+                <S>Show-VSTeamWorkItem</S>
+                <S>Test-VSTeamMembership</S>
+                <S>Update-VSTeam</S>
+                <S>Update-VSTeamBuild</S>
+                <S>Update-VSTeamBuildDefinition</S>
+                <S>Update-VSTeamExtension</S>
+                <S>Update-VSTeamPolicy</S>
+                <S>Update-VSTeamProfile</S>
+                <S>Update-VSTeamProject</S>
+                <S>Update-VSTeamRelease</S>
+                <S>Update-VSTeamReleaseDefinition</S>
+                <S>Update-VSTeamServiceEndpoint</S>
+                <S>Update-VSTeamUserEntitlement</S>
+                <S>Update-VSTeamVariableGroup</S>
+                <S>Update-VSTeamWorkItem</S>
+              </LST>
+            </Obj>
+          </En>
+        </DCT>
+      </Obj>
+      <Nil N="PowerShellGetFormatVersion" />
+      <S N="ReleaseNotes">https://github.com/DarqueWarrior/vsteam/blob/master/CHANGELOG.md</S>
+      <Obj N="Dependencies" RefId="6">
+        <TNRef RefId="1" />
+        <LST>
+          <Obj RefId="7">
+            <TN RefId="3">
+              <T>System.Collections.Specialized.OrderedDictionary</T>
+              <T>System.Object</T>
+            </TN>
+            <DCT>
+              <En>
+                <S N="Key">Name</S>
+                <S N="Value">SHiPS</S>
+              </En>
+              <En>
+                <S N="Key">CanonicalId</S>
+                <S N="Value">nuget:SHiPS</S>
+              </En>
+            </DCT>
+          </Obj>
+          <Obj RefId="8">
+            <TNRef RefId="3" />
+            <DCT>
+              <En>
+                <S N="Key">Name</S>
+                <S N="Value">Trackyon.Utils</S>
+              </En>
+              <En>
+                <S N="Key">CanonicalId</S>
+                <S N="Value">nuget:Trackyon.Utils</S>
+              </En>
+            </DCT>
+          </Obj>
+        </LST>
+      </Obj>
+      <S N="RepositorySourceLocation">https://www.powershellgallery.com/api/v2</S>
+      <S N="Repository">PSGallery</S>
+      <S N="PackageManagementProvider">NuGet</S>
+      <Obj N="AdditionalMetadata" RefId="9">
+        <TN RefId="4">
+          <T>System.Management.Automation.PSCustomObject</T>
+          <T>System.Object</T>
+        </TN>
+        <MS>
+          <S N="copyright">(c) 2019 Donovan Brown. All rights reserved.</S>
+          <S N="description">Adds functionality for working with Azure DevOps and Team Foundation Server.</S>
+          <S N="requireLicenseAcceptance">False</S>
+          <S N="releaseNotes">https://github.com/DarqueWarrior/vsteam/blob/master/CHANGELOG.md</S>
+          <S N="isLatestVersion">True</S>
+          <S N="isAbsoluteLatestVersion">True</S>
+          <S N="versionDownloadCount">1580</S>
+          <S N="downloadCount">352955</S>
+          <S N="packageSize">111019</S>
+          <S N="published">9/22/2019 2:36:02 PM -05:00</S>
+          <S N="created">9/22/2019 2:36:02 PM -05:00</S>
+          <S N="lastUpdated">9/27/2019 4:51:24 PM -05:00</S>
+          <S N="tags">VSTS TFS DevOps VisualStudio TeamServices Team AzureDevOps Pipelines Boards Artifacts TestPlans Repos AzD ADO AzDO PSFunction_Add-VSTeam PSCommand_Add-VSTeam PSFunction_Add-VSTeamAccessControlEntry PSCommand_Add-VSTeamAccessControlEntry PSFunction_Add-VSTeamAzureRMServiceEndpoint PSCommand_Add-VSTeamAzureRMServiceEndpoint PSFunction_Add-VSTeamBuild PSCommand_Add-VSTeamBuild PSFunction_Add-VSTeamBuildDefinition PSCommand_Add-VSTeamBuildDefinition PSFunction_Add-VSTeamBuildTag PSCommand_Add-VSTeamBuildTag PSFunction_Add-VSTeamExtension PSCommand_Add-VSTeamExtension PSFunction_Add-VSTeamFeed PSCommand_Add-VSTeamFeed PSFunction_Add-VSTeamGitRepository PSCommand_Add-VSTeamGitRepository PSFunction_Add-VSTeamGitRepositoryPermission PSCommand_Add-VSTeamGitRepositoryPermission PSFunction_Add-VSTeamKubernetesEndpoint PSCommand_Add-VSTeamKubernetesEndpoint PSFunction_Add-VSTeamMembership PSCommand_Add-VSTeamMembership PSFunction_Add-VSTeamNuGetEndpoint PSCommand_Add-VSTeamNuGetEndpoint PSFunction_Add-VSTeamPolicy PSCommand_Add-VSTeamPolicy PSFunction_Add-VSTeamProfile PSCommand_Add-VSTeamProfile PSFunction_Add-VSTeamProject PSCommand_Add-VSTeamProject PSFunction_Add-VSTeamProjectPermission PSCommand_Add-VSTeamProjectPermission PSFunction_Add-VSTeamRelease PSCommand_Add-VSTeamRelease PSFunction_Add-VSTeamReleaseDefinition PSCommand_Add-VSTeamReleaseDefinition PSFunction_Add-VSTeamServiceEndpoint PSCommand_Add-VSTeamServiceEndpoint PSFunction_Add-VSTeamServiceFabricEndpoint PSCommand_Add-VSTeamServiceFabricEndpoint PSFunction_Add-VSTeamSonarQubeEndpoint PSCommand_Add-VSTeamSonarQubeEndpoint PSFunction_Add-VSTeamUserEntitlement PSCommand_Add-VSTeamUserEntitlement PSFunction_Add-VSTeamVariableGroup PSCommand_Add-VSTeamVariableGroup PSFunction_Add-VSTeamWorkItem PSCommand_Add-VSTeamWorkItem PSFunction_Add-VSTeamWorkItemAreaPermission PSCommand_Add-VSTeamWorkItemAreaPermission PSFunction_Add-VSTeamWorkItemIterationPermission PSCommand_Add-VSTeamWorkItemIterationPermission PSFunction_Clear-VSTeamDefaultProject PSCommand_Clear-VSTeamDefaultProject PSFunction_Disable-VSTeamAgent PSCommand_Disable-VSTeamAgent PSFunction_Enable-VSTeamAgent PSCommand_Enable-VSTeamAgent PSFunction_Get-VSTeam PSCommand_Get-VSTeam PSFunction_Get-VSTeamAccessControlList PSCommand_Get-VSTeamAccessControlList PSFunction_Get-VSTeamAgent PSCommand_Get-VSTeamAgent PSFunction_Get-VSTeamAPIVersion PSCommand_Get-VSTeamAPIVersion PSFunction_Get-VSTeamApproval PSCommand_Get-VSTeamApproval PSFunction_Get-VSTeamBuild PSCommand_Get-VSTeamBuild PSFunction_Get-VSTeamBuildArtifact PSCommand_Get-VSTeamBuildArtifact PSFunction_Get-VSTeamBuildDefinition PSCommand_Get-VSTeamBuildDefinition PSFunction_Get-VSTeamBuildLog PSCommand_Get-VSTeamBuildLog PSFunction_Get-VSTeamBuildTag PSCommand_Get-VSTeamBuildTag PSFunction_Get-VSTeamClassificationNode PSCommand_Get-VSTeamClassificationNode PSFunction_Get-VSTeamCloudSubscription PSCommand_Get-VSTeamCloudSubscription PSFunction_Get-VSTeamDescriptor PSCommand_Get-VSTeamDescriptor PSFunction_Get-VSTeamExtension PSCommand_Get-VSTeamExtension PSFunction_Get-VSTeamFeed PSCommand_Get-VSTeamFeed PSFunction_Get-VSTeamGitRef PSCommand_Get-VSTeamGitRef PSFunction_Get-VSTeamGitRepository PSCommand_Get-VSTeamGitRepository PSFunction_Get-VSTeamGroup PSCommand_Get-VSTeamGroup PSFunction_Get-VSTeamInfo PSCommand_Get-VSTeamInfo PSFunction_Get-VSTeamJobRequest PSCommand_Get-VSTeamJobRequest PSFunction_Get-VSTeamMember PSCommand_Get-VSTeamMember PSFunction_Get-VSTeamMembership PSCommand_Get-VSTeamMembership PSFunction_Get-VSTeamOption PSCommand_Get-VSTeamOption PSFunction_Get-VSTeamPolicy PSCommand_Get-VSTeamPolicy PSFunction_Get-VSTeamPolicyType PSCommand_Get-VSTeamPolicyType PSFunction_Get-VSTeamPool PSCommand_Get-VSTeamPool PSFunction_Get-VSTeamProcess PSCommand_Get-VSTeamProcess PSFunction_Get-VSTeamProfile PSCommand_Get-VSTeamProfile PSFunction_Get-VSTeamProject PSCommand_Get-VSTeamProject PSFunction_Get-VSTeamPullRequest PSCommand_Get-VSTeamPullRequest PSFunction_Get-VSTeamQueue PSCommand_Get-VSTeamQueue PSFunction_Get-VSTeamRelease PSCommand_Get-VSTeamRelease PSFunction_Get-VSTeamReleaseDefinition PSCommand_Get-VSTeamReleaseDefinition PSFunction_Get-VSTeamResourceArea PSCommand_Get-VSTeamResourceArea PSFunction_Get-VSTeamSecurityNamespace PSCommand_Get-VSTeamSecurityNamespace PSFunction_Get-VSTeamServiceEndpoint PSCommand_Get-VSTeamServiceEndpoint PSFunction_Get-VSTeamServiceEndpointType PSCommand_Get-VSTeamServiceEndpointType PSFunction_Get-VSTeamTfvcBranch PSCommand_Get-VSTeamTfvcBranch PSFunction_Get-VSTeamTfvcRootBranch PSCommand_Get-VSTeamTfvcRootBranch PSFunction_Get-VSTeamUser PSCommand_Get-VSTeamUser PSFunction_Get-VSTeamUserEntitlement PSCommand_Get-VSTeamUserEntitlement PSFunction_Get-VSTeamVariableGroup PSCommand_Get-VSTeamVariableGroup PSFunction_Get-VSTeamWorkItem PSCommand_Get-VSTeamWorkItem PSFunction_Get-VSTeamWorkItemType PSCommand_Get-VSTeamWorkItemType PSFunction_Invoke-VSTeamRequest PSCommand_Invoke-VSTeamRequest PSFunction_Remove-VSTeam PSCommand_Remove-VSTeam PSFunction_Remove-VSTeamAccessControlList PSCommand_Remove-VSTeamAccessControlList PSFunction_Remove-VSTeamAccount PSCommand_Remove-VSTeamAccount PSFunction_Remove-VSTeamAgent PSCommand_Remove-VSTeamAgent PSFunction_Remove-VSTeamBuild PSCommand_Remove-VSTeamBuild PSFunction_Remove-VSTeamBuildDefinition PSCommand_Remove-VSTeamBuildDefinition PSFunction_Remove-VSTeamBuildTag PSCommand_Remove-VSTeamBuildTag PSFunction_Remove-VSTeamExtension PSCommand_Remove-VSTeamExtension PSFunction_Remove-VSTeamFeed PSCommand_Remove-VSTeamFeed PSFunction_Remove-VSTeamGitRepository PSCommand_Remove-VSTeamGitRepository PSFunction_Remove-VSTeamMembership PSCommand_Remove-VSTeamMembership PSFunction_Remove-VSTeamPolicy PSCommand_Remove-VSTeamPolicy PSFunction_Remove-VSTeamProfile PSCommand_Remove-VSTeamProfile PSFunction_Remove-VSTeamProject PSCommand_Remove-VSTeamProject PSFunction_Remove-VSTeamRelease PSCommand_Remove-VSTeamRelease PSFunction_Remove-VSTeamReleaseDefinition PSCommand_Remove-VSTeamReleaseDefinition PSFunction_Remove-VSTeamServiceEndpoint PSCommand_Remove-VSTeamServiceEndpoint PSFunction_Remove-VSTeamUserEntitlement PSCommand_Remove-VSTeamUserEntitlement PSFunction_Remove-VSTeamVariableGroup PSCommand_Remove-VSTeamVariableGroup PSFunction_Set-VSTeamAccount PSCommand_Set-VSTeamAccount PSFunction_Set-VSTeamAlias PSCommand_Set-VSTeamAlias PSFunction_Set-VSTeamAPIVersion PSCommand_Set-VSTeamAPIVersion PSFunction_Set-VSTeamApproval PSCommand_Set-VSTeamApproval PSFunction_Set-VSTeamDefaultProject PSCommand_Set-VSTeamDefaultProject PSFunction_Set-VSTeamEnvironmentStatus PSCommand_Set-VSTeamEnvironmentStatus PSFunction_Set-VSTeamReleaseStatus PSCommand_Set-VSTeamReleaseStatus PSFunction_Show-VSTeam PSCommand_Show-VSTeam PSFunction_Show-VSTeamApproval PSCommand_Show-VSTeamApproval PSFunction_Show-VSTeamBuild PSCommand_Show-VSTeamBuild PSFunction_Show-VSTeamBuildDefinition PSCommand_Show-VSTeamBuildDefinition PSFunction_Show-VSTeamFeed PSCommand_Show-VSTeamFeed PSFunction_Show-VSTeamGitRepository PSCommand_Show-VSTeamGitRepository PSFunction_Show-VSTeamProject PSCommand_Show-VSTeamProject PSFunction_Show-VSTeamPullRequest PSCommand_Show-VSTeamPullRequest PSFunction_Show-VSTeamRelease PSCommand_Show-VSTeamRelease PSFunction_Show-VSTeamReleaseDefinition PSCommand_Show-VSTeamReleaseDefinition PSFunction_Show-VSTeamWorkItem PSCommand_Show-VSTeamWorkItem PSFunction_Test-VSTeamMembership PSCommand_Test-VSTeamMembership PSFunction_Update-VSTeam PSCommand_Update-VSTeam PSFunction_Update-VSTeamBuild PSCommand_Update-VSTeamBuild PSFunction_Update-VSTeamBuildDefinition PSCommand_Update-VSTeamBuildDefinition PSFunction_Update-VSTeamExtension PSCommand_Update-VSTeamExtension PSFunction_Update-VSTeamPolicy PSCommand_Update-VSTeamPolicy PSFunction_Update-VSTeamProfile PSCommand_Update-VSTeamProfile PSFunction_Update-VSTeamProject PSCommand_Update-VSTeamProject PSFunction_Update-VSTeamRelease PSCommand_Update-VSTeamRelease PSFunction_Update-VSTeamReleaseDefinition PSCommand_Update-VSTeamReleaseDefinition PSFunction_Update-VSTeamServiceEndpoint PSCommand_Update-VSTeamServiceEndpoint PSFunction_Update-VSTeamUserEntitlement PSCommand_Update-VSTeamUserEntitlement PSFunction_Update-VSTeamVariableGroup PSCommand_Update-VSTeamVariableGroup PSFunction_Update-VSTeamWorkItem PSCommand_Update-VSTeamWorkItem PSIncludes_Function</S>
+          <S N="developmentDependency">False</S>
+          <S N="updated">2019-09-27T16:51:24Z</S>
+          <S N="NormalizedVersion">6.3.5</S>
+          <S N="Authors">@DonovanBrown</S>
+          <S N="IsPrerelease">false</S>
+          <S N="ItemType">Module</S>
+          <S N="FileList">VSTeam.nuspec|vsteam.classes.ps1|vsteam.format.ps1xml|vsteam.functions.ps1|VSTeam.psd1|VSTeam.psm1|vsteam.types.ps1xml|en-US\about_vsteam.help.txt|en-US\about_vsteam_profiles.help.txt|en-US\about_vsteam_provider.help.txt|en-US\VSTeam-Help.xml</S>
+          <S N="GUID">210e95b1-50bb-44da-a993-f567f4574214</S>
+        </MS>
+      </Obj>
+      <S N="InstalledLocation">C:\Users\Steve\VSTeam\6.3.5</S>
+    </MS>
+  </Obj>
+</Objs>
