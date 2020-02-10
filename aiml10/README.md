@@ -37,7 +37,7 @@ Tailwind Traders 擁有許多舊資料，希望開發人員能在應用程式中
 
 # <a name="presentation"></a>簡報
 
-* [PowerPoint 下載](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/zh-TW/aiml10.zh-TW.pptx)
+* [PowerPoint 下載](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/zh-TW/aiml10-translation.zh-TW.pptx)
 * [Microsoft Ignite 奧蘭多課程影片](https://myignite.techcommunity.microsoft.com/sessions/82986?source=sessions)
 
 

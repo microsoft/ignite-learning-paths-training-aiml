@@ -68,7 +68,7 @@ az storage account create --name {YOUR_STORAGE_NAME} --location {LOCATION} --res
 
 [![匯入資料](images/import_data.png)](https://docs.microsoft.com/en-us/azure/search/cognitive-search-quickstart-blob?WT.mc_id=msignitethetour2019-github-aiml10#create-the-enrichment-pipeline "匯入資料")
 
-2. 使用我們在儲存體帳戶中所建立 `test` 容器的現有連線。
+2.選取 [Azure Blob 儲存體] 並選取您的儲存體帳戶，以使用現有的 `test` 容器 (建立在我們的儲存體帳戶中) 連線
 
 [![匯入資料](images/connect_data.png)](https://docs.microsoft.com/en-us/azure/search/cognitive-search-quickstart-blob?WT.mc_id=msignitethetour2019-github-aiml10#step-1-create-a-data-source "匯入資料")
 
@@ -78,7 +78,7 @@ az storage account create --name {YOUR_STORAGE_NAME} --location {LOCATION} --res
 
 4. 返回精靈，然後按 [重新整理]。 您應該會看到新建立的服務。 
 
-5. 現在可以新增任何您喜歡的擴充！
+5. 現在可以新增任何您喜歡的擴充！ 選取 [啟用 OCR ...] 核取方塊，即可根據合併內容欄位存取更多擴充
 
 [![新增擴充](images/add_enrichments.png)](https://docs.microsoft.com/en-us/azure/search/cognitive-search-quickstart-blob?WT.mc_id=msignitethetour2019-github-aiml10#step-2-add-cognitive-skills "新增擴充")
 

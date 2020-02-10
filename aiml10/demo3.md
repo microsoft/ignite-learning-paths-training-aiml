@@ -69,9 +69,9 @@ pm.environment.set('SASValue', '<SAS>')
 
 ### <a name="create-azure-function-resources"></a>建立 Azure 函式資源
 
-假設下列命令在與實際函式相同的目錄中執行
+假設下列命令是在與實際函式相同的目錄中執行，且您已經使用 ```az login``` 登入 Azure CLI
 
-1. 執行下列 Azure CLI 命令建立適當的資源，並發佈函式：
+1. 執行下列 Azure CLI 命令以建立適當的資源並發佈函式：
 
 建立函式儲存體
 

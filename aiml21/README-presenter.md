@@ -25,7 +25,7 @@
 * [簡報的全長錄製](https://youtu.be/K8upKkvtEI0)
 * [使用的資料集](https://github.com/microsoft/ignite-learning-paths-training-aiml/tree/master/aiml21/data)
 * [要執行的程式碼檔案](https://github.com/microsoft/ignite-learning-paths-training-aiml/tree/master/aiml21/code)
-* 個別的示範影片： 
+* 個別示範影片： 
     * 示範 1 - [探索](https://youtu.be/-z6nfyq-WrI)
     * 示範 2 - [實驗](https://youtu.be/c7p_4CRYT8k)
     * 示範 3 - [部署](https://youtu.be/7bkBO7NQd4Q)
@@ -34,7 +34,7 @@
 
 # <a name="demo-instructions"></a>示範指示：
 
-請下載此存放庫中的所有程式碼和資料檔案，以便開始使用。 有一個程式碼和資料的資料夾，其中包含執行所有示範需要的所有資訊
+請下載此存放庫中的所有程式碼和資料檔案，以便開始使用。 有一個程式碼和資料的資料夾，其中包含執行所有示範需要的全部資訊
 
 **您將需要：**
 * Azure 訂用帳戶 - 視需要在[這裡取得免費試用](https://azure.microsoft.com/en-gb/free/?WT.mc_id=msignitethetour2019-github-aiml21)
@@ -46,7 +46,7 @@
 [![部署至 Azure](https://azuredeploy.net/deploybutton.png)](https://azuredeploy.net/)
 
 * 登入 Azure 入口網站及 Azure Machine Learning 服務
-* 選擇將工作區升級為 **Enterprise 版本 (預覽)** 。[如需目前定價的詳細資訊，請參閱這裡](https://azure.microsoft.com/en-us/pricing/details/machine-learning/) - 您將需要 Enterprise 版本才能完成此實驗示範 (示範2)
+* 選擇將工作區升級為 **Enterprise 版本 (預覽)** 。[如需目前定價的詳細資訊，請參閱這裡](https://azure.microsoft.com/en-us/pricing/details/machine-learning/) - 您將需要 Enterprise 版本才能完成此實驗示範 (示範 2)
 * 啟動**預覽 UI**
 * 建立**筆記本 VM**
     * 從左窗格選取 [計算]
@@ -55,7 +55,7 @@
     * 保留提供的預設 VM 大小
     * 建立後，選取 [Jupyter 連結]
     * 按兩下以進入使用者資料夾
-    * 選取 [上傳] 按鈕，並上傳下列檔案：
+    * 選取 [上傳] 按鈕，並上傳以下檔案：
         * [data/data_train.csv](data/data_train.csv)
         * [code/explore.ipynb](code/explore.ipynb)
         * [code/deploy.ipynb](code/deploy.ipynb)
@@ -113,7 +113,7 @@
 
 ### <a name="video-demo-with-voice-over-aiml21---demo-1---explorehttpsyoutube-z6nfyq-wri"></a>有聲影片示範：[AIML21 - 示範 1 - 探索](https://youtu.be/-z6nfyq-WrI)
 
-* 登入您的 [Azure 入口網站](https://azure.microsoft.com/en-gb/?WT.mc_id=msignitethetour2019-github-aiml21)，並開啟您使用上述範本所建立的 **Azure Machine Learning**
+* 登入 [Azure 入口網站](https://azure.microsoft.com/en-gb/?WT.mc_id=msignitethetour2019-github-aiml21)，並開啟您使用上述範本所建立的 **Azure Machine Learning**
 * 按一下 [立即啟動預覽]  以啟動預覽體驗
 * 從左窗格開啟 [計算] 
 * 在您的筆記本 VM 上選取 [Jupyter]  連結
@@ -140,7 +140,7 @@
 * 選取您在上方為計算所設定的「定型叢集」
 * 選取 [下一步] 
 * 針對預測工作，選取 [迴歸] 
-* 選取 [檢視其他組態設定]  ，並將 [主要計量] 設定為 [normalized_root_mean_squared_error] 
+* 選取 [檢視其他組態設定]  ，並將 [主要計量] 設定為 **'normalized_root_mean_squared_error'**
 * 將 [並行] 的 [最大並行反覆運算次數] 設定為 3
 * 將 [結束準則] 的 [定型工作時間 (小時)] 設定為 1
 * 選取 [儲存] 
@@ -182,6 +182,8 @@
 * 確認 config.json 檔案已完成，並具有正確資訊
 * 編輯第 2 個資料格，以包含您已部署的 Web 服務名稱
 * 執行筆記本中的所有資料格，並說明程式碼 - **觀看影片以了解每個示範的所有談話重點**
+
+> 注意：如果您在程式碼中存取 ACI 端點時發生錯誤。 請移至 Azure Machine Learning Studio，選擇 [端點]，選取您的端點並選取 [取用] 索引標籤。您可以在該處存取「主要金鑰」- 複製此值，並將部署程式碼中的主要變數設定為您的金鑰
 
 ## <a name="demo-4---present"></a>示範 4 - 展示
 

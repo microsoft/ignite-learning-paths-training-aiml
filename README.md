@@ -4,7 +4,7 @@
 
 歡迎使用！
 
-您可以使用此存放庫的內容重現任何示範，或在 [Migrosoft Ignite](https://www.microsoft.com/en-us/ignite) 了解如何進行學習路徑的任何課程簡報，以及在 [Microsoft Ignite The Tour](https://www.microsoft.com/en-ca/ignite-the-tour/) 期間、當地現場辦公室、社群使用者群組，甚至是您公司的午餐學習活動。
+您可以使用此存放庫的內容重現任何示範，或了解如何使用在 [Microsoft Ignite](https://www.microsoft.com/en-us/ignite)，以及在 [Microsoft Ignite The Tour](https://www.microsoft.com/en-ca/ignite-the-tour/) 期間的任何學習路徑會議簡報內容，於您的當地辦公室、社群使用者群組，甚至是您公司的午餐學習活動進行簡報。
 
 ## <a name="do-the-demos"></a>執行示範
 
@@ -12,7 +12,7 @@
 
 ## <a name="presenting-the-content"></a>內容簡報
 
-很高興您的到來，我們期待您傳遞這份精彩的內容。 身為有經驗的簡報者，您知道「如何」做簡報，因此本指南將著重於您需要簡報的內容。 它會為您提供由簡報設計小組建立的完整簡報流程。
+很高興您的到來，我們期待您傳遞這份精彩的內容。 身為有經驗的簡報者，我們知道您清楚「如何」進行簡報，因此本指南將著重於您需要簡報的「內容」。 它會為您提供由簡報設計小組建立的完整簡報流程。
 
 除了簡報的影片，此存放庫也連結到您完成簡報所需的所有資產，包括 PowerPoint 投影片和示範指示與程式碼。
 
@@ -31,11 +31,11 @@ AI 學習曲線的每個階段都有一些內容；無論您是想要取用 ML �
 * 有 **5 個 45 分鐘的課程** ([AIML10](aiml10/README.md)、[AIML20](aiml20/README.md)、[AIML30](aiml30/README.md)、[AIML40](aiml40/README.md) 和 [AIML50](aiml50/README.md))
 * 和 **1 個 20 分鐘的講堂式課程** ([AIML21](aiml21/README.md))
 
-這裡的所有課程都提供於學習路徑《AI 開發人員指南》(也稱為：**AIML**) 中
+這裡的所有課程都提供於學習路徑《AI 開發人員指南》  (也稱為：**AIML**) 中
 
 ### <a name="aiml10-making-sense-of-your-unstructured-data-with-aiaiml10readmemd"></a>[AIML10：使用 AI 讓您的非結構化資料發揮意義](aiml10/README.md)
 
-Tailwind Traders 擁有許多舊式資料，他們希望開發人員能在應用程式中運用 – 來自各種結構化和非結構化的來源，且包含影像、表單、PDF 檔案和其他數種格式。 在此課程中，您將了解小組如何使用認知搜尋，在短時間內讓此資料發揮意義，並獲得驚人的成功。 我們將討論許多 AI 概念，例如內嵌-擴充-探索模式、技能集、認知技能、自然語言處理、電腦視覺等。
+Tailwind Traders 擁有許多舊式資料，他們希望開發人員能在應用程式中運用 – 來自各種結構化和非結構化的來源，且包含影像、表單、PDF 檔案和其他數種格式。 在本課程中，您將了解小組如何使用認知搜尋，在短時間內讓此資料發揮意義，並獲得驚人的成功。 我們將討論許多 AI 概念，例如內嵌-擴充-探索模式、技能集、認知技能、自然語言處理、電腦視覺等。
 
 ### <a name="aiml20-using-pre-built-ai-to-solve-business-challengesaiml20readmemd"></a>[AIML20：使用預先建立的 AI 解決商務問題](aiml20/README.md)
 
@@ -59,7 +59,7 @@ Tailwind Traders 的資料科學小組使用自然語言處理 (NLP)，且於最
 
 ### <a name="aiml21-developers-guide-to-ai-a-data-storyaiml21readmemd"></a>[AIML21：AI 開發人員指南：資料故事](aiml21/README.md)
 
-在這個講堂式課程中，我們將示範資料科學程序，以及如何加以套用。 從探索資料集到部署服務 - 全都套用到一個有趣的資料故事。 這也會讓您很快了解 Azure AI 平台。
+在這個講堂式課程中，我們將示範資料科學程序，以及如何加以套用。 從探索資料集到部署服務 - 全都適用於一個有趣的資料案例。 這也會讓您很快了解 Azure AI 平台。
 
 ## <a name="contributing"></a>參與
 
@@ -68,9 +68,9 @@ Tailwind Traders 的資料科學小組使用自然語言處理 (NLP)，且於最
 
 ## <a name="become-a-trained-presenter"></a>成為經訓練的簡報者
 
-您不需要任何東西即可進行此內容的簡報，要用的一切都已具備。 不過，藉由成為「經訓練的簡報者」，可調整的內容小組也會認可您。 「經訓練的簡報者」會在每個課程底部看到其連絡資訊 (名字、相片、網站)。  
+您不需要任何東西即可進行此內容的簡報，要用的一切都已具備。 不過，藉由成為「經訓練的簡報者」  ，可調整的內容小組也會認可您。 「經訓練的簡報者」  會在每個課程底部看到其連絡資訊 (名字、相片、網站)。  
  
-若要成為「經訓練的簡報者」，請連絡 [scalablecontent@microsoft.com](mailto:scalablecontent@microsoft.com)。 請在您的電子郵件中加入以下內容：
+若要成為「經訓練的簡報者」  ，請連絡 [scalablecontent@microsoft.com](mailto:scalablecontent@microsoft.com)。 請在您的電子郵件中包含以下內容：
 
 - 完整名稱：
 - 這份簡報的代碼：\<課程代碼 (例如：APPS10)\>
@@ -81,7 +81,7 @@ Tailwind Traders 的資料科學小組使用自然語言處理 (NLP)，且於最
 
 Microsoft 和任何參與者依照 [Creative Commons Attribution 4.0 International Public License](https://creativecommons.org/licenses/by/4.0/legalcode) (Creative Commons Attribution 4.0 國際公眾授權條款)，授與您對於 Microsoft 文件以及此存放庫中其他內容的授權 (請參閱 [LICENSE](LICENSE) 檔案)，並依照 [MIT License](https://opensource.org/licenses/MIT) (MIT 授權)，授與您對於存放庫中任何程式碼的授權 (請參閱 [LICENSE-CODE](LICENSE-CODE))
 
-文件中所參考的 Microsoft、Windows、Microsoft Azure 及 (或) 其他 Microsoft 產品和服務可能是 Microsoft 在美國及 (或) 其他國家/地區的商標或註冊商標。 此專案授權並未授與您使用任何 Microsoft 名稱、標誌或商標的權利。 如需 Microsoft 的一般商標指導方針，請參閱 http://go.microsoft.com/fwlink/?LinkID=254653。
+文件中所參考的 Microsoft、Windows、Microsoft Azure 及 (或) 其他 Microsoft 產品和服務可能是 Microsoft 在美國及 (或) 其他國家/地區的商標或註冊商標。 此專案授權並未授與您使用任何 Microsoft 名稱、標誌或商標的權利。 如需 Microsoft 的一般商標指導方針，請參閱 http://go.microsoft.com/fwlink/?LinkID=254653 。
 
 如需隱私權資訊，請參閱 https://privacy.microsoft.com/en-us/
 

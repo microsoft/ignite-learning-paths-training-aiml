@@ -28,7 +28,9 @@
 
 系統也會要求您提供事件識別碼 (或啟動環境的原因)，這將用來協助命名資源。  越短越好。
 
-您將需要提供 Azure SQL 執行個體的資料庫使用者名稱和密碼。
+您將需要提供 Azure SQL 執行個體的資料庫使用者名稱與密碼。
+
+*並非所有資源在所有區域均可使用。針對歐洲，請選擇：歐洲北部*
 
 <a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3a%2f%2fraw.githubusercontent.com%2fmicrosoft%2fignite-learning-paths-training-aiml%2fmaster%2faiml50%2ftemplate%2fazuredeploy.json" target="_blank">
     <img src="http://azuredeploy.net/deploybutton.png"/>
