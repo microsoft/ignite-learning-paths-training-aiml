@@ -83,7 +83,7 @@ To follow the Automated ML Demo, please upload the dataset to your workspace:
  * Leave default storage name, and click **Browse** to select the file `clothing_automl.xlsx` from this repository
  * Click **Next** to upload the file
  * You may encounter an error when uploading file, which says *CORS Error: Failed to set up CORS rules* [see screenshot](images/dataset_upload_error.png). If this happens, click on the link **CORS Settings**, on the CORS settings page under **Blob storage** select **Allowed methods** in the first line, and select **PUT** and **POST** methods in addition to **GET** and **HEAD** (see [the screenshot](images/dataset_upload_error_cors.png)). Click **Save**, and repeat the dataset upload process.
- * Click **Next** two times, on the final page select **Profile the dataset after creating** and click **Create**.  
+ * Click **Next** two times, on the final page click **Create**.  
 
 The Automated ML clothing dataset would be uploaded to the AML service datastore by the demo code.
 
