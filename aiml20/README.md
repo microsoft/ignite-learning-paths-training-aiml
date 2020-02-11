@@ -6,8 +6,11 @@ you will find links to the resources mentioned in the talk, and the code and
 scripts you will need to recreate the demos given in the talk.
 
 * [AIML20：使用预先构建的 AI 解决业务难题](https://github.com/microsoft/ignite-learning-paths-training-aiml/tree/master-SimplifiedChinese/aiml20)
+* [AIML20：使用預先建立的 AI 解決商務挑戰](https://github.com/microsoft/ignite-learning-paths-training-aiml/tree/master-TraditionalChinese/aiml20)
 * [AIML20: Uso da IA pré-criada para resolver desafios de negócios](https://github.com/microsoft/ignite-learning-paths-training-aiml/tree/master-PortugueseBrazil/aiml20)
+* [AIML20: Uso de inteligencia artificial pregenerada para superar desafíos empresariales](https://github.com/microsoft/ignite-learning-paths-training-aiml/tree/master-Spanish/aiml20)
 * [AIML20:事前構築済み AI を使用してビジネスの課題を解決する](https://github.com/microsoft/ignite-learning-paths-training-aiml/tree/master-Japanese/aiml20)
+* [AIML20: 미리 빌드된 AI를 사용하여 비즈니스 과제 해결](https://github.com/microsoft/ignite-learning-paths-training-aiml/tree/master-Korean/aiml20)
 
 ## Session Abstract
 
