@@ -5,32 +5,49 @@ Tailwind Traders uses custom machine learning models to fix their inventory issu
 In this session, you’ll learn the data science process that Tailwind Traders’ uses and get an introduction to Azure Machine Learning Designer. You’ll see how to find, import, and prepare data, select a machine learning algorithm, train and test the model, and deploy a complete model to an API. Get the tips, best practices, and resources you and your development team need to continue your machine learning journey, build your first model, and more.
 
 
-## Demo Environment Deployment
+## Create Azure Machine Learning Resources with the Deploy to Azure Button below
 <a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fcassieview%2Fignite-learning-paths-training-aiml%2Fmaster%2Faiml30%2Fdeploy.json" rel="nofollow">
  <img src="https://camo.githubusercontent.com/9285dd3998997a0835869065bb15e5d500475034/687474703a2f2f617a7572656465706c6f792e6e65742f6465706c6f79627574746f6e2e706e67" data-canonical-src="http://azuredeploy.net/deploybutton.png" style="max-width:100%;">
 </a>
 
+> Once created please upgrade your Azure Machine Learning resource to the enterprise edition for this session. You should see an 'Upgrade' button to complete this action. This is currently in preview, however the pricing structure is described [here](https://azure.microsoft.com/en-us/pricing/details/machine-learning/)
 
 ## Create Additional Resources Needed
-Once you have created the base Azure Machine Learning Service Workspace we need to add additional compute resources.
+
+* Select **'Launch the new Azure Machine Learning studio'**
+
+Once you have created the base Azure Machine Learning Service we need to add additional compute resources.
 ### Create Compute Targets
 1. Create Machine Learning Compute
     * Click on the nav "Compute"
+    * Select 'Training Clusters'
     * Click "New"
     * Enter a name for the resource
-    * Select "Machine Learning Compute" from the dropdown
-    * Select the machine size
+    * Select the machine size (ex: Standard_DS2_v2)
     * Enter the min and max nodes (recommend min of 0 and max of 5)
     * Click "Create"
     ![Create Compute](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml30/CreateMlCompute.gif)
 2. Create Kubernetes Compute
     * Click on the nav "Compute"
+    * Select 'Inference Clusters'
     * Click "New"
     * Enter a name for the resource
-    * Select "Kubernetes Service" from the dropdown
+    * Select a region
+    * Keep 'Virtual Machine Size' as default
+    * Cluster purpose set to 'Dev-test'
     * Click "Create"
     ![Create Kubernetes](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml30/CreateKubService.gif)
+3. Create Notebook Virtual Machine
+    * Click on the NAV "Compute"
+    * Select 'Notebook VMs'
+    * Click "New"
+    * Give the notebook a unique name
+    * Select the VM size
+    * Click "Create"
+    ![Create VM](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml30/CreateNotebookVM.gif)
 
+## Upload Dataset to Workspace Blob Storage and Save to Local
+The dataset needed is created weekly with updated dates to allow your demo to be predicting future weeks. Below are the steps to get the new dataset and add it to the Azure Machine Learning Storage account and the demo data app.
 
 ## Build Model with Azure Machine Learning Visual Designer
 
