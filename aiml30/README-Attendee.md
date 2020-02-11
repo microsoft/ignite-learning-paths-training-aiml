@@ -147,7 +147,8 @@ The dataset needed is created weekly with updated dates to allow your demo to be
 5. Also in the terminal `pip install holidays`
 6. Open the `ignite-learning-paths-training-aiml` cloned folder and navigate to the `ignite-ailml30-get-prediction.ipynb` file and click to open it.
     * The full path should be something like this: `ignite-learning-paths-training-aiml\aiml30\Python\ignite-ailml30-get-prediction.ipynb`
-7. Update the path to the csv file, the endpoint and the key.
+7. Download dataset to local from [here](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml30/datasets/ForecastingData.csv) **you may already have this file from steps previously**. The in the Jupyter file structure environment select the 'upload' button and upload the csv file.
+7. Update the path to the csv file in the code to point to the forecasting data you just uploaded to the Notebook VM (it should be somewhere within the local tree and easy to access), the endpoint and the key.
 8. `SHIFT + Enter` or click play on each cell from the top menu to run each cell
 
 ## PowerPoint Deck and Video Demo
