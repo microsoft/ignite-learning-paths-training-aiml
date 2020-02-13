@@ -59,7 +59,6 @@
         "hostingPlanName": "[concat(variables('uniqueName'), '-plan')]",
         "serverFarmResourceGroup": "[resourceGroup().name]",
         "alwaysOn": true,
-        "sku": "PremiumV2",
         "skuCode": "P1v2",
         "workerSize": "3",
         "workerSizeId": "3",
@@ -353,7 +352,7 @@
                     ],
                     "alwaysOn": "[variables('alwaysOn')]"
                 },
-                "serverFarmId": "[concat('/subscriptions/', variables('subscriptionId'),'/resourcegroups/', variables('serverFarmResourceGroup'), '/providers/Microsoft.Web/serverfarms/', variables('hostingPlanName'))]",
+                "serverFarmId": "[resourceId('Microsoft.Web/serverfarms', variables('hostingPlanName'))]",
                 "hostingEnvironment": "[variables('hostingEnvironment')]",
                 "clientAffinityEnabled": true
             },
@@ -381,7 +380,6 @@
             "dependsOn": [],
             "tags": {},
             "sku": {
-                "Tier": "[variables('sku')]",
                 "Name": "[variables('skuCode')]"
             },
             "kind": "",
