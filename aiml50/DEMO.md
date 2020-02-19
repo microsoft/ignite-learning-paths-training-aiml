@@ -44,7 +44,7 @@ Once the deployment is underway (at least with the Azure Machine Learning servic
 
 * Navigate to [Azure Notebooks](https://notebooks.azure.com/) and sign in with the Microsoft account that you are demoing with.
 * Add a new project.  You can either import directly from GitHub (the main repository or your fork) or upload the `aiml50/source` directory directly.
-* In the `aiml50/source` directory in the Azure Notebook, create a json file named `azureml-config` with:
+* In the `aiml50/source` directory in the Azure Notebook, create a json file named `azureml-config.json` with:
   * Your subscription ID
   * The resource group name that contains the ML workspace
   * The workspace name
