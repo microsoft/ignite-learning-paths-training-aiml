@@ -50,7 +50,8 @@ Below we provide more detailed instructions for the demo so you can perform the 
 In order to perform Demo 2, you will need to:
 
 1. Create an Azure Machine Learning Workspace
-2. Upload the data used for Automated ML model - [clothing_automl.xlsx](https://github.com/microsoft/ignite-learning-paths-training-aiml/blob/master/aiml40/dataset/clothing_automl.xlsx)
+2. Create a Training Compute Cluster in Azure Machine Learning
+3. Upload the data used for Automated ML model - [clothing_automl.xlsx](https://github.com/microsoft/ignite-learning-paths-training-aiml/blob/master/aiml40/dataset/clothing_automl.xlsx)
 
 #### Creating Azure Machine Learning Workspace
 
@@ -114,17 +115,21 @@ To follow the Automated ML Demo, please upload the first dataset above to your w
 
 ## **Demo 1:** Text Analytics Cognitive Service
 
-> 💡 You must have completed the [environment setup](https://github.com/microsoft/ignite-learning-paths-training-aiml/tree/master/aiml40#starting-fast) before attempting to do the demo.
-
 In this demo, we show how Text Analytics can do sentiment analysis of a phrase in a web interface.
 
 1. Open [Text Analytics Page](https://azure.microsoft.com/services/cognitive-services/text-analytics/?WT.mc_id=msignitethetour2019-github-aiml40)
-2. Scroll down to **see it in action** section and enter the phrase *I loved the polka dot pants that I bought in the london store* (You can also leave the default phrase to demonstrate the point).
+2. Scroll down to **see it in action** section and enter the phrase *I loved the polka dot pants that I bought in the london store*
 3. Press **Analyze** to get the following result:
 
-![Screenshot of Azure Text Analytics](images/analytics.png)
+![Screenshot of Azure Text Analytics](images/text-analytics-1.PNG)
 
 Note that Text Analytics does not only provide sentiment, but also extracts location and key words from text.
+
+4. Now enter the phrase - *I loved the polka dot pants but didn't like the london store environment*
+
+![Screenshot of Azure Text Analytics](images/text-analytics-2.PNG)
+
+We can see the API extracts sentiment from the full sentence. However in Tailwind Traders case we want each entity to be analyzed for each sentiment - therefore we will need to create our own bespoke model in this case - following the 80:20 rule.
 
 ## **Demo 2:** Azure AutoML
 
