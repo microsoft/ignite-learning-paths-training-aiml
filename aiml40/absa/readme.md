@@ -24,7 +24,7 @@ az account set -s <subscription_id>
 ```
 
 ### Setup the Azure Machine Learning Service
-The commands below will create a empty resource group 'absa-ml-rg' and a new workspace 'absa-workspace' in region west europe.
+The commands below will create an empty resource group 'absa-ml-rg' and a new workspace 'absa-workspace' in region west europe.
 ```
 az group create -l westeurope -g absa-ml-rg
 az ml workspace create -w absa-workspace -l westeurope -g absa-ml-rg
@@ -36,7 +36,7 @@ az ml workspace create -w absa-workspace -l westeurope -g absa-ml-rg
 - (2) Click on 'create new file'
 - Create a new file with file name: "init.ipynb" and File type: Python Notebook. Leave target directory as preselected.
 - (3) Click on 'new compute'
-- Create a New Compute Instance: Compute name: 'absa-notebook<youralias>' (compute name needs to be unique) and Virtual Machine size: 'Standard_D3_v2' Leave everything else default.
+- Create a New Compute Instance: Compute name: 'absa-notebook-youralias' (compute name needs to be unique) and Virtual Machine size: 'Standard_D3_v2' Leave everything else default.
 - Wait until your compute is created *(you need to click refresh sometimes)*
 
 ![Add new compute target](../images/add-new-compute.png)
