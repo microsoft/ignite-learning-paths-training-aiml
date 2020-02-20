@@ -140,13 +140,13 @@ In this demo, we demonstrate how Automated ML can be used to build an ML model w
 1. Navigate to your Azure ML Workspace (created above) in the [http://ml.azure.com](http://ml.azure.com/?WT.mc_id=msignitethetour2019-github-aiml40)
 2. Go to **Datasets** - you should see the previously uploaded dataset there (clothing_automl.xlsx). Please mention that you can also upload it here through the portal.
 3. Select the dataset.
-4. You will see the **Details** tab. Please mention the **Sample usage** box and show the code that can be used to access the data programmatically, if needed.
+4. You will see the **Consume** tab. Please mention the **Sample usage** box and show the code that can be used to access the data programmatically, if needed.
 5. From the **Explore** tab, have a look at the data. You can optionally select the **Profile** tab, to see some more detailed statistics about the data.
 6. Go to **Automated ML** tab and click **New Automated ML Run**
 7. On the dataset selection page, select *Clothing_AutoML* dataset and click **Next**
-8. Chose the experiment name (eg. `AutoML`), **Rating** as the target column, and select compute to be used (use the cluster we have created).
-9. Chose the type of prediction task -- **Classification**. You can optionally **Enable deep learning**
-10. Now you are ready to click **Start**.
+8. Chose the experiment name (eg. `AutoML`), **Rating** as the target column, and select compute to be used (use the cluster we have created). Click Next
+9. Chose the type of prediction task -- **Classification**. You can optionally **Enable deep learning** but its not necessarily needed for this experiment and will mean longer running times
+10. Now you are ready to click **Finish**.
 
 The experiment will take quite a long time to run, because different algorithms will be investigated. If showing a demo, it would make sense to run this in advance and just show the results. To show the results, go to **Experiments** tab in the [Azure ML Portal](http://ml.azure.com), and select the experiment you have executed.
 
