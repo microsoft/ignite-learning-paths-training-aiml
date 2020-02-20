@@ -1,0 +1,7 @@
+.azureml/
+.ipynb_checkpoints/
+.vscode/
+dataset/
+images/
+template/
+*.md
