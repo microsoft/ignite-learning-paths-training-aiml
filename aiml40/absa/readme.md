@@ -32,7 +32,7 @@ az ml workspace create -w absa-workspace -l westeurope -g absa-ml-rg
 - Create a New Compute Instance: Compute name: 'absa-notebook<youralias>' (compute name needs to be unique) and Virtual Machine size: 'Standard_D3_v2' Leave everything else default.
 - Wait until your compute is created *(you need to click refresh sometimes)*
 
-![title](images/screen_001.png)
+![Add new compute target](../images/add-new-compute.png)
 
 - Click on the file "init.ipynb"
 - Paste the code below in the cell
@@ -48,7 +48,7 @@ urllib.request.urlretrieve(setup_notebook_url, 'absa/setup.ipynb')
 - (1) Click on "Run All"
 - (2) Click on the "refesh button"
 - Notice that a folder 'absa' has been created
-![title](images/screen_002.png)
+![Initalize Setup](../images/init-setup.png)
 
 - Open the folder 'absa'
 - Click on "setup.ipynb"
