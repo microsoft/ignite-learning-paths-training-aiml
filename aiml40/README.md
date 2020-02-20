@@ -6,7 +6,7 @@ Artificial Intelligence and Machine Learning can be used in many ways to increas
 
 In this session, we will explore the complete path of integrating text analysis intelligent services into the business processes of [Tailwind Traders](http://tailwindtraders.com), starting from pre-build models available as [cognitive services](https://azure.microsoft.com/services/cognitive-services/?WT.mc_id=msignitethetour2019-github-aiml40), up to training a third-party neural custom model for [Aspect-Based Sentiment Analysis](https://www.intel.ai/introducing-aspect-based-sentiment-analysis-in-nlp-architect/) available as part of [Intel NLP Architect](http://nlp_architect.nervanasys.com/) using [Azure Machine Learning Service](https://azure.microsoft.com/services/machine-learning-service/?wt.mc_id=msignitethetour2019-github-aiml40). We will talk about cases when one needs a custom model, and demonstrate quick ways to create such a model from scratch using [AutoML](https://docs.microsoft.com/azure/machine-learning/service/concept-automated-ml/?wt.mc_id=msignitethetour2019-github-aiml40), and show how to fine-tune model hyperparameters using [HyperDrive](https://docs.microsoft.com/azure/machine-learning/service/how-to-tune-hyperparameters/?wt.mc_id=msignitethetour2019-github-aiml40)
 
-## Table of Content
+# Table of Content
  
 
 | Resources          | Links                            |
@@ -43,7 +43,7 @@ If you want to start right away, you can deploy all required resources via Azure
 
 Below we provide more detailed instructions for the demo so you can perform the steps manually to fully understand the concepts being shown.
 
-## Initial Environment Setup
+# Initial Environment Setup
 
 In order to perform steps 2 and 3 of the demo, we would need to:
 
@@ -133,9 +133,9 @@ In order to show the AutoML demo, you need to *generate profile* for `clothing_a
 5. Profile generation task will be scheduled
 6. You can monitor the task in the **Experiments** tab on Azure ML Portal. 
 
-## Demos
+# Demos
 
-### Demo 1: Text Analytics Cognitive Service
+## **Demo 1:** Text Analytics Cognitive Service
 
 > 💡 You must have completed the [environment setup](https://github.com/microsoft/ignite-learning-paths-training-aiml/tree/master/aiml40#starting-fast) before attempting to do the demo.
 
@@ -149,7 +149,7 @@ In this demo, we show how Text Analytics can do sentiment analysis of a phrase i
 
 Note that Text Analytics does not only provide sentiment, but also extracts location and key words from text.
 
-### Demo 2: Azure AutoML
+## **Demo 2:** Azure AutoML
 
 > 💡 You must have completed the [environment setup](https://github.com/microsoft/ignite-learning-paths-training-aiml/tree/master/aiml40#starting-fast) before attempting to do the demo.
 
@@ -168,13 +168,18 @@ In this demo, we demonstrate how Automated ML can be used to build an ML model w
 
 The experiment will take quite a long time to run, because different algorithms will be investigated. If showing a demo, it would make sense to run this in advance and just show the results. To show the results, go to **Experiments** tab in the [Azure ML Portal](http://ml.azure.com), and select the experiment you have executed.
 
-### Demo 3: Using Azure ML Workspace with Python SDK
-
-> 💡 You must have completed the [environment setup](https://github.com/microsoft/ignite-learning-paths-training-aiml/tree/master/aiml40#starting-fast) before attempting to do the demo.
+## **Demo 3:** Using the Azure ML Service with AzureML Python SDK
 
 In this demo, we will run custom Python code that uses the Python Azure ML SDK to train, optimize and use the custom Aspect Based Sentiment Analysis (ABSA) model.
 
-All of the instructions for this part of the demo are located in the Jupyter Notebook itself. Use one of the methods described above to run the Notebook (in Azure Notebooks, or locally), and follow instructions there. 
+In order to build and run this demo, we recommend following the steps below:
+* First follow all instructions from the [Demo 3 Readme file](absa/readme.md)
+* This will setup the demo environment needed to run the full final section of the session (Building an Aspect Based Sentiment Analysis model using Azure Machine Learning). There are 3 files this setup will walk you through:
+    * [setup.ipynb](absa/notebooks/setup.ipynb) - this will setup the full environment, all dependencies and all datasets and infrastructure needed to run the code
+    * [absa.ipynb](absa/notebooks/absa.ipynb) - this will take you through training and evaluating and deploying an initial ABSA model.
+    * [absa-hyperdrive.ipynb](absa/notebooks/absa-hyperdrive.ipynb) - this will take you through applying hyperparameter tuning your ABSA model.
+
+#### **To get started with ABSA demo - [go here](absa/readme.md)**
 
 ## Tear Down
 
