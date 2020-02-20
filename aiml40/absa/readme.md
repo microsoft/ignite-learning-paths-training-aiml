@@ -3,20 +3,27 @@
 The easiest way to setup an enviroment is to use the Azure CLI with the Azure Machine Learning add-on
 
 ### Install the Azure CLI
-Follow the instructions on docs: [Install the Azure CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest)
+Follow the instructions on docs: [Install the Azure CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest/?wt.mc_id=msignitethetour2019-github-aiml40)
 
 ### Install the ML Add on
 ```
 az extension add -n azure-cli-ml
 ```
+
+### OR
+
+Use the [Azure Cloud Shell](https://docs.microsoft.com/en-us/azure/cloud-shell/overview/?wt.mc_id=msignitethetour2019-github-aiml40) to execute the commands below
+
 ### Login to your subscription
+> If you are using the cloud shell you do not need to log into your subscription. Move straight to Setup the Azure Machine Learning Service
+
 ```
 az login
 az account list
 az account set -s <subscription_id> 
 ```
 
-### Setup the Azure Machine Learning
+### Setup the Azure Machine Learning Service
 The commands below will create a empty resource group 'absa-ml-rg' and a new workspace 'absa-workspace' in region west europe.
 ```
 az group create -l westeurope -g absa-ml-rg
