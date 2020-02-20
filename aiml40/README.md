@@ -33,6 +33,8 @@ In this presentation, the following demonstrations are made:
 2. Using [Azure Automated ML](https://docs.microsoft.com/azure/machine-learning/concept-automated-ml?wt.mc_id=msignitethetour2019-github-aiml40) to build a text classifier almost with no code
 3. Using [Azure Machine Learning Service](https://azure.microsoft.com/services/machine-learning-service/?wt.mc_id=msignitethetour2019-github-aiml40) to train an Aspect-Based Sentiment Analysis model.
 
+>  💡 **IMPORTANT: You must run through all instructions and demos before going on stage to deliver this content**. The demos take a long time to run and process - therefore be conscious that preparation time for this session is key to success. Each section should be run so you gain an ID that you can substituted into the notebooks when on stage rather than waiting for experiments to finish (the session is not long enough to run a single experiment)
+
 ## Starting Fast
 
 If you want to start right away, you can deploy all required resources via Azure Template. 
@@ -45,10 +47,10 @@ Below we provide more detailed instructions for the demo so you can perform the 
 
 # Initial Environment Setup
 
-In order to perform steps 2 and 3 of the demo, we would need to:
+In order to perform Demo 2, you will need to:
 
 1. Create an Azure Machine Learning Workspace
-2. Upload the data used for AutoML training - [clothing_automl.xlsx](https://github.com/microsoft/ignite-learning-paths-training-aiml/blob/master/aiml40/dataset/clothing_automl.xlsx)
+2. Upload the data used for Automated ML model - [clothing_automl.xlsx](https://github.com/microsoft/ignite-learning-paths-training-aiml/blob/master/aiml40/dataset/clothing_automl.xlsx)
 
 #### Creating Azure Machine Learning Workspace
 
@@ -63,75 +65,50 @@ az group create -n absa -l westus2
 az ml workspace create -w absa_space -g absa
 ```
 
-> 💡 *IMPORTANT NOTE: We are using `absa_space` as a workspace name, and `absa` as the Azure Resource Group name. We will refer to those names several times during the preparation and demo, so it would be best not to change them. If you change them, however, you will need to pay attention and adjust some of the commands accordingly. Also, we use *West US 2* as the datacenter location -- feel free to adjust it according to region where the demo will take place.*
+> 💡 *IMPORTANT NOTE: We are using `absa_space` as a workspace name, and `absa` as the Azure Resource Group name. Also, we use *West US 2* as the datacenter location -- feel free to adjust it according to region where the demo will take place.*
 
-You would also need to know your subscription id, which can be obtained by running `az account list`.
+> 💡 *IMPORTANT NOTE: You will need an enterpise level Azure Machine Learning workspace to complete Demo 2. When you log into the Azure portal and go to your Azure ML instance you will see the opportunity to upgrade ![Upgrade to Enterprise](images/upgrade-enterprise.PNG)
+
+#### Pre-creating Compute Cluster
+
+For Demo 2, you need a compute cluster to profile the dataset and run the model. 
+
+This can be done via instructions below:
+
+* Go to [Azure ML Studio - ml.azure.com](http://ml.azure.com/?wt.mc_id=msignitethetour2019-github-aiml40) 
+    * Choose the **Compute** section
+    * Select **Training clusters** 
+    * Select **New**
+    * Provide a **Name** for your compute e.g. cpu-compute
+    * Choose **Virtual Machine Size** e.g. Standard_D2_v2
+    * Select **Low priority**
+    * **Minimum** number of nodes 0 and **maximum** up to 5
+    * Select **Create**
+
 
 #### Uploading data to the workspace
 
-In our demos, we use a few datasets:
-* A dataset for Automated ML demo - [clothing_automl.xlsx](https://github.com/microsoft/ignite-learning-paths-training-aiml/blob/master/aiml40/dataset/clothing_automl.xlsx)
-* The large dataset [clothing_absa_train.csv](https://github.com/microsoft/ignite-learning-paths-training-aiml/blob/master/aiml40/dataset/clothing_absa_train.csv) to train the full aspect based sentiment analysis model for demo 3
-* A smaller debugging dataset for aspect based sentiment analysis model [clothing_absa_train_small.csv](https://github.com/microsoft/ignite-learning-paths-training-aiml/blob/master/aiml40/dataset/clothing_absa_train_small.csv)
-* A seperate validation set [clothing-absa-validation.json](https://github.com/microsoft/ignite-learning-paths-training-aiml/blob/master/aiml40/dataset/clothing-absa-validation.json) to test the model
+In the datasets folder you will find the items listed below and their associated demo:
+* **[DEMO 2 - Action Needed]** A dataset for Automated ML demo - [clothing_automl.xlsx](https://github.com/microsoft/ignite-learning-paths-training-aiml/blob/master/aiml40/dataset/clothing_automl.xlsx)
+* **[DEMO 3 - NO Action Needed]** The large dataset [clothing_absa_train.csv](https://github.com/microsoft/ignite-learning-paths-training-aiml/blob/master/aiml40/dataset/clothing_absa_train.csv) to train the full aspect based sentiment analysis model for demo 3
+* **[DEMO 3 - NO Action Needed]** A smaller debugging dataset for aspect based sentiment analysis model [clothing_absa_train_small.csv](https://github.com/microsoft/ignite-learning-paths-training-aiml/blob/master/aiml40/dataset/clothing_absa_train_small.csv)
+* **[DEMO 3 - NO Action Needed]** A seperate validation set [clothing-absa-validation.json](https://github.com/microsoft/ignite-learning-paths-training-aiml/blob/master/aiml40/dataset/clothing-absa-validation.json) to test the model
 
-To follow the Automated ML Demo, please upload the dataset to your workspace:
+To follow the Automated ML Demo, please upload the first dataset above to your workspace:
  * Go to [Azure ML Portal](http://ml.azure.com/?wt.mc_id=msignitethetour2019-github-aiml40)
  * Select **Datasets** tab -> **Create Dataset** -> **From Local Files**
  * Specify *Clothing_AutoML* as the dataset name
  * Leave **Tabular** as the dataset type, click **Next**
  * Leave default storage name, and click **Browse** to select the file `clothing_automl.xlsx` from this repository
  * Click **Next** to upload the file
- * You may encounter an error when uploading file, which says *CORS Error: Failed to set up CORS rules* [see screenshot](images/dataset_upload_error.png). If this happens, click on the link **CORS Settings**, on the CORS settings page under **Blob storage** select **Allowed methods** in the first line, and select **PUT** and **POST** methods in addition to **GET** and **HEAD** (see [the screenshot](images/dataset_upload_error_cors.png)). Click **Save**, and repeat the dataset upload process.
- * Click **Next** two times, on the final page click **Create**.  
+ 
+ > 💡 IMPORTANT: You may encounter an error when uploading file, which says *CORS Error: Failed to set up CORS rules* [see screenshot](images/dataset_upload_error.png). If this happens, click on the link **CORS Settings**, on the CORS settings page under **Blob storage** select **Allowed methods** in the first line, and select **PUT** and **POST** methods in addition to **GET** and **HEAD** (see [the screenshot](images/dataset_upload_error_cors.png)). Click **Save**, and repeat the dataset upload process.
 
-The Automated ML clothing dataset would be uploaded to the AML service datastore by the demo code.
+ * On the **Settings and preview** screen in **Column headers** drop down select **Use headers from the first file**
+ * Click **Next** two times
+ * On the final page choose the **Profile this dataset after creation** and from the drop down select the compute you just created.
+ * Click **Create**.  
 
-Also, in order to use Automated ML feature, you need to convert the workspace to the *Enterprise* level. This can be done by clicking on **Automated ML** tab, and choosing the option to upgrade the workspace. This operation only takes a few seconds.
-
-#### Using the Azure ML Demo Code
-
-You can execute demo code from any Jupyter Notebook Environment. We recommend using Jupyter Notebooks that are built into the Azure ML Service, because it requires much less installation steps. Instructions on using other options are in [separate notebook setup document](notebook-setup.md).
-
-To use Jupyter Notebooks from within Azure ML Workspace:
-    - Navigate to your [Azure ML Portal](https://ml.azure.com/)
-    - Select **Notebooks** from left-hand-side menu
-    - Upload `absa.ipynb` file (click the button with the arrow) and select it in the file pane
-    - To be able to execute the notebook, select **+ New VM** from the top menu of the notebook, and create the new notebook VM.
-    - Now you can use the notebook directly from the portal
-    - To open the Jupyter Notebook in a full-screen browser (not inside the ML Portal), select **Jupyter** -> **Open in Jupyter** in the top menu (depending on the screen resolution it may be hidden under `...` button)
-
-In order to connect to your workspace from the Python code in `absa.ipynb`, you would need to provide workspace data. You can either:
- * Insert your subscription id into the code in `absa.ipynb`, and uncomment the following code:
-```python
-subscription_id = 'd04ba089-....'
-resource_group  = 'absa'
-workspace_name  = 'absa_space'
-ws = Workspace(subscription_id = subscription_id, resource_group = resource_group, workspace_name = workspace_name)
-ws.write_config()
-```
- * Or, you can download `config.json` file through the Azure Portal and upload it to the same folder as `absa.ipynb`, in which case the command `ws = Workspace.from_config()` will load this data and connect to the workspace automatically.
-
-> 💡 **Note**: Some code inside `absa.ipynb` file takes **really a long time** to run. In order to demonstrate it to the audience, you need to pre-run some cells in advance, and then only run some cells to show the results. There is a separate file called `absa-instructions.ipynb`, which contains the same code with additional comments on which cells need to be run during demo, and which need to be skipped. Please refer to this file during preparation, and make sure to run cells in `absa.ipynb` before the actual demo.
-
-#### Pre-creating Compute Cluster
-
-For the last two demos, you need a compute cluster. For demo purposes, we will create a cluster that consists of one node only. This can be done in one of two ways:
-
-* **Recommended**: Through [Azure ML Portal](http://ml.azure.com/?wt.mc_id=msignitethetour2019-github-aiml40) go to **Compute** section and manually create Azure ML Compute cluster with *Standard_DS3_v2* VMs, specifying number of nodes = 1. Name the cluster `absa-cluster`. 
-* Run first few cells from `absa.ipynb` notebook which will create the cluster for you.
-
-#### Generate dataset profile
-
-In order to show the AutoML demo, you need to *generate profile* for `clothing_automl.xlsx` dataset. This is a time-consuming operation and should be done before the demo. The easiest way to do it is through the portal:
-
-1. Go to [Azure ML Portal](https://ml.azure.com)
-2. Select **Datasets** -> Clothing_automl.xlsx
-3. Chose **Generate Profile** button
-![Generate Profile](images/genprofile.png)
-4. Select the compute -- you can use the cluster that you have created on the previous step
-5. Profile generation task will be scheduled
-6. You can monitor the task in the **Experiments** tab on Azure ML Portal. 
 
 # Demos
 
