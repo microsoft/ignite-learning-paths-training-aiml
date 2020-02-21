@@ -5,14 +5,15 @@ The easiest way to setup an enviroment is to use the Azure CLI with the Azure Ma
 ### Install the Azure CLI
 Follow the instructions on docs: [Install the Azure CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest/?wt.mc_id=msignitethetour2019-github-aiml40)
 
+### OR
+
+Use the [Azure Cloud Shell](https://docs.microsoft.com/en-us/azure/cloud-shell/overview/?wt.mc_id=msignitethetour2019-github-aiml40) to execute the commands below
+
 ### Install the ML Add on
 ```
 az extension add -n azure-cli-ml
 ```
 
-### OR
-
-Use the [Azure Cloud Shell](https://docs.microsoft.com/en-us/azure/cloud-shell/overview/?wt.mc_id=msignitethetour2019-github-aiml40) to execute the commands below
 
 ### Login to your subscription
 > If you are using the cloud shell you do not need to log into your subscription. Move straight to Setup the Azure Machine Learning Service
