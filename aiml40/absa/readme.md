@@ -42,7 +42,7 @@ az ml workspace create -w absa-workspace -l westeurope -g absa-ml-rg
 
 ![Add new compute target](../images/add-new-compute.png)
 
-- Click on the file "init.ipynb"
+- Click on the file "init.ipynb" (you may need to select the button 'Edit in' and choose inline)
 - Paste the code below in the cell
 
 ```
