@@ -13,6 +13,7 @@ please contact Scott Cate
 - [aiml10.ja-jp.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/aiml10.ja-jp.pptx)
 - [aiml10.zh-cn.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/aiml10.zh-cn.pptx)
 - [aiml10.ko-kr.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/aiml10.ko-kr.pptx)
+- [aiml10.es-es.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/aiml10.es-es.pptx)
 - [aiml10.pt-br.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/aiml10.pt-br.pptx)
 ---
 ## Historical Files
@@ -20,6 +21,7 @@ please contact Scott Cate
 - [aiml10-2019-11_Nov-04.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/aiml10-2019-11_Nov-04.pptx)
 - [aiml10-2019-11_Nov-13.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/aiml10-2019-11_Nov-13.pptx)
 - [aiml10-2019-11_Nov-30.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/aiml10-2019-11_Nov-30.pptx)
+- [aiml10.es-es-2020-03_Mar-06.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/aiml10.es-es-2020-03_Mar-06.pptx)
 - [aiml10.ja-jp-2019-12_Dec-05.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/aiml10.ja-jp-2019-12_Dec-05.pptx)
 - [aiml10.ja-jp-2019-12_Dec-18.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/aiml10.ja-jp-2019-12_Dec-18.pptx)
 - [aiml10.ja-jp-2020-01_Jan-22.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/aiml10.ja-jp-2020-01_Jan-22.pptx)

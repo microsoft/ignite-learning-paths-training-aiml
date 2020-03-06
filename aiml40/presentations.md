@@ -11,6 +11,7 @@ please contact Scott Cate
 
 - [aiml40.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml40/aiml40.pptx)
 - [aiml40.ko-kr.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml40/aiml40.ko-kr.pptx)
+- [aiml40.es-es.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml40/aiml40.es-es.pptx)
 - [aiml40.ja-jp.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml40/aiml40.ja-jp.pptx)
 - [aiml40.zh-cn.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml40/aiml40.zh-cn.pptx)
 - [aiml40.pt-br.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml40/aiml40.pt-br.pptx)
@@ -20,6 +21,7 @@ please contact Scott Cate
 - [aiml40-2019-11_Nov-04.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml40/aiml40-2019-11_Nov-04.pptx)
 - [aiml40-2019-11_Nov-13.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml40/aiml40-2019-11_Nov-13.pptx)
 - [aiml40-2019-11_Nov-30.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml40/aiml40-2019-11_Nov-30.pptx)
+- [aiml40.es-es-2020-03_Mar-06.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml40/aiml40.es-es-2020-03_Mar-06.pptx)
 - [aiml40.ja-jp-2019-12_Dec-05.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml40/aiml40.ja-jp-2019-12_Dec-05.pptx)
 - [aiml40.ja-jp-2020-01_Jan-22.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml40/aiml40.ja-jp-2020-01_Jan-22.pptx)
 - [aiml40.ko-kr-2020-01_Jan-12.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml40/aiml40.ko-kr-2020-01_Jan-12.pptx)

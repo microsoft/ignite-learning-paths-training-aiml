@@ -11,6 +11,7 @@ please contact Scott Cate
 
 - [aiml21.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml21/aiml21.pptx)
 - [aiml21.pt-br.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml21/aiml21.pt-br.pptx)
+- [aiml21.es-es.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml21/aiml21.es-es.pptx)
 - [aiml21.ko-kr.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml21/aiml21.ko-kr.pptx)
 - [aiml21.zh-cn.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml21/aiml21.zh-cn.pptx)
 - [aiml21.ja-jp.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml21/aiml21.ja-jp.pptx)
@@ -20,6 +21,7 @@ please contact Scott Cate
 - [aiml21-2019-11_Nov-04.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml21/aiml21-2019-11_Nov-04.pptx)
 - [aiml21-2019-11_Nov-13.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml21/aiml21-2019-11_Nov-13.pptx)
 - [aiml21-2020-01_Jan-12.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml21/aiml21-2020-01_Jan-12.pptx)
+- [aiml21.es-es-2020-03_Mar-06.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml21/aiml21.es-es-2020-03_Mar-06.pptx)
 - [aiml21.ja-jp-2019-12_Dec-05.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml21/aiml21.ja-jp-2019-12_Dec-05.pptx)
 - [aiml21.ko-kr-2020-01_Jan-12.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml21/aiml21.ko-kr-2020-01_Jan-12.pptx)
 - [aiml21.ko-kr-2020-01_Jan-21.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml21/aiml21.ko-kr-2020-01_Jan-21.pptx)
