@@ -30,6 +30,8 @@ También se le pedirá un identificador de evento (o un motivo para la rotación
 
 Tendrá que proporcionar un nombre de usuario y una contraseña de base de datos para la instancia de Azure SQL.
 
+*No todos los recursos están disponibles en todas las regiones. Para Europa, elija: Norte de Europa*
+
 <a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3a%2f%2fraw.githubusercontent.com%2fmicrosoft%2fignite-learning-paths-training-aiml%2fmaster%2faiml50%2ftemplate%2fazuredeploy.json" target="_blank">
     <img src="http://azuredeploy.net/deploybutton.png"/>
 </a>
@@ -42,7 +44,7 @@ Una vez que la implementación esté en curso (al menos con Azure Machine Learni
 
 * Vaya a [Azure Notebooks](https://notebooks.azure.com/) e inicie sesión con la cuenta de Microsoft con la que está realizando la demostración.
 * Agregue un proyecto nuevo.  Puede importar directamente desde GitHub (el repositorio principal o la bifurcación) o cargar el directorio de `aiml50/source` directamente.
-* En el directorio `aiml50/source` de Azure Notebooks, cree un archivo JSON denominado `azureml-config` con:
+* En el directorio `aiml50/source` de Azure Notebooks, cree un archivo JSON denominado `azureml-config.json` con:
   * Su identificador de suscripción
   * El nombre del grupo de recursos que contiene el área de trabajo de ML
   * El nombre del área de trabajo

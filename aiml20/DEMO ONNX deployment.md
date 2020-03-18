@@ -34,19 +34,19 @@ Se reemplazará el archivo products.onnx de la aplicación web por una versión 
 
 1. Visite el sitio web de Tailwind Traders que ha implementado antes. 
 
-1. Desplácese hacia abajo hasta la sección "Comprar por foto" del sitio web.
+1. Desplácese hacia abajo hasta la sección “Shop by Photo” (Comprar por foto) del sitio web.
 
-1. Haga clic en "Comprar por foto".
+1. Haga clic en “Shop by Photo” (Comprar por foto).
 
-1. En el repositorio AIML20, seleccione: test images > drill.jpg.
+1. En el repositorio AIML20, seleccione: test images (imágenes de prueba) > drill.jpg.
 
-1. Lo identifica correctamente como un taladro. Bien.
+1. La identifica correctamente como un taladro. Bien.
 
-1. Vuelva a la página principal y haga clic en "Comprar por foto" de nuevo.
+1. Vuelva a la página principal y haga clic de nuevo en “Shop by Photo” (Comprar por foto).
 
-1. En el repositorio AIML20, seleccione: test images > pliers.jpg
+1. En el repositorio AIML20, seleccione: test images (imágenes de prueba) > pliers.jpg
 
-1. ¡No! Lo identifica como un martillo. Eso se corregirá más adelante, pero primero se describirá por qué se produjo el error.
+1. ¡No! La identifica como un martillo. Eso se corregirá más adelante, pero primero se describirá por qué se produjo el error.
 
 ## <a name="update-the-onnx-model-in-the-tailwind-traders-website"></a>Actualización del modelo de ONNX en el sitio web de Tailwind Traders
 
@@ -59,10 +59,10 @@ En primer lugar, vea el modelo exportado en Netron:
 3. Desplácese por la red neuronal y observe lo siguiente:
 
  - es grande
- - en la parte superior, hay una imagen de 224 x 224 como entrada (un secreto: los modelos de Computer Vision tienen una visión bastante deficiente)
- - en la parte inferior se muestran cinco valores, que son las puntuaciones de confianza de las etiquetas de clase
+ - en la parte superior, hay una imagen de 224 x 224 como entrada (un secreto: los modelos de Computer Vision tienen una visión bastante deficiente);
+ - en la parte inferior se muestran cinco valores, que son las puntuaciones de confianza de las etiquetas de clase.
 
-A continuación, quite el archivo ONNX que se ha exportado al sistema de archivos de TWT.
+A continuación, coloque el archivo ONNX que se ha exportado en el sistema de archivos de TWT.
 
 1. En Azure Portal, visite el grupo de recursos aiml20-demo.
 

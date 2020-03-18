@@ -52,11 +52,11 @@ En esta sección se usa Postman y se supone que conoce los conceptos relativos a
 
 ![Índice](images/index.png "Índice")
 
-4. Abra y ejecute la solicitud `Create Skillset` mediante el botón Enviar. De esta forma se crea el conjunto de aptitudes personalizado que el indizador usará para extraer los datos de la factura. Este conjunto de aptitudes determinado solo tiene una única aptitud (nuestro elemento `InvoiceReaderSkill` personalizado). Como se indicó anteriormente, si la solicitud se completa correctamente, debería ver el nuevo conjunto de aptitudes reflejado en el portal.
+4. Abra y ejecute la solicitud `Create Skillset` (con el botón Enviar): asegúrese de que ha actualizado el valor del punto de conexión del reconocedor de formularios en el cuerpo de esta solicitud. De esta forma se crea el conjunto de aptitudes personalizado que el indizador usará para extraer los datos de la factura. Este conjunto de aptitudes determinado solo tiene una única aptitud (nuestro elemento `InvoiceReaderSkill` personalizado). Como se indicó anteriormente, si la solicitud se completa correctamente, debería ver el nuevo conjunto de aptitudes reflejado en el portal.
 
-5. Abra y ejecute la solicitud `Create Datasource` mediante el botón Enviar. De esta forma se crea una referencia a la cuenta de almacenamiento donde se encuentran las facturas. Como se indicó anteriormente, si la solicitud se completa correctamente, debería ver el nuevo conjunto de aptitudes reflejado en el portal.
+5. Abra y ejecute la solicitud `Create Datasource` mediante el botón Enviar. De esta forma se crea una referencia a la cuenta de almacenamiento donde se encuentran las facturas. Igual que anteriormente, si la solicitud se completa de forma correcta, verá el nuevo origen de datos reflejado en el portal.
 
-6. Abra y ejecute la solicitud `Create Indexer` mediante el botón Enviar. De esta forma se crea el indizador que extrae las facturas de `Datasource`, usa `Skillset` en cada factura y almacena los datos en el elemento `Index` real. Como se indicó anteriormente, si la solicitud se completa correctamente, debería ver el nuevo conjunto de aptitudes reflejado en el portal.
+6. Abra y ejecute la solicitud `Create Indexer` (mediante el botón Enviar). De esta forma, se creará el indizador que extrae las facturas de `Datasource`, usa `Skillset` en cada factura y almacena los datos en el `Index` real. Al igual que anteriormente, si la solicitud se completa de forma correcta, debería ver el nuevo indizador reflejado en el portal.
 
 
 ### <a name="monitor-and-use-index"></a>Supervisión y uso de índices

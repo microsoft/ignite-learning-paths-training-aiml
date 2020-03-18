@@ -1,7 +1,7 @@
 # <a name="demo-setup"></a>Configuración de la demostración
 Siga los pasos siguientes para preparar el entorno para la demostración en directo. Una vez completada la configuración, siga la [guía de demostración](demoguide.md).
 
-## <a name="create-azure-machine-learninge-resources-with-the-deploy-to-azure-button-below"></a>Creación de recursos de Azure Machine Learning con el botón Implementar en Azure
+## <a name="create-azure-machine-learning-resources-with-the-deploy-to-azure-button-below"></a>Creación de recursos de Azure Machine Learning con el botón Implementar en Azure
 <a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fcassieview%2Fignite-learning-paths-training-aiml%2Fmaster%2Faiml30%2Fdeploy.json" rel="nofollow"> <img src="https://camo.githubusercontent.com/9285dd3998997a0835869065bb15e5d500475034/687474703a2f2f617a7572656465706c6f792e6e65742f6465706c6f79627574746f6e2e706e67" data-canonical-src="http://azuredeploy.net/deploybutton.png" style="max-width:100%;">
 </a>
 

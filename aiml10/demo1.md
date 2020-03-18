@@ -68,7 +68,7 @@ Use el servicio Search:
 
 [![Importación de datos](images/import_data.png)](https://docs.microsoft.com/en-us/azure/search/cognitive-search-quickstart-blob?WT.mc_id=msignitethetour2019-github-aiml10#create-the-enrichment-pipeline "Importación de datos")
 
-2. Use una conexión existente al contenedor `test` que se creó en la cuenta de almacenamiento.
+2. Use una conexión existente al contenedor `test` que creamos en nuestra cuenta de almacenamiento seleccionando "Azure Blob Storage" y, después, la cuenta de almacenamiento.
 
 [![Importación de datos](images/connect_data.png)](https://docs.microsoft.com/en-us/azure/search/cognitive-search-quickstart-blob?WT.mc_id=msignitethetour2019-github-aiml10#step-1-create-a-data-source "Importación de datos")
 
@@ -78,7 +78,7 @@ Use el servicio Search:
 
 4. Vuelva al asistente y haga clic en el botón pertinente para actualizar el contenido. Debería ver el servicio recién creado. 
 
-5. Ahora puede agregar los enriquecimientos que quiera.
+5. Ya puede agregar los enriquecimientos que quiera. Seleccione la casilla "Habilitar OCR..." para tener acceso a más enriquecimientos a partir de un campo de contenido combinado.
 
 [![Incorporación de enriquecimientos](images/add_enrichments.png)](https://docs.microsoft.com/en-us/azure/search/cognitive-search-quickstart-blob?WT.mc_id=msignitethetour2019-github-aiml10#step-2-add-cognitive-skills "Incorporación de enriquecimientos")
 

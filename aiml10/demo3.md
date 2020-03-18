@@ -67,9 +67,9 @@ pm.environment.set('SASValue', '<SAS>')
 
 ![Aptitud local](images/local_skill.png "Aptitud local")
 
-### <a name="create-azure-function-resources"></a>Creación de recursos de Función de Azure
+### <a name="create-azure-function-resources"></a>Creación de recursos de la función de Azure
 
-Se supone que los siguientes comandos se ejecutan en el mismo directorio que la función real.
+Se supone que los siguientes comandos se ejecutan en el mismo directorio que la función real y que ha iniciado sesión en la CLI de Azure mediante ```az login```.
 
 1. Ejecute los siguientes comandos de la CLI de Azure para crear los recursos adecuados y publicar la función:
 

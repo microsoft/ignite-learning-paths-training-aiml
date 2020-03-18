@@ -46,7 +46,7 @@ En el paseo por Ignite, todos los pasos anteriores se realizaron antes de la pre
 1. Para este proyecto ya se han proporcionado imágenes de taladros, martillos, alicates y destornilladores. A continuación se agregarán también algunas imágenes de cascos.
 
 - Haga clic en "Agregar imágenes" en la fila superior.
-- Vaya a CV Training Images / drills.
+- Vaya a Imágenes de entrenamiento de CV/hardhats.
 - Seleccione todos los archivos: haga clic en un archivo y, después, presione Control-A.
 - Haga clic en Abrir.
 - En el cuadro de diálogo "Carga de imágenes" que aparece a continuación, seleccione "hard hat" en "Mis etiquetas " y, después, haga clic en "Cargar 16 archivos".

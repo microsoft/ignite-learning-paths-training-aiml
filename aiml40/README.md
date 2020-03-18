@@ -6,14 +6,14 @@ La inteligencia artificial y el aprendizaje automático se pueden usar de muchas
 
 En esta sesión, se explorará la ruta completa de la integración de servicios inteligentes de análisis de texto en los procesos empresariales de [Tailwind Traders](http://tailwindtraders.com), empezando por los modelos precompilados disponibles como [servicios cognitivos](https://azure.microsoft.com/services/cognitive-services/?WT.mc_id=msignitethetour2019-github-aiml40), hasta el entrenamiento de un modelo neuronal personalizado de terceros para [análisis de sentimiento basado en aspectos](https://www.intel.ai/introducing-aspect-based-sentiment-analysis-in-nlp-architect/) disponible como parte de la [arquitectura NLP de Intel](http://nlp_architect.nervanasys.com/) con [Azure Machine Learning Service](https://azure.microsoft.com/services/machine-learning-service/?wt.mc_id=msignitethetour2019-github-aiml40). Se describirán casos en los que se necesita un modelo personalizado y se mostrarán formas rápidas de crear este tipo de modelo desde cero con [AutoML](https://docs.microsoft.com/azure/machine-learning/service/concept-automated-ml/?wt.mc_id=msignitethetour2019-github-aiml40) y cómo ajustar los hiperparámetros del modelo con [HyperDrive](https://docs.microsoft.com/azure/machine-learning/service/how-to-tune-hyperparameters/?wt.mc_id=msignitethetour2019-github-aiml40)
 
-## <a name="table-of-content"></a>Tabla de contenido
+# <a name="table-of-content"></a>Tabla de contenido
  
 
 | Recursos          | Vínculos                            |
 |-------------------|----------------------------------|
 | PowerPoint        | - [Presentación](presentations.md) |
-| Vídeos            | - [Ensayo del simulacro](https://youtu.be/If9IQm3gWVQ) <br/>- [Grabación de Microsoft Ignite Orlando](https://myignite.techcommunity.microsoft.com/sessions/83002?source=sessions) |
-| Demostraciones             | - [Demostración 1: Text Analytics de Cognitive Services](https://github.com/microsoft/ignite-learning-paths-training-aiml/tree/master/aiml40#demo-1-text-analytics-cognitive-service) <br/>- [Demostración 2: Aprendizaje automático automatizado](https://github.com/microsoft/ignite-learning-paths-training-aiml/tree/master/aiml40#demo-2-azure-automl) <br/>- [Demostración 3: SDK de Azure Machine Learning e Hyperdrive](https://github.com/microsoft/ignite-learning-paths-training-aiml/tree/master/aiml40#demo-3-using-azure-ml-workspace-with-python-sdk) |
+| Vídeos            | - [Ensayo del simulacro](https://youtu.be/If9IQm3gWVQ) <br/>- [Microsoft Ignite Orlando Recording](https://myignite.techcommunity.microsoft.com/sessions/83002?source=sessions) |
+| Demostraciones             | - [Demostración 1: Text Analytics de Cognitive Services](https://github.com/microsoft/ignite-learning-paths-training-aiml/tree/master/aiml40#demo-1-text-analytics-cognitive-service) <br/>- [Demostración 2: Aprendizaje automático automatizado](https://github.com/microsoft/ignite-learning-paths-training-aiml/tree/master/aiml40#demo-2-azure-automl) <br/>- [Demostración 3: SDK de Azure Machine Learning e Hyperdrive](https://github.com/microsoft/ignite-learning-paths-training-aiml/tree/master/aiml40#demo-3-using-azure-ml-workspace-with-python-sdk) |
 
 ## <a name="delivery-assets"></a>Recursos de entrega
 
@@ -30,8 +30,10 @@ En esta sesión, se explorará la ruta completa de la integración de servicios 
 En esta presentación se realizan las demostraciones siguientes:
 
 1. Uso de [Text Analytics de Cognitive Services](https://azure.microsoft.com/services/cognitive-services/text-analytics/?wt.mc_id=msignitethetour2019-github-aiml40) para determinar la opinión de una revisión de prendas.
-2. Uso de [ML automatizado de Azure](https://docs.microsoft.com/azure/machine-learning/service/concept-automated-ml/?wt.mc_id=msignitethetour2019-github-aiml40) para crear un clasificador de texto casi sin código.
-3. Uso de [Azure Machine Learning Service](https://azure.microsoft.com/services/machine-learning-service/?wt.mc_id=msignitethetour2019-github-aiml40) para entrenar un modelo de análisis de sentimiento basado en aspectos.
+2. Uso de [ML automatizado de Azure](https://docs.microsoft.com/azure/machine-learning/concept-automated-ml?wt.mc_id=msignitethetour2019-github-aiml40) para crear un clasificador de texto casi sin código.
+3. Uso de [Azure Machine Learning Service](https://azure.microsoft.com/services/machine-learning-service/?wt.mc_id=msignitethetour2019-github-aiml40) para entrenar un modelo de Análisis de sentimiento basado en aspectos.
+
+>  💡 **IMPORTANTE: Debe ejecutar todas las instrucciones y demostraciones antes de pasar a la fase para ofrecer este contenido**. Las demostraciones tardan mucho tiempo en ejecutarse y procesarse, por lo que sea consciente de que el tiempo de preparación de esta sesión es clave para realizarla correctamente. Debería ejecutarse cada sección para obtener un identificador que pueda sustituir en los cuadernos cuando esté en la fase en lugar de esperar a que finalicen los experimentos (la sesión no es lo suficientemente larga para ejecutar un experimento sencillo).
 
 ## <a name="starting-fast"></a>Inicio rápido
 
@@ -43,21 +45,20 @@ Si quiere comenzar de inmediato, puede implementar todos los recursos necesarios
 
 A continuación se proporcionan instrucciones más detalladas para la demostración, a fin de que pueda realizar los pasos manualmente para comprender totalmente los conceptos que se muestran.
 
-## <a name="initial-environment-setup"></a>Configuración inicial del entorno
+# <a name="initial-environment-setup"></a>Configuración inicial del entorno
 
-Para realizar los pasos 2 y 3 de la demostración, es necesario:
+Para realizar la demostración 2, tendrá que:
 
 1. Crear un área de trabajo de Azure Machine Learning
-2. Cargar los datos que se usan para el entrenamiento de AutoML: [clothing_automl.xlsx](https://github.com/microsoft/ignite-learning-paths-training-aiml/blob/master/aiml40/dataset/clothing_automl.xlsx)
+2. Crear un clúster de proceso de entrenamiento en Azure Machine Learning
+3. Cargar los datos que se usan para el entrenamiento de ML automatizado: [clothing_automl.xlsx](https://github.com/microsoft/ignite-learning-paths-training-aiml/blob/master/aiml40/dataset/clothing_automl.xlsx)
 
 #### <a name="creating-azure-machine-learning-workspace"></a>Creación de un área de trabajo de Azure Machine Learning
 
 El área de trabajo de Azure Machine Learning se puede:
 * Crear de forma manual, desde [Azure Portal](http://portal.azure.com/?wt.mc_id=msignitethetour2019-github-aiml40) ([este es el proceso completo](https://docs.microsoft.com/azure/machine-learning/service/how-to-manage-workspace/?wt.mc_id=msignitethetour2019-github-aiml40))
-* Implementar a partir de la plantilla de Azure proporcionada
-* Crear a través de la [CLI de Azure](https://docs.microsoft.com/ru-ru/cli/azure/?view=azure-cli-latest&wt.mc_id=msignitethetour2019-github-aiml40)
-
-> *NOTA: (En este ejemplo se usa `absa` como nombre y el centro de recursos *Oeste de EE. UU. 2*, pero no dude en cambiarlo)*
+* Implementado a partir de la plantilla de Azure proporcionada
+* Creado a través de [CLI de Azure](https://docs.microsoft.com/cli/azure/?view=azure-cli-latest&wt.mc_id=msignitethetour2019-github-aiml40) con los siguientes comandos:
 
 ```shell
 az extension add -n azure-cli-ml
@@ -65,106 +66,102 @@ az group create -n absa -l westus2
 az ml workspace create -w absa_space -g absa
 ```
 
-También debe conocer el identificador de la suscripción, que se puede obtener si ejecuta `az account list`.
+> 💡 *NOTA IMPORTANTE: Usamos `absa_space` como un nombre de área de trabajo y `absa` como el nombre del grupo de recursos de Azure. Además, usamos *Oeste de EE. UU. 2* como ubicación del centro de datos, pero puede ajustarlo en función de la región en la que se llevará a cabo la demostración.*
 
-#### <a name="uploading-data-to-the-workspace"></a>Carga de datos al área de trabajo
-
-En las demostraciones, se usan varios conjuntos de datos:
-* Un conjunto de datos para la demostración de ML automatizado: [clothing_automl.xlsx](https://github.com/microsoft/ignite-learning-paths-training-aiml/blob/master/aiml40/dataset/clothing_automl.xlsx).
-* El conjunto de datos grande [clothing_absa_train.csv](https://github.com/microsoft/ignite-learning-paths-training-aiml/blob/master/aiml40/dataset/clothing_absa_train.csv) para entrenar el modelo de análisis de sentimiento basado en aspectos completo de la Demostración 3.
-* Un conjunto de datos de depuración más pequeño para el modelo de análisis de sentimiento basado en aspectos [clothing_absa_train_small.csv](https://github.com/microsoft/ignite-learning-paths-training-aiml/blob/master/aiml40/dataset/clothing_absa_train_small.csv).
-* Un conjunto de validación independiente [clothing-absa-validation.json](https://github.com/microsoft/ignite-learning-paths-training-aiml/blob/master/aiml40/dataset/clothing-absa-validation.json) para probar el modelo.
-
-Para seguir la demostración de ML automatizado, cargue el conjunto de datos en el área de trabajo. Puede hacerlo de forma manual a través del [portal de aprendizaje automático de Azure](http://ml.azure.com/?wt.mc_id=msignitethetour2019-github-aiml40), o bien usar el archivo `upload_dataset.py` proporcionado (el archivo csv o xlsx debe estar en el directorio actual y debe sustituir `[subscription_id]` en función de la suscripción):
-
-```shell
-python upload_dataset.py -s [subscription_id] -w absa_space -g absa -f clothing_automl.xlsx
-```
-
-El código de la presentación cargará el conjunto de datos de ropa de ML automatizado al almacén de datos del servicio AML.
-
-#### <a name="using-the-azure-ml-demo-code"></a>Uso del código de demostración de Azure ML
-
-Puede ejecutar el código de la demostración desde cualquier entorno de Jupyter Notebook. Puede usar cualquiera de las opciones siguientes:
- - Instalar el entorno de Python de forma local, como se describe a continuación en **Instalación del entorno de Python**.
- - Usar Jupyter Notebook en un área de trabajo de Azure Machine Learning. Para ello:
-     - Vaya a su [Portal de Azure Machine Learning](https://ml.azure.com/).
-     - Seleccione **Notebooks** en el menú de la izquierda.
-     - Cargue el archivo `absa.ipynb` y selecciónelo.
-     - Se le pedirá que **cree una máquina virtual de Notebook**. Ahora puede usar el cuaderno directamente desde el portal.
- - Usar [Azure Notebooks](https://docs.microsoft.com/azure/notebooks/azure-notebooks-overview/?wt.mc_id=absa-notebook-abornst). En este caso, debe cargar el archivo `absa.ipynb` en un nuevo proyecto de Azure Notebooks. Además, debido a las limitaciones del proceso gratuito en Azure Notebooks (1 GB de espacio en disco), solo podrá ejecutar este cuaderno en una máquina virtual, tal y como se describe [aquí](https://docs.microsoft.com/azure/notebooks/use-data-science-virtual-machine/?wt.mc_id=msignitethetour2019-github-aiml40). 
-
-#### <a name="python-environment-installation"></a>Instalación del entorno de Python
-
-Si decide no usar Azure Notebooks y prefiere el entorno local de Python, debe instalar el SDK de Azure ML de Python y asegurarse de instalar notebook y contrib:
-
-```shell
-conda create -n azureml -y Python=3.6
-source activate azureml
-pip install --upgrade azureml-sdk[notebooks,contrib] 
-conda install ipywidgets
-jupyter nbextension install --py --user azureml.widgets
-jupyter nbextension enable azureml.widgets --user --py
-```
-
-Después de esta operación tendrá que reiniciar Jupyter. Consulte [aquí](https://docs.microsoft.com/azure/machine-learning/service/quickstart-create-workspace-with-python/?WT.mc_id=msignitethetour2019-github-aiml40) las instrucciones detalladas.
-
-Si necesita una cuenta de evaluación gratuita para comenzar, puede obtener una [aquí](https://azure.microsoft.com/offers/ms-azr-0044p/?WT.mc_id=msignitethetour2019-github-aiml40).
+> 💡 *NOTA IMPORTANTE: Necesitará un área de trabajo de Azure Machine Learning de nivel empresarial para completar la demostración 2. Cuando inicie sesión en el Azure Portal y vaya a la instancia de Azure ML, verá la oportunidad de actualizar. ![Actualizar a Enterprise](images/upgrade-enterprise.PNG)
 
 #### <a name="pre-creating-compute-cluster"></a>Creación previa del clúster de proceso
 
-En las dos últimas demostraciones, necesita un clúster de proceso. Para fines de demostración, se creará un clúster que consta solo de un nodo. Esto se puede hacer de una de estas tres maneras:
+Para la demostración 2, necesita un clúster de proceso para perfilar el conjunto de datos y ejecutar el modelo. 
 
-1. En el [portal de aprendizaje automático de Azure](http://ml.azure.com/?wt.mc_id=msignitethetour2019-github-aiml40) vaya a la sección **Proceso** y cree manualmente un clúster de proceso de Azure Machine Learning con máquinas virtuales *Standard_DS3_v2* y especifique 1 como número de nodos. Asigne el nombre `absa-cluster` al clúster.
-2. Ejecute el script `create_cluster.py` proporcionado, con los parámetros anteriores:
-```shell
-python create_cluster.py -s [subscription_id] -w absa_space -g absa
-```
-3. Ejecute las primeras celdas del cuaderno `absa.ipynb`, para crear el clúster de forma automática.
+Esto puede hacerse mediante las siguientes instrucciones:
 
-## <a name="demos"></a>Demostraciones
+* Vaya a [Azure ML Studio - ml.azure.com](http://ml.azure.com/?wt.mc_id=msignitethetour2019-github-aiml40). 
+    * Elija la sección **Proceso**.
+    * Seleccione **Clústeres de entrenamiento**. 
+    * Seleccione **Nuevo paso**.
+    * Proporcione un **Nombre** para su proceso, p. ej., cpu-proceso.
+    * Elija **Tamaño de la máquina virtual**, p.ej., Standard_D2_v2.
+    * Seleccione **Prioridad baja**.
+    * **Mínimo** número de nodos 0 y **máximo** hasta 5
+    * Seleccione **Crear**.
 
-### <a name="demo-1-text-analytics-cognitive-service"></a>Demostración 1: Text Analytics de Cognitive Services
 
-> 💡 Debe haber completado la [configuración del entorno](https://github.com/microsoft/ignite-learning-paths-training-aiml/tree/master/aiml40#starting-fast) antes de intentar realizar la demostración.
+#### <a name="uploading-data-to-the-workspace"></a>Carga de datos al área de trabajo
 
-En esta demostración, se muestra cómo Text Analytics puede realizar el análisis de sentimiento de una frase en una interfaz web.
+En la carpeta de conjuntos de datos encontrará los elementos indicados a continuación y su demostración asociada:
+* **[DEMOSTRACIÓN 2: acción necesaria]** Conjunto de datos para la demostración de ML automatizado: [clothing_automl.xlsx](https://github.com/microsoft/ignite-learning-paths-training-aiml/blob/master/aiml40/dataset/clothing_automl.xlsx)
+* **[DEMOSTRACIÓN 3: ninguna acción necesaria]** Conjunto de datos grande [clothing_absa_train.csv](https://github.com/microsoft/ignite-learning-paths-training-aiml/blob/master/aiml40/dataset/clothing_absa_train.csv) para entrenar el modelo de análisis de sentimiento basado en aspectos completo para la demostración 3
+* **[DEMOSTRACIÓN 3: ninguna acción necesaria]** Conjunto de datos de depuración más pequeño para el modelo de análisis de sentimiento basado en aspectos [clothing_absa_train_small.csv](https://github.com/microsoft/ignite-learning-paths-training-aiml/blob/master/aiml40/dataset/clothing_absa_train_small.csv)
+* **[DEMOSTRACIÓN 3: ninguna acción necesaria]** Conjunto de validación independiente [clothing-absa-validation.json](https://github.com/microsoft/ignite-learning-paths-training-aiml/blob/master/aiml40/dataset/clothing-absa-validation.json) para probar el modelo
 
-1. Abra la [página Análisis de texto](https://azure.microsoft.com/services/cognitive-services/text-analytics/?WT.mc_id=msignitethetour2019-github-aiml40)
-2. Desplácese hacia abajo hasta la sección **Véala en acción**  y escriba la frase *Me gustaban los pantalones de topos que compré en la tienda de Londres* (también puede dejar la frase predeterminada para demostrar el proceso).
+Para seguir la demostración de ML automatizado, cargue el primer conjunto de datos anterior en el área de trabajo:
+ * Vaya a [Azure ML Portal](http://ml.azure.com/?wt.mc_id=msignitethetour2019-github-aiml40).
+ * Seleccione la pestaña **Conjuntos de datos** -> **Crear conjunto de datos** -> **De archivos locales**.
+ * Especifique *Clothing_AutoML* como el nombre del conjunto de datos.
+ * Deje **Tabular** como el tipo de conjunto de datos y haga clic en **Siguiente**.
+ * Deje el nombre de almacenamiento predeterminado y haga clic en **Examinar** para seleccionar el archivo `clothing_automl.xlsx` desde este repositorio.
+ * Haga clic en **Siguiente** para cargar el archivo.
+ 
+ > 💡IMPORTANTE: Puede encontrarse un error al cargar el archivo que diga *Error de CORS: Error al configurar las reglas de CORS* [ver captura de pantalla](images/dataset_upload_error.png). Si esto sucede, haga clic en el vínculo **Configuración de CORS**, en la página de configuración de CORS en **Almacenamiento de Blob** seleccione **Métodos permitidos** en la primera línea y seleccione los métodos **PUT** y **POST** además de **GET** y **HEAD** (ver [la captura de pantalla](images/dataset_upload_error_cors.png)). Haga clic en **Guardar**, y repita el proceso de carga de conjunto de datos.
+
+ * En la pantalla **Configuración y vista previa**, en el desplegable de los **encabezados de columna**, seleccione **Usar encabezados del primer archivo**.
+ * Haga clic en **Siguiente** dos veces.
+ * En la página final, elija **Perfilar este conjunto de datos después de la creación** y desde el desplegable, seleccione el proceso que acaba de crear.
+ * Haga clic en **Crear**.  
+
+
+# <a name="demos"></a>Demostraciones
+
+## <a name="demo-1-text-analytics-cognitive-service"></a>**Demostración 1:** Análisis de texto de Cognitive Services
+
+En esta demostración, se muestra cómo Análisis de texto puede realizar el análisis de sentimiento de una frase en una interfaz web.
+
+1. Abra la [página Análisis de texto](https://azure.microsoft.com/services/cognitive-services/text-analytics/?WT.mc_id=msignitethetour2019-github-aiml40).
+2. Desplácese hacia abajo hasta la sección **Véala en acción**  y escriba la frase *Me gustaban los pantalones de topos que compré en la tienda de Londres*.
 3. Pulse **Analizar** para obtener el siguiente resultado:
 
-![Captura de pantalla de Análisis de texto de Azure](images/analytics.png)
+![Captura de pantalla de Análisis de texto de Azure](images/text-analytics-1.PNG)
 
 Observe que Análisis de texto no solo proporciona opiniones, sino que también extrae las palabras clave y la ubicación del texto.
 
-### <a name="demo-2-azure-automl"></a>Demostración 2: Azure AutoML
+4. Ahora escriba la frase *Me encantaron los pantalones de topos, pero el entorno de la tienda de Londres no me gustó*.
+
+![Captura de pantalla de Análisis de texto de Azure](images/text-analytics-2.PNG)
+
+Podemos ver que la API extrae sentimiento de la frase completa. Sin embargo, en el caso de Tailwind Traders, queremos que se analice cada entidad de cada sentimiento, por lo que, en este caso, necesitaremos crear nuestro propio modelo a medida siguiendo la regla 80:20.
+
+## <a name="demo-2-azure-automl"></a>**Demostración 2:** Azure AutoML
 
 > 💡 Debe haber completado la [configuración del entorno](https://github.com/microsoft/ignite-learning-paths-training-aiml/tree/master/aiml40#starting-fast) antes de intentar realizar la demostración.
 
 En esta demostración, se muestra cómo se puede usar ML automatizado para crear un modelo de aprendizaje automático sin código.
 
 1. Vaya al área de trabajo de Azure Machine Learning (creada anteriormente) en [http://ml.azure.com](http://ml.azure.com/?WT.mc_id=msignitethetour2019-github-aiml40)
-2. Vaya a **Conjuntos de datos**: debería ver el conjunto de datos que ha cargado antes (clothing_automl.xlsx). Tenga en cuenta que también puede cargarlo aquí a través del portal.
+2. Vaya a **Conjuntos de datos**: verá el conjunto de datos que ha cargado antes (clothing_automl.xlsx). Mencione que también puede cargarlo aquí a través del portal.
 3. Seleccione el conjunto de datos.
-4. En la pestaña **Información general**, expanda **Uso de ejemplo** y muestre el código que se puede usar para acceder a los datos mediante programación, si es necesario.
-5. En la pestaña **Explorar**, examine los datos.
-6. Vaya a la pestaña **ML automatizado** y haga clic en **Nuevo experimento.**
-7. Seleccione el nombre del experimento y el proceso que se va a usar.
-8. Seleccione el conjunto de datos.
-9. Elija el tipo de tarea de predicción: **Clasificación**.
-10. Seleccione la columna de destino: **Clasificación**.
-11. Haga clic en **Iniciar**.
+4. Verá la pestaña **Consumir**. Mencione el cuadro **Uso de ejemplo** y muestre el código que se puede usar para acceder a los datos mediante programación, si es necesario.
+5. En la pestaña **Explorar**, examine los datos. Opcionalmente, puede seleccionar la pestaña **Perfil**, para ver algunas estadísticas más detalladas sobre los datos.
+6. Vaya a **ML automatizado** y haga clic en **Nueva ejecución de ML automatizado**.
+7. En la página de selección de conjunto de datos, seleccione el conjunto de datos *Clothing_AutoML* y haga clic en **Siguiente**.
+8. Elija el nombre del experimento (p. ej., `AutoML`), **Clasificación** como la columna de destino y seleccione el proceso que va a usar (use el clúster que hemos creado). Haga clic en Siguiente.
+9. Elija el tipo de tarea de predicción: **Clasificación**. Opcionalmente, puede **Habilitar el aprendizaje profundo**, pero no es estrictamente necesario para este experimento y se traducirá en tiempos de ejecución más largos.
+10. Ahora ya está listo para hacer clic en **Finalizar**.
 
-El experimento tardará mucho tiempo en ejecutarse, ya que se investigarán diferentes algoritmos. Si se muestra una demostración, tendría sentido ejecutar esto de antemano y mostrar los resultados.
+El experimento tardará mucho tiempo en ejecutarse, ya que se investigarán diferentes algoritmos. Si está mostrando una demostración, tendría sentido ejecutar esto de antemano y mostrar solo los resultados. Para mostrar los resultados, vaya a la pestaña **Experimentos** en [Azure ML Portal](http://ml.azure.com) y seleccione el experimento que ha ejecutado.
 
-### <a name="demo-3-using-azure-ml-workspace-with-python-sdk"></a>Demostración 3: Uso del área de trabajo de Azure Machine Learning con el SDK de Python
+## <a name="demo-3-using-the-azure-ml-service-with-azureml-python-sdk"></a>**Demostración 3:** Uso del servicio de Azure ML con SDK de AzureML de Python
 
-> 💡 Debe haber completado la [configuración del entorno](https://github.com/microsoft/ignite-learning-paths-training-aiml/tree/master/aiml40#starting-fast) antes de intentar realizar la demostración.
+En esta demostración, se ejecutará código personalizado de Python que usa el SDK de Azure ML de Python para entrenar, optimizar y utilizar el modelo personalizado de Análisis de sentimiento basado en aspectos (ABSA).
 
-En esta demostración, se ejecutará código personalizado de Python que usa el SDK de Azure ML de Python para entrenar, optimizar y utilizar el modelo personalizado de análisis de sentimiento basado en aspectos (ABSA).
+Para compilar y ejecutar esta demostración, recomendamos los siguientes pasos:
+* Primero, siga las instrucciones del [archivo Léame de la demostración 3](absa/readme.md).
+* Esto configurará el entorno de la demostración necesario para ejecutar toda la sección final de la sesión (Compilación de un modelo de Análisis de sentimiento basado en aspectos usando Azure Machine Learning). En esta configuración se trabajará con 3 archivos:
+    * [setup.ipynb](absa/notebooks/setup.ipynb): se configura todo el entorno, todas las dependencias y todos los conjuntos de datos e infraestructuras necesarios para ejecutar el código.
+    * [absa.ipynb](absa/notebooks/absa.ipynb): se explican el entrenamiento, la evaluación y la implementación de un modelo inicial de ABSA.
+    * [absa-hyperdrive.ipynb](absa/notebooks/absa-hyperdrive.ipynb): se trata la aplicación del ajuste de hiperparámetros a su modelo de ABSA.
 
-Todas las instrucciones de esta parte de la demostración se encuentran en el propio cuaderno de Jupyter Notebook. Use uno de los métodos descritos anteriormente para ejecutar el cuaderno (en Azure Notebooks o de forma local) y siga esas instrucciones. 
+#### <a name="to-get-started-with-absa-demo---go-here"></a>**Para empezar con la demostración de ABSA, [vaya aquí](absa/readme.md)**
 
 ## <a name="tear-down"></a>Desmontaje
 

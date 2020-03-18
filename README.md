@@ -4,7 +4,7 @@
 
 Le damos la bienvenida.
 
-El contenido de este repositorio está disponible para que pueda reproducir cualquier demostración o aprender a presentar cualquier sesión de la ruta de aprendizaje en [Microsoft Ignite](https://www.microsoft.com/en-us/ignite) y durante el [paseo sobre Microsoft Ignite](https://www.microsoft.com/en-ca/ignite-the-tour/), en su oficina local, en un grupo de usuarios de la comunidad o, incluso, como un evento de almuerzo y aprendizaje para su empresa.
+El contenido de este repositorio está disponible para que pueda reproducir demostraciones u obtener información sobre como presentar una sesión de la ruta de aprendizaje ofrecida en [Microsoft Ignite](https://www.microsoft.com/en-us/ignite) y durante [Un paseo por Microsoft Ignite](https://www.microsoft.com/en-ca/ignite-the-tour/). Puede hacerlo en su oficina, con un grupo de usuarios de la comunidad o incluso como una comida informal acompañada de una sesión de aprendizaje para su empresa.
 
 ## <a name="do-the-demos"></a>Realización de las demostraciones
 
@@ -12,7 +12,7 @@ Si lo que quiere es reproducir una demostración en la comodidad de su hogar u o
 
 ## <a name="presenting-the-content"></a>Presentación del contenido
 
-Nos complace que esté aquí y espere con ganas la llegada de este increíble contenido. Como presentador experimentado, estamos convencidos de que sabe cómo hacerlo, de modo que esta guía se centra en aquello que necesita presentar. Le proporcionará un repaso completo de la presentación creada por el equipo de diseño de presentaciones.
+Nos complace que esté aquí y espere con ganas la llegada de este increíble contenido. Como presentador experimentado, estamos convencidos de que sabe CÓMO hacerlo, de modo que esta guía se centra en LO que necesita presentar. Le proporcionará un repaso completo de la presentación creada por el equipo de diseño de presentaciones.
 
 Junto con el vídeo de la presentación, este repositorio proporcionará vínculos a todos los recursos que necesita para presentar correctamente las diapositivas de PowerPoint, así como las instrucciones y el código de demostración.
 
@@ -33,31 +33,31 @@ Se contemplan todas las fases de la curva de aprendizaje de IA, tanto si quiere 
 
 Aquí están todas las sesiones disponibles en la ruta de aprendizaje **Guía para desarrolladores de IA** (también conocida como: **AIML**).
 
-### <a name="aiml10-making-sense-of-your-unstructured-data-with-aiaiml10readmemd"></a>[AIML10: Datos no estructurados con sentido gracias a la inteligencia artificial](aiml10/README.md)
+### <a name="aiml10-making-sense-of-your-unstructured-data-with-ai"></a>[AIML10: Datos no estructurados con sentido gracias a la inteligencia artificial](aiml10/README.md)
 
 Tailwind Traders posee una enorme cantidad de datos heredados que les gustaría que sus desarrolladores usaran en sus aplicaciones. Estos datos proceden de diversos orígenes (tanto estructurados como no estructurados) y engloban imágenes, formularios, archivos PDF y otros muchos elementos. En esta sesión, veremos cómo el equipo usó Cognitive Search para dar sentido a estos datos en un breve período de tiempo y con un éxito asombroso. Abordaremos infinidad de conceptos de inteligencia artificial, como el patrón de ingesta, enriquecimiento y exploración, los conjuntos de aptitudes, las aptitudes cognitivas, el procesamiento de lenguaje natural, Computer Vision, etc.
 
-### <a name="aiml20-using-pre-built-ai-to-solve-business-challengesaiml20readmemd"></a>[AIML20: Uso de inteligencia artificial pregenerada para superar desafíos empresariales](aiml20/README.md)
+### <a name="aiml20-using-pre-built-ai-to-solve-business-challenges"></a>[AIML20: Uso de inteligencia artificial pregenerada para superar desafíos empresariales](aiml20/README.md)
 
 Como compañía orientada a datos, Tailwind Traders entiende la importancia del uso de la inteligencia artificial para mejorar los procesos empresariales y satisfacer a los clientes. Antes de invertir en un equipo de inteligencia artificial, los desarrolladores existentes tuvieron la oportunidad de demostrar algunos beneficios inmediatos usando tecnologías de inteligencia artificial creadas previamente. En esta sesión, explicaremos cómo se pueden usar los servicios de Azure Cognitive Services para obtener información de los datos comerciales y adentrarse en las redes neuronales tras Computer Vision. Veremos cómo funciona esto y cómo se puede aumentar la inteligencia artificial pregenerada con imágenes propias para aplicaciones de reconocimiento de imágenes personalizadas.
 
-### <a name="aiml30-start-building-machine-learning-models-faster-than-you-thinkaiml30readmemd"></a>[AIML30: Creación de modelos de Machine Learning más rápido de lo que piensa](aiml30/README.md)
+### <a name="aiml30-start-building-machine-learning-models-faster-than-you-think"></a>[AIML30: Creación de modelos de Machine Learning más rápido de lo que piensa](aiml30/README.md)
 
 Tailwind Traders usa modelos de aprendizaje automático personalizados para corregir sus problemas de inventario, sin cambiar su ciclo de vida de desarrollo de software. ¿Cómo? Interfaz visual de Azure Machine Learning. En esta sesión, conoceremos el proceso de ciencia de datos que Tailwind Traders usa y veremos una introducción a la interfaz visual de Azure Machine Learning. Veremos cómo buscar, importar y preparar datos, cómo seleccionar un algoritmo de Machine Learning, cómo entrenar y probar el modelo e implementar un modelo completo en una API. Obtenga las sugerencias, los procedimientos recomendados y los recursos que usted y su equipo de desarrollo necesitan para continuar con el recorrido de aprendizaje automático, compilar el primer modelo y mucho más.
 
-### <a name="aiml40-taking-models-to-the-next-level-with-azure-machine-learning-best-practicesaiml40readmemd"></a>[AIML40: Traslado de modelos al siguiente nivel con los procedimientos recomendados de Azure Machine Learning](aiml40/README.md)
+### <a name="aiml40-taking-models-to-the-next-level-with-azure-machine-learning-best-practices"></a>[AIML40: Traslado de modelos al siguiente nivel con los procedimientos recomendados de Azure Machine Learning](aiml40/README.md)
 
 El equipo de ciencia de datos de Tailwind Traders usa el procesamiento de lenguaje natural (PNL) y hace poco ha descubierto cómo ajustar y crear un modelo de base de referencia con Machine Learning automatizado. 
 
 En esta sesión, veremos qué es Machine Learning automatizado y por qué es tan eficaz y, después, veremos más exhaustivamente cómo mejorar los modelos de línea base mediante ejemplos del repositorio de procedimientos recomendados de PNL. Resaltaremos las principales características de Azure Machine Learning y cómo se pueden poner en marcha en su organización, entre otras, las instancias de proceso de prioridad baja, el entrenamiento distribuido con escalado automático, la optimización de hiperparámetros, la colaboración, el registro y la implementación. 
 
-### <a name="aiml50-machine-learning-operations-applying-devops-to-data-scienceaiml50readmemd"></a>[AIML50: Operaciones de Machine Learning: aplicación de DevOps a la ciencia de datos](aiml50/README.md) 
+### <a name="aiml50-machine-learning-operations-applying-devops-to-data-science"></a>[AIML50: Operaciones de Machine Learning: aplicación de DevOps a la ciencia de datos](aiml50/README.md) 
 
 Aunque muchas empresas han adoptado prácticas de DevOps para mejorar la entrega de software, estas mismas técnicas rara vez se aplican a proyectos de Machine Learning. La colaboración entre desarrolladores y científicos de datos puede ser limitada, e implementar modelos en producción de manera uniforme y confiable es muchas veces un sueño inalcanzable. 
 
 En esta sesión, aprenderá a poner en marcha procedimientos de DevOps en sus proyectos de Machine Learning, usando para ello Azure DevOps y Azure Machine Learning Service. Configuraremos el entrenamiento, la puntuación y el almacenamiento automatizados de los modelos con versiones, y encapsularemos los modelos en contenedores de Docker y los implementaremos en Azure Container Instances y en Azure Kubernetes Service. Hasta recabaremos comentarios continuos sobre el comportamiento del modelo para saber cuándo volver a entrenarlo. 
 
-### <a name="aiml21-developers-guide-to-ai-a-data-storyaiml21readmemd"></a>[AIML21: Guía de inteligencia artificial para desarrolladores: una historia sobre datos](aiml21/README.md)
+### <a name="aiml21-developers-guide-to-ai-a-data-story"></a>[AIML21: Guía de inteligencia artificial para desarrolladores: una historia sobre datos](aiml21/README.md)
 
 En esta sesión de teatro, explicaremos el proceso de ciencia de datos y cómo aplicarlo. Desde la exploración de conjuntos de datos a la implementación de servicios: todo contextualizado dentro de una historia de datos muy interesante. Esto también nos permitirá recorrer brevemente la plataforma de Azure AI.
 

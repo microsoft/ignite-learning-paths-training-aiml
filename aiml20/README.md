@@ -3,8 +3,11 @@
 Este es el repositorio compatible con Microsoft Ignite 2019 y la presentación Microsoft Ignite the Tour 2019-2020 (Un paseo por Microsoft Ignite), "Uso de inteligencia artificial pregenerada para superar desafíos empresariales". Aquí encontrará vínculos a los recursos mencionados en la presentación, así como el código y los scripts que necesitará para volver a crear las demostraciones que se proporcionan.
 
 * [AIML20：使用预先构建的 AI 解决业务难题](https://github.com/microsoft/ignite-learning-paths-training-aiml/tree/master-SimplifiedChinese/aiml20)
+* [AIML20：使用預先建立的 AI 解決商務挑戰](https://github.com/microsoft/ignite-learning-paths-training-aiml/tree/master-TraditionalChinese/aiml20)
 * [AIML20: Uso da IA pré-criada para resolver desafios de negócios](https://github.com/microsoft/ignite-learning-paths-training-aiml/tree/master-PortugueseBrazil/aiml20)
+* [AIML20: Uso de inteligencia artificial pregenerada para superar desafíos empresariales](https://github.com/microsoft/ignite-learning-paths-training-aiml/tree/master-Spanish/aiml20)
 * [AIML20:事前構築済み AI を使用してビジネスの課題を解決する](https://github.com/microsoft/ignite-learning-paths-training-aiml/tree/master-Japanese/aiml20)
+* [AIML20: 미리 빌드된 AI를 사용하여 비즈니스 과제 해결](https://github.com/microsoft/ignite-learning-paths-training-aiml/tree/master-Korean/aiml20)
 
 ## <a name="session-abstract"></a>Resumen de la sesión
 
@@ -37,7 +40,7 @@ También se proporcionan [recursos para los presentadores de esta presentación]
 ## <a name="technologies-used"></a>Tecnologías usadas
 
 * [Azure Cognitive Services](https://docs.microsoft.com/en-us/azure/cognitive-services/?WT.mc_id=msignitethetour2019-github-aiml20)
-* [Azure Cloud Shell](https://docs.microsoft.com/en-us/azure/cloud-shell/overview?WT.mc_id=msignitethetour2019-github-aiml20)
+* [Azure Cloud Shell](https://docs.microsoft.com/en-us/azure/cloud-shell/overview?WT.mc_id=msignitethetour2019-github-aiml20)
 * [Interfaz de la línea de comandos (CLI) de Azure](https://docs.microsoft.com/en-us/cli/azure/?view=azure-cli-latest?WT.mc_id=msignitethetour2019-github-aiml20)
 * [ONNX](https://github.com/onnx/onnx)
 * [Visual Studio Code](https://code.visualstudio.com/)

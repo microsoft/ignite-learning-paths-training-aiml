@@ -1,18 +1,26 @@
 <!--
-This is a machine generated file, and should not be edited, as it will be overwritten with future updates.
+This is a machine generated file,
+and should not be edited,
+as it will be overwritten with future updates.
+
+If you have questions around this process
+please contact Scott Cate
 -->
 
-# <a name="aiml10-presentation-files"></a>Archivos de presentación de AIML10
+# <a name="aiml10-current-presentation-files"></a>Archivos de presentación actual de AIML10
 
-- [aiml10.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/aiml10.es-es.pptx) (Actualizado: 3 de diciembre de 2019)
+- [aiml10.es-es.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/aiml10.es-es.pptx)
 ---
-## <a name="historical-files"></a>Archivos históricos
+## <a name="historical-files"></a>Archivos del historial
 - [aiml10-2019-10_Oct-24.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/aiml10-2019-10_Oct-24.pptx)
 - [aiml10-2019-11_Nov-04.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/aiml10-2019-11_Nov-04.pptx)
 - [aiml10-2019-11_Nov-13.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/aiml10-2019-11_Nov-13.pptx)
 - [aiml10-2019-11_Nov-30.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/aiml10-2019-11_Nov-30.pptx)
 - [aiml10.ja-jp-2019-12_Dec-05.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/aiml10.ja-jp-2019-12_Dec-05.pptx)
 - [aiml10.ja-jp-2019-12_Dec-18.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/aiml10.ja-jp-2019-12_Dec-18.pptx)
+- [aiml10.ja-jp-2020-01_Jan-22.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/aiml10.ja-jp-2020-01_Jan-22.pptx)
+- [aiml10.ko-kr-2020-01_Jan-12.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/aiml10.ko-kr-2020-01_Jan-12.pptx)
+- [aiml10.ko-kr-2020-01_Jan-21.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/aiml10.ko-kr-2020-01_Jan-21.pptx)
 - [aiml10.pt-br-2019-12_Dec-05.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/aiml10.pt-br-2019-12_Dec-05.pptx)
 - [aiml10.zh-cn-2019-12_Dec-05.pptx](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/aiml10.zh-cn-2019-12_Dec-05.pptx)
 

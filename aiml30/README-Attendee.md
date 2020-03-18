@@ -5,33 +5,50 @@ Tailwind Traders usa modelos de aprendizaje automático personalizados para corr
 En esta sesión, obtendrá información sobre el proceso de ciencia de datos que usa Tailwind Traders y verá una introducción al diseñador de Azure Machine Learning. Verá cómo buscar, importar y preparar datos, cómo seleccionar un algoritmo de aprendizaje automático, cómo entrenar y probar el modelo, e implementar un modelo completo en una API. Obtenga las sugerencias, los procedimientos recomendados y los recursos que usted y su equipo de desarrollo necesitan para continuar con el recorrido por el aprendizaje automático, compilar el primer modelo y mucho más.
 
 
-## <a name="demo-environment-deployment"></a>Implementación del entorno de demostración
+## <a name="create-azure-machine-learning-resources-with-the-deploy-to-azure-button-below"></a>Creación de recursos de Azure Machine Learning con el botón Implementar en Azure
 <a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fcassieview%2Fignite-learning-paths-training-aiml%2Fmaster%2Faiml30%2Fdeploy.json" rel="nofollow"> <img src="https://camo.githubusercontent.com/9285dd3998997a0835869065bb15e5d500475034/687474703a2f2f617a7572656465706c6f792e6e65742f6465706c6f79627574746f6e2e706e67" data-canonical-src="http://azuredeploy.net/deploybutton.png" style="max-width:100%;">
 </a>
 
+> Una vez creado, actualice el recurso de Azure Machine Learning a la edición Enterprise para esta sesión. Debe ver un botón "Actualizar" para completar esta acción. Actualmente esto se encuentra en versión preliminar; pero la estructura de precios se describe [aquí](https://azure.microsoft.com/en-us/pricing/details/machine-learning/).
 
 ## <a name="create-additional-resources-needed"></a>Creación de los recursos adicionales necesarios
-Una vez que haya creado el área de trabajo del servicio Machine Learning base, tendrá que agregar más recursos de proceso.
+
+* Seleccione **"Launch the new Azure Machine Learning studio"** (Iniciar el nuevo Azure Machine Learning Studio).
+
+Una vez que haya creado el servicio Azure Machine Learning base, tendrá que agregar más recursos de proceso.
 ### <a name="create-compute-targets"></a>Creación de destinos de proceso
 1. Para crear el proceso de Machine Learning:
     * Haga clic en el elemento de navegación "Proceso".
+    * Seleccione "Clústeres de entrenamiento".
     * Haga clic en "Nuevo".
     * Escriba un nombre para el recurso.
-    * Seleccione "Proceso de Machine Learning" en la lista desplegable.
-    * Seleccione el tamaño de la máquina.
+    * Seleccione el tamaño de la máquina (por ejemplo: Standard_DS2_v2)
     * Escriba el número mínimo y máximo de nodos (se recomienda un valor mínimo de 0 y uno máximo de 5).
     * Haga clic en "Crear" ![Crear proceso](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml30/CreateMlCompute.gif).
 2. Para crear el proceso de Kubernetes:
     * Haga clic en el elemento de navegación "Proceso".
+    * Seleccione "Inference Clusters" (Clústeres de inferencia).
     * Haga clic en "Nuevo".
     * Escriba un nombre para el recurso.
-    * Seleccione "Servicio de Kubernetes" en la lista.
+    * Seleccione una región.
+    * Mantenga el valor predeterminado de "Tamaño de la máquina virtual".
+    * Establezca el propósito del clúster en "Dev-test".
     * Haga clic en "Crear" ![Crear Kubernetes](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml30/CreateKubService.gif).
+3. Para crear la máquina virtual de Notebook:
+    * Haga clic en el elemento de navegación "Proceso".
+    * Seleccione "Máquinas virtuales de Notebook".
+    * Haga clic en "Nuevo".
+    * Asigne un nombre único al cuaderno.
+    * Seleccione el tamaño de VM.
+    * Haga clic en "Crear" ![Crear máquina virtual](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml30/CreateNotebookVM.gif).
 
+## <a name="upload-dataset-to-workspace-blob-storage-and-save-to-local"></a>Carga del conjunto de datos en el almacenamiento de blobs del área de trabajo y guardado en el equipo local
+El conjunto de datos necesario se crea semanalmente con fechas actualizadas para permitir que la demostración realice la predicción de semanas futuras. A continuación se indican los pasos para obtener el nuevo conjunto de datos y agregarlo a la cuenta de almacenamiento de Azure Machine Learning y a la aplicación de datos de demostración.
 
 ## <a name="build-model-with-azure-machine-learning-visual-designer"></a>Compilación del modelo con el diseñador visual de Azure Machine Learning
 
 ### <a name="1-upload-the-dataset-to-the-datasets-in-aml"></a>1. Carga del conjunto de datos en los conjuntos de datos de AML
+
 * Descargue [aquí](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml30/datasets/ForecastingData.csv) el conjunto de datos al equipo local.
 * Haga clic en `Datasets`.
 * Haga clic en `Create from local`.
@@ -61,11 +78,13 @@ Una vez que haya creado el área de trabajo del servicio Machine Learning base,
 * Conecte `Score Model` al módulo `Evaluate`.
 * Haga clic en el botón `Run` de la navegación inferior y seleccione Proceso. 
 
-* Cambie el nombre de la columna creada `Scored Labels` por `Forecast`.
+### <a name="3-edit-metadata"></a>3. Editar metadatos
+
+* Cambie el nombre de la columna creada `Scored Labels` a `Forecast`.
     * Arrastre `Edit Metadata` hasta el área de trabajo.
     * Conecte `Score Model` con el módulo `Edit Metadata`.
-    * En la sección `Parameters` del módulo `Edit Metadata`, haga clic en `Edit Columns`.
-    * Escriba `Score Labels` en el cuadro de texto (no es necesario cambiar ninguno de los valores predeterminados).
+    * En la sección `Parameters` del módulo `Edit Metadata`, haga clic en `Edit column`.
+    * Escriba `Scored Labels` en el cuadro de texto (no es necesario cambiar ninguno de los valores predeterminados).
     * Haga clic en `Save`.
     * A continuación, actualice el campo `New Column Name` de `Parameters` a `Forecast`.
 * Volver a transformar el valor normalizado en recuentos de elementos completos.
@@ -81,12 +100,14 @@ Una vez que haya creado el área de trabajo del servicio Machine Learning base,
 * Estas son las columnas que la aplicación de demostración de datos esperará cuando se realice la publicación para obtener un resultado del modelo completado e implementado.
 * Ejecute el entrenamiento.
 
-### <a name="4-create-inference-pipeline-and-deploy-the-model"></a>4. Creación de una canalización de inferencia e implementación el modelo
+### <a name="4-create-inference-pipeline-and-deploy-the-model"></a>4. Creación de una canalización de inferencia e implementación del modelo
+
+* Haga clic en `Pipelines` desde el panel de navegación de la izquierda.
 * Haga clic en `Create inference pipeline` y luego seleccione `Real-time inference pipeline`.
 * Asegúrese de que `Web Service Output` está conectado al último módulo del paso de procesamiento de datos `Select Columns in Dataset`.
 * Haga clic en `Run`.
 * Haga clic en `Deploy`.
-* Navegue hasta el servicio web implementado desde el panel de navegación de la izquierda.
+* Navegue hasta el servicio web implementado (en `Endpoints`) desde el panel de navegación de la izquierda.
 * Haga clic en el nombre del servicio web que ha creado antes.
 * Haga clic en `Test` para ver cómo funciona en un elemento de datos puntuado.
 * Haga clic en `Consume` para ver el código de ejemplo proporcionado para integrar el servicio web.
@@ -121,7 +142,8 @@ Una vez que haya creado el área de trabajo del servicio Machine Learning base,
 5. También en el terminal, escriba `pip install holidays`.
 6. Abra la carpeta `ignite-learning-paths-training-aiml` clonada y vaya al archivo `ignite-ailml30-get-prediction.ipynb` y haga clic para abrirlo.
     * La ruta de acceso completa debe ser similar a la siguiente: `ignite-learning-paths-training-aiml\aiml30\Python\ignite-ailml30-get-prediction.ipynb`
-7. Actualice la ruta de acceso al archivo CSV, el punto de conexión y la clave.
+7. Descargue el conjunto de datos local [aquí](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml30/datasets/ForecastingData.csv) **puede que ya tenga este archivo de los pasos anteriores**. En el entorno de la estructura de archivos de Jupyter, seleccione el botón "Cargar" y cargue el archivo csv.
+7. Actualice la ruta al archivo csv en el código para dirigirse a los datos de previsión que acaba de cargar en la máquina virtual de Notebook (debería estar en el árbol local y ser de fácil acceso), al punto de conexión y a la clave.
 8. Pulse `SHIFT + Enter` o haga clic en Reproducir en cada celda del menú superior para ejecutar cada celda.
 
 ## <a name="powerpoint-deck-and-video-demo"></a>Demostración en vídeo y presentación de PowerPoint

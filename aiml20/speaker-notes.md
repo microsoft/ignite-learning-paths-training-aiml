@@ -146,7 +146,9 @@ De hecho, ese proceso de barrido del filtro a través de la imagen tiene un nomb
 
 ### <a name="slide-training-an-image-classifier"></a>DIAPOSITIVA: Entrenamiento de un clasificador de imágenes
 
-Ahora sabemos que cada nodo (círculo) de la red neuronal es una transformación de sus imágenes de entrada, que se determina mediante una cuadrícula de pesos. El truco para entrenar una red neuronal es elegir esas pesos de forma que al final se obtengan los números adecuados.
+¿Cómo se entrena una red neuronal para hacer eso? Eligiendo los filtros correctos.
+
+Ahora sabemos que cada nodo [CLICK] (círculo) de la red neuronal es una transformación de sus imágenes de entrada, que se determinan mediante una cuadrícula de pesos. El truco para entrenar una red neuronal es elegir esos pesos de forma que al final se obtengan los números adecuados.
 
 [CLIC] Haremos esto con datos de entrenamiento: muchas imágenes de perros, bicicletas, manzanas y pelotas de tenis. Sabemos qué representa cada imagen (porque los seres humanos hemos observado estos referentes y los hemos etiquetado o "anotado"), así que lo único que hacemos es elegir pesos de forma que el nodo correcto obtenga el valor más grande en cada caso o, por lo menos, con la mayor frecuencia posible.
 

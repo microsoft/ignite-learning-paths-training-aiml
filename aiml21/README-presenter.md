@@ -43,10 +43,10 @@ Descargue todo el código y los archivos de datos de este repositorio para comen
 **Instrucciones de configuración:**
 * Use el botón **Implementar en Azure** siguiente para crear el área de trabajo de Azure Machine Learning que se va a usar a lo largo de la sesión.
 
-[![Implementar en Azure](https://azuredeploy.net/deploybutton.png)](https://azuredeploy.net/)
+[![Implementación en Azure](https://azuredeploy.net/deploybutton.png)](https://azuredeploy.net/)
 
 * Inicie sesión en Azure Portal y en la instancia de Azure Machine Learning Service.
-* Elija actualizar el área de trabajo a la **edición Enterprise (versión preliminar)** [(vea más información sobre los precios actuales aquí)](https://azure.microsoft.com/en-us/pricing/details/machine-learning/): necesitará la edición Enterprise para completar la demostración del experimento (Demostración 2).
+* Elija actualizar el área de trabajo a la **edición Enterprise (versión preliminar)** [(vea más información sobre los precios actuales aquí)](https://azure.microsoft.com/en-us/pricing/details/machine-learning/): necesitará la edición Enterprise para completar la demostración del experimento (demostración 2).
 * Inicie la **interfaz de usuario de la versión preliminar**.
 * Cree una **máquina virtual de Notebook**.
     * Seleccione "Proceso" en el panel de la izquierda.
@@ -111,14 +111,14 @@ Descargue todo el código y los archivos de datos de este repositorio para comen
 
 > 💡 Debe haber completado la [configuración](https://github.com/microsoft/ignite-learning-paths-training-aiml/blob/master/aiml21/README-presenter.md#demo-instructions) antes de intentar realizar la demostración.
 
-### <a name="video-demo-with-voice-over-aiml21---demo-1---explorehttpsyoutube-z6nfyq-wri"></a>Demostración en vídeo con narración: [AIML21: Demostración 1: Explorar](https://youtu.be/-z6nfyq-WrI)
+### <a name="video-demo-with-voice-over-aiml21---demo-1---explore"></a>Demostración en vídeo con narración: [AIML21: Demostración 1: Explorar](https://youtu.be/-z6nfyq-WrI)
 
 * Inicie sesión en [Azure Portal](https://azure.microsoft.com/en-gb/?WT.mc_id=msignitethetour2019-github-aiml21) y abra la instancia de **Azure Machine Learning** que ha creado con la plantilla anterior.
 * Para iniciar la experiencia de versión preliminar, haga clic en **"Iniciar versión preliminar ahora"** .
 * Abra **"Proceso"** en el panel de la izquierda.
 * Seleccione el vínculo **"Jupyter"** en la máquina virtual de Notebook.
 * *Si es necesario, inicie sesión con las credenciales de Azure*.
-* Abra [**Explore.ipynb**](code/explore.ipynb) *(se recomienda tener ya abiertas y listas estas pestañas)*
+* Abra [**Explore.ipynb**](code/explore.ipynb) *(se recomienda tener ya abiertas y listas estas pestañas)* .
 * Asegúrese de que todas las celdas de salida del cuaderno estén desactivadas: **Seleccionar celda -> Todos los resultados -> Borrar**.
 * **Revise el vídeo de todos los puntos de conversación de cada demostración**.
 * Recorra y explique brevemente las seis primeras celdas.
@@ -128,7 +128,7 @@ Descargue todo el código y los archivos de datos de este repositorio para comen
 
 > 💡 Debe haber completado la [configuración](https://github.com/microsoft/ignite-learning-paths-training-aiml/blob/master/aiml21/README-presenter.md#demo-instructions) antes de intentar realizar la demostración.
 
-### <a name="video-demo-with-voice-over-aiml21---demo-2---experimenthttpsyoutubec7p_4cryt8k"></a>Demostración en vídeo con narración: [AIML21: Demostración 2: Experimentar](https://youtu.be/c7p_4CRYT8k)
+### <a name="video-demo-with-voice-over-aiml21---demo-2---experiment"></a>Demostración en vídeo con narración: [AIML21: Demostración 2: Experimentar](https://youtu.be/c7p_4CRYT8k)
 
 * Vaya a [ml.azure.com](https://ml.azure.com/?WT.mc_id=msignitethetour2019-github-aiml21) Azure Machine Learning Studio. Puede acceder directamente a través de la dirección URL y, después, iniciar sesión y seleccionar el área de trabajo correcta que ha creado para esta presentación. O bien, desde la instancia de Azure Machine Learning Service en Azure Portal, seleccione el botón **"Iniciar versión preliminar ahora"** .
 * Seleccione **ML automatizado** en el panel de la izquierda.
@@ -158,7 +158,7 @@ Descargue todo el código y los archivos de datos de este repositorio para comen
 
 > 💡 Debe haber completado la [configuración](https://github.com/microsoft/ignite-learning-paths-training-aiml/blob/master/aiml21/README-presenter.md#demo-instructions) antes de intentar realizar la demostración.
 
-### <a name="video-demo-with-voice-over-aiml21---demo-3---deployhttpsyoutube7bkbo7nqd4q"></a>Demostración en vídeo con narración: [AIML21: Demostración 3: Implementar](https://youtu.be/7bkBO7NQd4Q)
+### <a name="video-demo-with-voice-over-aiml21---demo-3---deploy"></a>Demostración en vídeo con narración: [AIML21: Demostración 3: Implementar](https://youtu.be/7bkBO7NQd4Q)
 
 > Usará el experimento que ha ejecutado y revisado antes para implementarlo.
 
@@ -181,13 +181,15 @@ Descargue todo el código y los archivos de datos de este repositorio para comen
 * Asegúrese de que todas las celdas de salida del cuaderno estén desactivadas: **Seleccionar celda -> Todos los resultados -> Borrar**.
 * Confirme que el archivo config.json se ha completado con la información correcta.
 * Edite la segunda celda para incluir el nombre del servicio web que ha implementado.
-* Ejecute todas las celdas del cuaderno y explique el código; **revise el vídeo de todos los puntos de conversación de cada demostración**.
+* Ejecute todas las celdas del cuaderno y explique el código; **vea el vídeo de todos los puntos de conversación de cada demostración**.
+
+> NOTA: Si se produce un error al acceder a las claves del punto de conexión ACI en el código, vaya a Azure Machine Learning Studio, elija Puntos de conexión, seleccione su punto de conexión y la pestaña Consumir. Allí tiene acceso a la clave principal: copie este valor y establezca la variable principal en el código de implementación para su clave.
 
 ## <a name="demo-4---present"></a>Demostración 4: Presentar
 
 > 💡 Debe haber completado la [configuración](https://github.com/microsoft/ignite-learning-paths-training-aiml/blob/master/aiml21/README-presenter.md#demo-instructions) antes de intentar realizar la demostración.
 
-### <a name="video-demo-with-voice-over-aiml21---demo-4---presenthttpsyoutubeg7abac9s9qq"></a>Demostración en vídeo con narración: [AIML21: Demostración 4: Presentar](https://youtu.be/g7aBaC9s9qQ)
+### <a name="video-demo-with-voice-over-aiml21---demo-4---present"></a>Demostración en vídeo con narración: [AIML21: Demostración 4: Presentar](https://youtu.be/g7aBaC9s9qQ)
 
 >Antes de comenzar la presentación, abra Power BI Desktop con [Present.pbix](code/Present.pbix) y [https://powerbi.microsoft.com/](https://powerbi.microsoft.com/?WT.mc_id=msignitethetour2019-github-aiml21), con el área de trabajo y el informe abiertos de la configuración anterior.
 
