@@ -23,75 +23,155 @@ Write-Host "Connecting to $env:AZURE_DEVOPS_ORG_NAME"
 Set-VSTeamAccount -account $env:AZURE_DEVOPS_ORG_NAME -PersonalAccessToken $env:AZURE_DEVOPS_EXT_PAT
 
 Write-Host "Checking for an existing project."
-$Project = Get-VSTeamProject | Where-Object {$_.Name -like 'AIML50'}
-if (-not $Project){
-    Write-Host "Creating project."
-    Add-VSTeamProject -Name 'AIML50'
+$Project = Get-VSTeamProject | Where-Object { $_.Name -like $env:SESSION_CODE }
+if (-not $Project) {
+    Write-Host "Creating project $env:SESSION_CODE."
+    $Project = Add-VSTeamProject -Name $env:SESSION_CODE
 }
 else {
-    Write-Host "Found existing project."
+    Write-Host "Found existing project $env:SESSION_CODE."
 }
 
-Set-VSTeamDefaultProject -Project 'AIML50' 
+Set-VSTeamDefaultProject -Project $env:SESSION_CODE
 
-if (-not (Get-VSTeamExtension | where-object {($_.PublisherId -eq $ExtensionPublisher) -and ($_.ExtensionId -eq $ExtensionId)})){
+if (-not (Get-VSTeamExtension | where-object { ($_.PublisherId -eq $ExtensionPublisher) -and ($_.ExtensionId -eq $ExtensionId) })) {
     Write-Host "Installing the Azure Machine Learning Extension to $env:AZURE_DEVOPS_ORG_NAME"
     Add-VSTeamExtension -PublisherId $ExtensionPublisher -ExtensionId $ExtensionId
 }
 
 Write-Host "Checking for existing Artifacts feed."
-$PackageFeed = Get-VSTeamFeed | where-object {$_.name -like 'SeerPackages'}
+$PackageFeed = Get-VSTeamFeed | where-object { $_.name -like 'SeerPackages' }
 if (-not $PackageFeed) {
     Write-Host "Creating new artifacts feed for Seer Packages"
-    $PackageFeed = Add-VSTeamFeed -Name 'SeerPackages' -EnableUpstreamSources 
+    $PackageFeed = Add-VSTeamFeed -Name 'SeerPackages' -EnableUpstreamSources
 }
 else {
     Write-Host "Found existing artifacts feed."
 }
 
 Write-Host "Checking for existing variable group."
-$VariableGroup = Get-VSTeamVariableGroup -Name aiml50-demo | Where-Object {$_.count -gt 0} | Select-Object -first 1 -expand value 
+$VariableGroup = Get-VSTeamVariableGroup -Name aiml50-demo | Where-Object { $_.count -gt 0 } | Select-Object -first 1 -expand value
 if (-not $VariableGroup) {
     Write-Host "Creating new variable group."
     $VariableGroup = Add-VSTeamVariableGroup -Name aiml50-demo -Description 'Shared Variables' -Type Vsts -Variables @{
-        subscription = @{
+        subscription           = @{
             value = "aiml50"
         }
         subscription_workspace = @{
             value = "aiml50-workspace"
         }
-        resource_group = @{
+        resource_group         = @{
             value = $env:RESOURCE_GROUP
         }
-        org_name = @{
+        org_name               = @{
             value = $env:AZURE_DEVOPS_ORG_NAME
         }
-        session = @{
-            value = "aiml50"
+        session                = @{
+            value = $env:SESSION_CODE
         }
-        event = @{
+        event                  = @{
             value = $env:EVENT
         }
-        computetarget = @{
+        computetarget          = @{
             value = "twtcluster"
         }
-        datastorename = @{
+        datastorename          = @{
             value = "seerdata"
         }
-        datastorepath = @{
+        datastorepath          = @{
             value = "hardware"
         }
-        package_feed = @{
+        package_feed           = @{
             value = $PackageFeed.Id
         }
-        access_token = @{
-            value = $env:AZURE_DEVOPS_EXT_PAT
+        access_token           = @{
+            value    = $env:AZURE_DEVOPS_EXT_PAT
             isSecret = $true
         }
     }
+
+    $PatchBody = @(
+            [pscustomobject]@{
+                authorized = $true
+                id = $VariableGroup.Id
+                name = $VariableGroup.Name
+                type = 'variablegroup'
+            }
+        )
+
+    Write-Host "Enabling the variable group for all pipelines"
+    Invoke-VSTeamRequest -method PATCH -Url "https://dev.azure.com/$env:AZURE_DEVOPS_ORG_NAME/$($Project.Id)/_apis/build/authorizedresources?api-version=5.1-preview.1" -body "[$($PatchBody | ConvertTo-Json)]" -ContentType 'application/json'
 }
 else {
     Write-Host "Found existing variable group."
+}
+
+az login --identity
+$Subscription = az account show | convertfrom-json
+
+Write-Host "Checking for existing service endpoint aiml50."
+$SubscriptionEndpoint = Get-VSTeamServiceEndpoint | Where-Object { $_.name -like 'aiml50' }
+if (-not $SubscriptionEndpoint) {
+    Write-Host "Creating service endpoint aiml50."
+    $SubscriptionEndpoint = Add-VSTeamAzureRMServiceEndpoint -subscriptionName $Subscription.name -subscriptionId $Subscription.id -subscriptionTenantId $Subscription.tenantId -endpointName aiml50
+    $PatchBody = [pscustomobject]@{
+        allPipelines = [pscustomobject]@{
+            authorized   = $true
+            authorizedBy = $null
+            authorizedOn = $null
+        }
+        pipelines    = $()
+        resource     = [pscustomobject]@{
+            id   = $SubscriptionEndpoint.id
+            type = 'endpoint'
+            name = ''
+        }
+    }
+    Write-Host "Enabling aiml50 for all pipelines."
+    Invoke-VSTeamRequest -method PATCH -Url "https://dev.azure.com/$env:AZURE_DEVOPS_ORG_NAME/$($Project.Id)/_apis/pipelines/pipelinePermissions/endpoint/$($SubscriptionEndpoint.id)?api-version=5.1-preview.1 " -body ($PatchBody | convertto-json) -ContentType 'application/json' -verbose
+}
+
+Write-Host "Checking for existing service endpoint aiml50-workspace."
+$WorkspaceEndpoint = Get-VSTeamServiceEndpoint | Where-Object { $_.name -like 'aiml50-workspace' }
+if (-not $WorkspaceEndpoint) {
+    Write-Host "Creating service endpoint aiml50-workspace."
+    $obj = @{
+        authorization = @{
+            parameters = @{
+                serviceprincipalid  = $null
+                serviceprincipalkey = $null
+                tenantid            = $Subscription.tenantId
+            }
+            scheme     = 'ServicePrincipal'
+        }
+        data          = @{
+            scopeLevel          = 'AzureMLWorkspace'
+            subscriptionId      = $Subscription.Id
+            subscriptionName    = $Subscription.Name
+            resourceGroupName   = $env:RESOURCE_GROUP
+            mlWorkspaceName     = $env:SESSION_CODE + $env:EVENT
+            mlWorkspaceLocation = (az group show --name $env:RESOURCE_GROUP --query location -o tsv)
+            creationMode        = 'Automatic'
+        }
+        url           = 'https://management.azure.com/'
+    }
+
+    $WorkspaceEndpoint = Add-VSTeamServiceEndpoint -endpointType 'azurerm' -endpointName 'aiml50-workspace' -object $obj
+    $PatchBody = [pscustomobject]@{
+        allPipelines = [pscustomobject]@{
+            authorized   = $true
+            authorizedBy = $null
+            authorizedOn = $null
+        }
+        pipelines    = $()
+        resource     = [pscustomobject]@{
+            id   = $WorkspaceEndpoint.id
+            type = 'endpoint'
+            name = ''
+        }
+    }
+    Write-Host "Enabling aiml50-workspace for all pipelines."
+    Invoke-VSTeamRequest -method PATCH -Url "https://dev.azure.com/$env:AZURE_DEVOPS_ORG_NAME/$($Project.Id)/_apis/pipelines/pipelinePermissions/endpoint/$($WorkspaceEndpoint.id)?api-version=5.1-preview.1 " -body ($PatchBody | ConvertTo-Json) -ContentType 'application/json' -verbose
 }
 
 Write-Host "Checking for existing release."
@@ -122,7 +202,7 @@ do {
     Start-Sleep -Seconds 10
     Write-Host "Checking for the website to be up."
     $response = invoke-webrequest -UseBasicParsing -Uri "$SessionAndEvent.azurewebsites.net"
-} while ($response.StatusCode -ne 200) 
+} while ($response.StatusCode -ne 200)
 Write-Host "Website is up."
 
 $Success = $false
@@ -136,9 +216,9 @@ do {
     Write-Host "Connecting to the SQL Database to add a wrench."
     $conn = New-Object System.Data.SqlClient.SqlConnection($SQLConnectionString)
     try {
-        #Open the Connection 
+        #Open the Connection
         $conn.Open()
-        # Prepare the SQL 
+        # Prepare the SQL
         $cmd = $conn.CreateCommand()
         $cmd.CommandText = @'
 IF NOT EXISTS
@@ -169,7 +249,12 @@ END
     }
 
     $Count++
-} while ((-not $Success) -and ($Count -le 5))
+} while ((-not $Success) -and ($Count -le 10))
 
-Write-Host "You are ready to go"
+if (-not $Success) {
+    throw "You may need to manually add a wrench record.  This script could not connect to the target database."
+}
+else {
+    Write-Host "You are ready to go"
+}
 

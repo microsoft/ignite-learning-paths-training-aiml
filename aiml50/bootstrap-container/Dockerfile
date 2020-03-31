@@ -19,8 +19,8 @@ RUN tar -xf images.tar.gz
 RUN mkdir /modules
 COPY modules /modules
 COPY ReleaseSeer.json /
-COPY boot-strap.ps1 /
-RUN chmod 777 boot-strap.ps1
+COPY bootstrap.ps1 /
+RUN chmod 777 bootstrap.ps1
 
 # Add entrypoint
 CMD ["/bootstrap.ps1"]

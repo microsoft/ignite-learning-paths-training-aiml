@@ -90,61 +90,6 @@ Reference: https://docs.microsoft.com/en-us/azure/container-instances/container-
 
 Next, navigate to the AIML50 project that was created in the Azure DevOps Organization you specified to to the deployment template.
 
-#### Create the Service Connections
-
-From the project page, navigate to the `project settings`.
-
-![0-azure_devops_org](./images/0-azure_devops_org.png)
-![1-azure_devops_project](./images/1-azure_devops_project.png)
-
-Select `Service Connections` under `Pipelines`.
-
-![2-azure_devops_project_settings](./images/2-azure_devops_project_settings.png)
-
-Add two service connections:
-
-* First connection `aiml50`
-  * Type: Azure Resource Manager
-  * Connection name: `aiml50`
-    * Name of the service connection. This needs to match, as it is already set in the build.
-  * Scope level: `Subscription`
-    * Scope of authorization for the service principal. For this one, set it to `subscription`.
-  * Subscription: `Ignite The Tour`
-    * The subscription you deployed the demo environment to. This may be different than the example above. You can pick subscriptions from the dropdown based on the user with which you logged in to Azure DevOps.
-  * Resource Group: `aiml50` or blank
-    * You can constrain the credentials to the resource group that you have deployed into or allow it rights across the subscription.
-
-![4-azure_devops_service_connection](./images/4-azure_devops_service_connection.png)
-![3-azure_devops_service_connection](./images/3-azure_devops_service_connection.png)
-
-* Second connection: `aiml50-workspace`
-  * Type: Azure Resource Manager
-  * Connection name: `aiml50`
-    * Name of the service connection. This needs to match, as it is already set in the build.
-  * Scope level: `AzureMLWorkspace`
-    * Scope of authorization for the service principal. This will be required for the release.
-  * Subscription: `Ignite The Tour`
-    * The subscription you deployed the demo environment to. This may be different than the example above. You can pick subscriptions from the dropdown based on the user with which you logged in to Azure DevOps.
-  * Resource Group: `aiml50`
-    * This should be the resource group with your Azure Machine Learning Workspace.
-  * Machine Learning Workspace: `aiml50demo`
-    * Your name will vary based on which event or qualifier you use to provision the environment.
-
-![5-azure_devops_service_connection_add](./images/5-azure_devops_service_connection_add.png)
-![6-azure_devops_service_connection_detail](./images/6-azure_devops_service_connection_detail.png)
-
-#### Enable the Variable Group
-
-There is a variable group that was provisioned that has some shared values to be used by the build and release.  Pipeline access needs to be granted for the variable group.
-
-* Navigate to Library (under Pipelines).
-* Select the `aiml50-demo` variable group.
-* Toggle `Allow access to all pipelines`
-* Save the variable group.
-
-![7-azure_devops_library](./images/7-azure_devops_library.png)
-![8-azure_devops_library_detail](./images/8-azure_devops_library_detail.png)
-
 #### Create the Build
 
 Now, we need to create a build definition by pointing Azure DevOps to our build definition on GitHub.
@@ -154,7 +99,6 @@ Now, we need to create a build definition by pointing Azure DevOps to our build 
 
 ![9-azure_devops_pipeline_new](./images/9-azure_devops_pipeline_new.png)
 ![10-azure_devops_pipeline_new_source](./images/10-azure_devops_pipeline_new_source.png)
-
 
 * Connect to your fork of the GitHub project [Ignite Learning Paths Training AI/ML](https://github.com/microsoft/ignite-learning-paths-training-aiml)
 
