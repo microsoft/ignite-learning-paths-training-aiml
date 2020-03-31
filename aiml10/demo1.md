@@ -12,7 +12,7 @@
 - [发票测试集](https://globaleventcdn.blob.core.windows.net/assets/aiml/aiml10/data/test.zip)
 
 ## <a name="azure-resources"></a>Azure 资源
-这些是我们在第一个演示中创建的资源。 此表概要介绍了视频中显示的资源的名称，但对于每项资源，请使用你自己的名称。
+下表列出了我们在第一个演示中创建的资源。 此表概要介绍了视频中显示的资源的名称，但对于每项资源，请使用你自己的名称。
 
 
 | 名称                       | 类型                            | 用途                    |
