@@ -116,7 +116,7 @@
     * 아래로 스크롤하여 모델에 대한 문서에서 메트릭 설명을 표시합니다.
     
 ### <a name="6-create-inference-pipeline-and-deploy-the-model"></a>6. 유추 파이프라인 만들기 및 모델 배포
-여기서는 일반적으로 `Inference Pipeline`을 만들어 웹 서비스에 배포_하지만_ 우리는 해당 작업 단계를 미리 수행했습니다. 
+여기서는 일반적으로 `Inference Pipeline`을 만들어 웹 서비스에 배포 _하지만_ 우리는 해당 작업 단계를 미리 수행했습니다. 
 * _라이브에서 수행하지 않는 작업_ 단계에 대해 논의하세요.
     * `Create inference pipeline`을 클릭한 다음 `Real-time inference pipeline`을 선택합니다.
     * `Web Service Output`이 마지막 데이터 처리 단계 모듈에 연결되어 있는지 확인합니다. `Select Columns in Dataset`
