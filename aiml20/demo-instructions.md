@@ -26,8 +26,6 @@ Before your presentation, run all of the instructions in the script below.
 
 Note the actual instructions for this demo are [here](DEMO%20ONNX%20deployment.md#defining-the-problem-shop-by-photo-doesnt-work-right).
 
-Additional demo video: https://www.dropbox.com/s/ylxjuifg9x0h4n3/ITT-aiml20-demo1.mp4?dl=0 
-
 ### SLIDE: DEMO / cognitive services computer vision
 
 [Demo script](DEMO%20Computer%20Vision.md#using-computer-vision-via-the-web-interface)

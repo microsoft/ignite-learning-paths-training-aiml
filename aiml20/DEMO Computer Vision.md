@@ -9,7 +9,7 @@ First, we will use the Computer Vision online web-form to upload an image and
 observe the results.
 
 Then, we will use the Computer Vision API to collect the same information
-programatically, using curl.
+programmatically, using curl.
 
 ## Defining the problem: Shop by Photo doesn't work right
 
@@ -105,11 +105,11 @@ demo. But take a look at what's included:
 * Color analysis for the image: the dominant foreground, accent, and background colors.
 
 We're really only interested in the "Tags" field for our purposes, so we'll find
-out how to extract that programatically in the next section.
+out how to extract that programmatically in the next section.
 
 ## Using Computer Vision via the API
 
-You can [control Computer Vision programatically using its REST
+You can [control Computer Vision programmatically using its REST
 API](https://docs.microsoft.com/en-us/azure/cognitive-services/computer-vision/vision-api-how-to-topics/howtocallvisionapi?WT.mc_id=msignitethetour2019-github-aiml20).
 You can do this from just about any language or application that has access to
 the Web, but we will use [curl](https://curl.haxx.se/), a common command-line
@@ -117,12 +117,17 @@ application for interfacing with URLs and collecting their outputs. The curl
 application comes pre-installed on most Linux distributions and in recent
 versions of Windows 10 (1706 and later). 
 
-Run the commands in the file [`vision_demo.sh`](vision_demo.sh). You can use a local Azure CLI or
-Azure Cloud Shell, but you must use bash as the shell.
+Run the commands in the file [`vision_demo.sh`](vision_demo.sh). You can use a
+local [Azure CLI](https://docs.microsoft.com/en-us/cli/azure/?view=azure-cli-latest?WT.mc_id=msignitethetour2019-github-aiml20)
+or [Azure Cloud Shell](https://docs.microsoft.com/en-us/azure/cloud-shell/overview?WT.mc_id=msignitethetour2019-github-aiml20), but you must use bash as the shell. (In the demo video, we
+use Azure Cloud Shell within Visual Studio Code, via the [Azure Account
+extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode.azure-account).
+Run the `Azure: Sign In` and then the `Azure: Open Bash in Cloud Shell`
+commands, and note that Node.js 6 or later must be installed on Windows.)
 
 The commands in this script will:
 
-1. Log into your Azure subscription (this step is unneccessary if using Cloud Shell)
+1. Log into your Azure subscription (this step is unnecessary if using Cloud Shell)
 2. Create an Azure Resource Group
 3. Create a Cognitive Service key. (Note: this is an omnibus key that we will also use for Custom Vision, later.)
 4. Find the key
@@ -130,7 +135,7 @@ The commands in this script will:
 
 ## Manually generating Keys for use with Computer Vision
 
-In the script [vision_demo.sh](vision_demo.sh), run the section "Create a Key" to programatically create a Cognitive Sevices key using the Azure Command Line Interface.
+In the script [vision_demo.sh](vision_demo.sh), run the section "Create a Key" to programmatically create a Cognitive Services key using the Azure Command Line Interface.
 (If you prefer, you can [create keys interactively with the Azure
 Portal](https://docs.microsoft.com/en-us/azure/cognitive-services/cognitive-services-apis-create-account?tabs=multiservice%2Clinux&WT.mc_id=msignitethetour2019-github-aiml20).)
 
