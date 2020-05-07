@@ -5,7 +5,7 @@
 
 当你提交拉取请求时，CLA 机器人会自动确定你是否需要提供 CLA，并对 PR 进行相应的修饰（例如添加状态检查、注释）。 直接按机器人提供的说明操作。 只需使用 CLA 对所有存储库执行一次这样的操作。
 
-本项目采用 [Microsoft 开放源代码行为准则](https://opensource.microsoft.com/codeofconduct/)。
+本项目采用 [Microsoft 开源行为准则](https://opensource.microsoft.com/codeofconduct/)。
 有关详细信息，请参阅[行为准则常见问题](https://opensource.microsoft.com/codeofconduct/faq/)；若有其他任何问题或意见，请联系 [opencode@microsoft.com](mailto:opencode@microsoft.com)。
 
 # <a name="legal-notices"></a>法律声明
