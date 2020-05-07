@@ -10,8 +10,7 @@
 
 > 💡 데모를 시작하기 전에 [배포](demosetup.md)를 완료해야 합니다.
 
-### <a name="1-open-the-igniteaimldataapp-app-i-personally-like-to-have-this-open-before-i-start-the-talk-so-i-can-just-flip-to-it"></a>1. 
-          `IgniteAimlDataApp` 앱을 엽니다. 화면을 간단하게 전환할 수 있기 때문에 개인적으로는 설명을 시작하기 전에 앱을 열어 두는 것을 선호합니다.
+### <a name="1-open-the-igniteaimldataapp-app-i-personally-like-to-have-this-open-before-i-start-the-talk-so-i-can-just-flip-to-it"></a>1. `IgniteAimlDataApp` 앱을 엽니다. 화면을 간단하게 전환할 수 있기 때문에 개인적으로는 설명을 시작하기 전에 앱을 열어 두는 것을 선호합니다.
 * `Program.cs` 파일을 엽니다.
 * 마우스 오른쪽 단추를 클릭하여 `GetProcessedDataForScore` 메서드로 이동하고, `Go To Definition`을 선택하거나 `F12` 키를 누릅니다.
     * 데이터 원본에서 데이터를 로드합니다. 이 예제에서는 솔루션의 로컬 excel 파일을 로드합니다.
@@ -116,7 +115,7 @@
     * 아래로 스크롤하여 모델에 대한 문서에서 메트릭 설명을 표시합니다.
     
 ### <a name="6-create-inference-pipeline-and-deploy-the-model"></a>6. 유추 파이프라인 만들기 및 모델 배포
-여기서는 일반적으로 `Inference Pipeline`을 만들어 웹 서비스에 배포 _하지만_ 우리는 해당 작업 단계를 미리 수행했습니다. 
+여기서는 일반적으로 `Inference Pipeline`을 만들어 웹 서비스에 배포_하지만_ 우리는 해당 작업 단계를 미리 수행했습니다. 
 * _라이브에서 수행하지 않는 작업_ 단계에 대해 논의하세요.
     * `Create inference pipeline`을 클릭한 다음 `Real-time inference pipeline`을 선택합니다.
     * `Web Service Output`이 마지막 데이터 처리 단계 모듈에 연결되어 있는지 확인합니다. `Select Columns in Dataset`
