@@ -4,19 +4,19 @@
 
 ### <a name="session-abstract"></a>課程摘要
 
-Tailwind Traders 擁有許多舊式資料，他們希望開發人員能在應用程式中運用 – 來自各種結構化和非結構化的來源，且包含影像、表單、PDF 檔案和其他數種格式。 在此課程中，您將了解小組如何使用認知搜尋，在短時間內讓此資料發揮意義，並獲得驚人的成功。 我們將討論許多 AI 概念，例如內嵌-擴充-探索模式、技能集、認知技能、自然語言處理、電腦視覺等。
+Tailwind Traders 擁有許多舊資料，希望開發人員能在應用程式中運用；這些資料可能來自各種結構化和非結構化的來源，並包含影像、表單、PDF 檔案和其他數種格式。 在本課程中，您將了解小組如何使用認知搜尋，在短時間內讓此資料發揮意義，並獲得驚人的成功。 我們將討論許多 AI 概念，例如內嵌-擴充-探索模式、技能集、認知技能、自然語言處理、電腦視覺等。
 
 # <a name="how-to-use"></a>使用方式
 
 ### <a name="welcome-presenter"></a>歡迎，簡報者！
 
-很高興您的到來，我們期待您傳遞這份精彩的內容。 身為有經驗的簡報者，您知道**如何**做簡報，因此本指南將著重於您需要簡報的**內容**。 它會為您提供由簡報設計小組建立的完整簡報流程。
+非常開心您能來到這裡，我們對您帶來的精彩內容萬分期待。 身為有經驗的簡報者，我們知道您清楚「如何」  進行簡報，因此本指南將著重於您需要簡報的「內容」  。 為您提供由簡報設計小組建立的完整簡報流程。
 
 除了簡報的影片，這份文件也連結到您完成簡報所需的所有資產，包括 PowerPoint 投影片和示範指示與程式碼。
 
 * 請完整閱讀整份文件。
 * 觀看影片簡報
-* 詢問潛在客戶問題
+* 向簡報者提出問題
 
 # <a name="assets-in-train-the-trainer-kit"></a>訓練人員套件中的資產
 
@@ -33,7 +33,7 @@ Tailwind Traders 擁有許多舊式資料，他們希望開發人員能在應用
 
 # <a name="demo-instructions"></a>示範指示：
 
-請下載此存放庫中的所有程式碼和資料檔案，以便開始使用。 有一個程式碼和資料的資料夾，其中包含執行所有示範需要的所有資訊
+請下載此存放庫中的所有程式碼和資料檔案，以便開始使用。 有一個程式碼和資料的資料夾，其中包含執行所有示範需要的全部資訊
 
 **您將需要：**
 * Azure 訂用帳戶 - 視需要在[這裡取得免費試用](https://azure.microsoft.com/en-gb/free/?WT.mc_id=msignitethetour2019-github-aiml10)
@@ -70,40 +70,40 @@ Tailwind Traders 擁有許多舊式資料，他們希望開發人員能在應用
 
 ### <a name="full-teardown"></a>完整終止
 
-* 輸入 Azure 入口網站，並刪除您所建立 **Azure 資源群組**來移除此專案的所有資源
+* 進入 Azure 入口網站，並刪除您所建立 **Azure 資源群組**來移除此專案的所有資源
 
 
 # <a name="resources-and-continued-learning"></a>資源與繼續學習
 
 **Microsoft Learn：**
 * [Azure 搜尋服務簡介](https://docs.microsoft.com/en-us/learn/modules/intro-to-azure-search/?WT.mc_id=msignitethetour2019-github-aiml10)
-* [Microsoft Azure 人工智慧 (AI) 策略與解決方案](https://docs.microsoft.com/en-us/learn/modules/azure-artificial-intelligence/?WT.mc_id=msignitethetour2019-github-aiml10)
+* [Microsoft Azure Artificial Intelligence (AI) strategy and solutions](https://docs.microsoft.com/en-us/learn/modules/azure-artificial-intelligence/?WT.mc_id=msignitethetour2019-github-aiml10) (Microsoft Azure 人工智慧 (AI) 策略與解決方案)
 
 **Azure 文件**
-* [什麼是 Azure 搜尋服務中的認知搜尋？](https://docs.microsoft.com/en-us/azure/search/cognitive-search-concept-intro/?WT.mc_id=msignitethetour2019-github-aiml10)
+* [什麼是 Azure 搜尋服務中的「認知搜尋」？](https://docs.microsoft.com/en-us/azure/search/cognitive-search-concept-intro/?WT.mc_id=msignitethetour2019-github-aiml10)
 * [什麼是 Azure 搜尋服務中的知識存放區？](https://docs.microsoft.com/en-us/azure/search/knowledge-store-concept-intro)
 
 
 # <a name="feedback-loop"></a>意見反應迴圈
 
-所有演講者每個月都有機會參加**訓練人員問答課程** (涵蓋所有時區的兩個課程)，而在舞台上傳遞內容之後，我們很歡迎您加入我們的**意見反應課程**，這是為了分享您的內容經驗，以及想要提供意見反應或想法的任何內容而組織。 
+所有演講者每個月都有機會參加**訓練人員問與答課程** (涵蓋所有時區的兩個課程)，而在舞台上傳遞內容之後，我們很歡迎您加入我們的**意見反應課程**，這是為了分享您的內容經驗，以及想要提供意見反應或想法的任何內容而組織。 
 
-您是否有評論、意見反應或建議？ 目前，內容變更、建議、意見反應的最佳意見反應迴圈，是在此 GitHub 存放庫上建立新的問題。 若要取得如何建立問題的所有詳細資料，請參閱[參與文件](https://github.com/microsoft/ignite-learning-paths/blob/master/contributing.md)
+您是否有評論、意見反應或建議？ 目前，內容變更/建議/意見反應的最佳意見反應迴圈，是在此 GitHub 存放庫上建立新的問題。 若要取得如何建立問題的所有詳細資料，請參閱[參與文件](https://github.com/microsoft/ignite-learning-paths/blob/master/contributing.md)
 
 ## <a name="become-a-trained-presenter"></a>成為經訓練的簡報者
 
-若要成為經訓練的簡報者，請連絡 [scalablecontent@microsoft.com](mailto:scalablecontent@microsoft.com)。 請在您的電子郵件中加入以下內容：
+若要成為經訓練的簡報者，請連絡 [scalablecontent@microsoft.com](mailto:scalablecontent@microsoft.com)。 請在電子郵件中包含以下內容：
 
 - 完整名稱
 - 這份簡報的代碼：aiml10
-- 您的簡報影片連結 (長度在 10 分鐘以內)(例如：未列出的 YouTube 影片)。 
-  > 不需要是此內容，其重要性在於展現簡報技巧
+- 您的簡報影片連結 (長度在 10 分鐘以內) (例如：未列出的 YouTube 影片)。 
+  > 不一定要用此內容的影片，重點是展現您的簡報者技能
 
 顧問會帶您了解流程的相關資訊。
 
 ## <a name="trained-presenters"></a>經訓練的簡報者
 
-感謝這些很棒的人員 ([表情符號](https://allcontributors.org/docs/en/emoji-key))：
+感謝這些很棒的人員 ([表情圖示按鍵](https://allcontributors.org/docs/en/emoji-key))：
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore -->

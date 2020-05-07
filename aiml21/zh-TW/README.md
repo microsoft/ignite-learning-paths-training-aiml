@@ -17,4 +17,4 @@
 
 ## <a name="learn-to-present-this-content"></a>[了解如何針對此內容進行簡報](README-presenter.md)
 
-## <a name="continue-learning-after-attending-this-session"></a>[在參加此課程之後繼續學習](README-attendee.md)
+## <a name="continue-learning-after-attending-this-session"></a>[在參加本課程之後繼續學習](README-attendee.md)

@@ -21,7 +21,7 @@
 
 | 名稱                       | 類型                            | 目的                    |
 | -------------------------- | ------------------------------- | ------------------------- |
-| **ttinvoicereader**       | 表單辨識器服務         | 這項服務最後會併入全功能服務。 但現在屬於有限存取的預覽。 為存取預覽，請填寫並提交 [Form Recognizer access request](https://aka.ms/FormRecognizerRequestAccess) (表單辨識器存取要求) 表單。  |
+| **ttinvoicereader**       | 表單辨識器服務         | 這項服務最後會併入全方位服務。 但目前處於有限存取權的預覽階段。 為存取預覽，請填寫並提交 [Form Recognizer access request](https://aka.ms/FormRecognizerRequestAccess) (表單辨識器存取要求) 表單。  |
 
 
 ## <a name="what-to-do"></a>應採取的動作

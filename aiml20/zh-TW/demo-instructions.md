@@ -20,8 +20,6 @@
 
 請注意，此示範的實際指示在[這裡](DEMO%20ONNX%20deployment.md#defining-the-problem-shop-by-photo-doesnt-work-right)。
 
-其他示範影片： https://www.dropbox.com/s/ylxjuifg9x0h4n3/ITT-aiml20-demo1.mp4?dl=0 
-
 ### <a name="slide-demo--cognitive-services-computer-vision"></a>投影片：示範/認知服務電腦視覺
 
 [示範腳本](DEMO%20Computer%20Vision.md#using-computer-vision-via-the-web-interface)

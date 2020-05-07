@@ -8,7 +8,7 @@
 
 **您將需要：**
 * Azure 訂用帳戶 - 視需要在[這裡取得免費試用](https://azure.microsoft.com/en-gb/free/?WT.mc_id=msignitethetour2019-github-aiml21)
-* [Power BI Desktop (僅限 Windows)](https://powerbi.microsoft.com/en-us/desktop/?WT.mc_id=msignitethetour2019-github-aiml21) - 如果您在 MacOS/Linux 上執行，則仍然可以從任何新式網頁瀏覽器示範功能
+* [Power BI Desktop (僅限 Windows)](https://powerbi.microsoft.com/en-us/desktop/?WT.mc_id=msignitethetour2019-github-aiml21) - 如果您在 MacOS/Linux 上執行，則您仍然可從任何新式網頁瀏覽器示範功能
 
 **設定指示：**
 * 使用下面的 [部署至 Azure]  按鈕來建立 Azure Machine Learning 工作區
@@ -36,7 +36,7 @@
 
 * 建立**計算執行個體**
     * 從左窗格選取 [計算]
-    * 在 [Training Clusters] \(定型叢集\) 下選取 [新增]
+    * 在 [Training Clusters] \(定型叢集\) 索引標籤下選取 [新增]
     * 提供 [計算名稱] (全部小寫)
     * 選擇 VM 大小
         * 針對標準計算，選取 [Standard_DS2_v2] 之類的選項
@@ -178,4 +178,4 @@
 
 # <a name="feedback-loop"></a>意見反應迴圈
 
-您是否有註解、意見反應或建議？ 目前，內容變更/建議/意見反應的最佳意見反應迴圈，是在此 GitHub 存放庫上建立新的問題。 若要取得如何建立問題的所有詳細資料，請參閱[參與文件](../CONTRIBUTING.md)
+您是否有評論、意見反應或建議？ 目前，內容變更/建議/意見反應的最佳意見反應迴圈，是在此 GitHub 存放庫上建立新的問題。 若要取得如何建立問題的所有詳細資料，請參閱[參與文件](../CONTRIBUTING.md)
