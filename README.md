@@ -63,7 +63,7 @@ In this theatre session we will show the data science process and how to apply i
 
 ## Contributing
 
-To know more about about to contribute to this project please refer to the [Code of Conduct](CODE_OF_CONDUCT.md) and [Contributing](CONTRIBUTING.md) page.
+To know more about contributing to this project please refer to the [Code of Conduct](CODE_OF_CONDUCT.md) and [Contributing](CONTRIBUTING.md) page.
 
 
 ## Become a Trained Presenter
