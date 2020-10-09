@@ -49,7 +49,7 @@ az ml workspace create -w absa-workspace -l westeurope -g absa-ml-rg
 import urllib.request
 from pathlib import Path
 Path("absa").mkdir(parents=True, exist_ok=True)
-setup_notebook_url = "https://raw.githubusercontent.com/microsoft/ignite-learning-paths-training-aiml/master/aiml40/absa/notebooks/setup.ipynb"
+setup_notebook_url = "https://raw.githubusercontent.com/microsoft/ignite-learning-paths-training-aiml/main/aiml40/absa/notebooks/setup.ipynb"
 urllib.request.urlretrieve(setup_notebook_url, 'absa/setup.ipynb')
 ```
 
