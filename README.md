@@ -1,3 +1,5 @@
+### Please note: This repository is no longer actively maintained and therefore cannot be guarenteed that code and instructions are the latest information. To find out more about [Azure AI services we recommend visting the documentation](https://docs.microsoft.com/en-us/azure/?product=ai-machine-learning)
+
 # Ignite Learning Paths - Developers Guide to AI
 
 ![Learning Path](https://img.shields.io/badge/Learning%20Path-AIML-fe5e00?logo=microsoft)  ![Session](https://img.shields.io/badge/🗣️Sessions-6-31c754)
