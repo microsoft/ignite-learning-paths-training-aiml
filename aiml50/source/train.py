@@ -60,6 +60,9 @@ def main(run, source_path, target_path, epochs, batch, lr):
 
     for i in prep:
         print('{} => {}'.format(i, prep[i]))
+    
+    if not run.id.startswith('OfflineRun'):
+        run.log('total_records', prep['total_records'])
 
     labels = prep['categories']
     img_shape = (prep['image_size'], prep['image_size'], 3)
@@ -147,6 +150,12 @@ def main(run, source_path, target_path, epochs, batch, lr):
         'index': prep['index'],
         'generated': datetime.now().strftime('%m/%d/%y %H:%M:%S'),
     }
+
+    # Log history
+    for i in history.history:
+        if not run.id.startswith('OfflineRun'):
+            # We want to log only the last run metric
+            run.log(i, history.history[i][epochs-1])
 
     print('Writing out metadata to {}'.format(out_file))
     with open(str(out_file), 'w') as f:
