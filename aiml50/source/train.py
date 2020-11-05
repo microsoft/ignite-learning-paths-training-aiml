@@ -107,6 +107,19 @@ def main(run, source_path, target_path, epochs, batch, lr):
 
 
     base_model.trainable = True
+    
+    # # Transfer learning to boost the model's accuracy
+    # # UnFreeze the following layers
+    # trainableLayers = ['global_average_pooling2d','block5_pool','block5_conv4']
+    # # Layer names from:
+    # # https://www.tensorflow.org/tutorials/generative/style_transfer 
+    # for layer in base_model.layers:
+    #      print("Detected layer " + layer.name)
+    #      if layer.name in trainableLayers:
+    #          print(" - Trainable " + layer.name)
+    #          layer.trainable = True
+    #      else:
+    #          layer.trainable = False
 
     model = tf.keras.Sequential([
         base_model,
