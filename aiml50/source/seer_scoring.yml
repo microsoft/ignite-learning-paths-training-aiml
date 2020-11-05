@@ -18,5 +18,6 @@ dependencies:
   - numpy
   - pillow
   - requests
+  - h5py==2.10.0
 channels:
 - conda-forge
