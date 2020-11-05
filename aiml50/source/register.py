@@ -64,6 +64,8 @@ def main(run, source_path, target_path, universal_package_version):
         model['file'] = original_file
         m = Model.register(run.experiment.workspace, model_name='seer', model_path=target_path, tags=model, model_framework=Model.Framework.TFKERAS )
         print(m)
+        for i in model:
+            run.log(i, model[i])
 
     print('Done!')
 
