@@ -164,11 +164,12 @@ def main(run, source_path, target_path, epochs, batch, lr):
         'generated': datetime.now().strftime('%m/%d/%y %H:%M:%S'),
     }
 
+    # If we are online
+    if not run.id.startswith('OfflineRun'):
     # Log history
     for i in history.history:
-        if not run.id.startswith('OfflineRun'):
             # We want to log only the last run metric
-            run.log(i, history.history[i][epochs-1])
+            run.log(i, history.history[i][len(history.history[i])-1])
 
     print('Writing out metadata to {}'.format(out_file))
     with open(str(out_file), 'w') as f:
