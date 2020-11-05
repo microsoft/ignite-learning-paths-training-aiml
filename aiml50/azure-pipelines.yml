@@ -51,20 +51,14 @@ steps:
       seer_scoring.yml
     TargetFolder: '$(Build.ArtifactStagingDirectory)'
 
-- task: AzureCLI@1
-  displayName: 'Publish package'
-  env:
-    AZURE_DEVOPS_EXT_PAT: $(access_token)
+- task: UniversalPackages@0
+  displayName: Publish score file and related configuration
   inputs:
-    azureSubscription: $(subscription)
-    scriptLocation: inlineScript
-    inlineScript: |
-      az extension add -n azure-devops
-      cd aiml50/source
-      az artifacts universal publish \
-        --organization "https://dev.azure.com/$(org_name)/" \
-        --feed "SeerPackages" \
-        --name "seer_deployment" \
-        --version "$(Build.BuildNumber)" \
-        --description "Seer files" \
-        --path .
+    command: 'publish'
+    publishDirectory: '$(Build.ArtifactStagingDirectory)'
+    feedsToUsePublish: 'internal'
+    vstsFeedPublish: 'SeerPackages'
+    vstsFeedPackagePublish: 'seer_deployment'
+    versionOption: 'custom'
+    versionPublish: '$(Build.BuildNumber)'
+    packagePublishDescription: 'Seer files'
