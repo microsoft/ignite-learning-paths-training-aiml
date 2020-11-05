@@ -162,7 +162,7 @@ trainStep = EstimatorStep(
     estimator=train,
     estimator_entry_script_arguments=["--source_path", seer_tfrecords, 
                                     "--target_path", seer_training,
-                                    "--epochs", 5,
+                                    "--epochs", 5, # Consider transfer learning. See line 111 in train.py file.
                                     "--batch", 10,
                                     "--lr", 0.001],
     inputs=[seer_tfrecords],
