@@ -1,3 +1,5 @@
+### Please note: This repository is no longer actively maintained and therefore cannot be guarenteed that code and instructions are the latest information. To find out more about [Azure AI services we recommend visting the documentation](https://docs.microsoft.com/en-us/azure/?product=ai-machine-learning)
+
 # AIML10: Making Sense of your Unstructured Data with AI
 
 ## Session Abstract
