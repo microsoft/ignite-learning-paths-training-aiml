@@ -1,3 +1,5 @@
+### Please note: This repository is no longer actively maintained and therefore cannot be guarenteed that code and instructions are the latest information. To find out more about [Azure AI services we recommend visting the documentation](https://docs.microsoft.com/en-us/azure/?product=ai-machine-learning)
+
 # Developers Guide to AI: A Data Story
 
 In this theatre session we will show the data science process and how to apply it. From exploration of datasets to deployment of services - all applied to an interesting data story. This will also take you on a very brief tour of the Azure AI Platform.
