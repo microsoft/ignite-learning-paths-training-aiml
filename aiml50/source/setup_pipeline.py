@@ -138,7 +138,8 @@ prepStep = PythonScriptStep(
     arguments=["--source_path", data_path_pipeline_param, "--target_path", seer_tfrecords],
     runconfig=dataprepRunConfig,
     inputs=[data_path_pipeline_param],
-    outputs=[seer_tfrecords]
+    outputs=[seer_tfrecords],
+    allow_reuse=True # Allow reuse of the data prep step
 )
 
 ## Training Step ##
@@ -153,6 +154,7 @@ seer_training = PipelineData(
 train = Estimator(source_directory='.',
                     compute_target=compute,
                     entry_script='train.py',
+                    use_gpu=True,
                     pip_requirements_file='requirements-dataprepandtraining.txt')
 
 trainStep = EstimatorStep(
@@ -160,7 +162,7 @@ trainStep = EstimatorStep(
     estimator=train,
     estimator_entry_script_arguments=["--source_path", seer_tfrecords, 
                                     "--target_path", seer_training,
-                                    "--epochs", 5,
+                                    "--epochs", 5, # Consider transfer learning. See line 111 in train.py file.
                                     "--batch", 10,
                                     "--lr", 0.001],
     inputs=[seer_tfrecords],

@@ -60,6 +60,9 @@ def main(run, source_path, target_path, epochs, batch, lr):
 
     for i in prep:
         print('{} => {}'.format(i, prep[i]))
+    
+    if not run.id.startswith('OfflineRun'):
+        run.log('total_records', prep['total_records'])
 
     labels = prep['categories']
     img_shape = (prep['image_size'], prep['image_size'], 3)
@@ -104,6 +107,19 @@ def main(run, source_path, target_path, epochs, batch, lr):
 
 
     base_model.trainable = True
+    
+    # # Transfer learning to boost the model's accuracy
+    # # UnFreeze the following layers
+    # trainableLayers = ['global_average_pooling2d','block5_pool','block5_conv4']
+    # # Layer names from:
+    # # https://www.tensorflow.org/tutorials/generative/style_transfer 
+    # for layer in base_model.layers:
+    #      print("Detected layer " + layer.name)
+    #      if layer.name in trainableLayers:
+    #          print(" - Trainable " + layer.name)
+    #          layer.trainable = True
+    #      else:
+    #          layer.trainable = False
 
     model = tf.keras.Sequential([
         base_model,
@@ -147,6 +163,13 @@ def main(run, source_path, target_path, epochs, batch, lr):
         'index': prep['index'],
         'generated': datetime.now().strftime('%m/%d/%y %H:%M:%S'),
     }
+
+    # If we are online
+    if not run.id.startswith('OfflineRun'):
+    # Log history
+    for i in history.history:
+            # We want to log only the last run metric
+            run.log(i, history.history[i][len(history.history[i])-1])
 
     print('Writing out metadata to {}'.format(out_file))
     with open(str(out_file), 'w') as f:
