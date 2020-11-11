@@ -1,3 +1,5 @@
+### Please note: This repository is no longer actively maintained and therefore cannot be guarenteed that code and instructions are the latest information. To find out more about [Azure AI services we recommend visting the documentation](https://docs.microsoft.com/en-us/azure/?product=ai-machine-learning)
+
 # AIML40 - Taking Models to the Next Level with Azure Machine Learning Best Practices
 
 ## Session information
