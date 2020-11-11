@@ -1,3 +1,5 @@
+### Please note: This repository is no longer actively maintained and therefore cannot be guarenteed that code and instructions are the latest information. To find out more about [Azure AI services we recommend visting the documentation](https://docs.microsoft.com/en-us/azure/?product=ai-machine-learning)
+
 # AIML20: Using Pre-Built AI to Solve Business Challenges
 
 This is the repository supporting the Microsoft Ignite 2019 and Microsoft Ignite
