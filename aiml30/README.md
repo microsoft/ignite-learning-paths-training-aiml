@@ -1,3 +1,4 @@
+### Please note: This repository is no longer actively maintained and therefore cannot be guarenteed that code and instructions are the latest information. To find out more about [Azure AI services we recommend visting the documentation](https://docs.microsoft.com/en-us/azure/?product=ai-machine-learning)
 
 # AIML30 -Start Building Machine Learning Models Faster than You Think -Train the trainer
 
