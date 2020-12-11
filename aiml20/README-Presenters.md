@@ -26,17 +26,6 @@ instructions & code.
 from Microsoft Ignite Orlando, November 7 2019.
 - [Full-length rehearsal of presentation](https://youtu.be/jRO-5g-HYuU) 
 
-## Become a Trained Presenter
-
-To become a trained presenter, contact [scalablecontent@microsoft.com](mailto:scalablecontent@microsoft.com). In your email please include:
-
-- Complete name:
-- The code of this presentation: AIML20
-- Link (ex: unlisted YouTube video) to a video of you presenting (~10 minutes). 
-  > It doesn't need to be this content, the important is to show your presenter skills
-
-A mentor will get back to you with the information on the process.
-
 ## Trained Presenters
 
 Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):

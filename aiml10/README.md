@@ -75,17 +75,6 @@ This talk consisted of the 5 demonstrations listed below.
 
 Do you have a comment, feedback, suggestion? Currently, the best feedback loop for content changes/suggestions/feedback is to create a new issue on this GitHub repository. To get all the details about how to create an issue please refer to the [Contributing docs](../CONTRIBUTING.md)
 
-## Become a Trained Presenter
-
-To become a trained presenter, contact [scalablecontent@microsoft.com](mailto:scalablecontent@microsoft.com). In your email please include:
-
-- Complete name
-- The code of this presentation: aiml10
-- Link to a video of you presenting (~10 minutes in length)(ex: unlisted YouTube video). 
-  > It doesn't need to be this content, the importance is to show your presenter skills
-
-A mentor will get back to you with information on the process.
-
 ## Trained Presenters
 
 Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
